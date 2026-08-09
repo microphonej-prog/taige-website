@@ -367,3 +367,14 @@ ul { list-style: none; }
 @media (max-width: 560px) {
   .map-wrap img { height: auto; }
 }
+
+/* 可交互地图（Leaflet 自托管） */
+.map-wrap #map { width: 100%; height: 320px; background: #e8e4da; }
+.tage-marker .pin {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #b01d2f; border: 3px solid #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .35);
+}
+@media (max-width: 560px) {
+  .map-wrap #map { height: 260px; }
+}

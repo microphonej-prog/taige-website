@@ -7,6 +7,7 @@
 <meta name="description" data-zh="联系东莞泰阁包装获取吊牌、织唛、洗水标、包装袋、环保纸袋、宣传手册报价，24小时内回复。" data-en="Contact Dongguan Taige Packaging for hang tag, woven label, care label, bag, paper bag and brochure quotes — replies within 24 hours.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
 <link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
             <p data-zh="中国广东省东莞市虎门镇客天下布辅料城2栋南门2通道C3-021号" data-en="Unit C3-021, Corridor 2, South Gate, Building 2, Ketianxia Fabric Trims Market, Humen Town, Dongguan, Guangdong, China">中国广东省东莞市虎门镇客天下布辅料城2栋南门2通道C3-021号</p>
             <p class="coords" data-zh="📍 坐标：22.8162°N, 113.6684°E" data-en="📍 Coordinates: 22.8162°N, 113.6684°E">📍 坐标：22.8162°N, 113.6684°E</p>
             <div class="map-wrap">
-              <img src="images/map.jpg" alt="公司位置地图 / Company Location Map" loading="lazy">
+              <div id="map"></div>
             </div>
           </div>
         </div>
@@ -173,6 +174,26 @@
   </div>
 </footer>
 
+<script src="assets/leaflet/leaflet.js"></script>
+<script>
+  /* 可交互地图：Leaflet + 本地瓦片（全平台可显示） */
+  (function () {
+    var map = L.map("map", {
+      center: [22.816245, 113.668423],
+      zoom: 14, minZoom: 13, maxZoom: 15,
+      scrollWheelZoom: false
+    });
+    L.tileLayer("images/tiles/{z}/{x}_{y}.png", { maxZoom: 15 }).addTo(map);
+    var pin = L.divIcon({
+      className: "tage-marker",
+      html: '<div class="pin"></div>',
+      iconSize: [22, 22], iconAnchor: [11, 11]
+    });
+    L.marker([22.816245, 113.668423], { icon: pin }).addTo(map)
+      .bindPopup("<strong>泰阁包装 TAGE Packaging</strong><br>客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen<br><em>22.8162°N, 113.6684°E</em>")
+      .openPopup();
+  })();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
