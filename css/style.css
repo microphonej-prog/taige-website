@@ -330,3 +330,25 @@ ul { list-style: none; }
 .hero-credit { font-size: 12px; color: #8fa0ae; }
 .hero-credit a { color: #93a4b3; }
 .hero-credit a:hover { color: var(--amber); }
+
+/* ---------- 深色 banner 背景图（对应内容） ---------- */
+.page-hero.banner-products {
+  background:
+    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
+    url("../images/banner-products.jpg") center 40% / cover no-repeat;
+}
+.page-hero.banner-about {
+  background:
+    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
+    url("../images/banner-about.jpg") center 35% / cover no-repeat;
+}
+.page-hero.banner-contact {
+  background:
+    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
+    url("../images/banner-contact.jpg") center 35% / cover no-repeat;
+}
+.cta.banner-cta {
+  background:
+    linear-gradient(rgba(22, 34, 46, .8), rgba(22, 34, 46, .66)),
+    url("../images/cta-bg.jpg") center 30% / cover no-repeat;
+}
