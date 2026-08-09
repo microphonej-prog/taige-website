@@ -176,22 +176,34 @@
 
 <script src="assets/leaflet/leaflet.js"></script>
 <script>
-  /* 可交互地图：Leaflet + 本地瓦片（全平台可显示） */
+  /* 地图：设备判定 — 手机/平板用 Leaflet 交互地图，电脑用静态图（保证全平台可显示坐标） */
   (function () {
-    var map = L.map("map", {
-      center: [22.816245, 113.668423],
-      zoom: 14, minZoom: 13, maxZoom: 15,
-      scrollWheelZoom: false
-    });
-    L.tileLayer("images/tiles/{z}/{x}_{y}.png", { maxZoom: 15 }).addTo(map);
-    var pin = L.divIcon({
-      className: "tage-marker",
-      html: '<div class="pin"></div>',
-      iconSize: [22, 22], iconAnchor: [11, 11]
-    });
-    L.marker([22.816245, 113.668423], { icon: pin }).addTo(map)
-      .bindPopup("<strong>泰阁包装 TAGE Packaging</strong><br>客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen<br><em>22.8162°N, 113.6684°E</em>")
-      .openPopup();
+    var isMobile = /Android|iPhone|iPad|iPod|Mobile|IEMobile|Opera Mini|Windows Phone|webOS/i.test(navigator.userAgent)
+      || (navigator.maxTouchPoints > 0 && /Macintosh|Windows|Linux/i.test(navigator.userAgent) && /Mobi/i.test(navigator.userAgent));
+    var wrap = document.getElementById("map");
+    if (!wrap) return;
+    if (isMobile) {
+      var map = L.map("map", {
+        center: [22.816245, 113.668423],
+        zoom: 14, minZoom: 13, maxZoom: 15,
+        scrollWheelZoom: false
+      });
+      L.tileLayer("images/tiles/{z}/{x}_{y}.png", { maxZoom: 15 }).addTo(map);
+      var pin = L.divIcon({
+        className: "tage-marker",
+        html: '<div class="pin"></div>',
+        iconSize: [22, 22], iconAnchor: [11, 11]
+      });
+      L.marker([22.816245, 113.668423], { icon: pin }).addTo(map)
+        .bindPopup("<strong>泰阁包装 TAGE Packaging</strong><br>客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen<br><em>22.8162°N, 113.6684°E</em>")
+        .openPopup();
+    } else {
+      var img = document.createElement("img");
+      img.src = "images/map.jpg";
+      img.alt = "公司位置地图 / Company Location Map";
+      img.loading = "lazy";
+      wrap.appendChild(img);
+    }
   })();
 </script>
 <script src="js/main.js"></script>
