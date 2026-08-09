@@ -56,34 +56,48 @@
         alert(isEn ? "Please tell us what you need." : "请填写您的需求描述。");
         return;
       }
-      // 组装询盘文本 → WhatsApp / 邮件
+      // 组装询盘文本 → 微信 + 邮箱
       var lines = [];
       lines.push(isEn ? "New Inquiry from Website" : "官网新询盘");
       lines.push("Name: " + data.name);
       if (data.company) lines.push("Company: " + data.company);
       lines.push("Email: " + data.email);
-      if (data.phone) lines.push("Phone/WhatsApp: " + data.phone);
+      if (data.phone) lines.push("Phone/WeChat: " + data.phone);
       if (data.country) lines.push("Country: " + data.country);
       if (data.product) lines.push("Product: " + data.product);
       lines.push("Message: " + data.message);
-      var text = encodeURIComponent(lines.join("\n"));
+      var plain = lines.join("\n");
+      var text = encodeURIComponent(plain);
 
-      var wa = form.getAttribute("data-whatsapp") || "";
+      var wechat = form.getAttribute("data-wechat") || "";
       var mail = form.getAttribute("data-mail") || "";
-      var ok = false;
-      if (wa) {
-        window.open("https://wa.me/" + wa + "?text=" + text, "_blank");
-        ok = true;
+
+      // 复制询盘内容（供微信粘贴发送）
+      function copyText(t) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(t).then(function(){}, function(){});
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = t;
+          ta.style.position = "fixed"; ta.style.opacity = "0";
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta);
+        }
       }
-      if (mail && !ok) {
+      copyText(plain);
+
+      // 打开邮箱草稿
+      if (mail) {
         window.location.href = "mailto:" + mail + "?subject=" + encodeURIComponent(isEn ? "Website Inquiry" : "官网询盘") + "&body=" + text;
       }
+
       var note = document.getElementById("formNote");
       if (note) {
         note.style.color = "#2e7d4f";
         note.textContent = isEn
-          ? "✓ Sent. We will reply within 24 hours. (WhatsApp will open in a new tab.)"
-          : "✓ 已发送，我们会在 24 小时内回复。（如未打开 WhatsApp，请检查弹窗拦截）";
+          ? "\u2713 Copied & email draft opened. Or send via WeChat: " + (wechat || "13128118931") + "."
+          : "\u2713 询盘内容已复制，并打开邮箱草稿。也可添加微信 " + (wechat || "13128118931") + " 发送。";
       }
     });
   }
