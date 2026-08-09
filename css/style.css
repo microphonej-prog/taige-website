@@ -356,3 +356,14 @@ ul { list-style: none; }
 /* 真实产品图填满卡片 */
 .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .product-detail .thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--radius) - 2px); }
+
+/* 联系页地图 */
+.coords { font-size: 13.5px; color: var(--text-muted); margin-top: 4px; }
+.map-wrap {
+  margin-top: 12px; border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; line-height: 0; background: var(--paper-2);
+}
+.map-wrap iframe { width: 100%; height: 320px; display: block; }
+@media (max-width: 560px) {
+  .map-wrap iframe { height: 240px; }
+}
