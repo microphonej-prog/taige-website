@@ -397,3 +397,14 @@ ul { list-style: none; }
 .team-card h3 { font-size: 18px; color: var(--ink); margin-bottom: 2px; }
 .team-role { font-size: 13px; color: var(--amber); letter-spacing: .5px; margin-bottom: 12px; }
 .team-card p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+
+/* 品牌墙（客户案例 logo） */
+.brand-wall {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  justify-content: center; align-items: center; margin: 14px 0 6px;
+}
+.brand-wall img {
+  height: 46px; width: auto; max-width: 130px;
+  object-fit: contain; opacity: .9; transition: opacity .2s;
+}
+.brand-wall img:hover { opacity: 1; }
