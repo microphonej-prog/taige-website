@@ -96,7 +96,7 @@ ul { list-style: none; }
 }
 .hero-inner {
   position: relative; z-index: 1;
-  padding: 108px 0 116px; max-width: 780px;
+  padding: 108px 24px 116px; max-width: 780px;
 }
 .hero-kicker {
   display: inline-block; font-size: 13px; letter-spacing: 2.5px;
@@ -254,7 +254,7 @@ ul { list-style: none; }
   .product-detail, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stat-row { grid-template-columns: 1fr 1fr; }
-  .hero-inner { padding: 76px 0 84px; }
+  .hero-inner { padding: 76px 24px 84px; }
 }
 @media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; }
