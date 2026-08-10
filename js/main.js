@@ -5,7 +5,8 @@
   /* ---------- 语言切换（zh/en/fr/es） ---------- */
   var LANG_KEY = "taige_lang";
   var LANGS = ["zh", "en", "fr", "es"];
-  var current = localStorage.getItem(LANG_KEY) || "zh";
+  var urlLang = new URLSearchParams(location.search).get("lang");
+  var current = (urlLang && LANGS.indexOf(urlLang) >= 0) ? urlLang : (localStorage.getItem(LANG_KEY) || "zh");
   if (LANGS.indexOf(current) < 0) current = "zh";
 
   var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
