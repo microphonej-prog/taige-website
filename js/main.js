@@ -39,7 +39,10 @@
       if (SKIP_TAGS[el.tagName]) continue;
       try {
         var v = el.getAttribute("data-" + lang);
-        el.innerHTML = v != null ? v : el.getAttribute("data-zh");
+        /* 用 textContent 而非 innerHTML：data 值均为纯文本，
+           innerHTML 会把撇号/特殊字符当 HTML 解析，在移动端
+           (iOS Safari / 安卓 WebView) 会触发渲染崩溃 */
+        el.textContent = v != null ? v : el.getAttribute("data-zh");
       } catch (e) {
         /* 单个元素失败不影响其余语言切换 */
       }
