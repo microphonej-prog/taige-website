@@ -7,6 +7,8 @@
   /* ---------- 语言检测（?lang= 参数 > localStorage > 默认zh） ---------- */
   var LANG_KEY = "taige_lang";
   var LANGS = ["zh", "en", "fr", "es"];
+  /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
+  var BUST_VERSION = "42";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -85,10 +87,12 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
-      /* 跳转到同页面 + ?lang=xx，浏览器整页加载 */
+      /* 跳转到同页面 + ?lang=xx，浏览器整页加载
+         v= 参数用于绕过 GitHub Pages 的 max-age=600 缓存，
+         每次部署升级 BUST_VERSION 强制所有用户加载最新 HTML */
       var path = location.pathname.split("/").pop() || "index.html";
       try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
-      location.href = path + "?lang=" + lang;
+      location.href = path + "?lang=" + lang + "&v=" + BUST_VERSION;
     });
   }
 
