@@ -23,6 +23,14 @@
   var SKIP_TAGS = { TITLE: 1, META: 1, LINK: 1, SCRIPT: 1, STYLE: 1, BR: 1, HR: 1, IMG: 1, INPUT: 1, SOURCE: 1, TRACK: 1, WBR: 1, AREA: 1, BASE: 1, COL: 1, EMBED: 1, PARAM: 1 };
 
   function applyLang(lang) {
+    /* 切换前：记住滚动位置 + 暂停所有视频（防止切换时视频重载卡顿） */
+    var scrollPos = 0;
+    try { scrollPos = window.pageYOffset || document.documentElement.scrollTop || 0; } catch (e) {}
+    var vids = document.querySelectorAll("video");
+    for (var vi = 0; vi < vids.length; vi++) {
+      try { vids[vi].pause(); } catch (e) {}
+    }
+
     current = lang;
     document.documentElement.lang = LANG_HTML[lang];
     var nodes = document.querySelectorAll("[data-zh]");
@@ -65,6 +73,11 @@
       } catch (e) {}
     }
     try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+
+    /* 切换后：恢复滚动位置（放在 requestAnimationFrame 里确保布局已更新） */
+    try {
+      window.scrollTo(0, scrollPos);
+    } catch (e) {}
   }
 
   var sw = document.getElementById("langSwitch");
