@@ -246,7 +246,7 @@ ul { list-style: none; }
   .nav-toggle { display: block; }
   .nav-links {
     display: none; position: absolute; top: 72px; left: 0; right: 0;
-    background: var(--ink); flex-direction: column; gap: 0; padding: 12px 24px 20px;
+    background: var(--ink); flex-direction: column; gap: 0; padding: 12px 24px 12px;
     border-top: 1px solid rgba(255,255,255,.08);
   }
   .nav-links.open { display: flex; }
@@ -421,6 +421,9 @@ ul { list-style: none; }
 .lang-flag.active { opacity: 1; border-color: var(--amber); box-shadow: 0 0 0 1px var(--amber); }
 @media (max-width: 560px) {
   .lang-flag { font-size: 15px; padding: 2px 3px; }
+}
+@media (max-width: 900px) {
+  .lang-switch { padding: 12px 0 12px; border: none; justify-content: center; }
 }
 
 /* 内联 SVG 国旗 */
