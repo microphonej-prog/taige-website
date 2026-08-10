@@ -408,3 +408,16 @@ ul { list-style: none; }
   object-fit: contain; opacity: .9; transition: opacity .2s;
 }
 .brand-wall img:hover { opacity: 1; }
+
+/* 语言切换（国旗） */
+.lang-switch { display: flex; gap: 5px; align-items: center; }
+.lang-flag {
+  background: none; border: 1px solid transparent; border-radius: 6px;
+  font-size: 17px; line-height: 1; padding: 3px 4px; cursor: pointer;
+  opacity: .6; transition: opacity .2s, border-color .2s, box-shadow .2s;
+}
+.lang-flag:hover { opacity: 1; }
+.lang-flag.active { opacity: 1; border-color: var(--amber); box-shadow: 0 0 0 1px var(--amber); }
+@media (max-width: 560px) {
+  .lang-flag { font-size: 15px; padding: 2px 3px; }
+}

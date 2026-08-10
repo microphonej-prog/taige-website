@@ -9,12 +9,6 @@
   if (LANGS.indexOf(current) < 0) current = "zh";
 
   var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
-  var BTN_LABEL = {
-    zh: "EN / FR / ES",
-    en: "中文 / FR / ES",
-    fr: "中文 / EN / ES",
-    es: "中文 / EN / FR"
-  };
 
   function applyLang(lang) {
     current = lang;
@@ -28,15 +22,16 @@
       var p = el.getAttribute("data-" + lang + "-ph");
       el.setAttribute("placeholder", p != null ? p : el.getAttribute("data-zh-ph"));
     });
-    var btn = document.getElementById("langBtn");
-    if (btn) btn.textContent = BTN_LABEL[lang];
+    document.querySelectorAll(".lang-flag").forEach(function (f) {
+      f.classList.toggle("active", f.getAttribute("data-lang") === lang);
+    });
     localStorage.setItem(LANG_KEY, lang);
   }
 
-  var btn = document.getElementById("langBtn");
-  if (btn) btn.addEventListener("click", function () {
-    var idx = (LANGS.indexOf(current) + 1) % LANGS.length;
-    applyLang(LANGS[idx]);
+  var sw = document.getElementById("langSwitch");
+  if (sw) sw.addEventListener("click", function (e) {
+    var f = e.target.closest(".lang-flag");
+    if (f) applyLang(f.getAttribute("data-lang"));
   });
   applyLang(current);
 
