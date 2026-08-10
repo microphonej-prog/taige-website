@@ -1,4 +1,4 @@
-/* Dongguan Taige Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单 */
+/* Dongguan Tage Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单 */
 (function () {
   "use strict";
 
