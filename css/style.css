@@ -201,7 +201,7 @@ ul { list-style: none; }
 .spec-table th { background: var(--paper-2); color: var(--ink); white-space: nowrap; }
 
 /* ---------- 关于 ---------- */
-.about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .about-grid h3 { font-size: 20px; color: var(--ink); margin: 24px 0 12px; }
 .about-grid h3:first-child { margin-top: 0; }
 .about-grid p { color: var(--text-muted); font-size: 15px; margin-bottom: 12px; }
@@ -211,7 +211,7 @@ ul { list-style: none; }
 .stat span { font-size: 13px; color: var(--text-muted); }
 
 /* ---------- 联系 ---------- */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px; align-items: start; }
 .contact-item { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .contact-item .ico {
   width: 44px; height: 44px; flex: none; border-radius: 10px;
@@ -251,7 +251,7 @@ ul { list-style: none; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06); width: 100%; }
-  .product-detail, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .product-detail, .about-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stat-row { grid-template-columns: 1fr 1fr; }
   .hero-inner { padding: 76px 24px 84px; }
