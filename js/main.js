@@ -1,8 +1,10 @@
-/* Dongguan Tage Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单 */
+/* Dongguan Tage Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单
+   v4.0 终极方案：语言切换改为整页跳转(?lang=xx)，页面加载时一次性应用语言。
+   彻底消除移动端(iOS Safari/安卓WebView)动态改DOM导致的渲染崩溃。 */
 (function () {
   "use strict";
 
-  /* ---------- 语言切换（zh/en/fr/es） ---------- */
+  /* ---------- 语言检测（?lang= 参数 > localStorage > 默认zh） ---------- */
   var LANG_KEY = "taige_lang";
   var LANGS = ["zh", "en", "fr", "es"];
   var urlLang = null;
@@ -11,28 +13,25 @@
   } catch (e) { /* 老浏览器无 URLSearchParams 时忽略 */ }
   var current = (urlLang && LANGS.indexOf(urlLang) >= 0) ? urlLang : "zh";
   try {
-    current = (localStorage.getItem(LANG_KEY) && LANGS.indexOf(localStorage.getItem(LANG_KEY)) >= 0)
-      ? localStorage.getItem(LANG_KEY) : current;
+    var saved = localStorage.getItem(LANG_KEY);
+    if (saved && LANGS.indexOf(saved) >= 0) current = saved;
   } catch (e) { /* localStorage 不可用时忽略 */ }
   if (LANGS.indexOf(current) < 0) current = "zh";
+  /* URL 参数优先，并把选择存入 localStorage 供下次访问记忆 */
+  if (urlLang && LANGS.indexOf(urlLang) >= 0) {
+    current = urlLang;
+    try { localStorage.setItem(LANG_KEY, urlLang); } catch (e) {}
+  }
 
   var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
 
-  /* 只处理内容元素：跳过 title/meta/link/script/style/br/hr/img/input 等
-     void 元素或头部元素——对它们设 innerHTML 在部分移动 WebView 会抛异常 */
+  /* 只处理内容元素：跳过 void 元素与头部元素 */
   var SKIP_TAGS = { TITLE: 1, META: 1, LINK: 1, SCRIPT: 1, STYLE: 1, BR: 1, HR: 1, IMG: 1, INPUT: 1, SOURCE: 1, TRACK: 1, WBR: 1, AREA: 1, BASE: 1, COL: 1, EMBED: 1, PARAM: 1 };
 
+  /* 页面加载时一次性应用语言（无动态切换，安全） */
   function applyLang(lang) {
-    /* 切换前：记住滚动位置 + 暂停所有视频（防止切换时视频重载卡顿） */
-    var scrollPos = 0;
-    try { scrollPos = window.pageYOffset || document.documentElement.scrollTop || 0; } catch (e) {}
-    var vids = document.querySelectorAll("video");
-    for (var vi = 0; vi < vids.length; vi++) {
-      try { vids[vi].pause(); } catch (e) {}
-    }
-
     current = lang;
-    document.documentElement.lang = LANG_HTML[lang];
+    try { document.documentElement.lang = LANG_HTML[lang]; } catch (e) {}
     var nodes = document.querySelectorAll("[data-zh]");
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i];
@@ -40,37 +39,30 @@
       try {
         var v = el.getAttribute("data-" + lang);
         if (v == null) v = el.getAttribute("data-zh");
-        /* 智能赋值：值含 HTML 标签(<em>等)用 innerHTML 保留样式；
-           纯文本用 textContent——避免 innerHTML 解析撇号/重音字符
-           在移动端(iOS Safari/安卓WebView)触发渲染崩溃 */
+        /* 值含 HTML 标签(<em>等)用 innerHTML 保留样式；纯文本用 textContent */
         if (/<[a-zA-Z]/.test(v)) {
           el.innerHTML = v;
         } else {
           el.textContent = v;
         }
-      } catch (e) {
-        /* 单个元素失败不影响其余语言切换 */
-      }
+      } catch (e) { /* 单个元素失败不影响整体 */ }
     }
-    /* 单独处理 <title>：改标题是安全的 */
+    /* <title> 安全更新 */
     var titleEl = document.querySelector("title[data-zh]");
     if (titleEl) {
-      var tv = titleEl.getAttribute("data-" + lang) || titleEl.getAttribute("data-zh");
-      try { document.title = tv; } catch (e) {}
+      try { document.title = titleEl.getAttribute("data-" + lang) || titleEl.getAttribute("data-zh"); } catch (e) {}
     }
-    /* 单独处理 meta description（用 content 属性，而不是 innerHTML） */
+    /* meta description 用 content 属性更新 */
     var metaEl = document.querySelector('meta[name="description"][data-zh]');
     if (metaEl) {
-      var mv = metaEl.getAttribute("data-" + lang) || metaEl.getAttribute("data-zh");
-      try { metaEl.setAttribute("content", mv); } catch (e) {}
+      try { metaEl.setAttribute("content", metaEl.getAttribute("data-" + lang) || metaEl.getAttribute("data-zh")); } catch (e) {}
     }
-    /* 占位符（表单输入） */
+    /* 表单占位符 */
     var phs = document.querySelectorAll("[data-zh-ph]");
     for (var j = 0; j < phs.length; j++) {
-      var phEl = phs[j];
       try {
-        var p = phEl.getAttribute("data-" + lang + "-ph");
-        phEl.setAttribute("placeholder", p != null ? p : phEl.getAttribute("data-zh-ph"));
+        var p = phs[j].getAttribute("data-" + lang + "-ph");
+        phs[j].setAttribute("placeholder", p != null ? p : phs[j].getAttribute("data-zh-ph"));
       } catch (e) {}
     }
     /* 语言按钮高亮 */
@@ -80,24 +72,32 @@
         flags[k].classList.toggle("active", flags[k].getAttribute("data-lang") === lang);
       } catch (e) {}
     }
-    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
-
-    /* 切换后：恢复滚动位置（放在 requestAnimationFrame 里确保布局已更新） */
-    try {
-      window.scrollTo(0, scrollPos);
-    } catch (e) {}
   }
 
+  /* ---------- 语言切换：整页跳转（终极方案，零动态DOM） ---------- */
   var sw = document.getElementById("langSwitch");
-  if (sw) sw.addEventListener("click", function (e) {
-    var t = e.target;
-    /* 兼容：点击 SVG 内部元素时向上查找 .lang-flag */
-    while (t && !(t.classList && t.classList.contains("lang-flag"))) {
-      t = t.parentNode;
-    }
-    if (t) applyLang(t.getAttribute("data-lang"));
-  });
-  applyLang(current);
+  if (sw) {
+    sw.addEventListener("click", function (e) {
+      var t = e.target;
+      while (t && !(t.classList && t.classList.contains("lang-flag"))) {
+        t = t.parentNode;
+      }
+      if (!t) return;
+      var lang = t.getAttribute("data-lang");
+      if (!lang || lang === current) return;
+      /* 跳转到同页面 + ?lang=xx，浏览器整页加载 */
+      var path = location.pathname.split("/").pop() || "index.html";
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+      location.href = path + "?lang=" + lang;
+    });
+  }
+
+  /* 首次渲染应用语言（DOMContentLoaded 后执行，确保 DOM 完整） */
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { applyLang(current); });
+  } else {
+    applyLang(current);
+  }
 
   /* ---------- 移动端菜单 ---------- */
   var toggle = document.getElementById("navToggle");
@@ -161,7 +161,6 @@
         alert(MSG.need[current]);
         return;
       }
-      // 组装询盘文本 → 微信 + 邮箱
       var lines = [];
       lines.push(MSG.title[current]);
       lines.push("Name: " + data.name);
@@ -177,7 +176,6 @@
       var wechat = form.getAttribute("data-wechat") || "";
       var mail = form.getAttribute("data-mail") || "";
 
-      // 复制询盘内容（供微信粘贴发送）
       function copyText(t) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(t).then(function(){}, function(){});
@@ -192,7 +190,6 @@
       }
       copyText(plain);
 
-      // 打开邮箱草稿
       if (mail) {
         window.location.href = "mailto:" + mail + "?subject=" + encodeURIComponent(MSG.subject[current]) + "&body=" + text;
       }
