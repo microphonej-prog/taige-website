@@ -421,3 +421,6 @@ ul { list-style: none; }
 @media (max-width: 560px) {
   .lang-flag { font-size: 15px; padding: 2px 3px; }
 }
+
+/* 内联 SVG 国旗 */
+.lang-flag svg { display: block; }
