@@ -421,9 +421,3 @@ ul { list-style: none; }
 @media (max-width: 560px) {
   .lang-flag { font-size: 15px; padding: 2px 3px; }
 }
-
-/* 国旗图片（全平台显示，Windows 无 emoji 国旗字体） */
-.lang-flag img { width: 20px; height: 14px; display: block; object-fit: contain; }
-@media (max-width: 560px) {
-  .lang-flag img { width: 17px; height: 12px; }
-}
