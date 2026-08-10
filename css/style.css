@@ -378,3 +378,22 @@ ul { list-style: none; }
 @media (max-width: 560px) {
   .map-wrap #map { height: 260px; }
 }
+
+/* 核心团队 */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 8px; }
+.team-card {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 30px 24px; text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.team-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(22, 34, 46, .10); }
+.team-photo {
+  width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 16px;
+  background: var(--ink); color: #fff; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.team-photo span { font-size: 32px; font-weight: 700; letter-spacing: 1px; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+.team-card h3 { font-size: 18px; color: var(--ink); margin-bottom: 2px; }
+.team-role { font-size: 13px; color: var(--amber); letter-spacing: .5px; margin-bottom: 12px; }
+.team-card p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
