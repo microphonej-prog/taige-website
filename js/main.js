@@ -1,29 +1,42 @@
-/* Dongguan Taige Packaging — 语言切换 / 移动菜单 / 询盘表单 */
+/* Dongguan Taige Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单 */
 (function () {
   "use strict";
 
-  /* ---------- 语言切换 ---------- */
+  /* ---------- 语言切换（zh/en/fr/es） ---------- */
   var LANG_KEY = "taige_lang";
+  var LANGS = ["zh", "en", "fr", "es"];
   var current = localStorage.getItem(LANG_KEY) || "zh";
+  if (LANGS.indexOf(current) < 0) current = "zh";
+
+  var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
+  var BTN_LABEL = {
+    zh: "EN / FR / ES",
+    en: "中文 / FR / ES",
+    fr: "中文 / EN / ES",
+    es: "中文 / EN / FR"
+  };
 
   function applyLang(lang) {
     current = lang;
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.documentElement.lang = LANG_HTML[lang];
     document.querySelectorAll("[data-zh]").forEach(function (el) {
       // innerHTML：data 属性内容为站内自有文案，允许 <em> 等行内标签
-      el.innerHTML = lang === "zh" ? el.getAttribute("data-zh") : el.getAttribute("data-en");
+      var v = el.getAttribute("data-" + lang);
+      el.innerHTML = v != null ? v : el.getAttribute("data-zh");
     });
     document.querySelectorAll("[data-zh-ph]").forEach(function (el) {
-      el.setAttribute("placeholder", lang === "zh" ? el.getAttribute("data-zh-ph") : el.getAttribute("data-en-ph"));
+      var p = el.getAttribute("data-" + lang + "-ph");
+      el.setAttribute("placeholder", p != null ? p : el.getAttribute("data-zh-ph"));
     });
     var btn = document.getElementById("langBtn");
-    if (btn) btn.textContent = lang === "zh" ? "EN" : "中文";
+    if (btn) btn.textContent = BTN_LABEL[lang];
     localStorage.setItem(LANG_KEY, lang);
   }
 
   var btn = document.getElementById("langBtn");
   if (btn) btn.addEventListener("click", function () {
-    applyLang(current === "zh" ? "en" : "zh");
+    var idx = (LANGS.indexOf(current) + 1) % LANGS.length;
+    applyLang(LANGS[idx]);
   });
   applyLang(current);
 
@@ -38,6 +51,39 @@
   }
 
   /* ---------- 询盘表单 ---------- */
+  var MSG = {
+    email: {
+      zh: "请输入有效的邮箱地址。",
+      en: "Please enter a valid email address.",
+      fr: "Veuillez saisir une adresse e-mail valide.",
+      es: "Por favor, introduzca un correo electrónico válido."
+    },
+    need: {
+      zh: "请填写您的需求描述。",
+      en: "Please tell us what you need.",
+      fr: "Veuillez décrire votre besoin.",
+      es: "Por favor, descríbanos su necesidad."
+    },
+    subject: {
+      zh: "官网询盘",
+      en: "Website Inquiry",
+      fr: "Demande de renseignements (site web)",
+      es: "Consulta desde el sitio web"
+    },
+    title: {
+      zh: "官网新询盘",
+      en: "New Inquiry from Website",
+      fr: "Nouvelle demande du site web",
+      es: "Nueva consulta del sitio web"
+    },
+    note: {
+      zh: "✓ 询盘内容已复制，并打开邮箱草稿。也可添加微信 ",
+      en: "✓ Copied & email draft opened. Or send via WeChat: ",
+      fr: "✓ Copié et brouillon d'e-mail ouvert. Ou envoyez via WeChat : ",
+      es: "✓ Copiado y borrador de correo abierto. O envíe por WeChat: "
+    }
+  };
+
   var form = document.getElementById("inquiryForm");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -47,18 +93,17 @@
         var el = form.querySelector("[name=" + k + "]");
         data[k] = el ? el.value.trim() : "";
       });
-      var isEn = current === "en";
       if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-        alert(isEn ? "Please enter a valid email address." : "请输入有效的邮箱地址。");
+        alert(MSG.email[current]);
         return;
       }
       if (!data.message) {
-        alert(isEn ? "Please tell us what you need." : "请填写您的需求描述。");
+        alert(MSG.need[current]);
         return;
       }
       // 组装询盘文本 → 微信 + 邮箱
       var lines = [];
-      lines.push(isEn ? "New Inquiry from Website" : "官网新询盘");
+      lines.push(MSG.title[current]);
       lines.push("Name: " + data.name);
       if (data.company) lines.push("Company: " + data.company);
       lines.push("Email: " + data.email);
@@ -89,15 +134,13 @@
 
       // 打开邮箱草稿
       if (mail) {
-        window.location.href = "mailto:" + mail + "?subject=" + encodeURIComponent(isEn ? "Website Inquiry" : "官网询盘") + "&body=" + text;
+        window.location.href = "mailto:" + mail + "?subject=" + encodeURIComponent(MSG.subject[current]) + "&body=" + text;
       }
 
       var note = document.getElementById("formNote");
       if (note) {
         note.style.color = "#2e7d4f";
-        note.textContent = isEn
-          ? "\u2713 Copied & email draft opened. Or send via WeChat: " + (wechat || "13128118931") + "."
-          : "\u2713 询盘内容已复制，并打开邮箱草稿。也可添加微信 " + (wechat || "13128118931") + " 发送。";
+        note.textContent = MSG.note[current] + (wechat || "13128118931") + ".";
       }
     });
   }
