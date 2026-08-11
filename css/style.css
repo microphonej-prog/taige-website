@@ -261,7 +261,7 @@ ul { list-style: none; }
   .hero-inner { padding: 76px 24px 84px; }
 }
 @media (max-width: 560px) {
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .form-row { grid-template-columns: 1fr; }
   .hero-meta { gap: 20px; }
 }
