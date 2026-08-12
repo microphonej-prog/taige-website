@@ -7,27 +7,40 @@ on:
 
 jobs:
   ping:
-    name: Notify Google & Bing about sitemap update
+    name: Submit URLs via IndexNow (Bing/Yandex/Seznam)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Ping Google Indexing (sitemap)
+      - name: Submit IndexNow (Bing + Yandex + Seznam)
         run: |
-          echo "Pinging Google..."
-          curl -s -o /dev/null -w "Google HTTP %{http_code}\n" \
-            "https://www.google.com/ping?sitemap=https%3A%2F%2Ftaigetag.com%2Fsitemap.xml"
-          echo "Google sitemap ping done"
+          echo "Submitting IndexNow..."
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "taigetag.com",
+              "key": "IMPLQzV8ZJL3XT7alCYPLLhxLidYNlkc",
+              "keyLocation": "https://taigetag.com/IMPLQzV8ZJL3XT7alCYPLLhxLidYNlkc.txt",
+              "urlList": [
+                "https://taigetag.com/",
+                "https://taigetag.com/products.html",
+                "https://taigetag.com/about.html",
+                "https://taigetag.com/contact.html"
+              ]
+            }' \
+            -o /dev/null -w "IndexNow HTTP %{http_code}\n"
+          echo "IndexNow submission done"
 
-      - name: Ping Bing IndexNow (sitemap)
+      - name: Submit sitemap to Bing Webmaster (ping endpoint)
         run: |
-          echo "Pinging Bing..."
-          curl -s -o /dev/null -w "Bing HTTP %{http_code}\n" \
+          echo "Pinging Bing sitemap..."
+          curl -s -o /dev/null -w "Bing sitemap ping HTTP %{http_code}\n" \
             "https://www.bing.com/ping?sitemap=https%3A%2F%2Ftaigetag.com%2Fsitemap.xml"
-          echo "Bing sitemap ping done"
+          echo "done"
 
-      - name: Fetch both URLs to trigger CDN refresh
+      - name: Fetch live URLs (warm CDN cache)
         run: |
           curl -s -o /dev/null -w "taigetag.com HTTP %{http_code}\n" "https://taigetag.com/"
           curl -s -o /dev/null -w "sitemap HTTP %{http_code}\n" "https://taigetag.com/sitemap.xml"
+          curl -s -o /dev/null -w "indexnow-key HTTP %{http_code}\n" "https://taigetag.com/IMPLQzV8ZJL3XT7alCYPLLhxLidYNlkc.txt"
