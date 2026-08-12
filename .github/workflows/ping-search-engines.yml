@@ -1,0 +1,33 @@
+name: Ping Search Engines
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    name: Notify Google & Bing about sitemap update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ping Google Indexing (sitemap)
+        run: |
+          echo "Pinging Google..."
+          curl -s -o /dev/null -w "Google HTTP %{http_code}\n" \
+            "https://www.google.com/ping?sitemap=https%3A%2F%2Ftaigetag.com%2Fsitemap.xml"
+          echo "Google sitemap ping done"
+
+      - name: Ping Bing IndexNow (sitemap)
+        run: |
+          echo "Pinging Bing..."
+          curl -s -o /dev/null -w "Bing HTTP %{http_code}\n" \
+            "https://www.bing.com/ping?sitemap=https%3A%2F%2Ftaigetag.com%2Fsitemap.xml"
+          echo "Bing sitemap ping done"
+
+      - name: Fetch both URLs to trigger CDN refresh
+        run: |
+          curl -s -o /dev/null -w "taigetag.com HTTP %{http_code}\n" "https://taigetag.com/"
+          curl -s -o /dev/null -w "sitemap HTTP %{http_code}\n" "https://taigetag.com/sitemap.xml"
