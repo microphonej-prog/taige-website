@@ -32,13 +32,6 @@ jobs:
             -o /dev/null -w "IndexNow HTTP %{http_code}\n"
           echo "IndexNow submission done"
 
-      - name: Submit sitemap to Bing Webmaster (ping endpoint)
-        run: |
-          echo "Pinging Bing sitemap..."
-          curl -s -o /dev/null -w "Bing sitemap ping HTTP %{http_code}\n" \
-            "https://www.bing.com/ping?sitemap=https%3A%2F%2Ftaigetag.com%2Fsitemap.xml"
-          echo "done"
-
       - name: Fetch live URLs (warm CDN cache)
         run: |
           curl -s -o /dev/null -w "taigetag.com HTTP %{http_code}\n" "https://taigetag.com/"
