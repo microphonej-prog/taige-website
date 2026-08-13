@@ -13,11 +13,22 @@
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
   } catch (e) { /* 老浏览器无 URLSearchParams 时忽略 */ }
-  var current = (urlLang && LANGS.indexOf(urlLang) >= 0) ? urlLang : "zh";
+  var current = (urlLang && LANGS.indexOf(urlLang) >= 0) ? urlLang : null;
   try {
     var saved = localStorage.getItem(LANG_KEY);
     if (saved && LANGS.indexOf(saved) >= 0) current = saved;
   } catch (e) { /* localStorage 不可用时忽略 */ }
+  /* 首次访问（无 URL 参数、无历史偏好）：按访客系统/浏览器语言自动匹配。
+     中文系统→中文，法/西→对应语言，其余语言(日韩德等)→英文(国际通用)。 */
+  if (!current) {
+    var sys = "";
+    try { sys = (navigator.language || navigator.userLanguage || "").toLowerCase(); } catch (e) {}
+    if (sys.indexOf("zh") === 0) current = "zh";
+    else if (sys.indexOf("fr") === 0) current = "fr";
+    else if (sys.indexOf("es") === 0) current = "es";
+    else if (sys.indexOf("en") === 0) current = "en";
+    else current = "en";
+  }
   if (LANGS.indexOf(current) < 0) current = "zh";
   /* URL 参数优先，并把选择存入 localStorage 供下次访问记忆 */
   if (urlLang && LANGS.indexOf(urlLang) >= 0) {
