@@ -217,3 +217,20 @@
     });
   }
 })();
+
+/* ---------- blog 文章页头部随机背景图 ----------
+   页面 header 带 class="random-bg" + data-bg="图1,图2,..."（相对路径）时，
+   每次加载随机选一张作为背景，叠加红色半透明层保证文字可读。 */
+(function () {
+  "use strict";
+  var h = document.querySelector("header.random-bg");
+  if (!h) return;
+  var bg = h.getAttribute("data-bg");
+  if (!bg) return;
+  var list = bg.split(",").map(function (s) { return s.trim(); });
+  if (!list.length) return;
+  var pick = list[Math.floor(Math.random() * list.length)];
+  h.style.backgroundImage = "url('" + pick + "')";
+  h.style.backgroundSize = "cover";
+  h.style.backgroundPosition = "center";
+})();

@@ -33,10 +33,13 @@ footer a{color:var(--red)}
 .lang-switch{display:inline-flex;gap:6px;vertical-align:middle;margin-left:14px}
 .lang-flag{background:none;border:2px solid transparent;border-radius:4px;padding:0;cursor:pointer;opacity:.65;line-height:0;vertical-align:middle}
 .lang-flag.active{opacity:1;border-color:#fff}
+header.random-bg{position:relative;background-color:#8a1424}
+header.random-bg::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(122,16,30,.45),rgba(122,16,30,.65));z-index:0}
+header.random-bg .container{position:relative;z-index:1}
 </style>
 </head>
 <body>
-<header>
+<header class="random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg">
   <div class="container">
     <h1 data-zh="服装包装完整指南：包装袋、吊牌与标签" data-en="Complete Guide to Garment Packaging: Bags, Tags and Labels" data-fr="Guide complet de l'emballage de vêtements : sacs, étiquettes suspendues et labels" data-es="Guía completa de embalaje de prendas: bolsas, etiquetas y rótulos">Complete Guide to Garment Packaging: Bags, Tags and Labels</h1>
     <div class="meta" data-zh="泰阁包装 · 更新于 2026" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado 2026">By TAGE Packaging &nbsp;·&nbsp; Updated 2026</div>
