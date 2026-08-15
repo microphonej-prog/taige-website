@@ -54,8 +54,8 @@
       <h1 data-zh="每一件服装，都有<em>泰阁</em>的细节" data-fr="Chaque vêtement porte le détail <em>TAGE</em>" data-es="Cada prenda lleva el detalle <em>TAGE</em>" data-en="Every garment carries the <em>TAGE</em> detail">每一件服装，都有<em>泰阁</em>的细节</h1>
       <p data-zh="专注生产服装吊牌、织唛、洗水标、包装袋、环保纸袋与宣传手册，提供从设计打样到批量生产的完整定制服务，产品出口全球市场。" data-fr="Spécialisé dans les étiquettes, labels tissés, étiquettes d'entretien, sacs d'emballage, sacs en papier écologiques et brochures — du design au prototype jusqu'à la production en série, exportation mondiale." data-es="Especializados en etiquetas colgantes, etiquetas tejidas, etiquetas de cuidado, bolsas de embalaje, bolsas de papel ecológicas y folletos — desde el diseño y el muestreo hasta la producción en masa, exportación mundial." data-en="Specialized in hang tags, woven labels, care labels, packaging bags, eco paper bags and brochures — from design and sampling to mass production, exporting worldwide.">专注生产服装吊牌、织唛、洗水标、包装袋、环保纸袋与宣传手册，提供从设计打样到批量生产的完整定制服务，产品出口全球市场。</p>
       <div class="hero-actions">
-        <a class="btn btn-amber" href="contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a>
-        <a class="btn btn-ghost" href="products.html" data-zh="浏览产品" data-fr="Voir les produits" data-es="Ver productos" data-en="View Products">浏览产品</a>
+        <a class="btn btn-tesla" href="contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a>
+        <a class="btn btn-more" href="products.html" data-zh="浏览产品" data-fr="Voir les produits" data-es="Ver productos" data-en="View Products">浏览产品</a>
       </div>
       <div class="hero-meta">
         <span data-zh="📍 广东东莞 · 虎门" data-fr="📍 Dongguan · Humen, Guangdong" data-es="📍 Dongguan · Humen, Guangdong" data-en="📍 Humen, Dongguan, Guangdong">📍 广东东莞 · 虎门</span>
@@ -226,6 +226,19 @@
   </div>
 </footer>
 
+<!-- TAGE Assist 悬浮提问窗口（Tesla Assist 风格） -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
 <script src="js/main.js?v=4.2"></script>
+<script src="js/assist.js?v=1"></script>
 </body>
 </html>
