@@ -177,6 +177,14 @@
       INPUT.focus();
     });
   }
+  /* 关闭按钮 */
+  var CLOSE = document.getElementById("assistClose");
+  if (CLOSE) {
+    CLOSE.addEventListener("click", function () {
+      PANEL.classList.remove("open");
+      FAB.classList.remove("hidden");
+    });
+  }
   SEND.addEventListener("click", function () { ask(INPUT.value); });
   INPUT.addEventListener("keydown", function (e) {
     if (e.key === "Enter") { e.preventDefault(); ask(INPUT.value); }
