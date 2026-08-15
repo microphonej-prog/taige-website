@@ -461,3 +461,5 @@ ul { list-style: none; }
 
 .assist-close{background:none;border:none;color:#fff;font-size:17px;line-height:1;cursor:pointer;opacity:.8;padding:2px 5px;transition:opacity .2s}
 .assist-close:hover{opacity:1}
+
+.page-hero .crumb a:hover{color:var(--amber)}
