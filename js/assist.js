@@ -160,11 +160,20 @@
     setTimeout(function () { appendMsg(matchReply(q), "ai"); }, 450);
   }
 
+  /* 触屏设备不自动聚焦（避免 iOS 键盘弹出顶起 fixed 面板/撑动页面） */
+  function focusInput() {
+    try {
+      if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+        INPUT.focus();
+      }
+    } catch (e) {}
+  }
+
   /* ---------- 事件 ---------- */
   FAB.addEventListener("click", function () {
     var open = PANEL.classList.toggle("open");
     FAB.classList.toggle("hidden", open);
-    if (open) { BODY.scrollTop = BODY.scrollHeight; INPUT.focus(); }
+    if (open) { BODY.scrollTop = BODY.scrollHeight; focusInput(); }
   });
   /* 底部「提问」按钮 → 打开客服面板（stopPropagation 避免外部点击关闭冲突） */
   var OPEN = document.getElementById("assistOpen");
@@ -174,7 +183,7 @@
       PANEL.classList.add("open");
       FAB.classList.add("hidden");
       BODY.scrollTop = BODY.scrollHeight;
-      INPUT.focus();
+      focusInput();
     });
   }
   /* 关闭按钮 */
@@ -207,7 +216,7 @@
       PANEL.classList.add("open");
       FAB.classList.add("hidden");
       BODY.scrollTop = BODY.scrollHeight;
-      INPUT.focus();
+      focusInput();
     }
   };
 })();

@@ -440,7 +440,7 @@ ul { list-style: none; }
 .assist-fab:hover{background:#2a52a8;transform:scale(1.06)}
 .assist-fab.hidden{display:none}
 .assist-fab .assist-badge{position:absolute;top:0;right:0;width:13px;height:13px;border-radius:50%;background:#4caf50;border:2px solid #fff}
-.assist-panel{position:fixed;right:22px;bottom:92px;z-index:999;width:min(360px,calc(100vw - 32px));background:#fff;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden;font-family:var(--font);color:#222}
+.assist-panel{position:fixed;right:22px;bottom:92px;z-index:999;width:min(360px,calc(100vw - 32px));max-width:calc(100vw - 24px);background:#fff;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden;font-family:var(--font);color:#222}
 .assist-panel.open{display:flex}
 .assist-head{background:#3366cc;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
 .assist-dot{width:8px;height:8px;border-radius:50%;background:#4caf50;display:inline-block}
@@ -457,7 +457,7 @@ ul { list-style: none; }
 .assist-foot input:focus{border-color:#3366cc}
 .assist-foot button{background:#3366cc;color:#fff;border:none;border-radius:20px;padding:9px 16px;font-size:14px;cursor:pointer;font-family:var(--font)}
 .assist-foot button:hover{background:#2a52a8}
-@media (max-width:480px){.assist-panel{width:calc(100vw - 24px);right:12px;bottom:80px}}
+@media (max-width:480px){.assist-panel{width:auto;left:12px;right:12px;max-width:none;bottom:80px}}
 
 .assist-close{background:none;border:none;color:#fff;font-size:17px;line-height:1;cursor:pointer;opacity:.8;padding:2px 5px;transition:opacity .2s}
 .assist-close:hover{opacity:1}
