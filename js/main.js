@@ -223,7 +223,7 @@
    每次加载随机选一张作为背景，叠加红色半透明层保证文字可读。 */
 (function () {
   "use strict";
-  var h = document.querySelector("header.random-bg");
+  var h = document.querySelector(".random-bg");
   if (!h) return;
   var bg = h.getAttribute("data-bg");
   if (!bg) return;

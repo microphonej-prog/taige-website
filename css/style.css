@@ -183,7 +183,9 @@ ul { list-style: none; }
 }
 
 /* ---------- 内页 Hero ---------- */
-.page-hero { background: var(--ink); color: #e8e6e0; padding: 64px 0; }
+.page-hero { position: relative; background: var(--ink); color: #e8e6e0; padding: 64px 0; }
+.page-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)); z-index: 0; }
+.page-hero .container { position: relative; z-index: 1; }
 .page-hero h1 { font-size: clamp(26px, 3.4vw, 38px); color: #fff; margin-bottom: 10px; }
 .page-hero p { color: #b9c4ce; max-width: 640px; }
 .page-hero .crumb { font-size: 13px; color: #8fa0ae; margin-bottom: 14px; }
@@ -338,19 +340,13 @@ ul { list-style: none; }
 
 /* ---------- 深色 banner 背景图（对应内容） ---------- */
 .page-hero.banner-products {
-  background:
-    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
-    url("../images/banner-products.jpg") center 40% / cover no-repeat;
+  background: url("../images/banner-products.jpg") center 40% / cover no-repeat;
 }
 .page-hero.banner-about {
-  background:
-    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
-    url("../images/banner-about.jpg") center 35% / cover no-repeat;
+  background: url("../images/banner-about.jpg") center 35% / cover no-repeat;
 }
 .page-hero.banner-contact {
-  background:
-    linear-gradient(rgba(22, 34, 46, .82), rgba(22, 34, 46, .62)),
-    url("../images/banner-contact.jpg") center 35% / cover no-repeat;
+  background: url("../images/banner-contact.jpg") center 35% / cover no-repeat;
 }
 .cta.banner-cta {
   background:
