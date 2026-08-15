@@ -166,6 +166,17 @@
     FAB.classList.toggle("hidden", open);
     if (open) { BODY.scrollTop = BODY.scrollHeight; INPUT.focus(); }
   });
+  /* 底部「提问」按钮 → 打开客服面板（stopPropagation 避免外部点击关闭冲突） */
+  var OPEN = document.getElementById("assistOpen");
+  if (OPEN) {
+    OPEN.addEventListener("click", function (e) {
+      e.stopPropagation();
+      PANEL.classList.add("open");
+      FAB.classList.add("hidden");
+      BODY.scrollTop = BODY.scrollHeight;
+      INPUT.focus();
+    });
+  }
   SEND.addEventListener("click", function () { ask(INPUT.value); });
   INPUT.addEventListener("keydown", function (e) {
     if (e.key === "Enter") { e.preventDefault(); ask(INPUT.value); }
@@ -181,4 +192,14 @@
 
   appendMsg(t.hello, "ai");
   renderQuick();
+
+  /* 暴露接口（供其他入口调用） */
+  window.TAGEAssist = {
+    open: function () {
+      PANEL.classList.add("open");
+      FAB.classList.add("hidden");
+      BODY.scrollTop = BODY.scrollHeight;
+      INPUT.focus();
+    }
+  };
 })();
