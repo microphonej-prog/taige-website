@@ -432,3 +432,13 @@ ul { list-style: none; }
 
 /* 内联 SVG 国旗 */
 .lang-flag svg { display: block; }
+
+/* ---------- 特斯拉式：下单 CTA + 提问模块 ---------- */
+.ts-cta{background:#111;text-align:center;padding:72px 20px 56px}
+.ts-cta h2{font-size:clamp(24px,4vw,40px);font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:14px}
+.ts-cta p{color:rgba(255,255,255,.75);font-size:15px;max-width:560px;margin:0 auto 34px}
+.ts-btn{display:inline-block;background:#fff;color:#111;padding:14px 42px;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:background .25s}
+.ts-btn:hover{background:#e8e8e8}
+.ts-ask{background:#000;text-align:center;padding:20px 20px 34px;font-size:14px;color:rgba(255,255,255,.6)}
+.ts-ask a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px;margin:0 12px;transition:border-color .2s,color .2s}
+.ts-ask a:hover{border-color:#b01d2f;color:#e8a0ab}
