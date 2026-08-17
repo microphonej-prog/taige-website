@@ -14,7 +14,18 @@
 
   /* ---------- 语言检测：?lang > localStorage > html lang ---------- */
   var LANGS = ["zh", "en", "fr", "es"];
+  /* 独立语言目录 /en/ /fr/ /es/：固定对应语言（该目录页面已静态渲染） */
+  var DIR_LANG = null;
+  try {
+    var _p = location.pathname;
+    if (_p.indexOf("/en/") >= 0) DIR_LANG = "en";
+    else if (_p.indexOf("/fr/") >= 0) DIR_LANG = "fr";
+    else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
+  } catch (e) {}
   var LANG = "zh", fromUrl = null, fromStore = null;
+  if (DIR_LANG) {
+    LANG = DIR_LANG;
+  } else {
   try {
     var u = new URLSearchParams(location.search).get("lang");
     if (u && LANGS.indexOf(u) >= 0) fromUrl = u;
@@ -30,6 +41,7 @@
     else if (dl.indexOf("fr") === 0) LANG = "fr";
     else if (dl.indexOf("es") === 0) LANG = "es";
     else if (dl.indexOf("en") === 0) LANG = "en";
+  }
   }
   /* ================= 四语知识库 ================= */
   function T() {}

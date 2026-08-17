@@ -7,17 +7,33 @@
   /* ---------- 语言检测（?lang= 参数 > localStorage > 默认zh） ---------- */
   var LANG_KEY = "taige_lang";
   var LANGS = ["zh", "en", "fr", "es"];
+  /* 独立语言目录 /en/ /fr/ /es/：固定对应语言，忽略 ?lang/localStorage/浏览器语言，
+     语言切换按钮跳回根目录对应语言版本 */
+  var DIR_LANG = null;
+  try {
+    var _p = location.pathname;
+    if (_p.indexOf("/en/") >= 0) DIR_LANG = "en";
+    else if (_p.indexOf("/fr/") >= 0) DIR_LANG = "fr";
+    else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
+  } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "42";
+  var BUST_VERSION = "43";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
   } catch (e) { /* 老浏览器无 URLSearchParams 时忽略 */ }
-  var current = (urlLang && LANGS.indexOf(urlLang) >= 0) ? urlLang : null;
-  try {
-    var saved = localStorage.getItem(LANG_KEY);
-    if (saved && LANGS.indexOf(saved) >= 0) current = saved;
-  } catch (e) { /* localStorage 不可用时忽略 */ }
+  var current = null;
+  if (DIR_LANG) {
+    current = DIR_LANG;
+  } else if (urlLang && LANGS.indexOf(urlLang) >= 0) {
+    current = urlLang;
+  }
+  if (!current) {
+    try {
+      var saved = localStorage.getItem(LANG_KEY);
+      if (saved && LANGS.indexOf(saved) >= 0) current = saved;
+    } catch (e) { /* localStorage 不可用时忽略 */ }
+  }
   /* 首次访问（无 URL 参数、无历史偏好）：按访客系统/浏览器语言自动匹配。
      中文系统→中文，法/西→对应语言，其余语言(日韩德等)→英文(国际通用)。 */
   if (!current) {
@@ -98,6 +114,11 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
+      /* 独立语言目录（en/fr/es）：跳回根目录对应语言版本（根目录才有完整四语 data 属性） */
+      if (DIR_LANG) {
+        location.href = "../index.html?lang=" + lang + "&v=" + BUST_VERSION;
+        return;
+      }
       /* 跳转到同页面 + ?lang=xx，浏览器整页加载
          v= 参数用于绕过 GitHub Pages 的 max-age=600 缓存，
          每次部署升级 BUST_VERSION 强制所有用户加载最新 HTML */
