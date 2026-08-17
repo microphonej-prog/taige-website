@@ -17,7 +17,7 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
   } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "44";
+  var BUST_VERSION = "45";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -111,10 +111,13 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
-      var rel = location.pathname.replace(/^\/(en|fr|es)\//, "");
+      var rel = location.pathname.replace(/^\/(en|fr|es)\//, "").replace(/^\/+|\/+$/g, "");
       if (!rel || rel === "index.html") {
         /* 首页：根目录 zh 用 /，语言目录用 /xx/ */
         location.href = (lang === "zh" ? "/" : "/" + lang + "/") + "?v=" + BUST_VERSION;
+      } else if (lang === "zh") {
+        /* 非首页点中文：中文版在根目录，无 /zh/ 目录 */
+        location.href = "/" + rel + "?v=" + BUST_VERSION;
       } else {
         location.href = "/" + lang + "/" + rel + "?v=" + BUST_VERSION;
       }
