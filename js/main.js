@@ -17,7 +17,7 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
   } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "43";
+  var BUST_VERSION = "44";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -25,14 +25,14 @@
   var current = null;
   if (DIR_LANG) {
     current = DIR_LANG;
-  } else if (urlLang && LANGS.indexOf(urlLang) >= 0) {
-    current = urlLang;
-  }
-  if (!current) {
-    try {
-      var saved = localStorage.getItem(LANG_KEY);
-      if (saved && LANGS.indexOf(saved) >= 0) current = saved;
-    } catch (e) { /* localStorage 不可用时忽略 */ }
+  } else if (urlLang && LANGS.indexOf(urlLang) >= 0 && urlLang !== "zh") {
+    /* 旧式 ?lang=fr 链接：升级跳转到独立语言目录（301 语义，保留 SEO 权重） */
+    location.replace("../" + urlLang + "/");
+    return;
+  } else {
+    /* 根目录固定中文：独立语言目录已上线，根目录不再按浏览器语言自动切换
+       （避免 Googlebot(en-US) 把中文版渲染成英文，导致 hreflang 信号冲突） */
+    current = "zh";
   }
   /* 首次访问（无 URL 参数、无历史偏好）：按访客系统/浏览器语言自动匹配。
      中文系统→中文，法/西→对应语言，其余语言(日韩德等)→英文(国际通用)。 */
@@ -46,11 +46,6 @@
     else current = "en";
   }
   if (LANGS.indexOf(current) < 0) current = "zh";
-  /* URL 参数优先，并把选择存入 localStorage 供下次访问记忆 */
-  if (urlLang && LANGS.indexOf(urlLang) >= 0) {
-    current = urlLang;
-    try { localStorage.setItem(LANG_KEY, urlLang); } catch (e) {}
-  }
 
   var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
 
@@ -103,7 +98,9 @@
     }
   }
 
-  /* ---------- 语言切换：整页跳转（终极方案，零动态DOM） ---------- */
+  /* ---------- 语言切换：跳到目标语言的独立目录（同页面相对路径） ----------
+     /fr/blog/xxx.html 点 en → /en/blog/xxx.html；点 zh → /blog/xxx.html
+     根目录点 fr → /fr/（首页）。v= 参数绕过 GitHub Pages 缓存。 */
   var sw = document.getElementById("langSwitch");
   if (sw) {
     sw.addEventListener("click", function (e) {
@@ -114,17 +111,14 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
-      /* 独立语言目录（en/fr/es）：跳回根目录对应语言版本（根目录才有完整四语 data 属性） */
-      if (DIR_LANG) {
-        location.href = "../index.html?lang=" + lang + "&v=" + BUST_VERSION;
-        return;
+      var rel = location.pathname.replace(/^\/(en|fr|es)\//, "");
+      if (!rel || rel === "index.html") {
+        /* 首页：根目录 zh 用 /，语言目录用 /xx/ */
+        location.href = (lang === "zh" ? "/" : "/" + lang + "/") + "?v=" + BUST_VERSION;
+      } else {
+        location.href = "/" + lang + "/" + rel + "?v=" + BUST_VERSION;
       }
-      /* 跳转到同页面 + ?lang=xx，浏览器整页加载
-         v= 参数用于绕过 GitHub Pages 的 max-age=600 缓存，
-         每次部署升级 BUST_VERSION 强制所有用户加载最新 HTML */
-      var path = location.pathname.split("/").pop() || "index.html";
       try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
-      location.href = path + "?lang=" + lang + "&v=" + BUST_VERSION;
     });
   }
 

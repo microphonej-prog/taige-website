@@ -26,22 +26,9 @@
   if (DIR_LANG) {
     LANG = DIR_LANG;
   } else {
-  try {
-    var u = new URLSearchParams(location.search).get("lang");
-    if (u && LANGS.indexOf(u) >= 0) fromUrl = u;
-  } catch (e) {}
-  try {
-    var s = localStorage.getItem("taige_lang");
-    if (s && LANGS.indexOf(s) >= 0) fromStore = s;
-  } catch (e) {}
-  LANG = fromUrl || fromStore || "zh";
-  if (!fromUrl && !fromStore) {
-    var dl = (document.documentElement.lang || "").toLowerCase();
-    if (dl.indexOf("zh") === 0) LANG = "zh";
-    else if (dl.indexOf("fr") === 0) LANG = "fr";
-    else if (dl.indexOf("es") === 0) LANG = "es";
-    else if (dl.indexOf("en") === 0) LANG = "en";
-  }
+    /* 根目录固定中文（与 main.js 一致：独立目录已上线，根目录不再切换语言，
+       避免 Googlebot 渲染与 localStorage 残留偏好造成语言不一致） */
+    LANG = "zh";
   }
   /* ================= 四语知识库 ================= */
   function T() {}
