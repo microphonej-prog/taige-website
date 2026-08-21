@@ -17,7 +17,7 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
   } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "47";
+  var BUST_VERSION = "48";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
