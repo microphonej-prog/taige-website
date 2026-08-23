@@ -58,6 +58,10 @@ def convert(lang, src_path, out_path, page_abs_url):
                    '<meta name="description" content="%s">' % new_desc, s, count=1)
 
     # ---------- 4. canonical + og:url ----------
+    # 仅语言根首页（en/index.html 等）用目录形式（/en/ 而非 /en/index.html），
+    # 与 sitemap/hreflang 一致，避免 GSC "备用网页"误判；blog 首页 sitemap 用 index.html，保持不变
+    if page_abs_url.endswith('/%s/index.html' % lang):
+        page_abs_url = page_abs_url[:-len('index.html')]
     s = re.sub(r'<link rel="canonical"[^>]*>',
                '<link rel="canonical" href="%s">' % page_abs_url, s, count=1)
     s = re.sub(r'<meta property="og:url"[^>]*>',
