@@ -435,6 +435,83 @@ ul { list-style: none; }
 .btn-more { background: rgba(255,255,255,.2); color: #fff; border-radius: 4px; }
 .btn-more:hover { background: rgba(255,255,255,.32); }
 
+/* ---------- 2026 homepage refinement ---------- */
+:root {
+  --paper: #f5f3ee;
+  --paper-2: #eae7df;
+  --ink: #13202d;
+  --amber: #d3a448;
+  --radius: 14px;
+  --shadow: 0 16px 42px rgba(19, 32, 45, .09);
+}
+.site-header { background: rgba(19, 32, 45, .96); backdrop-filter: blur(14px); }
+.nav-wrap { height: 76px; }
+.brand-mark { border-radius: 50%; width: 40px; height: 40px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); }
+.nav-links { gap: 25px; }
+.nav-links a { font-size: 14px; letter-spacing: .15px; }
+.nav-links a:hover, .nav-links a.active { border-color: var(--amber); }
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(11, 21, 30, .95) 0%, rgba(16, 29, 40, .83) 45%, rgba(17, 31, 43, .34) 100%),
+    url("../images/hero-bg.jpg") center / cover no-repeat;
+}
+.hero::before { content: ""; position: absolute; inset: 0; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(90deg, #000, transparent 72%); }
+.hero::after { background: radial-gradient(660px 400px at 85% 26%, rgba(211,164,72,.18), transparent 66%); }
+.hero-inner { max-width: 780px; padding: 96px 24px 104px; }
+.hero-kicker { color: #f0c870; border: 0; border-left: 2px solid var(--amber); border-radius: 0; padding: 0 0 0 13px; letter-spacing: 2.1px; }
+.hero h1 { max-width: 700px; font-size: clamp(38px, 5vw, 62px); letter-spacing: -.045em; line-height: 1.13; margin-bottom: 25px; }
+.hero p { font-size: 17px; line-height: 1.8; max-width: 600px; }
+.hero-actions { gap: 12px; }
+.btn, .btn-tesla, .btn-more { border-radius: 999px; padding: 13px 25px; }
+.btn-tesla { background: var(--amber); color: var(--ink); box-shadow: 0 10px 24px rgba(211,164,72,.22); }
+.btn-tesla:hover { background: #e1b65d; color: var(--ink); }
+.btn-more { border: 1px solid rgba(255,255,255,.48); background: transparent; }
+.btn-more:hover { background: rgba(255,255,255,.1); }
+.hero-meta { gap: 0; margin-top: 52px; padding-top: 22px; }
+.hero-meta span { padding: 0 22px; border-left: 1px solid rgba(255,255,255,.2); }
+.hero-meta span:first-child { padding-left: 0; border-left: 0; }
+.section { padding: 104px 0; }
+.section-alt { background: #eae7df; }
+.section-head { margin-bottom: 46px; }
+.section-head h2 { font-size: clamp(30px, 3.4vw, 43px); letter-spacing: -.035em; }
+.section-head .kicker { color: #a57621; font-weight: 700; letter-spacing: 2px; }
+.products-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.product-card { border-radius: 14px; border: 0; box-shadow: none; background: #fff; }
+.product-card:hover { transform: translateY(-7px); box-shadow: 0 20px 38px rgba(19,32,45,.14); }
+.product-thumb { aspect-ratio: 1.13; }
+.product-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.product-card:hover .product-thumb img { transform: scale(1.045); }
+.product-body { padding: 21px 22px 24px; }
+.product-body h3 { font-size: 20px; }
+.product-body .en { font-size: 10.5px; font-weight: 700; letter-spacing: 1.3px; }
+.product-body .link { margin-top: 4px; color: #8d641c; }
+.feature-row { gap: 1px; background: #d7d2c6; border: 1px solid #d7d2c6; border-radius: var(--radius); overflow: hidden; }
+.feature { border: 0; border-radius: 0; padding: 36px 30px; }
+.feature:hover { box-shadow: none; border-color: transparent; background: #fffdfa; }
+.feature .num { font-size: 15px; letter-spacing: 1.5px; }
+.cta { padding: 110px 0; background: linear-gradient(rgba(12,23,33,.87), rgba(12,23,33,.9)), url("../images/cta-bg.jpg") center / cover no-repeat; }
+.cta h2 { font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -.03em; }
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { min-height: 590px; }
+  .hero-meta { gap: 16px; }
+  .hero-meta span { padding: 0; border: 0; width: 100%; }
+}
+@media (max-width: 560px) {
+  .nav-wrap { height: 68px; }
+  .nav-links { top: 68px; }
+  .brand-name small { display: none; }
+  .hero { min-height: 590px; background-position: 60% center; }
+  .hero-inner { padding-top: 76px; padding-bottom: 76px; }
+  .hero h1 { font-size: 39px; }
+  .hero p { font-size: 15.5px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .section { padding: 76px 0; }
+}
+
 /* ---------- TAGE Assist 悬浮提问窗口（Tesla Assist 风格） ---------- */
 .assist-fab{position:fixed;right:22px;bottom:22px;z-index:999;width:56px;height:56px;border-radius:50%;background:#3366cc;color:#fff;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;font-size:24px;transition:transform .25s,background .25s}
 .assist-fab:hover{background:#2a52a8;transform:scale(1.06)}
