@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="织唛来稿与制版指南：线条粗细、字号与文件格式 | TAGE" data-en="Woven Label Artwork Guide: Line Weight, Font Size &amp; File Formats | TAGE" data-fr="Guide des fichiers pour labels tissés : épaisseur de traits, taille de police et formats | TAGE" data-es="Guía de arte para etiquetas tejidas: grosor de línea, tamaño de letra y formatos | TAGE">织唛来稿与制版指南：线条粗细、字号与文件格式 | TAGE</title>
+<meta name="description" data-zh="织唛制版常被退稿，多半是稿件不符合织造规律：线条太细会断纱、字号太小会糊字、渐变与照片织不出来。本文讲清织唛来稿的文件格式、最小线条与字号下限及各工艺限制，让您的织唛稿件一次打样通过。"
+      data-en="Woven label artwork guide: file formats, minimum line widths and font sizes, and the weave limits of jacquard, satin and taffeta - pass sampling first time."
+      data-fr="Pourquoi les fichiers de labels tissés sont-ils si souvent refusés ? Des traits trop fins cassent les fils, des polices trop petites se brouillent, et les dégradés ou photos ne peuvent tout simplement pas être tissés. Ce guide explique les formats de fichiers, les épaisseurs de trait et tailles de police minimales, et les limites du jacquard, du satin et du taffetas — pour des labels validés dès le premier échantillon."
+      data-es="¿Por qué rechazan tantos artes de etiquetas tejidas? Los trazos demasiado finos rompen los hilos, las letras demasiado pequeñas se emborronan y los degradados o las fotos simplemente no se pueden tejer. Esta guía explica los formatos de archivo, los grosores de línea y tamaños de letra mínimos, y los límites del jacquard, el satén y la tafeta — para que sus etiquetas pasen el muestreo a la primera."
+      content="织唛制版常被退稿，多半是稿件不符合织造规律：线条太细会断纱、字号太小会糊字、渐变与照片织不出来。本文讲清织唛来稿的文件格式、最小线条与字号下限及各工艺限制，让您的织唛稿件一次打样通过。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-artwork-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "织唛来稿与制版指南：线条粗细、字号与文件格式",
+     "item": "https://taigetag.com/blog/woven-label-artwork-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "织唛来稿与制版指南：线条粗细、字号与文件格式",
+   "url": "https://taigetag.com/blog/woven-label-artwork-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-artwork-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="织唛来稿与制版" data-en="Woven Label Artwork" data-fr="Fichiers de labels tissés" data-es="Arte para etiquetas tejidas">织唛来稿与制版</span></div>
+      <h1 data-zh="织唛来稿与制版指南：线条粗细、字号与文件格式" data-en="Woven Label Artwork Guide: Line Weight, Font Size &amp; File Formats" data-fr="Guide des fichiers pour labels tissés : épaisseur de traits, taille de police et formats" data-es="Guía de arte para etiquetas tejidas: grosor de línea, tamaño de letra y formatos">织唛来稿与制版指南：线条粗细、字号与文件格式</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月3日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 3, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 3 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 3 de septiembre de 2026">泰阁包装 · 更新于 2026年9月3日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="织唛制版与印刷制版是两套逻辑：印刷可以印出照片级渐变，织唛却是一根根经纬纱交织出来的「网格画」——纱线有粗细、密度有上限、颜色要一种纱一种纱地安排。很多品牌拿着精美的设计稿来打织唛，反复退稿的原因往往不是工厂不行，而是稿件不符合织造规律。这篇织唛来稿与制版指南，讲清文件怎么交、线条字号的下限在哪里、哪些效果织不出来。"
+         data-en="Woven label plate-making follows a different logic from print: printing can reproduce photo-grade gradients, but a woven label is a grid picture built thread by thread — yarns have thickness, density has limits, and each color must be assigned to a specific yarn. When brands bring gorgeous artwork to have woven labels sampled, repeated rejections are usually not the factory's fault but the artwork's incompatibility with weaving physics. This woven label artwork guide explains how to submit files, where the minimum line and font limits sit, and which effects simply cannot be woven."
+         data-fr="La fabrication des labels tissés obéit à une logique différente de l'impression : l'impression reproduit des dégradés dignes d'une photo, mais un label tissé est une image en grille construite fil par fil — les fils ont une épaisseur, la densité a une limite, et chaque couleur doit être attribuée à un fil précis. Quand une marque apporte un magnifique fichier pour un échantillon tissé, les refus répétés ne viennent généralement pas de l'usine mais de l'incompatibilité du fichier avec la mécanique du tissage. Ce guide explique comment fournir vos fichiers, où se situent les limites minimales de traits et de polices, et quels effets ne peuvent tout simplement pas être tissés."
+         data-es="La fabricación de etiquetas tejidas sigue una lógica distinta a la impresión: la impresión reproduce degradados de calidad fotográfica, pero una etiqueta tejida es una imagen de rejilla construida hilo a hilo — los hilos tienen grosor, la densidad tiene límites y cada color debe asignarse a un hilo concreto. Cuando una marca lleva un arte precioso para muestrear etiquetas tejidas, los rechazos repetidos no suelen ser culpa de la fábrica sino de la incompatibilidad del arte con la física del tejido. Esta guía explica cómo entregar los archivos, dónde están los límites mínimos de trazo y letra, y qué efectos simplemente no se pueden tejer.">织唛制版与印刷制版是两套逻辑：印刷可以印出照片级渐变，织唛却是一根根经纬纱交织出来的「网格画」——纱线有粗细、密度有上限、颜色要一种纱一种纱地安排。很多品牌拿着精美的设计稿来打织唛，反复退稿的原因往往不是工厂不行，而是稿件不符合织造规律。这篇织唛来稿与制版指南，讲清文件怎么交、线条字号的下限在哪里、哪些效果织不出来。</p>
+
+      <h2 data-zh="1. 为什么织唛的文件要求比印刷更严格" data-en="1. Why Woven Label File Requirements Are Stricter Than Print" data-fr="1. Pourquoi les exigences de fichiers sont plus strictes que pour l'impression" data-es="1. Por qué los requisitos de archivo son más estrictos que en impresión">1. 为什么织唛的文件要求比印刷更严格</h2>
+      <p data-zh="织唛的「分辨率」由经纱与纬纱的密度决定，常见在每厘米 30–50 根纱的区间。也就是说，任何小于一两根纱线宽度的细节都无法呈现：细线会断、小字会糊、渐变色阶会断裂。印刷机的墨点直径是微米级的，而织唛的最小单元是纱线直径——这就是为什么在屏幕上看着完美的设计，织出来却「面目全非」。所以织唛来稿要在设计阶段就按织造逻辑处理：线条加粗、字号放大、渐变改色块。"
+         data-en="A woven label's resolution is set by warp and weft density, commonly in the range of 30–50 yarns per centimeter. Any detail narrower than one or two yarns simply cannot be rendered: fine lines break, small text blurs, and gradient steps fall apart. A printer's ink dot is measured in microns, while the smallest unit of a woven label is a yarn diameter — which is why a design that looks perfect on screen can come out unrecognizable when woven. Artwork for woven labels must therefore be treated with weaving logic from the design stage: thicken lines, enlarge type, and convert gradients into color blocks."
+         data-fr="La résolution d'un label tissé est fixée par la densité de chaîne et de trame, généralement entre 30 et 50 fils par centimètre. Autrement dit, tout détail plus fin qu'un ou deux fils ne peut pas être rendu : les traits fins cassent, les petits textes se brouillent, les dégradés se saccadent. La goutte d'encre d'une imprimante se mesure en microns, alors que l'unité minimale d'un label tissé est le diamètre d'un fil — c'est pourquoi un fichier parfait à l'écran peut devenir méconnaissable une fois tissé. Il faut donc traiter le fichier avec la logique du tissage dès la conception : épaissir les traits, agrandir les polices, transformer les dégradés en aplats."
+         data-es="La resolución de una etiqueta tejida la fija la densidad de urdimbre y trama, normalmente entre 30 y 50 hilos por centímetro. Es decir, cualquier detalle más fino que uno o dos hilos no se puede reproducir: las líneas finas se rompen, las letras pequeñas se emborronan y los degradados se escalonan. La gota de tinta de una impresora se mide en micras, pero la unidad mínima de una etiqueta tejida es el diámetro de un hilo — por eso un arte perfecto en pantalla puede quedar irreconocible al tejerlo. Por eso el arte para tejidos debe tratarse con lógica de tejido desde el diseño: engrosar trazos, agrandar tipografías y convertir degradados en bloques de color.">织唛的「分辨率」由经纱与纬纱的密度决定，常见在每厘米 30–50 根纱的区间。也就是说，任何小于一两根纱线宽度的细节都无法呈现：细线会断、小字会糊、渐变色阶会断裂。印刷机的墨点直径是微米级的，而织唛的最小单元是纱线直径——这就是为什么在屏幕上看着完美的设计，织出来却「面目全非」。所以织唛来稿要在设计阶段就按织造逻辑处理：线条加粗、字号放大、渐变改色块。</p>
+
+      <h2 data-zh="2. 文件格式与基础设置" data-en="2. File Formats and Basic Setup" data-fr="2. Formats de fichiers et réglages de base" data-es="2. Formatos de archivo y configuración básica">2. 文件格式与基础设置</h2>
+      <ul>
+        <li data-zh="<strong>优先矢量文件</strong>：AI、PDF、CDR 等矢量格式最理想，放大缩小不失真，分色制版最准确；位图请提供 300dpi 以上的 1:1 原大文件"
+            data-en="<strong>Vector files first</strong>: AI, PDF and CDR are ideal — they scale without losing quality and give the most accurate color separation; if bitmap, supply 1:1 artwork at 300 dpi or higher"
+            data-fr="<strong>Privilégiez les fichiers vectoriels</strong> : AI, PDF et CDR sont idéaux — ils se redimensionnent sans perte et donnent la séparation de couleurs la plus précise ; en bitmap, fournissez un fichier 1:1 à 300 dpi ou plus"
+            data-es="<strong>Prioriza archivos vectoriales</strong>: AI, PDF y CDR son ideales — se escalan sin pérdida y dan la separación de color más precisa; si es mapa de bits, entrega el arte 1:1 a 300 dpi o más"><strong>优先矢量文件</strong>：AI、PDF、CDR 等矢量格式最理想，放大缩小不失真，分色制版最准确；位图请提供 300dpi 以上的 1:1 原大文件</li>
+        <li data-zh="<strong>按 1:1 成品尺寸排版</strong>：附上成品宽度（含折边方式），文字与图形按实际成品大小设计，避免「先画大再缩小」导致比例失真"
+            data-en="<strong>Design at 1:1 finished size</strong>: state the finished width (including fold style) and design text and graphics at actual finished scale — avoid designing large then shrinking, which distorts proportions"
+            data-fr="<strong>Concevez en 1:1 à la taille finale</strong> : indiquez la largeur finale (avec le type de pliage) et concevez texte et graphismes à l'échelle réelle — évitez de dessiner en grand puis de réduire, cela déforme les proportions"
+            data-es="<strong>Diseña al 1:1 del tamaño final</strong>: indica el ancho final (incluido el tipo de doblez) y diseña textos y gráficos a la escala real — evita dibujar grande y luego reducir, eso deforma las proporciones"><strong>按 1:1 成品尺寸排版</strong>：附上成品宽度（含折边方式），文字与图形按实际成品大小设计，避免「先画大再缩小」导致比例失真</li>
+        <li data-zh="<strong>文字转曲、外框去除</strong>：避免字体缺失导致排版错乱；如保留文字请注明字体名称"
+            data-en="<strong>Convert text to outlines and remove strokes</strong>: avoids font-missing issues that scramble the layout; if keeping live text, name the fonts used"
+            data-fr="<strong>Vectorisez les textes et retirez les contours</strong> : évite les problèmes de polices manquantes ; si vous gardez du texte, indiquez les polices"
+            data-es="<strong>Convierte el texto en curvas y elimina contornos</strong>: evita problemas de fuentes faltantes; si mantienes texto vivo, indica las fuentes"><strong>文字转曲、外框去除</strong>：避免字体缺失导致排版错乱；如保留文字请注明字体名称</li>
+        <li data-zh="<strong>标注色号与色位</strong>：每个色块标注 Pantone 色号，并用色块编号区分相近色，制版分色与对色都靠它"
+            data-en="<strong>Mark color numbers and positions</strong>: label every color block with a Pantone reference and use numbered swatches to tell similar shades apart — plate separation and shade matching both depend on it"
+            data-fr="<strong>Indiquez numéros et emplacements des couleurs</strong> : étiquetez chaque aplat avec une référence Pantone et numérotez les échantillons pour distinguer les tons proches — la séparation et la correspondance des couleurs en dépendent"
+            data-es="<strong>Marca números y posiciones de color</strong>: etiqueta cada bloque con una referencia Pantone y usa muestras numeradas para distinguir tonos similares — la separación de planchas y la igualación dependen de ello"><strong>标注色号与色位</strong>：每个色块标注 Pantone 色号，并用色块编号区分相近色，制版分色与对色都靠它</li>
+      </ul>
+
+      <h2 data-zh="3. 线条、字号与间距的经验下限" data-en="3. Practical Minimums for Lines, Fonts and Spacing" data-fr="3. Minimums pratiques : traits, polices et espacements" data-es="3. Mínimos prácticos: trazos, letras y espaciados">3. 线条、字号与间距的经验下限</h2>
+      <p data-zh="给出可落地的大致下限（不同纱支与密度会有差异，最终以打样为准）：<strong>线条宽度</strong>建议不低于 0.3mm，反白（浅色字在深底上）线条需更粗；<strong>西文字高</strong>建议 1.5mm 以上，<strong>中文字高</strong>建议 3mm 以上，笔画复杂的字还要再放大；<strong>相邻色块间距</strong>至少留 0.5mm，否则两种纱线交织处会互相「串色」，边缘发糊。小字不是「再细一点试试」就能解决的——纱线网格就在那里，小于网格的笔画物理上不存在。"
+         data-en="Here are practical minimums (they vary with yarn count and density, and sampling is the final judge): <strong>line weight</strong> at least 0.3 mm, thicker for reversed-out lines (light text on a dark ground); <strong>Latin font height</strong> above 1.5 mm and <strong>Chinese characters</strong> above 3 mm, larger still for complex stroke counts; <strong>gaps between adjacent color blocks</strong> of at least 0.5 mm, or yarns bleed into each other and edges look fuzzy. Small type cannot be fixed by trying slightly smaller — the yarn grid is what it is, and strokes narrower than the grid simply do not exist."
+         data-fr="Voici des minimums pratiques (ils varient selon le titre et la densité du fil ; l'échantillon reste le juge final) : <strong>épaisseur de trait</strong> d'au moins 0,3 mm, plus épais pour les traits en réserve (texte clair sur fond foncé) ; <strong>hauteur de lettres latines</strong> supérieure à 1,5 mm et <strong>caractères chinois</strong> supérieure à 3 mm, encore plus pour les caractères complexes ; <strong>espace entre aplats de couleurs adjacents</strong> d'au moins 0,5 mm, sinon les fils empiètent et les bords paraissent flous. Les petites polices ne se règlent pas en essayant « un peu plus petit » — la grille du tissage est ce qu'elle est, et un trait plus fin que la grille n'existe physiquement pas."
+         data-es="Estos son los mínimos prácticos (varían según el título y la densidad del hilo; la muestra es el juez final): <strong>grosor de trazo</strong> de al menos 0,3 mm, más grueso para trazos en reserva (texto claro sobre fondo oscuro); <strong>altura de letras latinas</strong> superior a 1,5 mm y <strong>caracteres chinos</strong> superior a 3 mm, más aún si tienen trazos complejos; <strong>separación entre bloques de color contiguos</strong> de al menos 0,5 mm, o los hilos se invaden y los bordes se ven borrosos. Las letras pequeñas no se arreglan «probando un poco más pequeñas»: la rejilla del tejido es la que es, y un trazo más fino que la rejilla físicamente no existe.">给出可落地的大致下限（不同纱支与密度会有差异，最终以打样为准）：<strong>线条宽度</strong>建议不低于 0.3mm，反白（浅色字在深底上）线条需更粗；<strong>西文字高</strong>建议 1.5mm 以上，<strong>中文字高</strong>建议 3mm 以上，笔画复杂的字还要再放大；<strong>相邻色块间距</strong>至少留 0.5mm，否则两种纱线交织处会互相「串色」，边缘发糊。小字不是「再细一点试试」就能解决的——纱线网格就在那里，小于网格的笔画物理上不存在。</p>
+      <div class="callout" data-zh="<strong>💡 提示：</strong>拿不准时，把设计稿发给供应商要一版「试织样」——用最细的线条和最少的字号打样，亲眼确认极限在哪里，再按确认结果定稿，比反复退稿省时间得多。"
+           data-en="<strong>💡 Tip:</strong> when in doubt, ask your supplier for a test-weave sample using your thinnest lines and smallest type — see the real limits with your own eyes, then finalize accordingly. It saves far more time than repeated rejections."
+           data-fr="<strong>💡 Astuce :</strong> en cas de doute, demandez un échantillon d'essai au fournisseur avec vos traits les plus fins et vos polices les plus petites — constatez les vraies limites de vos propres yeux, puis validez. C'est bien plus rapide que des refus à répétition."
+           data-es="<strong>💡 Consejo:</strong> ante la duda, pide al proveedor una muestra de tejido de prueba con tus trazos más finos y tus letras más pequeñas — comprueba los límites reales con tus propios ojos y luego cierra el arte. Ahorra mucho más tiempo que los rechazos repetidos."><strong>💡 提示：</strong>拿不准时，把设计稿发给供应商要一版「试织样」——用最细的线条和最少的字号打样，亲眼确认极限在哪里，再按确认结果定稿，比反复退稿省时间得多。</div>
+
+      <h2 data-zh="4. 工艺选型对设计的影响" data-en="4. How the Weave Type Affects Your Design" data-fr="4. Comment le type de tissage influence votre design" data-es="4. Cómo influye el tipo de tejido en tu diseño">4. 工艺选型对设计的影响</h2>
+      <table>
+        <tr><th data-zh="工艺" data-en="Weave" data-fr="Armure" data-es="Tejido">工艺</th><th data-zh="适合的设计" data-en="Best For" data-fr="Idéal pour" data-es="Ideal para">适合的设计</th><th data-zh="限制" data-en="Limits" data-fr="Limites" data-es="Límites">限制</th></tr>
+        <tr><td data-zh="缎面（Satin）" data-en="Satin" data-fr="Satin" data-es="Satén">缎面（Satin）</td><td data-zh="大色块、粗体字、光泽质感" data-en="Large color blocks, bold type, glossy feel" data-fr="Grands aplats, textes gras, aspect brillant" data-es="Bloques grandes, tipografías gruesas, brillo">大色块、粗体字、光泽质感</td><td data-zh="细密小字表现弱于平纹" data-en="Fine, dense small type renders weaker than taffeta" data-fr="Petits textes denses moins nets que le taffetas" data-es="Letras pequeñas y densas rinden peor que la tafeta">细密小字表现弱于平纹</td></tr>
+        <tr><td data-zh="平纹（Taffeta）" data-en="Taffeta" data-fr="Taffetas" data-es="Tafeta">平纹（Taffeta）</td><td data-zh="细字、密集信息、成本经济" data-en="Small type, dense information, economical" data-fr="Petits textes, contenu dense, économique" data-es="Letra pequeña, información densa, económica">细字、密集信息、成本经济</td><td data-zh="大面积色块质感平淡" data-en="Large blocks look flat" data-fr="Les grands aplats paraissent plats" data-es="Los bloques grandes se ven planos">大面积色块质感平淡</td></tr>
+        <tr><td data-zh="提花（Jacquard）" data-en="Jacquard" data-fr="Jacquard" data-es="Jacquard">提花（Jacquard）</td><td data-zh="复杂图案、多色、立体层次" data-en="Complex motifs, many colors, layered depth" data-fr="Motifs complexes, multicolores, profondeur" data-es="Motivos complejos, multicolor, profundidad">复杂图案、多色、立体层次</td><td data-zh="制版与生产成本最高，色数越多越贵" data-en="Highest setup and production cost; more colors cost more" data-fr="Coûts de mise en carte et de production les plus élevés" data-es="Costes de programación y producción más altos">制版与生产成本最高，色数越多越贵</td></tr>
+        <tr><td data-zh="双层织边" data-en="Double-layer selvedge" data-fr="Double couche à lisières" data-es="Doble capa con orillos">双层织边</td><td data-zh="需要折边/无毛边的主唛" data-en="Main labels needing folding or clean edges" data-fr="Étiquettes principales à plier ou bords nets" data-es="Etiquetas principales con doblez o bordes limpios">需要折边/无毛边的主唛</td><td data-zh="宽度与克重相对固定" data-en="Width and weight are relatively fixed" data-fr="Largeur et grammage relativement fixes" data-es="Ancho y peso relativamente fijos">宽度与克重相对固定</td></tr>
+      </table>
+
+      <h2 data-zh="5. 常见「织不出来」的原因与改法" data-en="5. Why Artwork Gets Rejected and How to Fix It" data-fr="5. Pourquoi un fichier est refusé et comment le corriger" data-es="5. Por qué se rechaza un arte y cómo corregirlo">5. 常见「织不出来」的原因与改法</h2>
+      <ul>
+        <li data-zh="<strong>渐变/照片</strong>：织唛无法平滑过渡，应改为主色块 + 辅助色块的分区设计，或用线条/网点模拟层次"
+            data-en="<strong>Gradients/photos</strong>: woven labels cannot blend smoothly — switch to a zoned design of main and accent color blocks, or simulate depth with lines and halftone dots"
+            data-fr="<strong>Dégradés/photos</strong> : le tissage ne fond pas les couleurs — passez à un design en zones d'aplats, ou simulez la profondeur par des traits et des points de trame"
+            data-es="<strong>Degradados/fotos</strong>: el tejido no funde colores suavemente — cambia a un diseño por zonas de bloques de color, o simula profundidad con líneas y tramas de puntos"><strong>渐变/照片</strong>：织唛无法平滑过渡，应改为主色块 + 辅助色块的分区设计，或用线条/网点模拟层次</li>
+        <li data-zh="<strong>字号过小</strong>：不要与印刷稿共用一版文件，按织唛下限单独放大重排"
+            data-en="<strong>Type too small</strong>: do not reuse a print file — enlarge and reset the type against woven-label minimums"
+            data-fr="<strong>Police trop petite</strong> : ne réutilisez pas un fichier d'impression — agrandissez et recomposez selon les minimums du tissage"
+            data-es="<strong>Letra demasiado pequeña</strong>: no reutilices el archivo de impresión — agranda y recomponé según los mínimos del tejido"><strong>字号过小</strong>：不要与印刷稿共用一版文件，按织唛下限单独放大重排</li>
+        <li data-zh="<strong>颜色过多</strong>：织唛每多一色就多一组纱线与对色点，建议把相近色合并，控制在 4–6 色以内更稳妥"
+            data-en="<strong>Too many colors</strong>: each extra color adds a yarn set and a shade-matching point — merge similar shades and stay within 4–6 colors for safety"
+            data-fr="<strong>Trop de couleurs</strong> : chaque couleur ajoute un jeu de fils et un point de correspondance — fusionnez les tons proches et restez sous 4 à 6 couleurs"
+            data-es="<strong>Demasiados colores</strong>: cada color extra añade un juego de hilos y un punto de igualación — fusiona tonos parecidos y quédate en 4–6 colores"><strong>颜色过多</strong>：织唛每多一色就多一组纱线与对色点，建议把相近色合并，控制在 4–6 色以内更稳妥</li>
+        <li data-zh="<strong>极细线密集排列</strong>：竖线越多越容易断纱，改用块面表达；必须用线时加大间距与线宽"
+            data-en="<strong>Dense hairline patterns</strong>: more warp lines mean more broken yarns — use solid areas instead; if lines are essential, widen them and their spacing"
+            data-fr="<strong>Réseaux de fils très fins</strong> : plus il y a de lignes, plus le risque de casse est grand — préférez les surfaces ; si les lignes sont indispensables, élargissez-les et espacez-les"
+            data-es="<strong>Patrones densos de líneas finísimas</strong>: más líneas de urdimbre, más hilos rotos — usa superficies; si las líneas son esenciales, engrósalas y sepáralas"><strong>极细线密集排列</strong>：竖线越多越容易断纱，改用块面表达；必须用线时加大间距与线宽</li>
+        <li data-zh="<strong>深浅对比不足</strong>：深底上织深字，色差拉不开；深底请用白/浅色纱反白处理"
+            data-en="<strong>Weak contrast</strong>: dark text on a dark ground disappears — use reversed-out white or light yarns on dark grounds"
+            data-fr="<strong>Contraste insuffisant</strong> : texte foncé sur fond foncé, rien ne ressort — sur fond foncé, utilisez des fils blancs ou clairs en réserve"
+            data-es="<strong>Contraste insuficiente</strong>: texto oscuro sobre fondo oscuro desaparece — sobre fondos oscuros usa hilos blancos o claros en reserva"><strong>深浅对比不足</strong>：深底上织深字，色差拉不开；深底请用白/浅色纱反白处理</li>
+      </ul>
+
+      <h2 data-zh="6. 从文件到封样的流程" data-en="6. From File to Approved Sample" data-fr="6. Du fichier à l'échantillon approuvé" data-es="6. Del archivo a la muestra aprobada">6. 从文件到封样的流程</h2>
+      <p data-zh="一份合格的织唛来稿，走完流程通常只要一轮修改：设计稿 → 电脑分色与工艺评估（确认色数、密度、折边方式）→ 电子模拟图供确认 → 上机织样（3–7 天）→ 实物对色与试缝 → 封样。封样后把色号、尺寸公差与密度写进合同，大货按封样执行。给供应商留足 1:1 矢量稿与 Pantone 色号，整条链路都会顺畅很多。"
+         data-en="A well-prepared woven label file usually needs just one round of revision: artwork → digital color separation and process review (colors, density, fold style) → electronic mock-up for approval → weaving the sample (3–7 days) → physical shade matching and test sewing → approved sample. Once approved, put the color references, dimension tolerances and density into the contract and bulk production follows the sample. Hand your supplier a 1:1 vector file with Pantone references and the whole chain runs far more smoothly."
+         data-fr="Un fichier bien préparé ne demande généralement qu'un seul aller-retour : fichier → séparation des couleurs et étude technique (couleurs, densité, pliage) → maquette électronique pour validation → échantillon tissé (3 à 7 jours) → correspondance des couleurs et essayage → échantillon approuvé. Une fois approuvé, inscrivez références de couleurs, tolérances et densité dans le contrat, et la production suit l'échantillon. Fournissez un fichier vectoriel 1:1 avec références Pantone et toute la chaîne s'en portera mieux."
+         data-es="Un archivo bien preparado suele necesitar solo una ronda de ajustes: arte → separación de colores y revisión técnica (colores, densidad, doblez) → maqueta electrónica para aprobación → tejido de muestra (3–7 días) → igualación de color y prueba de costura → muestra aprobada. Tras la aprobación, anota referencias de color, tolerancias y densidad en el contrato y la producción seguirá la muestra. Entrega al proveedor un archivo vectorial 1:1 con referencias Pantone y toda la cadena fluirá mucho mejor.">一份合格的织唛来稿，走完流程通常只要一轮修改：设计稿 → 电脑分色与工艺评估（确认色数、密度、折边方式）→ 电子模拟图供确认 → 上机织样（3–7 天）→ 实物对色与试缝 → 封样。封样后把色号、尺寸公差与密度写进合同，大货按封样执行。给供应商留足 1:1 矢量稿与 Pantone 色号，整条链路都会顺畅很多。</p>
+
+      <div class="related">
+        <h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+        <ul>
+          <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+          <li><a href="woven-label-types.html" data-zh="织唛种类详解：缎面、平纹、提花与双层" data-en="Woven Label Types Explained" data-fr="Types de labels tissés expliqués" data-es="Tipos de etiquetas tejidas explicados">织唛种类详解：缎面、平纹、提花与双层</a></li>
+          <li><a href="woven-label-color-matching.html" data-zh="织唛颜色对色指南：潘通与色差控制" data-en="Woven Label Color Matching Guide" data-fr="Guide de correspondance des couleurs des labels tissés" data-es="Guía de igualación de color de etiquetas tejidas">织唛颜色对色指南：潘通与色差控制</a></li>
+          <li><a href="woven-label-width-guide.html" data-zh="织唛尺寸宽度指南" data-en="Woven Label Width Guide" data-fr="Guide des largeurs de labels tissés" data-es="Guía de anchos de etiquetas tejidas">织唛尺寸宽度指南</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p data-zh="有织唛设计稿需要评估或打样？" data-en="Have woven label artwork to review or sample?" data-fr="Un fichier de labels tissés à évaluer ou échantillonner ?" data-es="¿Tienes arte de etiquetas tejidas para evaluar o muestrear?">有织唛设计稿需要评估或打样？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="获取织唛报价 →" data-en="Request a quote for woven labels →" data-fr="Demandez un devis pour vos labels tissés →" data-es="Solicita un presupuesto para tus etiquetas tejidas →">获取织唛报价 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=54"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>

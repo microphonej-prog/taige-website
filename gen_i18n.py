@@ -16,7 +16,9 @@ ALT_PAIRS = {"en": [("fr", "?lang=fr"), ("es", "?lang=es")],
              "es": [("en", "en/"), ("fr", "?lang=fr")]}
 
 def protect(s):
-    """把双引号内的 > 换成占位符，避免属性值里的 HTML（如 <em>）破坏正则"""
+    """把双引号内的 < 和 > 换成占位符，避免属性值里的 HTML（如 <em>、<strong>）
+    破坏正则——只屏蔽 > 时，标签正则仍会锚定在属性值里的 '<strong' 上，导致
+    li/p 等元素转换错乱（内容混入其它语言、残留 data-* 属性）"""
     buf, i, in_q = [], 0, False
     while i < len(s):
         c = s[i]
@@ -25,6 +27,8 @@ def protect(s):
             buf.append(c)
         elif c == '>' and in_q:
             buf.append('__GTH__')
+        elif c == '<' and in_q:
+            buf.append('__GLT__')
         else:
             buf.append(c)
         i += 1
@@ -93,7 +97,7 @@ def convert(lang, src_path, out_path, page_abs_url):
                   '<link rel="canonical" href="%s">\n%s' % (page_abs_url, hreflang), 1)
 
     # ---------- 6. 带 data-* 的普通元素：文本替换 + 删除多余 data-* ----------
-    for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'small', 'a', 'span', 'div', 'button', 'li']:
+    for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'small', 'a', 'span', 'div', 'button', 'li', 'th', 'td']:
         def repl(m):
             attrs, content = m.group(2), m.group(3)
             de = re.search(r'%s="([^"]*)"' % take, attrs)
@@ -131,7 +135,7 @@ def convert(lang, src_path, out_path, page_abs_url):
     s = re.sub(r'<button class="lang-flag" data-lang="%s"' % lang,
                '<button class="lang-flag active" data-lang="%s"' % lang, s)
 
-    s = s.replace('__GTH__', '>')  # 还原
+    s = s.replace('__GTH__', '>').replace('__GLT__', '<')  # 还原
 
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'w', encoding='utf-8') as f:
