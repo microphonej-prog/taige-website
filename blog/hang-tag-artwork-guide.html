@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="吊牌印刷文件制作指南：出血、分辨率与色彩设置 | TAGE" data-en="Hang Tag Artwork Guide: Bleed, Resolution &amp; Color Setup | TAGE" data-fr="Guide du fichier d'impression des étiquettes : fond perdu, résolution et couleurs | TAGE" data-es="Guía del archivo de etiquetas colgantes: sangrado, resolución y color | TAGE">吊牌印刷文件制作指南：出血、分辨率与色彩设置 | TAGE</title>
+<meta name="description" data-zh="吊牌印刷文件不会做，印出来不是有白边就是印糊？这篇吊牌印刷文件指南讲清出血线与安全边距、300dpi 分辨率、CMYK 与专色选择、字体转曲和刀线图层要求，附印刷前检查清单，让您的吊牌一次通过打样。"
+      data-en="Print-ready hang tag artwork: bleed and safe margins, 300 dpi, CMYK vs Pantone colors, outlined fonts, die-cut layers — plus a pre-press checklist."
+      data-fr="Un fichier d'étiquette mal préparé, c'est un tirage à refaire. Ce guide explique le fond perdu, les marges de sécurité, la résolution 300 dpi, le CMYK ou les couleurs Pantone, le contournage des polices et les couches de découpe, avec une liste de contrôle avant impression."
+      data-es="Un archivo mal preparado significa reimprimir. Esta guía explica el sangrado, los márgenes de seguridad, la resolución de 300 dpi, el CMYK o los colores Pantone, el contorneado de fuentes y las capas de troquel, con una lista de verificación previa a la impresión."
+      content="吊牌印刷文件不会做，印出来不是有白边就是印糊？这篇吊牌印刷文件指南讲清出血线与安全边距、300dpi 分辨率、CMYK 与专色选择、字体转曲和刀线图层要求，附印刷前检查清单，让您的吊牌一次通过打样。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-artwork-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌印刷文件制作指南：出血、分辨率与色彩设置",
+     "item": "https://taigetag.com/blog/hang-tag-artwork-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌印刷文件制作指南：出血、分辨率与色彩设置",
+   "url": "https://taigetag.com/blog/hang-tag-artwork-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-artwork-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="吊牌印刷文件指南" data-en="Hang Tag Artwork" data-fr="Fichier d'étiquette" data-es="Archivo de etiqueta">吊牌印刷文件指南</span></div>
+      <h1 data-zh="吊牌印刷文件制作指南：出血、分辨率与色彩设置" data-en="Hang Tag Artwork Guide: Bleed, Resolution &amp; Color Setup" data-fr="Guide du fichier d'impression des étiquettes : fond perdu, résolution et couleurs" data-es="Guía del archivo de etiquetas colgantes: sangrado, resolución y color">吊牌印刷文件制作指南：出血、分辨率与色彩设置</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月4日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 4, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 4 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 4 de septiembre de 2026">泰阁包装 · 更新于 2026年9月4日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="吊牌印刷文件的规范程度，直接决定成品是精品还是废品：出血没留够，裁切后出现白边；图片分辨率不足，LOGO 边缘全是锯齿；颜色模式没设对，品牌色印出来完全变样。这三类问题占了吊牌印刷返工的大头，而且大多在文件阶段就能避免。这篇吊牌印刷文件指南，讲清出血、分辨率、色彩与刀线的设置要点，让您的吊牌一次通过打样。"
+         data-en="Hang tag artwork quality decides whether the finished tags look premium or defective: missing bleed means white edges after cutting; low-resolution images leave jagged logo edges; a wrong color mode makes brand colors come out completely different. These three issues cause most hang tag reprints, and nearly all of them can be avoided at the file stage. This hang tag artwork guide covers bleed, resolution, color and die-cut layers so your tags pass sampling the first time."
+         data-fr="La qualité du fichier d'une étiquette suspendue décide si le produit fini est irréprochable ou défectueux : sans fond perdu, la découpe laisse des bords blancs ; une image en basse résolution donne des contours de logo crénelés ; un mauvais mode colorimétrique dénature complètement les couleurs de la marque. Ces trois problèmes sont à l'origine de la plupart des refus d'impression d'étiquettes, et presque tous peuvent être évités dès la préparation du fichier. Ce guide couvre le fond perdu, la résolution, les couleurs et les couches de découpe pour que vos étiquettes passent l'échantillonnage du premier coup."
+         data-es="La calidad del archivo de una etiqueta colgante decide si el resultado final es impecable o defectuoso: sin sangrado, el corte deja bordes blancos; con imágenes de baja resolución, los bordes del logotipo salen dentados; y con un modo de color incorrecto, los colores de la marca cambian por completo. Estos tres problemas causan la mayoría de las reimpresiones de etiquetas y casi todos pueden evitarse en la fase de archivo. Esta guía cubre sangrado, resolución, color y capas de troquel para que sus etiquetas pasen el muestreo a la primera.">吊牌印刷文件的规范程度，直接决定成品是精品还是废品：出血没留够，裁切后出现白边；图片分辨率不足，LOGO 边缘全是锯齿；颜色模式没设对，品牌色印出来完全变样。这三类问题占了吊牌印刷返工的大头，而且大多在文件阶段就能避免。这篇吊牌印刷文件指南，讲清出血、分辨率、色彩与刀线的设置要点，让您的吊牌一次通过打样。</p>
+
+      <p data-zh="无论您是设计师还是品牌采购——自己排版发厂，还是请印刷厂代为出稿，掌握下面的硬指标，沟通效率与打样通过率都会明显提高。"
+         data-en="Whether you are a designer or a brand buyer — preparing files in-house or asking the factory to do it — mastering the specifications below saves rounds of communication and lifts your sampling pass rate."
+         data-fr="Que vous soyez designer ou acheteur — que les fichiers soient préparés en interne ou par l'imprimeur — maîtriser les spécifications ci-dessous réduit les allers-retours et améliore nettement le taux de réussite des échantillons."
+         data-es="Ya sea usted diseñador o comprador —prepare los archivos internamente o encárguelos a la imprenta—, dominar las especificaciones siguientes ahorra rondas de comunicación y mejora claramente la tasa de aprobación en el muestreo.">无论您是设计师还是品牌采购——自己排版发厂，还是请印刷厂代为出稿，掌握下面的硬指标，沟通效率与打样通过率都会明显提高。</p>
+
+      <h2 data-zh="1. 出血与安全边距" data-en="1. Bleed and Safe Margins" data-fr="1. Fond perdu et marges de sécurité" data-es="1. Sangrado y márgenes de seguridad">1. 出血与安全边距</h2>
+      <p data-zh="印刷品裁切存在公差，成品尺寸并不总是与设计稿完全一致。为此，设计稿四周需要预留 3mm 出血——也就是把底色、图片等延伸到最终裁切线外 3mm，裁切后才不会露出白边。安全边距则是文字、LOGO、条码等内容到成品边缘的距离，建议不小于 2–3mm，防止裁切偏移时切到内容。"
+         data-en="Cutting tolerances mean the finished size never matches the design perfectly. That is why every artwork needs 3 mm of bleed — background colors and images extend 3 mm beyond the final cut line so no white edge appears after trimming. The safe margin is the distance from content (text, logos, barcodes) to the finished edge; keep it at least 2–3 mm so a slight cut shift never clips your content."
+         data-fr="La découpe a toujours une tolérance : le format fini ne correspond jamais parfaitement au fichier. C'est pourquoi chaque document doit comporter 3 mm de fond perdu — la couleur de fond et les images dépassent de 3 mm au-delà de la ligne de coupe finale, afin qu'aucun bord blanc n'apparaisse après façonnage. La marge de sécurité est la distance entre le contenu (textes, logos, codes-barres) et le bord fini ; prévoyez au moins 2 à 3 mm pour qu'un léger décalage de coupe ne touche jamais votre contenu."
+         data-es="El corte siempre tiene una tolerancia: la medida final nunca coincide perfectamente con el diseño. Por eso todo archivo necesita 3 mm de sangrado —el fondo y las imágenes se extienden 3 mm más allá de la línea de corte final para que no queden bordes blancos tras el guillotinado. El margen de seguridad es la distancia del contenido (textos, logotipos, códigos de barras) al borde acabado; mantenga al menos 2–3 mm para que una leve desviación del corte nunca afecte a su contenido.">印刷品裁切存在公差，成品尺寸并不总是与设计稿完全一致。为此，设计稿四周需要预留 3mm 出血——也就是把底色、图片等延伸到最终裁切线外 3mm，裁切后才不会露出白边。安全边距则是文字、LOGO、条码等内容到成品边缘的距离，建议不小于 2–3mm，防止裁切偏移时切到内容。</p>
+
+      <h2 data-zh="2. 分辨率与图片质量" data-en="2. Resolution and Image Quality" data-fr="2. Résolution et qualité des images" data-es="2. Resolución y calidad de imagen">2. 分辨率与图片质量</h2>
+      <ul>
+        <li data-zh="<strong>位图 300dpi 起步：</strong>按成品 1:1 尺寸放置，低于 200dpi 的图放大后会出现明显锯齿与马赛克"
+            data-en="<strong>Bitmaps at 300 dpi minimum:</strong> place images at 1:1 finished size; anything below 200 dpi shows visible jagged edges and pixelation when enlarged"
+            data-fr="<strong>Images matricielles : 300 dpi minimum</strong> ; placez-les à la taille réelle du produit fini. En dessous de 200 dpi, les agrandissements montrent des bords crénelés et des pixels visibles"
+            data-es="<strong>Imágenes de mapa de bits: 300 dpi como mínimo</strong>; colóquelas a tamaño real del acabado. Por debajo de 200 dpi, los aumentos muestran bordes dentados y píxeles visibles"><strong>位图 300dpi 起步：</strong>按成品 1:1 尺寸放置，低于 200dpi 的图放大后会出现明显锯齿与马赛克</li>
+        <li data-zh="<strong>LOGO 尽量矢量：</strong>插画、品牌标用 AI/EPS/PDF 矢量格式，放大缩小永不失真"
+            data-en="<strong>Keep logos vector:</strong> illustrations and brand marks in AI/EPS/PDF vector format scale without any loss of quality"
+            data-fr="<strong>Logos en vectoriel :</strong> illustrations et marques en format vectoriel AI/EPS/PDF — une mise à l'échelle sans aucune perte de qualité"
+            data-es="<strong>Logotipos vectoriales:</strong> ilustraciones y marcas en formato vectorial AI/EPS/PDF — escala sin ninguna pérdida de calidad"><strong>LOGO 尽量矢量：</strong>插画、品牌标用 AI/EPS/PDF 矢量格式，放大缩小永不失真</li>
+        <li data-zh="<strong>二维码与条码：</strong>建议 600dpi 以上生成，四周保留至少 2mm 静区，印后需逐一扫码抽验"
+            data-en="<strong>QR codes and barcodes:</strong> generate at 600 dpi or higher, keep at least 2 mm of quiet zone around them, and scan-test samples after printing"
+            data-fr="<strong>QR codes et codes-barres :</strong> générez-les en 600 dpi ou plus, laissez au moins 2 mm de zone vierge autour, et vérifiez la lecture après impression"
+            data-es="<strong>Códigos QR y de barras:</strong> genérelos a 600 dpi o más, deje al menos 2 mm de zona limpia alrededor y compruebe la lectura tras imprimir"><strong>二维码与条码：</strong>建议 600dpi 以上生成，四周保留至少 2mm 静区，印后需逐一扫码抽验</li>
+      </ul>
+      <p data-zh="特别提醒：手机截图、网页另存的图片大多只有 72dpi，放大即糊，不能直接用于印刷。"
+         data-en="A common trap: screenshots and images saved from websites are usually 72 dpi — they blur when scaled and must not be used for print."
+         data-fr="Piège fréquent : les captures d'écran et les images enregistrées depuis un site web sont généralement en 72 dpi — elles deviennent floues dès qu'on les agrandit et ne doivent pas être utilisées en impression."
+         data-es="Trampa frecuente: las capturas de pantalla y las imágenes descargadas de webs suelen estar a 72 dpi —se ven borrosas al ampliarlas— y no deben usarse para impresión.">特别提醒：手机截图、网页另存的图片大多只有 72dpi，放大即糊，不能直接用于印刷。</p>
+
+      <h2 data-zh="3. CMYK 与专色：颜色为什么会不一样" data-en="3. CMYK and Spot Colors: Why Colors Differ" data-fr="3. CMYK et couleurs d'accompagnement : pourquoi les couleurs diffèrent" data-es="3. CMYK y colores directos: por qué cambian los colores">3. CMYK 与专色：颜色为什么会不一样</h2>
+      <p data-zh="屏幕用 RGB 发光显色，印刷用 CMYK 油墨叠色，两者色域不同，因此屏幕色与印品色存在天然差异，无法 100% 一致。对品牌色要求严格的客户，建议指定 Pantone 专色印刷，并用色卡与印刷厂对色。"
+         data-en="Screens emit color in RGB while printing stacks CMYK inks, and the two gamuts differ — so screen color and printed color can never match 100%. If your brand color is critical, specify a Pantone spot color and proof it against the physical fan deck with the printer."
+         data-fr="L'écran émet des couleurs en RVB tandis que l'impression superpose des encres CMJN : les deux espaces colorimétriques diffèrent, si bien que la couleur affichée ne peut jamais correspondre à 100 % à la couleur imprimée. Si la couleur de votre marque est critique, spécifiez une couleur d'accompagnement Pantone et faites valider le tirage contre le nuancier papier avec l'imprimeur."
+         data-es="Las pantallas emiten color en RGB mientras que la impresión superpone tintas CMYK: los dos espacios de color difieren, por lo que el color de pantalla nunca puede coincidir al 100 % con el impreso. Si el color de su marca es crítico, especifique un color directo Pantone y valídelo contra el abanico de color con la imprenta.">屏幕用 RGB 发光显色，印刷用 CMYK 油墨叠色，两者色域不同，因此屏幕色与印品色存在天然差异，无法 100% 一致。对品牌色要求严格的客户，建议指定 Pantone 专色印刷，并用色卡与印刷厂对色。</p>
+      <table>
+        <tr><th data-zh="颜色模式" data-en="Color Mode" data-fr="Mode colorimétrique" data-es="Modo de color">颜色模式</th><th data-zh="适用场景" data-en="Best For" data-fr="Idéal pour" data-es="Ideal para">适用场景</th><th data-zh="要点" data-en="Key Points" data-fr="Points clés" data-es="Puntos clave">要点</th></tr>
+        <tr><td data-zh="CMYK 四色" data-en="CMYK process" data-fr="CMJN quadri" data-es="CMYK cuatricromía">CMYK 四色</td><td data-zh="照片、渐变、多色图案" data-en="Photos, gradients, multi-color artwork" data-fr="Photos, dégradés, motifs multicolores" data-es="Fotos, degradados, diseños multicolor">照片、渐变、多色图案</td><td data-zh="以数码样与印刷样为准，屏幕色仅供参考" data-en="Judge by digital proof and press sheet; screen color is only a reference" data-fr="Se référer à l'épreuve numérique et au tirage ; l'écran n'est qu'une référence" data-es="Juzgue por prueba digital y pliego; la pantalla es solo una referencia">以数码样与印刷样为准，屏幕色仅供参考</td></tr>
+        <tr><td data-zh="Pantone 专色" data-en="Pantone spot color" data-fr="Couleur Pantone" data-es="Color directo Pantone">Pantone 专色</td><td data-zh="品牌 LOGO、VI 主色" data-en="Brand logos, core VI colors" data-fr="Logos de marque, couleurs principales de l'identité visuelle" data-es="Logotipos de marca, colores principales de la imagen corporativa">品牌 LOGO、VI 主色</td><td data-zh="色差最小，需指定具体色号（如 PMS 872C）" data-en="Smallest color difference; specify the exact number (e.g. PMS 872C)" data-fr="Écart minimal ; indiquez le numéro exact (ex. PMS 872C)" data-es="Diferencia mínima; indique el número exacto (p. ej. PMS 872C)">色差最小，需指定具体色号（如 PMS 872C）</td></tr>
+        <tr><td data-zh="烫金/压凹凸/UV" data-en="Foil stamping, embossing, UV" data-fr="Dorure, gaufrage, UV" data-es="Estampado en caliente, relieve, UV">烫金/压凹凸/UV</td><td data-zh="工艺效果，非油墨色" data-en="Decorative effects, not ink colors" data-fr="Effets décoratifs, pas des encres" data-es="Efectos decorativos, no tintas">工艺效果，非油墨色</td><td data-zh="文件中用单色矢量层标注位置与效果" data-en="Mark position and effect with a single-color vector layer in the file" data-fr="Indiquez position et effet avec un calque vectoriel monochrome" data-es="Marque la posición y el efecto con una capa vectorial de un solo color">文件中用单色矢量层标注位置与效果</td></tr>
+      </table>
+      <p data-zh="同一文件印在不同纸张上呈现也有差异：铜版纸鲜艳饱和，牛皮纸吸墨偏暗。若品牌色至关重要，务必先走实物打样确认再下单。"
+         data-en="The same file also prints differently on different papers: coated art paper is vivid, kraft absorbs ink and looks darker. If brand color is essential, always confirm a physical sample before production."
+         data-fr="Le même fichier rend aussi différemment selon le papier : le papier couché est éclatant, le kraft absorbe l'encre et paraît plus sombre. Si la couleur de marque est essentielle, validez toujours un échantillon physique avant production."
+         data-es="El mismo archivo también imprime distinto según el papel: el estucado es vivo, el kraft absorbe la tinta y se ve más oscuro. Si el color de marca es esencial, confirme siempre una muestra física antes de producir.">同一文件印在不同纸张上呈现也有差异：铜版纸鲜艳饱和，牛皮纸吸墨偏暗。若品牌色至关重要，务必先走实物打样确认再下单。</p>
+
+      <h2 data-zh="4. 文字：转曲、字号与信息核对" data-en="4. Text: Outlines, Font Size and Proofreading" data-fr="4. Texte : contournage, taille de police et relecture" data-es="4. Texto: contorneado, tamaño de letra y revisión">4. 文字：转曲、字号与信息核对</h2>
+      <ul>
+        <li data-zh="<strong>字体转曲：</strong>交付前把文字转为轮廓，避免印刷厂缺少字体导致乱码或被替换字体"
+            data-en="<strong>Outline your fonts:</strong> convert text to paths before delivery so a missing font cannot cause garbled or substituted type"
+            data-fr="<strong>Contournez les polices :</strong> convertissez le texte en courbes avant livraison — une police manquante ne pourra pas provoquer de caractères illisibles ou de substitution"
+            data-es="<strong>Contornee las fuentes:</strong> convierta el texto en trazados antes de entregar el archivo —una fuente ausente no podrá causar caracteres ilegibles ni sustituciones"><strong>字体转曲：</strong>交付前把文字转为轮廓，避免印刷厂缺少字体导致乱码或被替换字体</li>
+        <li data-zh="<strong>字号下限：</strong>中文正文建议不小于 6pt；反白字与细体字要再加大一号"
+            data-en="<strong>Minimum font size:</strong> keep body Chinese text at 6 pt or larger; reverse-out and light typefaces need one size up"
+            data-fr="<strong>Taille minimale :</strong> texte courant chinois d'au moins 6 pt ; texte en réserve et graisses fines : un point de plus"
+            data-es="<strong>Tamaño mínimo:</strong> el texto chino corriente de al menos 6 pt; el texto en negativo y las tipografías finas, un punto más"><strong>字号下限：</strong>中文正文建议不小于 6pt；反白字与细体字要再加大一号</li>
+        <li data-zh="<strong>信息核对：</strong>品牌名、官网、尺码、产地等逐字校对——吊牌错一个字，整批作废"
+            data-en="<strong>Proofread everything:</strong> brand name, website, size and origin — one wrong character on a hang tag voids the whole run"
+            data-fr="<strong>Relisez tout :</strong> nom de marque, site web, taille, origine — une seule erreur dans une étiquette invalide toute la série"
+            data-es="<strong>Revise todo:</strong> nombre de marca, sitio web, talla y origen —un solo carácter erróneo en la etiqueta invalida toda la tirada"><strong>信息核对：</strong>品牌名、官网、尺码、产地等逐字校对——吊牌错一个字，整批作废</li>
+      </ul>
+
+      <h2 data-zh="5. 交付格式与文件命名" data-en="5. File Formats and Naming" data-fr="5. Formats de livraison et nommage" data-es="5. Formatos de entrega y nombres de archivo">5. 交付格式与文件命名</h2>
+      <ul>
+        <li data-zh="优先交付带出血的 PDF（含刀线层）或 AI/CDR 源文件；排版用到的图片与字体一并打包"
+            data-en="Deliver PDFs with bleed (plus die-cut layer) or AI/CDR source files; package all placed images and fonts together"
+            data-fr="Livrez de préférence des PDF avec fond perdu (et calque de découpe) ou des fichiers sources AI/CDR ; joignez toutes les images et polices utilisées"
+            data-es="Entregue preferentemente PDF con sangrado (y capa de troquel) o archivos fuente AI/CDR; incluya todas las imágenes y fuentes utilizadas">优先交付带出血的 PDF（含刀线层）或 AI/CDR 源文件；排版用到的图片与字体一并打包</li>
+        <li data-zh="命名建议：品牌名_款号_尺寸_版本日期，如 TAGE_HT001_54x90_v1_20260904"
+            data-en="Naming suggestion: brand_model_size_version date, e.g. TAGE_HT001_54x90_v1_20260904"
+            data-fr="Nommage conseillé : marque_modèle_format_version date, ex. TAGE_HT001_54x90_v1_20260904"
+            data-es="Nombre sugerido: marca_modelo_medida_versión fecha, p. ej. TAGE_HT001_54x90_v1_20260904">命名建议：品牌名_款号_尺寸_版本日期，如 TAGE_HT001_54x90_v1_20260904</li>
+        <li data-zh="多款式、多尺寸合拼一个文件时，用图层或页面清晰区分，避免排产取错"
+            data-en="When several styles or sizes share one file, separate them clearly by layer or page to avoid production mix-ups"
+            data-fr="Lorsqu'un même fichier contient plusieurs modèles ou formats, distinguez-les clairement par calque ou page pour éviter toute erreur de production"
+            data-es="Cuando un archivo contiene varios modelos o medidas, sepárelos claramente por capas o páginas para evitar errores de producción">多款式、多尺寸合拼一个文件时，用图层或页面清晰区分，避免排产取错</li>
+      </ul>
+
+      <h2 data-zh="6. 印刷前检查清单" data-en="6. Pre-Press Checklist" data-fr="6. Liste de contrôle avant impression" data-es="6. Lista de verificación previa a la impresión">6. 印刷前检查清单</h2>
+      <table>
+        <tr><th data-zh="检查项" data-en="Item" data-fr="Élément" data-es="Elemento">检查项</th><th data-zh="要求" data-en="Requirement" data-fr="Exigence" data-es="Requisito">要求</th></tr>
+        <tr><td data-zh="出血" data-en="Bleed" data-fr="Fond perdu" data-es="Sangrado">出血</td><td data-zh="四边各 3mm，底色延伸到出血线" data-en="3 mm on all sides; backgrounds extend to the bleed line" data-fr="3 mm sur les quatre côtés ; les fonds s'étendent jusqu'à la ligne de fond perdu" data-es="3 mm en los cuatro lados; los fondos llegan hasta la línea de sangrado">四边各 3mm，底色延伸到出血线</td></tr>
+        <tr><td data-zh="安全边距" data-en="Safe margin" data-fr="Marge de sécurité" data-es="Margen de seguridad">安全边距</td><td data-zh="文字、LOGO 距成品边至少 2–3mm" data-en="Text and logos at least 2–3 mm from the finished edge" data-fr="Texte et logos à au moins 2–3 mm du bord fini" data-es="Textos y logotipos a 2–3 mm como mínimo del borde acabado">文字、LOGO 距成品边至少 2–3mm</td></tr>
+        <tr><td data-zh="分辨率" data-en="Resolution" data-fr="Résolution" data-es="Resolución">分辨率</td><td data-zh="位图 300dpi 以上（按成品 1:1）" data-en="Bitmaps at 300 dpi or higher at 1:1 finished size" data-fr="Images matricielles à 300 dpi ou plus (taille réelle du produit)" data-es="Mapas de bits a 300 dpi o más (tamaño real del acabado)">位图 300dpi 以上（按成品 1:1）</td></tr>
+        <tr><td data-zh="色彩" data-en="Color" data-fr="Couleur" data-es="Color">色彩</td><td data-zh="CMYK 或指定 Pantone 色号，注明色样要求" data-en="CMYK or specified Pantone numbers, with proof requirements noted" data-fr="CMJN ou numéros Pantone spécifiés, exigences d'épreuve notées" data-es="CMYK o números Pantone especificados, con requisitos de prueba anotados">CMYK 或指定 Pantone 色号，注明色样要求</td></tr>
+        <tr><td data-zh="文字" data-en="Text" data-fr="Texte" data-es="Texto">文字</td><td data-zh="已转曲，拼写与信息逐字无误" data-en="Outlined; spelling and information checked character by character" data-fr="Contourné ; orthographe et informations relues caractère par caractère" data-es="Contorneado; ortografía e información revisadas carácter por carácter">已转曲，拼写与信息逐字无误</td></tr>
+        <tr><td data-zh="刀线" data-en="Die-cut layer" data-fr="Calque de découpe" data-es="Capa de troquel">刀线</td><td data-zh="异形模切时单独图层、标注清晰" data-en="Separate clearly marked layer when custom die-cutting is used" data-fr="Calque séparé et clairement indiqué en cas de découpe personnalisée" data-es="Capa separada y bien marcada si se utiliza troquelado personalizado">异形模切时单独图层、标注清晰</td></tr>
+        <tr><td data-zh="文件格式" data-en="File format" data-fr="Format de fichier" data-es="Formato de archivo">文件格式</td><td data-zh="PDF/AI/CDR 源文件 + 预览图" data-en="PDF/AI/CDR source file plus a preview image" data-fr="Fichier source PDF/AI/CDR + image de prévisualisation" data-es="Archivo fuente PDF/AI/CDR más una imagen de vista previa">PDF/AI/CDR 源文件 + 预览图</td></tr>
+      </table>
+      <div class="callout" data-zh="<strong>💡 提示：</strong>每家印刷厂的工艺窗口略有差异。最省事的做法：下单前向厂家索取一份「印刷文件模板与检查清单」，按对方规范准备，打样一次通过率最高。"
+           data-en="<strong>💡 Tip:</strong> every print shop has slightly different process windows. The easiest path: ask the factory for its artwork template and checklist before ordering, prepare files to its spec, and sampling passes first time."
+           data-fr="<strong>💡 Conseil :</strong> chaque imprimeur a des contraintes techniques légèrement différentes. Le plus simple : demandez à l'usine son gabarit de fichier et sa checklist avant de commander ; en respectant ses spécifications, l'échantillon passe du premier coup."
+           data-es="<strong>💡 Consejo:</strong> cada imprenta tiene ventanas de proceso ligeramente distintas. Lo más fácil: pida a la fábrica su plantilla de archivo y su lista de verificación antes de encargar; siguiendo sus especificaciones, la muestra se aprueba a la primera."><strong>💡 提示：</strong>每家印刷厂的工艺窗口略有差异。最省事的做法：下单前向厂家索取一份「印刷文件模板与检查清单」，按对方规范准备，打样一次通过率最高。</div>
+
+      <p data-zh="把文件规范前置到设计阶段，吊牌打样通常 3–7 天即可完成。<strong>东莞泰阁包装</strong>的吊牌业务覆盖胶印、数码、烫金、压凹凸与异形模切，可协助您检查并优化印刷文件，提供文件模板与实物打样服务。"
+         data-en="Handle artwork correctly up front and hang tag sampling typically takes just 3–7 days. <strong>Dongguan TAGE Packaging</strong> produces hang tags by offset, digital, foil stamping, embossing and custom die-cutting — we help check and optimize your files, and provide artwork templates and physical samples."
+         data-fr="Avec un fichier bien préparé en amont, l'échantillonnage d'étiquettes prend généralement 3 à 7 jours. <strong>Dongguan TAGE Packaging</strong> fabrique des étiquettes en offset, numérique, dorure, gaufrage et découpe personnalisée — nous aidons à vérifier et optimiser vos fichiers, et fournissons gabarits et échantillons physiques."
+         data-es="Con un archivo bien preparado, el muestreo de etiquetas suele tardar solo 3–7 días. <strong>Dongguan TAGE Packaging</strong> fabrica etiquetas en offset, digital, estampado en caliente, relieve y troquelado personalizado — ayudamos a revisar y optimizar sus archivos y ofrecemos plantillas y muestras físicas.">把文件规范前置到设计阶段，吊牌打样通常 3–7 天即可完成。<strong>东莞泰阁包装</strong>的吊牌业务覆盖胶印、数码、烫金、压凹凸与异形模切，可协助您检查并优化印刷文件，提供文件模板与实物打样服务。</p>
+
+      <div class="related">
+        <h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+        <ul>
+          <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+          <li><a href="hang-tag-printing-methods.html" data-zh="吊牌印刷工艺详解：胶印/数码/烫金/压凹凸/UV" data-en="Hang Tag Printing Methods: Offset, Digital, Foil, Embossing, UV" data-fr="Techniques d'impression des étiquettes : offset, numérique, dorure, gaufrage, UV" data-es="Métodos de impresión de etiquetas: offset, digital, estampado, relieve, UV">吊牌印刷工艺详解：胶印/数码/烫金/压凹凸/UV</a></li>
+          <li><a href="hang-tag-die-cutting-guide.html" data-zh="吊牌模切工艺指南：异形模切、折页与镂空" data-en="Hang Tag Die-Cutting Guide: Custom Shapes, Folding &amp; Cutouts" data-fr="Guide de découpe des étiquettes : formes, pliage et ajourage" data-es="Guía de troquelado de etiquetas: formas, plegado y calados">吊牌模切工艺指南：异形模切、折页与镂空</a></li>
+          <li><a href="woven-label-artwork-guide.html" data-zh="织唛来稿与制版指南：线条粗细、字号与文件格式" data-en="Woven Label Artwork Guide: Line Weight, Font Size &amp; File Formats" data-fr="Guide des fichiers pour labels tissés : traits, polices et formats" data-es="Guía de arte para etiquetas tejidas: trazos, fuentes y formatos">织唛来稿与制版指南：线条粗细、字号与文件格式</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p data-zh="需要吊牌印刷文件模板，或想先打样验证颜色与工艺？" data-en="Need a hang tag artwork template, or a sample to verify colors and finishing?" data-fr="Besoin d'un gabarit de fichier, ou d'un échantillon pour valider couleurs et finitions ?" data-es="¿Necesita una plantilla de archivo o una muestra para verificar colores y acabados?">需要吊牌印刷文件模板，或想先打样验证颜色与工艺？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="获取吊牌报价 →" data-en="Request a quote for your hang tags →" data-fr="Demandez un devis pour vos étiquettes →" data-es="Solicite un presupuesto para sus etiquetas →">获取吊牌报价 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=55"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>

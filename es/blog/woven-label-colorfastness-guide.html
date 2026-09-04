@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de solidez del color en etiquetas tejidas: causas, normas y verificación | TAGE</title>
+<meta name="description" content="Las etiquetas tejidas que destiñen tras unos lavados se convierten en reclamaciones. Esta guía explica los ensayos ISO 105 de lavado y frote, las causas en hilo y tinte, y los controles de aceptación.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/es/blog/woven-label-colorfastness-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/woven-label-colorfastness-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-colorfastness-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-colorfastness-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-colorfastness-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-colorfastness-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "织唛色牢度指南：褪色原因、测试标准与验收要点",
+     "item": "https://taigetag.com/blog/woven-label-colorfastness-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "织唛色牢度指南：褪色原因、测试标准与验收要点",
+   "url": "https://taigetag.com/blog/woven-label-colorfastness-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-colorfastness-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Solidez del color</span></div>
+      <h1>Guía de solidez del color en etiquetas tejidas: causas, normas y verificación</h1>
+      <p>Por TAGE Packaging  ·  Actualizado el 4 de septiembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>La decoloración es una de las reclamaciones más comunes sobre las etiquetas tejidas: tras unos lavados, los colores de la marca en la etiqueta principal palidecen, los fondos blancos amarillean y, en casos graves, el color se destiñe sobre la prenda. La causa casi siempre está río arriba: la elección de hilo, tinte y proceso. Esta guía le ayuda a entender las normas de ensayo y a eliminar el riesgo ya en la fase de compra.</p>
+
+      <p>Una regla útil desde el principio: para prendas exportadas a Europa y Norteamérica se recomienda una solidez al lavado de grado 4 o superior en las etiquetas tejidas. Los tonos oscuros y muy saturados son más difíciles de lograr —requieren ajuste de color dedicado y ensayos físicos, no un pedido a ciegas.</p>
+
+      <h2>1. Qué es la solidez del color: cuatro ensayos habituales</h2>
+      <p>La solidez del color es la capacidad de un color de resistir la decoloración, el desangrado y el manchado bajo el lavado, la luz, el frote y el sudor. Las pruebas de referencia del sector son la serie ISO 105, aceptada por compradores internacionales y laboratorios externos.</p>
+      <table>
+        <tr><th>Ensayo</th><th>Norma</th><th>Simula</th></tr>
+        <tr><td>Solidez al lavado</td><td>ISO 105-C06</td><td>Decoloración, desangrado y manchado en lavado a máquina y a mano</td></tr>
+        <tr><td>Solidez al frote</td><td>ISO 105-X12</td><td>Frote en seco y húmedo; crítico en etiquetas oscuras</td></tr>
+        <tr><td>Solidez a la luz</td><td>ISO 105-B02</td><td>Decoloración por exposición solar prolongada; clave para outdoor y bañadores</td></tr>
+        <tr><td>Solidez al sudor</td><td>ISO 105-E04</td><td>Cambio de color y manchado por sudor en ropa de contacto directo</td></tr>
+      </table>
+      <p>Los resultados se valoran con escalas de grises: lavado, frote y sudor en escala 1–5, luz en 1–8; cuanto más alto, mejor. En la práctica, el grado 4 es el umbral habitual de conformidad; algunos compradores aceptan 3–4 para el frote en tonos oscuros con una tolerancia indicada.</p>
+
+      <h2>2. Por qué destiñen las etiquetas tejidas</h2>
+      <ul>
+        <li><strong>Calidad del hilo:</strong> el hilo teñido con un lavado insuficiente arrastra tinte suelto que sale en el primer lavado; los estándares de las tintorerías varían mucho —y también el precio</li>
+        <li><strong>Desajuste tinte–fibra:</strong> el poliéster requiere tintes dispersos, el algodón y la viscosa tintes reactivos; con una clase de tinte equivocada la solidez se desploma</li>
+        <li><strong>El propio color:</strong> los rojos intensos, el azul marino y el negro soportan cargas altas de tinte, por lo que el lavado y el frote son intrínsecamente más difíciles de superar</li>
+        <li><strong>Proceso y acabados:</strong> un termofijado excesivo o residuos químicos dañan los tintes; la variación de solidez entre partidas suele deberse a la deriva del proceso</li>
+      </ul>
+
+      <h2>3. Control de compra: cinco acciones para compradores</h2>
+      <ul>
+        <li>Indique en la fase de cotización el mercado de exportación y los requisitos de ensayo: informes OEKO-TEX o normas especificadas por el comprador</li>
+        <li>Anota los grados de solidez en el contrato y en el registro de la muestra aprobada, p. ej. lavado ISO 105-C06 grado 4 o superior</li>
+        <li>Haz tu propia prueba de lavado tras el muestreo: cinco lavados a máquina a 40 °C, comprobando decoloración, desangrado y manchado de las zonas blancas</li>
+        <li>Para tonos oscuros, exige informes de ensayo por partida; en pedidos críticos, recurre a un laboratorio externo para controles puntuales</li>
+        <li>Conserva muestras de referencia selladas con número de partida, para juzgar las reclamaciones frente a la muestra aprobada</li>
+      </ul>
+      <div class="callout"><strong>💡 Consejo:</strong> las etiquetas oscuras fallan sobre todo en el frote (ISO 105-X12). Para el azul marino y el negro, fija un grado aparte y verifícalo con un ensayo —no pruebes solo el lavado.</div>
+
+      <h2>4. Cómo gestionar las reclamaciones por decoloración</h2>
+      <p>Primero determina la responsabilidad: ¿fue la práctica de lavado del consumidor (lejía, calor alto, sol intenso) o un fallo real de solidez? Pide al cliente final fotos y detalles del lavado, y vuelve a ensayar la muestra de referencia sellada en las mismas condiciones. Si el re-ensayo queda realmente por debajo del grado acordado, el proveedor es responsable —negocia reposición o compensación. La prevención real siempre está río arriba: anota la solidez en la especificación y en la muestra aprobada, y ensaya los colores oscuros o saturados antes de la producción.</p>
+
+      <p><strong>Dongguan TAGE Packaging</strong> teje sus etiquetas con hilo teñido de calidad y un sistema de tinte adecuado, asume los ensayos ISO 105 y aporta informes; los colores oscuros y muy saturados se ensayan siempre en muestra antes de la producción —las reclamaciones por decoloración se evitan en el origen.</p>
+
+      <div class="related">
+        <h2>Artículos relacionados</h2>
+        <ul>
+          <li><a href="index.html">FAQ Accesorios: todos los artículos</a></li>
+          <li><a href="woven-label-color-matching.html">Guía de igualación de color en etiquetas tejidas</a></li>
+          <li><a href="woven-label-material-guide.html">Guía de materiales de etiquetas tejidas: poliéster, algodón y viscosa</a></li>
+          <li><a href="garment-trims-quality-inspection.html">Inspección de calidad de accesorios: puntos de control y tolerancias</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>¿Necesita etiquetas tejidas que aguanten el lavado sin destiñir? Pruebe una muestra antes de pedir.</p>
+        <a class="cta-btn" href="../contact.html">Solicite un presupuesto para sus etiquetas tejidas →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=55"></script>
+<script src="../../js/assist.js?v=46"></script>
+</body>
+</html>
