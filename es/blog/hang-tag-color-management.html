@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión del color en etiquetas colgantes: Pantone, CMYK y control de tono | TAGE</title>
+<meta name="description" content="¿El color de tus etiquetas no coincide con tu marca? Esta guía explica la diferencia entre Pantone y CMYK, cómo aprobar pruebas, cómo el papel y el laminado alteran el color y cómo fijar una tolerancia de tono en producción.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/es/blog/hang-tag-color-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-color-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-color-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-color-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-color-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-color-management.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌色彩管理指南：Pantone 专色、CMYK 与色差控制",
+     "item": "https://taigetag.com/blog/hang-tag-color-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌色彩管理指南：Pantone 专色、CMYK 与色差控制",
+   "url": "https://taigetag.com/blog/hang-tag-color-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-color-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Gestión del color</span></div>
+      <h1>Gestión del color en etiquetas colgantes: tintas planas, CMYK y control de tono</h1>
+      <p>Por TAGE Packaging  ·  Actualizado el 6 de septiembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Los colores de tu marca van impresos en cada etiqueta colgante — y, sin embargo, muchas marcas descubren en su primer pedido que la prueba no coincide con el diseño y que la producción no coincide con la prueba. Un tono desviado casi nunca se debe a que la imprenta «no se esfuerce»; suele ser la falta de un proceso de gestión del color. Desde la definición de tintas planas y la aprobación de pruebas hasta la aceptación con muestra sellada, cada paso tiene una práctica estándar. Este artículo propone una rutina de gestión del color aplicable para marcas y compradores.</p>
+
+      <h2>1. Primero, distinguir: tinta plana e impresión en cuatricromía</h2>
+      <p>En las etiquetas se usan dos sistemas de color. La tinta plana Pantone imprime el tono objetivo con tinta premezclada: tono estable y buena cobertura, ideal para grandes áreas de color de marca, logotipos y tonos metálicos o fluorescentes. La cuatricromía CMYK superpone tramas de cian, magenta, amarillo y negro: reproduce bien fotos y degradados, pero cada color suelto es menos estable que una tinta plana. Una pantalla emite luz RGB, un principio totalmente distinto al de la tinta — nunca apruebes una impresión comparándola con la pantalla.</p>
+      <div class="callout"><strong>💡 Regla práctica:</strong> imprime el logotipo principal y los colores de marca en tinta plana Pantone, y usa CMYK para imágenes y degradados; combinar ambos mantiene los colores clave exactos controlando el coste.</div>
+
+      <h2>2. Especificar bien un Pantone: el soporte y el proceso importan</h2>
+      <p>Indicar un Pantone en el pedido (p. ej. PMS 186 C) es solo el primer paso. Hay que precisar tres cosas: el soporte — el papel estucado y el kraft absorben la tinta de forma distinta y rinden tonos distintos; el proceso — tinta normal, tinta UV u hoja metálica, pues la hoja tiene su propia carta de colores y no sigue las cartas Pantone C/U; y la edición de la carta — las cartas brillantes C y mates U se ven diferente, indique cuál aplica.</p>
+      <ul>
+        <li><strong>Etiquetas impresas a todo color</strong>: imprima los colores de marca con tinta plana Pantone para la mayor fidelidad con la carta</li>
+        <li><strong>Estampado en caliente (oro, plata, etc.)</strong>: elija en la carta del proveedor de hojas metálicas, no en las cartas Pantone C/U</li>
+        <li><strong>Tintas planas claras sobre papel oscuro</strong>: normalmente necesitan una base blanca previa; confírmelo en el muestreo para que el color no se apague</li>
+      </ul>
+
+      <h2>3. Revisar pruebas: la prueba digital no es la prueba de máquina</h2>
+      <p>La prueba se hace por niveles: los archivos digitales y las pruebas de inyección validan contenido y maquetación; para validar el color de verdad, pida una prueba de máquina o una salida en un dispositivo con gestión de color. Juzgue el color bajo una fuente de luz estándar (cabina D50 o D65) — la luz del día, una lámpara cálida o una pantalla falsean el juicio. La práctica profesional: el fabricante adjunta una tarjeta de muestra sellada con el Pantone, el papel y el acabado; ambas partes la firman y sirve de referencia para la producción y la recepción.</p>
+
+      <h2>4. Cómo el papel y el laminado alteran el color</h2>
+      <p>La misma tinta impresa en soportes distintos puede mostrar diferencias visibles. La tabla siguiente lista las variables más comunes en etiquetas colgantes y sus efectos — consúltela al elegir materiales para evitar retrabajos por muestrear en cartulina blanca y producir en kraft.</p>
+      <table>
+        <tr><th>Variable</th><th>Efecto sobre el color</th></tr>
+        <tr><td>Blancura del papel</td><td>La cartulina blanca imprime limpio y brillante; el kraft tiene una base marrón cálida que oscurece y calienta las tintas planas</td></tr>
+        <tr><td>Lisura del papel</td><td>Las superficies lisas imprimen vívidas; los papeles rugosos absorben más tinta y apagan el color</td></tr>
+        <tr><td>Laminado mate</td><td>Difunde la luz: los colores se ven más claros y suaves; los tonos oscuros pueden volverse ligeramente grises</td></tr>
+        <tr><td>Laminado brillante</td><td>Añade saturación y contraste; los colores se ven más vivos e intensos</td></tr>
+        <tr><td>Film soft-touch / textura</td><td>La textura superficial dispersa la luz; confirme los tonos claros y las grandes áreas planas con una muestra real</td></tr>
+      </table>
+      <div class="callout"><strong>💡 Consejo:</strong> haga la muestra oficial con el papel y el laminado definitivos. Nunca muestree en cartulina blanca y produzca en kraft — si cambia el soporte, cambia el color.</div>
+
+      <h2>5. Fijar y verificar la tolerancia de tono en producción</h2>
+      <p>La diferencia de color se expresa en ΔE — cuanto menor es el valor, más cerca del objetivo. En el sector, un ΔE de 2–3 suele ser difícil de detectar a simple vista, pero la tolerancia exacta debe acordarse en el pedido y no dejarse a la impresión. Compare siempre con la muestra sellada bajo una cabina de luz estándar, vigilando las grandes áreas planas, los tonos oscuros y los metálicos.</p>
+      <ul>
+        <li>Indique en la orden que «el color de producción sigue la muestra sellada conjuntamente»</li>
+        <li>En la entrega, muestree según el plan acordado y compare tono por tono con la muestra sellada bajo luz estándar</li>
+        <li>Las grandes áreas planas, los tonos oscuros y los metálicos se desvían más — revíselos primero</li>
+        <li>Guarde la muestra sellada y una retención de producción; en las reposiciones, abra el archivo para mantener el color entre lotes</li>
+      </ul>
+
+      <h2>6. Qué deben hacer las marcas de ropa</h2>
+      <p>Ponga los requisitos de color al principio del proceso: aporte números Pantone o muestras físicas, especifique papel y laminado, indique si se necesita prueba de máquina y acuerde el procedimiento de sellado. Cuanto antes entren en su consulta, menos rondas de muestreo necesitará.</p>
+      <p><strong>Dongguan TAGE Packaging</strong> se especializa en etiquetas colgantes, tejidas, de cuidado y embalaje de prendas, con impresión Pantone combinada con estampado en caliente, relieve y barniz UV. El muestreo suele tardar 3–7 días; cada tarjeta de muestra sellada registra el número de color, el papel y el acabado en nuestro archivo; en las reposiciones abrimos el expediente para que el mismo estilo mantenga el mismo color. Antes de la producción, validamos cada estándar de color con usted en el muestreo — los problemas de tono se resuelven antes de la serie.</p>
+
+      <div class="related">
+        <h2>Artículos relacionados</h2>
+        <ul>
+          <li><a href="index.html">FAQ Accesorios: todos los artículos</a></li>
+          <li><a href="hang-tag-printing-methods.html">Métodos de impresión de etiquetas: offset, digital, estampado, relieve y UV</a></li>
+          <li><a href="hang-tag-artwork-guide.html">Guía del archivo de etiquetas colgantes: sangrado, resolución y color</a></li>
+          <li><a href="woven-label-color-matching.html">Guía de igualación de color en etiquetas tejidas: Pantone, control de tono y solidez</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>¿Necesitas etiquetas con color exacto? Envíenos sus Pantone y requisitos de prueba — TAGE valida cada estándar de color en el muestreo.</p>
+        <a class="cta-btn" href="../contact.html">Solicite un presupuesto de etiquetas →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=57"></script>
+<script src="../../js/assist.js?v=46"></script>
+</body>
+</html>
