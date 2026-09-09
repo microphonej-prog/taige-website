@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地 | TAGE" data-en="RFID Clothing Labels &amp; Smart Hang Tags: Anti-Theft, Inventory &amp; Traceability | TAGE" data-fr="Étiquettes RFID et étiquettes suspendues intelligentes pour vêtements : antivol, inventaire et traçabilité | TAGE" data-es="Etiquetas RFID y colgantes inteligentes para ropa: antirrobo, inventario y trazabilidad | TAGE">服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地 | TAGE</title>
+<meta name="description" data-zh="服装品牌如何落地 RFID？本文讲清 UHF 与 NFC 的区别、RFID 硬吊牌/织唛/洗水标三种载体怎么选、防盗与盘点分别用哪套技术，并给出从定场景、编码到打样测试的落地流程与询价清单，让智能标签真正为品牌增效。" data-en="How do clothing brands roll out RFID? This guide explains UHF vs NFC, choosing between RFID hang tags, woven labels and care labels, which technology serves anti-theft vs inventory, plus a roll-out workflow — from use case and encoding to sampling tests — and a supplier checklist." data-fr="Comment les marques de mode déploient-elles la RFID ? Ce guide explique UHF contre NFC, le choix entre étiquette suspendue, label tissé et étiquette d'entretien RFID, quelle technologie pour l'antivol ou l'inventaire, et propose un plan de déploiement — du cas d'usage au codage et aux tests — avec une checklist fournisseur." data-es="¿Cómo despliegan las marcas de moda la RFID? Esta guía explica UHF frente a NFC, cómo elegir entre etiqueta colgante, tejida y de cuidado RFID, qué tecnología sirve para antirrobo o inventario, y propone un plan de despliegue —del caso de uso al codificado y las pruebas— con lista de verificación para proveedores." content="服装品牌如何落地 RFID？本文讲清 UHF 与 NFC 的区别、RFID 硬吊牌/织唛/洗水标三种载体怎么选、防盗与盘点分别用哪套技术，并给出从定场景、编码到打样测试的落地流程与询价清单，让智能标签真正为品牌增效。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/rfid-garment-labels.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地",
+     "item": "https://taigetag.com/blog/rfid-garment-labels.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地",
+   "url": "https://taigetag.com/blog/rfid-garment-labels.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/rfid-garment-labels.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.85,6.5 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="RFID 服装标签指南" data-en="RFID Clothing Labels Guide" data-fr="Guide des étiquettes RFID" data-es="Guía de etiquetas RFID">RFID 服装标签指南</span></div>
+      <h1 data-zh="服装 RFID 标签与智能吊牌：从防盗到溯源的一站式指南" data-en="RFID Clothing Labels &amp; Smart Hang Tags: From Anti-Theft to Traceability" data-fr="Étiquettes RFID et étiquettes suspendues intelligentes : de l'antivol à la traçabilité" data-es="Etiquetas RFID y colgantes inteligentes: del antirrobo a la trazabilidad">服装 RFID 标签与智能吊牌：从防盗到溯源的一站式指南</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月9日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 9, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 9 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 9 de septiembre de 2026">泰阁包装 · 更新于 2026年9月9日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="服装 RFID 标签早已不是科技巨头的专属：从快时尚到高端男装，越来越多品牌把 RFID 芯片藏进吊牌、织唛或洗水标里，用来盘库存、防盗窃、做溯源。但「RFID」三个字背后是频率、载体、编码与读写设备一整套选择，选错一步，钱就白花。本文用服装辅料的视角，讲清 RFID 服装标签的常见应用、三种载体怎么选，以及从立项到打样的落地流程。" data-en="RFID clothing labels are no longer reserved for tech giants: fast fashion and premium menswear alike now hide RFID chips in hang tags, woven labels or care labels to count inventory, deter theft and prove authenticity. But behind the word RFID lies a chain of choices — frequency, carrier, encoding and readers — and one wrong pick wastes your budget. Written from a garment-trim perspective, this guide explains common RFID uses, how to choose between three carriers, and how to go from planning to sampling." data-fr="Les étiquettes RFID ne sont plus réservées aux géants de la tech : mode rapide comme tailleur haut de gamme cachent désormais des puces RFID dans les étiquettes suspendues, les labels tissés ou les étiquettes d'entretien pour inventorier, dissuader le vol et prouver l'authenticité. Mais derrière la RFID se cache une chaîne de choix — fréquence, support, codage et lecteurs — et une seule erreur gaspille le budget. Vu sous l'angle des accessoires, ce guide présente les usages courants, le choix entre trois supports et le déroulé du projet jusqu'à l'échantillon." data-es="Las etiquetas RFID para ropa ya no son exclusivas de los gigantes tecnológicos: la moda rápida y la sastrería premium esconden chips RFID en etiquetas colgantes, tejidas o de cuidado para inventariar, disuadir el hurto y probar autenticidad. Pero tras la palabra RFID hay una cadena de decisiones —frecuencia, soporte, codificado y lectores— y un fallo malgasta el presupuesto. Desde la óptica de los accesorios, esta guía explica los usos habituales, cómo elegir entre tres soportes y el recorrido del proyecto hasta la muestra.">服装 RFID 标签早已不是科技巨头的专属：从快时尚到高端男装，越来越多品牌把 RFID 芯片藏进吊牌、织唛或洗水标里，用来盘库存、防盗窃、做溯源。但「RFID」三个字背后是频率、载体、编码与读写设备一整套选择，选错一步，钱就白花。本文用服装辅料的视角，讲清 RFID 服装标签的常见应用、三种载体怎么选，以及从立项到打样的落地流程。</p>
+
+      <h2 data-zh="1. RFID 在服装上解决什么问题" data-en="1. What RFID Solves in Apparel" data-fr="1. Ce que la RFID résout dans l'habillement" data-es="1. Qué resuelve la RFID en la confección">1. RFID 在服装上解决什么问题</h2>
+
+      <p data-zh="先分清需求，再谈技术：防盗报警、库存盘点、洗涤追踪与消费者互动，用的不是同一套东西。不少品牌把「防盗」和「RFID」画等号，实际门店防盗门里的大多是 EAS 声磁/射频标签，与盘点用的 RFID 是两套系统。" data-en="Define the need before the technology: anti-theft, inventory, laundry tracking and consumer engagement each use different pieces. Many brands equate RFID with theft prevention, yet most store gates use EAS (acoustic-magnetic or RF) tags — a different system from the RFID used for inventory." data-fr="Définissez le besoin avant la technologie : antivol, inventaire, suivi en blanchisserie et interaction client n'utilisent pas les mêmes briques. Beaucoup assimilent RFID et antivol, alors que les portiques utilisent surtout des étiquettes EAS (acousto-magnétique ou RF) — un système différent de la RFID d'inventaire." data-es="Defina la necesidad antes que la tecnología: antirrobo, inventario, seguimiento en lavandería e interacción con el cliente usan piezas distintas. Muchas marcas equiparan RFID con antirrobo, pero los arcos de tienda usan sobre todo etiquetas EAS (acústico-magnéticas o RF) — un sistema distinto de la RFID de inventario.">先分清需求，再谈技术：防盗报警、库存盘点、洗涤追踪与消费者互动，用的不是同一套东西。不少品牌把「防盗」和「RFID」画等号，实际门店防盗门里的大多是 EAS 声磁/射频标签，与盘点用的 RFID 是两套系统。</p>
+
+      <ul>
+        <li data-zh="<strong>库存盘点与找货</strong>：UHF RFID 手持机扫一圈，几百件货品几秒盘点完，还能定位「线上有单但店里找不到」的滞销款" data-en="<strong>Inventory and item location</strong>: one sweep with a UHF handheld counts hundreds of items in seconds and can locate pieces that sell online but vanish in-store" data-fr="<strong>Inventaire et localisation</strong> : un passage de lecteur UHF portatif compte des centaines d'articles en quelques secondes et localise les pièces qui se vendent en ligne mais s'égarent en magasin" data-es="<strong>Inventario y localización</strong>: un barrido con lector UHF de mano cuenta cientos de artículos en segundos y localiza piezas que se venden online pero se pierden en tienda"><strong>库存盘点与找货</strong>：UHF RFID 手持机扫一圈，几百件货品几秒盘点完，还能定位「线上有单但店里找不到」的滞销款</li>
+        <li data-zh="<strong>自助结账</strong>：试衣间与收银台读取整叠衣物，免去逐件扫条码" data-en="<strong>Self-checkout</strong>: fitting rooms and tills read whole stacks of garments at once, no per-item barcode scanning" data-fr="<strong>Auto-caisse</strong> : cabines et caisses lisent des piles entières de vêtements d'un coup, sans scanner chaque code-barres" data-es="<strong>Autocobro</strong>: probadores y cajas leen pilas enteras de prendas de una vez, sin escanear cada código"><strong>自助结账</strong>：试衣间与收银台读取整叠衣物，免去逐件扫条码</li>
+        <li data-zh="<strong>洗涤与租赁追踪</strong>：工装、酒店布草、制服租赁用耐洗 RFID 织唛/洗水标，工业洗涤几十次后仍可读" data-en="<strong>Laundry and rental tracking</strong>: workwear, hotel linen and uniform rental use washable RFID woven or care labels that survive dozens of industrial washes" data-fr="<strong>Suivi blanchisserie et location</strong> : vêtements de travail, linge d'hôtel et location d'uniformes utilisent des labels tissés ou d'entretien RFID lavables, lisibles après des dizaines de lavages industriels" data-es="<strong>Seguimiento de lavandería y alquiler</strong>: ropa laboral, lencería de hotel y alquiler de uniformes usan etiquetas tejidas o de cuidado RFID lavables, legibles tras decenas de lavados industriales"><strong>洗涤与租赁追踪</strong>：工装、酒店布草、制服租赁用耐洗 RFID 织唛/洗水标，工业洗涤几十次后仍可读</li>
+        <li data-zh="<strong>防伪与营销</strong>：NFC 芯片藏在吊牌里，手机一碰跳转官网，验真、看搭配、领会员积分一步完成" data-en="<strong>Authentication and marketing</strong>: an NFC chip in the hang tag lets a phone tap open your site — verify authenticity, see styling ideas and earn loyalty points in one gesture" data-fr="<strong>Authentification et marketing</strong> : une puce NFC dans l'étiquette suspendue ouvre votre site d'un geste — vérifier l'authenticité, découvrir des looks et gagner des points en un seul geste" data-es="<strong>Autenticidad y marketing</strong>: un chip NFC en la etiqueta colgante abre su web con un toque — verificar autenticidad, ver looks y ganar puntos en un gesto"><strong>防伪与营销</strong>：NFC 芯片藏在吊牌里，手机一碰跳转官网，验真、看搭配、领会员积分一步完成</li>
+      </ul>
+
+      <h2 data-zh="2. 三种载体怎么选" data-en="2. Choosing Between Three Carriers" data-fr="2. Choisir entre trois supports" data-es="2. Cómo elegir entre tres soportes">2. 三种载体怎么选</h2>
+
+      <p data-zh="同一颗芯片，放在不同辅料里就是不同的产品。选载体要看：标签在商品生命周期里待多久、要不要过水、谁去读它。" data-en="The same chip becomes a different product in each trim. Choose the carrier by asking: how long the label stays with the garment, whether it must survive washing, and who reads it." data-fr="La même puce devient un produit différent selon l'accessoire. Choisissez le support en vous demandant : combien de temps l'étiquette accompagne le vêtement, doit-elle passer au lavage, et qui la lit ?" data-es="El mismo chip se convierte en un producto distinto según el accesorio. Elija el soporte preguntándose: cuánto tiempo acompaña la etiqueta a la prenda, debe sobrevivir al lavado y quién la lee.">同一颗芯片，放在不同辅料里就是不同的产品。选载体要看：标签在商品生命周期里待多久、要不要过水、谁去读它。</p>
+
+      <table>
+        <tr><th data-zh="载体" data-en="Carrier" data-fr="Support" data-es="Soporte">载体</th><th data-zh="适用频率" data-en="Typical frequency" data-fr="Fréquence typique" data-es="Frecuencia típica">适用频率</th><th data-zh="典型用途" data-en="Typical use" data-fr="Usage typique" data-es="Uso típico">典型用途</th><th data-zh="注意事项" data-en="Watch out for" data-fr="Points de vigilance" data-es="Atención">注意事项</th></tr>
+        <tr><td data-zh="RFID 硬吊牌（纸质/卡纸内置 inlay）" data-en="RFID hang tag (paper/card with inlay)" data-fr="Étiquette suspendue RFID (papier/carton avec inlay)" data-es="Etiqueta colgante RFID (papel/cartulina con inlay)">RFID 硬吊牌（纸质/卡纸内置 inlay）</td><td data-zh="UHF 或 NFC" data-en="UHF or NFC" data-fr="UHF ou NFC" data-es="UHF o NFC">UHF 或 NFC</td><td data-zh="门店盘点、自助结账、防伪营销；随销售拆除回收" data-en="Store inventory, self-checkout, anti-counterfeit marketing; removed at sale" data-fr="Inventaire, auto-caisse, marketing anti-contrefaçon ; retiré à la vente" data-es="Inventario, autocobro, marketing antifalsificación; se retira en la venta">门店盘点、自助结账、防伪营销；随销售拆除回收</td><td data-zh="吊牌表面不能覆金属箔，会屏蔽信号" data-en="No metallic foil on the tag surface — it shields the signal" data-fr="Pas de dorure métallique en surface — elle blinde le signal" data-es="Nada de láminas metálicas en la superficie — blindan la señal">吊牌表面不能覆金属箔，会屏蔽信号</td></tr>
+        <tr><td data-zh="RFID 织唛 / 洗水标（芯片织入或封装）" data-en="RFID woven / care label (woven-in or encapsulated chip)" data-fr="Label tissé / étiquette d'entretien RFID (puce tissée ou encapsulée)" data-es="Etiqueta tejida / de cuidado RFID (chip tejido o encapsulado)">RFID 织唛 / 洗水标（芯片织入或封装）</td><td data-zh="UHF 为主，部分低频" data-en="Mainly UHF, some LF" data-fr="Surtout UHF, parfois LF" data-es="Sobre todo UHF, algo de LF">UHF 为主，部分低频</td><td data-zh="租赁/工装/布草的耐洗追踪，标签与服装同寿" data-en="Washable tracking for rental, workwear and linen; label lives as long as the garment" data-fr="Suivi lavable pour location, vêtements de travail et linge ; vit aussi longtemps que le vêtement" data-es="Seguimiento lavable para alquiler, ropa laboral y lencería; vive tanto como la prenda">租赁/工装/布草的耐洗追踪，标签与服装同寿</td><td data-zh="封装工艺决定耐洗次数，下单前要洗护测试报告" data-en="Encapsulation decides wash survival — ask for wash-test reports before ordering" data-fr="L'encapsulation décide de la tenue au lavage — exigez des rapports de test avant de commander" data-es="El encapsulado decide la resistencia al lavado — pida informes de prueba antes de pedir">封装工艺决定耐洗次数，下单前要洗护测试报告</td></tr>
+        <tr><td data-zh="NFC 贴纸 / 智能吊牌卡" data-en="NFC sticker / smart tag card" data-fr="Étiquette NFC / carte intelligente" data-es="Pegatina NFC / tarjeta inteligente">NFC 贴纸 / 智能吊牌卡</td><td data-zh="NFC 13.56 MHz" data-en="NFC 13.56 MHz" data-fr="NFC 13,56 MHz" data-es="NFC 13,56 MHz">NFC 13.56 MHz</td><td data-zh="消费者手机互动：验真、溯源、内容跳转" data-en="Phone interaction: authentication, traceability, content links" data-fr="Interaction smartphone : authentification, traçabilité, contenus" data-es="Interacción con el móvil: autenticidad, trazabilidad, contenidos">消费者手机互动：验真、溯源、内容跳转</td><td data-zh="读距只有几厘米，做不了门店级盘点" data-en="Only a few centimetres of read range — useless for store-level inventory" data-fr="Quelques centimètres de portée seulement — inutile pour un inventaire magasin" data-es="Solo unos centímetros de alcance — inútil para inventario de tienda">读距只有几厘米，做不了门店级盘点</td></tr>
+      </table>
+
+      <h2 data-zh="3. 频率与行业常识速览" data-en="3. Frequencies &amp; Industry Basics" data-fr="3. Fréquences et bases du secteur" data-es="3. Frecuencias y conceptos básicos">3. 频率与行业常识速览</h2>
+
+      <ul>
+        <li data-zh="<strong>UHF（860–960 MHz，RAIN RFID / EPC Gen2）</strong>：读距数米、可批量读取，是服装零售盘点的事实标准；不同国家频段略有差异（如欧盟 865–868 MHz、美国 902–928 MHz），出口多国的货品选芯片时要确认兼容性" data-en="<strong>UHF (860–960 MHz, RAIN RFID / EPC Gen2)</strong>: multi-metre read range and bulk reading make it the de facto standard for retail inventory; bands differ by country (e.g. EU 865–868 MHz, US 902–928 MHz) — check compatibility when shipping to multiple markets" data-fr="<strong>UHF (860–960 MHz, RAIN RFID / EPC Gen2)</strong> : portée de plusieurs mètres et lecture en masse, standard de fait de l'inventaire retail ; les bandes varient selon les pays (UE 865–868 MHz, États-Unis 902–928 MHz) — vérifiez la compatibilité pour l'export" data-es="<strong>UHF (860–960 MHz, RAIN RFID / EPC Gen2)</strong>: alcance de varios metros y lectura masiva, estándar de facto del inventario retail; las bandas varían por país (UE 865–868 MHz, EE. UU. 902–928 MHz) — compruebe la compatibilidad al exportar"><strong>UHF（860–960 MHz，RAIN RFID / EPC Gen2）</strong>：读距数米、可批量读取，是服装零售盘点的事实标准；不同国家频段略有差异（如欧盟 865–868 MHz、美国 902–928 MHz），出口多国的货品选芯片时要确认兼容性</li>
+        <li data-zh="<strong>HF / NFC（13.56 MHz）</strong>：读距几厘米，手机原生支持，适合面向消费者的验真与互动，不适合仓库盘点" data-en="<strong>HF / NFC (13.56 MHz)</strong>: centimetre range, natively supported by phones — great for consumer authentication and engagement, not for warehouse counts" data-fr="<strong>HF / NFC (13,56 MHz)</strong> : portée centimétrique, support natif des téléphones — idéal pour l'authentification et l'interaction client, pas pour l'inventaire" data-es="<strong>HF / NFC (13,56 MHz)</strong>: alcance centimétrico, soporte nativo en móviles — ideal para autenticación e interacción, no para inventario"><strong>HF / NFC（13.56 MHz）</strong>：读距几厘米，手机原生支持，适合面向消费者的验真与互动，不适合仓库盘点</li>
+        <li data-zh="<strong>编码不是随便写串数字</strong>：行业常用 EPC 编码规范（如 SGTIN-96 关联到款号与序列号），也可自定义写入品牌自己的码段；TID（芯片唯一识别号）出厂锁定，常用于防伪比对" data-en="<strong>Encoding is not a random number</strong>: the industry uses EPC schemes such as SGTIN-96 linking to style and serial numbers; you can also write your own code range, while the chip's locked TID supports authentication checks" data-fr="<strong>Le codage n'est pas un numéro au hasard</strong> : le secteur utilise des schémas EPC comme SGTIN-96 reliant style et numéro de série ; vous pouvez aussi écrire votre propre plage de codes, tandis que le TID verrouillé de la puce sert aux contrôles d'authenticité" data-es="<strong>El codificado no es un número al azar</strong>: el sector usa esquemas EPC como SGTIN-96 que vinculan estilo y número de serie; también puede escribir su propio rango, y el TID bloqueado del chip sirve para verificar autenticidad"><strong>编码不是随便写串数字</strong>：行业常用 EPC 编码规范（如 SGTIN-96 关联到款号与序列号），也可自定义写入品牌自己的码段；TID（芯片唯一识别号）出厂锁定，常用于防伪比对</li>
+      </ul>
+
+      <h2 data-zh="4. 落地五步：从立项到打样" data-en="4. Five Steps: From Planning to Sampling" data-fr="4. Cinq étapes : du projet à l'échantillon" data-es="4. Cinco pasos: del proyecto a la muestra">4. 落地五步：从立项到打样</h2>
+
+      <ol>
+        <li data-zh="<strong>定场景与读取端</strong>：谁读、在哪读、读多快——门店手持机、收银台固定读写器还是消费者手机？先定读取端再选频率" data-en="<strong>Define the use case and read side</strong>: who reads, where, how fast — store handheld, fixed POS reader or consumer phone? Pick the frequency only after the read side" data-fr="<strong>Définissez l'usage et la lecture</strong> : qui lit, où, à quelle vitesse — lecteur portatif, caisse fixe ou téléphone client ? Choisissez la fréquence après le côté lecture" data-es="<strong>Defina el caso y el lado lector</strong>: quién lee, dónde y a qué ritmo — ¿lector de mano, caja fija o móvil del cliente? Elija la frecuencia después del lado lector"><strong>定场景与读取端</strong>：谁读、在哪读、读多快——门店手持机、收银台固定读写器还是消费者手机？先定读取端再选频率</li>
+        <li data-zh="<strong>选载体与辅料结合点</strong>：吊牌（售前拆除）还是织唛/洗水标（随衣终身）？结合点决定封装工艺与成本" data-en="<strong>Pick the carrier and trim touchpoint</strong>: a hang tag removed at sale, or a woven/care label that stays for life? The touchpoint decides encapsulation and cost" data-fr="<strong>Choisissez le support et le point d'attache</strong> : étiquette retirée à la vente, ou label tissé/d'entretien à vie ? Le point d'attache décide de l'encapsulation et du coût" data-es="<strong>Elija el soporte y el punto de unión</strong>: ¿etiqueta que se retira en la venta o tejida/de cuidado que dura toda la vida? El punto de unión decide el encapsulado y el coste"><strong>选载体与辅料结合点</strong>：吊牌（售前拆除）还是织唛/洗水标（随衣终身）？结合点决定封装工艺与成本</li>
+        <li data-zh="<strong>定编码方案与数据流</strong>：单品级一物一码、品类级还是一单一码？编码写什么、由谁写、何时写（出厂预写还是门店写）" data-en="<strong>Fix the encoding scheme and data flow</strong>: item-level, style-level or case-level? What to write, who writes it, and when — pre-programmed at source or written in store" data-fr="<strong>Fixez le schéma de codage et le flux de données</strong> : niveau article, modèle ou carton ? Quoi écrire, qui écrit, quand — pré-programmé à la source ou écrit en magasin" data-es="<strong>Fije el esquema de codificado y el flujo de datos</strong>: ¿nivel de artículo, de modelo o de caja? Qué escribir, quién y cuándo — ¿programado en origen o en tienda?"><strong>定编码方案与数据流</strong>：单品级一物一码、品类级还是一单一码？编码写什么、由谁写、何时写（出厂预写还是门店写）</li>
+        <li data-zh="<strong>打样并做真实现场测试</strong>：把标签装进真衣服、真吊牌，在目标环境测读距、误读率与批量读取；需要耐洗的做洗护循环测试" data-en="<strong>Sample and test in the real environment</strong>: fit tags into actual garments and hang tags, measure read range, misreads and bulk reads on site; run wash cycles when washability matters" data-fr="<strong>Échantillonnez et testez en conditions réelles</strong> : intégrez les étiquettes à de vrais vêtements, mesurez portée, erreurs et lecture en masse sur place ; lancez des cycles de lavage si la lavabilité compte" data-es="<strong>Pruebe la muestra en el entorno real</strong>: integre las etiquetas en prendas y colgantes reales, mida alcance, errores y lectura masiva in situ; haga ciclos de lavado si la lavabilidad importa"><strong>打样并做真实现场测试</strong>：把标签装进真衣服、真吊牌，在目标环境测读距、误读率与批量读取；需要耐洗的做洗护循环测试</li>
+        <li data-zh="<strong>大货抽检验证</strong>：到货抽检读写一致性、编码正确率与外观工艺，别等上架才发现整批读不出" data-en="<strong>Spot-check bulk</strong>: on arrival, verify read consistency, encoding accuracy and appearance — do not discover an unreadable batch after it hits the floor" data-fr="<strong>Contrôlez la série</strong> : à réception, vérifiez la constance de lecture, l'exactitude des codages et l'aspect — ne découvrez pas un lot illisible une fois en rayon" data-es="<strong>Inspeccione la serie</strong>: a la llegada, verifique la constancia de lectura, la exactitud de los codificados y el aspecto — no descubra un lote ilegible ya en tienda"><strong>大货抽检验证</strong>：到货抽检读写一致性、编码正确率与外观工艺，别等上架才发现整批读不出</li>
+      </ol>
+
+      <div class="callout" data-zh="<strong>💡 别把 RFID 当万能药：</strong>金属拉链附近、液体环境、密集叠放都会影响读取；需要几米读距还是几厘米、需要过几十次工业水洗还是售前即拆，决定方案与预算的量级。把这些条件写清楚再打样，能省掉大量返工。" data-en="<strong>💡 RFID is not a silver bullet:</strong> metal zippers, liquids and dense stacking all affect reads; whether you need metres or centimetres, dozens of industrial washes or pre-sale removal, decides the solution and budget tier. State these conditions before sampling and you will avoid most rework." data-fr="<strong>💡 La RFID n'est pas une baguette magique :</strong> fermetures métalliques, liquides et empilement dense affectent la lecture ; portée de plusieurs mètres ou centimètres, dizaines de lavages industriels ou retrait à la vente — cela décide de la solution et du budget. Précisez ces conditions avant l'échantillon et vous éviterez l'essentiel des reprises." data-es="<strong>💡 La RFID no es una varita mágica:</strong> cremalleras metálicas, líquidos y apilado denso afectan a la lectura; metros o centímetros de alcance, decenas de lavados industriales o retirada en venta — eso decide la solución y el presupuesto. Precise estas condiciones antes de la muestra y evitará la mayoría de los retoques."><strong>💡 别把 RFID 当万能药：</strong>金属拉链附近、液体环境、密集叠放都会影响读取；需要几米读距还是几厘米、需要过几十次工业水洗还是售前即拆，决定方案与预算的量级。把这些条件写清楚再打样，能省掉大量返工。</div>
+
+      <h2 data-zh="5. 向供应商询价时问什么" data-en="5. What to Ask Suppliers" data-fr="5. Quoi demander aux fournisseurs" data-es="5. Qué preguntar a los proveedores">5. 向供应商询价时问什么</h2>
+
+      <ul>
+        <li data-zh="芯片与频段：是 RAIN UHF（EPC Gen2）还是 NFC？读写距离实测多少？" data-en="Chip and band: RAIN UHF (EPC Gen2) or NFC? What is the measured read range?" data-fr="Puce et bande : RAIN UHF (EPC Gen2) ou NFC ? Quelle portée de lecture mesurée ?" data-es="Chip y banda: ¿RAIN UHF (EPC Gen2) o NFC? ¿Qué alcance de lectura medido?">芯片与频段：是 RAIN UHF（EPC Gen2）还是 NFC？读写距离实测多少？</li>
+        <li data-zh="封装与耐洗：载体能过多少次水洗、用什么测试标准？有报告吗？" data-en="Encapsulation and washability: how many washes can the carrier survive, under which standard, with reports?" data-fr="Encapsulation et lavabilité : combien de lavages le support supporte-t-il, selon quelle norme, avec rapports ?" data-es="Encapsulado y lavabilidad: ¿cuántos lavados soporta el soporte, bajo qué norma y con informes?">封装与耐洗：载体能过多少次水洗、用什么测试标准？有报告吗？</li>
+        <li data-zh="写码服务：支持什么编码格式（SGTIN-96 等）、能否按我的码段预写、是否提供写码校验数据" data-en="Encoding services: which formats (e.g. SGTIN-96), can you pre-write my code range, and do you provide verification data" data-fr="Services de codage : quels formats (ex. SGTIN-96), pré-écriture de ma plage de codes, et données de vérification fournies ?" data-es="Servicios de codificado: ¿qué formatos (p. ej. SGTIN-96), pueden pre-escribir mi rango de códigos y aportan datos de verificación?">写码服务：支持什么编码格式（SGTIN-96 等）、能否按我的码段预写、是否提供写码校验数据</li>
+        <li data-zh="辅料结合：芯片与吊牌印刷、织唛织造工艺如何结合，外观与手感影响多大？" data-en="Trim integration: how the chip combines with hang tag printing or label weaving, and the impact on look and feel" data-fr="Intégration accessoire : combinaison de la puce avec l'impression ou le tissage, et impact sur l'aspect et le toucher ?" data-es="Integración en el accesorio: cómo se combina el chip con la impresión o el tejido, y su impacto en aspecto y tacto">辅料结合：芯片与吊牌印刷、织唛织造工艺如何结合，外观与手感影响多大？</li>
+        <li data-zh="单量与成本：inlay、封装、写码各自怎么计价，起订量多少？" data-en="Volumes and cost: how are inlay, encapsulation and encoding priced, and what are the MOQs?" data-fr="Volumes et coût : comment sont facturés inlay, encapsulation et codage, et quelles MOQ ?" data-es="Volúmenes y coste: ¿cómo se facturan el inlay, el encapsulado y el codificado, y cuáles son los MOQ?">单量与成本：inlay、封装、写码各自怎么计价，起订量多少？</li>
+      </ul>
+
+      <p data-zh="<strong>东莞泰阁包装</strong>的主业是吊牌、织唛与洗水标等传统辅料；如果您在评估 RFID 与这些载体的结合，我们可以从辅料工艺端给出打样可行性判断——哪些吊牌结构适合藏 inlay、哪些织唛封装能扛水洗、印刷与芯片如何互不干扰，先评估再投入。" data-en="<strong>Dongguan TAGE Packaging</strong> specializes in traditional trims — hang tags, woven labels and care labels. If you are evaluating RFID on these carriers, we can assess sampling feasibility from the trim-process side: which hang tag structures hide an inlay well, which label encapsulation survives washing, and how printing and chips coexist — evaluate first, invest after." data-fr="<strong>Dongguan TAGE Packaging</strong> est spécialiste des accessoires classiques — étiquettes suspendues, labels tissés et étiquettes d'entretien. Si vous évaluez la RFID sur ces supports, nous pouvons juger la faisabilité d'échantillonnage côté process : quelles structures accueillent bien un inlay, quelle encapsulation supporte le lavage, comment impression et puce cohabitent — évaluez d'abord, investissez ensuite." data-es="<strong>Dongguan TAGE Packaging</strong> se especializa en accesorios clásicos —etiquetas colgantes, tejidas y de cuidado—. Si está evaluando RFID sobre estos soportes, podemos valorar la viabilidad del muestreo desde el proceso: qué estructuras de etiqueta ocultan bien un inlay, qué encapsulado aguanta el lavado y cómo conviven impresión y chip — primero evalúe, luego invierta."><strong>东莞泰阁包装</strong>的主业是吊牌、织唛与洗水标等传统辅料；如果您在评估 RFID 与这些载体的结合，我们可以从辅料工艺端给出打样可行性判断——哪些吊牌结构适合藏 inlay、哪些织唛封装能扛水洗、印刷与芯片如何互不干扰，先评估再投入。</p>
+
+      <div class="related">
+        <h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+        <ul>
+          <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+          <li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌二维码应用指南：溯源、营销与一物一码" data-en="Hang Tag QR Codes: Traceability, Marketing &amp; Item-Level Coding" data-fr="QR codes sur étiquettes suspendues : traçabilité, marketing et codage unitaire" data-es="Códigos QR en etiquetas colgantes: trazabilidad, marketing y código único">吊牌二维码应用指南：溯源、营销与一物一码</a></li>
+          <li><a href="hang-tag-anti-counterfeiting.html" data-zh="吊牌防伪工艺指南：全息烫印、可变二维码与序列号怎么选" data-en="Hang Tag Anti-Counterfeiting: Holographic Foil, Variable QR Codes &amp; Serial Numbers" data-fr="Anti-contrefaçon des étiquettes suspendues : dorure holographique, QR variables et numéros de série" data-es="Antifalsificación de etiquetas colgantes: láser holográfico, QR variables y numeración">吊牌防伪工艺指南：全息烫印、可变二维码与序列号怎么选</a></li>
+          <li><a href="care-label-wash-durability.html" data-zh="洗水标耐洗性指南：字迹为什么洗几次就模糊" data-en="Care Label Wash Durability: Why Print Fades and How to Test" data-fr="Tenue au lavage des étiquettes d'entretien : pourquoi le texte s'efface" data-es="Resistencia al lavado de las etiquetas de cuidado: por qué se borra el texto">洗水标耐洗性指南：字迹为什么洗几次就模糊</a></li>
+          <li><a href="woven-label-types.html" data-zh="织唛种类详解：缎面、平纹、提花与双层织边怎么选" data-en="Woven Label Types: Satin, Taffeta, Jacquard &amp; Double-Selvedge" data-fr="Types de labels tissés : satin, toile, jacquard et double lisière" data-es="Tipos de etiquetas tejidas: satén, tafetán, jacquard y doble orillo">织唛种类详解：缎面、平纹、提花与双层织边怎么选</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p data-zh="在评估 RFID 与吊牌、织唛、洗水标的结合？把应用场景与用量告诉我们，获取载体可行性建议。" data-en="Evaluating RFID on hang tags, woven labels or care labels? Tell us your use case and volumes — get a carrier feasibility assessment." data-fr="Vous évaluez la RFID sur étiquettes suspendues, labels tissés ou étiquettes d'entretien ? Décrivez votre usage et vos volumes : évaluation de faisabilité du support." data-es="¿Evalúa RFID en etiquetas colgantes, tejidas o de cuidado? Cuéntenos su caso de uso y volúmenes: valoración de viabilidad del soporte.">在评估 RFID 与吊牌、织唛、洗水标的结合？把应用场景与用量告诉我们，获取载体可行性建议。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="咨询智能标签方案 →" data-en="Ask about smart label options →" data-fr="Se renseigner sur les étiquettes intelligentes →" data-es="Consultar sobre etiquetas inteligentes →">咨询智能标签方案 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=60"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>
