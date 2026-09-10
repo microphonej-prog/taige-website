@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印 | TAGE" data-en="Hangtag Barcode Guide: EAN-13, UPC &amp; ITF-14 for Apparel | TAGE" data-fr="Guide des codes-barres sur étiquettes : EAN-13, UPC et ITF-14 | TAGE" data-es="Guía de códigos de barras en etiquetas: EAN-13, UPC e ITF-14 | TAGE">吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印 | TAGE</title>
+<meta name="description" data-zh="吊牌条码怎么印才扫得出来？本文讲清服装吊牌常用的 EAN-13、UPC-A、ITF-14 与 Code 128 条码的适用场景，说明条码尺寸与放大系数、静区留白、颜色搭配与承印材质的关系，附可变数据一物一码管理与打样扫码验收清单。"
+      data-en="Which barcode belongs on an apparel hangtag? Compare EAN-13, UPC-A, ITF-14 and Code 128, plus barcode size, quiet zones, colour contrast and print quality."
+      data-fr="Quel code-barres choisir pour une étiquette de vêtement ? Comparez EAN-13, UPC-A, ITF-14 et Code 128, ainsi que taille, zones de silence, couleurs, support et qualité d’impression."
+      data-es="¿Qué código de barras debe llevar una etiqueta de ropa? Compare EAN-13, UPC-A, ITF-14 y Code 128, además de tamaño, zonas de silencio, colores, soporte y calidad de impresión."
+      content="吊牌条码怎么印才扫得出来？本文讲清服装吊牌常用的 EAN-13、UPC-A、ITF-14 与 Code 128 条码的适用场景，说明条码尺寸与放大系数、静区留白、颜色搭配与承印材质的关系，附可变数据一物一码管理与打样扫码验收清单。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-barcode-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印",
+     "item": "https://taigetag.com/blog/hang-tag-barcode-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印",
+   "url": "https://taigetag.com/blog/hang-tag-barcode-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-barcode-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="吊牌条码指南" data-en="Hangtag Barcode Guide" data-fr="Guide des codes-barres" data-es="Guía de códigos de barras">吊牌条码指南</span></div>
+      <h1 data-zh="服装吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选、怎么印" data-en="Apparel Hangtag Barcode Guide: Choosing &amp; Printing EAN-13, UPC and ITF-14" data-fr="Guide des codes-barres sur étiquettes : choisir et imprimer EAN-13, UPC et ITF-14" data-es="Guía de códigos de barras en etiquetas: elegir e imprimir EAN-13, UPC e ITF-14">服装吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选、怎么印</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月10日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 10, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 10 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 10 de septiembre de 2026">泰阁包装 · 更新于 2026年9月10日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p data-zh="吊牌上的条码，是品牌与零售系统之间的「数据接口」：进仓、上架、收银、盘点都靠它。条码印错最常见的后果不是罚款，而是门店扫不出来、整批货被打回重贴。本文讲清服装吊牌条码的类型怎么选、尺寸与静区规范、颜色和材质怎么配，以及可变数据印刷与验收要点。" data-en="The barcode on a hangtag is the data interface between your brand and the retail system: receiving, shelving, checkout and stocktaking all rely on it. The usual consequence of a badly printed barcode is not a fine but a scanner that will not read it and a batch sent back for relabelling. This guide covers how to choose the right barcode type for apparel hangtags, sizing and quiet-zone rules, colour and material choices, variable-data printing and sample approval." data-fr="Le code-barres d’une étiquette suspendue est l’interface de données entre votre marque et le système de vente : réception, mise en rayon, caisse et inventaire en dépendent. Une impression ratée n’entraîne pas une amende mais un scan qui ne passe pas, et un lot à réétiqueter. Ce guide traite du choix du type de code-barres, des règles de taille et de zones de silence, des couleurs et du support, de l’impression de données variables et de la validation des échantillons." data-es="El código de barras de una etiqueta colgante es la interfaz de datos entre tu marca y el sistema de venta: recepción, colocación en tienda, caja e inventario dependen de él. El resultado habitual de un código mal impreso no es una multa, sino un escáner que no lee y un lote que vuelve para reetiquetar. Esta guía trata la elección del tipo de código, las reglas de tamaño y zonas de silencio, los colores y el soporte, la impresión de datos variables y la aprobación de muestras.">吊牌上的条码，是品牌与零售系统之间的「数据接口」：进仓、上架、收银、盘点都靠它。条码印错最常见的后果不是罚款，而是门店扫不出来、整批货被打回重贴。本文讲清服装吊牌条码的类型怎么选、尺寸与静区规范、颜色和材质怎么配，以及可变数据印刷与验收要点。</p>
+
+<p data-zh="先说结论：条码不是吊牌上的装饰，而是一个有严格尺寸与对比度要求的机器可读区域。设计和印刷时，它必须比 LOGO 和文案拥有更高的优先级——任何「为了好看」而缩小、调色或压在图案上的做法，都可能让整批吊牌在收银台前失效。" data-en="Start with the conclusion: a barcode is not decoration — it is a machine-readable area with strict size and contrast requirements. In design and printing it deserves higher priority than the logo or the copy. Any attempt to shrink it, recolour it or lay it over artwork for the sake of looks can make the whole batch fail at the checkout." data-fr="Commençons par la conclusion : le code-barres n’est pas un ornement, c’est une zone lisible par machine aux exigences strictes de taille et de contraste. En conception comme en impression, il prime sur le logo et les textes. Le réduire, le recolorer ou le poser sur un visuel « pour faire joli » peut faire échouer tout le lot en caisse." data-es="Empecemos por la conclusión: un código de barras no es un adorno, es una zona legible por máquina con estrictos requisitos de tamaño y contraste. En el diseño y la impresión tiene prioridad sobre el logotipo y los textos. Reducirlo, recolorearlo o superponerlo a un gráfico «para que quede bonito» puede hacer fracasar todo el lote en la caja.">先说结论：条码不是吊牌上的装饰，而是一个有严格尺寸与对比度要求的机器可读区域。设计和印刷时，它必须比 LOGO 和文案拥有更高的优先级——任何「为了好看」而缩小、调色或压在图案上的做法，都可能让整批吊牌在收银台前失效。</p>
+
+<h2 data-zh="1. 吊牌上为什么需要条码" data-en="1. Why Hangtags Need Barcodes" data-fr="1. Pourquoi un code-barres sur l’étiquette" data-es="1. Por qué las etiquetas necesitan código de barras">1. 吊牌上为什么需要条码</h2>
+
+<li data-zh="<strong>零售结算：</strong>百货、商超与连锁店的 POS 系统按条码调取价格与库存，扫不出就只能手动输码，直接影响结账效率；" data-en="<strong>Retail checkout:</strong> department stores and chains pull price and stock from the POS system via the barcode; if it will not scan, staff must key it in manually, slowing every transaction;" data-fr="<strong>Passage en caisse :</strong> les grands magasins et chaînes récupèrent prix et stock via le code-barres ; s’il ne scanne pas, la saisie manuelle ralentit chaque passage ;" data-es="<strong>Cobro en tienda:</strong> los grandes almacenes y cadenas obtienen precio y stock del TPV mediante el código; si no escanea, hay que teclearlo y cada venta se ralentiza;"><strong>零售结算：</strong>百货、商超与连锁店的 POS 系统按条码调取价格与库存，扫不出就只能手动输码，直接影响结账效率；</li>
+
+<li data-zh="<strong>仓储与物流：</strong>仓库收货、拣货、装箱、发运节点靠扫码记录，条码不清会导致收发货数据错位；" data-en="<strong>Warehousing and logistics:</strong> receiving, picking, packing and shipping are logged by scanning, so a poor barcode corrupts inbound and outbound data;" data-fr="<strong>Entreposage et logistique :</strong> réception, prélèvement, colisage et expédition sont enregistrés par scan ; un code médiocre fausse les données d’entrée et de sortie ;" data-es="<strong>Almacén y logística:</strong> recepción, picking, empaquetado y expedición se registran escaneando; un código deficiente corrompe los datos de entrada y salida;"><strong>仓储与物流：</strong>仓库收货、拣货、装箱、发运节点靠扫码记录，条码不清会导致收发货数据错位；</li>
+
+<li data-zh="<strong>电商与全渠道：</strong>平台仓、门店发货与退换货都要求商品条码唯一且可追溯；" data-en="<strong>E-commerce and omnichannel:</strong> marketplace warehouses, ship-from-store and returns all need a unique, traceable item barcode;" data-fr="<strong>E-commerce et omnicanal :</strong> entrepôts de plateformes, expédition depuis le magasin et retours exigent un code unique et traçable ;" data-es="<strong>E-commerce y omnicanal:</strong> almacenes de plataformas, envío desde tienda y devoluciones exigen un código único y trazable;"><strong>电商与全渠道：</strong>平台仓、门店发货与退换货都要求商品条码唯一且可追溯；</li>
+
+<li data-zh="<strong>品类管理：</strong>品牌方靠条码统计 SKU 动销，条码格式不统一会让数据无法汇总。" data-en="<strong>Category management:</strong> brands track SKU sell-through by barcode, so inconsistent formats make the data impossible to aggregate." data-fr="<strong>Gestion de catégorie :</strong> la marque suit la rotation des SKU par code-barres ; des formats hétérogènes empêchent toute consolidation." data-es="<strong>Gestión de categoría:</strong> la marca mide la rotación de SKU por código de barras; formatos heterogéneos impiden consolidar los datos."><strong>品类管理：</strong>品牌方靠条码统计 SKU 动销，条码格式不统一会让数据无法汇总。</li>
+
+<h2 data-zh="2. 常见条码类型怎么选" data-en="2. Choosing the Right Barcode Type" data-fr="2. Choisir le bon type de code-barres" data-es="2. Elegir el tipo de código de barras">2. 常见条码类型怎么选</h2>
+
+<table>
+<tr><th data-zh="条码类型" data-en="Barcode type" data-fr="Type de code" data-es="Tipo de código">条码类型</th><th data-zh="典型位数" data-en="Typical digits" data-fr="Chiffres typiques" data-es="Dígitos típicos">典型位数</th><th data-zh="适用场景" data-en="Best for" data-fr="Idéal pour" data-es="Ideal para">适用场景</th></tr>
+<tr><td data-zh="EAN-13" data-en="EAN-13" data-fr="EAN-13" data-es="EAN-13">EAN-13</td><td data-zh="13 位" data-en="13 digits" data-fr="13 chiffres" data-es="13 dígitos">13 位</td><td data-zh="欧盟、亚太等大多数国家零售单品，全球最通用" data-en="Retail items in the EU, Asia-Pacific and most other markets — the global default" data-fr="Articles de détail dans l’UE, en Asie-Pacifique et ailleurs — la référence mondiale" data-es="Artículos de venta en la UE, Asia-Pacífico y la mayoría de mercados: el estándar global">欧盟、亚太等大多数国家零售单品，全球最通用</td></tr>
+<tr><td data-zh="UPC-A" data-en="UPC-A" data-fr="UPC-A" data-es="UPC-A">UPC-A</td><td data-zh="12 位" data-en="12 digits" data-fr="12 chiffres" data-es="12 dígitos">12 位</td><td data-zh="美国、加拿大零售，进入北美商超通常必需" data-en="US and Canadian retail; usually mandatory for North American stores" data-fr="Vente aux États-Unis et au Canada ; souvent obligatoire en Amérique du Nord" data-es="Venta en EE. UU. y Canadá; normalmente obligatorio en Norteamérica">美国、加拿大零售，进入北美商超通常必需</td></tr>
+<tr><td data-zh="ITF-14" data-en="ITF-14" data-fr="ITF-14" data-es="ITF-14">ITF-14</td><td data-zh="14 位" data-en="14 digits" data-fr="14 chiffres" data-es="14 dígitos">14 位</td><td data-zh="外箱、整箱运输与仓储，常印在瓦楞纸箱上，也可做吊牌附码" data-en="Cartons and case-level logistics; often printed on corrugated boxes, usable as a secondary code on hangtags" data-fr="Cartons et logistique en colis ; souvent sur ondulé, utilisable en code secondaire sur l’étiquette" data-es="Cajas y logística de bulto; a menudo en cartón ondulado, utilizable como código secundario en la etiqueta">外箱、整箱运输与仓储，常印在瓦楞纸箱上，也可做吊牌附码</td></tr>
+<tr><td data-zh="Code 128" data-en="Code 128" data-fr="Code 128" data-es="Code 128">Code 128</td><td data-zh="可变长度" data-en="Variable" data-fr="Variable" data-es="Variable">可变长度</td><td data-zh="内部编码、批次与管理码，密度高、可含字母数字" data-en="Internal codes, batches and management codes; dense and alphanumeric-capable" data-fr="Codes internes, lots et gestion ; dense et alphanumérique" data-es="Códigos internos, lotes y gestión; denso y alfanumérico">内部编码、批次与管理码，密度高、可含字母数字</td></tr>
+</table>
+
+<p data-zh="选择原则很简单：面向消费者零售的吊牌，按目标市场用 EAN-13 或 UPC-A；内部或整箱管理的附加码，用 Code 128 或 ITF-14。一个吊牌上同时出现两种码很常见，但必须分区清晰、互不干扰。" data-en="The rule is simple: for consumer-facing hangtags, use EAN-13 or UPC-A according to the target market; for internal or case-level codes, use Code 128 or ITF-14. Two codes on one hangtag is common, but each needs its own clear, non-interfering zone." data-fr="La règle est simple : pour l’étiquette destinée au consommateur, EAN-13 ou UPC-A selon le marché ; pour les codes internes ou par carton, Code 128 ou ITF-14. Deux codes sur une même étiquette sont fréquents, mais chacun doit avoir sa zone claire et sans interférence." data-es="La regla es simple: para la etiqueta orientada al consumidor, EAN-13 o UPC-A según el mercado; para códigos internos o por caja, Code 128 o ITF-14. Es habitual ver dos códigos en la misma etiqueta, pero cada uno necesita su zona clara y sin interferencias.">选择原则很简单：面向消费者零售的吊牌，按目标市场用 EAN-13 或 UPC-A；内部或整箱管理的附加码，用 Code 128 或 ITF-14。一个吊牌上同时出现两种码很常见，但必须分区清晰、互不干扰。</p>
+
+<h2 data-zh="3. 尺寸、静区与印刷质量" data-en="3. Size, Quiet Zones and Print Quality" data-fr="3. Taille, zones de silence et qualité d’impression" data-es="3. Tamaño, zonas de silencio y calidad de impresión">3. 尺寸、静区与印刷质量</h2>
+
+<li data-zh="<strong>放大系数：</strong>零售条码通常按标准尺寸的 80%–200% 放大，低于 80% 会明显增加扫读失败率；吊牌空间紧张时优先改布局，而不是压小条码；" data-en="<strong>Magnification:</strong> retail codes are usually scaled between 80% and 200% of nominal size; below 80% read failures rise sharply, so when space is tight, change the layout instead of shrinking the code;" data-fr="<strong>Agrandissement :</strong> les codes de détail se déclinent de 80 % à 200 % de la taille nominale ; sous 80 %, les échecs de lecture augmentent nettement : resserrez la mise en page plutôt que le code ;" data-es="<strong>Ampliación:</strong> los códigos de venta se escalan entre el 80 % y el 200 % del tamaño nominal; por debajo del 80 % los fallos de lectura se disparan, así que ajusta la maquetación en vez de reducir el código;"><strong>放大系数：</strong>零售条码通常按标准尺寸的 80%–200% 放大，低于 80% 会明显增加扫读失败率；吊牌空间紧张时优先改布局，而不是压小条码；</li>
+
+<li data-zh="<strong>静区留白：</strong>条码左右两端必须保留空白区（一般不小于 10 倍窄条宽度），静区内不得有文字、边框、花纹或吊牌边缘；" data-en="<strong>Quiet zones:</strong> leave blank space at both ends of the symbol — typically at least 10 narrow-module widths — with no text, border, pattern or trimmed edge inside it;" data-fr="<strong>Zones de silence :</strong> ménagez un espace vide aux deux extrémités du symbole — au moins 10 modules étroits — sans texte, cadre, motif ni bord de coupe ;" data-es="<strong>Zonas de silencio:</strong> deja espacio en blanco a ambos extremos del símbolo —al menos 10 módulos estrechos— sin texto, borde, trama ni canto cortado;"><strong>静区留白：</strong>条码左右两端必须保留空白区（一般不小于 10 倍窄条宽度），静区内不得有文字、边框、花纹或吊牌边缘；</li>
+
+<li data-zh="<strong>条高：</strong>条码高度不足会被收银台手持枪「扫半边」，高点位置建议保留足够条高，宁可加高不可压扁；" data-en="<strong>Bar height:</strong> a code that is too short gets only partly scanned by a handheld gun; keep generous height at the till and never squash the symbol;" data-fr="<strong>Hauteur des barres :</strong> un code trop bas n’est lu qu’à moitié par une douchette ; gardez une hauteur confortable et n’écrasez jamais le symbole ;" data-es="<strong>Altura de barras:</strong> un código demasiado bajo se lee solo a medias con un lector de mano; deja altura generosa y nunca aplastes el símbolo;"><strong>条高：</strong>条码高度不足会被收银台手持枪「扫半边」，高点位置建议保留足够条高，宁可加高不可压扁；</li>
+
+<li data-zh="<strong>印刷精度：</strong>条与空的边缘必须锐利、无虚边和糊版，墨色均匀；胶印、数码印刷与热转印都能做，关键在分辨率与压力控制。" data-en="<strong>Print precision:</strong> bar and space edges must be sharp with no feathering or fill-in, and ink density even; offset, digital and thermal transfer all work — resolution and pressure control are what matter." data-fr="<strong>Précision d’impression :</strong> les bords des barres et des espaces doivent être nets, sans bavure ni empâtement, avec une encre régulière ; offset, numérique et transfert thermique conviennent, tout est question de résolution et de pression." data-es="<strong>Precisión de impresión:</strong> los bordes de barras y espacios deben ser nítidos, sin rebabas ni empaste, y la tinta uniforme; offset, digital y transferencia térmica sirven: lo decisivo es la resolución y el control de presión."><strong>印刷精度：</strong>条与空的边缘必须锐利、无虚边和糊版，墨色均匀；胶印、数码印刷与热转印都能做，关键在分辨率与压力控制。</li>
+
+<h2 data-zh="4. 颜色与承印材质怎么配" data-en="4. Colour and Material Choices" data-fr="4. Couleurs et support" data-es="4. Colores y soporte">4. 颜色与承印材质怎么配</h2>
+
+<p data-zh="条码扫描依赖红外或红光对深浅的反射差，因此颜色搭配不是审美问题，而是能否读到的问题。经验规则是「深条浅底」：黑条配白底最稳；蓝色、绿色、深棕等通常可用；<strong>红色、橙色、金色系条码在红光扫描下对比度极低，务必避免</strong>。反光覆膜会在扫描时形成高光，哑膜或未覆膜更利于扫读。" data-en="Barcode scanning relies on the difference in reflectance between dark and light under red or infrared light, so colour is a readability question, not an aesthetic one. The rule is dark bars on a light background: black on white is safest, while blue, green and dark brown usually work. <strong>Red, orange and gold bars have very low contrast under red light — avoid them.</strong> Glossy lamination creates glare at the scanner; matte or uncoated surfaces read better." data-fr="La lecture repose sur l’écart de réflexion entre sombre et clair sous lumière rouge ou infrarouge : la couleur est donc une question de lisibilité, pas d’esthétique. La règle : barres foncées sur fond clair — noir sur blanc est le plus sûr, bleu, vert et brun foncé passent généralement. <strong>Les barres rouges, orange ou dorées ont un contraste très faible en lumière rouge : à éviter.</strong> Un pelliculage brillant crée des reflets ; mat ou non pelliculé se lit mieux." data-es="La lectura se basa en la diferencia de reflexión entre oscuro y claro bajo luz roja o infrarroja, así que el color es una cuestión de legibilidad, no de estética. La regla es barras oscuras sobre fondo claro: negro sobre blanco es lo más seguro, y azul, verde y marrón oscuro suelen funcionar. <strong>Las barras rojas, naranjas o doradas tienen un contraste muy bajo bajo luz roja: evítalas.</strong> El laminado brillante genera reflejos; el mate o sin laminar se lee mejor.">条码扫描依赖红外或红光对深浅的反射差，因此颜色搭配不是审美问题，而是能否读到的问题。经验规则是「深条浅底」：黑条配白底最稳；蓝色、绿色、深棕等通常可用；<strong>红色、橙色、金色系条码在红光扫描下对比度极低，务必避免</strong>。反光覆膜会在扫描时形成高光，哑膜或未覆膜更利于扫读。</p>
+
+<p data-zh="材质方面，铜版纸、白卡纸是最稳妥的承印面；牛皮纸底色偏深、纹理明显时，建议先印一块白底再印条码；PVC 或防水吊牌要选择与之匹配的油墨，避免条码被刮花或渗色。若吊牌要经过洗水、干洗或长期日晒，条码区域的耐摩擦与耐光性需在打样阶段一并验证。" data-en="On material, art paper and white card are the safest printable surfaces; on kraft, whose base is darker and textured, print a white patch under the code first. For PVC or waterproof tags, choose a matching ink so the code is not scratched or bleeds. If the tag will be washed, dry-cleaned or left in the sun, verify rub and light resistance of the barcode area at sample stage." data-fr="Côté support, le papier couché et le carton blanc sont les plus sûrs ; sur du kraft, plus foncé et texturé, imprimez d’abord un aplat blanc sous le code. Pour les étiquettes PVC ou imperméables, choisissez une encre adaptée pour éviter rayures et bavures. Si l’étiquette est lavée, nettoyée à sec ou exposée au soleil, validez la résistance au frottement et à la lumière dès l’échantillon." data-es="En cuanto al soporte, el papel estucado y el cartón blanco son las superficies más seguras; en kraft, más oscuro y texturizado, imprime primero un fondo blanco bajo el código. Para etiquetas de PVC o impermeables, elige una tinta compatible para evitar rayaduras y sangrado. Si la etiqueta se lava, se limpia en seco o se expone al sol, valida la resistencia al roce y a la luz ya en la muestra.">材质方面，铜版纸、白卡纸是最稳妥的承印面；牛皮纸底色偏深、纹理明显时，建议先印一块白底再印条码；PVC 或防水吊牌要选择与之匹配的油墨，避免条码被刮花或渗色。若吊牌要经过洗水、干洗或长期日晒，条码区域的耐摩擦与耐光性需在打样阶段一并验证。</p>
+
+<h2 data-zh="5. 可变数据：一物一码怎么做" data-en="5. Variable Data: One Code Per Item" data-fr="5. Données variables : un code par article" data-es="5. Datos variables: un código por artículo">5. 可变数据：一物一码怎么做</h2>
+
+<p data-zh="当品牌需要唯一码（防伪、序列号、批次追溯）时，条码就变成可变数据印刷：每张吊牌的编码都不同，通常用数码印刷或喷码完成。要点有三：一是数据源必须是可核对的表格或数据库，印刷前逐条校验位数与校验位；二是条码与吊牌上的序列号、二维码信息保持一致，避免「码对人不对」；三是大批量可变数据处理需要提前与工厂确认排版方式（拼版数量、跳号规则、废品补印），否则错码会在整批中成片出现。" data-en="When a brand needs unique codes — anti-counterfeiting, serial numbers, batch traceability — the barcode becomes variable-data printing: every hangtag carries a different code, usually produced by digital printing or inkjet. Three things matter. First, the data source must be a verifiable spreadsheet or database, checked digit by digit, including check digits, before printing. Second, the barcode must match the serial number and QR content on the same tag. Third, for large runs confirm the imposition, numbering rules and waste replacement with the factory in advance, or errors will appear across whole sheets." data-fr="Quand la marque exige des codes uniques — anti-contrefaçon, numéros de série, traçabilité des lots — le code-barres devient de l’impression de données variables : chaque étiquette porte un code différent, généralement en numérique ou jet d’encre. Trois points comptent. D’abord, la source de données doit être un tableau ou une base vérifiable, contrôlée chiffre par chiffre, clé de contrôle comprise. Ensuite, le code doit correspondre au numéro de série et au contenu du QR de la même étiquette. Enfin, pour les gros volumes, validez avec l’usine l’imposition, les règles de numérotation et le remplacement des rebuts, sinon les erreurs se répètent sur des planches entières." data-es="Cuando la marca necesita códigos únicos —antifalsificación, números de serie, trazabilidad de lotes— el código pasa a ser impresión de datos variables: cada etiqueta lleva un código distinto, normalmente en digital o inyección. Tres puntos importan. Primero, la fuente de datos debe ser una tabla o base verificable, revisada dígito a dígito, incluido el dígito de control. Segundo, el código debe coincidir con el número de serie y el contenido del QR de la misma etiqueta. Tercero, en grandes volúmenes confirma con la fábrica la imposición, las reglas de numeración y la reposición de mermas, o los errores aparecerán en planchas enteras.">当品牌需要唯一码（防伪、序列号、批次追溯）时，条码就变成可变数据印刷：每张吊牌的编码都不同，通常用数码印刷或喷码完成。要点有三：一是数据源必须是可核对的表格或数据库，印刷前逐条校验位数与校验位；二是条码与吊牌上的序列号、二维码信息保持一致，避免「码对人不对」；三是大批量可变数据处理需要提前与工厂确认排版方式（拼版数量、跳号规则、废品补印），否则错码会在整批中成片出现。</p>
+
+<h2 data-zh="6. 打样与验收清单" data-en="6. Sampling and Approval Checklist" data-fr="6. Checklist d’échantillonnage et de réception" data-es="6. Lista de control de muestreo y recepción">6. 打样与验收清单</h2>
+
+<li data-zh="向设计或客户索取<strong>矢量条码文件</strong>（AI/EPS/PDF），不要用截图或位图缩小使用；" data-en="Ask design or the buyer for a <strong>vector barcode file</strong> (AI/EPS/PDF) — never scale down a screenshot or bitmap;" data-fr="Demandez un <strong>fichier vectoriel</strong> (AI/EPS/PDF) — n’utilisez jamais une capture ou un bitmap réduit ;" data-es="Pide un <strong>archivo vectorial</strong> (AI/EPS/PDF): nunca reduzcas una captura o un mapa de bits;">向设计或客户索取<strong>矢量条码文件</strong>（AI/EPS/PDF），不要用截图或位图缩小使用；</li>
+
+<li data-zh="样品到手后<strong>用真实收银枪或扫码 App 实测</strong>，在不同角度与光照下各扫若干次；" data-en="On receiving the sample, <strong>scan it with a real POS gun or scanner app</strong> several times, at different angles and light levels;" data-fr="À réception, <strong>scannez l’échantillon avec une vraie douchette ou une appli</strong> plusieurs fois, sous différents angles et éclairages ;" data-es="Al recibir la muestra, <strong>escanéala con un lector real o una app</strong> varias veces, en distintos ángulos e iluminaciones;">样品到手后<strong>用真实收银枪或扫码 App 实测</strong>，在不同角度与光照下各扫若干次；</li>
+
+<li data-zh="核对条码数值与吊牌印刷文字、系统后台是否三处一致；" data-en="Check that the barcode value, the printed text and the back-end system all match;" data-fr="Vérifiez que la valeur du code, le texte imprimé et le système de gestion concordent ;" data-es="Comprueba que el valor del código, el texto impreso y el sistema de gestión coincidan;">核对条码数值与吊牌印刷文字、系统后台是否三处一致；</li>
+
+<li data-zh="确认放大系数、静区、条高与颜色符合目标市场规范，并保留样品与检测记录备查。" data-en="Confirm magnification, quiet zones, bar height and colour meet target-market rules, and keep the approved sample and test record on file." data-fr="Confirmez agrandissement, zones de silence, hauteur et couleur selon la norme du marché, et conservez l’échantillon validé et le relevé de test." data-es="Confirma ampliación, zonas de silencio, altura y color según la norma del mercado, y guarda la muestra aprobada y el registro de pruebas.">确认放大系数、静区、条高与颜色符合目标市场规范，并保留样品与检测记录备查。</li>
+
+<div class="callout" data-zh="<strong>💡 泰阁提示：</strong>吊牌条码属于「一次印错、整批报废」的细节。把条码源文件、编码规则和摆放位置在打样阶段一次性确认，远比大货返工便宜。我们支持条码与二维码、烫金、序列号同版印刷，打样 3–7 天出样。" data-en="<strong>💡 TAGE tip:</strong> a barcode is a detail where one mistake scraps a whole batch. Locking down the source file, numbering rules and placement at sample stage is far cheaper than reworking bulk. We print barcodes alongside QR codes, foil and serial numbers in one pass, with samples in 3–7 days." data-fr="<strong>💡 Conseil TAGE :</strong> le code-barres est un détail où une erreur fait rebuter tout le lot. Figer le fichier source, les règles de numérotation et le placement dès l’échantillon coûte bien moins cher qu’une reprise en série. Nous imprimons codes-barres, QR, dorure et numéros de série en une passe, échantillons en 3 à 7 jours." data-es="<strong>💡 Consejo TAGE:</strong> el código de barras es un detalle que, mal impreso, arruina todo el lote. Fijar el archivo fuente, las reglas de numeración y la posición en la muestra es mucho más barato que retrabajar la serie. Imprimimos códigos de barras junto con QR, dorado y números de serie en una pasada, con muestras en 3–7 días."><strong>💡 泰阁提示：</strong>吊牌条码属于「一次印错、整批报废」的细节。把条码源文件、编码规则和摆放位置在打样阶段一次性确认，远比大货返工便宜。我们支持条码与二维码、烫金、序列号同版印刷，打样 3–7 天出样。</div>
+
+<div class="related">
+<h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+<ul>
+<li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+<li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌二维码应用指南：溯源与营销" data-en="Hangtag QR Code Guide: Traceability &amp; Marketing" data-fr="Guide du QR code sur étiquettes : traçabilité et marketing" data-es="Guía del código QR en etiquetas: trazabilidad y marketing">吊牌二维码应用指南：溯源与营销</a></li>
+<li><a href="hang-tag-artwork-guide.html" data-zh="吊牌印刷文件制作指南：出血、色彩与检查清单" data-en="Hangtag Artwork Guide: Bleed, Colour &amp; Prepress Checklist" data-fr="Guide des fichiers d’impression : fonds perdus, couleurs et checklist" data-es="Guía de archivos de impresión: sangrado, color y checklist">吊牌印刷文件制作指南：出血、色彩与检查清单</a></li>
+<li><a href="poly-bag-marking-guide.html" data-zh="包装袋标识印刷指南：法规信息与批号" data-en="Poly Bag Marking Guide: Legal Information &amp; Batch Codes" data-fr="Guide du marquage des sacs : mentions légales et lots" data-es="Guía de marcado de bolsas: información legal y lotes">包装袋标识印刷指南：法规信息与批号</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p data-zh="需要印条码的吊牌？把条码源文件与编码规则发来，我们按规范排好版并出样。" data-en="Need hangtags with barcodes? Send the source file and numbering rules — we lay them out to spec and sample them." data-fr="Besoin d’étiquettes avec code-barres ? Envoyez le fichier source et les règles : nous mettons en page selon la norme et échantillonnons." data-es="¿Etiquetas con código de barras? Envía el archivo fuente y las reglas de numeración: maquetamos según norma y muestreamos.">需要印条码的吊牌？把条码源文件与编码规则发来，我们按规范排好版并出样。</p>
+<a class="cta-btn" href="../contact.html" data-zh="咨询吊牌条码报价 →" data-en="Request a hangtag barcode quote →" data-fr="Demander un devis étiquettes code-barres →" data-es="Solicitar presupuesto de etiquetas con código →">咨询吊牌条码报价 →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=62"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>
