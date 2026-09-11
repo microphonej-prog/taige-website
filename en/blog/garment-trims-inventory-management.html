@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garment Trims Inventory &amp; Replenishment Guide: Safety Stock, Reorder Points &amp; Dead Stock | TAGE</title>
+<meta name="description" content="Poor trims inventory management causes both line stoppages and dead stock. Learn how to build a trims BOM, calculate safety stock and reorder points, control batches and shade variation, and plan with suppliers.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.related{margin-top:36px}
+.related ul{padding-left:22px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+     "item": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+   "url": "https://taigetag.com/blog/garment-trims-inventory-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../products.html">Products</a>
+      <a href="../about.html">About Us</a>
+      <a href="index.html">Trims FAQ</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag active" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Home</a> / <a href="index.html">Trims FAQ</a> / <span>Trims Inventory</span></div>
+      <h1>Garment Trims Inventory and Replenishment Guide: Safety Stock, Reorder Points and Dead Stock</h1>
+      <p>By TAGE Packaging  ·  Updated September 11, 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>Trims inventory is where brands and factories most often save in the wrong place: a woven label or hangtag costs little, so it is treated as a minor item — until one missing label stops a whole order from shipping. Starting from the trims BOM, this guide explains how to calculate safety stock and reorder points, control batches and shade variation, work with suppliers through frame orders and rolling forecasts, and handle dead stock and leftovers.</p>
+
+<p>State the principle first: the goal of trims inventory is not more is safer, but the right quantity, in the right batch, at the right time. A line stoppage costs far more than the trims themselves, while overstocking turns into dead stock and shade risk as soon as styles or seasons change.</p>
+
+<h2>1. Why Trims Are Small Items With Big Risk</h2>
+
+<p>A garment carries several trims: hangtag, woven label, care label, packaging bag, and possibly a tag pin, sticker or brochure. If any one is missing, the garment cannot be finished. Trims are low in unit cost, high in quantity and often product-specific — branded, colour-matched or custom-shaped items can rarely be substituted at short notice.</p>
+
+<ul>
+<li><strong>Stoppage is expensive:</strong> idle lines, rescheduled deliveries and air-freighting replacements can cost dozens of times the trims&#x27; value;</li>
+<li><strong>Lead times are real:</strong> hangtags and woven labels need sampling and production, measured in weeks — they cannot be conjured tomorrow;</li>
+<li><strong>Batch variation matters:</strong> paper, yarn and ink differ between runs, and mixing batches breaks consistency within one style;</li>
+<li><strong>Low-value but high obsolescence:</strong> trims tie up little cash, so they are ignored — then written off entirely when the season ends.</li>
+</ul>
+
+<h2>2. Build the Baseline From a Trims BOM</h2>
+
+<p>Without a BOM there is no manageable inventory. Every style needs a trims list stating item, spec, colour, usage per garment, supplier, MOQ and standard lead time. Once that exists, replenishment moves from gut feel to data.</p>
+
+<ul>
+<li><strong>Separate standard from product-specific trims:</strong> bags and generic labels can be stocked by shared colour, while logoed, die-cut or specially foiled items must be held by style;</li>
+<li><strong>Record usage per garment and waste rate:</strong> e.g. one main label, one care label and one hangtag each, plus an allowance for spoilage;</li>
+<li><strong>Log standard lead time and MOQ:</strong> these two numbers drive the reorder point and underpin any frame-order negotiation;</li>
+<li><strong>Align versions with the supplier:</strong> archive the approved sample, shade number and process parameters so repeats reference them directly, avoiding re-sampling and drift.</li>
+</ul>
+
+<h2>3. How to Calculate Safety Stock and Reorder Points</h2>
+
+<p>Two formulas do most of the work. Safety stock equals maximum daily consumption times maximum lead time, minus average daily consumption times average lead time. The reorder point equals average daily consumption times average lead time, plus safety stock. The aim is not precision but accounting for both lead-time and demand variability so replenishment happens early enough.</p>
+
+<table>
+<tr><th>Input</th><th>Where it comes from</th><th>Common mistake</th></tr>
+<tr><td>Daily consumption</td><td>Production plan × usage per garment</td><td>Using only the historical average, ignoring peak season and new-style ramp-up</td></tr>
+<tr><td>Procurement lead time</td><td>Supplier committed lead time plus production plus transit</td><td>Using the best case (say 10 days) instead of the normal lead time</td></tr>
+<tr><td>Lead-time variability</td><td>Actual receiving records over the past six months</td><td>Never tracking actual arrival dates, relying on impressions</td></tr>
+<tr><td>Service factor</td><td>Set by acceptable stockout risk; be more conservative on critical trims</td><td>One standard for everything, wasting cash and still risking stockouts</td></tr>
+</table>
+
+<div class="callout"><strong>💡 Tip:</strong> the formulas are only a starting point. Run them for three months and calibrate with real arrival dates and real consumption. The value of trims inventory is reliable supply, not a pretty stock figure.</div>
+
+<h2>4. Batches, Shade Variation and Warehousing</h2>
+
+<ul>
+<li><strong>Batch and shade coding:</strong> log batch number, production date and shade on receipt, and keep one style to a single trims batch where possible;</li>
+<li><strong>First in, first out:</strong> consume older batches first so stock at the back does not discolour, absorb moisture or go tacky;</li>
+<li><strong>Moisture and light control:</strong> paper trims hate damp and direct sun, while woven and care labels deform under long compression; store off the floor and out of light;</li>
+<li><strong>Never mix batches silently:</strong> if an order needs a second batch to cover a shortage, tell the buyer in advance and confirm the shade is acceptable instead of mixing on the quiet.</li>
+</ul>
+
+<h2>5. Working With Suppliers: Frame Orders and Rolling Forecasts</h2>
+
+<p>How stable your trims lead times are depends largely on whether the supplier knows your volumes in advance. Instead of placing one-off orders each time, share volume information earlier and trade planning for shorter lead times.</p>
+
+<ul>
+<li><strong>Frame orders:</strong> lock annual or quarterly volume and price, then call off in batches — securing capacity and materials while spreading cash out;</li>
+<li><strong>Rolling forecast:</strong> share a three-month volume forecast monthly; even without a firm order it lets the supplier pre-position yarn and paper;</li>
+<li><strong>Shared safety stock:</strong> for fast-moving standard trims, agree that the supplier holds some finished or semi-finished stock to shorten your replenishment cycle;</li>
+<li><strong>Keep a lead-time log:</strong> record promised versus actual dates for every order to feed both negotiations and safety-stock calibration.</li>
+</ul>
+
+<h2>6. Dead Stock and Leftover Quantities</h2>
+
+<ul>
+<li><strong>Where it comes from:</strong> mostly over-buying to hit MOQ, or a style cancelled or revised, leaving old stock obsolete;</li>
+<li><strong>How to control it:</strong> standardise colours and specs where possible, order to real demand rather than to MOQ, and set clear cancellation cut-offs for long-lead items;</li>
+<li><strong>Leftover management:</strong> printing an allowance for spoilage in bulk is normal, but log the surplus into stock and reuse it on the next repeat instead of discarding it;</li>
+<li><strong>Review regularly:</strong> audit dead stock each quarter, re-purpose what can be adapted or standardised, and dispose of the rest so it stops occupying space and cash.</li>
+</ul>
+
+<h2>7. Stocktake and Receiving Checklist</h2>
+
+<ul>
+<li>On receipt, check <strong>quantity, batch and shade</strong> against the order and spot-check appearance and size;</li>
+<li>Shorten the count cycle for <strong>high-value or long-lead trims</strong> so records match reality;</li>
+<li>Set <strong>replenishment alerts</strong> that trigger when stock hits the reorder point, rather than relying on memory;</li>
+<li>Keep the <strong>approved sample and shade card</strong> for every trim as the single reference for repeats and claims.</li>
+</ul>
+
+<div class="callout"><strong>💡 TAGE tip:</strong> stable trims supply comes from letting the supplier see your rhythm. For long-term partners we hold semi-finished stock of common woven and care labels; combined with frame orders and rolling forecasts, this brings repeat lead times toward the front of the 10–25 day range. Samples in 3–7 days, flexible MOQs.</div>
+
+<div class="related">
+<h2>Related Articles</h2>
+<ul>
+<li><a href="index.html">Trims FAQ: all articles</a></li>
+<li><a href="garment-trims-order-guide.html">Garment Trims Order Guide: From Enquiry to Delivery</a></li>
+<li><a href="garment-trims-lead-time-guide.html">Garment Trims Lead Time Guide: Sampling, Production and Transit</a></li>
+<li><a href="clothing-brand-first-trims-order.html">First Trims Order Checklist for Clothing Brands</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>Want steadier trims supply? Share your style volumes and replenishment rhythm — we can plan frame orders and safety stock together.</p>
+<a class="cta-btn" href="../contact.html">Discuss a long-term trims supply plan →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Packaging</h4>
+        <p>Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Hang Tags</a></li>
+          <li><a href="../products.html#wovenlabels">Woven Labels</a></li>
+          <li><a href="../products.html#carelabels">Care Labels</a></li>
+          <li><a href="../products.html#bags">Packaging Bags</a></li>
+          <li><a href="../products.html#paperbags">Eco Paper Bags</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen Town, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=63"></script>
+<script src="../../js/assist.js?v=46"></script>
+</body>
+</html>

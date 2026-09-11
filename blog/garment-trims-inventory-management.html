@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制 | TAGE" data-en="Garment Trims Inventory &amp; Replenishment Guide: Safety Stock, Reorder Points &amp; Dead Stock | TAGE" data-fr="Guide de gestion des stocks d'accessoires : stock de sécurité, seuil de réapprovisionnement et invendus | TAGE" data-es="Guía de inventario y reposición de accesorios: stock de seguridad, punto de pedido y stock muerto | TAGE">服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制 | TAGE</title>
+<meta name="description" data-zh="服装辅料库存管理不当，会同时带来断料停线与呆滞料积压。本文从辅料清单（BOM）出发，讲清安全库存与补货点怎么算、批次与色差如何管控、框架订单与滚动预测怎么和供应商协同，并给出盘点与尾数处理要点。"
+      data-en="Poor trims inventory management causes both line stoppages and dead stock. Learn how to build a trims BOM, calculate safety stock and reorder points, control batches and shade variation, and plan with suppliers."
+      data-fr="Une mauvaise gestion des stocks d'accessoires cause arrêts de ligne et invendus. BOM, stock de sécurité, seuil de réapprovisionnement, lots et nuances, planification fournisseur."
+      data-es="Una mala gestión del inventario de accesorios causa paradas de línea y stock muerto. BOM, stock de seguridad, punto de pedido, lotes y tonalidades, planificación con proveedor."
+      content="服装辅料库存管理不当，会同时带来断料停线与呆滞料积压。本文从辅料清单（BOM）出发，讲清安全库存与补货点怎么算、批次与色差如何管控、框架订单与滚动预测怎么和供应商协同，并给出盘点与尾数处理要点。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.related{margin-top:36px}
+.related ul{padding-left:22px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+     "item": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+   "url": "https://taigetag.com/blog/garment-trims-inventory-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="辅料库存与补货" data-en="Trims Inventory" data-fr="Stocks d'accessoires" data-es="Inventario de accesorios">辅料库存与补货</span></div>
+      <h1 data-zh="服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制" data-en="Garment Trims Inventory and Replenishment Guide: Safety Stock, Reorder Points and Dead Stock" data-fr="Guide de gestion des stocks d'accessoires : stock de sécurité, seuil de réapprovisionnement et invendus" data-es="Guía de inventario y reposición de accesorios: stock de seguridad, punto de pedido y stock muerto">服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月11日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 11, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 11 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 11 de septiembre de 2026">泰阁包装 · 更新于 2026年9月11日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p data-zh="服装辅料库存管理，是品牌与工厂最容易「省错地方」的环节：辅料单价低、占用资金少，于是被当成次要事项；可一旦缺一枚织唛、少一张吊牌，整批成衣就出不了货。本文从辅料清单（BOM）讲起，说明安全库存与补货点怎么算、批次与色差怎么管、怎么与供应商用框架订单和滚动预测协同，并给出呆滞料与尾数处理办法。" data-en="Trims inventory is where brands and factories most often save in the wrong place: a woven label or hangtag costs little, so it is treated as a minor item — until one missing label stops a whole order from shipping. Starting from the trims BOM, this guide explains how to calculate safety stock and reorder points, control batches and shade variation, work with suppliers through frame orders and rolling forecasts, and handle dead stock and leftovers." data-fr="La gestion des stocks d'accessoires est l'endroit où l'on économise le plus souvent au mauvais endroit : un label ou une étiquette coûte peu, on le traite comme un détail — jusqu'à ce qu'un seul manquant bloque une commande entière. À partir de la nomenclature (BOM), ce guide explique le calcul du stock de sécurité et du seuil de réapprovisionnement, la gestion des lots et des nuances, la collaboration fournisseur par commandes-cadres et prévisions glissantes, ainsi que le traitement des invendus et reliquats." data-es="El inventario de accesorios es donde marcas y fábricas suelen ahorrar en el sitio equivocado: una etiqueta tejida o colgante cuesta poco y se trata como un detalle, hasta que una sola pieza que falta bloquea todo un pedido. Partiendo del BOM de accesorios, esta guía explica cómo calcular el stock de seguridad y el punto de pedido, controlar lotes y tonalidades, trabajar con proveedores mediante pedidos marco y previsiones móviles, y gestionar stock muerto y sobrantes.">服装辅料库存管理，是品牌与工厂最容易「省错地方」的环节：辅料单价低、占用资金少，于是被当成次要事项；可一旦缺一枚织唛、少一张吊牌，整批成衣就出不了货。本文从辅料清单（BOM）讲起，说明安全库存与补货点怎么算、批次与色差怎么管、怎么与供应商用框架订单和滚动预测协同，并给出呆滞料与尾数处理办法。</p>
+
+<p data-zh="先把原则说清：辅料库存的目标不是「越多越安全」，而是「在正确的时间、以正确的批次、持有正确的数量」。断料停线的损失，通常远大于辅料本身的价值；而囤积过量又会在换款、换季时变成呆滞料与色差隐患。" data-en="State the principle first: the goal of trims inventory is not more is safer, but the right quantity, in the right batch, at the right time. A line stoppage costs far more than the trims themselves, while overstocking turns into dead stock and shade risk as soon as styles or seasons change." data-fr="Posons le principe : l'objectif n'est pas d'en avoir plus pour être tranquille, mais la bonne quantité, dans le bon lot, au bon moment. Un arrêt de ligne coûte bien plus cher que l'accessoire lui-même, tandis qu'un surstock devient invendu et risque de nuance au changement de modèle ou de saison." data-es="Sentemos el principio: el objetivo no es tener más para ir sobre seguro, sino la cantidad correcta, en el lote correcto y en el momento correcto. Una parada de línea cuesta mucho más que el accesorio, mientras que el exceso se convierte en stock muerto y riesgo de tonalidad al cambiar de modelo o temporada.">先把原则说清：辅料库存的目标不是「越多越安全」，而是「在正确的时间、以正确的批次、持有正确的数量」。断料停线的损失，通常远大于辅料本身的价值；而囤积过量又会在换款、换季时变成呆滞料与色差隐患。</p>
+
+<h2 data-zh="1. 为什么辅料库存是「小件大风险」" data-en="1. Why Trims Are Small Items With Big Risk" data-fr="1. Pourquoi les accessoires sont un petit poste à gros risque" data-es="1. Por qué los accesorios son pequeños pero de gran riesgo">1. 为什么辅料库存是「小件大风险」</h2>
+
+<p data-zh="一件成衣由多种辅料构成：吊牌、织唛、洗水标、包装袋，可能还有吊粒、贴纸、宣传卡。任何一项缺货，整件衣服都无法完成包装上线。辅料的特点是「单价低、数量多、专用性强」——尤其带品牌 LOGO、指定色号或专属版型的辅料，几乎无法临时替代。" data-en="A garment carries several trims: hangtag, woven label, care label, packaging bag, and possibly a tag pin, sticker or brochure. If any one is missing, the garment cannot be finished. Trims are low in unit cost, high in quantity and often product-specific — branded, colour-matched or custom-shaped items can rarely be substituted at short notice." data-fr="Un vêtement comporte plusieurs accessoires : étiquette suspendue, label tissé, étiquette d'entretien, sac d'emballage, voire attache, autocollant ou carte. Si un seul manque, le vêtement ne se termine pas. Les accessoires ont un coût unitaire faible, des volumes élevés et une forte spécificité : un article logoté, à nuance imposée ou de forme dédiée se remplace rarement dans l'urgence." data-es="Una prenda lleva varios accesorios: etiqueta colgante, etiqueta tejida, etiqueta de cuidado, bolsa de embalaje y quizá una fijación, un adhesivo o una tarjeta. Si falta uno, la prenda no se termina. Los accesorios tienen bajo coste unitario, volúmenes altos y alta especificidad: un artículo con logotipo, tonalidad impuesta o forma a medida rara vez se sustituye sobre la marcha.">一件成衣由多种辅料构成：吊牌、织唛、洗水标、包装袋，可能还有吊粒、贴纸、宣传卡。任何一项缺货，整件衣服都无法完成包装上线。辅料的特点是「单价低、数量多、专用性强」——尤其带品牌 LOGO、指定色号或专属版型的辅料，几乎无法临时替代。</p>
+
+<ul>
+<li data-zh="<strong>断料成本高：</strong>停线、改期、空运补货，损失往往是辅料货值的数十倍；" data-en="<strong>Stoppage is expensive:</strong> idle lines, rescheduled deliveries and air-freighting replacements can cost dozens of times the trims' value;" data-fr="<strong>L'arrêt coûte cher :</strong> lignes à l'arrêt, replanification, réapprovisionnement par avion : des dizaines de fois la valeur des accessoires ;" data-es="<strong>La parada es cara:</strong> líneas paradas, reprogramación y reposición por avión pueden costar decenas de veces el valor de los accesorios;"><strong>断料成本高：</strong>停线、改期、空运补货，损失往往是辅料货值的数十倍；</li>
+<li data-zh="<strong>采购周期不短：</strong>吊牌、织唛通常需要打样与生产，交期以周计，无法「明天就要」；" data-en="<strong>Lead times are real:</strong> hangtags and woven labels need sampling and production, measured in weeks — they cannot be conjured tomorrow;" data-fr="<strong>Les délais sont réels :</strong> étiquettes et labels exigent échantillon et production, en semaines : impossible du jour au lendemain ;" data-es="<strong>Los plazos son reales:</strong> etiquetas colgantes y tejidas requieren muestra y producción, en semanas: no se consiguen de un día para otro;"><strong>采购周期不短：</strong>吊牌、织唛通常需要打样与生产，交期以周计，无法「明天就要」；</li>
+<li data-zh="<strong>批次差异敏感：</strong>不同批次的纸张、纱线、油墨可能产生色差，混批使用会破坏同款一致性；" data-en="<strong>Batch variation matters:</strong> paper, yarn and ink differ between runs, and mixing batches breaks consistency within one style;" data-fr="<strong>Les lots varient :</strong> papier, fil et encre diffèrent d'un lot à l'autre ; mélanger les lots casse la régularité d'un modèle ;" data-es="<strong>Los lotes varían:</strong> papel, hilo y tinta difieren entre tiradas, y mezclar lotes rompe la uniformidad de un modelo;"><strong>批次差异敏感：</strong>不同批次的纸张、纱线、油墨可能产生色差，混批使用会破坏同款一致性；</li>
+<li data-zh="<strong>资金占用低但淘汰风险高：</strong>辅料金额小、容易被忽视，换季后却常因过时而全部报废。" data-en="<strong>Low-value but high obsolescence:</strong> trims tie up little cash, so they are ignored — then written off entirely when the season ends." data-fr="<strong>Peu de trésorerie mais obsolescence forte :</strong> on y prête peu d'attention, puis tout est rebuté à la fin de la saison." data-es="<strong>Poco capital pero obsolescencia alta:</strong> como inmovilizan poco dinero, se ignoran, y al acabar la temporada se desechan por completo."><strong>资金占用低但淘汰风险高：</strong>辅料金额小、容易被忽视，换季后却常因过时而全部报废。</li>
+</ul>
+
+<h2 data-zh="2. 从辅料清单（BOM）建立库存基准" data-en="2. Build the Baseline From a Trims BOM" data-fr="2. Poser la base à partir de la nomenclature (BOM)" data-es="2. Establecer la base desde el BOM de accesorios">2. 从辅料清单（BOM）建立库存基准</h2>
+
+<p data-zh="没有 BOM，就没有可管理的库存。每一款（style）都应有一份辅料清单，明确品名、规格、颜色、单件用量、供应商、最小起订量与标准交期。清单建立后，库存管理才从「凭感觉补货」变成「按数据补货」。" data-en="Without a BOM there is no manageable inventory. Every style needs a trims list stating item, spec, colour, usage per garment, supplier, MOQ and standard lead time. Once that exists, replenishment moves from gut feel to data." data-fr="Sans nomenclature, pas de stock gérable. Chaque modèle doit avoir une liste d'accessoires : article, spécification, couleur, consommation par pièce, fournisseur, quantité minimale et délai standard. Dès lors, le réapprovisionnement passe de l'intuition aux données." data-es="Sin BOM no hay inventario gestionable. Cada modelo necesita una lista de accesorios: artículo, especificación, color, consumo por prenda, proveedor, pedido mínimo y plazo estándar. Con ella, la reposición pasa de la intuición a los datos.">没有 BOM，就没有可管理的库存。每一款（style）都应有一份辅料清单，明确品名、规格、颜色、单件用量、供应商、最小起订量与标准交期。清单建立后，库存管理才从「凭感觉补货」变成「按数据补货」。</p>
+
+<ul>
+<li data-zh="<strong>区分通用辅料与专属辅料：</strong>包装袋、通用织唛可按共用色号备货；带专属 LOGO、异形模切或特殊烫金的辅料必须按款备货；" data-en="<strong>Separate standard from product-specific trims:</strong> bags and generic labels can be stocked by shared colour, while logoed, die-cut or specially foiled items must be held by style;" data-fr="<strong>Distinguer standard et spécifique :</strong> sacs et labels génériques se stockent par couleur commune ; les articles logotés, découpés ou dorés doivent être tenus par modèle ;" data-es="<strong>Separa estándar y específico:</strong> bolsas y etiquetas genéricas se almacenan por color común; los artículos con logotipo, troquel o dorado especial deben guardarse por modelo;"><strong>区分通用辅料与专属辅料：</strong>包装袋、通用织唛可按共用色号备货；带专属 LOGO、异形模切或特殊烫金的辅料必须按款备货；</li>
+<li data-zh="<strong>标注单件用量与损耗率：</strong>例如每件一枚主唛、一枚洗水标、一张吊牌，并预留一定比例的补损；" data-en="<strong>Record usage per garment and waste rate:</strong> e.g. one main label, one care label and one hangtag each, plus an allowance for spoilage;" data-fr="<strong>Noter la consommation et le taux de rebut :</strong> par ex. un label principal, une étiquette d'entretien, une suspendue, plus une provision de rebut ;" data-es="<strong>Anota consumo y merma:</strong> por ejemplo, un label principal, una etiqueta de cuidado y una colgante, más un margen de desperdicio;"><strong>标注单件用量与损耗率：</strong>例如每件一枚主唛、一枚洗水标、一张吊牌，并预留一定比例的补损；</li>
+<li data-zh="<strong>记录标准交期与最小起订量：</strong>这两个数字直接决定补货点，也是谈判框架订单的基础；" data-en="<strong>Log standard lead time and MOQ:</strong> these two numbers drive the reorder point and underpin any frame-order negotiation;" data-fr="<strong>Consigner délai et quantité minimale :</strong> ces deux chiffres déterminent le seuil de commande et servent de base à la négociation ;" data-es="<strong>Registra plazo y pedido mínimo:</strong> estos dos números determinan el punto de pedido y son la base para negociar un pedido marco;"><strong>记录标准交期与最小起订量：</strong>这两个数字直接决定补货点，也是谈判框架订单的基础；</li>
+<li data-zh="<strong>与供应商对齐版本：</strong>把确认样、色号与工艺参数存档，返单时直接引用，避免重新打样与偏差。" data-en="<strong>Align versions with the supplier:</strong> archive the approved sample, shade number and process parameters so repeats reference them directly, avoiding re-sampling and drift." data-fr="<strong>Aligner les versions :</strong> archivez échantillon validé, nuance et paramètres pour que les rééditions s'y réfèrent sans nouvel échantillon ni dérive." data-es="<strong>Alinea versiones con el proveedor:</strong> archiva la muestra aprobada, la tonalidad y los parámetros para que los pedidos repetidos los referencien sin volver a muestrear ni desviarse."><strong>与供应商对齐版本：</strong>把确认样、色号与工艺参数存档，返单时直接引用，避免重新打样与偏差。</li>
+</ul>
+
+<h2 data-zh="3. 安全库存与补货点怎么算" data-en="3. How to Calculate Safety Stock and Reorder Points" data-fr="3. Calculer le stock de sécurité et le seuil de commande" data-es="3. Calcular el stock de seguridad y el punto de pedido">3. 安全库存与补货点怎么算</h2>
+
+<p data-zh="最实用的两条公式：「安全库存 ≈ 最大日耗 × 最大交期 − 平均日耗 × 平均交期」；「补货点 = 平均日耗 × 平均交期 + 安全库存」。它的含义不是追求精确，而是把交期波动与需求波动一并考虑进去，让补货动作提前发生。" data-en="Two formulas do most of the work. Safety stock equals maximum daily consumption times maximum lead time, minus average daily consumption times average lead time. The reorder point equals average daily consumption times average lead time, plus safety stock. The aim is not precision but accounting for both lead-time and demand variability so replenishment happens early enough." data-fr="Deux formules suffisent. Stock de sécurité = consommation journalière maximale × délai maximal, moins consommation journalière moyenne × délai moyen. Seuil de commande = consommation moyenne × délai moyen + stock de sécurité. L'objectif n'est pas la précision, mais d'intégrer variabilité de délai et de demande pour commander assez tôt." data-es="Dos fórmulas hacen casi todo. Stock de seguridad = consumo diario máximo × plazo máximo, menos consumo diario medio × plazo medio. Punto de pedido = consumo medio × plazo medio + stock de seguridad. El objetivo no es la precisión, sino incorporar la variabilidad de plazo y demanda para reponer con antelación.">最实用的两条公式：「安全库存 ≈ 最大日耗 × 最大交期 − 平均日耗 × 平均交期」；「补货点 = 平均日耗 × 平均交期 + 安全库存」。它的含义不是追求精确，而是把交期波动与需求波动一并考虑进去，让补货动作提前发生。</p>
+
+<table>
+<tr><th data-zh="参数" data-en="Input" data-fr="Donnée" data-es="Dato">参数</th><th data-zh="从哪里获得" data-en="Where it comes from" data-fr="D'où vient la donnée" data-es="De dónde sale">从哪里获得</th><th data-zh="常见误区" data-en="Common mistake" data-fr="Erreur fréquente" data-es="Error frecuente">常见误区</th></tr>
+<tr><td data-zh="日均耗量" data-en="Daily consumption" data-fr="Consommation journalière" data-es="Consumo diario">日均耗量</td><td data-zh="生产计划 × 单件用量" data-en="Production plan × usage per garment" data-fr="Plan de production × consommation par pièce" data-es="Plan de producción × consumo por prenda">生产计划 × 单件用量</td><td data-zh="只按历史平均，忽略旺季与新款爬坡" data-en="Using only the historical average, ignoring peak season and new-style ramp-up" data-fr="Se baser sur la moyenne passée, en oubliant les pics et la montée en charge" data-es="Usar solo la media histórica, ignorando temporada alta y arranque de nuevos modelos">只按历史平均，忽略旺季与新款爬坡</td></tr>
+<tr><td data-zh="采购交期" data-en="Procurement lead time" data-fr="Délai d'approvisionnement" data-es="Plazo de aprovisionamiento">采购交期</td><td data-zh="供应商承诺交期 + 生产 + 运输" data-en="Supplier committed lead time plus production plus transit" data-fr="Délai fournisseur + production + transport" data-es="Plazo del proveedor más producción y transporte">供应商承诺交期 + 生产 + 运输</td><td data-zh="用最好情况（如 10 天）而非正常交期" data-en="Using the best case (say 10 days) instead of the normal lead time" data-fr="Retenir le meilleur cas (10 jours) plutôt que le délai normal" data-es="Usar el mejor caso (por ejemplo 10 días) en vez del plazo normal">用最好情况（如 10 天）而非正常交期</td></tr>
+<tr><td data-zh="交期波动" data-en="Lead-time variability" data-fr="Variabilité du délai" data-es="Variabilidad del plazo">交期波动</td><td data-zh="近半年的实际到货记录" data-en="Actual receiving records over the past six months" data-fr="Historique réel de réception sur six mois" data-es="Registros reales de recepción de los últimos seis meses">近半年的实际到货记录</td><td data-zh="从不统计实际到货日，只凭印象" data-en="Never tracking actual arrival dates, relying on impressions" data-fr="Ne jamais suivre les dates réelles, se fier à l'impression" data-es="No registrar fechas reales de llegada y fiarse de la impresión">从不统计实际到货日，只凭印象</td></tr>
+<tr><td data-zh="安全系数" data-en="Service factor" data-fr="Coefficient de service" data-es="Factor de servicio">安全系数</td><td data-zh="按可接受的缺货风险设定，关键辅料更保守" data-en="Set by acceptable stockout risk; be more conservative on critical trims" data-fr="Selon le risque de rupture accepté ; plus prudent sur les accessoires critiques" data-es="Según el riesgo de rotura aceptable; más conservador en accesorios críticos">按可接受的缺货风险设定，关键辅料更保守</td><td data-zh="所有辅料同一标准，浪费或风险并存" data-en="One standard for everything, wasting cash and still risking stockouts" data-fr="Un même standard pour tout : gaspillage et risque à la fois" data-es="Un mismo estándar para todo: despilfarro y riesgo a la vez">所有辅料同一标准，浪费或风险并存</td></tr>
+</table>
+
+<div class="callout" data-zh="<strong>💡 提示：</strong>公式只是起点。先跑三个月，用真实的「实际到货日」和「实际耗用量」去校准参数，比一开始就追求精确更有效。辅料的价值在于稳定供给，而不是库存数字好看。" data-en="<strong>💡 Tip:</strong> the formulas are only a starting point. Run them for three months and calibrate with real arrival dates and real consumption. The value of trims inventory is reliable supply, not a pretty stock figure." data-fr="<strong>💡 Conseil :</strong> les formules ne sont qu'un point de départ. Faites-les tourner trois mois et calibrez avec les dates de réception et consommations réelles. La valeur d'un stock d'accessoires, c'est la régularité de l'approvisionnement, pas un joli chiffre." data-es="<strong>💡 Consejo:</strong> las fórmulas son solo el punto de partida. Aplícalas tres meses y calíbralas con fechas de llegada y consumos reales. El valor del inventario es el suministro fiable, no una cifra bonita."><strong>💡 提示：</strong>公式只是起点。先跑三个月，用真实的「实际到货日」和「实际耗用量」去校准参数，比一开始就追求精确更有效。辅料的价值在于稳定供给，而不是库存数字好看。</div>
+
+<h2 data-zh="4. 批次、色差与仓储管理" data-en="4. Batches, Shade Variation and Warehousing" data-fr="4. Lots, nuances et entreposage" data-es="4. Lotes, tonalidades y almacenamiento">4. 批次、色差与仓储管理</h2>
+
+<ul>
+<li data-zh="<strong>批次与色号标识：</strong>每批入库登记批号、生产日期与色号，同一款成衣尽量使用同批辅料；" data-en="<strong>Batch and shade coding:</strong> log batch number, production date and shade on receipt, and keep one style to a single trims batch where possible;" data-fr="<strong>Codage lot et nuance :</strong> enregistrez lot, date et nuance à la réception, et tenez un modèle sur un même lot si possible ;" data-es="<strong>Codificación de lote y tonalidad:</strong> registra lote, fecha y tonalidad al recibir, y mantén un modelo con un solo lote si es posible;"><strong>批次与色号标识：</strong>每批入库登记批号、生产日期与色号，同一款成衣尽量使用同批辅料；</li>
+<li data-zh="<strong>先进先出（FIFO）：</strong>旧批先用，避免仓库深处的辅料因存放过久变色、受潮或粘胶；" data-en="<strong>First in, first out:</strong> consume older batches first so stock at the back does not discolour, absorb moisture or go tacky;" data-fr="<strong>Premier entré, premier sorti :</strong> consommez les lots anciens pour éviter jaunissement, humidité ou collage au fond du stock ;" data-es="<strong>Primero entrado, primero salido:</strong> consume los lotes antiguos para que el fondo del almacén no se decolore, humedezca o pegotee;"><strong>先进先出（FIFO）：</strong>旧批先用，避免仓库深处的辅料因存放过久变色、受潮或粘胶；</li>
+<li data-zh="<strong>防潮防褪色：</strong>纸张辅料忌潮湿与暴晒，织唛与洗水标忌长期叠压变形；建议离地、避光存放；" data-en="<strong>Moisture and light control:</strong> paper trims hate damp and direct sun, while woven and care labels deform under long compression; store off the floor and out of light;" data-fr="<strong>Humidité et lumière :</strong> les accessoires papier craignent l'humidité et le soleil ; labels tissés et étiquettes d'entretien se déforment à la compression ; stockez hors sol et à l'abri de la lumière ;" data-es="<strong>Humedad y luz:</strong> los accesorios de papel temen la humedad y el sol; etiquetas tejidas y de cuidado se deforman con la compresión; almacena fuera del suelo y sin luz;"><strong>防潮防褪色：</strong>纸张辅料忌潮湿与暴晒，织唛与洗水标忌长期叠压变形；建议离地、避光存放；</li>
+<li data-zh="<strong>严禁混批使用：</strong>同一订单若因缺料需要用不同批次，务必提前告知客户并确认色差可接受，不要自行混用。" data-en="<strong>Never mix batches silently:</strong> if an order needs a second batch to cover a shortage, tell the buyer in advance and confirm the shade is acceptable instead of mixing on the quiet." data-fr="<strong>Ne jamais mélanger en silence :</strong> si une commande exige un second lot, prévenez l'acheteur et validez la nuance au lieu de mélanger discrètement." data-es="<strong>Nunca mezcles en silencio:</strong> si un pedido necesita un segundo lote, avisa al comprador y confirma que la tonalidad es aceptable en lugar de mezclar a escondidas."><strong>严禁混批使用：</strong>同一订单若因缺料需要用不同批次，务必提前告知客户并确认色差可接受，不要自行混用。</li>
+</ul>
+
+<h2 data-zh="5. 与供应商协同：框架订单与滚动预测" data-en="5. Working With Suppliers: Frame Orders and Rolling Forecasts" data-fr="5. Collaborer avec le fournisseur : commandes-cadres et prévisions glissantes" data-es="5. Colaborar con el proveedor: pedidos marco y previsiones móviles">5. 与供应商协同：框架订单与滚动预测</h2>
+
+<p data-zh="辅料交期的稳定性，很大程度取决于供应商是否提前知道你的用量。与其每次都临时下单，不如把用量信息前移，用机制换取交期。" data-en="How stable your trims lead times are depends largely on whether the supplier knows your volumes in advance. Instead of placing one-off orders each time, share volume information earlier and trade planning for shorter lead times." data-fr="La régularité des délais dépend surtout de la visibilité donnée au fournisseur. Plutôt que de commander au coup par coup, partagez plus tôt les volumes : vous échangez de la planification contre des délais plus courts." data-es="La estabilidad de los plazos depende en gran medida de que el proveedor conozca tus volúmenes con antelación. En vez de pedir cada vez de forma puntual, comparte antes los volúmenes: intercambias planificación por plazos más cortos.">辅料交期的稳定性，很大程度取决于供应商是否提前知道你的用量。与其每次都临时下单，不如把用量信息前移，用机制换取交期。</p>
+
+<ul>
+<li data-zh="<strong>框架订单：</strong>锁定年度或季度用量与价格，分批提货，既保证产能与材料，也降低单次资金压力；" data-en="<strong>Frame orders:</strong> lock annual or quarterly volume and price, then call off in batches — securing capacity and materials while spreading cash out;" data-fr="<strong>Commandes-cadres :</strong> figez un volume et un prix annuels ou trimestriels, puis appelez par lots : capacité et matières sécurisées, trésorerie étalée ;" data-es="<strong>Pedidos marco:</strong> fija volumen y precio anuales o trimestrales y llama por lotes: aseguras capacidad y materiales y repartes el desembolso;"><strong>框架订单：</strong>锁定年度或季度用量与价格，分批提货，既保证产能与材料，也降低单次资金压力；</li>
+<li data-zh="<strong>滚动预测：</strong>按月提供未来 3 个月的用量预测，即使不承诺下单，也能让供应商提前备纱备纸；" data-en="<strong>Rolling forecast:</strong> share a three-month volume forecast monthly; even without a firm order it lets the supplier pre-position yarn and paper;" data-fr="<strong>Prévisions glissantes :</strong> partagez chaque mois une prévision à trois mois ; sans engagement ferme, le fournisseur pré-positionne fil et papier ;" data-es="<strong>Previsión móvil:</strong> comparte cada mes una previsión a tres meses; sin pedido en firme, permite al proveedor preposicionar hilo y papel;"><strong>滚动预测：</strong>按月提供未来 3 个月的用量预测，即使不承诺下单，也能让供应商提前备纱备纸；</li>
+<li data-zh="<strong>安全库存协同：</strong>对高频返单的通用辅料，可与供应商协商由其保留一定成品或半成品库存，缩短你的补货周期；" data-en="<strong>Shared safety stock:</strong> for fast-moving standard trims, agree that the supplier holds some finished or semi-finished stock to shorten your replenishment cycle;" data-fr="<strong>Stock de sécurité partagé :</strong> pour les accessoires standard à rotation rapide, convenez que le fournisseur détient du stock fini ou semi-fini pour raccourcir votre cycle ;" data-es="<strong>Stock de seguridad compartido:</strong> para accesorios estándar de alta rotación, acuerda que el proveedor retenga stock terminado o semiterminado para acortar tu ciclo;"><strong>安全库存协同：</strong>对高频返单的通用辅料，可与供应商协商由其保留一定成品或半成品库存，缩短你的补货周期；</li>
+<li data-zh="<strong>建立交期台账：</strong>记录每单的承诺交期与实际到货日，作为下一轮谈判与安全库存校准的依据。" data-en="<strong>Keep a lead-time log:</strong> record promised versus actual dates for every order to feed both negotiations and safety-stock calibration." data-fr="<strong>Tenez un registre des délais :</strong> notez délai promis et date réelle de chaque commande pour négocier et recalibrer le stock de sécurité." data-es="<strong>Lleva un registro de plazos:</strong> anota plazo prometido y fecha real de cada pedido para negociar y recalibrar el stock de seguridad."><strong>建立交期台账：</strong>记录每单的承诺交期与实际到货日，作为下一轮谈判与安全库存校准的依据。</li>
+</ul>
+
+<h2 data-zh="6. 呆滞料与尾数处理" data-en="6. Dead Stock and Leftover Quantities" data-fr="6. Invendus et reliquats" data-es="6. Stock muerto y sobrantes">6. 呆滞料与尾数处理</h2>
+
+<ul>
+<li data-zh="<strong>呆滞料成因：</strong>多为「凑起订量」过量采购、款式取消或改版后旧料作废；" data-en="<strong>Where it comes from:</strong> mostly over-buying to hit MOQ, or a style cancelled or revised, leaving old stock obsolete;" data-fr="<strong>Origines :</strong> surtout des achats excédentaires pour atteindre le minimum, ou un modèle annulé ou modifié laissant l'ancien stock obsolète ;" data-es="<strong>Causas del stock muerto:</strong> sobre todo de comprar de más para llegar al mínimo, o de un modelo cancelado o revisado que deja el stock antiguo obsoleto;"><strong>呆滞料成因：</strong>多为「凑起订量」过量采购、款式取消或改版后旧料作废；</li>
+<li data-zh="<strong>控制方法：</strong>把颜色与规格尽量通用化（减少专属色号）、按真实需求而非起订量下单、为长周期辅料建立明确的可取消节点；" data-en="<strong>How to control it:</strong> standardise colours and specs where possible, order to real demand rather than to MOQ, and set clear cancellation cut-offs for long-lead items;" data-fr="<strong>Comment le maîtriser :</strong> standardiser couleurs et spécifications, commander selon la demande réelle et non le minimum, et fixer des jalons d'annulation clairs ;" data-es="<strong>Cómo controlarlo:</strong> estandariza colores y especificaciones, pide según la demanda real y no según el mínimo, y fija hitos claros de cancelación;"><strong>控制方法：</strong>把颜色与规格尽量通用化（减少专属色号）、按真实需求而非起订量下单、为长周期辅料建立明确的可取消节点；</li>
+<li data-zh="<strong>尾数管理：</strong>大货生产多印一定比例的补损是正常做法，但要把尾数登记入库、优先用于后续返单，而不是随手丢弃；" data-en="<strong>Leftover management:</strong> printing an allowance for spoilage in bulk is normal, but log the surplus into stock and reuse it on the next repeat instead of discarding it;" data-fr="<strong>Reliquats :</strong> imprimer une provision de rebut est normal, mais enregistrez le surplus en stock et réutilisez-le à la réédition au lieu de le jeter ;" data-es="<strong>Sobrantes:</strong> imprimir un margen de merma en serie es normal, pero registra el excedente en inventario y reutilízalo en el siguiente pedido en vez de tirarlo;"><strong>尾数管理：</strong>大货生产多印一定比例的补损是正常做法，但要把尾数登记入库、优先用于后续返单，而不是随手丢弃；</li>
+<li data-zh="<strong>定期复盘：</strong>每季盘点呆滞料，能改版的改版、能通用的通用，确实无法使用的及时处理，避免占用库位与资金。" data-en="<strong>Review regularly:</strong> audit dead stock each quarter, re-purpose what can be adapted or standardised, and dispose of the rest so it stops occupying space and cash." data-fr="<strong>Revue régulière :</strong> auditez les invendus chaque trimestre, réutilisez ce qui peut l'être et éliminez le reste pour libérer place et trésorerie." data-es="<strong>Revisión periódica:</strong> audita el stock muerto cada trimestre, reutiliza lo adaptable o estandarizable y desecha el resto para liberar espacio y capital."><strong>定期复盘：</strong>每季盘点呆滞料，能改版的改版、能通用的通用，确实无法使用的及时处理，避免占用库位与资金。</li>
+</ul>
+
+<h2 data-zh="7. 盘点与验收要点" data-en="7. Stocktake and Receiving Checklist" data-fr="7. Inventaire et réception : points clés" data-es="7. Inventario y recepción: puntos clave">7. 盘点与验收要点</h2>
+
+<ul>
+<li data-zh="收货时核对<strong>数量、批号、色号</strong>与订单是否一致，抽检外观与尺寸；" data-en="On receipt, check <strong>quantity, batch and shade</strong> against the order and spot-check appearance and size;" data-fr="À réception, vérifiez <strong>quantité, lot et nuance</strong> par rapport à la commande et contrôlez aspect et dimensions ;" data-es="Al recibir, verifica <strong>cantidad, lote y tonalidad</strong> frente al pedido y comprueba aspecto y medidas;">收货时核对<strong>数量、批号、色号</strong>与订单是否一致，抽检外观与尺寸；</li>
+<li data-zh="对<strong>高价值或长交期辅料</strong>缩短盘点周期，确保账实相符；" data-en="Shorten the count cycle for <strong>high-value or long-lead trims</strong> so records match reality;" data-fr="Raccourcissez le cycle d'inventaire pour les <strong>accessoires de forte valeur ou à long délai</strong> ;" data-es="Acorta el ciclo de recuento de los <strong>accesorios de alto valor o largo plazo</strong>;"><strong>高价值或长交期辅料</strong>缩短盘点周期，确保账实相符；</li>
+<li data-zh="设定<strong>补货提醒</strong>（低于补货点自动触发），避免依赖人工记忆；" data-en="Set <strong>replenishment alerts</strong> that trigger when stock hits the reorder point, rather than relying on memory;" data-fr="Paramétrez des <strong>alertes de réapprovisionnement</strong> déclenchées au seuil, plutôt que de compter sur la mémoire ;" data-es="Configura <strong>alertas de reposición</strong> que se activen al llegar al punto de pedido, en vez de depender de la memoria;">设定<strong>补货提醒</strong>（低于补货点自动触发），避免依赖人工记忆；</li>
+<li data-zh="保留每款辅料的<strong>确认样与色卡</strong>，返单与索赔时作为唯一比对基准。" data-en="Keep the <strong>approved sample and shade card</strong> for every trim as the single reference for repeats and claims." data-fr="Conservez l'<strong>échantillon validé et le nuancier</strong> de chaque accessoire comme référence unique pour rééditions et litiges." data-es="Guarda la <strong>muestra aprobada y la carta de color</strong> de cada accesorio como referencia única para repeticiones y reclamaciones.">保留每款辅料的<strong>确认样与色卡</strong>，返单与索赔时作为唯一比对基准。</li>
+</ul>
+
+<div class="callout" data-zh="<strong>💡 泰阁提示：</strong>辅料供应稳定的关键，是让供应商提前知道你的节奏。我们可以为长期合作品牌保留常用织唛、洗水标的半成品库存，配合框架订单与滚动预测，把返单交期压缩到 10–25 天区间内的靠前段。打样 3–7 天，起订量灵活。" data-en="<strong>💡 TAGE tip:</strong> stable trims supply comes from letting the supplier see your rhythm. For long-term partners we hold semi-finished stock of common woven and care labels; combined with frame orders and rolling forecasts, this brings repeat lead times toward the front of the 10–25 day range. Samples in 3–7 days, flexible MOQs." data-fr="<strong>💡 Conseil TAGE :</strong> la régularité vient du fait que le fournisseur connaît votre rythme. Pour nos partenaires de long terme, nous gardons du semi-fini de labels et étiquettes courants ; avec commandes-cadres et prévisions, les rééditions se situent dans le haut de la fourchette de 10 à 25 jours. Échantillons en 3 à 7 jours, minimums souples." data-es="<strong>💡 Consejo TAGE:</strong> la regularidad llega cuando el proveedor conoce tu ritmo. Con socios a largo plazo, retenemos semiterminados de etiquetas tejidas y de cuidado habituales; junto con pedidos marco y previsiones, las repeticiones se sitúan en la parte inicial del rango de 10–25 días. Muestras en 3–7 días, mínimos flexibles."><strong>💡 泰阁提示：</strong>辅料供应稳定的关键，是让供应商提前知道你的节奏。我们可以为长期合作品牌保留常用织唛、洗水标的半成品库存，配合框架订单与滚动预测，把返单交期压缩到 10–25 天区间内的靠前段。打样 3–7 天，起订量灵活。</div>
+
+<div class="related">
+<h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+<ul>
+<li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+<li><a href="garment-trims-order-guide.html" data-zh="服装辅料下单指南：从询价到收货的全流程" data-en="Garment Trims Order Guide: From Enquiry to Delivery" data-fr="Guide de commande d'accessoires : de la demande à la livraison" data-es="Guía de pedido de accesorios: de la consulta a la entrega">服装辅料下单指南：从询价到收货的全流程</a></li>
+<li><a href="garment-trims-lead-time-guide.html" data-zh="服装辅料交期指南：打样、生产与运输时间拆解" data-en="Garment Trims Lead Time Guide: Sampling, Production and Transit" data-fr="Guide des délais d'accessoires : échantillon, production et transport" data-es="Guía de plazos de accesorios: muestra, producción y tránsito">服装辅料交期指南：打样、生产与运输时间拆解</a></li>
+<li><a href="clothing-brand-first-trims-order.html" data-zh="服装品牌首批评辅料下单清单" data-en="First Trims Order Checklist for Clothing Brands" data-fr="Checklist de première commande d'accessoires" data-es="Lista del primer pedido de accesorios">服装品牌首批评辅料下单清单</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p data-zh="想让辅料供应更稳定？把您的款式用量与补货节奏告诉我们，一起规划框架订单与安全库存。" data-en="Want steadier trims supply? Share your style volumes and replenishment rhythm — we can plan frame orders and safety stock together." data-fr="Envie d'un approvisionnement plus régulier ? Indiquez vos volumes et votre rythme de réassort : nous planifions commandes-cadres et stock de sécurité." data-es="¿Quieres un suministro más estable? Cuéntanos tus volúmenes y tu ritmo de reposición: planificamos pedidos marco y stock de seguridad.">想让辅料供应更稳定？把您的款式用量与补货节奏告诉我们，一起规划框架订单与安全库存。</p>
+<a class="cta-btn" href="../contact.html" data-zh="咨询辅料长期供应方案 →" data-en="Discuss a long-term trims supply plan →" data-fr="Discuter d'un plan d'approvisionnement →" data-es="Consultar un plan de suministro a largo plazo →">咨询辅料长期供应方案 →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=63"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>

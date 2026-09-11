@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de inventario y reposición de accesorios: stock de seguridad, punto de pedido y stock muerto | TAGE</title>
+<meta name="description" content="Una mala gestión del inventario de accesorios causa paradas de línea y stock muerto. BOM, stock de seguridad, punto de pedido, lotes y tonalidades, planificación con proveedor.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.related{margin-top:36px}
+.related ul{padding-left:22px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+     "item": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+   "url": "https://taigetag.com/blog/garment-trims-inventory-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Inventario de accesorios</span></div>
+      <h1>Guía de inventario y reposición de accesorios: stock de seguridad, punto de pedido y stock muerto</h1>
+      <p>Por TAGE Packaging  ·  Actualizado el 11 de septiembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>El inventario de accesorios es donde marcas y fábricas suelen ahorrar en el sitio equivocado: una etiqueta tejida o colgante cuesta poco y se trata como un detalle, hasta que una sola pieza que falta bloquea todo un pedido. Partiendo del BOM de accesorios, esta guía explica cómo calcular el stock de seguridad y el punto de pedido, controlar lotes y tonalidades, trabajar con proveedores mediante pedidos marco y previsiones móviles, y gestionar stock muerto y sobrantes.</p>
+
+<p>Sentemos el principio: el objetivo no es tener más para ir sobre seguro, sino la cantidad correcta, en el lote correcto y en el momento correcto. Una parada de línea cuesta mucho más que el accesorio, mientras que el exceso se convierte en stock muerto y riesgo de tonalidad al cambiar de modelo o temporada.</p>
+
+<h2>1. Por qué los accesorios son pequeños pero de gran riesgo</h2>
+
+<p>Una prenda lleva varios accesorios: etiqueta colgante, etiqueta tejida, etiqueta de cuidado, bolsa de embalaje y quizá una fijación, un adhesivo o una tarjeta. Si falta uno, la prenda no se termina. Los accesorios tienen bajo coste unitario, volúmenes altos y alta especificidad: un artículo con logotipo, tonalidad impuesta o forma a medida rara vez se sustituye sobre la marcha.</p>
+
+<ul>
+<li><strong>La parada es cara:</strong> líneas paradas, reprogramación y reposición por avión pueden costar decenas de veces el valor de los accesorios;</li>
+<li><strong>Los plazos son reales:</strong> etiquetas colgantes y tejidas requieren muestra y producción, en semanas: no se consiguen de un día para otro;</li>
+<li><strong>Los lotes varían:</strong> papel, hilo y tinta difieren entre tiradas, y mezclar lotes rompe la uniformidad de un modelo;</li>
+<li><strong>Poco capital pero obsolescencia alta:</strong> como inmovilizan poco dinero, se ignoran, y al acabar la temporada se desechan por completo.</li>
+</ul>
+
+<h2>2. Establecer la base desde el BOM de accesorios</h2>
+
+<p>Sin BOM no hay inventario gestionable. Cada modelo necesita una lista de accesorios: artículo, especificación, color, consumo por prenda, proveedor, pedido mínimo y plazo estándar. Con ella, la reposición pasa de la intuición a los datos.</p>
+
+<ul>
+<li><strong>Separa estándar y específico:</strong> bolsas y etiquetas genéricas se almacenan por color común; los artículos con logotipo, troquel o dorado especial deben guardarse por modelo;</li>
+<li><strong>Anota consumo y merma:</strong> por ejemplo, un label principal, una etiqueta de cuidado y una colgante, más un margen de desperdicio;</li>
+<li><strong>Registra plazo y pedido mínimo:</strong> estos dos números determinan el punto de pedido y son la base para negociar un pedido marco;</li>
+<li><strong>Alinea versiones con el proveedor:</strong> archiva la muestra aprobada, la tonalidad y los parámetros para que los pedidos repetidos los referencien sin volver a muestrear ni desviarse.</li>
+</ul>
+
+<h2>3. Calcular el stock de seguridad y el punto de pedido</h2>
+
+<p>Dos fórmulas hacen casi todo. Stock de seguridad = consumo diario máximo × plazo máximo, menos consumo diario medio × plazo medio. Punto de pedido = consumo medio × plazo medio + stock de seguridad. El objetivo no es la precisión, sino incorporar la variabilidad de plazo y demanda para reponer con antelación.</p>
+
+<table>
+<tr><th>Dato</th><th>De dónde sale</th><th>Error frecuente</th></tr>
+<tr><td>Consumo diario</td><td>Plan de producción × consumo por prenda</td><td>Usar solo la media histórica, ignorando temporada alta y arranque de nuevos modelos</td></tr>
+<tr><td>Plazo de aprovisionamiento</td><td>Plazo del proveedor más producción y transporte</td><td>Usar el mejor caso (por ejemplo 10 días) en vez del plazo normal</td></tr>
+<tr><td>Variabilidad del plazo</td><td>Registros reales de recepción de los últimos seis meses</td><td>No registrar fechas reales de llegada y fiarse de la impresión</td></tr>
+<tr><td>Factor de servicio</td><td>Según el riesgo de rotura aceptable; más conservador en accesorios críticos</td><td>Un mismo estándar para todo: despilfarro y riesgo a la vez</td></tr>
+</table>
+
+<div class="callout"><strong>💡 Consejo:</strong> las fórmulas son solo el punto de partida. Aplícalas tres meses y calíbralas con fechas de llegada y consumos reales. El valor del inventario es el suministro fiable, no una cifra bonita.</div>
+
+<h2>4. Lotes, tonalidades y almacenamiento</h2>
+
+<ul>
+<li><strong>Codificación de lote y tonalidad:</strong> registra lote, fecha y tonalidad al recibir, y mantén un modelo con un solo lote si es posible;</li>
+<li><strong>Primero entrado, primero salido:</strong> consume los lotes antiguos para que el fondo del almacén no se decolore, humedezca o pegotee;</li>
+<li><strong>Humedad y luz:</strong> los accesorios de papel temen la humedad y el sol; etiquetas tejidas y de cuidado se deforman con la compresión; almacena fuera del suelo y sin luz;</li>
+<li><strong>Nunca mezcles en silencio:</strong> si un pedido necesita un segundo lote, avisa al comprador y confirma que la tonalidad es aceptable en lugar de mezclar a escondidas.</li>
+</ul>
+
+<h2>5. Colaborar con el proveedor: pedidos marco y previsiones móviles</h2>
+
+<p>La estabilidad de los plazos depende en gran medida de que el proveedor conozca tus volúmenes con antelación. En vez de pedir cada vez de forma puntual, comparte antes los volúmenes: intercambias planificación por plazos más cortos.</p>
+
+<ul>
+<li><strong>Pedidos marco:</strong> fija volumen y precio anuales o trimestrales y llama por lotes: aseguras capacidad y materiales y repartes el desembolso;</li>
+<li><strong>Previsión móvil:</strong> comparte cada mes una previsión a tres meses; sin pedido en firme, permite al proveedor preposicionar hilo y papel;</li>
+<li><strong>Stock de seguridad compartido:</strong> para accesorios estándar de alta rotación, acuerda que el proveedor retenga stock terminado o semiterminado para acortar tu ciclo;</li>
+<li><strong>Lleva un registro de plazos:</strong> anota plazo prometido y fecha real de cada pedido para negociar y recalibrar el stock de seguridad.</li>
+</ul>
+
+<h2>6. Stock muerto y sobrantes</h2>
+
+<ul>
+<li><strong>Causas del stock muerto:</strong> sobre todo de comprar de más para llegar al mínimo, o de un modelo cancelado o revisado que deja el stock antiguo obsoleto;</li>
+<li><strong>Cómo controlarlo:</strong> estandariza colores y especificaciones, pide según la demanda real y no según el mínimo, y fija hitos claros de cancelación;</li>
+<li><strong>Sobrantes:</strong> imprimir un margen de merma en serie es normal, pero registra el excedente en inventario y reutilízalo en el siguiente pedido en vez de tirarlo;</li>
+<li><strong>Revisión periódica:</strong> audita el stock muerto cada trimestre, reutiliza lo adaptable o estandarizable y desecha el resto para liberar espacio y capital.</li>
+</ul>
+
+<h2>7. Inventario y recepción: puntos clave</h2>
+
+<ul>
+<li>Al recibir, verifica <strong>cantidad, lote y tonalidad</strong> frente al pedido y comprueba aspecto y medidas;</li>
+<li>Acorta el ciclo de recuento de los <strong>accesorios de alto valor o largo plazo</strong>;</li>
+<li>Configura <strong>alertas de reposición</strong> que se activen al llegar al punto de pedido, en vez de depender de la memoria;</li>
+<li>Guarda la <strong>muestra aprobada y la carta de color</strong> de cada accesorio como referencia única para repeticiones y reclamaciones.</li>
+</ul>
+
+<div class="callout"><strong>💡 Consejo TAGE:</strong> la regularidad llega cuando el proveedor conoce tu ritmo. Con socios a largo plazo, retenemos semiterminados de etiquetas tejidas y de cuidado habituales; junto con pedidos marco y previsiones, las repeticiones se sitúan en la parte inicial del rango de 10–25 días. Muestras en 3–7 días, mínimos flexibles.</div>
+
+<div class="related">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="index.html">FAQ Accesorios: todos los artículos</a></li>
+<li><a href="garment-trims-order-guide.html">Guía de pedido de accesorios: de la consulta a la entrega</a></li>
+<li><a href="garment-trims-lead-time-guide.html">Guía de plazos de accesorios: muestra, producción y tránsito</a></li>
+<li><a href="clothing-brand-first-trims-order.html">Lista del primer pedido de accesorios</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>¿Quieres un suministro más estable? Cuéntanos tus volúmenes y tu ritmo de reposición: planificamos pedidos marco y stock de seguridad.</p>
+<a class="cta-btn" href="../contact.html">Consultar un plan de suministro a largo plazo →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=63"></script>
+<script src="../../js/assist.js?v=46"></script>
+</body>
+</html>
