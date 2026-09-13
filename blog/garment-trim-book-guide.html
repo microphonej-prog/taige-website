@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服装品牌辅料规范手册（Trim Book）制作指南：编号、规格与版本管理 | TAGE" data-en="How to Build a Garment Trim Book: Spec &amp; Version Control Guide | TAGE" data-fr="Comment créer un cahier d'accessoires (trim book) : spécifications et gestion des versions | TAGE" data-es="Cómo crear un libro de accesorios (trim book): especificaciones y control de versiones | TAGE">服装品牌辅料规范手册（Trim Book）制作指南：编号、规格与版本管理 | TAGE</title>
+<meta name="description" data-zh="辅料规范手册（Trim Book）是服装品牌管理吊牌、织唛、洗水标与包装的标准文档。本文说明 Trim Book 应包含的内容、辅料编号规则、版本管理与变更记录，以及如何与辅料供应商对接、避免批次不一致。来自东莞泰阁包装。"
+      data-en="Trim book guide for clothing brands: what a trim book should include, how to number trims, version control and briefing suppliers on labels and packaging."
+      data-fr="Le cahier d'accessoires permet aux marques de contrôler étiquettes suspendues, labels tissés, étiquettes d'entretien et emballages : contenu, numérotation, versions et échange avec le fournisseur."
+      data-es="El libro de accesorios permite a las marcas controlar etiquetas colgantes, tejidas, de cuidado y embalajes: contenido, numeración, versiones y trato con el proveedor."
+      content="辅料规范手册（Trim Book）是服装品牌管理吊牌、织唛、洗水标与包装的标准文档。本文说明 Trim Book 应包含的内容、辅料编号规则、版本管理与变更记录，以及如何与辅料供应商对接、避免批次不一致。来自东莞泰阁包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trim-book-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装品牌辅料规范手册（Trim Book）制作指南",
+     "item": "https://taigetag.com/blog/garment-trim-book-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装品牌辅料规范手册（Trim Book）制作指南：编号、规格与版本管理",
+   "url": "https://taigetag.com/blog/garment-trim-book-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trim-book-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="辅料规范手册" data-en="Trim Book Guide" data-fr="Guide du cahier d'accessoires" data-es="Guía del libro de accesorios">辅料规范手册</span></div>
+      <h1 data-zh="服装品牌辅料规范手册（Trim Book）制作指南" data-en="How to Build a Trim Book for Your Clothing Brand" data-fr="Comment créer un cahier d'accessoires (trim book) pour votre marque" data-es="Cómo crear un libro de accesorios (trim book) para tu marca de ropa">服装品牌辅料规范手册（Trim Book）制作指南</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月13日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 13, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 13 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 13 de septiembre de 2026">泰阁包装 · 更新于 2026年9月13日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="辅料规范手册（Trim Book，也叫辅料标准册、Trim Card）是服装品牌把所有辅料规格、图稿、供应商与测试要求集中管理的一份标准文件。它把凭印象下单变成照标准下单，是品牌把吊牌、织唛、洗水标和包装做到批次一致的关键工具。"
+         data-en="A trim book (also called a trim standard book or trim card) is the master document a clothing brand uses to manage every trim specification, artwork file, supplier and test requirement. It turns ordering by impression into ordering against a standard, and it is the key tool for keeping hang tags, woven labels, care labels and packaging consistent batch after batch."
+         data-fr="Le cahier d'accessoires (trim book, cahier de normes ou trim card) est le document de référence qui regroupe les spécifications, les fichiers graphiques, les fournisseurs et les exigences de test de tous les accessoires. Il remplace la commande au feeling par une commande conforme à une norme, et garantit la constance des étiquettes suspendues, des labels tissés, des étiquettes d'entretien et des emballages."
+         data-es="El libro de accesorios (trim book, libro de normas o trim card) es el documento maestro con el que una marca gestiona las especificaciones, los archivos de arte, los proveedores y los requisitos de ensayo de cada accesorio. Convierte el pedido por impresión en un pedido conforme a norma y garantiza la coherencia de etiquetas colgantes, tejidas, de cuidado y embalajes lote a lote.">辅料规范手册（Trim Book，也叫辅料标准册、Trim Card）是服装品牌把所有辅料规格、图稿、供应商与测试要求集中管理的一份标准文件。它把凭印象下单变成照标准下单，是品牌把吊牌、织唛、洗水标和包装做到批次一致的关键工具。</p>
+
+      <p data-zh="本文说明 Trim Book 应包含哪些内容、如何设计辅料编号与版本管理规则、如何与辅料供应商对接，以及最常被忽略的几个错误。"
+         data-en="This article explains what a trim book should contain, how to structure trim numbering and version control, how to hand it over to trim suppliers, and the mistakes brands most often overlook."
+         data-fr="Cet article explique ce que doit contenir un trim book, comment structurer la numérotation et la gestion des versions, comment le transmettre aux fournisseurs d'accessoires et les erreurs les plus fréquentes."
+         data-es="Este artículo explica qué debe contener un trim book, cómo estructurar la numeración y el control de versiones, cómo entregarlo a los proveedores de accesorios y los errores más frecuentes.">本文说明 Trim Book 应包含哪些内容、如何设计辅料编号与版本管理规则、如何与辅料供应商对接，以及最常被忽略的几个错误。</p>
+
+      <h2 data-zh="1. 为什么品牌需要辅料规范手册" data-en="1. Why Your Brand Needs a Trim Book" data-fr="1. Pourquoi votre marque a besoin d'un trim book" data-es="1. Por qué tu marca necesita un libro de accesorios">1. 为什么品牌需要辅料规范手册</h2>
+      <p data-zh="一个品牌往往同时对接多家成衣厂和多家辅料供应商。没有统一标准时，同一个吊牌在不同工厂会印出不同颜色，同一款织唛在不同批次会差半个色号。Trim Book 让三方都受益："
+         data-en="A brand usually works with several garment factories and trim suppliers at once. Without a single standard, the same hang tag prints in different colours at different factories, and the same woven label drifts half a shade between batches. A trim book benefits all three parties:"
+         data-fr="Une marque travaille souvent avec plusieurs usines de confection et plusieurs fournisseurs d'accessoires. Sans norme unique, la même étiquette suspendue s'imprime dans des couleurs différentes selon l'usine, et le même label tissé varie d'un demi-ton entre les lots. Le trim book bénéficie aux trois parties :"
+         data-es="Una marca suele trabajar con varias fábricas de confección y varios proveedores de accesorios a la vez. Sin una norma única, la misma etiqueta colgante se imprime en colores distintos según la fábrica, y la misma etiqueta tejida varía medio tono entre lotes. El trim book beneficia a las tres partes:">一个品牌往往同时对接多家成衣厂和多家辅料供应商。没有统一标准时，同一个吊牌在不同工厂会印出不同颜色，同一款织唛在不同批次会差半个色号。Trim Book 让三方都受益：</p>
+      <ul>
+        <li data-zh="<strong>品牌方</strong>：无论换工厂还是换供应商，产品外观始终一致"
+            data-en="<strong>The brand</strong>: the look stays consistent whether you change factories or suppliers"
+            data-fr="<strong>La marque</strong> : l'aspect reste identique, même en changeant d'usine ou de fournisseur"
+            data-es="<strong>La marca</strong>: el aspecto se mantiene igual aunque cambies de fábrica o proveedor"><strong>品牌方</strong>：无论换工厂还是换供应商，产品外观始终一致</li>
+        <li data-zh="<strong>成衣厂</strong>：来料核对有据可依，减少沟通与返工"
+            data-en="<strong>The garment factory</strong>: incoming trims can be checked against a standard, cutting back-and-forth and rework"
+            data-fr="<strong>L'usine</strong> : les accessoires reçus se contrôlent par rapport à une norme, moins d'échanges et de reprises"
+            data-es="<strong>La fábrica</strong>: los accesorios recibidos se verifican contra una norma, menos idas y venidas y menos reprocesos"><strong>成衣厂</strong>：来料核对有据可依，减少沟通与返工</li>
+        <li data-zh="<strong>辅料供应商</strong>：一次拿到完整规格，复购直接按编号生产，交期更稳"
+            data-en="<strong>The trim supplier</strong>: receives complete specs once, then reorders by part number with steadier lead times"
+            data-fr="<strong>Le fournisseur</strong> : reçoit les spécifications complètes une fois, puis refabrique sur référence avec des délais plus fiables"
+            data-es="<strong>El proveedor</strong>: recibe las especificaciones completas una vez y luego repite por referencia con plazos más estables"><strong>辅料供应商</strong>：一次拿到完整规格，复购直接按编号生产，交期更稳</li>
+      </ul>
+
+      <h2 data-zh="2. Trim Book 应包含哪些内容" data-en="2. What a Trim Book Should Contain" data-fr="2. Ce que doit contenir un trim book" data-es="2. Qué debe contener un libro de accesorios">2. Trim Book 应包含哪些内容</h2>
+      <p data-zh="一份实用的 Trim Book 通常是一页对应一个辅料，实物样品与规格表合订。核心栏目如下："
+         data-en="A practical trim book usually dedicates one page per trim, with physical swatches bound alongside the spec sheet. The core fields are:"
+         data-fr="Un trim book pratique consacre en général une page par accessoire, avec les échantillons physiques reliés au côté de la fiche technique. Les rubriques essentielles sont :"
+         data-es="Un trim book práctico suele dedicar una página por accesorio, con las muestras físicas encuadernadas junto a la ficha técnica. Los campos esenciales son:">一份实用的 Trim Book 通常是一页对应一个辅料，实物样品与规格表合订。核心栏目如下：</p>
+      <table>
+        <tr><th data-zh="栏目" data-en="Field" data-fr="Rubrique" data-es="Campo">栏目</th><th data-zh="应填写内容" data-en="What to fill in" data-fr="À renseigner" data-es="Qué rellenar">应填写内容</th><th data-zh="要点" data-en="Key point" data-fr="Point clé" data-es="Punto clave">要点</th></tr>
+        <tr><td data-zh="辅料清单" data-en="Trim list" data-fr="Liste des accessoires" data-es="Lista de accesorios">辅料清单</td><td data-zh="编号、名称、用途、使用位置" data-en="Part number, name, function, placement" data-fr="Référence, nom, fonction, emplacement" data-es="Referencia, nombre, función, ubicación">编号、名称、用途、使用位置</td><td data-zh="一物一号，全品类覆盖" data-en="One number per trim, all categories covered" data-fr="Une référence par accessoire, toutes catégories couvertes" data-es="Una referencia por accesorio, todas las categorías cubiertas">一物一号，全品类覆盖</td></tr>
+        <tr><td data-zh="规格" data-en="Specification" data-fr="Spécification" data-es="Especificación">规格</td><td data-zh="尺寸、材质、克重、厚度、颜色色号" data-en="Size, material, weight, thickness, colour reference" data-fr="Dimensions, matériau, grammage, épaisseur, référence couleur" data-es="Tamaño, material, gramaje, grosor, referencia de color">尺寸、材质、克重、厚度、颜色色号</td><td data-zh="精确到毫米，避免写约数" data-en="To the millimetre; avoid approximations" data-fr="Au millimètre ; éviter les approximations" data-es="Al milímetro; evita aproximaciones">精确到毫米，避免写约数</td></tr>
+        <tr><td data-zh="图稿" data-en="Artwork" data-fr="Fichier graphique" data-es="Arte">图稿</td><td data-zh="矢量源文件、字体、Logo 使用规范" data-en="Vector source files, fonts, logo usage rules" data-fr="Fichiers vectoriels, polices, règles d'usage du logo" data-es="Archivos vectoriales, tipografías, reglas de uso del logotipo">矢量源文件、字体、Logo 使用规范</td><td data-zh="保留出血与最小线宽" data-en="Keep bleed and minimum line weight" data-fr="Conserver le fond perdu et l'épaisseur minimale" data-es="Conserva el sangrado y el grosor mínimo de línea">保留出血与最小线宽</td></tr>
+        <tr><td data-zh="工艺" data-en="Finishing" data-fr="Finition" data-es="Acabado">工艺</td><td data-zh="印刷方式、烫金、覆膜、缝制或热压" data-en="Print method, foil, lamination, sewing or heat press" data-fr="Impression, dorure, pelliculage, couture ou thermocollage" data-es="Impresión, estampado, laminado, cosido o termofijado">印刷方式、烫金、覆膜、缝制或热压</td><td data-zh="附实物标准样对照" data-en="Attach a physical reference master" data-fr="Joindre un échantillon de référence" data-es="Adjunta una muestra patrón física">附实物标准样对照</td></tr>
+        <tr><td data-zh="供应商信息" data-en="Supplier details" data-fr="Informations fournisseur" data-es="Datos del proveedor">供应商信息</td><td data-zh="工厂、联系人、起订量、交期" data-en="Factory, contact, MOQ, lead time" data-fr="Usine, contact, quantité minimale, délai" data-es="Fábrica, contacto, pedido mínimo, plazo">工厂、联系人、起订量、交期</td><td data-zh="保留备选供应商" data-en="Keep a backup supplier" data-fr="Prévoir un fournisseur de secours" data-es="Mantén un proveedor de reserva">保留备选供应商</td></tr>
+        <tr><td data-zh="合规要求" data-en="Compliance" data-fr="Conformité" data-es="Cumplimiento">合规要求</td><td data-zh="成分、洗护符号、法规与标准引用" data-en="Fibre content, care symbols, standards referenced" data-fr="Composition, symboles d'entretien, normes citées" data-es="Composición, símbolos de cuidado, normas citadas">成分、洗护符号、法规与标准引用</td><td data-zh="按目的市场区分" data-en="Split by destination market" data-fr="À séparer par marché de destination" data-es="Separa por mercado de destino">按目的市场区分</td></tr>
+      </table>
+
+      <h2 data-zh="3. 辅料编号与版本管理" data-en="3. Trim Numbering and Version Control" data-fr="3. Numérotation des accessoires et gestion des versions" data-es="3. Numeración de accesorios y control de versiones">3. 辅料编号与版本管理</h2>
+      <p data-zh="编号规则建议包含品类缩写加流水号，例如 HT 代表吊牌、WL 代表织唛、CL 代表洗水标、PB 代表包装袋。编号一旦确定就不要更改，它是 Trim Book、采购单与实物标签之间唯一的共同语言。"
+         data-en="A useful numbering rule combines a category code with a running number, for example HT for hang tags, WL for woven labels, CL for care labels and PB for poly bags. Once assigned, a part number should never change: it is the only common language between the trim book, purchase orders and the actual attached label."
+         data-fr="Une règle utile associe un code de catégorie à un numéro séquentiel : par exemple HT pour les étiquettes suspendues, WL pour les labels tissés, CL pour les étiquettes d'entretien et PB pour les sacs. Une fois attribuée, la référence ne doit jamais changer : c'est le seul langage commun entre le trim book, les bons de commande et l'accessoire livré."
+         data-es="Una regla útil combina un código de categoría con un número secuencial: por ejemplo HT para etiquetas colgantes, WL para etiquetas tejidas, CL para etiquetas de cuidado y PB para bolsas. Una vez asignada, la referencia nunca debe cambiar: es el único lenguaje común entre el trim book, los pedidos y el accesorio entregado.">编号规则建议包含品类缩写加流水号，例如 HT 代表吊牌、WL 代表织唛、CL 代表洗水标、PB 代表包装袋。编号一旦确定就不要更改，它是 Trim Book、采购单与实物标签之间唯一的共同语言。</p>
+      <ul>
+        <li data-zh="<strong>版本号</strong>：主版本号用于规格变更（如换材质、改尺寸），次版本号用于文字微调"
+            data-en="<strong>Version numbers</strong>: a major version for spec changes (new material, different size), a minor version for copy tweaks"
+            data-fr="<strong>Version</strong> : numéro majeur pour un changement de spécification, numéro mineur pour une retouche de texte"
+            data-es="<strong>Versión</strong>: número mayor para cambios de especificación, número menor para ajustes de texto"><strong>版本号</strong>：主版本号用于规格变更（如换材质、改尺寸），次版本号用于文字微调</li>
+        <li data-zh="<strong>变更记录</strong>：谁改的、改了什么、何时生效、旧库存如何处理，逐条留档"
+            data-en="<strong>Change log</strong>: who changed it, what changed, when it takes effect and what happens to old stock"
+            data-fr="<strong>Journal des modifications</strong> : qui, quoi, date d'effet et sort du stock ancien"
+            data-es="<strong>Registro de cambios</strong>: quién, qué, cuándo entra en vigor y qué pasa con el stock antiguo"><strong>变更记录</strong>：谁改的、改了什么、何时生效、旧库存如何处理，逐条留档</li>
+        <li data-zh="<strong>标准样</strong>：每个编号留一份签字确认的标准样，复购来料与它比对"
+            data-en="<strong>Reference master</strong>: keep a signed master sample per part number to check reorders against"
+            data-fr="<strong>Échantillon de référence</strong> : un exemplaire signé par référence, pour comparer les réassorts"
+            data-es="<strong>Muestra patrón</strong>: guarda una muestra firmada por referencia para comparar los pedidos repetidos"><strong>标准样</strong>：每个编号留一份签字确认的标准样，复购来料与它比对</li>
+        <li data-zh="<strong>电子化</strong>：规格表与矢量图稿放同一命名规则的文件夹，避免新旧版本混用"
+            data-en="<strong>Digital filing</strong>: keep spec sheets and vector artwork under one naming convention so old versions are not used by mistake"
+            data-fr="<strong>Classement numérique</strong> : fiches et fichiers vectoriels sous une même convention de nommage, pour éviter d'utiliser une ancienne version"
+            data-es="<strong>Archivo digital</strong>: fichas y archivos vectoriales bajo una misma convención de nombres para no usar versiones antiguas"><strong>电子化</strong>：规格表与矢量图稿放同一命名规则的文件夹，避免新旧版本混用</li>
+      </ul>
+
+      <h2 data-zh="4. 如何与辅料供应商对接" data-en="4. How to Work With Trim Suppliers" data-fr="4. Travailler avec les fournisseurs d'accessoires" data-es="4. Cómo trabajar con los proveedores de accesorios">4. 如何与辅料供应商对接</h2>
+      <ul>
+        <li data-zh="提供 Trim Book 的规格页与矢量图稿，而不是口头描述或用手机拍的照片"
+            data-en="Send the spec page and vector artwork from the trim book, not a verbal description or a phone photo"
+            data-fr="Transmettez la fiche technique et les fichiers vectoriels, pas une description orale ni une photo de téléphone"
+            data-es="Envía la ficha técnica y el arte vectorial, no una descripción verbal ni una foto de móvil">提供 Trim Book 的规格页与矢量图稿，而不是口头描述或用手机拍的照片</li>
+        <li data-zh="明确以标准样为准，要求供应商按标准样打样并寄回确认，确认后再批量生产"
+            data-en="State clearly that the master sample rules; ask the supplier to sample against it and send it back for sign-off before bulk"
+            data-fr="Précisez que l'échantillon de référence fait foi ; demandez un prototype conforme, à valider avant la série"
+            data-es="Deja claro que manda la muestra patrón; pide al proveedor que muestree conforme a ella y la devuelva para aprobación antes de producir">明确以标准样为准，要求供应商按标准样打样并寄回确认，确认后再批量生产</li>
+        <li data-zh="复购订单首次来货抽查比对标准样，重点看颜色、尺寸与手感"
+            data-en="On reorders, sample the first delivery against the master, focusing on colour, size and hand feel"
+            data-fr="En réassort, contrôlez la première livraison par rapport à la référence : couleur, dimensions et toucher"
+            data-es="En pedidos repetidos, compara la primera entrega con la muestra patrón: color, tamaño y tacto">复购订单首次来货抽查比对标准样，重点看颜色、尺寸与手感</li>
+        <li data-zh="让供应商参与早期打样，提前发现烫金太小、线宽过细等工艺不可行项"
+            data-en="Bring the supplier in at the sampling stage to catch unworkable details early, such as foil areas that are too small or lines that are too fine"
+            data-fr="Associez le fournisseur dès l'échantillonnage pour détecter tôt les détails irréalisables : dorure trop petite, traits trop fins"
+            data-es="Involucra al proveedor en el muestreo para detectar pronto detalles inviables, como dorados demasiado pequeños o líneas muy finas">让供应商参与早期打样，提前发现烫金太小、线宽过细等工艺不可行项</li>
+      </ul>
+
+      <h2 data-zh="5. 常见错误与优化建议" data-en="5. Common Mistakes and Fixes" data-fr="5. Erreurs fréquentes et solutions" data-es="5. Errores frecuentes y soluciones">5. 常见错误与优化建议</h2>
+      <ul>
+        <li data-zh="只写了吊牌和织唛，漏掉包装袋、缝纫线、吊粒等小辅料"
+            data-en="Documenting hang tags and woven labels but forgetting bags, sewing thread and plastic fasteners"
+            data-fr="Ne documenter que les étiquettes suspendues et les labels tissés, en oubliant sacs, fil et arrêts"
+            data-es="Documentar solo etiquetas colgantes y tejidas y olvidar bolsas, hilo y pasadores">只写了吊牌和织唛，漏掉包装袋、缝纫线、吊粒等小辅料</li>
+        <li data-zh="规格写约 50mm 而不写精确值，导致每批尺寸都不一样"
+            data-en="Writing about 50mm instead of an exact value, so every batch differs in size"
+            data-fr="Écrire environ 50 mm au lieu d'une valeur exacte : chaque lot diffère"
+            data-es="Escribir unos 50 mm en lugar de un valor exacto: cada lote varía">规格写约 50mm 而不写精确值，导致每批尺寸都不一样</li>
+        <li data-zh="只给 Pantone 色号却不附参考样，供应商各自理解的色差很大"
+            data-en="Quoting a Pantone number with no reference swatch, leaving suppliers to interpret the colour very differently"
+            data-fr="Indiquer un Pantone sans échantillon de référence : les fournisseurs interprètent la couleur très différemment"
+            data-es="Citar un Pantone sin muestra de referencia: cada proveedor interpreta el color de forma distinta">只给 Pantone 色号却不附参考样，供应商各自理解的色差很大</li>
+        <li data-zh="图稿只有 JPG 没有矢量源文件，换供应商就要重画一遍"
+            data-en="Keeping only a JPG with no vector source, so changing supplier means redrawing the artwork"
+            data-fr="Ne conserver qu'un JPG sans source vectorielle : changer de fournisseur impose de tout redessiner"
+            data-es="Guardar solo un JPG sin fuente vectorial: cambiar de proveedor obliga a redibujar el arte">图稿只有 JPG 没有矢量源文件，换供应商就要重画一遍</li>
+        <li data-zh="没有版本记录，出了错无法判断是哪一版规格造成的"
+            data-en="No version log, so when something goes wrong nobody can tell which spec revision caused it"
+            data-fr="Aucun journal de versions : en cas d'erreur, impossible de savoir quelle révision est en cause"
+            data-es="Sin registro de versiones: si algo falla, nadie sabe qué revisión lo causó">没有版本记录，出了错无法判断是哪一版规格造成的</li>
+      </ul>
+      <div class="callout" data-zh="<strong>💡 提示：</strong>Trim Book 不必一上线就做得很厚。先用一张表格加实物标准样把主力辅料跑通，再逐步补齐法规与检测栏目，比一次性追求完美更容易落地。"
+           data-en="<strong>💡 Tip:</strong> a trim book does not have to be thick on day one. Start with one spreadsheet plus reference masters for your main trims, then add compliance and test fields gradually — far easier to sustain than chasing perfection upfront."
+           data-fr="<strong>💡 Conseil :</strong> un trim book n'a pas besoin d'être épais dès le départ. Commencez par un tableau et des échantillons de référence pour les accessoires principaux, puis complétez la conformité et les essais progressivement."
+           data-es="<strong>💡 Consejo:</strong> un trim book no tiene que ser extenso desde el primer día. Empieza con una hoja de cálculo y muestras patrón de los accesorios principales, y añade después cumplimiento y ensayos de forma gradual."><strong>💡 提示：</strong>Trim Book 不必一上线就做得很厚。先用一张表格加实物标准样把主力辅料跑通，再逐步补齐法规与检测栏目，比一次性追求完美更容易落地。</div>
+      <p data-zh="<strong>东莞泰阁包装</strong>专注吊牌、织唛、洗水标、皮标与服装包装，可配合品牌建立辅料规格与标准样体系，提供从打样到大货的一站式支持。"
+         data-en="<strong>Dongguan TAGE Packaging</strong> focuses on hang tags, woven labels, care labels, leather patches and garment packaging, and can help brands set up trim specifications and master samples with one-stop support from sampling to bulk production."
+         data-fr="<strong>Dongguan TAGE Packaging</strong> est spécialisé dans les étiquettes suspendues, les labels tissés, les étiquettes d'entretien, les patches en cuir et l'emballage, et peut aider les marques à structurer leurs spécifications et échantillons de référence, de l'échantillonnage à la série."
+         data-es="<strong>Dongguan TAGE Packaging</strong> se centra en etiquetas colgantes, etiquetas tejidas, etiquetas de cuidado, parches de cuero y embalaje, y puede ayudar a las marcas a crear sus especificaciones y muestras patrón con soporte integral del muestreo a la producción."><strong>东莞泰阁包装</strong>专注吊牌、织唛、洗水标、皮标与服装包装，可配合品牌建立辅料规格与标准样体系，提供从打样到大货的一站式支持。</p>
+
+      <h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+      <ul>
+      <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+      <li><a href="garment-trims-sourcing-guide.html" data-zh="服装辅料采购指南：如何选择供应商" data-en="Garment Trims Sourcing Guide: How to Choose a Supplier" data-fr="Guide d'approvisionnement en accessoires : choisir un fournisseur" data-es="Guía de compra de accesorios: cómo elegir proveedor">服装辅料采购指南：如何选择供应商</a></li>
+      <li><a href="garment-trims-order-guide.html" data-zh="服装辅料下单指南：从询价到收货的完整流程" data-en="Garment Trims Order Guide: From Enquiry to Delivery" data-fr="Guide de commande des accessoires : de la demande à la livraison" data-es="Guía de pedido de accesorios: de la consulta a la entrega">服装辅料下单指南：从询价到收货的完整流程</a></li>
+      <li><a href="garment-trims-inventory-management.html" data-zh="服装辅料库存管理：如何避免断料与呆滞" data-en="Garment Trims Inventory Management: Avoiding Stockouts and Dead Stock" data-fr="Gestion des stocks d'accessoires : éviter les ruptures et les invendus" data-es="Gestión de inventario de accesorios: evitar roturas y stock muerto">服装辅料库存管理：如何避免断料与呆滞</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要建立品牌辅料规范与标准样体系？" data-en="Want to build a trim specification and master-sample system for your brand?" data-fr="Besoin de structurer vos spécifications et échantillons de référence ?" data-es="¿Quieres crear un sistema de especificaciones y muestras patrón para tu marca?">需要建立品牌辅料规范与标准样体系？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="咨询辅料规范方案 →" data-en="Ask about our trim standard service →" data-fr="Demandez notre accompagnement accessoires →" data-es="Consulta nuestro servicio de accesorios →">咨询辅料规范方案 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=69"></script>
+<script src="../js/assist.js?v=46"></script>
+</body>
+</html>
