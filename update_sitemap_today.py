@@ -4,7 +4,7 @@
 import re
 
 DATE = "2026-09-15"
-SLUGS = ["heat-transfer-labels.html", "apparel-trims-hs-code-customs.html"]
+SLUGS = ["clothing-label-compliance-uk.html", "poly-mailer-bags-guide.html"]
 LANGS = ["blog/", "en/blog/", "fr/blog/", "es/blog/"]
 
 path = "sitemap.xml"
