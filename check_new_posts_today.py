@@ -4,15 +4,14 @@
 import re, json, os
 from html.parser import HTMLParser
 
-NEW = ["blog/clothing-labels-ecommerce-platform-requirements.html", "blog/luxury-hang-tag-guide.html"]
+NEW = ["blog/garment-trims-supplier-audit.html", "blog/garment-trims-cost-saving-guide.html"]
 
 class Collector(HTMLParser):
     """收集 article-body 内的开始标签及其属性"""
     def __init__(self):
         super().__init__(convert_charrefs=False)
         self.in_body = False
-        self.depth = 0          # section 嵌套深度
-        self.tags = []          # [(tag, attrs_dict)]
+        self.tags = []
 
     def handle_starttag(self, tag, attrs):
         d = {k.lower(): (v or "") for k, v in attrs}
@@ -26,18 +25,11 @@ class Collector(HTMLParser):
         if self.in_body and tag == "section":
             self.in_body = False
 
-
-def body_len(s):
-    m = re.search(r'<section class="article-body">', s)
-    n = re.search(r'</section>', s[m.end():]) if m else None
-    return (m, n)
-
 print("== 1) 正文四语属性完整性 ==")
 total_missing = 0
 for f in NEW:
     s = open(f, encoding='utf-8').read()
-    p = Collector()
-    p.feed(s)
+    p = Collector(); p.feed(s)
     dzh = [(t, a) for t, a in p.tags if "data-zh" in a]
     missing = []
     for t, a in dzh:
@@ -48,13 +40,16 @@ for f in NEW:
     print("  %s" % f)
     print("    article-body 内标签 %d 个，其中带 data-zh 的 %d 个；缺 en/fr/es 的 %d 个 %s"
           % (len(p.tags), len(dzh), len(missing), missing[:8]))
-    print("    引号畸形 data-xx=\"\" : %d ; 属性值后裸字符: %d"
-          % (len(re.findall(r'data-(?:zh|en|fr|es)=""', s)),
-             len(re.findall(r'data-(?:zh|en|fr|es)="[^"]*"[a-zA-Z]', s))))
+    print("    引号畸形 data-xx=\"\" : %d ; 属性值后裸字符: %d ; 裸 & : %d"
+          % (len(re.findall(r'data-(?:zh|en|fr|es)=\"\"', s)),
+             len(re.findall(r'data-(?:zh|en|fr|es)=\"[^\"]*\"[a-zA-Z]', s)),
+             len(re.findall(r'&(?!amp;|nbsp;|quot;|#)', s))))
     lds = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
     for x in lds:
         json.loads(x)
     print("    JSON-LD %d 处全部合法" % len(lds))
+    t = re.search(r'<title[^>]*>(.*?)</title>', s, re.S).group(1)
+    print("    静态 title: %s" % t[:60])
 
 print("== 2) 生成页（en/fr/es）残留检查 ==")
 for f in NEW:
@@ -69,7 +64,7 @@ for f in NEW:
         residue = sum(1 for t, a in q.tags if any(k.startswith("data-") and k[5:] in
                       ("zh", "en", "fr", "es") for k in a))
         desc = re.search(r'<meta name="description" content="([^"]*)"', s)
-        print("  %-56s data-*残留=%d 正文汉字=%d desc=%d字符" %
+        print("  %-58s data-*残留=%d 正文汉字=%d desc=%d字符" %
               (path, residue, cjk, len(desc.group(1)) if desc else -1))
 
 print("== 3) sitemap ==")
@@ -84,7 +79,7 @@ print("  8 个新 URL 全部存在；<loc> 总数=%d" % sm.count("<loc>"))
 print("== 4) blog 列表页卡片 ==")
 for p in ("blog/index.html", "en/blog/index.html", "fr/blog/index.html", "es/blog/index.html"):
     s = open(p, encoding='utf-8').read()
-    hit = [slug for slug in ("clothing-labels-ecommerce-platform-requirements.html", "luxury-hang-tag-guide.html") if slug in s]
+    hit = [os.path.basename(f) for f in NEW if os.path.basename(f) in s]
     print("  %-26s 新卡片命中=%s" % (p, hit))
 
 print("\n结论: 缺失总数 = %d" % total_missing)
