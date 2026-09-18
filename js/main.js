@@ -17,7 +17,7 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
   } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "84";
+  var BUST_VERSION = "85";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -26,8 +26,16 @@
   if (DIR_LANG) {
     current = DIR_LANG;
   } else if (urlLang && LANGS.indexOf(urlLang) >= 0 && urlLang !== "zh") {
-    /* 旧式 ?lang=fr 链接：升级跳转到独立语言目录（301 语义，保留 SEO 权重） */
-    location.replace("../" + urlLang + "/");
+    /* 旧式 ?lang=fr 链接：升级跳转到「同一页面」的独立语言目录版
+       （旧写法 location.replace("../" + urlLang + "/") 在内页会把 /blog/xxx.html 解析成 /fr/ 首页，
+       丢失原文章路径；此处改为按 pathname 拼接，保留内页路径） */
+    var _rel = "";
+    try { _rel = location.pathname.replace(/^\/+/, ""); } catch (e) {}
+    if (!_rel || _rel === "index.html") {
+      location.replace("/" + urlLang + "/?v=" + BUST_VERSION);
+    } else {
+      location.replace("/" + urlLang + "/" + _rel + "?v=" + BUST_VERSION);
+    }
     return;
   } else {
     /* 根目录固定中文：独立语言目录已上线，根目录不再按浏览器语言自动切换
