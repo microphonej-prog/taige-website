@@ -4,7 +4,7 @@
 import re
 
 DATE = "2026-09-18"
-SLUGS = ["knitwear-sweater-trims-guide.html", "outerwear-down-jacket-trims-guide.html"]
+SLUGS = ["clothing-label-compliance-colombia.html", "clothing-label-compliance-chile.html"]
 LANGS = ["blog/", "en/blog/", "fr/blog/", "es/blog/"]
 
 path = "sitemap.xml"
@@ -34,6 +34,9 @@ for slug in SLUGS:
             "  </url>\r\n" % (pre, slug, DATE))
 
 assert "</urlset>" in s
+# 幂等：已存在则不重复追加
+for slug in SLUGS:
+    assert "https://taigetag.com/blog/%s</loc>" % slug not in s, "URL 已存在: %s" % slug
 s = s.replace("</urlset>", "".join(blocks) + "</urlset>", 1)
 
 with open(path, "w", encoding="utf-8", newline="") as f:

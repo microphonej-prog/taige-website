@@ -4,7 +4,7 @@
 import re, json, os
 from html.parser import HTMLParser
 
-NEW = ["blog/knitwear-sweater-trims-guide.html", "blog/outerwear-down-jacket-trims-guide.html"]
+NEW = ["blog/clothing-label-compliance-colombia.html", "blog/clothing-label-compliance-chile.html"]
 
 class Collector(HTMLParser):
     """收集 article-body 内的开始标签及其属性"""
@@ -83,3 +83,4 @@ for p in ("blog/index.html", "en/blog/index.html", "fr/blog/index.html", "es/blo
     print("  %-26s 新卡片命中=%s" % (p, hit))
 
 print("\n结论: 缺失总数 = %d" % total_missing)
+raise SystemExit(1 if total_missing else 0)

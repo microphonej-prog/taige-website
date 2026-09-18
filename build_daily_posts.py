@@ -3,7 +3,7 @@
 """按既有骨架生成当日两篇新文章（中文主文件）+ 在 blog/index.html 顶部插入两张卡片。"""
 import re
 
-SKEL = "blog/garment-trims-cost-saving-guide.html"
+SKEL = "blog/knitwear-sweater-trims-guide.html"
 DATE_ZH = "2026年9月18日"
 DATE_EN = "September 18, 2026"
 DATE_FR = "18 septembre 2026"
@@ -11,54 +11,54 @@ DATE_ES = "18 de septiembre de 2026"
 
 ARTICLES = [
     dict(
-        slug="knitwear-sweater-trims-guide.html",
-        body="blog/_body_a1.html",
-        title_zh="针织毛衣类服装辅料指南：主唛、洗水标与包装怎么选 | TAGE",
-        title_en="Knitwear Trims Guide: Neck Labels, Care Labels &amp; Packaging | TAGE",
-        title_fr="Accessoires pour maille et pull : label de col, étiquette d'entretien et emballage | TAGE",
-        title_es="Accesorios para punto y jerséis: etiqueta de cuello, de cuidado y embalaje | TAGE",
-        desc_zh="针织毛衣辅料指南：主唛怎么选才不刮皮肤、洗水标四种材质与耐洗表现对比、吊牌吊绳如何避免钩丝，以及防潮防压防蛀的包装要求，附可直接抄进询价邮件的规格确认表与五步打样验收清单。来自东莞泰阁包装。",
-        desc_en="Knitwear trims: soft neck labels that do not scratch, care label materials and wash performance, hang tags without snagging, packing tips and a spec sheet.",
-        desc_fr="Guide des accessoires pour maille : labels de col doux, matériaux d'étiquettes d'entretien et tenue au lavage, étiquettes suspendues sans accroche, emballage et fiche de spécifications.",
-        desc_es="Guía de accesorios para punto: etiquetas de cuello suaves, materiales de etiquetas de cuidado y lavado, etiquetas colgantes sin enganches, embalaje y ficha de especificaciones.",
-        crumb_zh="针织毛衣辅料指南",
-        crumb_en="Knitwear Trims Guide",
-        crumb_fr="Guide accessoires maille",
-        crumb_es="Guía de accesorios para punto",
-        h1_zh="针织与毛衣类服装辅料指南：柔软、耐洗、不钩丝",
-        h1_en="Knitwear Trims: Soft Labels That Survive Washing Without Snagging",
-        h1_fr="Accessoires de maille : souples, résistants au lavage, sans accroche",
-        h1_es="Accesorios de punto: suaves, resistentes al lavado y sin enganches",
-        tag_zh="针织品类", tag_en="Knitwear", tag_fr="Maille", tag_es="Punto",
-        sum_zh="针织面料由线圈构成，怕硬边、怕钩丝，洗后还会收缩起绒。本文按主唛、洗水标、吊牌吊绳、包装四部分拆解针织款辅料要求：材质与边缘处理、缩率匹配、四种洗水标材质对比、吊绳与扣件选型，并给出可直接抄进询价邮件的规格确认表和五步打样验收清单。",
-        sum_en="Knitted fabric is built from loops that snag on hard edges and shrink after washing. This guide breaks knitwear trims into four parts — neck label, care label, hang tag and string, packing — covering material and edge treatment, shrinkage matching, four care label types compared, and string and fastener selection, with a spec sheet and a five-step sampling check.",
-        sum_fr="La maille est faite de boucles qui s'accrochent aux bords rigides et se rétractent au lavage. Ce guide décompose les accessoires de maille en quatre parties — label de col, étiquette d'entretien, étiquette suspendue et cordon, emballage — avec matières et bords, retrait assorti, comparaison de quatre types d'étiquettes d'entretien, choix du cordon et de la fixation, fiche de spécifications et contrôle d'échantillon.",
-        sum_es="El punto se forma con bucles que se enganchan en bordes rígidos y encogen al lavar. Esta guía divide los accesorios de punto en cuatro partes — etiqueta de cuello, de cuidado, colgante con cordón y embalaje — con materiales y bordes, encogimiento compatible, comparativa de cuatro tipos de etiqueta de cuidado, elección de cordón y cierre, ficha de especificaciones y control de muestra.",
+        slug="clothing-label-compliance-colombia.html",
+        body="blog/_body_col.html",
+        title_zh="哥伦比亚服装标签合规指南：西语标签、成分与进口商信息 | TAGE",
+        title_en="Colombia Clothing Label Requirements: Spanish Text, Fibre Content &amp; Importer Info | TAGE",
+        title_fr="Étiquetage des vêtements en Colombie : espagnol, composition et importateur | TAGE",
+        title_es="Requisitos de etiquetado de ropa en Colombia: español, composición e importador | TAGE",
+        desc_zh="哥伦比亚服装标签合规指南：西班牙语永久标签、纤维成分百分比、原产国与进口商 NIT 信息、洗护说明要求，附童装安全要点、常见错误与打样验收清单，帮您在工厂端一次做对。来自东莞泰阁包装。",
+        desc_en="Colombia clothing label rules: Spanish permanent labels, fibre content percentages, country of origin, importer NIT and care text, with a sampling checklist.",
+        desc_fr="Etiquetage des vêtements en Colombie : étiquettes permanentes en espagnol, composition, origine, NIT de l'importateur et entretien, avec liste de contrôle.",
+        desc_es="Etiquetado de ropa en Colombia: etiquetas permanentes en español, composición, origen, NIT del importador y cuidado, con lista de verificación.",
+        crumb_zh="哥伦比亚标签合规",
+        crumb_en="Colombia Label Rules",
+        crumb_fr="Réglementation Colombie",
+        crumb_es="Normativa Colombia",
+        h1_zh="哥伦比亚服装标签合规指南：西语标签、成分与进口商信息",
+        h1_en="Colombia Clothing Label Compliance: Spanish Text, Fibre Content and Importer Details",
+        h1_fr="Conformité de l'étiquetage en Colombie : espagnol, composition et importateur",
+        h1_es="Cumplimiento del etiquetado en Colombia: español, composición e importador",
+        tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
+        sum_zh="哥伦比亚要求服装信息用西班牙语、永久附着，成分与洗护不能只写在吊牌上。本文梳理强制标注项目、纤维成分的降序写法与允许误差、洗护符号加西语短句的组合、童装绳带与小部件要求，并给出可抄进询价邮件的七步核对清单，帮您在工厂端把标签一次做对。",
+        sum_en="Colombia requires Spanish, permanently attached information — composition and care cannot live on the hang tag alone. This guide covers mandatory items, descending fibre percentages and tolerances, symbols paired with Spanish wording, childrenswear cord and small-part rules, plus a seven-step checklist you can paste into a quotation request.",
+        sum_fr="La Colombie exige des informations en espagnol fixées durablement : composition et entretien ne peuvent pas figurer uniquement sur l'étiquette suspendue. Ce guide couvre les mentions obligatoires, les pourcentages décroissants et tolérances, symboles et texte espagnol, exigences pour l'enfant, et une liste de contrôle en sept points.",
+        sum_es="Colombia exige información en español y fijada de forma duradera: composición y cuidado no pueden ir solo en la etiqueta colgante. Esta guía cubre los datos obligatorios, porcentajes decrecientes y tolerancias, símbolos con texto en español, requisitos infantiles y una lista de verificación de siete pasos.",
     ),
     dict(
-        slug="outerwear-down-jacket-trims-guide.html",
-        body="blog/_body_a2.html",
-        title_zh="外套与羽绒服辅料指南：洗水警示、吊粒承重与防钻绒包装 | TAGE",
-        title_en="Outerwear &amp; Down Jacket Trims: Care Warnings, Tag Load &amp; Packing | TAGE",
-        title_fr="Accessoires pour vestes et doudounes : avertissements, fixation et emballage | TAGE",
-        title_es="Accesorios para abrigos y plumíferos: avisos, sujeción y embalaje | TAGE",
-        desc_zh="外套与羽绒服辅料指南：洗水标警示语怎么与面料测试对齐、主唛缝在里布而非涂层、吊牌吊粒按整件重量选型、包装如何防钻绒防潮少压缩，并附出口外箱与唛头要点、规格确认表和验收清单。来自东莞泰阁包装。",
-        desc_en="Outerwear trims guide: care label warnings matched to fabric tests, neck labels on linings, hang tag load, and packing that prevents down leakage and moisture.",
-        desc_fr="Guide des accessoires pour vestes et doudounes : avertissements d'entretien alignés sur les tests, labels de col sur doublure, résistance de l'étiquette suspendue, emballage anti-fuite et anti-humidité.",
-        desc_es="Guía de accesorios para abrigos y plumíferos: avisos de cuidado según ensayos, etiquetas de cuello en el forro, carga de la etiqueta colgante, embalaje sin fugas de plumón ni humedad.",
-        crumb_zh="外套羽绒辅料指南",
-        crumb_en="Outerwear Trims Guide",
-        crumb_fr="Guide accessoires veste",
-        crumb_es="Guía de accesorios para abrigos",
-        h1_zh="外套与羽绒服辅料指南：警示、承重与包装",
-        h1_en="Outerwear and Down Jacket Trims: Warnings, Load and Packing",
-        h1_fr="Accessoires de veste et doudoune : avertissements, résistance, emballage",
-        h1_es="Accesorios para abrigos y plumíferos: avisos, carga y embalaje",
-        tag_zh="外套品类", tag_en="Outerwear", tag_fr="Veste", tag_es="Abrigos",
-        sum_zh="外套与羽绒服辅料的第一诉求是耐洗、警示与承重。本文说明主唛为何缝在里布而非涂层、四类面料的洗水警示语方向、吊牌吊粒如何按整件重量选型、包装怎样防钻绒防潮又不过度压缩，并附出口外箱与唛头要点、规格确认表与验收清单。",
-        sum_en="For outerwear the trims must wash, warn and bear load. This guide explains why neck labels go on the lining rather than the coating, how care warnings differ across four fabric types, how to size hang tag strings and fasteners against garment weight, and how to pack against down leakage and moisture without over-compressing — plus export carton and marking notes, a spec sheet and acceptance checks.",
-        sum_fr="Pour la veste, l'accessoire doit tenir au lavage, avertir et résister. Ce guide explique pourquoi le label de col se coud sur la doublure, comment les avertissements varient selon quatre types de tissu, comment dimensionner cordon et fixation au poids de la pièce, et comment emballer contre la fuite de duvet et l'humidité sans sur-comprimer — avec cartons export, fiche de spécifications et contrôles de réception.",
-        sum_es="En abrigos, el accesorio debe lavarse bien, avisar y soportar carga. Esta guía explica por qué la etiqueta de cuello va en el forro, cómo cambian los avisos según cuatro tipos de tejido, cómo elegir cordón y cierre por el peso de la prenda y cómo embalar contra fugas de plumón y humedad sin comprimir en exceso, con cajas de exportación, ficha de especificaciones y controles de recepción.",
+        slug="clothing-label-compliance-chile.html",
+        body="blog/_body_chi.html",
+        title_zh="智利服装标签合规指南：西语标注、耐久性与进口文件 | TAGE",
+        title_en="Chile Clothing Label Requirements: Spanish Text, Durability &amp; Import Docs | TAGE",
+        title_fr="Étiquetage des vêtements au Chili : espagnol, durabilité et import | TAGE",
+        title_es="Requisitos de etiquetado de ropa en Chile: español, durabilidad e importación | TAGE",
+        desc_zh="智利服装标签合规指南：西班牙语标注、进口商 RUT、三次家洗耐久性测试、Talla 尺码双标、洗护西语表述与报关文件一致性，附泳装童装要点与打样核对清单。来自东莞泰阁包装。",
+        desc_en="Chile clothing label rules: Spanish text, importer RUT, three-wash durability, Talla sizing, care wording and customs consistency, plus a sampling checklist.",
+        desc_fr="Etiquetage au Chili : texte espagnol, RUT de l'importateur, durabilité sur trois lavages, tailles Talla, entretien et cohérence douanière, avec liste de contrôle.",
+        desc_es="Etiquetado en Chile: texto en español, RUT del importador, durabilidad a tres lavados, tallas Talla, cuidado y coherencia aduanera, con lista de verificación.",
+        crumb_zh="智利标签合规",
+        crumb_en="Chile Label Rules",
+        crumb_fr="Réglementation Chili",
+        crumb_es="Normativa Chile",
+        h1_zh="智利服装标签合规指南：西语标注、耐久性与进口文件",
+        h1_en="Chile Clothing Label Compliance: Spanish Text, Durability and Import Paperwork",
+        h1_fr="Conformité de l'étiquetage au Chili : espagnol, durabilité et documents douaniers",
+        h1_es="Cumplimiento del etiquetado en Chile: español, durabilidad y documentos de importación",
+        tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
+        sum_zh="智利看的是「洗过还能读懂」：西班牙语标注、永久附着、信息与实物一致。本文说明进口商 RUT 与进口商标识怎么写、如何用三次家洗验证标签耐久性、Talla 本地码与国际码的双标做法，以及标签、吊牌、箱唛、发票四处一致性与原产地证配合，附泳装与童装要点。",
+        sum_en="Chile asks one practical question: is the label still readable after washing? This guide explains importer RUT lines, how to prove durability with a three-wash test, how to mark Talla alongside international sizes, and how to keep label, hang tag, carton marks and invoice consistent — plus swimwear and childrenswear notes.",
+        sum_fr="Le Chili pose une question pratique : l'étiquette reste-t-elle lisible après lavage ? Ce guide détaille la ligne RUT de l'importateur, la preuve de durabilité par trois lavages, le marquage Talla avec les tailles internationales, la cohérence étiquette / suspendue / cartons / facture, plus maillots et enfant.",
+        sum_es="Chile plantea una pregunta práctica: ¿sigue legible la etiqueta tras lavar? Esta guía explica la línea con el RUT del importador, cómo probar la durabilidad con tres lavados, el marcado Talla junto a tallas internacionales y la coherencia etiqueta / colgante / caja / factura, además de baño e infantil.",
     ),
 ]
 
@@ -132,8 +132,8 @@ for a in ARTICLES:
     out = "blog/%s" % slug
     with open(out, "w", encoding="utf-8", newline="") as f:
         f.write(s)
-    print("写入 %s (%d 字节)  desc_en=%d 字符  desc_zh=%d 字符"
-          % (out, len(s.encode("utf-8")), len(a["desc_en"]), len(a["desc_zh"])))
+    print("写入 %s (%d 字节)  desc_en=%d 字符  desc_fr=%d  desc_es=%d  desc_zh=%d 字符"
+          % (out, len(s.encode("utf-8")), len(a["desc_en"]), len(a["desc_fr"]), len(a["desc_es"]), len(a["desc_zh"])))
 
 # ---------- blog/index.html 顶部插入两张卡片 ----------
 CARD = '''      <article class="post-card">
