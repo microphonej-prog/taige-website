@@ -3,62 +3,62 @@
 """按既有骨架生成当日两篇新文章（中文主文件）+ 在 blog/index.html 顶部插入两张卡片。"""
 import re
 
-SKEL = "blog/uniform-workwear-labeling-guide.html"
-DATE_ZH = "2026年9月17日"
-DATE_EN = "September 17, 2026"
-DATE_FR = "17 septembre 2026"
-DATE_ES = "17 de septiembre de 2026"
+SKEL = "blog/garment-trims-cost-saving-guide.html"
+DATE_ZH = "2026年9月18日"
+DATE_EN = "September 18, 2026"
+DATE_FR = "18 septembre 2026"
+DATE_ES = "18 de septiembre de 2026"
 
 ARTICLES = [
     dict(
-        slug="garment-trims-supplier-audit.html",
+        slug="knitwear-sweater-trims-guide.html",
         body="blog/_body_a1.html",
-        title_zh="服装辅料供应商验厂指南：现场该看什么、该问什么 | TAGE",
-        title_en="How to Audit a Garment Trims Supplier: On-Site Checklist &amp; Red Flags | TAGE",
-        title_fr="Auditer un fournisseur d'accessoires de vêtements : que vérifier sur place | TAGE",
-        title_es="Cómo auditar a un proveedor de accesorios de confección: qué revisar | TAGE",
-        desc_zh="服装辅料供应商验厂指南：从主体资质、设备产能、工序自制率、QC 体系到仓储留样与环保合规，说明现场要看什么、该问哪十个问题、七条危险信号，并给出远程验厂三步法与可复用评分表。来自东莞泰阁包装。",
-        desc_en="Garment trims supplier audit guide: what to inspect in a factory, which questions to ask, red flags to watch, and how to run a remote audit with a scorecard.",
-        desc_fr="Guide d'audit d'un fournisseur d'accessoires : ce qu'il faut vérifier en usine, les questions à poser, les signaux d'alerte et l'audit à distance avec grille d'évaluation.",
-        desc_es="Guía para auditar a un proveedor de accesorios de confección: qué verificar en fábrica, qué preguntar, señales de alarma y auditoría remota con plantilla de evaluación.",
-        crumb_zh="辅料供应商验厂指南",
-        crumb_en="Trims Supplier Audit",
-        crumb_fr="Audit de fournisseur d'accessoires",
-        crumb_es="Auditoría de proveedores de accesorios",
-        h1_zh="服装辅料供应商验厂指南：现场该看什么、该问什么",
-        h1_en="How to Audit a Garment Trims Supplier: What to Check On-Site",
-        h1_fr="Auditer un fournisseur d'accessoires : que vérifier sur place",
-        h1_es="Cómo auditar a un proveedor de accesorios: qué revisar en planta",
-        tag_zh="供应链管理", tag_en="Supply Chain", tag_fr="Chaîne d'approvisionnement", tag_es="Cadena de suministro",
-        sum_zh="验厂不是参观样板间。本文给出一份可以直接带去工厂的清单：主体资质、设备与产能、工序自制率、QC 与检测、仓储留样、合规环保六个维度，十个该当面问的问题，七条危险信号，以及无法到场时的远程验厂三步法和可复用评分表。",
-        sum_en="An audit is more than a showroom tour. This guide gives you a checklist to take to the factory: six dimensions to inspect (entity, equipment, in-house processes, QC, storage, compliance), ten questions to ask face to face, seven red flags, and a three-step remote audit with a scorecard.",
-        sum_fr="Un audit n'est pas une visite de showroom. Ce guide fournit une liste à emporter en usine : six dimensions à vérifier (entité, machines, intégration, contrôle qualité, stockage, conformité), dix questions à poser, sept signaux d'alerte et un audit à distance en trois étapes avec grille d'évaluation.",
-        sum_es="Una auditoría no es visitar un showroom. Esta guía ofrece una lista para llevar a la fábrica: seis dimensiones que revisar (entidad, máquinas, integración, control de calidad, almacén, cumplimiento), diez preguntas que hacer, siete señales de alarma y una auditoría remota en tres pasos con plantilla.",
+        title_zh="针织毛衣类服装辅料指南：主唛、洗水标与包装怎么选 | TAGE",
+        title_en="Knitwear Trims Guide: Neck Labels, Care Labels &amp; Packaging | TAGE",
+        title_fr="Accessoires pour maille et pull : label de col, étiquette d'entretien et emballage | TAGE",
+        title_es="Accesorios para punto y jerséis: etiqueta de cuello, de cuidado y embalaje | TAGE",
+        desc_zh="针织毛衣辅料指南：主唛怎么选才不刮皮肤、洗水标四种材质与耐洗表现对比、吊牌吊绳如何避免钩丝，以及防潮防压防蛀的包装要求，附可直接抄进询价邮件的规格确认表与五步打样验收清单。来自东莞泰阁包装。",
+        desc_en="Knitwear trims: soft neck labels that do not scratch, care label materials and wash performance, hang tags without snagging, packing tips and a spec sheet.",
+        desc_fr="Guide des accessoires pour maille : labels de col doux, matériaux d'étiquettes d'entretien et tenue au lavage, étiquettes suspendues sans accroche, emballage et fiche de spécifications.",
+        desc_es="Guía de accesorios para punto: etiquetas de cuello suaves, materiales de etiquetas de cuidado y lavado, etiquetas colgantes sin enganches, embalaje y ficha de especificaciones.",
+        crumb_zh="针织毛衣辅料指南",
+        crumb_en="Knitwear Trims Guide",
+        crumb_fr="Guide accessoires maille",
+        crumb_es="Guía de accesorios para punto",
+        h1_zh="针织与毛衣类服装辅料指南：柔软、耐洗、不钩丝",
+        h1_en="Knitwear Trims: Soft Labels That Survive Washing Without Snagging",
+        h1_fr="Accessoires de maille : souples, résistants au lavage, sans accroche",
+        h1_es="Accesorios de punto: suaves, resistentes al lavado y sin enganches",
+        tag_zh="针织品类", tag_en="Knitwear", tag_fr="Maille", tag_es="Punto",
+        sum_zh="针织面料由线圈构成，怕硬边、怕钩丝，洗后还会收缩起绒。本文按主唛、洗水标、吊牌吊绳、包装四部分拆解针织款辅料要求：材质与边缘处理、缩率匹配、四种洗水标材质对比、吊绳与扣件选型，并给出可直接抄进询价邮件的规格确认表和五步打样验收清单。",
+        sum_en="Knitted fabric is built from loops that snag on hard edges and shrink after washing. This guide breaks knitwear trims into four parts — neck label, care label, hang tag and string, packing — covering material and edge treatment, shrinkage matching, four care label types compared, and string and fastener selection, with a spec sheet and a five-step sampling check.",
+        sum_fr="La maille est faite de boucles qui s'accrochent aux bords rigides et se rétractent au lavage. Ce guide décompose les accessoires de maille en quatre parties — label de col, étiquette d'entretien, étiquette suspendue et cordon, emballage — avec matières et bords, retrait assorti, comparaison de quatre types d'étiquettes d'entretien, choix du cordon et de la fixation, fiche de spécifications et contrôle d'échantillon.",
+        sum_es="El punto se forma con bucles que se enganchan en bordes rígidos y encogen al lavar. Esta guía divide los accesorios de punto en cuatro partes — etiqueta de cuello, de cuidado, colgante con cordón y embalaje — con materiales y bordes, encogimiento compatible, comparativa de cuatro tipos de etiqueta de cuidado, elección de cordón y cierre, ficha de especificaciones y control de muestra.",
     ),
     dict(
-        slug="garment-trims-cost-saving-guide.html",
+        slug="outerwear-down-jacket-trims-guide.html",
         body="blog/_body_a2.html",
-        title_zh="服装辅料降本指南：不牺牲品质的 8 个方向 | TAGE",
-        title_en="Garment Trims Cost Reduction: 8 Ways to Save Without Losing Quality | TAGE",
-        title_fr="Réduire le coût des accessoires de vêtements : 8 leviers sans perdre en qualité | TAGE",
-        title_es="Reducir el coste de accesorios de confección: 8 vías sin perder calidad | TAGE",
-        desc_zh="服装辅料降本指南：从规格合理化、工艺替代、拼版套版、数量与排期、SKU 精简到包装物流，整理八个不牺牲品质的降本方向，并列出五种会在售后加倍还回来的伪降本。来自东莞泰阁包装。",
-        desc_en="Garment trims cost reduction guide: eight levers that cut cost without losing quality — specification, process substitution, imposition, volumes and SKU pruning.",
-        desc_fr="Guide de réduction des coûts des accessoires : huit leviers qui réduisent le coût sans sacrifier la qualité — spécifications, procédés, imposition, quantités et références.",
-        desc_es="Guía para reducir el coste de los accesorios: ocho palancas que recortan costes sin perder calidad — especificaciones, procesos, imposición, cantidades y referencias.",
-        crumb_zh="辅料降本指南",
-        crumb_en="Trims Cost Reduction",
-        crumb_fr="Réduction des coûts accessoires",
-        crumb_es="Reducción de costes de accesorios",
-        h1_zh="服装辅料降本指南：不牺牲品质的 8 个方向",
-        h1_en="Garment Trims Cost Reduction: 8 Levers That Keep Quality",
-        h1_fr="Réduire le coût des accessoires : 8 leviers sans perdre en qualité",
-        h1_es="Reducir el coste de los accesorios: 8 palancas sin perder calidad",
-        tag_zh="成本优化", tag_en="Cost Control", tag_fr="Maîtrise des coûts", tag_es="Control de costes",
-        sum_zh="辅料降本不等于压价。本文从规格合理化、工艺替代、拼版套版、数量与排期、SKU 精简到包装物流，整理八个真实可行的降本方向，并列出五种会在售后加倍还回来的伪降本，附一次 30 分钟的规格复盘步骤。",
-        sum_en="Cost reduction is not price pressure. This guide sets out eight workable levers — specification review, process substitution, imposition, volumes and scheduling, SKU pruning, packing and logistics — plus five false economies that return doubled in after-sales.",
-        sum_fr="Réduire les coûts n'est pas écraser les prix. Ce guide présente huit leviers applicables — spécifications, substitution de procédés, imposition, quantités, réduction des références, emballage et logistique — et cinq fausses économies qui reviennent multipliées après-vente.",
-        sum_es="Reducir costes no es apretar el precio. Esta guía recoge ocho palancas aplicables — especificaciones, sustitución de procesos, imposición, cantidades, reducción de referencias, embalaje y logística — y cinco falsos ahorros que vuelven multiplicados en posventa.",
+        title_zh="外套与羽绒服辅料指南：洗水警示、吊粒承重与防钻绒包装 | TAGE",
+        title_en="Outerwear &amp; Down Jacket Trims: Care Warnings, Tag Load &amp; Packing | TAGE",
+        title_fr="Accessoires pour vestes et doudounes : avertissements, fixation et emballage | TAGE",
+        title_es="Accesorios para abrigos y plumíferos: avisos, sujeción y embalaje | TAGE",
+        desc_zh="外套与羽绒服辅料指南：洗水标警示语怎么与面料测试对齐、主唛缝在里布而非涂层、吊牌吊粒按整件重量选型、包装如何防钻绒防潮少压缩，并附出口外箱与唛头要点、规格确认表和验收清单。来自东莞泰阁包装。",
+        desc_en="Outerwear trims guide: care label warnings matched to fabric tests, neck labels on linings, hang tag load, and packing that prevents down leakage and moisture.",
+        desc_fr="Guide des accessoires pour vestes et doudounes : avertissements d'entretien alignés sur les tests, labels de col sur doublure, résistance de l'étiquette suspendue, emballage anti-fuite et anti-humidité.",
+        desc_es="Guía de accesorios para abrigos y plumíferos: avisos de cuidado según ensayos, etiquetas de cuello en el forro, carga de la etiqueta colgante, embalaje sin fugas de plumón ni humedad.",
+        crumb_zh="外套羽绒辅料指南",
+        crumb_en="Outerwear Trims Guide",
+        crumb_fr="Guide accessoires veste",
+        crumb_es="Guía de accesorios para abrigos",
+        h1_zh="外套与羽绒服辅料指南：警示、承重与包装",
+        h1_en="Outerwear and Down Jacket Trims: Warnings, Load and Packing",
+        h1_fr="Accessoires de veste et doudoune : avertissements, résistance, emballage",
+        h1_es="Accesorios para abrigos y plumíferos: avisos, carga y embalaje",
+        tag_zh="外套品类", tag_en="Outerwear", tag_fr="Veste", tag_es="Abrigos",
+        sum_zh="外套与羽绒服辅料的第一诉求是耐洗、警示与承重。本文说明主唛为何缝在里布而非涂层、四类面料的洗水警示语方向、吊牌吊粒如何按整件重量选型、包装怎样防钻绒防潮又不过度压缩，并附出口外箱与唛头要点、规格确认表与验收清单。",
+        sum_en="For outerwear the trims must wash, warn and bear load. This guide explains why neck labels go on the lining rather than the coating, how care warnings differ across four fabric types, how to size hang tag strings and fasteners against garment weight, and how to pack against down leakage and moisture without over-compressing — plus export carton and marking notes, a spec sheet and acceptance checks.",
+        sum_fr="Pour la veste, l'accessoire doit tenir au lavage, avertir et résister. Ce guide explique pourquoi le label de col se coud sur la doublure, comment les avertissements varient selon quatre types de tissu, comment dimensionner cordon et fixation au poids de la pièce, et comment emballer contre la fuite de duvet et l'humidité sans sur-comprimer — avec cartons export, fiche de spécifications et contrôles de réception.",
+        sum_es="En abrigos, el accesorio debe lavarse bien, avisar y soportar carga. Esta guía explica por qué la etiqueta de cuello va en el forro, cómo cambian los avisos según cuatro tipos de tejido, cómo elegir cordón y cierre por el peso de la prenda y cómo embalar contra fugas de plumón y humedad sin comprimir en exceso, con cajas de exportación, ficha de especificaciones y controles de recepción.",
     ),
 ]
 
@@ -68,7 +68,7 @@ print("骨架 breadcrumb 名:", old3)
 
 for a in ARTICLES:
     slug = a["slug"]
-    s = skel.replace("uniform-workwear-labeling-guide.html", slug)
+    s = skel.replace(SKEL.replace("blog/", ""), slug)
 
     # title（四语属性 + 中文静态内容）
     title_line = ('<title data-zh="%s" data-en="%s" data-fr="%s" data-es="%s">%s</title>'
@@ -154,7 +154,7 @@ for a in ARTICLES:
         slug=a["slug"])
 
 idx = "blog/index.html"
-s = open(idx, encoding="utf-8", newline="").read()
+s = open(idx, encoding="utf-8").read()
 marker = '<div class="post-grid">\n'
 assert marker in s, "post-grid 未找到"
 assert ARTICLES[0]["slug"] not in s

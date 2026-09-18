@@ -3,8 +3,8 @@
 """向 sitemap.xml 追加当日新增文章（4 语言）并更新 blog 首页 lastmod"""
 import re
 
-DATE = "2026-09-17"
-SLUGS = ["garment-trims-supplier-audit.html", "garment-trims-cost-saving-guide.html"]
+DATE = "2026-09-18"
+SLUGS = ["knitwear-sweater-trims-guide.html", "outerwear-down-jacket-trims-guide.html"]
 LANGS = ["blog/", "en/blog/", "fr/blog/", "es/blog/"]
 
 path = "sitemap.xml"
