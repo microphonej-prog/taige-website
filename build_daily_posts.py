@@ -11,60 +11,70 @@ DATE_ES = "18 de septiembre de 2026"
 
 ARTICLES = [
     dict(
-        slug="clothing-label-compliance-colombia.html",
-        body="blog/_body_col.html",
-        title_zh="哥伦比亚服装标签合规指南：西语标签、成分与进口商信息 | TAGE",
-        title_en="Colombia Clothing Label Requirements: Spanish Text, Fibre Content &amp; Importer Info | TAGE",
-        title_fr="Étiquetage des vêtements en Colombie : espagnol, composition et importateur | TAGE",
-        title_es="Requisitos de etiquetado de ropa en Colombia: español, composición e importador | TAGE",
-        desc_zh="哥伦比亚服装标签合规指南：西班牙语永久标签、纤维成分百分比、原产国与进口商 NIT 信息、洗护说明要求，附童装安全要点、常见错误与打样验收清单，帮您在工厂端一次做对。来自东莞泰阁包装。",
-        desc_en="Colombia clothing label rules: Spanish permanent labels, fibre content percentages, country of origin, importer NIT and care text, with a sampling checklist.",
-        desc_fr="Etiquetage des vêtements en Colombie : étiquettes permanentes en espagnol, composition, origine, NIT de l'importateur et entretien, avec liste de contrôle.",
-        desc_es="Etiquetado de ropa en Colombia: etiquetas permanentes en español, composición, origen, NIT del importador y cuidado, con lista de verificación.",
-        crumb_zh="哥伦比亚标签合规",
-        crumb_en="Colombia Label Rules",
-        crumb_fr="Réglementation Colombie",
-        crumb_es="Normativa Colombia",
-        h1_zh="哥伦比亚服装标签合规指南：西语标签、成分与进口商信息",
-        h1_en="Colombia Clothing Label Compliance: Spanish Text, Fibre Content and Importer Details",
-        h1_fr="Conformité de l'étiquetage en Colombie : espagnol, composition et importateur",
-        h1_es="Cumplimiento del etiquetado en Colombia: español, composición e importador",
+        slug="metal-trims-nickel-release-guide.html",
+        body="blog/_body_ni.html",
+        title_zh="金属辅料镍释放合规指南：金属扣、撞钉与鸡眼怎么选 | TAGE",
+        title_en="Nickel Release in Metal Trims: Buckles, Rivets &amp; Eyelets | TAGE",
+        title_fr="Libération de nickel des accessoires métalliques : boucles, rivets et œillets | TAGE",
+        title_es="Liberación de níquel en accesorios metálicos: hebillas, remaches y ojales | TAGE",
+        desc_zh="金属辅料镍释放合规指南：金属扣、撞钉、鸡眼与金属吊粒的镍风险来源，无镍电镀与材质替代方案，EN 1811 与 EN 12472 测试逻辑，以及采购端要写进规格书的五件事。来自东莞泰阁包装。",
+        desc_en="Nickel release in metal trims: which buckles, rivets and eyelets fall under REACH limits, nickel-free plating options, test methods and spec-sheet advice.",
+        desc_fr="Libération de nickel dans les accessoires métalliques : quelles pièces entrent dans le champ REACH, placage sans nickel, essais et cahier des charges.",
+        desc_es="Liberación de níquel en accesorios metálicos: qué piezas entran en REACH, baños sin níquel, ensayos y ficha técnica.",
+        crumb_zh="镍释放合规",
+        crumb_en="Nickel Release Rules",
+        crumb_fr="Réglementation nickel",
+        crumb_es="Normativa del níquel",
+        h1_zh="金属辅料镍释放合规指南：金属扣、撞钉与鸡眼怎么选",
+        h1_en="Nickel Release in Metal Trims: Choosing Buckles, Rivets and Eyelets",
+        h1_fr="Libération de nickel : choisir boucles, rivets et œillets métalliques",
+        h1_es="Liberación de níquel: elegir hebillas, remaches y ojales metálicos",
         tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
-        sum_zh="哥伦比亚要求服装信息用西班牙语、永久附着，成分与洗护不能只写在吊牌上。本文梳理强制标注项目、纤维成分的降序写法与允许误差、洗护符号加西语短句的组合、童装绳带与小部件要求，并给出可抄进询价邮件的七步核对清单，帮您在工厂端把标签一次做对。",
-        sum_en="Colombia requires Spanish, permanently attached information — composition and care cannot live on the hang tag alone. This guide covers mandatory items, descending fibre percentages and tolerances, symbols paired with Spanish wording, childrenswear cord and small-part rules, plus a seven-step checklist you can paste into a quotation request.",
-        sum_fr="La Colombie exige des informations en espagnol fixées durablement : composition et entretien ne peuvent pas figurer uniquement sur l'étiquette suspendue. Ce guide couvre les mentions obligatoires, les pourcentages décroissants et tolérances, symboles et texte espagnol, exigences pour l'enfant, et une liste de contrôle en sept points.",
-        sum_es="Colombia exige información en español y fijada de forma duradera: composición y cuidado no pueden ir solo en la etiqueta colgante. Esta guía cubre los datos obligatorios, porcentajes decrecientes y tolerancias, símbolos con texto en español, requisitos infantiles y una lista de verificación de siete pasos.",
+        sum_zh="法规不禁止含镍，只限制长期接触皮肤部件的镍析出量（常见表述为 0.2 µg/cm² 每周）。本文讲清哪些金属辅料在范围内、锌合金电镀件与黄铜件的风险来源、无镍电镀与塑料替代方案，以及 EN 1811 与 EN 12472 的测试逻辑和采购端要写进规格书的五件事。",
+        sum_en="The rules do not ban nickel, they cap release from parts in prolonged skin contact (commonly 0.2 µg/cm² per week). This guide shows which metal trims are in scope, where plated zinc alloy and brass create risk, how nickel-free plating and plastic alternatives work, and what to write into the spec sheet.",
+        sum_fr="La règle n'interdit pas le nickel, elle limite sa libération pour les pièces en contact prolongé avec la peau (souvent 0,2 µg/cm² par semaine). Ce guide indique les accessoires concernés, l'origine du risque sur zinc allié plaqué et laiton, les solutions sans nickel et les essais EN 1811 et EN 12472.",
+        sum_es="La norma no prohíbe el níquel, limita su liberación en piezas en contacto prolongado con la piel (habitualmente 0,2 µg/cm² por semana). Esta guía indica qué accesorios están dentro del alcance, el origen del riesgo en zinc aleado y latón, las alternativas sin níquel y los ensayos EN 1811 y EN 12472.",
     ),
     dict(
-        slug="clothing-label-compliance-chile.html",
-        body="blog/_body_chi.html",
-        title_zh="智利服装标签合规指南：西语标注、耐久性与进口文件 | TAGE",
-        title_en="Chile Clothing Label Requirements: Spanish Text, Durability &amp; Import Docs | TAGE",
-        title_fr="Étiquetage des vêtements au Chili : espagnol, durabilité et import | TAGE",
-        title_es="Requisitos de etiquetado de ropa en Chile: español, durabilidad e importación | TAGE",
-        desc_zh="智利服装标签合规指南：西班牙语标注、进口商 RUT、三次家洗耐久性测试、Talla 尺码双标、洗护西语表述与报关文件一致性，附泳装童装要点与打样核对清单。来自东莞泰阁包装。",
-        desc_en="Chile clothing label rules: Spanish text, importer RUT, three-wash durability, Talla sizing, care wording and customs consistency, plus a sampling checklist.",
-        desc_fr="Etiquetage au Chili : texte espagnol, RUT de l'importateur, durabilité sur trois lavages, tailles Talla, entretien et cohérence douanière, avec liste de contrôle.",
-        desc_es="Etiquetado en Chile: texto en español, RUT del importador, durabilidad a tres lavados, tallas Talla, cuidado y coherencia aduanera, con lista de verificación.",
-        crumb_zh="智利标签合规",
-        crumb_en="Chile Label Rules",
-        crumb_fr="Réglementation Chili",
-        crumb_es="Normativa Chile",
-        h1_zh="智利服装标签合规指南：西语标注、耐久性与进口文件",
-        h1_en="Chile Clothing Label Compliance: Spanish Text, Durability and Import Paperwork",
-        h1_fr="Conformité de l'étiquetage au Chili : espagnol, durabilité et documents douaniers",
-        h1_es="Cumplimiento del etiquetado en Chile: español, durabilidad y documentos de importación",
-        tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
-        sum_zh="智利看的是「洗过还能读懂」：西班牙语标注、永久附着、信息与实物一致。本文说明进口商 RUT 与进口商标识怎么写、如何用三次家洗验证标签耐久性、Talla 本地码与国际码的双标做法，以及标签、吊牌、箱唛、发票四处一致性与原产地证配合，附泳装与童装要点。",
-        sum_en="Chile asks one practical question: is the label still readable after washing? This guide explains importer RUT lines, how to prove durability with a three-wash test, how to mark Talla alongside international sizes, and how to keep label, hang tag, carton marks and invoice consistent — plus swimwear and childrenswear notes.",
-        sum_fr="Le Chili pose une question pratique : l'étiquette reste-t-elle lisible après lavage ? Ce guide détaille la ligne RUT de l'importateur, la preuve de durabilité par trois lavages, le marquage Talla avec les tailles internationales, la cohérence étiquette / suspendue / cartons / facture, plus maillots et enfant.",
-        sum_es="Chile plantea una pregunta práctica: ¿sigue legible la etiqueta tras lavar? Esta guía explica la línea con el RUT del importador, cómo probar la durabilidad con tres lavados, el marcado Talla junto a tallas internacionales y la coherencia etiqueta / colgante / caja / factura, además de baño e infantil.",
+        slug="tissue-paper-wrapping-guide.html",
+        body="blog/_body_tp.html",
+        title_zh="服装薄纸包装指南：雪梨纸、拷贝纸的克重与印刷选择 | TAGE",
+        title_en="Tissue Paper Wrapping Guide for Apparel: Weights &amp; Printing | TAGE",
+        title_fr="Papier de soie pour vêtements : grammages, impression et fermeture | TAGE",
+        title_es="Papel de seda para ropa: gramajes, impresión y sellado | TAGE",
+        desc_zh="服装薄纸包装指南：雪梨纸、拷贝纸、牛皮薄纸与无酸纸的克重（14-30g）与用途对比，无酸与色牢度风险、印刷与封口搭配，以及询价时要写明的六个规格。来自东莞泰阁包装。",
+        desc_en="Tissue paper wrapping for apparel: 14-30gsm options compared, acid-free and colour fastness risks, printing and sealing choices, plus six specs to quote on.",
+        desc_fr="Papier de soie pour vêtements : options de 14 à 30 g/m² comparées, sans-acide et solidité des teintes, impression, fermeture et six spécifications.",
+        desc_es="Papel de seda para ropa: opciones de 14 a 30 g/m², libre de ácido y solidez del color, impresión, sellado y seis especificaciones clave.",
+        crumb_zh="薄纸包装",
+        crumb_en="Tissue Wrapping",
+        crumb_fr="Papier de soie",
+        crumb_es="Papel de seda",
+        h1_zh="服装薄纸包装指南：雪梨纸、拷贝纸的克重与印刷选择",
+        h1_en="Tissue Paper Wrapping for Apparel: Grammage, Printing and Sealing",
+        h1_fr="Papier de soie pour vêtements : grammage, impression et fermeture",
+        h1_es="Papel de seda para ropa: gramaje, impresión y sellado",
+        tag_zh="包装指南", tag_en="Packaging", tag_fr="Emballage", tag_es="Embalaje",
+        sum_zh="薄纸是服装包装里感知成本比最高的一层：14-17g 用于隔层填充，22-30g 用于外露包裹与礼盒内衬，浅色与真丝类长期存放建议无酸纸。本文对比四种薄纸的克重与用途，讲清色牢度风险、压印与封口贴的搭配，并列出询价时必须写明的六个规格。",
+        sum_en="Tissue is the best perceived-value layer in apparel packaging: 14-17 gsm for interleaving and filling, 22-30 gsm for visible wrapping and gift liners, acid-free for light and silk garments in long storage. This guide compares the four papers and lists the six specs to state on a quote request.",
+        sum_fr="Le papier de soie offre le meilleur rapport valeur perçue : 14-17 g/m² pour l'intercalaire et le garnissage, 22-30 g/m² pour l'emballage visible et les boîtes, sans acide pour les pièces claires et la soie. Ce guide compare les quatre papiers et liste les six spécifications à indiquer.",
+        sum_es="El papel de seda ofrece la mejor relación valor percibido: 14-17 g/m² para intercalado y relleno, 22-30 g/m² para envoltura visible y cajas, libre de ácido para prendas claras y seda. Esta guía compara los cuatro papeles y enumera las seis especificaciones a indicar.",
     ),
 ]
 
 skel = open(SKEL, encoding="utf-8").read()
 old3 = re.search(r'"position": 3,\s*"name": "([^"]*)"', skel).group(1)
 print("骨架 breadcrumb 名:", old3)
+
+# 安全闸：同名 slug 若已存在（含各语言版本与 sitemap），说明选题撞车，直接报错
+import os
+for a in ARTICLES:
+    for p in ("blog/%s" % a["slug"], "en/blog/%s" % a["slug"], "fr/blog/%s" % a["slug"], "es/blog/%s" % a["slug"]):
+        if os.path.exists(p):
+            raise SystemExit("选题撞车：%s 已存在，换选题！" % p)
+    if ("/blog/%s</loc>" % a["slug"]) in open("sitemap.xml", encoding="utf-8").read():
+        raise SystemExit("选题撞车：sitemap 已含 %s" % a["slug"])
+print("选题全新，开始生成")
 
 for a in ARTICLES:
     slug = a["slug"]
@@ -157,7 +167,8 @@ idx = "blog/index.html"
 s = open(idx, encoding="utf-8").read()
 marker = '<div class="post-grid">\n'
 assert marker in s, "post-grid 未找到"
-assert ARTICLES[0]["slug"] not in s
+
+# 安全闸已在生成前执行（见文件开头）
 s = s.replace(marker, marker + "\n" + cards, 1)
 with open(idx, "w", encoding="utf-8", newline="") as f:
     f.write(s)

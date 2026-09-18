@@ -4,7 +4,7 @@
 import re
 
 DATE = "2026-09-18"
-SLUGS = ["clothing-label-compliance-colombia.html", "clothing-label-compliance-chile.html"]
+SLUGS = ["metal-trims-nickel-release-guide.html", "tissue-paper-wrapping-guide.html"]
 LANGS = ["blog/", "en/blog/", "fr/blog/", "es/blog/"]
 
 path = "sitemap.xml"
@@ -21,22 +21,30 @@ for loc in ["https://taigetag.com/blog/index.html",
     s, n = pat.subn(r'\g<1>%s\g<2>' % DATE, s, count=1)
     print("lastmod %s -> %s (%d)" % (loc, DATE, n))
 
-# 2) 追加新 URL（每篇 4 语言）
+# 2) 新增或更新当日文章 URL（每篇 4 语言）
+assert "</urlset>" in s
 blocks = []
 for slug in SLUGS:
+    done = 0
     for pre in LANGS:
-        blocks.append(
-            "  <url>\r\n"
-            "    <loc>https://taigetag.com/%s%s</loc>\r\n"
-            "    <lastmod>%s</lastmod>\r\n"
-            "    <changefreq>monthly</changefreq>\r\n"
-            "    <priority>0.7</priority>\r\n"
-            "  </url>\r\n" % (pre, slug, DATE))
+        loc = "https://taigetag.com/%s%s" % (pre, slug)
+        # 已存在（历史遗留的孤儿条目）→ 就地更新 lastmod/changefreq/priority，不重复追加
+        pat = re.compile(r'(<loc>%s</loc>\r?\n\s*<lastmod>)[^<]*(</lastmod>\r?\n\s*<changefreq>)[^<]*(</changefreq>\r?\n\s*<priority>)[^<]*(</priority>)'
+                         % re.escape(loc))
+        s, n = pat.subn(r'\g<1>%s\g<2>monthly\g<3>0.7\g<4>' % DATE, s, count=1)
+        if n:
+            done += 1
+            print("更新已有条目 %s -> lastmod %s" % (loc, DATE))
+        else:
+            blocks.append(
+                "  <url>\r\n"
+                "    <loc>%s</loc>\r\n"
+                "    <lastmod>%s</lastmod>\r\n"
+                "    <changefreq>monthly</changefreq>\r\n"
+                "    <priority>0.7</priority>\r\n"
+                "  </url>\r\n" % (loc, DATE))
+    print("%s: 已有 %d 条，新增 %d 条" % (slug, done, 4 - done))
 
-assert "</urlset>" in s
-# 幂等：已存在则不重复追加
-for slug in SLUGS:
-    assert "https://taigetag.com/blog/%s</loc>" % slug not in s, "URL 已存在: %s" % slug
 s = s.replace("</urlset>", "".join(blocks) + "</urlset>", 1)
 
 with open(path, "w", encoding="utf-8", newline="") as f:
