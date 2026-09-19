@@ -540,3 +540,30 @@ ul { list-style: none; }
 .assist-close:hover{opacity:1}
 
 .page-hero .crumb a:hover{color:var(--amber)}
+
+
+/* ============================================================
+   語言建議條（A+）：系統語言 ≠ 當前頁面語言時，頂部細條提示，不強制跳轉
+   ============================================================ */
+.lang-hint {
+  display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;
+  position: relative; padding: 9px 46px 9px 16px;
+  background: var(--ink); color: #fff; font-size: 13.5px; line-height: 1.5;
+  border-bottom: 2px solid var(--amber);
+}
+.lang-hint .lh-text { color: rgba(255, 255, 255, .9); }
+.lang-hint .lh-btn {
+  display: inline-block; padding: 4px 14px; border-radius: 999px;
+  background: var(--amber); color: #22190a; font-weight: 600; white-space: nowrap;
+  transition: background .15s ease;
+}
+.lang-hint .lh-btn:hover { background: #e8ab3c; }
+.lang-hint .lh-close {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; color: rgba(255, 255, 255, .7);
+  font-size: 14px; line-height: 1; cursor: pointer; padding: 6px 8px;
+}
+.lang-hint .lh-close:hover { color: #fff; }
+@media (max-width: 600px) {
+  .lang-hint { font-size: 12.5px; gap: 8px; padding: 8px 42px 8px 12px; justify-content: flex-start; }
+}

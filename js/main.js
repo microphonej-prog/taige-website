@@ -19,12 +19,23 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "91";
+  var BUST_VERSION = "92";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
   } catch (e) { /* 老瀏覽器無 URLSearchParams 時忽略 */ }
   var current = null;
+  /* 爬蟲/無頭瀏覽器一律不做任何語言跳轉與提示（避免 Googlebot 渲染與 hreflang 信號衝突） */
+  var IS_BOT = false;
+  try {
+    IS_BOT = /bot|crawl|spider|slurp|bingpreview|baidu|yandex|duckduck|facebookexternalhit|headless|puppeteer|playwright|lighthouse|gtmetrix/i
+      .test(navigator.userAgent || "") || navigator.webdriver === true;
+  } catch (e) {}
+  /* 訪客上次的語言選擇（localStorage；爬蟲不讀，因此不影響收錄） */
+  var stored = null;
+  try { stored = localStorage.getItem(LANG_KEY); } catch (e) {}
+  if (!stored || LANGS.indexOf(stored) < 0) stored = null;
+
   if (DIR_LANG) {
     current = DIR_LANG;
   } else if (urlLang && LANGS.indexOf(urlLang) >= 0 && urlLang !== "zh") {
@@ -39,23 +50,16 @@
       location.replace("/" + urlLang + "/" + _rel + "?v=" + BUST_VERSION);
     }
     return;
+  } else if (stored && stored !== "zh" && !IS_BOT) {
+    /* 回訪者：上次選過其他語言 → 直接進該語言的同一頁面（爬蟲不讀 localStorage，故不受影響） */
+    var _rel2 = "";
+    try { _rel2 = location.pathname.replace(/^\/+/, ""); } catch (e) {}
+    if (_rel2 === "index.html") _rel2 = "";
+    location.replace("/" + stored + "/" + _rel2 + "?v=" + BUST_VERSION);
+    return;
   } else {
-    /* 根目錄固定中文：獨立語言目錄已上線，根目錄不再按瀏覽器語言自動切換
-       （避免 Googlebot(en-US) 把中文版渲染成英文，導致 hreflang 信號衝突） */
+    /* 根目錄固定繁體中文（不做「按瀏覽器語言自動跳轉」，只在語言不同時顯示建議條） */
     current = "zh";
-  }
-  /* 首次訪問（無 URL 參數、無歷史偏好）：按訪客系統/瀏覽器語言自動匹配。
-     中文系統→中文，法/西→對應語言，其餘語言(日韓德等)→英文(國際通用)。 */
-  if (!current) {
-    var sys = "";
-    try { sys = (navigator.language || navigator.userLanguage || "").toLowerCase(); } catch (e) {}
-    if (sys.indexOf("zh") === 0) current = "zh";
-    else if (sys.indexOf("fr") === 0) current = "fr";
-    else if (sys.indexOf("es") === 0) current = "es";
-    else if (sys.indexOf("ja") === 0) current = "ja";
-    else if (sys.indexOf("ko") === 0) current = "ko";
-    else if (sys.indexOf("en") === 0) current = "en";
-    else current = "en";
   }
   if (LANGS.indexOf(current) < 0) current = "zh";
 
@@ -245,6 +249,65 @@
         note.textContent = MSG.note[current] + (wechat || "13128118931") + ".";
       }
     });
+  }
+
+  /* ---------- 語言建議條（A+）：不強制跳轉，只提示 + 記住訪客選擇 ---------- */
+  var HINT = {
+    zh: { text: "本站提供繁體中文版", btn: "看中文版" },
+    en: { text: "This site is available in English", btn: "View in English" },
+    ja: { text: "日本語版をご用意しています", btn: "日本語で見る" },
+    ko: { text: "한국어 버전을 제공하고 있습니다", btn: "한국어로 보기" },
+    fr: { text: "Ce site est disponible en français", btn: "Voir en français" },
+    es: { text: "Este sitio está disponible en español", btn: "Ver en español" }
+  };
+  var HINT_OFF_KEY = "taige_lang_hint_off";
+
+  function sysLang() {
+    var s = "";
+    try { s = (navigator.language || navigator.userLanguage || "").toLowerCase(); } catch (e) {}
+    var p = s.split("-")[0];
+    if (p === "zh") return "zh";
+    return LANGS.indexOf(p) >= 0 ? p : "en";   /* 其他語言（德/阿/泰…）→ 建議英文版 */
+  }
+
+  function samePathIn(lang) {
+    var rel = location.pathname.replace(/^\/(en|ja|ko|fr|es)\//, "").replace(/^\/+/, "");
+    if (rel === "index.html") rel = "";
+    return (lang === "zh" ? "/" : "/" + lang + "/") + rel;
+  }
+
+  function maybeShowHint() {
+    if (IS_BOT) return;
+    var target = sysLang();
+    if (target === current) return;                       /* 已是訪客語言，不提示 */
+    var off = "";
+    try { off = localStorage.getItem(HINT_OFF_KEY) || ""; } catch (e) {}
+    if (off.split(",").indexOf(target) >= 0) return;      /* 已被訪客關掉過 */
+    var t = HINT[target] || HINT.en;
+    var bar = document.createElement("div");
+    bar.className = "lang-hint";
+    bar.setAttribute("role", "region");
+    bar.innerHTML = '<span class="lh-text"></span>' +
+      '<a class="lh-btn" href="' + samePathIn(target) + '"></a>' +
+      '<button class="lh-close" type="button" aria-label="Close">&#10005;</button>';
+    bar.querySelector(".lh-text").textContent = t.text;
+    bar.querySelector(".lh-btn").textContent = t.btn;
+    document.body.insertBefore(bar, document.body.firstChild);
+    bar.querySelector(".lh-btn").addEventListener("click", function () {
+      try { localStorage.setItem(LANG_KEY, target); } catch (e) {}   /* 記住選擇，回訪直接進該語言 */
+    });
+    bar.querySelector(".lh-close").addEventListener("click", function () {
+      try {
+        var d = (localStorage.getItem(HINT_OFF_KEY) || "").split(",").filter(Boolean);
+        if (d.indexOf(target) < 0) { d.push(target); localStorage.setItem(HINT_OFF_KEY, d.join(",")); }
+      } catch (e) {}
+      if (bar.parentNode) bar.parentNode.removeChild(bar);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", maybeShowHint);
+  } else {
+    maybeShowHint();
   }
 })();
 
