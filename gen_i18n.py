@@ -51,7 +51,7 @@ def convert(lang, src_path, out_path, page_abs_url):
     # ---------- 1. html lang ----------
     HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}
     html_lang = HTML_LANG.get(lang, "en")
-    s = re.sub(r'<html lang="zh-CN">', '<html lang="%s">' % html_lang, s)
+    s = re.sub(r'<html lang="(?:zh-CN|zh-Hant)"', '<html lang="%s"' % html_lang, s)
 
     # ---------- 2. title ----------
     m = re.search(r'<title[^>]*%s="([^"]*)"[^>]*>.*?</title>' % take, s, re.S)
@@ -91,7 +91,7 @@ def convert(lang, src_path, out_path, page_abs_url):
         _h = 'https://taigetag.com/' + _l + '/' + rel_path.replace(lang + '/', '', 1)
         _h = _h.replace('https://taigetag.com/%s/index.html' % _l, 'https://taigetag.com/%s/' % _l)
         hl_hrefs[_l] = _h
-    hreflang_lines = ['<link rel="alternate" hreflang="zh-CN" href="%s">' % zh_href]
+    hreflang_lines = ['<link rel="alternate" hreflang="zh-Hant" href="%s">' % zh_href]
     for _l in ["en", "ja", "ko", "fr", "es"]:
         hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
     hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)

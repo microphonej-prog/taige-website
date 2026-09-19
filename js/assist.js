@@ -1,7 +1,7 @@
-/* TAGE Assist — 悬浮客服窗口 v2（智能多轮对话引擎）
-   实现：意图识别 + 对话上下文 + 追问引导，四语。
-   说明：静态站前端无法直连 LLM（密钥泄露风险），此引擎用规则+上下文模拟智能客服。
-   挂载：各页面 #assistFab / #assistPanel；语言与 main.js 一致。 */
+/* TAGE Assist — 懸浮客服窗口 v2（智能多輪對話引擎）
+   實現：意圖識別 + 對話上下文 + 追問引導，四語。
+   說明：靜態站前端無法直連 LLM（密鑰泄露風險），此引擎用規則+上下文模擬智能客服。
+   掛載：各頁面 #assistFab / #assistPanel；語言與 main.js 一致。 */
 (function () {
   "use strict";
   var FAB = document.getElementById("assistFab");
@@ -12,9 +12,9 @@
   var SEND = document.getElementById("assistSend");
   if (!FAB || !PANEL || !BODY || !QUICK || !INPUT || !SEND) return;
 
-  /* ---------- 语言检测：?lang > localStorage > html lang ---------- */
+  /* ---------- 語言檢測：?lang > localStorage > html lang ---------- */
   var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
-  /* 独立语言目录 /en/ /ja/ /ko/ /fr/ /es/：固定对应语言（该目录页面已静态渲染） */
+  /* 獨立語言目錄 /en/ /ja/ /ko/ /fr/ /es/：固定對應語言（該目錄頁面已靜態渲染） */
   var DIR_LANG = null;
   try {
     var _p = location.pathname;
@@ -28,53 +28,53 @@
   if (DIR_LANG) {
     LANG = DIR_LANG;
   } else {
-    /* 根目录固定中文（与 main.js 一致：独立目录已上线，根目录不再切换语言，
-       避免 Googlebot 渲染与 localStorage 残留偏好造成语言不一致） */
+    /* 根目錄固定中文（與 main.js 一致：獨立目錄已上線，根目錄不再切換語言，
+       避免 Googlebot 渲染與 localStorage 殘留偏好造成語言不一致） */
     LANG = "zh";
   }
-  /* ================= 四语知识库 ================= */
+  /* ================= 四語知識庫 ================= */
   function T() {}
   T.zh = {
-    online: "在线", hello: "您好！我是泰阁智能客服 🐓 关于吊牌、织唛、洗水标、包装袋的任何问题都可以问我，也可以直接告诉我您的需求～",
-    ph: "输入您的问题…", send: "发送",
-    quick: ["你们有哪些产品？", "最小起订量是多少？", "可以打样吗？", "怎么报价？"],
-    followupQuote: "💡 提示：把设计稿或数量发到 sales@taigetag.com，24 小时内给您精确报价；加微信 13128118931 沟通更快～",
-    fallback: "这个问题我需要确认一下 🤔 建议把具体需求发到 sales@taigetag.com 或加微信 13128118931，我们专业同事 24 小时内给您准确答复。也可以点页面底部「联系方式」直接留言。",
+    online: "在線", hello: "您好！我是泰閣智能客服 🐓 關於吊牌、織嘜、洗水標、包裝袋的任何問題都可以問我，也可以直接告訴我您的需求～",
+    ph: "輸入您的問題…", send: "發送",
+    quick: ["你們有哪些產品？", "最小起訂量是多少？", "可以打樣嗎？", "怎麼報價？"],
+    followupQuote: "💡 提示：把設計稿或數量發到 sales@taigetag.com，24 小時內給您精確報價；加微信 13128118931 溝通更快～",
+    fallback: "這個問題我需要確認一下 🤔 建議把具體需求發到 sales@taigetag.com 或加微信 13128118931，我們專業同事 24 小時內給您準確答覆。也可以點頁面底部「聯繫方式」直接留言。",
     intents: [
-      { id: "hello", kws: ["你好", "您好", "嗨", "哈喽", "hello", "hi", "在吗", "在不在"], reply: "您好！有什么可以帮您？😊 可以问产品、起订量、打样、报价，也可以直接说您的需求。" },
-      { id: "thanks", kws: ["谢谢", "感谢", "thank", "merci", "gracias", "3q", "thx"], reply: "不客气！随时找我 😄 有样品或报价需求，随时发我。" },
-      { id: "bye", kws: ["再见", "拜拜", "bye", "88", "goodbye"], reply: "再见！祝您生意兴隆 🚀 需要时随时来问～" },
-      { id: "product", kws: ["产品", "什么", "有哪些", "做什么", "品类", "product", "produce", "offre", "productos"], reply: "我们有六大产品线：\n① 服装吊牌（铜版纸/牛皮纸/PVC，烫金 UV 哑膜）\n② 织唛/主唛（缎面/提花/双层织边）\n③ 洗水标（织带/涂层/印刷）\n④ 包装袋（PE 胶袋/自封袋/防静电袋）\n⑤ 环保纸袋（牛皮纸/白卡纸）\n⑥ 宣传手册（画册/折页）\n全部支持定制和 OEM。您对哪一类感兴趣？" },
-      { id: "hangtag", kws: ["吊牌", "挂卡", "hangtag", "hang tag", "étiquette suspendue", "etiqueta colgante", "标签卡"], reply: "吊牌是我们主打产品 👍 材质有铜版纸（300-400克）、牛皮纸、棉纸、PVC 防水等；工艺支持烫金、压凹凸、UV 局部上光、覆膜；尺寸常规 35×70 / 40×90 / 50×90mm，也能异形模切。需要我帮您看看材质怎么选吗？" },
-      { id: "woven", kws: ["织唛", "主唛", "缎面", "提花", "woven", "tissé", "tejida", "商标"], reply: "织唛/主唛有缎面、平纹、提花、双层织边等织法，图案细腻、耐水洗不褪色。建议：主唛用缎面/提花显高档，尺码唛用塔夫绸。您需要主唛还是尺码唛？" },
-      { id: "carelabel", kws: ["洗水标", "洗标", "水洗标", "care label", "entretien", "de cuidado"], reply: "洗水标有三种：织带洗标、涂层洗标、印刷洗标，符合各国洗涤标准，信息清晰持久。常见组合是「织唛主唛 + 印刷洗水标」，兼顾档次和成本。需要按您的洗涤要求推荐吗？" },
-      { id: "bags", kws: ["包装袋", "胶袋", "自封袋", "拉链袋", "包装袋", "poly bag", "ziplock", "sac", "bolsa"], reply: "包装袋有 PE/CPE 胶袋、拉链袋、自封袋、防静电袋，可印刷品牌 LOGO，尺寸厚度按需定制。服装出口常用的 OPP 透明袋性价比很高 👍" },
-      { id: "paperbag", kws: ["纸袋", "牛皮纸袋", "环保袋", "paper bag", "kraft", "sac papier", "bolsa de papel"], reply: "环保纸袋用牛皮纸或白卡纸，可降解环保，支持品牌印刷和定制提手——欧盟客户很看重这个 🌱 需要看环保选项吗？" },
-      { id: "brochure", kws: ["画册", "手册", "折页", "目录", "brochure", "catalogue", "folleto"], reply: "宣传手册/画册/产品目录都可以做，从纸张选型到装订全程把控品质。把您的品牌 VI 发我们，设计部免费出排版建议。" },
-      { id: "moq", kws: ["起订", "moq", "最小", "多少起", "数量", "minimum", "quantité", "mínimo"], reply: function (st) {
-        if (st.topic === "hangtag") return "吊牌起订量：2,000–3,000 张可试单，10,000+ 张单价更划算。您计划要多少？";
-        if (st.topic === "woven") return "织唛一般 1,000 张以上起做，提花/双层织边工艺价格略有不同。需要精确数量吗？";
-        if (st.topic === "carelabel") return "洗水标 300–500 张就能起做，成本很友好 👍 您需要哪种（织带/涂层/印刷）？";
-        if (st.topic === "bags" || st.topic === "paperbag") return "包装袋起订量比较灵活，按尺寸和印刷谈，几百个样品袋也可以做。您要多大的？";
-        return "起订量因产品不同：吊牌 2,000–3,000 张试单；织唛 1,000 张以上；洗水标 300–500 张起；包装袋灵活。您做哪类产品？";
+      { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "在嗎", "在不在", "哈喽", "在吗"], reply: "您好！有什麼可以幫您？😊 可以問產品、起訂量、打樣、報價，也可以直接說您的需求。" },
+      { id: "thanks", kws: ["謝謝", "感謝", "thank", "merci", "gracias", "3q", "thx", "谢谢", "感谢"], reply: "不客氣！隨時找我 😄 有樣品或報價需求，隨時發我。" },
+      { id: "bye", kws: ["再見", "拜拜", "bye", "88", "goodbye", "再见"], reply: "再見！祝您生意興隆 🚀 需要時隨時來問～" },
+      { id: "product", kws: ["產品", "什麼", "有哪些", "做什麼", "品類", "product", "produce", "offre", "productos", "产品", "什么", "做什么", "品类"], reply: "我們有六大產品線：\n① 服裝吊牌（銅版紙/牛皮紙/PVC，燙金 UV 啞膜）\n② 織嘜/主嘜（緞面/提花/雙層織邊）\n③ 洗水標（織帶/塗層/印刷）\n④ 包裝袋（PE 膠袋/自封袋/防靜電袋）\n⑤ 環保紙袋（牛皮紙/白卡紙）\n⑥ 宣傳手冊（畫冊/摺頁）\n全部支持定製和 OEM。您對哪一類感興趣？" },
+      { id: "hangtag", kws: ["吊牌", "掛卡", "hangtag", "hang tag", "étiquette suspendue", "etiqueta colgante", "標籤卡", "挂卡", "标签卡"], reply: "吊牌是我們主打產品 👍 材質有銅版紙（300-400克）、牛皮紙、棉紙、PVC 防水等；工藝支持燙金、壓凹凸、UV 局部上光、覆膜；尺寸常規 35×70 / 40×90 / 50×90mm，也能異形模切。需要我幫您看看材質怎麼選嗎？" },
+      { id: "woven", kws: ["織嘜", "主嘜", "緞面", "提花", "woven", "tissé", "tejida", "商標", "织唛", "主唛", "缎面", "商标"], reply: "織嘜/主嘜有緞面、平紋、提花、雙層織邊等織法，圖案細膩、耐水洗不褪色。建議：主嘜用緞面/提花顯高檔，尺碼嘜用塔夫綢。您需要主嘜還是尺碼嘜？" },
+      { id: "carelabel", kws: ["洗水標", "洗標", "水洗標", "care label", "entretien", "de cuidado", "洗水标", "洗标", "水洗标"], reply: "洗水標有三種：織帶洗標、塗層洗標、印刷洗標，符合各國洗滌標準，信息清晰持久。常見組合是「織嘜主嘜 + 印刷洗水標」，兼顧檔次和成本。需要按您的洗滌要求推薦嗎？" },
+      { id: "bags", kws: ["包裝袋", "膠袋", "自封袋", "拉鍊袋", "包裝袋", "poly bag", "ziplock", "sac", "bolsa", "包装袋", "胶袋", "拉链袋", "包装袋"], reply: "包裝袋有 PE/CPE 膠袋、拉鍊袋、自封袋、防靜電袋，可印刷品牌 LOGO，尺寸厚度按需定製。服裝出口常用的 OPP 透明袋性價比很高 👍" },
+      { id: "paperbag", kws: ["紙袋", "牛皮紙袋", "環保袋", "paper bag", "kraft", "sac papier", "bolsa de papel", "纸袋", "牛皮纸袋", "环保袋"], reply: "環保紙袋用牛皮紙或白卡紙，可降解環保，支持品牌印刷和定製提手——歐盟客戶很看重這個 🌱 需要看環保選項嗎？" },
+      { id: "brochure", kws: ["畫冊", "手冊", "摺頁", "目錄", "brochure", "catalogue", "folleto", "画册", "手册", "折页", "目录"], reply: "宣傳手冊/畫冊/產品目錄都可以做，從紙張選型到裝訂全程把控品質。把您的品牌 VI 發我們，設計部免費出排版建議。" },
+      { id: "moq", kws: ["起訂", "moq", "最小", "多少起", "數量", "minimum", "quantité", "mínimo", "起订", "数量"], reply: function (st) {
+        if (st.topic === "hangtag") return "吊牌起訂量：2,000–3,000 張可試單，10,000+ 張單價更划算。您計劃要多少？";
+        if (st.topic === "woven") return "織嘜一般 1,000 張以上起做，提花/雙層織邊工藝價格略有不同。需要精確數量嗎？";
+        if (st.topic === "carelabel") return "洗水標 300–500 張就能起做，成本很友好 👍 您需要哪種（織帶/塗層/印刷）？";
+        if (st.topic === "bags" || st.topic === "paperbag") return "包裝袋起訂量比較靈活，按尺寸和印刷談，幾百個樣品袋也可以做。您要多大的？";
+        return "起訂量因產品不同：吊牌 2,000–3,000 張試單；織嘜 1,000 張以上；洗水標 300–500 張起；包裝袋靈活。您做哪類產品？";
       } },
-      { id: "sample", kws: ["打样", "样品", "样板", "样版", "sample", "échantillon", "muestra", "打版"], reply: "可以打样！一般 3–7 天内寄出实物样品，并提供免费打样建议。批量下单前先确认印刷质量和材质手感，是我们给所有客户的建议 😊 您方便发个设计稿或参考图吗？" },
-      { id: "quote", kws: ["报价", "价格", "多少钱", "费用", "成本", "怎么算", "询价", "quote", "price", "cost", "devis", "prix", "presupuesto", "precio"], reply: function (st, tt) {
-        if (st.topic === "hangtag") return "吊牌的话，价格主要看材质、尺寸、印色数和工艺：铜版纸常规款千张级单价很友好，烫金/异形模切会高一些。您大概要多少数量？把设计发到 sales@taigetag.com 我们能报精确价 😊";
-        if (st.topic === "woven") return "织唛报价要看织法（缎面/提花/双层）和尺寸，一般 1,000 张以上起做。发设计稿给我们，24 小时内出精确报价～";
-        if (st.topic === "carelabel") return "洗水标价格按材质（织带/涂层/印刷）和数量算，300–500 张就能做，价格很友好。需要报哪种？";
-        if (st.topic === "bags" || st.topic === "paperbag") return "包装袋报价要看尺寸、厚度、印刷和数量。发需求给我们（尺寸+数量+要不要印 LOGO），24 小时内出报价 👍";
-        return "好的！为了报得准，需要知道：① 产品类型 ② 数量 ③ 设计/尺寸。您先告诉我哪种产品，其余的发到 sales@taigetag.com 就行 😊";
+      { id: "sample", kws: ["打樣", "樣品", "樣板", "樣版", "sample", "échantillon", "muestra", "打版", "打样", "样品", "样板", "样版"], reply: "可以打樣！一般 3–7 天內寄出實物樣品，並提供免費打樣建議。批量下單前先確認印刷質量和材質手感，是我們給所有客戶的建議 😊 您方便發個設計稿或參考圖嗎？" },
+      { id: "quote", kws: ["報價", "價格", "多少錢", "費用", "成本", "怎麼算", "詢價", "quote", "price", "cost", "devis", "prix", "presupuesto", "precio", "报价", "价格", "多少钱", "费用", "怎么算", "询价"], reply: function (st, tt) {
+        if (st.topic === "hangtag") return "吊牌的話，價格主要看材質、尺寸、印色數和工藝：銅版紙常規款千張級單價很友好，燙金/異形模切會高一些。您大概要多少數量？把設計發到 sales@taigetag.com 我們能報精確價 😊";
+        if (st.topic === "woven") return "織嘜報價要看織法（緞面/提花/雙層）和尺寸，一般 1,000 張以上起做。發設計稿給我們，24 小時內出精確報價～";
+        if (st.topic === "carelabel") return "洗水標價格按材質（織帶/塗層/印刷）和數量算，300–500 張就能做，價格很友好。需要報哪種？";
+        if (st.topic === "bags" || st.topic === "paperbag") return "包裝袋報價要看尺寸、厚度、印刷和數量。發需求給我們（尺寸+數量+要不要印 LOGO），24 小時內出報價 👍";
+        return "好的！爲了報得準，需要知道：① 產品類型 ② 數量 ③ 設計/尺寸。您先告訴我哪種產品，其餘的發到 sales@taigetag.com 就行 😊";
       } },
-      { id: "leadtime", kws: ["交期", "货期", "多久", "多长时间", "什么时候", "lead", "delivery", "délai", "plazo", "几天"], reply: "打样一般 3–7 天；大货交期看数量和工艺，通常 10–25 天。下单前会给您书面确认的交期，不用担心 😊" },
-      { id: "payment", kws: ["付款", "怎么付", "定金", "tt", "信用证", "l/c", "payment", "paiement", "pago"], reply: "常规合作：30% 定金 + 70% 尾款发货前付清；支持 T/T 银行转账，大单也可谈信用证。新客户首次合作我们会给详细的付款条款。" },
-      { id: "shipping", kws: ["运费", "物流", "快递", "海运", "空运", "fob", "exw", "shipping", "freight", "expédition", "envío"], reply: "支持多种出货方式：FOB 深圳/广州、EXW 工厂，或我们帮您安排海运/空运/快递（DHL、FedEx、UPS 等）。小批量样品走快递最划算 📦" },
-      { id: "oem", kws: ["定制", "oem", "odm", "来样", "设计", "logo", "custom", "personnalisé", "personalizado"], reply: "支持 OEM/ODM 和来样定制！设计部可帮您优化稿件，颜色、材质、工艺灵活组合，从打样到量产一条龙。您有自己的设计稿还是需要我们设计？" },
-      { id: "quality", kws: ["质量", "质检", "品控", "合格", "quality", "qc", "qualité", "calidad", "认证"], reply: "我们执行完整品控流程：原材料检验 → 印刷过程抽检 → 成品全检 → 出货前复检。公司持有营业执照及各类资质，可提供检测报告 📋" },
-      { id: "company", kws: ["公司", "工厂", "介绍", "泰阁", "tage", "哪里", "地址", "company", "factory", "entreprise", "empresa"], reply: "东莞泰阁包装制品有限公司（Dongguan Tage Packaging Products Co., Ltd.）位于广东东莞虎门，专注服装辅料 20 年：吊牌、织唛、洗水标、包装袋一站式生产，出口全球 40+ 国家 🇨🇳🌍" },
-      { id: "contact", kws: ["联系", "电话", "微信", "邮箱", "email", "电话", "whatsapp", "contact", "téléphone", "wechat", "contacto"], reply: "随时联系！📧 sales@taigetag.com ｜📱 电话/WhatsApp/微信：+86 131 2811 8931 ｜📍 广东省东莞市虎门镇。发需求一般 24 小时内回复（工作时间更快）😊" },
-      { id: "order", kws: ["下单", "订购", "买", "怎么合作", "流程", "order", "commande", "pedido"], reply: "合作流程很简单：① 发需求/设计稿 → ② 我们 24 小时内报价 → ③ 确认打样 → ④ 样品确认后量产 → ⑤ 验货出货。您可以从任意一步开始！" },
-      { id: "faq", kws: ["常见问题", "faq", "问题", "help", "aide"], reply: "常见问题速答：\n📦 起订量：吊牌 2,000+、织唛 1,000+、洗水标 300+ \n🧪 打样：3–7 天寄样\n💰 报价：24 小时内\n🚚 交期：10–25 天\n更多细节直接问我～" }
+      { id: "leadtime", kws: ["交期", "貨期", "多久", "多長時間", "什麼時候", "lead", "delivery", "délai", "plazo", "幾天", "货期", "多长时间", "什么时候", "几天"], reply: "打樣一般 3–7 天；大貨交期看數量和工藝，通常 10–25 天。下單前會給您書面確認的交期，不用擔心 😊" },
+      { id: "payment", kws: ["付款", "怎麼付", "定金", "tt", "信用證", "l/c", "payment", "paiement", "pago", "怎么付", "信用证"], reply: "常規合作：30% 定金 + 70% 尾款發貨前付清；支持 T/T 銀行轉賬，大單也可談信用證。新客戶首次合作我們會給詳細的付款條款。" },
+      { id: "shipping", kws: ["運費", "物流", "快遞", "海運", "空運", "fob", "exw", "shipping", "freight", "expédition", "envío", "运费", "快递", "海运", "空运"], reply: "支持多種出貨方式：FOB 深圳/廣州、EXW 工廠，或我們幫您安排海運/空運/快遞（DHL、FedEx、UPS 等）。小批量樣品走快遞最划算 📦" },
+      { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "personnalisé", "personalizado", "定制", "来样", "设计"], reply: "支持 OEM/ODM 和來樣定製！設計部可幫您優化稿件，顏色、材質、工藝靈活組合，從打樣到量產一條龍。您有自己的設計稿還是需要我們設計？" },
+      { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "qualité", "calidad", "認證", "质量", "质检", "认证"], reply: "我們執行完整品控流程：原材料檢驗 → 印刷過程抽檢 → 成品全檢 → 出貨前複檢。公司持有營業執照及各類資質，可提供檢測報告 📋" },
+      { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "entreprise", "empresa", "工厂", "介绍", "泰阁", "哪里"], reply: "東莞泰閣包裝製品有限公司（Dongguan Tage Packaging Products Co., Ltd.）位於廣東東莞虎門，專注服裝輔料 20 年：吊牌、織嘜、洗水標、包裝袋一站式生產，出口全球 40+ 國家 🇨🇳🌍" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "電話", "whatsapp", "contact", "téléphone", "wechat", "contacto", "联系", "电话", "邮箱", "电话"], reply: "隨時聯繫！📧 sales@taigetag.com ｜📱 電話/WhatsApp/微信：+86 131 2811 8931 ｜📍 廣東省東莞市虎門鎮。發需求一般 24 小時內回覆（工作時間更快）😊" },
+      { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "commande", "pedido", "下单", "订购", "买", "怎么合作"], reply: "合作流程很簡單：① 發需求/設計稿 → ② 我們 24 小時內報價 → ③ 確認打樣 → ④ 樣品確認後量產 → ⑤ 驗貨出貨。您可以從任意一步開始！" },
+      { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "常见问题", "问题"], reply: "常見問題速答：\n📦 起訂量：吊牌 2,000+、織嘜 1,000+、洗水標 300+ \n🧪 打樣：3–7 天寄樣\n💰 報價：24 小時內\n🚚 交期：10–25 天\n更多細節直接問我～" }
     ]
   };
   T.en = {
@@ -84,25 +84,25 @@
     followupQuote: "💡 Tip: email your artwork or quantities to sales@taigetag.com for an exact quote within 24h. WeChat: 13128118931 is even faster.",
     fallback: "Let me check on that 🤔 Please email your specific requirements to sales@taigetag.com or add us on WeChat 13128118931 — our team replies within 24 hours. You can also use the Contact form at the bottom of the page.",
     intents: [
-      { id: "hello", kws: ["hello", "hi", "hey", "你好", "在吗"], reply: "Hello! How can I help? 😊 Ask about products, MOQ, sampling or quotes — or just describe your needs." },
+      { id: "hello", kws: ["hello", "hi", "hey", "你好", "在嗎"], reply: "Hello! How can I help? 😊 Ask about products, MOQ, sampling or quotes — or just describe your needs." },
       { id: "thanks", kws: ["thanks", "thank", "thx", "merci", "gracias"], reply: "You're welcome! 😄 Feel free to reach out anytime for samples or quotes." },
       { id: "bye", kws: ["bye", "goodbye", "see you"], reply: "Goodbye! Wishing you great business 🚀 Come back anytime." },
-      { id: "product", kws: ["product", "what do you make", "range", "offer", "品类", "产品"], reply: "We produce six lines:\n① Hang tags (art/kraft/PVC paper, foil/UV/matte)\n② Woven labels (satin/jacquard/double-layer)\n③ Care labels (woven/coated/printed)\n④ Packaging bags (PE/ziplock/anti-static)\n⑤ Eco paper bags (kraft/art card)\n⑥ Brochures & catalogs\nAll custom & OEM. Which one interests you?" },
+      { id: "product", kws: ["product", "what do you make", "range", "offer", "品類", "產品"], reply: "We produce six lines:\n① Hang tags (art/kraft/PVC paper, foil/UV/matte)\n② Woven labels (satin/jacquard/double-layer)\n③ Care labels (woven/coated/printed)\n④ Packaging bags (PE/ziplock/anti-static)\n⑤ Eco paper bags (kraft/art card)\n⑥ Brochures & catalogs\nAll custom & OEM. Which one interests you?" },
       { id: "hangtag", kws: ["hangtag", "hang tag", "tag", "吊牌"], reply: "Hang tags are our specialty 👍 Materials: art paper (300-400gsm), kraft, cotton, waterproof PVC. Finishes: hot foil, embossing, spot UV, lamination. Sizes 35×70 / 40×90 / 50×90mm or custom die-cut. Need material advice?" },
-      { id: "woven", kws: ["woven", "satin", "jacquard", "主唛", "织唛"], reply: "Woven labels: satin, plain, jacquard, double-layer edge — fine detail, wash-resistant. Satin/jacquard for main labels, taffeta for size labels. Main label or size label?" },
-      { id: "carelabel", kws: ["care label", "washing", "洗水标"], reply: "Care labels: woven tape, coated or printed — meeting international care standards, clear and durable. A common combo: woven main label + printed care label. Need a recommendation?" },
-      { id: "bags", kws: ["bag", "poly", "ziplock", "包装袋"], reply: "Bags: PE/CPE poly, zipper, self-seal, anti-static — printable with your logo, custom size & thickness. Clear OPP bags are great value for apparel export 👍" },
-      { id: "paperbag", kws: ["paper bag", "kraft", "eco bag", "纸袋"], reply: "Eco paper bags in kraft or art card — biodegradable, printable, custom handles. EU buyers love these 🌱" },
-      { id: "brochure", kws: ["brochure", "catalog", "flyer", "画册"], reply: "Brochures, catalogs and flyers — full quality control from paper to binding. Send your brand VI and our design team will advise for free." },
-      { id: "moq", kws: ["moq", "minimum", "quantity", "起订"], reply: function (st) {
+      { id: "woven", kws: ["woven", "satin", "jacquard", "主嘜", "織嘜"], reply: "Woven labels: satin, plain, jacquard, double-layer edge — fine detail, wash-resistant. Satin/jacquard for main labels, taffeta for size labels. Main label or size label?" },
+      { id: "carelabel", kws: ["care label", "washing", "洗水標"], reply: "Care labels: woven tape, coated or printed — meeting international care standards, clear and durable. A common combo: woven main label + printed care label. Need a recommendation?" },
+      { id: "bags", kws: ["bag", "poly", "ziplock", "包裝袋"], reply: "Bags: PE/CPE poly, zipper, self-seal, anti-static — printable with your logo, custom size & thickness. Clear OPP bags are great value for apparel export 👍" },
+      { id: "paperbag", kws: ["paper bag", "kraft", "eco bag", "紙袋"], reply: "Eco paper bags in kraft or art card — biodegradable, printable, custom handles. EU buyers love these 🌱" },
+      { id: "brochure", kws: ["brochure", "catalog", "flyer", "畫冊"], reply: "Brochures, catalogs and flyers — full quality control from paper to binding. Send your brand VI and our design team will advise for free." },
+      { id: "moq", kws: ["moq", "minimum", "quantity", "起訂"], reply: function (st) {
         if (st.topic === "hangtag") return "Hang tag MOQ: 2,000–3,000 pcs trial; unit price drops significantly at 10,000+. How many do you need?";
         if (st.topic === "woven") return "Woven labels usually start at 1,000+ pcs; jacquard/double-layer vary slightly. Need an exact quantity?";
         if (st.topic === "carelabel") return "Care labels from 300–500 pcs — very budget-friendly 👍 Which type (woven/coated/printed)?";
         if (st.topic === "bags" || st.topic === "paperbag") return "Bag MOQ is flexible by size and printing — even a few hundred sample bags. What size?";
         return "MOQ varies: hang tags 2,000–3,000 trial; woven 1,000+; care labels 300–500; bags flexible. Which product?";
       } },
-      { id: "sample", kws: ["sample", "prototype", "打样"], reply: "Yes, we sample! Physical samples within 3–7 days, with free sampling advice. We always recommend confirming print quality before bulk orders 😊 Can you share an artwork or reference?" },
-      { id: "quote", kws: ["quote", "price", "cost", "how much", "报价"], reply: function (st) {
+      { id: "sample", kws: ["sample", "prototype", "打樣"], reply: "Yes, we sample! Physical samples within 3–7 days, with free sampling advice. We always recommend confirming print quality before bulk orders 😊 Can you share an artwork or reference?" },
+      { id: "quote", kws: ["quote", "price", "cost", "how much", "報價"], reply: function (st) {
         if (st.topic === "hangtag") return "For hang tags, price depends on material, size, colors and finish — standard art paper is very friendly at thousand-pc levels; foil or die-cut costs a bit more. What quantity do you need? Email artwork to sales@taigetag.com for an exact quote 😊";
         if (st.topic === "woven") return "Woven label quotes depend on weave (satin/jacquard/double) and size, usually 1,000+ pcs. Send your artwork and we'll quote within 24h!";
         if (st.topic === "carelabel") return "Care labels are priced by material (woven/coated/printed) and quantity — from 300–500 pcs, very budget-friendly. Which type?";
@@ -112,11 +112,11 @@
       { id: "leadtime", kws: ["lead time", "delivery", "how long", "交期"], reply: "Sampling: 3–7 days. Bulk delivery: usually 10–25 days depending on quantity and finish. Written confirmation before you order 😊" },
       { id: "payment", kws: ["payment", "deposit", "tt", "l/c", "付款"], reply: "Standard terms: 30% deposit, 70% balance before shipment. Bank T/T accepted; L/C negotiable for large orders. Full payment terms for first orders." },
       { id: "shipping", kws: ["shipping", "freight", "fob", "exw", "dhl", "物流"], reply: "FOB Shenzhen/Guangzhou, EXW factory, or we arrange sea/air/express (DHL, FedEx, UPS). Express is most economical for small sample parcels 📦" },
-      { id: "oem", kws: ["oem", "odm", "custom", "logo", "design", "定制"], reply: "OEM/ODM and sample-based customization supported! Our design team helps optimize artwork — colors, materials, finishes all flexible, from sampling to mass production. Do you have artwork or need design help?" },
-      { id: "quality", kws: ["quality", "qc", "certification", "质量"], reply: "Full QC process: raw material inspection → in-process checks → final inspection → pre-shipment review. Business license and certificates available; test reports on request 📋" },
+      { id: "oem", kws: ["oem", "odm", "custom", "logo", "design", "定製"], reply: "OEM/ODM and sample-based customization supported! Our design team helps optimize artwork — colors, materials, finishes all flexible, from sampling to mass production. Do you have artwork or need design help?" },
+      { id: "quality", kws: ["quality", "qc", "certification", "質量"], reply: "Full QC process: raw material inspection → in-process checks → final inspection → pre-shipment review. Business license and certificates available; test reports on request 📋" },
       { id: "company", kws: ["company", "factory", "where", "about", "tage"], reply: "Dongguan Tage Packaging Products Co., Ltd. — Humen, Dongguan, Guangdong. 20 years in garment trims: hang tags, woven labels, care labels, bags — one-stop, exporting to 40+ countries 🇨🇳🌍" },
       { id: "contact", kws: ["contact", "phone", "email", "wechat", "whatsapp"], reply: "Contact us anytime! 📧 sales@taigetag.com ｜ 📱 Phone/WhatsApp/WeChat: +86 131 2811 8931 ｜ 📍 Humen, Dongguan, Guangdong. Replies within 24h (faster during work hours) 😊" },
-      { id: "order", kws: ["order", "process", "how to buy", "下单"], reply: "Simple process: ① send requirements/artwork → ② quote within 24h → ③ sampling → ④ mass production after approval → ⑤ QC & shipping. Start from any step!" },
+      { id: "order", kws: ["order", "process", "how to buy", "下單"], reply: "Simple process: ① send requirements/artwork → ② quote within 24h → ③ sampling → ④ mass production after approval → ⑤ QC & shipping. Start from any step!" },
       { id: "faq", kws: ["faq", "help", "question"], reply: "Quick answers:\n📦 MOQ: hang tags 2,000+, woven 1,000+, care labels 300+\n🧪 Sampling: 3–7 days\n💰 Quote: within 24h\n🚚 Delivery: 10–25 days\nAsk me anything else!" }
     ]
   };
@@ -207,51 +207,51 @@
     ]
   };
 
-  /* ---------- 日语（/ja/ 目录） ---------- */
+  /* ---------- 日語（/ja/ 目錄） ---------- */
   T.ja = {
-    online: "オンライン", hello: "こんにちは！泰閣（TAGE）のスマートアシスタントです 🐓 タグ、織りラベル、洗濯表示ラベル、包装袋について何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。",
+    online: "オンライン", hello: "こんにちは！泰閣（TAGE）のスマートアシスタントです 🐓 タグ、織りラベル、洗濯表示ラベル、包裝袋について何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。",
     ph: "ご質問を入力してください…", send: "送信",
     quick: ["どのような製品がありますか？", "最小ロットはいくつですか？", "サンプル作成はできますか？", "お見積りはどうすればいいですか？"],
-    followupQuote: "💡 ヒント：デザインデータまたは数量を sales@taigetag.com までお送りいただければ、24時間以内に正確なお見積りをご提示いたします。WeChat 13128118931 でのご連絡がより速いです。",
-    fallback: "この件は確認が必要です 🤔 具体的なご要望を sales@taigetag.com までお送りいただくか、WeChat 13128118931 までご連絡ください。担当者より 24時間以内に正確にご回答いたします。ページ下部の「お問い合わせ」からも直接ご連絡いただけます。",
+    followupQuote: "💡 ヒント：デザインデータまたは數量を sales@taigetag.com までお送りいただければ、24時間以內に正確なお見積りをご提示いたします。WeChat 13128118931 でのご連絡がより速いです。",
+    fallback: "この件は確認が必要です 🤔 具體的なご要望を sales@taigetag.com までお送りいただくか、WeChat 13128118931 までご連絡ください。擔當者より 24時間以內に正確にご回答いたします。ページ下部の「お問い合わせ」からも直接ご連絡いただけます。",
     intents: [
-      { id: "hello", kws: ["你好", "您好", "嗨", "哈喽", "hello", "hi", "hey", "在吗", "在不在", "こんにちは", "こんばんは", "おはようございます", "はじめまして", "もしもし"], reply: "こんにちは！どのようなご用件でしょうか？😊 製品、最小ロット、サンプル作成、お見積りなど、何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。" },
-      { id: "thanks", kws: ["谢谢", "感谢", "thank", "thanks", "thx", "3q", "merci", "gracias", "ありがとう", "ありがとうございます", "どうも", "感謝"], reply: "どういたしまして！😄 サンプルやお見積りのご依頼は、いつでもお気軽にご連絡ください。" },
-      { id: "bye", kws: ["再见", "拜拜", "bye", "88", "goodbye", "see you", "さようなら", "失礼します", "またね"], reply: "失礼いたします。ご商売のご発展をお祈り申し上げます 🚀 いつでもお気軽にお問い合わせください。" },
-      { id: "product", kws: ["产品", "什么", "有哪些", "做什么", "品类", "product", "produce", "offre", "productos", "range", "offer", "what do you make", "製品", "商品", "取り扱い", "ラインナップ", "どんな製品"], reply: "当社は 6 つの製品ラインを展開しております。\n① 衣料用タグ（コート紙／クラフト紙／PVC、箔押し・UV・マット加工）\n② 織りラベル／メインラベル（サテン／ジャカード／二重織端）\n③ 洗濯表示ラベル（織りテープ／コーティング／印刷）\n④ 包装袋（PE 袋／チャック袋／帯電防止袋）\n⑤ エコ紙袋（クラフト紙／白カード紙）\n⑥ パンフレット（カタログ／リーフレット）\nすべてカスタマイズ・OEM に対応しております。どれにご興味がおありですか？" },
-      { id: "hangtag", kws: ["吊牌", "挂卡", "hangtag", "hang tag", "tag", "étiquette suspendue", "etiqueta colgante", "标签卡", "タグ", "ハングタグ", "値札"], reply: "タグは当社の主力製品です 👍 素材はコート紙（300-400 g）、クラフト紙、コットン紙、防水 PVC などがございます。加工は箔押し、エンボス、部分 UV、ラミネートに対応しております。サイズは通常 35×70 / 40×90 / 50×90mm で、異形型抜きも承ります。素材選びをお手伝いいたしましょうか？" },
-      { id: "woven", kws: ["织唛", "主唛", "缎面", "提花", "woven", "satin", "jacquard", "tissé", "tejida", "商标", "織りラベル", "織ネーム", "メインラベル", "サテン", "ジャカード", "織り"], reply: "織りラベル／メインラベルは、サテン、平織り、ジャカード、二重織端などの織り方がございます。柄が繊細で洗濯にも色落ちしません。メインラベルにはサテンやジャカード、サイズラベルにはタフタがおすすめです。メインラベルとサイズラベル、どちらが必要でしょうか？" },
-      { id: "carelabel", kws: ["洗水标", "洗标", "水洗标", "care label", "washing", "entretien", "de cuidado", "洗濯表示", "洗濯ラベル", "洗濯ネーム", "ケアラベル"], reply: "洗濯表示ラベルは 3 種類ございます。織りテープ、コーティング、印刷タイプで、各国の洗濯表示規格に適合し、情報が明確で長持ちします。一般的な組み合わせは「織りラベル＋印刷洗濯表示ラベル」で、品質とコストのバランスに優れております。お客様の洗濯条件に合わせてご提案いたしましょうか？" },
-      { id: "bags", kws: ["包装袋", "胶袋", "自封袋", "拉链袋", "poly bag", "ziplock", "bag", "poly", "sac", "bolsa", "ポリ袋", "ビニール袋", "チャック袋", "梱包袋", "袋"], reply: "包装袋は PE／CPE 袋、チャック袋、粘着テープ袋、帯電防止袋を取り扱っております。ブランドロゴの印刷が可能で、サイズと厚みはご要望に合わせて製造いたします。衣料品の輸出では透明 OPP 袋のコストパフォーマンスが非常に良好です 👍" },
-      { id: "paperbag", kws: ["纸袋", "牛皮纸袋", "环保袋", "paper bag", "kraft", "eco bag", "sac papier", "bolsa de papel", "エコ紙袋", "クラフト紙袋", "ペーパーバッグ", "紙袋"], reply: "エコ紙袋はクラフト紙または白カード紙を使用し、生分解性で環境に優しく、ブランド印刷や取っ手のカスタマイズにも対応しております。欧州のお客様はこの点を特に重視されております 🌱 環境対応の選択肢をご覧になりますか？" },
-      { id: "brochure", kws: ["画册", "手册", "折页", "目录", "brochure", "catalog", "catalogue", "flyer", "folleto", "パンフレット", "カタログ", "リーフレット", "冊子"], reply: "パンフレット、カタログ、リーフレットはいずれも承っております。用紙の選定から製本まで一貫して品質を管理いたします。ブランドの VI データをお送りいただければ、デザイン部が無料でレイアウトをご提案いたします。" },
-      { id: "moq", kws: ["起订", "moq", "最小", "多少起", "数量", "quantity", "minimum", "quantité", "mínimo", "最小ロット", "ロット", "最小注文", "最低数量", "何枚から", "いくつから"], reply: function (st) {
-        if (st.topic === "hangtag") return "タグの最小ロットは 2,000–3,000 枚から試験発注が可能で、10,000 枚以上になりますと単価がよりお得です。数量はどのくらいをお考えですか？";
-        if (st.topic === "woven") return "織りラベルは通常 1,000 枚以上から承っております。ジャカードや二重織端は価格が多少異なります。正確な数量を教えていただけますか？";
+      { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "hey", "在嗎", "在不在", "こんにちは", "こんばんは", "おはようございます", "はじめまして", "もしもし"], reply: "こんにちは！どのようなご用件でしょうか？😊 製品、最小ロット、サンプル作成、お見積りなど、何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。" },
+      { id: "thanks", kws: ["謝謝", "感謝", "thank", "thanks", "thx", "3q", "merci", "gracias", "ありがとう", "ありがとうございます", "どうも", "感謝"], reply: "どういたしまして！😄 サンプルやお見積りのご依頼は、いつでもお気軽にご連絡ください。" },
+      { id: "bye", kws: ["再見", "拜拜", "bye", "88", "goodbye", "see you", "さようなら", "失禮します", "またね"], reply: "失禮いたします。ご商売のご発展をお祈り申し上げます 🚀 いつでもお気軽にお問い合わせください。" },
+      { id: "product", kws: ["產品", "什麼", "有哪些", "做什麼", "品類", "product", "produce", "offre", "productos", "range", "offer", "what do you make", "製品", "商品", "取り扱い", "ラインナップ", "どんな製品"], reply: "當社は 6 つの製品ラインを展開しております。\n① 衣料用タグ（コート紙／クラフト紙／PVC、箔押し・UV・マット加工）\n② 織りラベル／メインラベル（サテン／ジャカード／二重織端）\n③ 洗濯表示ラベル（織りテープ／コーティング／印刷）\n④ 包裝袋（PE 袋／チャック袋／帯電防止袋）\n⑤ エコ紙袋（クラフト紙／白カード紙）\n⑥ パンフレット（カタログ／リーフレット）\nすべてカスタマイズ・OEM に対応しております。どれにご興味がおありですか？" },
+      { id: "hangtag", kws: ["吊牌", "掛卡", "hangtag", "hang tag", "tag", "étiquette suspendue", "etiqueta colgante", "標籤卡", "タグ", "ハングタグ", "値札"], reply: "タグは當社の主力製品です 👍 素材はコート紙（300-400 g）、クラフト紙、コットン紙、防水 PVC などがございます。加工は箔押し、エンボス、部分 UV、ラミネートに対応しております。サイズは通常 35×70 / 40×90 / 50×90mm で、異形型抜きも承ります。素材選びをお手伝いいたしましょうか？" },
+      { id: "woven", kws: ["織嘜", "主嘜", "緞面", "提花", "woven", "satin", "jacquard", "tissé", "tejida", "商標", "織りラベル", "織ネーム", "メインラベル", "サテン", "ジャカード", "織り"], reply: "織りラベル／メインラベルは、サテン、平織り、ジャカード、二重織端などの織り方がございます。柄が繊細で洗濯にも色落ちしません。メインラベルにはサテンやジャカード、サイズラベルにはタフタがおすすめです。メインラベルとサイズラベル、どちらが必要でしょうか？" },
+      { id: "carelabel", kws: ["洗水標", "洗標", "水洗標", "care label", "washing", "entretien", "de cuidado", "洗濯表示", "洗濯ラベル", "洗濯ネーム", "ケアラベル"], reply: "洗濯表示ラベルは 3 種類ございます。織りテープ、コーティング、印刷タイプで、各國の洗濯表示規格に適合し、情報が明確で長持ちします。一般的な組み合わせは「織りラベル＋印刷洗濯表示ラベル」で、品質とコストのバランスに優れております。お客様の洗濯條件に合わせてご提案いたしましょうか？" },
+      { id: "bags", kws: ["包裝袋", "膠袋", "自封袋", "拉鍊袋", "poly bag", "ziplock", "bag", "poly", "sac", "bolsa", "ポリ袋", "ビニール袋", "チャック袋", "梱包袋", "袋"], reply: "包裝袋は PE／CPE 袋、チャック袋、粘着テープ袋、帯電防止袋を取り扱っております。ブランドロゴの印刷が可能で、サイズと厚みはご要望に合わせて製造いたします。衣料品の輸出では透明 OPP 袋のコストパフォーマンスが非常に良好です 👍" },
+      { id: "paperbag", kws: ["紙袋", "牛皮紙袋", "環保袋", "paper bag", "kraft", "eco bag", "sac papier", "bolsa de papel", "エコ紙袋", "クラフト紙袋", "ペーパーバッグ", "紙袋"], reply: "エコ紙袋はクラフト紙または白カード紙を使用し、生分解性で環境に優しく、ブランド印刷や取っ手のカスタマイズにも対応しております。歐州のお客様はこの點を特に重視されております 🌱 環境対応の選択肢をご覧になりますか？" },
+      { id: "brochure", kws: ["畫冊", "手冊", "摺頁", "目錄", "brochure", "catalog", "catalogue", "flyer", "folleto", "パンフレット", "カタログ", "リーフレット", "冊子"], reply: "パンフレット、カタログ、リーフレットはいずれも承っております。用紙の選定から製本まで一貫して品質を管理いたします。ブランドの VI データをお送りいただければ、デザイン部が無料でレイアウトをご提案いたします。" },
+      { id: "moq", kws: ["起訂", "moq", "最小", "多少起", "數量", "quantity", "minimum", "quantité", "mínimo", "最小ロット", "ロット", "最小注文", "最低數量", "何枚から", "いくつから"], reply: function (st) {
+        if (st.topic === "hangtag") return "タグの最小ロットは 2,000–3,000 枚から試験発注が可能で、10,000 枚以上になりますと単価がよりお得です。數量はどのくらいをお考えですか？";
+        if (st.topic === "woven") return "織りラベルは通常 1,000 枚以上から承っております。ジャカードや二重織端は価格が多少異なります。正確な數量を教えていただけますか？";
         if (st.topic === "carelabel") return "洗濯表示ラベルは 300–500 枚から承っており、コスト面でも大変お得です 👍 どのタイプ（織りテープ／コーティング／印刷）をご希望ですか？";
-        if (st.topic === "bags" || st.topic === "paperbag") return "包装袋の最小ロットは柔軟です。サイズと印刷内容によって異なり、数百枚のサンプル袋からも承ります。ご希望のサイズはどのくらいですか？";
-        return "最小ロットは製品によって異なります。タグは 2,000–3,000 枚の試験発注、織りラベルは 1,000 枚以上、洗濯表示ラベルは 300–500 枚から、包装袋は柔軟に対応しております。どの製品をお考えですか？";
+        if (st.topic === "bags" || st.topic === "paperbag") return "包裝袋の最小ロットは柔軟です。サイズと印刷內容によって異なり、數百枚のサンプル袋からも承ります。ご希望のサイズはどのくらいですか？";
+        return "最小ロットは製品によって異なります。タグは 2,000–3,000 枚の試験発注、織りラベルは 1,000 枚以上、洗濯表示ラベルは 300–500 枚から、包裝袋は柔軟に対応しております。どの製品をお考えですか？";
       } },
-      { id: "sample", kws: ["打样", "样品", "样板", "样版", "sample", "prototype", "échantillon", "muestra", "打版", "サンプル", "サンプル作成", "見本", "試作"], reply: "サンプル作成は可能です！通常 3–7 日以内に現物サンプルをお送りし、無料でサンプル作成のご提案もいたします。量産前に印刷品質と素材の質感をご確認いただくことを、すべてのお客様におすすめしております 😊 デザインデータまたは参考画像をお送りいただけますか？" },
-      { id: "quote", kws: ["报价", "价格", "多少钱", "费用", "成本", "怎么算", "询价", "quote", "price", "cost", "how much", "devis", "prix", "presupuesto", "precio", "お見積り", "見積", "価格", "値段", "いくら", "単価"], reply: function (st) {
-        if (st.topic === "hangtag") return "タグの場合、価格は主に素材、サイズ、印刷色数、加工によって決まります。コート紙の標準タイプは千枚単位で大変お求めやすい価格で、箔押しや異形型抜きは少し高くなります。おおよその数量を教えていただけますか？デザインを sales@taigetag.com までお送りいただければ正確なお見積りが可能です 😊";
-        if (st.topic === "woven") return "織りラベルのお見積りは織り方（サテン／ジャカード／二重）とサイズによって異なり、通常 1,000 枚以上から承っております。デザインデータをお送りいただければ、24時間以内に正確なお見積りをご提示いたします。";
-        if (st.topic === "carelabel") return "洗濯表示ラベルの価格は素材（織りテープ／コーティング／印刷）と数量で計算し、300–500 枚から承っております。大変お求めやすい価格です。どのタイプのお見積りが必要ですか？";
-        if (st.topic === "bags" || st.topic === "paperbag") return "包装袋のお見積りはサイズ、厚み、印刷、数量によって異なります。ご要望（サイズ＋数量＋ロゴ印刷の有無）をお送りいただければ、24時間以内にお見積りをご提示いたします 👍";
-        return "かしこまりました。正確にお見積りするために、① 製品タイプ ② 数量 ③ デザイン／サイズをお知らせください。まずはどの製品かをお伝えいただき、残りの情報は sales@taigetag.com までお送りください 😊";
+      { id: "sample", kws: ["打樣", "樣品", "樣板", "樣版", "sample", "prototype", "échantillon", "muestra", "打版", "サンプル", "サンプル作成", "見本", "試作"], reply: "サンプル作成は可能です！通常 3–7 日以內に現物サンプルをお送りし、無料でサンプル作成のご提案もいたします。量産前に印刷品質と素材の質感をご確認いただくことを、すべてのお客様におすすめしております 😊 デザインデータまたは參考畫像をお送りいただけますか？" },
+      { id: "quote", kws: ["報價", "價格", "多少錢", "費用", "成本", "怎麼算", "詢價", "quote", "price", "cost", "how much", "devis", "prix", "presupuesto", "precio", "お見積り", "見積", "価格", "値段", "いくら", "単価"], reply: function (st) {
+        if (st.topic === "hangtag") return "タグの場合、価格は主に素材、サイズ、印刷色數、加工によって決まります。コート紙の標準タイプは千枚単位で大変お求めやすい価格で、箔押しや異形型抜きは少し高くなります。おおよその數量を教えていただけますか？デザインを sales@taigetag.com までお送りいただければ正確なお見積りが可能です 😊";
+        if (st.topic === "woven") return "織りラベルのお見積りは織り方（サテン／ジャカード／二重）とサイズによって異なり、通常 1,000 枚以上から承っております。デザインデータをお送りいただければ、24時間以內に正確なお見積りをご提示いたします。";
+        if (st.topic === "carelabel") return "洗濯表示ラベルの価格は素材（織りテープ／コーティング／印刷）と數量で計算し、300–500 枚から承っております。大変お求めやすい価格です。どのタイプのお見積りが必要ですか？";
+        if (st.topic === "bags" || st.topic === "paperbag") return "包裝袋のお見積りはサイズ、厚み、印刷、數量によって異なります。ご要望（サイズ＋數量＋ロゴ印刷の有無）をお送りいただければ、24時間以內にお見積りをご提示いたします 👍";
+        return "かしこまりました。正確にお見積りするために、① 製品タイプ ② 數量 ③ デザイン／サイズをお知らせください。まずはどの製品かをお伝えいただき、殘りの情報は sales@taigetag.com までお送りください 😊";
       } },
-      { id: "leadtime", kws: ["交期", "货期", "多久", "多长时间", "什么时候", "lead", "lead time", "delivery", "how long", "délai", "plazo", "几天", "納期", "リードタイム", "生産期間", "何日"], reply: "サンプル作成は通常 3–7 日、量産の納期は数量と加工によって通常 10–25 日です。ご注文前に書面で納期を確認いたしますのでご安心ください 😊" },
-      { id: "payment", kws: ["付款", "怎么付", "定金", "信用证", "tt", "l/c", "payment", "deposit", "paiement", "pago", "支払", "支払い", "決済", "手付金", "前払い"], reply: "通常のお取引条件は、30% の手付金と、出荷前に残り 70% をお支払いいただく形です。T/T の銀行送金に対応しており、大口のご注文では L/C もご相談いただけます。初めてのお取引のお客様には、詳細な支払条件をご案内いたします。" },
-      { id: "shipping", kws: ["运费", "物流", "快递", "海运", "空运", "fob", "exw", "dhl", "shipping", "freight", "expédition", "envío", "輸送", "送料", "船便", "航空便", "発送", "宅配"], reply: "出荷方法は複数ご用意しております。FOB 深セン／広州、EXW 工場渡し、または当社が船便・航空便・宅配便（DHL、FedEx、UPS など）を手配いたします。小口のサンプルは宅配便が最もお得です 📦" },
-      { id: "oem", kws: ["定制", "oem", "odm", "来样", "设计", "logo", "custom", "design", "personnalisé", "personalizado", "カスタマイズ", "特注", "オーダー", "デザイン", "ロゴ"], reply: "OEM／ODM およびサンプルベースのカスタマイズに対応しております。デザイン部がデータの最適化をお手伝いし、色、素材、加工を柔軟に組み合わせて、サンプル作成から量産まで一貫対応いたします。デザインデータはお持ちですか、それともデザインからご依頼ですか？" },
-      { id: "quality", kws: ["质量", "质检", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "认证", "品質", "検品", "品質管理", "認証"], reply: "原材料検査 → 印刷工程の抜き取り検査 → 完成品の全数検査 → 出荷前の再検査という、完全な品質管理体制を実施しております。営業許可証および各種資格を保有しており、検査報告書のご提供も可能です 📋" },
-      { id: "company", kws: ["公司", "工厂", "介绍", "泰阁", "tage", "哪里", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "会社", "工場", "会社概要", "所在", "どこ", "紹介"], reply: "東莞泰閣包装製品有限公司（Dongguan Tage Packaging Products Co., Ltd.）は広東省東莞市虎門に位置し、衣料副資材一筋 20 年：タグ、織りラベル、洗濯表示ラベル、包装袋をワンストップで生産し、世界 40+ の国と地域へ輸出しております 🇨🇳🌍" },
-      { id: "contact", kws: ["联系", "电话", "微信", "邮箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "連絡", "電話", "メール", "お問い合わせ", "問い合わせ"], reply: "いつでもご連絡ください！📧 sales@taigetag.com ｜📱 電話／WhatsApp／WeChat：+86 131 2811 8931 ｜📍 中国広東省東莞市虎門鎮。ご要望には通常 24時間以内に返信いたします（営業時間内はより早く対応できます）😊" },
-      { id: "order", kws: ["下单", "订购", "买", "怎么合作", "流程", "order", "process", "how to buy", "commande", "pedido", "注文", "発注", "取引", "流れ", "手順"], reply: "お取引の流れは簡単です。① ご要望・デザインデータをお送りいただく → ② 24時間以内にお見積り → ③ サンプル作成 → ④ サンプル確認後に量産 → ⑤ 検品・出荷。どのステップからでも開始できます！" },
-      { id: "faq", kws: ["常见问题", "faq", "问题", "help", "aide", "question", "よくある質問", "質問", "ヘルプ", "疑問"], reply: "よくあるご質問への回答です。\n📦 最小ロット：タグ 2,000+、織りラベル 1,000+、洗濯表示ラベル 300+ \n🧪 サンプル：3–7 日で発送\n💰 お見積り：24時間以内\n🚚 納期：10–25 日\nその他のご質問もお気軽にお尋ねください。" }
+      { id: "leadtime", kws: ["交期", "貨期", "多久", "多長時間", "什麼時候", "lead", "lead time", "delivery", "how long", "délai", "plazo", "幾天", "納期", "リードタイム", "生産期間", "何日"], reply: "サンプル作成は通常 3–7 日、量産の納期は數量と加工によって通常 10–25 日です。ご註文前に書面で納期を確認いたしますのでご安心ください 😊" },
+      { id: "payment", kws: ["付款", "怎麼付", "定金", "信用證", "tt", "l/c", "payment", "deposit", "paiement", "pago", "支払", "支払い", "決済", "手付金", "前払い"], reply: "通常のお取引條件は、30% の手付金と、出荷前に殘り 70% をお支払いいただく形です。T/T の銀行送金に対応しており、大口のご註文では L/C もご相談いただけます。初めてのお取引のお客様には、詳細な支払條件をご案內いたします。" },
+      { id: "shipping", kws: ["運費", "物流", "快遞", "海運", "空運", "fob", "exw", "dhl", "shipping", "freight", "expédition", "envío", "輸送", "送料", "船便", "航空便", "発送", "宅配"], reply: "出荷方法は複數ご用意しております。FOB 深セン／広州、EXW 工場渡し、または當社が船便・航空便・宅配便（DHL、FedEx、UPS など）を手配いたします。小口のサンプルは宅配便が最もお得です 📦" },
+      { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "design", "personnalisé", "personalizado", "カスタマイズ", "特注", "オーダー", "デザイン", "ロゴ"], reply: "OEM／ODM およびサンプルベースのカスタマイズに対応しております。デザイン部がデータの最適化をお手伝いし、色、素材、加工を柔軟に組み合わせて、サンプル作成から量産まで一貫対応いたします。デザインデータはお持ちですか、それともデザインからご依頼ですか？" },
+      { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "認證", "品質", "検品", "品質管理", "認証"], reply: "原材料検査 → 印刷工程の抜き取り検査 → 完成品の全數検査 → 出荷前の再検査という、完全な品質管理體制を実施しております。営業許可証および各種資格を保有しており、検査報告書のご提供も可能です 📋" },
+      { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "會社", "工場", "會社概要", "所在", "どこ", "紹介"], reply: "東莞泰閣包裝製品有限公司（Dongguan Tage Packaging Products Co., Ltd.）は広東省東莞市虎門に位置し、衣料副資材一筋 20 年：タグ、織りラベル、洗濯表示ラベル、包裝袋をワンストップで生産し、世界 40+ の國と地域へ輸出しております 🇨🇳🌍" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "連絡", "電話", "メール", "お問い合わせ", "問い合わせ"], reply: "いつでもご連絡ください！📧 sales@taigetag.com ｜📱 電話／WhatsApp／WeChat：+86 131 2811 8931 ｜📍 中國広東省東莞市虎門鎮。ご要望には通常 24時間以內に返信いたします（営業時間內はより早く対応できます）😊" },
+      { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "process", "how to buy", "commande", "pedido", "註文", "発注", "取引", "流れ", "手順"], reply: "お取引の流れは簡単です。① ご要望・デザインデータをお送りいただく → ② 24時間以內にお見積り → ③ サンプル作成 → ④ サンプル確認後に量産 → ⑤ 検品・出荷。どのステップからでも開始できます！" },
+      { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "question", "よくある質問", "質問", "ヘルプ", "疑問"], reply: "よくあるご質問への回答です。\n📦 最小ロット：タグ 2,000+、織りラベル 1,000+、洗濯表示ラベル 300+ \n🧪 サンプル：3–7 日で発送\n💰 お見積り：24時間以內\n🚚 納期：10–25 日\nその他のご質問もお気軽にお尋ねください。" }
     ]
   };
-  /* ---------- 韩语（/ko/ 目录） ---------- */
+  /* ---------- 韓語（/ko/ 目錄） ---------- */
   T.ko = {
     online: "온라인", hello: "안녕하세요! TAGE(泰閣) 스마트 상담원입니다 🐓 행택, 직조 라벨, 세탁 표시 라벨, 포장백에 대해 무엇이든 물어보세요. 원하시는 내용을 그대로 말씀해 주셔도 됩니다.",
     ph: "질문을 입력해 주세요…", send: "보내기",
@@ -259,46 +259,46 @@
     followupQuote: "💡 안내: 디자인 파일이나 수량을 sales@taigetag.com 으로 보내주시면 24시간 이내에 정확한 견적을 드립니다. 위챗 13128118931 으로 연락하시면 더 빠릅니다.",
     fallback: "이 부분은 확인이 필요합니다 🤔 구체적인 요구사항을 sales@taigetag.com 으로 보내주시거나 위챗 13128118931 으로 연락해 주세요. 담당자가 24시간 이내에 정확하게 답변드립니다. 페이지 하단의 문의하기 양식을 이용하셔도 됩니다.",
     intents: [
-      { id: "hello", kws: ["你好", "您好", "嗨", "哈喽", "hello", "hi", "hey", "在吗", "在不在", "안녕하세요", "안녕", "반갑습니다", "여보세요"], reply: "안녕하세요! 무엇을 도와드릴까요? 😊 제품, 최소 주문량, 샘플 제작, 견적 등 무엇이든 물어보세요. 원하시는 내용을 그대로 말씀해 주셔도 됩니다." },
-      { id: "thanks", kws: ["谢谢", "感谢", "thank", "thanks", "thx", "3q", "merci", "gracias", "감사", "고맙", "감사합니다"], reply: "천만에요! 😄 샘플이나 견적이 필요하시면 언제든지 연락 주세요." },
-      { id: "bye", kws: ["再见", "拜拜", "bye", "88", "goodbye", "see you", "안녕히", "잘 가", "바이바이"], reply: "안녕히 가세요! 사업 번창하시길 바랍니다 🚀 필요하실 때 언제든 찾아주세요." },
-      { id: "product", kws: ["产品", "什么", "有哪些", "做什么", "品类", "product", "produce", "range", "offer", "what do you make", "offre", "productos", "제품", "상품", "품목", "제품군", "종류"], reply: "저희는 6개 제품 라인을 생산합니다.\n① 의류 행택(아트지/크라프트지/PVC, 금박 UV 무광 코팅)\n② 직조 라벨/메인 라벨(새틴/자카드/이중 직조 가장자리)\n③ 세탁 표시 라벨(직조 테이프/코팅/인쇄)\n④ 포장백(PE 비닐백/지퍼백/정전기 방지백)\n⑤ 친환경 종이백(크라프트지/백색 카드지)\n⑥ 브로슈어(카탈로그/리플렛)\n모두 맞춤 제작과 OEM이 가능합니다. 어느 제품에 관심이 있으신가요?" },
-      { id: "hangtag", kws: ["吊牌", "挂卡", "hangtag", "hang tag", "tag", "étiquette suspendue", "etiqueta colgante", "标签卡", "행택", "태그", "가격표"], reply: "행택은 저희 주력 제품입니다 👍 소재는 아트지(300-400g), 크라프트지, 면지, 방수 PVC 등이 있습니다. 가공은 금박, 엠보싱, 부분 UV, 라미네이팅을 지원하며, 크기는 일반적으로 35×70 / 40×90 / 50×90mm 이고 이형 재단도 가능합니다. 소재 선택을 도와드릴까요?" },
-      { id: "woven", kws: ["织唛", "主唛", "缎面", "提花", "woven", "satin", "jacquard", "tissé", "tejida", "商标", "직조 라벨", "직조라벨", "직조", "메인 라벨", "새틴", "자카드"], reply: "직조 라벨/메인 라벨은 새틴, 평직, 자카드, 이중 직조 가장자리 등의 직조 방식이 있으며 무늬가 정교하고 세탁에도 변색되지 않습니다. 메인 라벨에는 새틴이나 자카드, 사이즈 라벨에는 태피터를 권장합니다. 메인 라벨과 사이즈 라벨 중 어느 것이 필요하신가요?" },
-      { id: "carelabel", kws: ["洗水标", "洗标", "水洗标", "care label", "washing", "entretien", "de cuidado", "세탁 표시 라벨", "세탁표시라벨", "세탁 라벨", "세탁", "케어 라벨"], reply: "세탁 표시 라벨은 세 가지가 있습니다. 직조 테이프, 코팅, 인쇄 타입으로 각국의 세탁 표시 규격에 적합하며 정보가 선명하고 오래갑니다. 일반적인 조합은 직조 메인 라벨과 인쇄 세탁 표시 라벨로, 품질과 비용을 모두 만족합니다. 세탁 조건에 맞춰 추천해 드릴까요?" },
-      { id: "bags", kws: ["包装袋", "胶袋", "自封袋", "拉链袋", "poly bag", "ziplock", "bag", "poly", "sac", "bolsa", "포장백", "비닐백", "지퍼백", "폴리백", "봉투", "자루"], reply: "포장백은 PE/CPE 비닐백, 지퍼백, 접착 테이프백, 정전기 방지백을 취급합니다. 브랜드 로고 인쇄가 가능하며 크기와 두께는 요구사항에 맞춰 제작합니다. 의류 수출에는 투명 OPP 백의 가성비가 매우 좋습니다 👍" },
-      { id: "paperbag", kws: ["纸袋", "牛皮纸袋", "环保袋", "paper bag", "kraft", "eco bag", "sac papier", "bolsa de papel", "친환경 종이백", "종이백", "종이 봉투", "크라프트", "에코백"], reply: "친환경 종이백은 크라프트지 또는 백색 카드지를 사용하며, 생분해되어 환경에 좋고 브랜드 인쇄와 손잡이 맞춤 제작도 지원합니다. 유럽 고객님들이 특히 중요하게 여기시는 부분입니다 🌱 친환경 옵션을 보시겠어요?" },
-      { id: "brochure", kws: ["画册", "手册", "折页", "目录", "brochure", "catalog", "catalogue", "flyer", "folleto", "브로슈어", "카탈로그", "리플렛", "팸플릿", "책자"], reply: "브로슈어, 카탈로그, 리플렛 모두 제작 가능하며 용지 선정부터 제본까지 전 과정의 품질을 관리합니다. 브랜드 VI 파일을 보내주시면 디자인팀이 무료로 편집 제안을 드립니다." },
-      { id: "moq", kws: ["起订", "moq", "最小", "多少起", "数量", "quantity", "minimum", "quantité", "mínimo", "최소 주문량", "최소주문량", "최소 주문", "최소 로트", "주문량", "최소 수량", "몇 개부터"], reply: function (st) {
+      { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "hey", "在嗎", "在不在", "안녕하세요", "안녕", "반갑습니다", "여보세요"], reply: "안녕하세요! 무엇을 도와드릴까요? 😊 제품, 최소 주문량, 샘플 제작, 견적 등 무엇이든 물어보세요. 원하시는 내용을 그대로 말씀해 주셔도 됩니다." },
+      { id: "thanks", kws: ["謝謝", "感謝", "thank", "thanks", "thx", "3q", "merci", "gracias", "감사", "고맙", "감사합니다"], reply: "천만에요! 😄 샘플이나 견적이 필요하시면 언제든지 연락 주세요." },
+      { id: "bye", kws: ["再見", "拜拜", "bye", "88", "goodbye", "see you", "안녕히", "잘 가", "바이바이"], reply: "안녕히 가세요! 사업 번창하시길 바랍니다 🚀 필요하실 때 언제든 찾아주세요." },
+      { id: "product", kws: ["產品", "什麼", "有哪些", "做什麼", "品類", "product", "produce", "range", "offer", "what do you make", "offre", "productos", "제품", "상품", "품목", "제품군", "종류"], reply: "저희는 6개 제품 라인을 생산합니다.\n① 의류 행택(아트지/크라프트지/PVC, 금박 UV 무광 코팅)\n② 직조 라벨/메인 라벨(새틴/자카드/이중 직조 가장자리)\n③ 세탁 표시 라벨(직조 테이프/코팅/인쇄)\n④ 포장백(PE 비닐백/지퍼백/정전기 방지백)\n⑤ 친환경 종이백(크라프트지/백색 카드지)\n⑥ 브로슈어(카탈로그/리플렛)\n모두 맞춤 제작과 OEM이 가능합니다. 어느 제품에 관심이 있으신가요?" },
+      { id: "hangtag", kws: ["吊牌", "掛卡", "hangtag", "hang tag", "tag", "étiquette suspendue", "etiqueta colgante", "標籤卡", "행택", "태그", "가격표"], reply: "행택은 저희 주력 제품입니다 👍 소재는 아트지(300-400g), 크라프트지, 면지, 방수 PVC 등이 있습니다. 가공은 금박, 엠보싱, 부분 UV, 라미네이팅을 지원하며, 크기는 일반적으로 35×70 / 40×90 / 50×90mm 이고 이형 재단도 가능합니다. 소재 선택을 도와드릴까요?" },
+      { id: "woven", kws: ["織嘜", "主嘜", "緞面", "提花", "woven", "satin", "jacquard", "tissé", "tejida", "商標", "직조 라벨", "직조라벨", "직조", "메인 라벨", "새틴", "자카드"], reply: "직조 라벨/메인 라벨은 새틴, 평직, 자카드, 이중 직조 가장자리 등의 직조 방식이 있으며 무늬가 정교하고 세탁에도 변색되지 않습니다. 메인 라벨에는 새틴이나 자카드, 사이즈 라벨에는 태피터를 권장합니다. 메인 라벨과 사이즈 라벨 중 어느 것이 필요하신가요?" },
+      { id: "carelabel", kws: ["洗水標", "洗標", "水洗標", "care label", "washing", "entretien", "de cuidado", "세탁 표시 라벨", "세탁표시라벨", "세탁 라벨", "세탁", "케어 라벨"], reply: "세탁 표시 라벨은 세 가지가 있습니다. 직조 테이프, 코팅, 인쇄 타입으로 각국의 세탁 표시 규격에 적합하며 정보가 선명하고 오래갑니다. 일반적인 조합은 직조 메인 라벨과 인쇄 세탁 표시 라벨로, 품질과 비용을 모두 만족합니다. 세탁 조건에 맞춰 추천해 드릴까요?" },
+      { id: "bags", kws: ["包裝袋", "膠袋", "自封袋", "拉鍊袋", "poly bag", "ziplock", "bag", "poly", "sac", "bolsa", "포장백", "비닐백", "지퍼백", "폴리백", "봉투", "자루"], reply: "포장백은 PE/CPE 비닐백, 지퍼백, 접착 테이프백, 정전기 방지백을 취급합니다. 브랜드 로고 인쇄가 가능하며 크기와 두께는 요구사항에 맞춰 제작합니다. 의류 수출에는 투명 OPP 백의 가성비가 매우 좋습니다 👍" },
+      { id: "paperbag", kws: ["紙袋", "牛皮紙袋", "環保袋", "paper bag", "kraft", "eco bag", "sac papier", "bolsa de papel", "친환경 종이백", "종이백", "종이 봉투", "크라프트", "에코백"], reply: "친환경 종이백은 크라프트지 또는 백색 카드지를 사용하며, 생분해되어 환경에 좋고 브랜드 인쇄와 손잡이 맞춤 제작도 지원합니다. 유럽 고객님들이 특히 중요하게 여기시는 부분입니다 🌱 친환경 옵션을 보시겠어요?" },
+      { id: "brochure", kws: ["畫冊", "手冊", "摺頁", "目錄", "brochure", "catalog", "catalogue", "flyer", "folleto", "브로슈어", "카탈로그", "리플렛", "팸플릿", "책자"], reply: "브로슈어, 카탈로그, 리플렛 모두 제작 가능하며 용지 선정부터 제본까지 전 과정의 품질을 관리합니다. 브랜드 VI 파일을 보내주시면 디자인팀이 무료로 편집 제안을 드립니다." },
+      { id: "moq", kws: ["起訂", "moq", "最小", "多少起", "數量", "quantity", "minimum", "quantité", "mínimo", "최소 주문량", "최소주문량", "최소 주문", "최소 로트", "주문량", "최소 수량", "몇 개부터"], reply: function (st) {
         if (st.topic === "hangtag") return "행택 최소 주문량은 2,000–3,000 장부터 시험 주문이 가능하며, 10,000 장 이상이면 단가가 더 유리합니다. 몇 장 정도 계획하고 계신가요?";
         if (st.topic === "woven") return "직조 라벨은 일반적으로 1,000 장 이상부터 제작하며, 자카드와 이중 직조 가장자리는 가격이 조금 다릅니다. 정확한 수량이 필요하신가요?";
         if (st.topic === "carelabel") return "세탁 표시 라벨은 300–500 장부터 제작 가능하며 비용 부담이 적습니다 👍 어떤 타입(직조 테이프/코팅/인쇄)을 원하시나요?";
         if (st.topic === "bags" || st.topic === "paperbag") return "포장백 최소 주문량은 유연합니다. 크기와 인쇄 내용에 따라 다르며 수백 장의 샘플백도 제작 가능합니다. 어떤 크기를 원하시나요?";
         return "최소 주문량은 제품에 따라 다릅니다. 행택은 2,000–3,000 장 시험 주문, 직조 라벨은 1,000 장 이상, 세탁 표시 라벨은 300–500 장부터, 포장백은 유연하게 대응합니다. 어떤 제품을 계획하고 계신가요?";
       } },
-      { id: "sample", kws: ["打样", "样品", "样板", "样版", "sample", "prototype", "échantillon", "muestra", "打版", "샘플 제작", "샘플", "견본", "시제품"], reply: "샘플 제작이 가능합니다! 보통 3–7일 이내에 실물 샘플을 발송해 드리며 무료 샘플 제작 제안도 드립니다. 대량 주문 전에 인쇄 품질과 소재 감촉을 먼저 확인하시는 것을 모든 고객님께 권장합니다 😊 디자인 파일이나 참고 이미지를 보내주실 수 있나요?" },
-      { id: "quote", kws: ["报价", "价格", "多少钱", "费用", "成本", "怎么算", "询价", "quote", "price", "cost", "how much", "devis", "prix", "presupuesto", "precio", "견적", "가격", "단가", "얼마", "비용", "원가"], reply: function (st) {
+      { id: "sample", kws: ["打樣", "樣品", "樣板", "樣版", "sample", "prototype", "échantillon", "muestra", "打版", "샘플 제작", "샘플", "견본", "시제품"], reply: "샘플 제작이 가능합니다! 보통 3–7일 이내에 실물 샘플을 발송해 드리며 무료 샘플 제작 제안도 드립니다. 대량 주문 전에 인쇄 품질과 소재 감촉을 먼저 확인하시는 것을 모든 고객님께 권장합니다 😊 디자인 파일이나 참고 이미지를 보내주실 수 있나요?" },
+      { id: "quote", kws: ["報價", "價格", "多少錢", "費用", "成本", "怎麼算", "詢價", "quote", "price", "cost", "how much", "devis", "prix", "presupuesto", "precio", "견적", "가격", "단가", "얼마", "비용", "원가"], reply: function (st) {
         if (st.topic === "hangtag") return "행택의 경우 가격은 주로 소재, 크기, 인쇄 색수, 가공에 따라 결정됩니다. 아트지 표준 타입은 천 장 단위에서 단가가 매우 합리적이며, 금박이나 이형 재단은 조금 더 높습니다. 대략 몇 장이 필요하신가요? 디자인을 sales@taigetag.com 으로 보내주시면 정확한 견적을 드릴 수 있습니다 😊";
         if (st.topic === "woven") return "직조 라벨 견적은 직조 방식(새틴/자카드/이중)과 크기에 따라 다르며 일반적으로 1,000 장 이상부터 제작합니다. 디자인 파일을 보내주시면 24시간 이내에 정확한 견적을 드립니다.";
         if (st.topic === "carelabel") return "세탁 표시 라벨 가격은 소재(직조 테이프/코팅/인쇄)와 수량으로 계산하며 300–500 장부터 제작 가능하고 가격이 매우 합리적입니다. 어떤 타입의 견적이 필요하신가요?";
         if (st.topic === "bags" || st.topic === "paperbag") return "포장백 견적은 크기, 두께, 인쇄, 수량에 따라 다릅니다. 요구사항(크기+수량+로고 인쇄 여부)을 보내주시면 24시간 이내에 견적을 드립니다 👍";
         return "네, 알겠습니다! 정확한 견적을 위해 ① 제품 종류 ② 수량 ③ 디자인/크기를 알려주세요. 먼저 어떤 제품인지 말씀해 주시고 나머지 내용은 sales@taigetag.com 으로 보내주시면 됩니다 😊";
       } },
-      { id: "leadtime", kws: ["交期", "货期", "多久", "多长时间", "什么时候", "lead", "lead time", "delivery", "how long", "délai", "plazo", "几天", "납기", "리드타임", "생산 기간", "며칠", "얼마나 걸"], reply: "샘플 제작은 보통 3–7일, 양산 납기는 수량과 가공에 따라 보통 10–25일입니다. 주문 전에 납기를 서면으로 확인해 드리니 걱정하지 마세요 😊" },
-      { id: "payment", kws: ["付款", "怎么付", "定金", "信用证", "tt", "l/c", "payment", "deposit", "paiement", "pago", "결제", "지불", "계약금", "선금", "송금"], reply: "일반적인 거래 조건은 30% 계약금과 출하 전 잔액 70% 지불입니다. T/T 은행 송금을 지원하며 대량 주문은 L/C 도 협의 가능합니다. 첫 거래 고객님께는 자세한 결제 조건을 안내해 드립니다." },
-      { id: "shipping", kws: ["运费", "物流", "快递", "海运", "空运", "fob", "exw", "dhl", "shipping", "freight", "expédition", "envío", "배송", "운송", "선적", "해상", "항공", "택배", "운임"], reply: "다양한 출하 방식을 지원합니다. FOB 선전/광저우, EXW 공장 인도, 또는 저희가 해상/항공/특송(DHL, FedEx, UPS 등)을 주선해 드립니다. 소량 샘플은 특송이 가장 경제적입니다 📦" },
-      { id: "oem", kws: ["定制", "oem", "odm", "来样", "设计", "logo", "custom", "design", "personnalisé", "personalizado", "맞춤", "주문 제작", "커스텀", "디자인", "로고", "도안"], reply: "OEM/ODM 및 샘플 기반 맞춤 제작을 지원합니다. 디자인팀이 시안 최적화를 도와드리며 색상, 소재, 가공을 유연하게 조합하여 샘플 제작부터 양산까지 원스톱으로 대응합니다. 디자인 파일을 가지고 계신가요, 아니면 디자인도 필요하신가요?" },
-      { id: "quality", kws: ["质量", "质检", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "认证", "품질", "검품", "품질 관리", "인증", "합격"], reply: "원자재 검사 → 인쇄 공정 샘플링 검사 → 완제품 전수 검사 → 출하 전 재검사로 이어지는 완전한 품질 관리 프로세스를 운영합니다. 사업자등록증과 각종 자격을 보유하고 있으며 시험 성적서도 제공해 드립니다 📋" },
-      { id: "company", kws: ["公司", "工厂", "介绍", "泰阁", "tage", "哪里", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "회사", "공장", "소개", "어디", "주소", "회사 소개"], reply: "둥관 TAGE 패키징 유한공사(Dongguan Tage Packaging Products Co., Ltd.)는 광둥성 둥관시 후먼에 위치하며 의류 부자재 20년 전문 기업입니다. 행택, 직조 라벨, 세탁 표시 라벨, 포장백을 원스톱으로 생산하고 전 세계 40+ 개국에 수출합니다 🇨🇳🌍" },
-      { id: "contact", kws: ["联系", "电话", "微信", "邮箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "연락", "전화", "이메일", "위챗", "문의", "연락처"], reply: "언제든 연락 주세요! 📧 sales@taigetag.com ｜📱 전화/WhatsApp/위챗: +86 131 2811 8931 ｜📍 중국 광둥성 둥관시 후먼진. 문의는 보통 24시간 이내에 답변드립니다(근무 시간에는 더 빠릅니다) 😊" },
-      { id: "order", kws: ["下单", "订购", "买", "怎么合作", "流程", "order", "process", "how to buy", "commande", "pedido", "주문", "발주", "구매", "거래", "절차", "진행"], reply: "거래 절차는 간단합니다. ① 요구사항/디자인 파일 전송 → ② 24시간 이내 견적 → ③ 샘플 제작 → ④ 샘플 확인 후 양산 → ⑤ 검품 및 출하. 어느 단계에서든 시작하실 수 있습니다!" },
-      { id: "faq", kws: ["常见问题", "faq", "问题", "help", "aide", "question", "자주 묻는 질문", "질문", "도움말", "문의 사항"], reply: "자주 묻는 질문 답변입니다.\n📦 최소 주문량: 행택 2,000+, 직조 라벨 1,000+, 세탁 표시 라벨 300+ \n🧪 샘플: 3–7일 발송\n💰 견적: 24시간 이내\n🚚 납기: 10–25일\n더 자세한 내용은 언제든 물어보세요." }
+      { id: "leadtime", kws: ["交期", "貨期", "多久", "多長時間", "什麼時候", "lead", "lead time", "delivery", "how long", "délai", "plazo", "幾天", "납기", "리드타임", "생산 기간", "며칠", "얼마나 걸"], reply: "샘플 제작은 보통 3–7일, 양산 납기는 수량과 가공에 따라 보통 10–25일입니다. 주문 전에 납기를 서면으로 확인해 드리니 걱정하지 마세요 😊" },
+      { id: "payment", kws: ["付款", "怎麼付", "定金", "信用證", "tt", "l/c", "payment", "deposit", "paiement", "pago", "결제", "지불", "계약금", "선금", "송금"], reply: "일반적인 거래 조건은 30% 계약금과 출하 전 잔액 70% 지불입니다. T/T 은행 송금을 지원하며 대량 주문은 L/C 도 협의 가능합니다. 첫 거래 고객님께는 자세한 결제 조건을 안내해 드립니다." },
+      { id: "shipping", kws: ["運費", "物流", "快遞", "海運", "空運", "fob", "exw", "dhl", "shipping", "freight", "expédition", "envío", "배송", "운송", "선적", "해상", "항공", "택배", "운임"], reply: "다양한 출하 방식을 지원합니다. FOB 선전/광저우, EXW 공장 인도, 또는 저희가 해상/항공/특송(DHL, FedEx, UPS 등)을 주선해 드립니다. 소량 샘플은 특송이 가장 경제적입니다 📦" },
+      { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "design", "personnalisé", "personalizado", "맞춤", "주문 제작", "커스텀", "디자인", "로고", "도안"], reply: "OEM/ODM 및 샘플 기반 맞춤 제작을 지원합니다. 디자인팀이 시안 최적화를 도와드리며 색상, 소재, 가공을 유연하게 조합하여 샘플 제작부터 양산까지 원스톱으로 대응합니다. 디자인 파일을 가지고 계신가요, 아니면 디자인도 필요하신가요?" },
+      { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "認證", "품질", "검품", "품질 관리", "인증", "합격"], reply: "원자재 검사 → 인쇄 공정 샘플링 검사 → 완제품 전수 검사 → 출하 전 재검사로 이어지는 완전한 품질 관리 프로세스를 운영합니다. 사업자등록증과 각종 자격을 보유하고 있으며 시험 성적서도 제공해 드립니다 📋" },
+      { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "회사", "공장", "소개", "어디", "주소", "회사 소개"], reply: "둥관 TAGE 패키징 유한공사(Dongguan Tage Packaging Products Co., Ltd.)는 광둥성 둥관시 후먼에 위치하며 의류 부자재 20년 전문 기업입니다. 행택, 직조 라벨, 세탁 표시 라벨, 포장백을 원스톱으로 생산하고 전 세계 40+ 개국에 수출합니다 🇨🇳🌍" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "연락", "전화", "이메일", "위챗", "문의", "연락처"], reply: "언제든 연락 주세요! 📧 sales@taigetag.com ｜📱 전화/WhatsApp/위챗: +86 131 2811 8931 ｜📍 중국 광둥성 둥관시 후먼진. 문의는 보통 24시간 이내에 답변드립니다(근무 시간에는 더 빠릅니다) 😊" },
+      { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "process", "how to buy", "commande", "pedido", "주문", "발주", "구매", "거래", "절차", "진행"], reply: "거래 절차는 간단합니다. ① 요구사항/디자인 파일 전송 → ② 24시간 이내 견적 → ③ 샘플 제작 → ④ 샘플 확인 후 양산 → ⑤ 검품 및 출하. 어느 단계에서든 시작하실 수 있습니다!" },
+      { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "question", "자주 묻는 질문", "질문", "도움말", "문의 사항"], reply: "자주 묻는 질문 답변입니다.\n📦 최소 주문량: 행택 2,000+, 직조 라벨 1,000+, 세탁 표시 라벨 300+ \n🧪 샘플: 3–7일 발송\n💰 견적: 24시간 이내\n🚚 납기: 10–25일\n더 자세한 내용은 언제든 물어보세요." }
     ]
   };
 
   var t = T[LANG];
 
-  /* ---------- 对话状态（多轮上下文） ---------- */
+  /* ---------- 對話狀態（多輪上下文） ---------- */
   var state = { topic: null, quoted: false };
 
   /* ---------- UI 初始化 ---------- */
@@ -326,7 +326,7 @@
     });
   }
 
-  /* ---------- 意图匹配引擎（返回最优+次优，支持多词 AND） ---------- */
+  /* ---------- 意圖匹配引擎（返回最優+次優，支持多詞 AND） ---------- */
   function matchIntent(q) {
     var ql = q.toLowerCase();
     var best = null, bestLen = 0, second = null, secondLen = 0;
@@ -360,7 +360,7 @@
     return r;
   }
 
-  /* ---------- 处理用户输入 ---------- */
+  /* ---------- 處理用戶輸入 ---------- */
   function ask(q) {
     if (!q.trim()) return;
     appendMsg(q, "user");
@@ -371,7 +371,7 @@
         var it = res.best;
         var CONSULT = ["quote", "moq", "sample", "leadtime"];
         var PRODUCTS = ["hangtag", "woven", "carelabel", "bags", "paperbag", "brochure"];
-        /* 双向上下文提升：产品词+咨询词同时命中 → 回复用咨询意图，产品记为主题 */
+        /* 雙向上下文提升：產品詞+諮詢詞同時命中 → 回覆用諮詢意圖，產品記爲主題 */
         if (res.second && CONSULT.indexOf(res.second.id) >= 0 && PRODUCTS.indexOf(it.id) >= 0) {
           state.topic = it.id;
           it = res.second;
@@ -381,7 +381,7 @@
           state.topic = it.id;
         }
         appendMsg(resolveReply(it), "ai");
-        /* 追问：报价流程且还没引导过 */
+        /* 追問：報價流程且還沒引導過 */
         if (it.id === "quote" && !state.quoted) {
           setTimeout(function () { appendMsg(t.followupQuote, "ai"); }, 500);
           state.quoted = true;
@@ -392,7 +392,7 @@
     }, 450);
   }
 
-  /* 触屏设备不自动聚焦（避免 iOS 键盘顶起面板） */
+  /* 觸屏設備不自動聚焦（避免 iOS 鍵盤頂起面板） */
   function focusInput() {
     try {
       if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {

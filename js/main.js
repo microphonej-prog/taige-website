@@ -1,14 +1,14 @@
-/* Dongguan Tage Packaging — 语言切换(中/英/法/西) / 移动菜单 / 询盘表单
-   v4.0 终极方案：语言切换改为整页跳转(?lang=xx)，页面加载时一次性应用语言。
-   彻底消除移动端(iOS Safari/安卓WebView)动态改DOM导致的渲染崩溃。 */
+/* Dongguan Tage Packaging — 語言切換(中/英/法/西) / 移動菜單 / 詢盤表單
+   v4.0 終極方案：語言切換改爲整頁跳轉(?lang=xx)，頁面加載時一次性應用語言。
+   徹底消除移動端(iOS Safari/安卓WebView)動態改DOM導致的渲染崩潰。 */
 (function () {
   "use strict";
 
-  /* ---------- 语言检测（?lang= 参数 > localStorage > 默认zh） ---------- */
+  /* ---------- 語言檢測（?lang= 參數 > localStorage > 默認zh） ---------- */
   var LANG_KEY = "taige_lang";
   var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
-  /* 独立语言目录 /en/ /fr/ /es/：固定对应语言，忽略 ?lang/localStorage/浏览器语言，
-     语言切换按钮跳回根目录对应语言版本 */
+  /* 獨立語言目錄 /en/ /fr/ /es/：固定對應語言，忽略 ?lang/localStorage/瀏覽器語言，
+     語言切換按鈕跳回根目錄對應語言版本 */
   var DIR_LANG = null;
   try {
     var _p = location.pathname;
@@ -18,19 +18,19 @@
     else if (_p.indexOf("/ja/") >= 0) DIR_LANG = "ja";
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
-  /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "89";
+  /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
+  var BUST_VERSION = "90";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
-  } catch (e) { /* 老浏览器无 URLSearchParams 时忽略 */ }
+  } catch (e) { /* 老瀏覽器無 URLSearchParams 時忽略 */ }
   var current = null;
   if (DIR_LANG) {
     current = DIR_LANG;
   } else if (urlLang && LANGS.indexOf(urlLang) >= 0 && urlLang !== "zh") {
-    /* 旧式 ?lang=fr 链接：升级跳转到「同一页面」的独立语言目录版
-       （旧写法 location.replace("../" + urlLang + "/") 在内页会把 /blog/xxx.html 解析成 /fr/ 首页，
-       丢失原文章路径；此处改为按 pathname 拼接，保留内页路径） */
+    /* 舊式 ?lang=fr 鏈接：升級跳轉到「同一頁面」的獨立語言目錄版
+       （舊寫法 location.replace("../" + urlLang + "/") 在內頁會把 /blog/xxx.html 解析成 /fr/ 首頁，
+       丟失原文章路徑；此處改爲按 pathname 拼接，保留內頁路徑） */
     var _rel = "";
     try { _rel = location.pathname.replace(/^\/+/, ""); } catch (e) {}
     if (!_rel || _rel === "index.html") {
@@ -40,12 +40,12 @@
     }
     return;
   } else {
-    /* 根目录固定中文：独立语言目录已上线，根目录不再按浏览器语言自动切换
-       （避免 Googlebot(en-US) 把中文版渲染成英文，导致 hreflang 信号冲突） */
+    /* 根目錄固定中文：獨立語言目錄已上線，根目錄不再按瀏覽器語言自動切換
+       （避免 Googlebot(en-US) 把中文版渲染成英文，導致 hreflang 信號衝突） */
     current = "zh";
   }
-  /* 首次访问（无 URL 参数、无历史偏好）：按访客系统/浏览器语言自动匹配。
-     中文系统→中文，法/西→对应语言，其余语言(日韩德等)→英文(国际通用)。 */
+  /* 首次訪問（無 URL 參數、無歷史偏好）：按訪客系統/瀏覽器語言自動匹配。
+     中文系統→中文，法/西→對應語言，其餘語言(日韓德等)→英文(國際通用)。 */
   if (!current) {
     var sys = "";
     try { sys = (navigator.language || navigator.userLanguage || "").toLowerCase(); } catch (e) {}
@@ -59,12 +59,12 @@
   }
   if (LANGS.indexOf(current) < 0) current = "zh";
 
-  var LANG_HTML = { zh: "zh-CN", en: "en", ja: "ja", ko: "ko", fr: "fr", es: "es" };
+  var LANG_HTML = { zh: "zh-Hant", en: "en", ja: "ja", ko: "ko", fr: "fr", es: "es" };
 
-  /* 只处理内容元素：跳过 void 元素与头部元素 */
+  /* 只處理內容元素：跳過 void 元素與頭部元素 */
   var SKIP_TAGS = { TITLE: 1, META: 1, LINK: 1, SCRIPT: 1, STYLE: 1, BR: 1, HR: 1, IMG: 1, INPUT: 1, SOURCE: 1, TRACK: 1, WBR: 1, AREA: 1, BASE: 1, COL: 1, EMBED: 1, PARAM: 1 };
 
-  /* 页面加载时一次性应用语言（无动态切换，安全） */
+  /* 頁面加載時一次性應用語言（無動態切換，安全） */
   function applyLang(lang) {
     current = lang;
     try { document.documentElement.lang = LANG_HTML[lang]; } catch (e) {}
@@ -75,25 +75,25 @@
       try {
         var v = el.getAttribute("data-" + lang);
         if (v == null) v = el.getAttribute("data-zh");
-        /* 值含 HTML 标签(<em>等)用 innerHTML 保留样式；纯文本用 textContent */
+        /* 值含 HTML 標籤(<em>等)用 innerHTML 保留樣式；純文本用 textContent */
         if (/<[a-zA-Z]/.test(v)) {
           el.innerHTML = v;
         } else {
           el.textContent = v;
         }
-      } catch (e) { /* 单个元素失败不影响整体 */ }
+      } catch (e) { /* 單個元素失敗不影響整體 */ }
     }
     /* <title> 安全更新 */
     var titleEl = document.querySelector("title[data-zh]");
     if (titleEl) {
       try { document.title = titleEl.getAttribute("data-" + lang) || titleEl.getAttribute("data-zh"); } catch (e) {}
     }
-    /* meta description 用 content 属性更新 */
+    /* meta description 用 content 屬性更新 */
     var metaEl = document.querySelector('meta[name="description"][data-zh]');
     if (metaEl) {
       try { metaEl.setAttribute("content", metaEl.getAttribute("data-" + lang) || metaEl.getAttribute("data-zh")); } catch (e) {}
     }
-    /* 表单占位符 */
+    /* 表單佔位符 */
     var phs = document.querySelectorAll("[data-zh-ph]");
     for (var j = 0; j < phs.length; j++) {
       try {
@@ -101,7 +101,7 @@
         phs[j].setAttribute("placeholder", p != null ? p : phs[j].getAttribute("data-zh-ph"));
       } catch (e) {}
     }
-    /* 语言按钮高亮 */
+    /* 語言按鈕高亮 */
     var flags = document.querySelectorAll(".lang-flag");
     for (var k = 0; k < flags.length; k++) {
       try {
@@ -110,9 +110,9 @@
     }
   }
 
-  /* ---------- 语言切换：跳到目标语言的独立目录（同页面相对路径） ----------
-     /fr/blog/xxx.html 点 en → /en/blog/xxx.html；点 zh → /blog/xxx.html
-     根目录点 fr → /fr/（首页）。v= 参数绕过 GitHub Pages 缓存。 */
+  /* ---------- 語言切換：跳到目標語言的獨立目錄（同頁面相對路徑） ----------
+     /fr/blog/xxx.html 點 en → /en/blog/xxx.html；點 zh → /blog/xxx.html
+     根目錄點 fr → /fr/（首頁）。v= 參數繞過 GitHub Pages 緩存。 */
   var sw = document.getElementById("langSwitch");
   if (sw) {
     sw.addEventListener("click", function (e) {
@@ -125,10 +125,10 @@
       if (!lang || lang === current) return;
       var rel = location.pathname.replace(/^\/(en|ja|ko|fr|es)\//, "").replace(/^\/+|\/+$/g, "");
       if (!rel || rel === "index.html") {
-        /* 首页：根目录 zh 用 /，语言目录用 /xx/ */
+        /* 首頁：根目錄 zh 用 /，語言目錄用 /xx/ */
         location.href = (lang === "zh" ? "/" : "/" + lang + "/") + "?v=" + BUST_VERSION;
       } else if (lang === "zh") {
-        /* 非首页点中文：中文版在根目录，无 /zh/ 目录 */
+        /* 非首頁點中文：中文版在根目錄，無 /zh/ 目錄 */
         location.href = "/" + rel + "?v=" + BUST_VERSION;
       } else {
         location.href = "/" + lang + "/" + rel + "?v=" + BUST_VERSION;
@@ -137,14 +137,14 @@
     });
   }
 
-  /* 首次渲染应用语言（DOMContentLoaded 后执行，确保 DOM 完整） */
+  /* 首次渲染應用語言（DOMContentLoaded 後執行，確保 DOM 完整） */
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () { applyLang(current); });
   } else {
     applyLang(current);
   }
 
-  /* ---------- 移动端菜单 ---------- */
+  /* ---------- 移動端菜單 ---------- */
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
   if (toggle && links) {
@@ -155,34 +155,34 @@
     }
   }
 
-  /* ---------- 询盘表单 ---------- */
+  /* ---------- 詢盤表單 ---------- */
   var MSG = {
     email: {
-      zh: "请输入有效的邮箱地址。",
+      zh: "請輸入有效的郵箱地址。",
       en: "Please enter a valid email address.",
       fr: "Veuillez saisir une adresse e-mail valide.",
       es: "Por favor, introduzca un correo electrónico válido."
     },
     need: {
-      zh: "请填写您的需求描述。",
+      zh: "請填寫您的需求描述。",
       en: "Please tell us what you need.",
       fr: "Veuillez décrire votre besoin.",
       es: "Por favor, descríbanos su necesidad."
     },
     subject: {
-      zh: "官网询盘",
+      zh: "官網詢盤",
       en: "Website Inquiry",
       fr: "Demande de renseignements (site web)",
       es: "Consulta desde el sitio web"
     },
     title: {
-      zh: "官网新询盘",
+      zh: "官網新詢盤",
       en: "New Inquiry from Website",
       fr: "Nouvelle demande du site web",
       es: "Nueva consulta del sitio web"
     },
     note: {
-      zh: "✓ 询盘内容已复制，并打开邮箱草稿。也可添加微信 ",
+      zh: "✓ 詢盤內容已複製，並打開郵箱草稿。也可添加微信 ",
       en: "✓ Copied & email draft opened. Or send via WeChat: ",
       fr: "✓ Copié et brouillon d'e-mail ouvert. Ou envoyez via WeChat : ",
       es: "✓ Copiado y borrador de correo abierto. O envíe por WeChat: "
@@ -248,9 +248,9 @@
   }
 })();
 
-/* ---------- blog 文章页头部随机背景图 ----------
-   页面 header 带 class="random-bg" + data-bg="图1,图2,..."（相对路径）时，
-   每次加载随机选一张作为背景，叠加红色半透明层保证文字可读。 */
+/* ---------- blog 文章頁頭部隨機背景圖 ----------
+   頁面 header 帶 class="random-bg" + data-bg="圖1,圖2,..."（相對路徑）時，
+   每次加載隨機選一張作爲背景，疊加紅色半透明層保證文字可讀。 */
 (function () {
   "use strict";
   var h = document.querySelector(".random-bg");
