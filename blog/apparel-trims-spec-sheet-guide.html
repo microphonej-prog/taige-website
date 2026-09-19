@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單 | TAGE" data-en="How to Write a Garment Trims Spec Sheet: Fields for Tags, Labels &amp; Bags | TAGE" data-ja="衣料副資材の仕様書の書き方：タグ・織りラベル・洗濯表示ラベル・包装袋の項目リスト | TAGE" data-ko="의류 부자재 사양서 작성법: 행택·직조 라벨·세탁 표시 라벨·포장백 항목 정리 | TAGE" data-fr="Comment rédiger une fiche de spécifications d'accessoires : étiquettes, labels et sacs | TAGE" data-es="Cómo redactar una ficha de especificaciones de accesorios: colgantes, etiquetas y bolsas | TAGE">服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單 | TAGE</title>
+<meta name="description"
+      data-zh="服裝輔料規格書怎麼寫？本文給出吊牌、織嘜、洗水標、包裝袋四類輔料的必填字段清單：材質克重、成品尺寸與公差、顏色色樣、工藝組合、語言版本、數量包裝與文件版本控制，並附四個漏填事故與打樣前核對清單。來自東莞泰閣包裝。"
+      data-en="How to write a garment trims spec sheet: the fields that prevent rework — material and weight, size and tolerance, colour, finishing, text versions and packing."
+      data-ja="衣料副資材の仕様書に書くべき項目を、タグ・織りラベル・洗濯表示ラベル・包装袋ごとに整理。素材と坪量、仕上がり寸法と公差、色基準、加工の組み合わせ、言語版、数量と包装、版管理までを解説します。東莞泰閣包装。"
+      data-ko="의류 부자재 사양서에 기재할 항목을 행택·직조 라벨·세탁 표시 라벨·포장백별로 정리했습니다. 소재와 평량, 완성 치수와 공차, 색상 기준, 가공 조합, 언어 버전, 수량과 포장, 버전 관리까지 설명합니다. 둥관 TAGE 패키징."
+      data-fr="Fiche de spécifications d'accessoires : les champs à renseigner, matière et grammage, dimensions et tolérances, couleur, finitions, versions linguistiques et conditionnement."
+      data-es="Ficha de especificaciones de accesorios: los campos que evitan reprocesos, material y gramaje, medidas y tolerancias, color, acabados, versiones de idioma y embalaje."
+      content="服裝輔料規格書怎麼寫？本文給出吊牌、織嘜、洗水標、包裝袋四類輔料的必填字段清單：材質克重、成品尺寸與公差、顏色色樣、工藝組合、語言版本、數量包裝與文件版本控制，並附四個漏填事故與打樣前核對清單。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-spec-sheet-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單",
+     "item": "https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單",
+   "url": "https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-spec-sheet-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-ja="ホーム" data-ko="홈" data-fr="Accueil" data-es="Inicio">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios">輔料 FAQ</a> / <span data-zh="輔料規格書編寫" data-en="Trims Spec Sheet" data-ja="副資材仕様書の書き方" data-ko="부자재 사양서 작성" data-fr="Rédiger une fiche de spécifications" data-es="Redactar una ficha de especificaciones">輔料規格書編寫</span></div>
+      <h1 data-zh="服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單" data-en="How to Write a Garment Trims Spec Sheet: Fields for Tags, Labels and Bags" data-ja="衣料副資材の仕様書の書き方：タグ・織りラベル・洗濯表示ラベル・包装袋の項目リスト" data-ko="의류 부자재 사양서 작성법: 행택·직조 라벨·세탁 표시 라벨·포장백 항목 정리" data-fr="Comment rédiger une fiche de spécifications d'accessoires : étiquettes, labels et sacs" data-es="Cómo redactar una ficha de especificaciones de accesorios: colgantes, etiquetas y bolsas">服裝輔料規格書怎麼寫：吊牌、織嘜、洗水標與包裝袋字段清單</h1>
+            <p data-zh="泰閣包裝 · 更新於 2026年9月19日"
+         data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 19, 2026"
+         data-ja="泰閣包裝 · 2026年9月19日更新"
+         data-ko="TAGE 패키징 · 2026년 9월 19일 업데이트"
+         data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 19 septembre 2026"
+         data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 19 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月19日</p>
+
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="輔料訂單出問題，很少是工廠做不出來，而是規格書沒說清。同樣一句「白色棉繩吊牌」，對方可以理解成三種紙張、兩種繩子、兩種打孔位置。規格書（Spec Sheet，也叫輔料技術資料）的作用，就是在打樣前把「我們要什麼」變成可以覈對、可以追溯的文字與數字。"
+         data-en="Trims orders rarely go wrong because a factory cannot make the part — they go wrong because the specification was never pinned down. The same phrase, a white hang tag with a cotton string, can mean three papers, two strings and two hole positions. A spec sheet exists to turn what you want into text and numbers your supplier can check against, before sampling starts."
+         data-ja="副資材のトラブルは、工場が作れないことより、仕様が伝わっていないことが原因です。「白い綿ひも付きタグ」という一文でも、紙3種・ひも2種・穴位置2通りに解釈できます。仕様書（Spec Sheet）の役割は、サンプル作成前に「何が欲しいか」を、照合できて追跡できる文字と数値に変えることです。"
+         data-ko="부자재 주문 문제는 공장이 만들지 못해서보다 사양이 명확히 전달되지 않아서 생깁니다. '흰색 면끈 행택'이라는 한 문장도 종이 3가지, 끈 2가지, 타공 위치 2가지로 해석될 수 있습니다. 사양서(Spec Sheet)의 역할은 샘플 제작 전에 '무엇이 필요한지'를 확인하고 추적할 수 있는 문자와 숫자로 바꾸는 것입니다."
+         data-fr="Un accessoire rate rarement parce que l'usine ne sait pas le fabriquer, mais parce que la spécification n'a jamais été fixée. La même phrase, une étiquette suspendue blanche à cordon coton, peut désigner trois papiers, deux cordons et deux positions de perçage. Une fiche de spécifications sert à transformer ce que vous voulez en textes et en chiffres vérifiables avant l'échantillon."
+         data-es="Un accesorio casi nunca falla porque la fábrica no sepa hacerlo, sino porque la especificación no se fijó. La misma frase, una etiqueta colgante blanca con cordón de algodón, puede significar tres papeles, dos cordones y dos posiciones de taladro. La ficha de especificaciones convierte lo que quieres en textos y cifras verificables antes de la muestra.">輔料訂單出問題，很少是工廠做不出來，而是規格書沒說清。同樣一句「白色棉繩吊牌」，對方可以理解成三種紙張、兩種繩子、兩種打孔位置。規格書（Spec Sheet，也叫輔料技術資料）的作用，就是在打樣前把「我們要什麼」變成可以覈對、可以追溯的文字與數字。</p>
+
+      <p data-zh="下面的字段順序與供應商排產順序一致：材質、尺寸、顏色、工藝、文字、數量與包裝、交期。照這個順序填寫，報價更快，打樣一次通過率也更高。"
+         data-en="The field order below follows the way a supplier actually schedules production: material, size, colour, finishing, text, quantity and packing, lead time. Fill it in that order and quotations come back faster with fewer sampling rounds."
+         data-ja="以下の項目順は、サプライヤーが実際に生産を手配する順序（素材→寸法→色→加工→文字→数量と包装→納期）に対応しています。この順で記入すると、見積りが早く、サンプルの一発承認率も上がります。"
+         data-ko="아래 항목 순서는 공급업체가 실제로 생산을 배정하는 순서(소재 → 치수 → 색상 → 가공 → 문자 → 수량과 포장 → 납기)와 같습니다. 이 순서대로 기재하면 견적이 빨리 오고 샘플 1차 승인율도 높아집니다."
+         data-fr="L'ordre des champs ci-dessous suit la façon dont un fournisseur planifie réellement : matière, dimensions, couleur, finitions, textes, quantité et conditionnement, délai. Remplissez-le dans cet ordre : les devis reviennent plus vite et l'échantillon est validé du premier coup plus souvent."
+         data-es="El orden de los campos sigue el modo en que el proveedor planifica de verdad: material, medidas, color, acabados, textos, cantidad y embalaje, plazo. Rellénalo en ese orden y los presupuestos llegan antes y la muestra se aprueba a la primera más a menudo.">下面的字段順序與供應商排產順序一致：材質、尺寸、顏色、工藝、文字、數量與包裝、交期。照這個順序填寫，報價更快，打樣一次通過率也更高。</p>
+
+      <h2 data-zh="1. 規格書、輔料手冊、訂單三者分工" data-en="1. Spec Sheet, Trim Book, Purchase Order: Who Does What" data-ja="1. 仕様書・副資材ブック・発注書の役割分担" data-ko="1. 사양서·부자재 북·발주서의 역할 분담" data-fr="1. Fiche, trim book et bon de commande : qui fait quoi" data-es="1. Ficha, trim book y pedido: quién hace qué">1. 規格書、輔料手冊、訂單三者分工</h2>
+
+      <p data-zh="很多品牌把這三件事混在一封郵件裏，最後誰也說不清哪句話是最終版本。分工其實很清楚：規格書管單件、輔料手冊管成套、訂單管商務。"
+         data-en="Many brands mix all three into one email and then nobody can tell which line is the final version. The division is simple: the spec sheet covers one item, the trim book covers the whole family, the purchase order carries the commercial terms."
+         data-ja="多くのブランドはこの3つを1通のメールに混ぜてしまい、どれが最終版か分からなくなります。役割は明確です。仕様書は単品、副資材ブックはシリーズ全体、発注書は商務条件を扱います。"
+         data-ko="많은 브랜드가 이 세 가지를 한 통의 메일에 섞어 두었다가 어느 문장이 최종본인지 알 수 없게 됩니다. 역할은 분명합니다. 사양서는 단일 품목, 부자재 북은 시리즈 전체, 발주서는 상업 조건을 다룹니다."
+         data-fr="Beaucoup de marques mélangent les trois dans un seul e-mail et plus personne ne sait quelle ligne fait foi. La répartition est simple : la fiche décrit un article, le trim book décrit toute la famille, le bon de commande porte les conditions commerciales."
+         data-es="Muchas marcas mezclan los tres en un solo correo y luego nadie sabe qué línea es la versión final. El reparto es claro: la ficha describe un artículo, el trim book toda la familia y el pedido las condiciones comerciales.">很多品牌把這三件事混在一封郵件裏，最後誰也說不清哪句話是最終版本。分工其實很清楚：規格書管單件、輔料手冊管成套、訂單管商務。</p>
+
+      <table>
+        <tr><th data-zh="文件" data-en="Document" data-ja="文書" data-ko="문서" data-fr="Document" data-es="Documento">文件</th><th data-zh="主要作用" data-en="What it does" data-ja="主な役割" data-ko="주요 역할" data-fr="Rôle principal" data-es="Función principal">主要作用</th></tr>
+        <tr><td data-zh="規格書 Spec Sheet" data-en="Spec sheet" data-ja="仕様書" data-ko="사양서" data-fr="Fiche de spécifications" data-es="Ficha de especificaciones">規格書 Spec Sheet</td><td data-zh="描述單件輔料的技術要求，隨詢價與打樣需求發出" data-en="Technical requirements for one item, sent with the RFQ and sample request" data-ja="単品の技術要件を記述し、見積依頼とサンプル依頼に添付" data-ko="단일 품목의 기술 요건을 기재해 견적·샘플 요청과 함께 발송" data-fr="Exigences techniques d'un article, envoyées avec la demande de prix et d'échantillon" data-es="Requisitos técnicos de un artículo, junto a la solicitud de precio y muestra">描述單件輔料的技術要求，隨詢價與打樣需求發出</td></tr>
+        <tr><td data-zh="輔料手冊 Trim Book" data-en="Trim book" data-ja="副資材ブック" data-ko="부자재 북" data-fr="Trim book" data-es="Trim book">輔料手冊 Trim Book</td><td data-zh="彙總全系列編號、規格與封樣，品牌內部與供應商共用" data-en="All item numbers, specifications and sealed samples for the whole family" data-ja="シリーズ全体の品番・仕様・封入見本をまとめ、社内と取引先で共有" data-ko="시리즈 전체의 품번·사양·봉인 샘플을 정리해 내부와 공급업체가 공유" data-fr="Numéros, spécifications et échantillons scellés de toute la famille" data-es="Números, especificaciones y muestras selladas de toda la familia">彙總全系列編號、規格與封樣，品牌內部與供應商共用</td></tr>
+        <tr><td data-zh="訂單 PO" data-en="Purchase order" data-ja="発注書" data-ko="발주서" data-fr="Bon de commande" data-es="Pedido">訂單 PO</td><td data-zh="數量、單價、交期、付款與驗收條款" data-en="Quantity, unit price, lead time, payment and inspection terms" data-ja="数量・単価・納期・支払条件・検収条件" data-ko="수량·단가·납기·결제·검수 조건" data-fr="Quantité, prix unitaire, délai, paiement et conditions de contrôle" data-es="Cantidad, precio unitario, plazo, pago y condiciones de inspección">數量、單價、交期、付款與驗收條款</td></tr>
+      </table>
+
+      <p data-zh="三份文件共用同一套編號，改動只在規格書裏發生，訂單隻引用編號與版本號。這樣任何時候都能回答一個問題：這批貨是按哪一版做的。"
+         data-en="All three share one numbering system. Changes happen only in the spec sheet, and the PO merely cites the number and version. That way you can always answer one question: which version was this batch made to?"
+         data-ja="3つの文書は同じ品番体系を共有します。変更は仕様書だけで行い、発注書は品番と版だけを引用します。これで「このロットはどの版で作られたか」に常に答えられます。"
+         data-ko="세 문서는 같은 품번 체계를 공유합니다. 변경은 사양서에서만 하고, 발주서는 품번과 버전만 인용합니다. 그러면 언제든 '이 로트는 어느 버전으로 만들었는가'에 답할 수 있습니다."
+         data-fr="Les trois partagent une même numérotation. Seule la fiche évolue et le bon de commande ne cite que le numéro et la version. Vous saurez donc toujours à quelle version un lot a été fabriqué."
+         data-es="Los tres comparten una misma numeración. Los cambios solo ocurren en la ficha y el pedido solo cita el número y la versión. Así siempre podrás responder a una pregunta: ¿según qué versión se hizo este lote?">三份文件共用同一套編號，改動只在規格書裏發生，訂單隻引用編號與版本號。這樣任何時候都能回答一個問題：這批貨是按哪一版做的。</p>
+
+      <h2 data-zh="2. 所有輔料都要寫清的八個通用字段" data-en="2. Eight Fields Every Trim Needs" data-ja="2. すべての副資材に必要な8つの共通項目" data-ko="2. 모든 부자재에 필요한 8가지 공통 항목" data-fr="2. Les huit champs communs à tout accessoire" data-es="2. Los ocho campos comunes a todo accesorio">2. 所有輔料都要寫清的八個通用字段</h2>
+
+      <ul>
+        <li data-zh="<strong>品名與用途：</strong>寫「主嘜 · 領口」或「包裝袋 · 內袋」，避免同名不同用途" data-en="<strong>Item name and use:</strong> write neck label, collar or poly bag, inner — not just the generic name" data-ja="<strong>品名と用途：</strong>「メインラベル・衿」のように用途まで書き、同名別用途を防ぎます" data-ko="<strong>품명과 용도:</strong> '메인 라벨·목선'처럼 용도까지 적어 같은 이름의 다른 용도를 구분합니다" data-fr="<strong>Désignation et usage :</strong> écrivez label de col, encolure ou sac, usage interne, pas seulement le nom générique" data-es="<strong>Nombre y uso:</strong> escribe etiqueta de cuello, cuello o bolsa, uso interno, no solo el nombre genérico"><strong>品名與用途：</strong>寫「主嘜 · 領口」或「包裝袋 · 內袋」，避免同名不同用途</li>
+        <li data-zh="<strong>材質與規格：</strong>紙張克重或紗線與織法、袋材厚度、織帶寬度" data-en="<strong>Material and spec:</strong> paper weight, or yarn and weave; film thickness; tape width" data-ja="<strong>素材と仕様：</strong>紙の坪量、または糸と織り方、フィルム厚み、テープ幅" data-ko="<strong>소재와 사양:</strong> 종이 평량 또는 원사와 직조 방식, 필름 두께, 테이프 폭" data-fr="<strong>Matière et spécification :</strong> grammage papier, ou fil et armure, épaisseur du film, largeur de ruban" data-es="<strong>Material y especificación:</strong> gramaje del papel, o hilo y ligamento, espesor del film, ancho de cinta"><strong>材質與規格：</strong>紙張克重或紗線與織法、袋材厚度、織帶寬度</li>
+        <li data-zh="<strong>成品尺寸與公差：</strong>成品尺寸加上公差（如 ±1mm），並註明測量方法與裁切邊" data-en="<strong>Finished size and tolerance:</strong> size plus tolerance, such as ±1 mm, with measuring method and cut edge defined" data-ja="<strong>仕上がり寸法と公差：</strong>寸法に公差（例 ±1mm）を添え、測定方法と裁断エッジも明記" data-ko="<strong>완성 치수와 공차:</strong> 치수에 공차(예 ±1mm)를 더하고 측정 방법과 재단 가장자리도 명시" data-fr="<strong>Dimensions finies et tolérance :</strong> cote plus tolérance, par exemple ±1 mm, avec méthode de mesure et bord de coupe" data-es="<strong>Medidas finales y tolerancia:</strong> medida más tolerancia, por ejemplo ±1 mm, con método de medición y borde de corte"><strong>成品尺寸與公差：</strong>成品尺寸加上公差（如 ±1mm），並註明測量方法與裁切邊</li>
+        <li data-zh="<strong>顏色與色樣：</strong>Pantone 或實樣封樣，並寫清批次色差容忍範圍" data-en="<strong>Colour and standard:</strong> Pantone or a sealed physical sample, plus the batch colour deviation you accept" data-ja="<strong>色と色見本：</strong>Pantone または封入実見本、さらに許容できるロット色差の範囲" data-ko="<strong>색상과 색상 견본:</strong> Pantone 또는 봉인 실물 샘플, 그리고 허용하는 로트 색차 범위" data-fr="<strong>Couleur et référence :</strong> Pantone ou échantillon physique scellé, plus la dérive de lot acceptée" data-es="<strong>Color y referencia:</strong> Pantone o muestra física sellada, más la desviación de lote admitida"><strong>顏色與色樣：</strong>Pantone 或實樣封樣，並寫清批次色差容忍範圍</li>
+        <li data-zh="<strong>工藝組合：</strong>印刷方式加上後道工藝（燙金、壓凹凸、上光、模切、超聲波）" data-en="<strong>Finishing set:</strong> printing method plus post-press steps such as foil, embossing, varnish, die-cutting, ultrasonic" data-ja="<strong>加工の組み合わせ：</strong>印刷方式に加え、箔押し・エンボス・ニス・型抜き・超音波などの後加工" data-ko="<strong>가공 조합:</strong> 인쇄 방식에 박, 엠보싱, 니스, 타공, 초음파 등 후가공을 더함" data-fr="<strong>Ensemble de finitions :</strong> procédé d'impression plus dorure, gaufrage, vernis, découpe, ultrason" data-es="<strong>Conjunto de acabados:</strong> impresión más dorado, relieve, barniz, troquelado, ultrasonidos"><strong>工藝組合：</strong>印刷方式加上後道工藝（燙金、壓凹凸、上光、模切、超聲波）</li>
+        <li data-zh="<strong>文字與語言版本：</strong>中英法西日韓各版本對應哪個市場，由誰終審" data-en="<strong>Text and languages:</strong> which market each language version serves, and who signs it off" data-ja="<strong>文字と言語版：</strong>各言語版がどの市場向けか、最終承認者は誰か" data-ko="<strong>문자와 언어 버전:</strong> 각 언어 버전이 어느 시장을 대상으로 하는지, 최종 승인자는 누구인지" data-fr="<strong>Textes et langues :</strong> à quel marché correspond chaque version, et qui valide" data-es="<strong>Textos e idiomas:</strong> a qué mercado sirve cada versión y quién la valida"><strong>文字與語言版本：</strong>中英法西日韓各版本對應哪個市場，由誰終審</li>
+        <li data-zh="<strong>數量與包裝：</strong>箱裝數量、每捆數量、是否單件裝袋、混碼方式" data-en="<strong>Quantity and packing:</strong> per carton, per bundle, whether each piece is bagged, and size mix" data-ja="<strong>数量と包装：</strong>箱入数、束数、単品袋入れの有無、サイズ混載の方法" data-ko="<strong>수량과 포장:</strong> 박스 입수량, 묶음 수, 단품 봉투 포장 여부, 사이즈 혼합 방식" data-fr="<strong>Quantité et conditionnement :</strong> par carton, par liasse, sac individuel ou non, mix des tailles" data-es="<strong>Cantidad y embalaje:</strong> por caja, por fajo, bolsa individual sí o no, mezcla de tallas"><strong>數量與包裝：</strong>箱裝數量、每捆數量、是否單件裝袋、混碼方式</li>
+        <li data-zh="<strong>文件版本與日期：</strong>規格書編號、版本號與生效日期，改動留痕" data-en="<strong>Document control:</strong> spec number, version and effective date, with a change log" data-ja="<strong>文書の版と日付：</strong>仕様書番号・版数・発効日、変更履歴の記録" data-ko="<strong>문서 버전과 날짜:</strong> 사양서 번호, 버전, 시행일, 변경 이력 기록" data-fr="<strong>Version et date :</strong> numéro, indice et date d'application, avec historique des modifications" data-es="<strong>Versión y fecha:</strong> número, versión y fecha de vigencia, con historial de cambios"><strong>文件版本與日期：</strong>規格書編號、版本號與生效日期，改動留痕</li>
+      </ul>
+
+      <h2 data-zh="3. 分品類字段清單與最容易漏的項" data-en="3. Field Checklist by Product Family" data-ja="3. 品種別の項目リストと最も見落としやすい点" data-ko="3. 품목별 항목 리스트와 가장 놓치기 쉬운 점" data-fr="3. Liste de champs par famille et oublis fréquents" data-es="3. Lista de campos por familia y omisiones frecuentes">3. 分品類字段清單與最容易漏的項</h2>
+
+      <p data-zh="通用字段之外，每類輔料都有自己最容易漏的字段。下表是打樣前至少要確認的內容；首次合作建議連封樣一起寄，讓供應商按實樣確認。"
+         data-en="Beyond the common fields, each family has its own trap. The table lists what to confirm before sampling; on a first order, send sealed samples too so your supplier confirms against the real thing."
+         data-ja="共通項目以外に、品種ごとに見落としやすい項目があります。下表はサンプル作成前に最低限確認したい内容です。初回は封入見本も一緒に送り、現物で確認してもらいましょう。"
+         data-ko="공통 항목 외에 품목별로 놓치기 쉬운 항목이 있습니다. 아래 표는 샘플 제작 전에 최소한 확인할 내용이며, 첫 거래에서는 봉인 샘플도 함께 보내 실물로 확인받으십시오."
+         data-fr="Au-delà des champs communs, chaque famille a son piège. Le tableau liste ce qu'il faut confirmer avant l'échantillon ; à la première commande, joignez aussi des échantillons scellés."
+         data-es="Además de los campos comunes, cada familia tiene su trampa. La tabla recoge lo que conviene confirmar antes de la muestra; en el primer pedido, envía también muestras selladas.">通用字段之外，每類輔料都有自己最容易漏的字段。下表是打樣前至少要確認的內容；首次合作建議連封樣一起寄，讓供應商按實樣確認。</p>
+
+      <table>
+        <tr><th data-zh="品類" data-en="Family" data-ja="品種" data-ko="품목" data-fr="Famille" data-es="Familia">品類</th><th data-zh="必填字段" data-en="Must-have fields" data-ja="必須項目" data-ko="필수 항목" data-fr="Champs obligatoires" data-es="Campos obligatorios">必填字段</th><th data-zh="最容易漏的" data-en="Most often missed" data-ja="最も漏れやすい" data-ko="가장 자주 빠지는" data-fr="Le plus souvent oublié" data-es="Lo que más se omite">最容易漏的</th></tr>
+        <tr><td data-zh="吊牌" data-en="Hang tag" data-ja="タグ" data-ko="행택" data-fr="Étiquette suspendue" data-es="Etiqueta colgante">吊牌</td><td data-zh="紙張與克重、成品尺寸與公差、孔位與孔徑、吊繩與吊粒、印刷面數、燙金部位" data-en="Paper and weight, size with tolerance, hole position and diameter, string and fastener, number of printed sides, foil areas" data-ja="用紙と坪量、仕上がり寸法と公差、穴位置と穴径、吊りひもと留め具、印刷面数、箔押し範囲" data-ko="용지와 평량, 완성 치수와 공차, 구멍 위치와 직경, 끈과 체결구, 인쇄 면수, 박 부위" data-fr="Papier et grammage, dimensions avec tolérance, perçage et diamètre, cordon et fixation, nombre de faces imprimées, zones dorées" data-es="Papel y gramaje, medidas con tolerancia, taladro y diámetro, cordón y remache, caras impresas, zonas doradas">紙張與克重、成品尺寸與公差、孔位與孔徑、吊繩與吊粒、印刷面數、燙金部位</td><td data-zh="孔位到邊距離與吊繩長度" data-en="Hole distance to edge and string length" data-ja="穴の端からの距離とひも長" data-ko="구멍의 가장자리 거리와 끈 길이" data-fr="Distance du perçage au bord et longueur du cordon" data-es="Distancia del taladro al borde y largo del cordón">孔位到邊距離與吊繩長度</td></tr>
+        <tr><td data-zh="織嘜" data-en="Woven label" data-ja="織りラベル" data-ko="직조 라벨" data-fr="Label tissé" data-es="Etiqueta tejida">織嘜</td><td data-zh="織法（緞面 / 平紋 / 提花）、寬度與折法、切邊方式、縫製方式、經緯密度" data-en="Weave such as satin, plain or jacquard, width and fold, cut method, stitching method, thread density" data-ja="織り方（サテン・平織り・ジャカード）、幅と折り、裁断方法、縫い付け方法、密度" data-ko="직조 방식(새틴·평직·자카드), 폭과 접힘, 재단 방식, 봉제 방식, 밀도" data-fr="Armure satin, toile ou jacquard, largeur et pliage, coupe, couture, densité" data-es="Ligamento satén, tafetán o jacquard, ancho y plegado, corte, cosido, densidad">織法（緞面 / 平紋 / 提花）、寬度與折法、切邊方式、縫製方式、經緯密度</td><td data-zh="折法與切邊方式" data-en="Fold and cut method" data-ja="折りと裁断方法" data-ko="접힘과 재단 방식" data-fr="Pliage et méthode de coupe" data-es="Plegado y método de corte">折法與切邊方式</td></tr>
+        <tr><td data-zh="洗水標" data-en="Care label" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨" data-fr="Étiquette d'entretien" data-es="Etiqueta de cuidado">洗水標</td><td data-zh="材質（織帶 / 塗層 / 印刷）、洗滌符號版本、成分標註、語言組合、耐洗等級" data-en="Material such as tape, coated or printed, care symbol version, fibre content, language set, wash grade" data-ja="素材（テープ・コーティング・印刷）、洗濯記号の版、組成表示、言語構成、耐洗濯等級" data-ko="소재(테이프·코팅·인쇄), 세탁 기호 버전, 성분 표시, 언어 구성, 세탁 등급" data-fr="Support ruban, enduit ou imprimé, version des symboles, composition, langues, tenue au lavage" data-es="Soporte cinta, recubierto o impreso, versión de símbolos, composición, idiomas, resistencia al lavado">材質（織帶 / 塗層 / 印刷）、洗滌符號版本、成分標註、語言組合、耐洗等級</td><td data-zh="洗滌符號版本與語言組合" data-en="Symbol version and language set" data-ja="洗濯記号の版と言語構成" data-ko="세탁 기호 버전과 언어 구성" data-fr="Version des symboles et langues" data-es="Versión de símbolos e idiomas">洗滌符號版本與語言組合</td></tr>
+        <tr><td data-zh="包裝袋" data-en="Poly bag" data-ja="包装袋" data-ko="포장백" data-fr="Sac d'emballage" data-es="Bolsa de embalaje">包裝袋</td><td data-zh="材質（OPP / PE / CPE）、厚度、袋型與封口、印刷油墨、透氣孔與警示語" data-en="Film such as OPP, PE or CPE, thickness, style and seal, ink, vent holes and warning wording" data-ja="素材（OPP・PE・CPE）、厚み、袋型と封口、インキ、通気孔と警告文" data-ko="소재(OPP·PE·CPE), 두께, 형태와 밀봉, 잉크, 통기 구멍과 경고 문구" data-fr="Film OPP, PE ou CPE, épaisseur, format et soudure, encre, trous d'aération et avertissements" data-es="Film OPP, PE o CPE, espesor, formato y sellado, tinta, orificios de ventilación y advertencias">材質（OPP / PE / CPE）、厚度、袋型與封口、印刷油墨、透氣孔與警示語</td><td data-zh="警示語與透氣孔" data-en="Warning wording and vent holes" data-ja="警告文と通気孔" data-ko="경고 문구와 통기 구멍" data-fr="Avertissements et trous d'aération" data-es="Advertencias y orificios de ventilación">警示語與透氣孔</td></tr>
+      </table>
+
+      <h2 data-zh="4. 顏色與公差：把「差不多」寫成數字" data-en="4. Colour and Tolerance: Turn Roughly into Numbers" data-ja="4. 色と公差：「だいたい」を数値にする" data-ko="4. 색상과 공차: '대충'을 숫자로" data-fr="4. Couleur et tolérance : transformer à peu près en chiffres" data-es="4. Color y tolerancia: convertir el casi en cifras">4. 顏色與公差：把「差不多」寫成數字</h2>
+
+      <p data-zh="顏色是輔料返工的頭號原因。吊牌紙張、織嘜紗線、紙袋面紙的上色原理完全不同，同一個 Pantone 號在三種材質上必然有差別。可行的做法是按品類分別封樣，並把允許色差寫進規格書：織嘜以封樣爲基準、參考灰卡四級到五級；紙品承認批次間輕微色差，但不得影響品牌主色識別。尺寸公差同樣要落到數字：吊牌成品尺寸按 ±0.5 到 1mm，織嘜按 ±1mm，織帶寬度按 ±0.5mm，異形模切要另外約定刀模公差。"
+         data-en="Colour causes more trims rework than anything else. Paper, woven yarn and bag film colour up in completely different ways, so the same Pantone number will differ across the three. The workable approach: seal a sample per family and write the accepted deviation into the spec sheet, keeping the sealed sample as master for woven labels at grey scale grade four to five, and accepting slight batch variation on paper as long as the brand colour stays recognisable. Tolerances must be numeric too: ±0.5 to 1 mm on cut hang tags, ±1 mm on woven labels, ±0.5 mm on tape width, plus a separate die-cutting tolerance for shaped tags."
+         data-ja="色は副資材の手直しで最も多い原因です。紙・織り糸・袋のフィルムでは発色の仕組みが全く異なるため、同じ Pantone 番号でも三者で必ず差が出ます。現実的な方法は、品種ごとに封入見本（マスター）を作り、許容できる色差を仕様書に明記することです。織りラベルは封入見本を基準にグレースケール4〜5級を目安とし、紙製品はブランド色の識別に影響しない範囲でロット差を許容します。寸法公差も数値化が必須で、タグの仕上がりは±0.5〜1mm、織りラベルは±1mm、テープ幅は±0.5mm、型抜きは別途金型公差を定めます。"
+         data-ko="색상은 부자재 재작업의 최대 원인입니다. 종이, 직조 원사, 포장 필름은 발색 원리가 전혀 달라 같은 Pantone 번호도 세 가지 소재에서 반드시 차이가 납니다. 현실적인 방법은 품목별로 봉인 샘플을 만들어 허용 색차를 사양서에 명시하는 것입니다. 직조 라벨은 봉인 샘플을 기준으로 그레이 스케일 4~5급을 참고하고, 종이 제품은 브랜드 색상 식별에 영향을 주지 않는 범위에서 로트 차이를 허용합니다. 치수 공차도 숫자로 정해야 하며, 행택 완성 치수는 ±0.5~1mm, 직조 라벨은 ±1mm, 테이프 폭은 ±0.5mm, 이형 타공은 별도의 금형 공차를 정합니다."
+         data-fr="La couleur est la première cause de reprise. Papier, fil tissé et film de sac colorent selon des principes totalement différents : un même Pantone donnera trois résultats. La méthode praticable : sceller un échantillon par famille et inscrire la dérive admise dans la fiche, l'échantillon scellé servant de référence pour le tissé avec une échelle de gris de niveau quatre à cinq, et une légère variation de lot étant admise sur le papier tant que la couleur de marque reste identifiable. Les tolérances doivent aussi être chiffrées : ±0,5 à 1 mm sur une étiquette découpée, ±1 mm sur le tissé, ±0,5 mm sur la largeur de ruban, et une tolérance de découpe distincte pour les formes."
+         data-es="El color provoca más reprocesos que nada. El papel, el hilo tejido y el film de las bolsas se colorean de formas totalmente distintas, así que un mismo Pantone dará tres resultados. Lo práctico: sellar una muestra por familia e inscribir la desviación admitida en la ficha, con la muestra sellada como referencia en tejidos con escala de grises de nivel cuatro a cinco, y variación leve de lote admitida en papel mientras el color de marca siga siendo reconocible. Las tolerancias también van en cifras: ±0,5 a 1 mm en colgantes troquelados, ±1 mm en tejidos, ±0,5 mm en ancho de cinta y una tolerancia de cuchilla aparte para formas.">顏色是輔料返工的頭號原因。吊牌紙張、織嘜紗線、紙袋面紙的上色原理完全不同，同一個 Pantone 號在三種材質上必然有差別。可行的做法是按品類分別封樣，並把允許色差寫進規格書：織嘜以封樣爲基準、參考灰卡四級到五級；紙品承認批次間輕微色差，但不得影響品牌主色識別。尺寸公差同樣要落到數字：吊牌成品尺寸按 ±0.5 到 1mm，織嘜按 ±1mm，織帶寬度按 ±0.5mm，異形模切要另外約定刀模公差。</p>
+
+      <h2 data-zh="5. 語言版本與文件版本控制" data-en="5. Language Versions and Document Control" data-ja="5. 言語版と文書の版管理" data-ko="5. 언어 버전과 문서 버전 관리" data-fr="5. Versions linguistiques et gestion des indices" data-es="5. Versiones de idioma y control de versiones">5. 語言版本與文件版本控制</h2>
+
+      <p data-zh="洗水標的多語言組合、吊牌上的品牌故事、包裝袋上的警示語，都需要指定「市場、語言、文案」的對應關係。建議在規格書裏用三列寫清，並註明文案由誰終審：品牌方審校，還是供應商按既有模板翻譯。不同市場的強制語言與洗滌符號版本不同，文案定稿前不要開印版，否則改版要按新印版計費。"
+         data-en="Care-label language sets, the brand story on a hang tag and the warnings on a bag all need an explicit market-to-language-to-copy mapping. Use three columns in the spec sheet and state who signs the copy off, the brand or the supplier translating from an approved template. Mandatory languages and care symbol versions differ by market, so do not commit printing plates before the copy is final: a later text change is charged as a new plate."
+         data-ja="洗濯表示ラベルの言語セット、タグのブランドストーリー、袋の警告文は、「市場・言語・文案」の対応を明記する必要があります。仕様書では3列で整理し、文案の最終承認者（ブランド側の校閲か、承認済みテンプレートからのサプライヤー翻訳か）を明記します。必須言語と洗濯記号の版は市場ごとに異なるため、文案確定前に刷版を起こさないでください。後の文言変更は新版として費用が発生します。"
+         data-ko="세탁 표시 라벨의 언어 세트, 행택의 브랜드 스토리, 포장백의 경고 문구는 모두 '시장·언어·문안' 대응 관계를 명시해야 합니다. 사양서에 세 열로 정리하고 문안 최종 승인 주체(브랜드 검수인지, 승인된 템플릿을 번역하는 공급업체인지)를 적습니다. 시장별 필수 언어와 세탁 기호 버전이 다르므로 문안 확정 전에 인쇄판을 만들지 마십시오. 이후 문구 변경은 신규 판으로 비용이 발생합니다."
+         data-fr="Les jeux de langues d'une étiquette d'entretien, l'histoire de marque d'une étiquette suspendue et les avertissements d'un sac exigent une correspondance explicite marché, langue, texte. Prévoyez trois colonnes dans la fiche et précisez qui valide : la marque ou le fournisseur traduisant depuis un modèle approuvé. Les langues obligatoires et les versions de symboles varient selon le marché : ne lancez pas les clichés avant validation du texte, une modification ultérieure est facturée comme un nouveau cliché."
+         data-es="Los juegos de idiomas de la etiqueta de cuidado, la historia de marca de un colgante y los avisos de una bolsa exigen una correspondencia explícita mercado, idioma, texto. Usa tres columnas en la ficha e indica quién valida: la marca o el proveedor traduciendo desde una plantilla aprobada. Los idiomas obligatorios y las versiones de símbolos varían por mercado, así que no hagas planchas antes de cerrar el texto: un cambio posterior se cobra como plancha nueva.">洗水標的多語言組合、吊牌上的品牌故事、包裝袋上的警示語，都需要指定「市場、語言、文案」的對應關係。建議在規格書裏用三列寫清，並註明文案由誰終審：品牌方審校，還是供應商按既有模板翻譯。不同市場的強制語言與洗滌符號版本不同，文案定稿前不要開印版，否則改版要按新印版計費。</p>
+
+      <ul>
+        <li data-zh="<strong>命名統一：</strong>品牌 - 品類 - 編號 - 版本 - 日期，例如 TAGE-HANGTAG-HT104-V3-20260919" data-en="<strong>One naming rule:</strong> brand - family - item number - version - date, for example TAGE-HANGTAG-HT104-V3-20260919" data-ja="<strong>命名の統一：</strong>ブランド - 品種 - 品番 - 版 - 日付（例 TAGE-HANGTAG-HT104-V3-20260919）" data-ko="<strong>명명 규칙 통일:</strong> 브랜드 - 품목 - 품번 - 버전 - 날짜, 예: TAGE-HANGTAG-HT104-V3-20260919" data-fr="<strong>Nommage unique :</strong> marque - famille - référence - indice - date, par exemple TAGE-HANGTAG-HT104-V3-20260919" data-es="<strong>Nomenclatura única:</strong> marca - familia - referencia - versión - fecha, por ejemplo TAGE-HANGTAG-HT104-V3-20260919"><strong>命名統一：</strong>品牌 - 品類 - 編號 - 版本 - 日期，例如 TAGE-HANGTAG-HT104-V3-20260919</li>
+        <li data-zh="<strong>改動升版：</strong>每次修改升版本號，並在變更記錄裏寫清改了什麼、爲什麼、影響哪些批次" data-en="<strong>Bump on change:</strong> raise the version on every edit and log what changed, why, and which batches are affected" data-ja="<strong>変更で版上げ：</strong>修正のたびに版数を上げ、変更内容・理由・影響ロットを履歴に記載" data-ko="<strong>변경 시 버전 상향:</strong> 수정할 때마다 버전을 올리고 변경 내용, 사유, 영향 로트를 기록" data-fr="<strong>Incrémenter à chaque changement :</strong> montez l'indice et consignez quoi, pourquoi et quels lots sont concernés" data-es="<strong>Subir versión al cambiar:</strong> eleva la versión en cada edición y registra qué cambió, por qué y qué lotes afecta"><strong>改動升版：</strong>每次修改升版本號，並在變更記錄裏寫清改了什麼、爲什麼、影響哪些批次</li>
+        <li data-zh="<strong>封樣同步：</strong>封樣袋上貼版本標籤，避免「樣是新版、單是舊版」" data-en="<strong>Samples in step:</strong> label sealed samples with the version so you never sample the new one and order the old one" data-ja="<strong>封入見本の同期：</strong>見本袋に版ラベルを貼り、「見本は新版・注文は旧版」を防ぎます" data-ko="<strong>봉인 샘플 동기화:</strong> 봉인 샘플 봉투에 버전 라벨을 붙여 '샘플은 신판, 발주는 구판'을 막습니다" data-fr="<strong>Échantillons synchronisés :</strong> étiquetez les échantillons scellés par indice pour éviter l'échantillon neuf commandé à l'ancien indice" data-es="<strong>Muestras sincronizadas:</strong> etiqueta las muestras selladas con la versión para no aprobar la nueva y pedir la antigua"><strong>封樣同步：</strong>封樣袋上貼版本標籤，避免「樣是新版、單是舊版」</li>
+        <li data-zh="<strong>批次隔離：</strong>已下單批次仍按原版本生產，改版從下一批生效，不混批" data-en="<strong>Batch isolation:</strong> orders already placed run to the old version; the new one starts with the next batch, never mixed" data-ja="<strong>ロット分離：</strong>発注済みロットは旧版で生産し、改版は次ロットから適用、混在させない" data-ko="<strong>로트 분리:</strong> 이미 발주한 로트는 구버전으로 생산하고, 신버전은 다음 로트부터 적용해 혼합하지 않습니다" data-fr="<strong>Isolation des lots :</strong> les commandes en cours restent à l'ancien indice, le nouveau démarre au lot suivant, sans mélange" data-es="<strong>Aislamiento de lotes:</strong> los pedidos ya cursados siguen con la versión anterior y la nueva empieza en el lote siguiente, sin mezclar"><strong>批次隔離：</strong>已下單批次仍按原版本生產，改版從下一批生效，不混批</li>
+        <li data-zh="<strong>回執確認：</strong>發出新版時寫明「本版替代 V2」，並要求供應商回覆確認" data-en="<strong>Written acknowledgement:</strong> send the new version marked as replacing V2 and ask your supplier to confirm in writing" data-ja="<strong>受領確認：</strong>新版送付時に「本版は V2 を置き換える」と明記し、サプライヤーの回答確認を求めます" data-ko="<strong>수령 확인:</strong> 신버전 발송 시 '본 버전이 V2를 대체함'을 명시하고 공급업체의 회신 확인을 받습니다" data-fr="<strong>Accusé de réception :</strong> envoyez la nouvelle version en indiquant qu'elle remplace la V2 et demandez confirmation écrite" data-es="<strong>Acuse de recibo:</strong> envía la nueva versión indicando que sustituye a la V2 y pide confirmación por escrito"><strong>回執確認：</strong>發出新版時寫明「本版替代 V2」，並要求供應商回覆確認</li>
+      </ul>
+
+      <h2 data-zh="6. 四個最常見的漏填事故與打樣前核對" data-en="6. Four Costly Omissions and a Pre-Sampling Check" data-ja="6. 最も多い4つの記載漏れとサンプル前チェック" data-ko="6. 가장 흔한 4가지 누락 사례와 샘플 전 점검" data-fr="6. Quatre oublis coûteux et une vérification avant échantillon" data-es="6. Cuatro omisiones costosas y una comprobación antes de la muestra">6. 四個最常見的漏填事故與打樣前核對</h2>
+
+      <div class="callout" data-zh="<strong>💡 最容易踩的四個坑：</strong>只寫「白色」，沒寫克重與色號，首批偏黃；沒寫折法與切邊方式，織嘜裝不上領口、縫製工時翻倍；沒寫洗滌符號的語言組合，到貨後重新訂標，最快也要七到十天；沒寫包裝方式，一捆壓出摺痕，客戶倉庫收貨時會判次品。"
+                           data-en="<strong>💡 The four costliest traps:</strong> writing only white without paper weight or colour reference, so the first batch arrives yellow; no fold or cut method, so the woven label will not sit in the neckline and sewing time doubles; no care symbol language set, forcing a re-order that takes seven to ten days even at best; no packing method, so a bundle arrives creased and is rejected at the customer warehouse."
+                           data-ja="<strong>💡 最も費用のかかる4つの落とし穴：</strong>「白」とだけ書き坪量と色番を書かないと初回ロットが黄ばみます。折りと裁断方法を書かないと織りラベルが衿に収まらず縫製工数が倍になります。洗濯記号の言語構成を書かないと、納品後に再発注となり最短でも7〜10日かかります。包装方法を書かないと束の折り目がつき、客先倉庫で不良判定されます。"
+                           data-ko="<strong>💡 비용이 가장 큰 네 가지 함정:</strong> '흰색'만 쓰고 평량과 색상 번호를 쓰지 않으면 첫 로트가 누렇게 나옵니다. 접힘과 재단 방식을 쓰지 않으면 직조 라벨이 목선에 맞지 않아 봉제 공수가 두 배가 됩니다. 세탁 기호 언어 구성을 쓰지 않으면 입고 후 재발주로 최소 7~10일이 걸립니다. 포장 방식을 쓰지 않으면 묶음에 접힘 자국이 생겨 고객 창고에서 불량 판정을 받습니다."
+                           data-fr="<strong>💡 Les quatre pièges les plus coûteux :</strong> écrire seulement blanc sans grammage ni référence, et le premier lot arrive jaune ; pas de pliage ni de coupe, le label ne tient pas dans l'encolure et le temps de couture double ; pas de jeu de langues pour les symboles, ce qui impose une réimpression en sept à dix jours au mieux ; pas de mode de conditionnement, la liasse arrive marquée et est refusée en entrepôt."
+                           data-es="<strong>💡 Las cuatro trampas más caras:</strong> escribir solo blanco sin gramaje ni referencia y recibir el primer lote amarillento; sin plegado ni corte, la etiqueta no encaja en el cuello y el cosido se duplica; sin juego de idiomas para los símbolos, toca reimprimir en siete a diez días como mínimo; sin método de embalaje, el fajo llega marcado y se rechaza en el almacén del cliente."><strong>💡 最容易踩的四個坑：</strong>只寫「白色」，沒寫克重與色號，首批偏黃；沒寫折法與切邊方式，織嘜裝不上領口、縫製工時翻倍；沒寫洗滌符號的語言組合，到貨後重新訂標，最快也要七到十天；沒寫包裝方式，一捆壓出摺痕，客戶倉庫收貨時會判次品。</div>
+
+      <ol>
+        <li data-zh="規格書是否已升到最新版本，並附變更說明" data-en="Is the spec sheet at its latest version, with a change note" data-ja="仕様書が最新版に更新され、変更説明が添付されているか" data-ko="사양서가 최신 버전으로 갱신되고 변경 설명이 첨부되었는가" data-fr="La fiche est-elle au dernier indice, avec une note de modification" data-es="¿La ficha está en su última versión, con nota de cambio">規格書是否已升到最新版本，並附變更說明</li>
+        <li data-zh="是否附封樣或色樣，包括紙張、紗線與袋材小樣" data-en="Are sealed or colour samples attached, including paper, yarn and film swatches" data-ja="封入見本や色見本（紙・糸・フィルムの小片）が添付されているか" data-ko="봉인 샘플 또는 색상 견본(종이, 원사, 필름 소재)이 첨부되었는가" data-fr="Les échantillons scellés ou de couleur sont-ils joints, papier, fil et film inclus" data-es="¿Se adjuntan muestras selladas o de color, incluidas las de papel, hilo y film">是否附封樣或色樣，包括紙張、紗線與袋材小樣</li>
+        <li data-zh="數量與包裝方式是否與訂單一致，含單件裝袋與混碼" data-en="Do quantity and packing match the order, including individual bagging and size mix" data-ja="数量と包装方法が発注と一致しているか（単品袋入れ・サイズ混載を含む）" data-ko="수량과 포장 방식이 발주와 일치하는가(단품 봉투, 사이즈 혼합 포함)" data-fr="Quantité et conditionnement correspondent-ils à la commande, sac individuel et mix de tailles inclus" data-es="¿Cantidad y embalaje coinciden con el pedido, incluida la bolsa individual y la mezcla de tallas">數量與包裝方式是否與訂單一致，含單件裝袋與混碼</li>
+        <li data-zh="洗滌符號版本與語言組合是否與目標市場匹配" data-en="Do the care symbol version and language set match the target market" data-ja="洗濯記号の版と言語構成が対象市場に合っているか" data-ko="세탁 기호 버전과 언어 구성이 목표 시장에 맞는가" data-fr="Version des symboles et langues correspondent-elles au marché visé" data-es="¿La versión de símbolos e idiomas encaja con el mercado destinatario">洗滌符號版本與語言組合是否與目標市場匹配</li>
+        <li data-zh="打樣費與交期是否已確認，以及大貨可退與否" data-en="Are the sampling fee and lead time confirmed, and is the fee credited against bulk" data-ja="サンプル費用と納期、量産時に相殺されるかが確認済みか" data-ko="샘플 비용과 납기, 양산 시 상계 여부가 확인되었는가" data-fr="Frais d'échantillon et délai sont-ils confirmés, et le montant est-il déduit du volume" data-es="¿Están confirmados el coste de muestra y el plazo, y se deduce del volumen">打樣費與交期是否已確認，以及大貨可退與否</li>
+        <li data-zh="誰做最終籤樣確認，品牌簽字還是書面郵件確認" data-en="Who gives final sample approval, a signed sheet or a written email confirmation" data-ja="最終サンプル承認者は誰か、署名かメール確認か" data-ko="최종 샘플 승인 주체는 누구이며, 서명인지 메일 확인인지" data-fr="Qui valide l'échantillon final, signature ou confirmation écrite" data-es="¿Quién aprueba la muestra final, firma o confirmación escrita">誰做最終籤樣確認，品牌簽字還是書面郵件確認</li>
+      </ol>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="garment-trims-order-guide.html" data-zh="服裝輔料下單指南：把訂單寫清楚，大貨才順利" data-en="Garment Trims Order Guide: A Clear Purchase Order Makes Bulk Production Smooth" data-ja="衣料副資材の発注ガイド：注文を明確に書けば量産が順調に進みます" data-ko="의류 부자재 발주 가이드: 주문서를 명확히 쓰면 양산이 순조롭습니다" data-fr="Guide de commande des accessoires de mode : un bon de commande clair, une production sereine" data-es="Guía de pedido de accesorios de confección: una orden clara, una producción sin sobresaltos">服裝輔料下單指南：把訂單寫清楚，大貨才順利</a></li>
+        <li><a href="woven-label-folding-finishing.html" data-zh="織嘜折邊與後處理方式詳解：從平切熱切到對摺包邊" data-en="Woven Label Folding &amp; Finishing: From Flat and Hot Cut to Folded and Bound" data-ja="織りラベルの折り加工と後処理の解説：平切り・熱切りから二つ折り・包み縁まで" data-ko="직조 라벨 접지와 후가공 해설: 평절단·열절단부터 반접기·테두리 감싸기까지" data-fr="Pliage et finition des labels tissés : de la coupe droite et à chaud au pliage et au biais" data-es="Plegado y acabado de etiquetas tejidas: del corte recto y caliente al plegado y ribete">織嘜折邊與後處理方式詳解：從平切熱切到對摺包邊</a></li>
+        <li><a href="care-label-multilingual-guide.html" data-zh="出口服裝多語言標籤指南：目的國語言要求與版面設計" data-en="Multilingual Care Labels for Export: Language Requirements &amp; Layout Design" data-ja="輸出衣料の多言語ラベルガイド：仕向国言語の要件とレイアウト設計" data-ko="수출 의류 다국어 라벨 가이드: 목적국 언어 요건과 레이아웃 디자인" data-fr="Étiquettes d'entretien multilingues à l'export : langues et conception" data-es="Etiquetas de cuidado multilingües para exportación: idiomas y diseño">出口服裝多語言標籤指南：目的國語言要求與版面設計</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="準備把吊牌、織嘜、洗水標或包裝袋的規格整理成一份可以直接下單的文件？把現有草稿或樣品照片發給我們，我們按字段幫你補齊缺口，三到七天寄出實物樣品確認。"
+           data-en="Turning trims specifications into a document your supplier can quote from? Send us your draft or sample photos: we fill the gaps field by field and ship physical samples in three to seven days."
+           data-ja="タグ・織りラベル・洗濯表示ラベル・包装袋の仕様を、そのまま発注できる文書にまとめませんか。現行のドラフトや見本写真をお送りいただければ、項目ごとに不足を補い、3〜7日で実物サンプルをお届けします。"
+           data-ko="행택·직조 라벨·세탁 표시 라벨·포장백 사양을 바로 발주할 수 있는 문서로 정리하시겠습니까? 기존 초안이나 샘플 사진을 보내주시면 항목별로 빠진 부분을 채우고 3~7일 내에 실물 샘플을 발송합니다."
+           data-fr="Vous transformez vos spécifications en document exploitable par votre fournisseur ? Envoyez-nous votre projet ou des photos d'échantillons : nous complétons les champs manquants et expédions les échantillons en trois à sept jours."
+           data-es="¿Estás convirtiendo tus especificaciones en un documento que tu proveedor pueda presupuestar? Envíanos tu borrador o fotos de muestras: completamos los campos que faltan y enviamos muestras físicas en tres a siete días.">準備把吊牌、織嘜、洗水標或包裝袋的規格整理成一份可以直接下單的文件？把現有草稿或樣品照片發給我們，我們按字段幫你補齊缺口，三到七天寄出實物樣品確認。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取輔料報價 →" data-en="Request a trims quote →" data-ja="副資材のお見積りを依頼 →" data-ko="부자재 견적 요청 →" data-fr="Demander un devis accessoires →" data-es="Solicitar presupuesto de accesorios →">獲取輔料報價 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=63"></script>
+<script src="../js/assist.js?v=48"></script>
+</body>
+</html>
