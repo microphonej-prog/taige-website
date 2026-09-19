@@ -4,7 +4,7 @@
 import re, json, os
 from html.parser import HTMLParser
 
-NEW = ["blog/carton-shipping-mark-guide.html", "blog/prop65-apparel-trims-guide.html"]
+NEW = ["blog/clothing-label-compliance-peru.html", "blog/clothing-label-compliance-argentina.html"]
 
 class Collector(HTMLParser):
     """收集 article-body 内的开始标签及其属性"""
