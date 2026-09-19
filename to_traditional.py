@@ -111,11 +111,18 @@ def convert_js(path):
 
         def kws(m2):
             inner = m2.group(1)
-            # 用 t2s 反推简体原词，只有真正不同才追加（两种输入都能命中）
+            # 繁体原词 + 简体变体，去重后重写（保证重复运行幂等，不会重复追加）
             words = re.findall(r'"([^"]*)"', inner)
-            extra = [w for w in words if OpenCC('t2s').convert(w) != w]
-            add = ''.join(', "%s"' % OpenCC('t2s').convert(e) for e in extra)
-            return 'kws: [%s%s]' % (inner, add)
+            seen, uniq = set(), []
+            for w in words:
+                if w not in seen:
+                    seen.add(w); uniq.append(w)
+            extra = []
+            for w in uniq:
+                b = OpenCC('t2s').convert(w)
+                if b != w and b not in seen:
+                    seen.add(b); extra.append(b)
+            return 'kws: [%s]' % ', '.join('"%s"' % w for w in uniq + extra)
         block = re.sub(r'kws: \[([^\]]*)\]', kws, block)
         s2 = s[:m.start(2)] + block + s[m.end(2):]
         changed = s2 != s

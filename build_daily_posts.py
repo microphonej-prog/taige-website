@@ -173,3 +173,20 @@ s = s.replace(marker, marker + "\n" + cards, 1)
 with open(idx, "w", encoding="utf-8", newline="") as f:
     f.write(s)
 print("blog/index.html 插入 2 张卡片完成")
+
+# ---------- 中文版为繁体：新增文章与列表页统一转繁（幂等，无改动则跳过） ----------
+try:
+    import importlib.util as _ilu, os as _os
+    _spec = _ilu.spec_from_file_location(
+        "to_traditional", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "to_traditional.py"))
+    _mod = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_mod)
+    _changed = []
+    for _p in [_os.path.join("blog", a["slug"] + ".html") for a in ARTICLES] + ["blog/index.html"]:
+        _s0 = open(_p, encoding="utf-8").read()
+        _s1 = _mod.convert_html(_s0)
+        if _s1 != _s0:
+            open(_p, "w", encoding="utf-8", newline="").write(_s1)
+            _changed.append(_p)
+    print("繁体转换：%d 个文件有改动 %s" % (len(_changed), _changed))
+except Exception as _e:
+    print("繁体转换步骤跳过：%s" % _e)
