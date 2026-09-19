@@ -4,61 +4,61 @@
 import re
 
 SKEL = "blog/knitwear-sweater-trims-guide.html"
-DATE_ZH = "2026年9月18日"
-DATE_EN = "September 18, 2026"
-DATE_FR = "18 septembre 2026"
-DATE_ES = "18 de septiembre de 2026"
+DATE_ZH = "2026年9月19日"
+DATE_EN = "September 19, 2026"
+DATE_FR = "19 septembre 2026"
+DATE_ES = "19 de septiembre de 2026"
 
 ARTICLES = [
     dict(
-        slug="metal-trims-nickel-release-guide.html",
-        body="blog/_body_ni.html",
-        title_zh="金属辅料镍释放合规指南：金属扣、撞钉与鸡眼怎么选 | TAGE",
-        title_en="Nickel Release in Metal Trims: Buckles, Rivets &amp; Eyelets | TAGE",
-        title_fr="Libération de nickel des accessoires métalliques : boucles, rivets et œillets | TAGE",
-        title_es="Liberación de níquel en accesorios metálicos: hebillas, remaches y ojales | TAGE",
-        desc_zh="金属辅料镍释放合规指南：金属扣、撞钉、鸡眼与金属吊粒的镍风险来源，无镍电镀与材质替代方案，EN 1811 与 EN 12472 测试逻辑，以及采购端要写进规格书的五件事。来自东莞泰阁包装。",
-        desc_en="Nickel release in metal trims: which buckles, rivets and eyelets fall under REACH limits, nickel-free plating options, test methods and spec-sheet advice.",
-        desc_fr="Libération de nickel dans les accessoires métalliques : quelles pièces entrent dans le champ REACH, placage sans nickel, essais et cahier des charges.",
-        desc_es="Liberación de níquel en accesorios metálicos: qué piezas entran en REACH, baños sin níquel, ensayos y ficha técnica.",
-        crumb_zh="镍释放合规",
-        crumb_en="Nickel Release Rules",
-        crumb_fr="Réglementation nickel",
-        crumb_es="Normativa del níquel",
-        h1_zh="金属辅料镍释放合规指南：金属扣、撞钉与鸡眼怎么选",
-        h1_en="Nickel Release in Metal Trims: Choosing Buckles, Rivets and Eyelets",
-        h1_fr="Libération de nickel : choisir boucles, rivets et œillets métalliques",
-        h1_es="Liberación de níquel: elegir hebillas, remaches y ojales metálicos",
-        tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
-        sum_zh="法规不禁止含镍，只限制长期接触皮肤部件的镍析出量（常见表述为 0.2 µg/cm² 每周）。本文讲清哪些金属辅料在范围内、锌合金电镀件与黄铜件的风险来源、无镍电镀与塑料替代方案，以及 EN 1811 与 EN 12472 的测试逻辑和采购端要写进规格书的五件事。",
-        sum_en="The rules do not ban nickel, they cap release from parts in prolonged skin contact (commonly 0.2 µg/cm² per week). This guide shows which metal trims are in scope, where plated zinc alloy and brass create risk, how nickel-free plating and plastic alternatives work, and what to write into the spec sheet.",
-        sum_fr="La règle n'interdit pas le nickel, elle limite sa libération pour les pièces en contact prolongé avec la peau (souvent 0,2 µg/cm² par semaine). Ce guide indique les accessoires concernés, l'origine du risque sur zinc allié plaqué et laiton, les solutions sans nickel et les essais EN 1811 et EN 12472.",
-        sum_es="La norma no prohíbe el níquel, limita su liberación en piezas en contacto prolongado con la piel (habitualmente 0,2 µg/cm² por semana). Esta guía indica qué accesorios están dentro del alcance, el origen del riesgo en zinc aleado y latón, las alternativas sin níquel y los ensayos EN 1811 y EN 12472.",
+        slug="carton-shipping-mark-guide.html",
+        body="blog/_body_cm.html",
+        title_zh="服装出口外箱唛头与箱贴指南：正唛、侧唛与标记规范 | TAGE",
+        title_en="Carton Shipping Marks for Garment Export: Main Mark &amp; Side Mark | TAGE",
+        title_fr="Marques d'expédition des cartons à l'export textile : guide pratique | TAGE",
+        title_es="Marcas de envío en cartones para exportar prendas: guía práctica | TAGE",
+        desc_zh="出口外箱唛头与箱贴指南：正唛、侧唛与副唛的字段和位置，箱规与毛净重怎么填才不被客户仓库打回，直接印刷与不干胶贴标的成本对比，条码、运输图示与原产地标记规范，附下单前要确认的六个箱标细节。来自东莞泰阁包装。",
+        desc_en="Carton shipping marks for garment export: main and side mark fields, carton sizes, direct print vs labels, barcodes and origin marks, plus a checklist.",
+        desc_fr="Marques d'expédition des cartons à l'export textile : champs des marques principale et latérale, dimensions et poids, impression directe ou étiquettes, codes-barres et symboles de manutention.",
+        desc_es="Marcas de envío en cartones para exportar prendas: campos de la marca principal y lateral, medidas y peso, impresión directa o etiquetas, códigos de barras y símbolos de manipulación.",
+        crumb_zh="外箱唛头与箱贴",
+        crumb_en="Carton Marking",
+        crumb_fr="Marquage des cartons",
+        crumb_es="Marcado de cartones",
+        h1_zh="服装出口外箱唛头与箱贴指南：正唛、侧唛与标记规范",
+        h1_en="Carton Shipping Marks for Garment Export: Main Mark, Side Mark and Labels",
+        h1_fr="Marques d'expédition des cartons : marque principale, marque latérale et étiquettes",
+        h1_es="Marcas de envío en cartones: marca principal, marca lateral y etiquetas",
+        tag_zh="出口实务", tag_en="Export", tag_fr="Export", tag_es="Exportación",
+        sum_zh="外箱唛头写错一个字段，可能让整批纸箱报废、被客户仓库拒收或在目的港重新贴标。本文讲清正唛、侧唛、副唛分别承载什么信息，箱规与毛净重为什么必须实测，直接印刷与不干胶箱贴怎么选，条码位置、原产地标记与运输图示的常见要求，并附下单前要确认的六个箱标细节。",
+        sum_en="One wrong carton mark field can scrap an entire carton run, trigger a warehouse rejection or force repacking at destination. This guide covers what the main, side and additional marks carry, why carton size and gross weight must be measured, direct print versus self-adhesive labels, barcode placement, origin and handling symbols, and six details to confirm before ordering.",
+        sum_fr="Un champ erroné sur la marque d'expédition peut faire mettre au rebut une série de cartons, provoquer un refus en entrepôt ou un ré-étiquetage au port. Ce guide couvre le contenu des marques principale, latérale et additionnelle, la nécessité de mesurer dimensions et poids, le choix entre impression directe et étiquettes adhésives, les codes-barres, l'origine et les symboles, avec six points à valider avant commande.",
+        sum_es="Un campo erróneo en la marca de envío puede desechar una serie completa de cajas, provocar un rechazo en el almacén del cliente o un reetiquetado en destino. Esta guía explica qué llevan las marcas principal, lateral y adicional, por qué hay que medir medidas y pesos, impresión directa frente a etiquetas adhesivas, códigos de barras, origen y símbolos de manipulación, con seis detalles a confirmar antes de pedir.",
     ),
     dict(
-        slug="tissue-paper-wrapping-guide.html",
-        body="blog/_body_tp.html",
-        title_zh="服装薄纸包装指南：雪梨纸、拷贝纸的克重与印刷选择 | TAGE",
-        title_en="Tissue Paper Wrapping Guide for Apparel: Weights &amp; Printing | TAGE",
-        title_fr="Papier de soie pour vêtements : grammages, impression et fermeture | TAGE",
-        title_es="Papel de seda para ropa: gramajes, impresión y sellado | TAGE",
-        desc_zh="服装薄纸包装指南：雪梨纸、拷贝纸、牛皮薄纸与无酸纸的克重（14-30g）与用途对比，无酸与色牢度风险、印刷与封口搭配，以及询价时要写明的六个规格。来自东莞泰阁包装。",
-        desc_en="Tissue paper wrapping for apparel: 14-30gsm options compared, acid-free and colour fastness risks, printing and sealing choices, plus six specs to quote on.",
-        desc_fr="Papier de soie pour vêtements : options de 14 à 30 g/m² comparées, sans-acide et solidité des teintes, impression, fermeture et six spécifications.",
-        desc_es="Papel de seda para ropa: opciones de 14 a 30 g/m², libre de ácido y solidez del color, impresión, sellado y seis especificaciones clave.",
-        crumb_zh="薄纸包装",
-        crumb_en="Tissue Wrapping",
-        crumb_fr="Papier de soie",
-        crumb_es="Papel de seda",
-        h1_zh="服装薄纸包装指南：雪梨纸、拷贝纸的克重与印刷选择",
-        h1_en="Tissue Paper Wrapping for Apparel: Grammage, Printing and Sealing",
-        h1_fr="Papier de soie pour vêtements : grammage, impression et fermeture",
-        h1_es="Papel de seda para ropa: gramaje, impresión y sellado",
-        tag_zh="包装指南", tag_en="Packaging", tag_fr="Emballage", tag_es="Embalaje",
-        sum_zh="薄纸是服装包装里感知成本比最高的一层：14-17g 用于隔层填充，22-30g 用于外露包裹与礼盒内衬，浅色与真丝类长期存放建议无酸纸。本文对比四种薄纸的克重与用途，讲清色牢度风险、压印与封口贴的搭配，并列出询价时必须写明的六个规格。",
-        sum_en="Tissue is the best perceived-value layer in apparel packaging: 14-17 gsm for interleaving and filling, 22-30 gsm for visible wrapping and gift liners, acid-free for light and silk garments in long storage. This guide compares the four papers and lists the six specs to state on a quote request.",
-        sum_fr="Le papier de soie offre le meilleur rapport valeur perçue : 14-17 g/m² pour l'intercalaire et le garnissage, 22-30 g/m² pour l'emballage visible et les boîtes, sans acide pour les pièces claires et la soie. Ce guide compare les quatre papiers et liste les six spécifications à indiquer.",
-        sum_es="El papel de seda ofrece la mejor relación valor percibido: 14-17 g/m² para intercalado y relleno, 22-30 g/m² para envoltura visible y cajas, libre de ácido para prendas claras y seda. Esta guía compara los cuatro papeles y enumera las seis especificaciones a indicar.",
+        slug="prop65-apparel-trims-guide.html",
+        body="blog/_body_p65.html",
+        title_zh="加州 65 号提案与服装辅料：警示标签与风险物质怎么处理 | TAGE",
+        title_en="California Prop 65 for Apparel and Trims: Warnings &amp; Risk Points | TAGE",
+        title_fr="Proposition 65 de Californie et accessoires textiles : avertissements et risques | TAGE",
+        title_es="Proposición 65 de California y accesorios de ropa: advertencias y riesgos | TAGE",
+        desc_zh="加州 65 号提案与服装辅料合规：警示义务与安全港（NSRL/MADL）怎么理解，PVC 胶袋、电镀金属件、印刷油墨与铬鞣皮革的风险点与替换方向，标准与短式警示的写法，以及网购页面必须展示警示这一常被漏掉的要点。来自东莞泰阁包装。",
+        desc_en="California Prop 65 for apparel and trims: the warning duty, safe harbour levels, PVC, metal, ink and leather risks, online sales rules, plus a checklist.",
+        desc_fr="Proposition 65 et accessoires textiles : obligation d'avertissement et seuils de référence, risques liés au PVC, métaux plaqués, encres et cuir, formulation de l'avertissement et règles de vente en ligne.",
+        desc_es="Proposición 65 y accesorios de ropa: deber de advertencia y niveles de referencia, riesgos en PVC, metales con baño, tintas y cuero, redacción de la advertencia y reglas de venta online.",
+        crumb_zh="加州 Prop 65",
+        crumb_en="California Prop 65",
+        crumb_fr="Prop 65 Californie",
+        crumb_es="Prop 65 California",
+        h1_zh="加州 65 号提案与服装辅料：警示标签与风险物质怎么处理",
+        h1_en="California Prop 65 for Apparel and Trims: Warning Labels and Risk Points",
+        h1_fr="Proposition 65 de Californie et accessoires textiles : avertissements et points de risque",
+        h1_es="Proposición 65 de California y accesorios de ropa: advertencias y puntos de riesgo",
+        tag_zh="合规指南", tag_en="Compliance", tag_fr="Conformité", tag_es="Cumplimiento",
+        sum_zh="加州 65 号提案不禁止产品销售，而是要求在消费者接触之前给出清晰合理的警示：不存在「Prop 65 认证」，只有检测报告与警示标签本身。本文讲清警示义务与安全港水平的判定逻辑、服装辅料常见的五类风险部位与替换方向、标准与短式警示的写法与位置、网购页面必须展示警示这一最容易漏掉的要求，以及采购端五步行动清单。",
+        sum_en="California Prop 65 does not ban products; it requires a clear and reasonable warning before consumer exposure, and there is no such thing as a Prop 65 certificate — only test reports and the warning itself. This guide covers the warning duty and safe harbour levels, five risk points in apparel trims and how to substitute them, standard versus short-form warnings and where they go, the online-sales rule sellers most often miss, and a five-step buyer checklist.",
+        sum_fr="La Proposition 65 n'interdit pas les produits : elle impose un avertissement clair et raisonnable avant l'exposition, et il n'existe pas de « certificat Prop 65 » — seulement des rapports d'essai et l'avertissement lui-même. Ce guide traite l'obligation et les seuils de référence, cinq points de risque dans les accessoires et leurs alternatives, l'avertissement standard ou court et son emplacement, la règle en ligne la plus souvent oubliée et une liste d'actions en cinq étapes.",
+        sum_es="La Proposición 65 no prohíbe productos: exige una advertencia clara y razonable antes de la exposición, y no existe un «certificado Prop 65», solo informes de ensayo y la propia advertencia. Esta guía cubre el deber de advertencia y los niveles de referencia, cinco puntos de riesgo en accesorios y sus alternativas, la advertencia estándar o corta y su ubicación, la regla de venta online que más se olvida y una lista de cinco pasos para el comprador.",
     ),
 ]
 
@@ -167,8 +167,8 @@ idx = "blog/index.html"
 s = open(idx, encoding="utf-8").read()
 marker = '<div class="post-grid">\n'
 assert marker in s, "post-grid 未找到"
-
-# 安全闸已在生成前执行（见文件开头）
+for a in ARTICLES:
+    assert a["slug"] not in s, "卡已存在：%s" % a["slug"]
 s = s.replace(marker, marker + "\n" + cards, 1)
 with open(idx, "w", encoding="utf-8", newline="") as f:
     f.write(s)
