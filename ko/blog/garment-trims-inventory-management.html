@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 부자재 재고·보충 관리 가이드: 안전 재고·발주점·사장 재고 관리 | TAGE</title>
+<meta name="description" content="의류 부자재 재고 관리를 잘못하면 자재 결품으로 인한 라인 중단과 사장 재고 적체가 동시에 발생합니다. 이 글에서는 부자재 리스트(BOM)를 출발점으로 안전 재고와 발주점 계산 방법, 로트와 색차 관리, 프레임 오더와 롤링 예측을 통한 공급업체 협업, 그리고 재고 실사와 잔여 수량 처리의 핵심을 설명합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.related{margin-top:36px}
+.related ul{padding-left:22px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+     "item": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+   "url": "https://taigetag.com/blog/garment-trims-inventory-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>부자재 재고와 보충</span></div>
+      <h1>의류 부자재 재고·보충 관리 가이드: 안전 재고·발주점·사장 재고 관리</h1>
+      <p>TAGE 패키징  ·  2026년 9월 11일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>의류 부자재 재고 관리는 브랜드와 공장이 가장 「잘못 아끼는」 영역입니다. 부자재는 단가가 낮고 자금 부담이 적어 부차적인 항목으로 취급되지만, 직조 라벨 한 장, 행택 한 장이 부족하면 완성 의류 로트 전체가 출고되지 못합니다. 이 글에서는 부자재 리스트(BOM)부터 시작해 안전 재고와 발주점 계산 방법, 로트와 색차 관리, 프레임 오더와 롤링 예측을 통한 공급업체 협업, 그리고 사장 재고와 잔여 수량 처리 방법을 설명합니다.</p>
+
+<p>먼저 원칙을 분명히 하겠습니다. 부자재 재고의 목표는 「많을수록 안전」이 아니라 「적절한 시점에, 올바른 로트로, 올바른 수량을 보유하는 것」입니다. 결품으로 인한 라인 중단 손실은 보통 부자재 자체의 가치를 훨씬 초과합니다. 반면 과잉 비축은 스타일 변경이나 시즌 교체 시 사장 재고와 색차 위험으로 바뀝니다.</p>
+
+<h2>1. 부자재 재고가 「작은 품목, 큰 리스크」인 이유</h2>
+
+<p>한 벌의 의류는 여러 부자재로 구성됩니다. 행택, 직조 라벨, 세탁 표시 라벨, 포장백, 경우에 따라 태그핀, 스티커, 브로슈어 카드도 있습니다. 어느 하나라도 결품이면 해당 의류는 마감과 출고가 불가능합니다. 부자재의 특징은 「단가가 낮고, 수량이 많으며, 전용성이 높다」는 점입니다. 특히 브랜드 로고, 지정 색상, 전용 형태의 부자재는 급하게 대체하기가 거의 불가능합니다.</p>
+
+<ul>
+<li><strong>결품 비용이 높습니다:</strong> 라인 중단, 일정 변경, 항공 보충은 손실이 부자재 화물 가치의 수십 배에 달하는 경우가 많습니다.</li>
+<li><strong>조달 기간이 짧지 않습니다:</strong> 행택과 직조 라벨은 보통 샘플 제작과 생산이 필요하고 납기는 주 단위이므로 「내일 필요」는 불가능합니다.</li>
+<li><strong>로트 차이에 민감합니다:</strong> 로트가 다르면 용지, 실, 잉크에서 색차가 생길 수 있고, 혼합 로트 사용은 동일 스타일의 일관성을 해칩니다.</li>
+<li><strong>자금 부담은 낮지만 진부화 위험이 큽니다:</strong> 부자재는 금액이 작아 간과되기 쉽지만 시즌이 바뀌면 구식이 되어 전량 폐기되는 경우가 많습니다.</li>
+</ul>
+
+<h2>2. 부자재 리스트(BOM)로 재고 기준 수립</h2>
+
+<p>BOM이 없으면 관리할 수 있는 재고도 없습니다. 각 스타일마다 부자재 리스트를 마련해 품명, 사양, 색상, 의류 1벌당 사용량, 공급업체, 최소 주문량, 표준 납기를 명시합니다. 리스트가 갖춰져야 재고 관리는 「감에 의한 보충」에서 「데이터에 의한 보충」으로 바뀝니다.</p>
+
+<ul>
+<li><strong>범용 부자재와 전용 부자재를 구분합니다:</strong> 포장백과 범용 직조 라벨은 공통 색상으로 비축할 수 있지만, 전용 로고·이형 다이컷·특수 금박 부자재는 스타일별로 비축해야 합니다.</li>
+<li><strong>1벌당 사용량과 손실률을 기재합니다:</strong> 예를 들어 1벌당 메인 라벨 1장, 세탁 표시 라벨 1장, 행택 1장으로 하고 일정 비율의 손실 보충분을 미리 확보합니다.</li>
+<li><strong>표준 납기와 최소 주문량을 기록합니다:</strong> 이 두 수치가 발주점을 직접 결정하며 프레임 오더 협상의 기초가 됩니다.</li>
+<li><strong>공급업체와 버전을 일치시킵니다:</strong> 승인 샘플, 색상 번호, 가공 파라미터를 보관해 재주문 시 그대로 인용함으로써 재샘플링과 편차를 피합니다.</li>
+</ul>
+
+<h2>3. 안전 재고와 발주점 계산 방법</h2>
+
+<p>실무에서 가장 유용한 공식은 두 가지입니다. 「안전 재고 ≈ 최대 일 소비량 × 최대 납기 − 평균 일 소비량 × 평균 납기」, 「발주점 = 평균 일 소비량 × 평균 납기 + 안전 재고」. 그 의미는 정밀도를 추구하는 것이 아니라 납기 변동과 수요 변동을 함께 고려해 보충 시점을 앞당기는 데 있습니다.</p>
+
+<table>
+<tr><th>파라미터</th><th>산출 근거</th><th>흔한 오류</th></tr>
+<tr><td>일평균 소비량</td><td>생산 계획 × 1벌당 사용량</td><td>과거 평균만 사용하고 성수기와 신규 스타일 램프업을 무시합니다</td></tr>
+<tr><td>조달 납기</td><td>공급업체 약속 납기 + 생산 + 운송</td><td>최선의 경우(예: 10일)를 사용하고 정상 납기를 쓰지 않습니다</td></tr>
+<tr><td>납기 변동</td><td>최근 6개월의 실제 입고 기록</td><td>실제 입고일을 집계하지 않고 인상만으로 판단합니다</td></tr>
+<tr><td>안전 계수</td><td>허용 가능한 결품 위험으로 설정하며 핵심 부자재는 더 보수적으로</td><td>모든 부자재에 동일 기준을 적용하면 낭비와 리스크가 공존합니다</td></tr>
+</table>
+
+<div class="callout"><strong>💡 팁:</strong> 공식은 출발점일 뿐입니다. 먼저 3개월 운영하며 실제 입고일과 실제 소비량으로 파라미터를 보정하는 것이 처음부터 정밀도를 추구하는 것보다 효과적입니다. 부자재의 가치는 안정적인 공급에 있으며 재고 숫자의 외관에 있지 않습니다.</div>
+
+<h2>4. 로트, 색차, 창고 관리</h2>
+
+<ul>
+<li><strong>로트와 색상 번호 표기:</strong> 입고 시마다 로트 번호, 생산일, 색상 번호를 등록하고 동일 스타일 의류는 가능한 한 같은 로트의 부자재를 사용합니다.</li>
+<li><strong>선입선출(FIFO):</strong> 오래된 로트를 먼저 사용해 창고 안쪽 부자재가 장기 보관으로 변색, 흡습, 점착되는 것을 방지합니다.</li>
+<li><strong>방습·퇴색 방지:</strong> 종이 부자재는 습기와 직사광선을 피하고, 직조 라벨과 세탁 표시 라벨은 장기 적재로 인한 변형을 피해야 합니다. 바닥에서 띄우고 차광해 보관하시기 바랍니다.</li>
+<li><strong>혼합 로트 사용 금지:</strong> 결품으로 동일 주문에 다른 로트를 사용해야 할 경우 반드시 사전에 고객에게 알리고 색차가 허용 가능한지 확인해야 하며, 임의로 혼용해서는 안 됩니다.</li>
+</ul>
+
+<h2>5. 공급업체 협업: 프레임 오더와 롤링 예측</h2>
+
+<p>부자재 납기의 안정성은 공급업체가 귀사의 사용량을 얼마나 미리 파악하고 있는지에 크게 좌우됩니다. 매번 임시로 발주하는 대신 사용량 정보를 앞당겨 공유하고 제도로 납기를 확보하는 것이 효과적입니다.</p>
+
+<ul>
+<li><strong>프레임 오더:</strong> 연간 또는 분기 사용량과 가격을 확정하고 분할로 인수해 생산 능력과 자재를 확보하면서 1회 자금 부담을 낮춥니다.</li>
+<li><strong>롤링 예측:</strong> 매월 향후 3개월 사용량 예측을 제공합니다. 발주를 약속하지 않아도 공급업체가 실과 종이를 미리 준비할 수 있습니다.</li>
+<li><strong>안전 재고 협업:</strong> 재주문이 잦은 범용 부자재는 공급업체가 일정량의 완제품 또는 반제품 재고를 보유하도록 협의해 보충 주기를 단축할 수 있습니다.</li>
+<li><strong>납기 대장 작성:</strong> 각 주문의 약속 납기와 실제 입고일을 기록해 다음 협상과 안전 재고 보정의 근거로 삼습니다.</li>
+</ul>
+
+<h2>6. 사장 재고와 잔여 수량 처리</h2>
+
+<ul>
+<li><strong>사장 재고 발생 원인:</strong> 대부분 「최소 주문량을 채우기 위한」 과잉 구매, 스타일 취소, 리뉴얼로 인한 구자재 폐기입니다.</li>
+<li><strong>관리 방법:</strong> 색상과 사양을 최대한 범용화하고(전용 색상 감축), 최소 주문량이 아닌 실제 수요로 발주하며, 장납기 부자재에는 명확한 취소 가능 시점을 설정합니다.</li>
+<li><strong>잔여 수량 관리:</strong> 양산 시 일정 비율의 손실 보충분을 더 인쇄하는 것은 일반적이지만, 잔여분은 입고 등록해 이후 재주문에 우선 사용해야 하며 함부로 폐기해서는 안 됩니다.</li>
+<li><strong>정기 검토:</strong> 매 시즌 사장 재고를 실사해 개조할 수 있는 것은 개조하고 범용화할 수 있는 것은 범용화하며, 사용할 수 없는 것은 즉시 처리해 보관 공간과 자금을 점유하지 않도록 합니다.</li>
+</ul>
+
+<h2>7. 재고 실사와 입고 검수 요점</h2>
+
+<ul>
+<li>입고 시 <strong>수량, 로트 번호, 색상 번호</strong>가 주문과 일치하는지 확인하고 외관과 치수를 샘플 검사합니다.</li>
+<li><strong>고가 또는 장납기 부자재</strong>는 실사 주기를 단축해 장부와 실물의 일치를 보장합니다.</li>
+<li><strong>보충 알림</strong>을 설정해(발주점 이하로 내려가면 자동 트리거) 인적 기억에 의존하지 않도록 합니다.</li>
+<li>각 부자재의 <strong>승인 샘플과 색상 카드</strong>를 보관해 재주문과 클레임 시 유일한 비교 기준으로 삼습니다.</li>
+</ul>
+
+<div class="callout"><strong>💡 TAGE 팁:</strong> 부자재 공급이 안정되는 핵심은 공급업체가 귀사의 리듬을 미리 알게 하는 것입니다. 장기 협력 브랜드에는 상용 직조 라벨·세탁 표시 라벨의 반제품 재고를 보유해 드리며, 프레임 오더와 롤링 예측을 결합해 재주문 납기를 10–25일 범위의 앞쪽으로 단축할 수 있습니다. 샘플 제작은 3–7일, 최소 주문량은 유연하게 대응합니다.</div>
+
+<div class="related">
+<h2>관련 글</h2>
+<ul>
+<li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+<li><a href="garment-trims-order-guide.html">의류 부자재 발주 가이드: 견적 문의부터 입고까지 전 과정</a></li>
+<li><a href="garment-trims-lead-time-guide.html">의류 부자재 납기 가이드: 샘플 제작·생산·운송 기간 분석</a></li>
+<li><a href="clothing-brand-first-trims-order.html">의류 브랜드 첫 부자재 주문 체크리스트</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>부자재 공급을 더 안정적으로 만들고 싶으십니까? 스타일별 사용량과 보충 주기를 알려주시면 프레임 오더와 안전 재고를 함께 설계해 드립니다.</p>
+<a class="cta-btn" href="../contact.html">부자재 장기 공급 방안 상담 →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장 인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>퀵 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>직조 라벨은 어떻게 만들어지는가: 전체 생산 공정과 품질 핵심 | TAGE</title>
+<meta name="description" content="직조 라벨은 인쇄가 아니라 직조로 만들어집니다. 이 글에서는 정경, 종광 통과, 자카드 직조, 재단·접지 후공정, 검사·포장까지의 생산 공정을 순서대로 재현하고, 실 끊김과 무늬 빠짐 등 주요 결함의 원인과 검품 요점을 설명합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-production-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-production-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "织唛是怎么做出来的：生产工艺全流程与品质关键点",
+     "item": "https://taigetag.com/blog/woven-label-production-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "织唛是怎么做出来的：生产工艺全流程与品质关键点",
+   "url": "https://taigetag.com/blog/woven-label-production-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-production-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>직조 라벨 생산 공정</span></div>
+      <h1>직조 라벨 생산 공정 전체: 실에서 완제품까지, 품질은 각 단계에 있습니다</h1>
+      <p>TAGE 패키징 · 2026년 9월 10일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>직조 라벨은 &quot;인쇄&quot;가 아니라 &quot;직조&quot;로 만들어집니다. 이 한마디를 이해하지 못하면 직조 라벨의 견적과 품질 차이도 이해하기 어렵습니다. 직조 라벨 한 장은 실에서 완제품이 되기까지 정경, 종광 통과, 직조, 재단·접지, 검사 등 여러 공정을 거치며, 각 단계가 비용과 품질에 동시에 영향을 미칩니다. 이 글에서는 직조 라벨 생산 공정을 처음부터 끝까지 안내합니다.</p>
+
+<p>공정을 이해하면 실무적인 이점도 있습니다. 실 끊김, 무늬 빠짐, 풀림 같은 결함이 어느 단계에서 발생하는지 알면 검품 시 목적에 맞게 확인할 수 있고, 공급업체의 견적이 타당한지도 판단하기 쉬워집니다.</p>
+
+<h2>1. 직조 전: 정경과 종광 통과가 바탕색과 정밀도를 결정</h2>
+
+<p>직조 라벨의 무늬는 경사와 위사가 프로그램에 따라 교차하며 짜입니다. 생산 전에 공장은 먼저 색상별로 실을 정연하게 경축에 감고(정경), 그다음 한 가닥씩 경사를 종광과 바디 날에 통과시킵니다(종광 통과). 색상이 많을수록, 라벨 폭이 넓을수록 이 준비 시간이 길어집니다. 이것이 소량 직조 라벨의 단가가 높은 이유 중 하나입니다.</p>
+
+<li>정경 장력이 균일하지 않으면 완제품에 주름, 위사 사행, 색 띠가 발생합니다.</li>
+
+<li>종광 통과와 자카드 프로그램은 디자인 원고와 한 코씩 대조해야 하며, 한 코만 틀려도 전체 폭이 어긋납니다.</li>
+
+<h2>2. 직조: 자카드기가 무늬를 한 코씩 짜냅니다</h2>
+
+<p>직조 시 자카드기가 전자 문판에 따라 경사를 한 코씩 끌어올리고 위사를 설계대로 순차적으로 넣어, 무늬가 한 코씩 &quot;자라납니다&quot;. 일반적인 조직 중 새틴은 부유사가 길어 광택과 촉감이 가장 좋습니다. 평직은 조직이 가장 촘촘하고 마모에 강해 작은 글자에 적합합니다. 자카드는 색면과 층이 풍부한 무늬를 표현할 수 있습니다. 무늬가 촘촘하고 복잡할수록 직조 속도가 느려지고 기계 시간 비용이 높아집니다.</p>
+
+<h2>3. 후공정: 재단·접지와 열 성형이 완제품 디테일을 결정</h2>
+
+<p>직기에서 나오는 것은 폭 전체가 이어진 라벨 테이프이며, 이후 가장자리 절단(평절, 열절, 초음파), 분조, 접지, 열 성형을 거쳐야 정돈된 한 장씩의 직조 라벨이 됩니다. 접힘 위치가 어긋나거나 절단 온도가 부적절하면 풀림, 접힘 자국, 치수 초과 편차가 발생합니다.</p>
+
+<li>접지 라벨(반접기, 양면 접기)은 평절 라벨보다 공정이 하나 더 많아 접힘 위치와 완성 길이를 한 장씩 측정해야 합니다.</li>
+
+<li>열 성형은 라벨을 뻣뻣하게 잡아주어 봉제가 쉬워지지만, 너무 뻣뻣하면 피부를 자극합니다. 소재와 후공정은 착용 용도에 맞춰야 합니다.</li>
+
+<h2>4. 주요 결함과 검품 요점</h2>
+
+<li><strong>실 끊김/무늬 빠짐</strong>: 직조 중 실이 끊기거나 침이 잘못 들어 올려져 발생하며 고밀도와 작은 글자 영역에서 자주 나타납니다. 확대경으로 글자가 완전하고 이어져 있는지 확인합니다.</li>
+
+<li><strong>색차/가로 줄무늬</strong>: 실 로트 차이나 장력 변동으로 발생합니다. 전체 로트를 표준 광원 아래에서 승인 샘플과 비교합니다.</li>
+
+<li><strong>풀림/보풀</strong>: 절단 방식이나 칼날 마모로 발생합니다. 라벨 가장자리가 정돈되었는지, 실이 풀려 나오지 않는지 확인합니다.</li>
+
+<li><strong>치수 편차</strong>: 분조와 접지 오차로 발생합니다. 접지 라벨은 한 장씩 길이를 측정하고 평절 라벨은 폭을 표본 검사합니다.</li>
+
+<h2>5. 공정 요구 사항을 견적 요청서에 명기하여 샘플 재작업 줄이기</h2>
+
+<p>다음 정보를 한 번에 명확히 하면 샘플은 기본적으로 한 차례에 통과합니다. 소재와 조직, 완성 치수와 접는 방식, 팬톤 번호 또는 실물 색상 샘플, 텍스트 내용과 서체, 내세탁성이나 특수 후공정 요구 여부, 사용 위치(넥 라벨, 사이드 라벨, 웨이스트 라벨).</p>
+
+<div class="callout"><strong>💡 TAGE의 직조 라벨 공장</strong>은 정경, 직조부터 재단·접지 후공정까지 전 공정을 아우르며 새틴, 평직, 자카드 모두 맞춤 제작이 가능합니다. 일반적으로 1,000장부터 주문할 수 있고 단순 사양은 더 적은 수량도 가능합니다. 샘플은 3–7일, 양산은 10–25일입니다. 디자인 파일을 보내주시면 먼저 공정과 비용 제안을 드린 후 샘플 제작에 들어갑니다.</div>
+
+<div class="related">
+<h2>관련 기사</h2>
+<ul>
+<li><a href="index.html">부자재 FAQ: 전체 기사</a></li>
+<li><a href="woven-label-types.html">직조 라벨 종류 해설: 새틴, 평직, 자카드, 이중 직조 선택</a></li>
+<li><a href="woven-label-material-guide.html">직조 라벨 소재 선택 가이드: 폴리에스터, 면, 나일론, 혼방 비교</a></li>
+<li><a href="woven-label-folding-finishing.html">직조 라벨 접지와 후처리 방식 해설: 평절·열절에서 반접기·바이어스 마감까지</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>직조 라벨 공정과 샘플 제작 기간이 궁금하신가요? 디자인 파일을 보내주시면 공정 제안과 견적을 드립니다.</p>
+<a class="cta-btn" href="../contact.html">직조 라벨 샘플 제작 및 견적 상담 →</a>
+</div>
+
+    </div>
+  </section>
+</main></main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

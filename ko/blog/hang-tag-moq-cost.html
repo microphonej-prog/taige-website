@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 최소 주문량과 비용 분석: 행택 가격을 좌우하는 요인 | TAGE</title>
+<meta name="description" content="행택 최소 주문량과 비용을 전면적으로 분석합니다. 최소 주문량이 어떻게 정해지는지, 수량과 단가의 단계 관계, 크기·종이·인쇄 색수·후가공이 행택 단가에 어떻게 영향을 주는지, 그리고 비용 절감 실무 제안과 시험 주문·재주문 전략을 담아 예산을 알차게 쓰도록 돕습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-moq-cost.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-moq-cost.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.article-body .related{margin-top:36px;padding:22px 24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}
+.article-body .related h2{margin:0 0 12px;padding-left:0;border-left:none;font-size:18px}
+.article-body .related ul{padding-left:20px;margin-bottom:0}
+.article-body .related li{font-size:14.5px;margin-bottom:6px}
+.article-body .related a{color:var(--amber);text-decoration:none}
+.article-body .related a:hover{color:#c78a1f;text-decoration:underline}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌起订量与成本解析：哪些因素影响吊牌价格",
+     "item": "https://taigetag.com/blog/hang-tag-moq-cost.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌起订量与成本解析：哪些因素影响吊牌价格",
+   "url": "https://taigetag.com/blog/hang-tag-moq-cost.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-moq-cost.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>행택 최소 주문량과 비용</span></div>
+      <h1>행택 최소 주문량과 비용 분석: 예산을 알차게 쓰기</h1>
+      <p>TAGE 패키징 · 2026년 8월 19일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>행택의 최소 주문량(MOQ)과 비용은 의류 브랜드가 발주 전 가장 궁금해하는 문제 중 하나입니다. 왜 최소 주문량이 있는지, 왜 단가가 이렇게 차이가 나는지. 사실 행택 비용은 신비롭지 않습니다. 제판, 인쇄, 후가공, 수량에 의해 결정됩니다. 본 글에서는 행택 최소 주문량과 비용의 각 단계를 분해해 설명합니다.</p>
+
+      <p>본 글에서는 구체적인 가격을 기재하지 않습니다. 행택 단가는 환율, 종이 시세, 가공 조합에 따라 좌우되며 시장과 함께 변동합니다. 당사는 판단 프레임워크를 제공합니다. 돈이 어디에 쓰이는지 알아야 합리적인 가격을 협상할 수 있습니다.</p>
+
+      <h2>1. 행택 비용은 무엇으로 결정되는가</h2>
+      <p>행택 한 장의 비용은 네 부분으로 나눌 수 있습니다. <strong>제판·금형</strong>(타발 금형, 인쇄판, 박판), <strong>자재</strong>(종이, 끈, 라미네이팅), <strong>가공</strong>(인쇄, 타발, 끈 작업) 그리고 <strong>인건비와 손실</strong>. 수량이 적을수록 앞의 두 가지를 한 장당 배분하는 금액이 커집니다. 이것이 최소 주문량이 존재하는 이유입니다.</p>
+
+      <h2>2. 최소 주문량(MOQ)은 어디에서 오는가</h2>
+      <ul>
+        <li>제판과 세팅: 타발 금형, 인쇄판, 박판은 일회성 투자로 수량이 너무 적으면 분산되지 않습니다</li>
+        <li>자재 최소 주문: 종이는 연·톤 단위, 끈은 롤 단위로 구매하여 낭비를 피합니다</li>
+        <li>기계 효율: 판 교체와 색 맞춤에 시간이 걸려 로트가 너무 작으면 수지가 맞지 않습니다</li>
+        <li>유연한 공급업체는 더 낮은 시험 주문 기준을 제시합니다. 행택 2,000~3,000장, 직조 라벨 1,000개 이상, 세탁 표시 라벨 300~500장부터</li>
+      </ul>
+
+      <h2>3. 수량과 단가의 단계 관계</h2>
+      <p>행택 견적은 일반적으로 단계별로 제시됩니다. 3,000, 5,000, 10,000, 20,000장이 각 구간입니다. 단가가 가장 크게 떨어지는 시점은 제판비가 완전히 상각된 이후이며, 일반적으로 10,000장 이상에서 안정적인 저가 구간에 진입하고 그 이상은 하락폭이 완만해집니다. 대부분의 브랜드에게 한 시즌 사용량을 한 번에 확정하는 것이 잦은 추가 주문보다 유리합니다.</p>
+
+      <h2>4. 크기·종이·가공이 비용에 미치는 영향</h2>
+      <table>
+        <tr><th>비용 요인</th><th>가격에 미치는 영향</th><th>비용 절감 제안</th></tr>
+        <tr><td>수량</td><td>제판비 분산과 기계 효율을 결정합니다</td><td>한 시즌 분량을 한 번에 확정합니다</td></tr>
+        <tr><td>크기</td><td>클수록 종이를 더 사용해 원자재 비용이 올라갑니다</td><td>정보가 충분한 범위면 되며 크게 만들 필요는 없습니다</td></tr>
+        <tr><td>종이 평량</td><td>평량이 높을수록, 특수지일수록 비쌉니다</td><td>표지는 좋은 종이, 내지는 일반 종이</td></tr>
+        <tr><td>인쇄 색수</td><td>색수가 많을수록 인쇄와 색 맞춤 비용이 올라갑니다</td><td>브랜드 컬러는 별색으로 통일하고 그라데이션은 줄입니다</td></tr>
+        <tr><td>후가공</td><td>박, 엠보싱 등은 한 장씩 가공하므로 공수가 듭니다</td><td>로고 부분에만 포인트 가공을 합니다</td></tr>
+        <tr><td>라미네이팅/UV</td><td>라미네이팅과 부분 UV는 자재와 공정을 늘립니다</td><td>일반 제품은 무광 라미네이팅으로 충분하며 광택은 프리미엄 라인용입니다</td></tr>
+      </table>
+
+      <h2>5. 행택 비용을 낮추는 다섯 가지 방법</h2>
+      <ul>
+        <li>크기와 레이아웃을 표준화하여 여러 스타일이 하나의 타발 금형을 공유합니다</li>
+        <li>발주 통합: 여러 스타일을 같은 로트로 생산하여 제판과 세팅 비용을 공유합니다</li>
+        <li>내지와 외지에 다른 종이를 사용해 질감과 가격을 모두 확보합니다</li>
+        <li>핵심 가공을 한 곳에 집중: 박을 로고에만 하면 전면 가공보다 훨씬 저렴합니다</li>
+        <li>공급업체가 파일을 사전 점검하게 하여 도련, 색상, 폰트 재작업을 피합니다</li>
+      </ul>
+
+      <h2>6. 시험 주문과 재주문: 리스크를 통제하고 비용도 절감</h2>
+      <p>새 공급업체에는 먼저 시험 주문 후 물량을 늘리는 것이 업계의 공통 인식입니다. 행택 2,000~3,000장으로 촉감, 색감, 납기를 검증하고 합격 후 대량을 발주합니다. 재주문 시에는 사양을 최대한 변경하지 않습니다. 같은 타발 금형과 같은 종이면 품질이 일정하고 제판비 일부도 절약할 수 있습니다.</p>
+
+      <div class="callout"><strong>💡 팁:</strong> 가격 비교 시 단가만 보지 마십시오. 샘플 비용, 운임, 납기, 재주문 품질을 더해야 진정한 총비용입니다. 저가 공급업체는 이 항목들이 반드시 저렴하지는 않습니다.</div>
+
+      <div class="related">
+        <h2>관련 글</h2>
+        <ul>
+          <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+          <li><a href="how-to-choose-hangtags.html">행택 선택 가이드: 의류 브랜드에 적합한 행택 고르기</a></li>
+          <li><a href="hang-tag-printing-methods.html">행택 인쇄 가공 상세: 오프셋/디지털/박/엠보싱/UV</a></li>
+          <li><a href="hang-tag-paper-types.html">행택 종이 소재 총정리: 아트지/크라프트지/코튼지/PVC</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>행택 예산을 계산해 보시겠습니까?</p>
+        <a class="cta-btn" href="../contact.html">행택 견적 요청하기 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품 소개</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

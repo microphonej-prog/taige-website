@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """把根目录中文版页面转换为 /<lang>/ 独立语言版（静态渲染，SEO 友好）。
-支持 en / fr / es。元素缺对应语言 data 属性时回退中文。
+支持 en / fr / es / ja / ko。元素缺对应语言 data 属性时回退中文。
 用法: python gen_i18n.py en index.html products.html ...
 """
 import re, html, os, sys
 
-LANGS = {"en": "en", "fr": "fr", "es": "es"}          # data 属性后缀
+LANGS = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}          # data 属性后缀
 LANG_ATTRS = {"en": ("data-en", "data-fr", "data-es"), # 取此语言 / 删这些
               "fr": ("data-fr", "data-zh", "data-es"),
-              "es": ("data-es", "data-zh", "data-fr")}
+              "es": ("data-es", "data-zh", "data-fr"),
+              "ja": ("data-ja", "data-zh", "data-en"),
+              "ko": ("data-ko", "data-zh", "data-en")}
 # 主语言之间的互链（hreflang 中除自身外的两个）
-ALT_PAIRS = {"en": [("fr", "?lang=fr"), ("es", "?lang=es")],
-             "fr": [("en", "en/"), ("es", "?lang=es")],
-             "es": [("en", "en/"), ("fr", "?lang=fr")]}
+ALT_PAIRS = {"en": [("fr", "fr/"), ("es", "es/")],
+             "fr": [("en", "en/"), ("es", "es/")],
+             "es": [("en", "en/"), ("fr", "fr/")],
+             "ja": [("en", "en/"), ("ko", "ko/")],
+             "ko": [("en", "en/"), ("ja", "ja/")]}
 
 def protect(s):
     """把双引号内的 < 和 > 换成占位符，避免属性值里的 HTML（如 <em>、<strong>）
@@ -45,7 +49,8 @@ def convert(lang, src_path, out_path, page_abs_url):
     s = protect(s)  # 保护引号内 >
 
     # ---------- 1. html lang ----------
-    html_lang = "fr" if lang == "fr" else ("es" if lang == "es" else "en")
+    HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}
+    html_lang = HTML_LANG.get(lang, "en")
     s = re.sub(r'<html lang="zh-CN">', '<html lang="%s">' % html_lang, s)
 
     # ---------- 2. title ----------
@@ -79,25 +84,24 @@ def convert(lang, src_path, out_path, page_abs_url):
     zh_href = page_abs_url.replace('/' + lang + '/', '/')  # https://taigetag.com/blog/xxx.html
     if lang != 'zh':
         zh_href = zh_href.replace('https://taigetag.com/index.html', 'https://taigetag.com/')
-    en_href = 'https://taigetag.com/en/' + rel_path.replace(lang + '/', '', 1)
-    fr_href = 'https://taigetag.com/fr/' + rel_path.replace(lang + '/', '', 1)
-    es_href = 'https://taigetag.com/es/' + rel_path.replace(lang + '/', '', 1)
-    en_href = en_href.replace('https://taigetag.com/en/index.html', 'https://taigetag.com/en/')
-    fr_href = fr_href.replace('https://taigetag.com/fr/index.html', 'https://taigetag.com/fr/')
-    es_href = es_href.replace('https://taigetag.com/es/index.html', 'https://taigetag.com/es/')
-    hreflang_lines = [
-        '<link rel="alternate" hreflang="zh-CN" href="%s">' % zh_href,
-        '<link rel="alternate" hreflang="en" href="%s">' % en_href,
-        '<link rel="alternate" hreflang="fr" href="%s">' % fr_href,
-        '<link rel="alternate" hreflang="es" href="%s">' % es_href,
-        '<link rel="alternate" hreflang="x-default" href="%s">' % zh_href,
-    ]
+    # 逐语言生成 hreflang（语言根首页去 index.html，与 canonical 规则一致）
+    HL_TAG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}
+    hl_hrefs = {}
+    for _l in LANGS:
+        _h = 'https://taigetag.com/' + _l + '/' + rel_path.replace(lang + '/', '', 1)
+        _h = _h.replace('https://taigetag.com/%s/index.html' % _l, 'https://taigetag.com/%s/' % _l)
+        hl_hrefs[_l] = _h
+    hreflang_lines = ['<link rel="alternate" hreflang="zh-CN" href="%s">' % zh_href]
+    for _l in ["en", "ja", "ko", "fr", "es"]:
+        hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
+    hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)
     hreflang = '\n'.join(hreflang_lines)
     s = s.replace('<link rel="canonical" href="%s">' % page_abs_url,
                   '<link rel="canonical" href="%s">\n%s' % (page_abs_url, hreflang), 1)
 
     # ---------- 6. 带 data-* 的普通元素：文本替换 + 删除多余 data-* ----------
-    for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'small', 'a', 'span', 'div', 'button', 'li', 'th', 'td']:
+    for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'small', 'a', 'span', 'div', 'button', 'li', 'th', 'td',
+                'label', 'option', 'figcaption', 'caption', 'dt', 'dd', 'em', 'b', 'i', 'blockquote', 'summary', 'cite']:
         def repl(m):
             attrs, content = m.group(2), m.group(3)
             de = re.search(r'%s="([^"]*)"' % take, attrs)
@@ -105,7 +109,7 @@ def convert(lang, src_path, out_path, page_abs_url):
                 return m.group(0)
             v = html.unescape(de.group(1))
             # 删除其它语言 data 属性（保留 data-lang 等）
-            attrs2 = re.sub(r'\s*data-(?:zh|en|fr|es)="[^"]*"', '', attrs)
+            attrs2 = re.sub(r'\s*data-(?:zh|en|fr|es|ja|ko)="[^"]*"', '', attrs)
             if re.search(r'<[a-zA-Z]', v):
                 content_new = v  # 含 HTML 标签（如 <em>）→ 原样
             else:
@@ -131,7 +135,7 @@ def convert(lang, src_path, out_path, page_abs_url):
     # blog/ 前缀链接保持相对（fr/index.html 里 blog/index.html -> fr/blog/index.html，正确）
 
     # ---------- 9. 语言切换按钮：本语言高亮 ----------
-    s = re.sub(r'<button class="lang-flag active" data-lang="zh"', '<button class="lang-flag" data-lang="zh"', s)
+    s = re.sub(r'<button class="lang-flag active"', '<button class="lang-flag"', s)
     s = re.sub(r'<button class="lang-flag" data-lang="%s"' % lang,
                '<button class="lang-flag active" data-lang="%s"' % lang, s)
 
@@ -144,11 +148,11 @@ def convert(lang, src_path, out_path, page_abs_url):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print('用法: python gen_i18n.py <en|fr|es> <page1.html> [page2.html ...]')
+        print('用法: python gen_i18n.py <en|fr|es|ja|ko> <page1.html> [page2.html ...]')
         sys.exit(1)
     lang = sys.argv[1]
     if lang not in LANGS:
-        print('语言必须是 en/fr/es')
+        print('语言必须是 en/fr/es/ja/ko')
         sys.exit(1)
     for p in sys.argv[2:]:
         # 保留相对子目录结构：blog/xxx.html -> en/blog/xxx.html

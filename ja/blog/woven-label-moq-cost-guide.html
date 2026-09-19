@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>織りラベルの最小ロットとコスト解説：価格は何で決まり、どう発注するとお得か | TAGE</title>
+<meta name="description" content="織りラベルの最小ロットとコストはどう計算するのか。本記事では織りラベルの価格構成（糸、織造、後加工、梱包）を分解し、最小ロットが存在する理由、仕様と工法が単価に与える影響を解説したうえで、6 つのコスト削減策と見積依頼の情報リストを提示し、織りラベルの予算を無駄なく使うお手伝いをします。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ja/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-moq-cost-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-moq-cost-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "织唛起订量与成本解析：价格由什么决定，怎样下单更省",
+     "item": "https://taigetag.com/blog/woven-label-moq-cost-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "织唛起订量与成本解析：价格由什么决定，怎样下单更省",
+   "url": "https://taigetag.com/blog/woven-label-moq-cost-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-moq-cost-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.85,6.5 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>織りラベルの最小ロットとコストガイド</span></div>
+      <h1>織りラベルの最小ロットとコスト解説：一本の糸まで予算を活かす</h1>
+      <p>泰閣包装 · 2026年9月9日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>「なぜ織りラベルの最小ロットはこんなに高いのか、単価の差がこんなに大きいのか」は、アパレルブランドがお見積りを依頼する際に最も多い質問の一つです。織りラベルは印刷ではなく、糸を一本ずつ織って作られるため、最小ロットとコストの考え方はタグや洗濯表示ラベルとはまったく異なります。本記事では価格構成と最小ロットの由来を分解し、単価に影響する 5 つの主要パラメータを挙げ、実行できるコスト削減策をご紹介します。</p>
+
+      <p>織りラベルのコストを理解するには、まず一つの前提を受け入れる必要があります。単価の大部分は材料そのものではなく、機械時間と版替えコストだということです。幅 2 センチのネックラベルと幅 5 センチのサイドラベルでは、糸の消費量はそれほど変わりませんが、織機の占有時間と後加工は数倍異なることがあります。仕様が工場の標準ラインに近いほど、単価は有利になります。</p>
+
+      <h2>1. 織りラベルの価格は何で構成されるか</h2>
+
+      <p>織りラベルの見積は通常 4 つのコストで構成されます。値引き交渉の前に、どこにお金がかかるかを確認しましょう。一つ目は糸で、地色と風合いを決める基本材料です。二つ目は織造で、機台の稼働時間で課金され、工法が複雑なほど織りが遅くなります。三つ目は後加工で、折り加工、耳処理、糊付け・型安定などが含まれます。最後に梱包や品質検査などの間接費です。</p>
+
+      <ul>
+        <li><strong>糸</strong>：ポリエステルが最も一般的で、綿、ナイロン、レーヨン、金属糸はそれぞれ単価が高くなります。色数やロット数が多いほど糸の在庫コストも増えます</li>
+        <li><strong>織造機の稼働時間</strong>：サテンと平織りは速く、ジャカード面積が大きく密度が高いほど遅くなります。機台時間は単価の最大の変動要因です</li>
+        <li><strong>後加工</strong>：折り加工、耳処理、糊付け、裁断方法が異なれば、工程もロスも変わります</li>
+        <li><strong>梱包と検査</strong>：一本ずつの検品、規定の梱包（束ね、袋詰め、ラベル貼り）はすべて見積に含まれます</li>
+      </ul>
+
+      <h2>2. 最小ロットはなぜ存在するのか</h2>
+
+      <p>織りラベルの最小ロットは工場が思いつきで決めたものではありません。ジャカード織機は版を替えるたび、糸のロットを替えるたびに、整経、綜絖通し、機械調整が必要で、この準備時間と小ロットのロスは固定的です。数量が少ないほど、一本あたりに配分される準備コストは高くなります。また織機には標準幅があり、ラベル 1 本はそのごく一部を使うだけなので、残りの幅は「並列で複数本織る」ことで埋める必要があります。本数が少なすぎると幅の利用が経済的に合わず、工場が受注を渋るのは自然なことです。</p>
+
+      <div class="callout"><strong>💡 泰閣の織りラベルは通常 1,000 本からの最小ロット</strong>で、サテンのネックラベルなどシンプルな仕様はさらに少なくできます。試し発注と量産を段階的に分ける、返単は同じ版を使うといった方法で初回のハードルを下げられます。具体的な条件は仕様と工法による試算に基づきます。</div>
+
+      <h2>3. 単価に影響する 5 つのパラメータ</h2>
+
+      <table>
+        <tr><th>パラメータ</th><th>価格に影響する理由</th><th>コスト削減の方向性</th></tr>
+        <tr><td>幅と長さ</td><td>1 本あたりの糸消費量と織機の並列数を決め、幅が広すぎる仕様は幅を無駄にします</td><td>できるだけ標準幅を採用します。たとえば 10–20 mm のネックラベル帯</td></tr>
+        <tr><td>織り方の複雑さ</td><td>サテンと平織りは速く、全面ジャカードと高密度は遅い</td><td>ジャカードはロゴに集中させ、地色はサテンまたは平織りにする</td></tr>
+        <tr><td>色数</td><td>色ごとに糸を 1 組用意するため、色替えの停止と糸の在庫にコストがかかります</td><td>1 本あたり 2–4 色以内に収めると、見た目もすっきりしコストも抑えられます</td></tr>
+        <tr><td>後加工の要件</td><td>折り加工、耳処理、糊付けなどの各工程に工数とロスが発生します</td><td>簡素化できるところは簡素化します。たとえば特殊な耳処理の代わりに標準の折り加工にする</td></tr>
+        <tr><td>発注数量</td><td>固定的な準備コストは数量で薄まり、数量が倍でも単価は必ずしも倍になりません</td><td>複数品番をまとめて発注するか、シーズン分を一度に発注します。頻繁な小口の追単は避けましょう</td></tr>
+      </table>
+
+      <h2>4. コストを抑える発注の 6 つの習慣</h2>
+
+      <ul>
+        <li><strong>仕様の標準化</strong>：幅と折り方をブランド標準として固定します。特注仕様が少ないほどコストを抑えられます</li>
+        <li><strong>ジャカード面積の集約</strong>：ロゴはジャカードで質感を際立たせ、広い地色はサテンや平織りに任せます</li>
+        <li><strong>色数を減らす</strong>：地色と文字色を同系色にし、糸のロットを共有します。色替えが少ないほど停止も減ります</li>
+        <li><strong>まとめて発注</strong>：複数品番を同一ロットで生産すると準備コストが薄まり、品番ごとの小口発注より有利です</li>
+        <li><strong>返単は既存の版で</strong>：確認済みの原本をそのまま返単し、再サンプル作成と改版のリスクを省きます</li>
+        <li><strong>初回でデータを完成させる</strong>：ベクターデータ、塗り足し、パントーン番号を揃え、やり取りによる改版の隠れコストを減らします</li>
+      </ul>
+
+      <h2>5. お見積り依頼時に工場へ伝える情報</h2>
+
+      <p>見積の精度は、ご提供いただく情報の網羅性で決まります。以下のリストを一度に揃えてお送りいただければ、通常は当日中に信頼できる織りラベルの見積をお受け取りいただけます。</p>
+
+      <ul>
+        <li><strong>完成寸法と折り方</strong>：幅 × 長さ、ネック／サイド／ウエスト用、二つ折りか全折りか</li>
+        <li><strong>素材と織り方</strong>：ポリエステル、綿、混紡のいずれか。サテン、平織り、ジャカードのいずれを主体にするか</li>
+        <li><strong>色</strong>：パントーン番号または実物色見本、地色と文字色を明記</li>
+        <li><strong>数量とリズム</strong>：試し発注の数量、量産の数量、おおよその返単頻度</li>
+        <li><strong>使用環境</strong>：高温洗いやストーンウォッシュなどの特殊工程に触れるか。糸と後加工の選択に影響します</li>
+      </ul>
+
+      <p><strong>東莞泰閣包装</strong>は織りラベルを長年手がけており、サテン、平織り、ジャカードと各種後加工をオーダーメイドで対応し、現物サンプルによるサンプル作成（3–7 日）と量産（10–25 日）が可能です。まず予算を把握したい場合は、上記のリストをお送りください。見積と併せてコスト削減のご提案もお付けします。高いものを買うのではなく、適切なものをお求めください。</p>
+
+      <div class="related">
+        <h2>関連記事</h2>
+        <ul>
+          <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+          <li><a href="woven-label-types.html">織りラベルの種類を詳説：サテン、平織り、ジャカード、二重織り耳の選び方</a></li>
+          <li><a href="woven-label-width-guide.html">織りラベルのサイズと幅のガイド：一般的な規格と選び方</a></li>
+          <li><a href="woven-vs-print-label-cost.html">織りラベルと印刷ラベルのコスト比較：単価、最小ロット、コスト削減のコツ</a></li>
+          <li><a href="hang-tag-moq-cost.html">タグの最小ロットとコスト解説：予算を最適に使うために</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>織りラベルの予算を立てたいけれど、最小ロットの落とし穴は避けたいですか？仕様リストをお送りいただければ、サンプル作成のご提案と織りラベルのお見積りを差し上げます。</p>
+        <a class="cta-btn" href="../contact.html">織りラベルのお見積り相談 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国・東莞にある衣料副資材・包装印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">見積りを依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

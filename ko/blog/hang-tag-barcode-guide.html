@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 바코드 가이드: EAN-13, UPC, ITF-14 선택과 인쇄 | TAGE</title>
+<meta name="description" content="행택 바코드는 어떻게 인쇄해야 판독되는가. 본 글에서는 의류 행택에 자주 쓰이는 EAN-13, UPC-A, ITF-14, Code 128의 적용 상황을 명확히 하고, 바코드 사이즈와 확대 계수, 콰이어트 존 여백, 색상 조합과 피인쇄 소재의 관계를 설명하며, 가변 데이터 기반 개체별 코드 관리와 샘플 스캔 검수 체크리스트도 함께 제시합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-barcode-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-barcode-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印",
+     "item": "https://taigetag.com/blog/hang-tag-barcode-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌条码指南：EAN-13、UPC 与 ITF-14 怎么选怎么印",
+   "url": "https://taigetag.com/blog/hang-tag-barcode-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-barcode-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>행택 바코드 가이드</span></div>
+      <h1>의류 행택 바코드 가이드: EAN-13, UPC, ITF-14 선택과 인쇄</h1>
+      <p>TAGE 패키징  ·  2026년 9월 10일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>행택의 바코드는 브랜드와 소매 시스템 사이의 데이터 인터페이스로, 입고, 진열, 계산, 재고 조사가 모두 이에 의존합니다. 바코드 인쇄 오류의 가장 흔한 결과는 과징금이 아니라 매장에서 스캔되지 않아 배치 전체가 반송되어 재부착하는 일입니다. 본 글에서는 의류 행택 바코드 유형의 선택, 사이즈와 콰이어트 존 규정, 색상과 소재 조합, 가변 데이터 인쇄와 검수 요점을 명확히 설명합니다.</p>
+
+<p>결론부터 말씀드립니다. 바코드는 행택의 장식이 아니라 엄격한 사이즈와 대비 요건을 가진 기계 판독 영역입니다. 디자인과 인쇄에서 로고나 문안보다 우선순위가 높아야 합니다. 보기 좋게 만들기 위해 축소하거나 색을 바꾸거나 도안 위에 겹치는 방식은 배치 전체가 계산대에서 무효가 되는 원인이 될 수 있습니다.</p>
+
+<h2>1. 행택에 바코드가 필요한 이유</h2>
+
+<li><strong>소매 계산:</strong> 백화점, 대형마트, 체인점의 POS 시스템은 바코드로 가격과 재고를 조회합니다. 스캔되지 않으면 수동 입력해야 해 계산 효율에 직접 영향을 줍니다.</li>
+
+<li><strong>창고와 물류:</strong> 창고 입고, 피킹, 포장, 출하 단계는 스캔으로 기록되므로 바코드가 흐리면 입출고 데이터가 어긋납니다.</li>
+
+<li><strong>이커머스와 옴니채널:</strong> 플랫폼 창고, 매장 발송, 반품·교환 모두 상품 바코드의 고유성과 추적 가능성을 요구합니다.</li>
+
+<li><strong>카테고리 관리:</strong> 브랜드는 바코드로 SKU 판매 동향을 집계합니다. 형식이 통일되지 않으면 데이터를 집계할 수 없습니다.</li>
+
+<h2>2. 일반적인 바코드 유형 선택</h2>
+
+<table>
+<tr><th>바코드 유형</th><th>일반 자릿수</th><th>적합한 용도</th></tr>
+<tr><td>EAN-13</td><td>13자리</td><td>EU, 아시아태평양 등 대부분 국가의 소매 단품. 전 세계에서 가장 범용적입니다</td></tr>
+<tr><td>UPC-A</td><td>12자리</td><td>미국·캐나다 소매. 북미 대형마트 입점 시 보통 필수입니다</td></tr>
+<tr><td>ITF-14</td><td>14자리</td><td>외박스, 박스 단위 운송과 창고. 골판지 상자에 자주 인쇄되며 행택의 부가 코드로도 사용됩니다</td></tr>
+<tr><td>Code 128</td><td>가변 길이</td><td>내부 코드, 배치, 관리 코드. 밀도가 높고 영숫자도 포함할 수 있습니다</td></tr>
+</table>
+
+<p>선택 원칙은 간단합니다. 소비자 대상 소매 행택은 대상 시장에 따라 EAN-13 또는 UPC-A를 사용하고, 내부 또는 박스 단위 관리용 부가 코드는 Code 128 또는 ITF-14를 사용합니다. 하나의 행택에 두 가지 코드가 함께 있는 경우가 많지만 영역을 명확히 나누어 서로 간섭하지 않게 해야 합니다.</p>
+
+<h2>3. 사이즈, 콰이어트 존과 인쇄 품질</h2>
+
+<li><strong>확대 계수:</strong> 소매 바코드는 보통 표준 사이즈의 80%~200%로 확대합니다. 80% 미만이면 판독 실패율이 뚜렷이 높아지므로 행택 공간이 부족할 때는 바코드를 줄이지 말고 먼저 레이아웃을 바꾸십시오.</li>
+
+<li><strong>콰이어트 존 여백:</strong> 바코드 좌우 양끝에는 반드시 여백(일반적으로 협폭 바 너비의 10배 이상)을 확보하고, 콰이어트 존 안에 문자, 테두리, 무늬, 행택 가장자리가 들어가서는 안 됩니다.</li>
+
+<li><strong>바 높이:</strong> 바코드 높이가 부족하면 계산대 핸디 스캐너가 일부만 읽습니다. 계산대 위치에는 충분한 바 높이를 확보하고, 납작하게 만들기보다 높이를 늘리십시오.</li>
+
+<li><strong>인쇄 정밀도:</strong> 바와 스페이스의 경계는 예리하고 번짐이나 메움 없이 잉크 농도가 균일해야 합니다. 오프셋, 디지털 인쇄, 열전사 모두 가능하며 핵심은 해상도와 압력 관리입니다.</li>
+
+<h2>4. 색상과 피인쇄 소재 조합</h2>
+
+<p>바코드 스캔은 적외선이나 적색광에 대한 명암 반사 차이에 의존하므로 색상 조합은 미관의 문제가 아니라 판독 가능성의 문제입니다. 경험 규칙은 진한 바에 연한 바탕이며 검정 바에 흰 바탕이 가장 안정적입니다. 파랑, 초록, 진한 갈색 등은 보통 사용할 수 있습니다. <strong>빨강, 주황, 금색 계열 바는 적색광 아래에서 대비가 극히 낮으므로 반드시 피하십시오</strong>. 광택 라미네이팅은 스캔 시 하이라이트를 만들어 무광이나 미처리 표면이 판독에 더 유리합니다.</p>
+
+<p>소재 측면에서 아트지와 백카드가 가장 안정적인 피인쇄면입니다. 크라프트지는 바탕색이 진하고 요철이 뚜렷해 흰 바탕을 먼저 인쇄한 뒤 바코드를 인쇄하시길 권장합니다. PVC나 방수 행택은 소재에 맞는 잉크를 선택해 바코드 긁힘이나 번짐을 방지해야 합니다. 행택이 세탁, 드라이클리닝, 장기 직사광선을 거친다면 바코드 영역의 마찰 견뢰성과 내광성을 샘플 단계에서 함께 검증하십시오.</p>
+
+<h2>5. 가변 데이터: 개체별 코드 구현 방법</h2>
+
+<p>브랜드가 고유 코드(위조 방지, 일련번호, 배치 추적)를 필요로 하면 바코드는 가변 데이터 인쇄가 됩니다. 행택마다 다른 코드를 인쇄하며 보통 디지털 인쇄나 잉크젯으로 처리합니다. 세 가지 요점이 있습니다. 첫째, 데이터 원본은 검증 가능한 표나 데이터베이스여야 하며 인쇄 전에 자릿수와 체크 디지트를 한 건씩 검증합니다. 둘째, 바코드는 같은 행택의 일련번호와 QR 정보와 일치해야 합니다. 셋째, 대량 가변 데이터 처리 시 합판 수량, 번호 건너뛰기 규칙, 불량 보충 인쇄를 사전에 공장과 확인하십시오. 그렇지 않으면 잘못된 코드가 배치 전체에 무더기로 발생합니다.</p>
+
+<h2>6. 샘플 제작과 검수 체크리스트</h2>
+
+<li>디자이너나 고객에게 <strong>벡터 바코드 파일</strong>(AI/EPS/PDF)을 요청하십시오. 스크린샷이나 비트맵을 축소해 사용하지 마십시오.</li>
+
+<li>샘플을 받은 후 <strong>실제 계산대 스캐너나 스캔 앱으로 실측</strong>해 여러 각도와 조도에서 여러 번 스캔하십시오.</li>
+
+<li>바코드 값, 행택 인쇄 문자, 시스템 백엔드가 세 곳 모두 일치하는지 확인합니다</li>
+
+<li>확대 계수, 콰이어트 존, 바 높이, 색상이 대상 시장 규정에 부합하는지 확인하고 승인 샘플과 검사 기록을 보관해 조회에 대비합니다.</li>
+
+<div class="callout"><strong>💡 TAGE 안내:</strong> 행택 바코드는 한 번 잘못 인쇄하면 배치 전체를 폐기해야 하는 세부 사항입니다. 바코드 원본 파일, 인코딩 규칙, 배치 위치를 샘플 단계에서 한 번에 확정하는 것이 양산 재작업보다 훨씬 저렴합니다. 당사는 바코드와 QR 코드, 금박, 일련번호의 동일 판 인쇄를 지원하며 샘플은 3~7일 내 제공합니다.</div>
+
+<div class="related">
+<h2>관련 글</h2>
+<ul>
+<li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+<li><a href="hang-tag-qr-code-guide.html">행택 QR 코드 활용 가이드: 이력 추적과 마케팅</a></li>
+<li><a href="hang-tag-artwork-guide.html">행택 인쇄 데이터 제작 가이드: 도련, 색상과 체크리스트</a></li>
+<li><a href="poly-bag-marking-guide.html">포장백 표시 인쇄 가이드: 법규 정보와 배치 번호</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>바코드를 인쇄할 행택이 필요하십니까? 바코드 원본 파일과 인코딩 규칙을 보내주시면 규정에 맞춰 조판하고 샘플을 제작합니다.</p>
+<a class="cta-btn" href="../contact.html">행택 바코드 견적 문의하기 →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 받기</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

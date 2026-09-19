@@ -6,9 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-zh="服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺 | TAGE" data-en="NFC Smart Hang Tags for Clothing Brands: Chips, Encoding &amp; Production | TAGE" data-fr="Étiquettes suspendues NFC pour le vêtement : puce, encodage et production | TAGE" data-es="Etiquetas colgantes NFC para ropa: chip, codificación y producción | TAGE">服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺 | TAGE</title>
+<title data-zh="服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺 | TAGE" data-en="NFC Smart Hang Tags for Clothing Brands: Chips, Encoding &amp; Production | TAGE" data-ja="衣料用 NFC スマートタグのガイド：チップ選定・書き込み・量産工程 | TAGE" data-ko="의류 NFC 스마트 행택 가이드: 칩 선정, 인코딩 및 양산 공정 | TAGE" data-fr="Étiquettes suspendues NFC pour le vêtement : puce, encodage et production | TAGE" data-es="Etiquetas colgantes NFC para ropa: chip, codificación y producción | TAGE">服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺 | TAGE</title>
 <meta name="description" data-zh="服装 NFC 智能吊牌完整指南：NTAG213/215/216 与 424 DNA 芯片怎么选、读写距离与写入方式、NFC 与二维码的分工、真伪验证与数字产品护照应用，以及覆膜、烫金与模切的避让要点和量产测试清单。来自东莞泰阁包装。"
       data-en="NFC smart hang tags for clothing brands: choosing NTAG chips, encoding URLs, NFC vs QR, authentication and digital product passports, plus production tips."
+      data-ja="衣料用 NFC スマートタグの完全ガイド：NTAG213/215/216 と 424 DNA チップの選び方、読み書き距離と書き込み方法、NFC と QR コードの役割分担、真贋検証とデジタルプロダクトパスポートの活用、さらにラミネート・箔押し・型抜きの回避ポイントと量産テストのチェックリストを解説。東莞泰閣包装より。"
+      data-ko="의류 NFC 스마트 행택 완전 가이드: NTAG213/215/216 및 424 DNA 칩 선택 방법, 읽기·쓰기 거리와 인코딩 방식, NFC와 QR 코드의 역할 분담, 진위 검증과 디지털 제품 여권 활용, 그리고 라미네이팅·박·다이커팅 회피 요점과 양산 테스트 체크리스트까지. 둥관 TAGE 패키징 제공."
       data-fr="Étiquettes suspendues NFC pour marques de vêtements : choisir la puce NTAG, encoder l'URL, NFC ou QR code, authentification, passeport numérique et conseils de production."
       data-es="Etiquetas colgantes NFC para marcas de ropa: elegir el chip NTAG, codificar la URL, NFC o código QR, autenticación, pasaporte digital y consejos de producción."
       content="服装 NFC 智能吊牌完整指南：NTAG213/215/216 与 424 DNA 芯片怎么选、读写距离与写入方式、NFC 与二维码的分工、真伪验证与数字产品护照应用，以及覆膜、烫金与模切的避让要点和量产测试清单。来自东莞泰阁包装。">
@@ -19,6 +21,8 @@
 <link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/nfc-hang-tag-guide.html">
 <link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/nfc-hang-tag-guide.html">
 <link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/nfc-hang-tag-guide.html">
 <link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/nfc-hang-tag-guide.html">
 <style>
 /* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
@@ -93,7 +97,9 @@
     "zh-CN",
     "en",
     "fr",
-    "es"
+    "es",
+    "ja",
+    "ko"
    ],
    "publisher": {
     "@id": "https://taigetag.com/#organization"
@@ -114,19 +120,19 @@
     <a class="brand" href="../index.html">
       <span class="brand-mark">T</span>
       <span class="brand-name">
-        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE">泰阁包装</strong>
-        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+        <strong data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰阁包装</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
       </span>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a>
-      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products">产品介绍</a>
-      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a>
-      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a>
-      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact">联系方式</a>
+      <a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首页</a>
+      <a href="../products.html" data-zh="产品介绍" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">产品介绍</a>
+      <a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">关于我们</a>
+      <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">辅料 FAQ</a>
+      <a href="../contact.html" data-zh="联系方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">联系方式</a>
       <div class="lang-switch" id="langSwitch">
         <button class="lang-flag active" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
-        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
         <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
         <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
       </div>
@@ -138,9 +144,9 @@
 <main>
   <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
     <div class="container">
-      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ">辅料 FAQ</a> / <span data-zh="NFC 智能吊牌指南" data-en="NFC Smart Hang Tag Guide" data-fr="Guide des étiquettes NFC" data-es="Guía de etiquetas NFC">NFC 智能吊牌指南</span></div>
-      <h1 data-zh="服装 NFC 智能吊牌指南：让手机轻触即可读懂你的品牌" data-en="NFC Smart Hang Tags: Let a Phone Tap Tell Your Brand Story" data-fr="Étiquettes suspendues NFC : un simple contact de téléphone raconte votre marque" data-es="Etiquetas colgantes NFC: el toque de un móvil cuenta tu marca">服装 NFC 智能吊牌指南：让手机轻触即可读懂你的品牌</h1>
-      <p data-zh="泰阁包装 · 更新于 2026年9月17日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 17, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 17 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 17 de septiembre de 2026">泰阁包装 · 更新于 2026年9月17日</p>
+      <div class="crumb"><a href="../index.html" data-zh="首页" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首页</a> / <a href="index.html" data-zh="辅料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">辅料 FAQ</a> / <span data-zh="NFC 智能吊牌指南" data-en="NFC Smart Hang Tag Guide" data-ja="NFC スマートタグのガイド" data-ko="NFC 스마트 행택 가이드" data-fr="Guide des étiquettes NFC" data-es="Guía de etiquetas NFC">NFC 智能吊牌指南</span></div>
+      <h1 data-zh="服装 NFC 智能吊牌指南：让手机轻触即可读懂你的品牌" data-en="NFC Smart Hang Tags: Let a Phone Tap Tell Your Brand Story" data-ja="衣料用 NFC スマートタグのガイド：スマホをかざすだけでブランドが伝わる" data-ko="의류 NFC 스마트 행택 가이드: 스마트폰을 대기만 하면 브랜드가 전달됩니다" data-fr="Étiquettes suspendues NFC : un simple contact de téléphone raconte votre marque" data-es="Etiquetas colgantes NFC: el toque de un móvil cuenta tu marca">服装 NFC 智能吊牌指南：让手机轻触即可读懂你的品牌</h1>
+      <p data-zh="泰阁包装 · 更新于 2026年9月17日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 17, 2026" data-ja="泰閣包装 · 2026年9月17日更新" data-ko="TAGE 패키징 · 2026년 9월 17일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 17 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 17 de septiembre de 2026">泰阁包装 · 更新于 2026年9月17日</p>
     </div>
   </section>
 
@@ -149,170 +155,228 @@
 
       <p data-zh="越来越多的服装品牌在吊牌里嵌入一枚 NFC 芯片：顾客用手机轻触吊牌，就能打开品牌页面、验证真伪、注册会员或观看洗护视频。吊牌由此从一张印刷品，变成一个入口。"
          data-en="More and more clothing brands embed an NFC chip inside the hang tag: a customer taps the tag with a phone and lands on the brand page, an authenticity check, a membership sign-up or a care video. The tag stops being a printed card and becomes an entry point."
+         data-ja="ますます多くの衣料ブランドが、タグの中に NFC チップを埋め込んでいます。お客様がスマホをタグに近づけるだけで、ブランドページを開いたり、真贋を確認したり、会員登録をしたり、お手入れ動画を視聴したりできます。タグは印刷物から、ブランドへの入り口へと変わりました。"
+         data-ko="점점 더 많은 의류 브랜드가 행택 안에 NFC 칩을 내장하고 있습니다. 고객이 스마트폰을 행택에 대면 브랜드 페이지 열기, 진위 확인, 회원 가입, 관리 영상 시청이 가능합니다. 행택은 인쇄물에서 하나의 진입점으로 바뀌었습니다."
          data-fr="De plus en plus de marques de vêtements intègrent une puce NFC dans leur étiquette suspendue : le client approche son téléphone et accède à la page de la marque, à une vérification d'authenticité, à une inscription ou à une vidéo d'entretien. L'étiquette cesse d'être un simple imprimé pour devenir un point d'entrée."
          data-es="Cada vez más marcas de ropa integran un chip NFC en la etiqueta colgante: el cliente acerca el móvil y accede a la página de la marca, a una verificación de autenticidad, a un registro o a un vídeo de cuidado. La etiqueta deja de ser un impreso y se convierte en un punto de entrada.">越来越多的服装品牌在吊牌里嵌入一枚 NFC 芯片：顾客用手机轻触吊牌，就能打开品牌页面、验证真伪、注册会员或观看洗护视频。吊牌由此从一张印刷品，变成一个入口。</p>
 
       <p data-zh="NFC（近场通信）工作在 13.56MHz，是手机原生支持的功能——iPhone 7 及之后的机型、绝大多数安卓手机都能直接读取，无需安装任何 App。本文从芯片选型、内容规划到覆膜与模切工艺的避让要点，讲清把 NFC 做进吊牌的完整过程。"
          data-en="NFC (near-field communication) operates at 13.56MHz and is natively supported by phones — iPhone 7 and later, plus the vast majority of Android devices can read a tag without installing any app. This guide covers chip selection, content planning and the lamination and die-cutting rules that decide whether the tag actually works."
+         data-ja="NFC（近距離無線通信）は 13.56MHz で動作し、スマホが標準で対応している機能です。iPhone 7 以降のモデルとほとんどの Android 端末が、アプリを一切インストールせずに直接読み取れます。本記事では、チップの選定とコンテンツ設計から、ラミネート・型抜き工程での回避ポイントまで、NFC をタグに組み込む全工程を解説します。"
+         data-ko="NFC(근거리 무선 통신)는 13.56MHz에서 작동하며 스마트폰이 기본 지원하는 기능입니다. iPhone 7 이후 모델과 대부분의 안드로이드 기기가 앱 설치 없이 바로 읽을 수 있습니다. 이 글에서는 칩 선정과 콘텐츠 기획부터 라미네이팅·다이커팅 공정의 회피 요점까지, NFC를 행택에 적용하는 전 과정을 정리합니다."
          data-fr="La NFC (communication en champ proche) fonctionne à 13,56 MHz et est prise en charge nativement par les téléphones — iPhone 7 et suivants, ainsi que la grande majorité des Android, lisent une puce sans installer d'application. Ce guide couvre le choix de la puce, la planification du contenu et les contraintes de pelliculage et de découpe qui déterminent si l'étiquette fonctionne vraiment."
          data-es="La NFC (comunicación de campo cercano) funciona a 13,56 MHz y es compatible de forma nativa con los móviles: iPhone 7 y posteriores, y la gran mayoría de Android leen un chip sin instalar ninguna app. Esta guía cubre la elección del chip, la planificación del contenido y las reglas de laminado y troquelado que determinan si la etiqueta funciona de verdad.">NFC（近场通信）工作在 13.56MHz，是手机原生支持的功能——iPhone 7 及之后的机型、绝大多数安卓手机都能直接读取，无需安装任何 App。本文从芯片选型、内容规划到覆膜与模切工艺的避让要点，讲清把 NFC 做进吊牌的完整过程。</p>
 
-      <h2 data-zh="1. NFC 吊牌是怎么工作的" data-en="1. How an NFC Hang Tag Works" data-fr="1. Comment fonctionne une étiquette NFC" data-es="1. Cómo funciona una etiqueta NFC">1. NFC 吊牌是怎么工作的</h2>
+      <h2 data-zh="1. NFC 吊牌是怎么工作的" data-en="1. How an NFC Hang Tag Works" data-ja="1. NFC タグの仕組み" data-ko="1. NFC 행택의 작동 원리" data-fr="1. Comment fonctionne une étiquette NFC" data-es="1. Cómo funciona una etiqueta NFC">1. NFC 吊牌是怎么工作的</h2>
       <p data-zh="NFC 吊牌的核心是一枚薄如纸片的芯片嵌体（inlay），贴合在吊牌纸卡内部，与纸卡一起过覆膜、模切、穿绳。顾客把手机靠近吊牌 1–4 厘米，系统自动弹出网页，无需打开相机或扫码。"
          data-en="At the heart of an NFC hang tag is a paper-thin chip inlay laminated inside the card, then finished together with the card — lamination, die-cutting, stringing. Hold a phone within 1–4 cm and the web page opens automatically, with no camera or scanning step."
+         data-ja="NFC タグの中核は、紙のように薄いチップインレーです。紙カードの内側に貼り合わせ、カードと一緒にラミネート・型抜き・紐通しを行います。お客様がスマホをタグから 1～4cm 以内に近づけると、カメラを開いたりスキャンしたりすることなく、自動的に Web ページが表示されます。"
+         data-ko="NFC 행택의 핵심은 종이처럼 얇은 칩 인레이입니다. 종이 카드 안쪽에 합지한 뒤 카드와 함께 라미네이팅, 다이커팅, 끈 통과 공정을 거칩니다. 고객이 스마트폰을 행택 1~4cm 이내로 대면 카메라를 열거나 스캔할 필요 없이 웹페이지가 자동으로 열립니다."
          data-fr="Le cœur d'une étiquette NFC est un inlay de puce aussi fin qu'une feuille de papier, contrecollé dans la carte, puis fini avec elle : pelliculage, découpe, pose du cordon. Approchez un téléphone à 1–4 cm et la page web s'ouvre automatiquement, sans appareil photo ni scan."
          data-es="El corazón de una etiqueta NFC es un inlay de chip tan fino como una hoja de papel, contracolado dentro de la tarjeta y acabado junto con ella: laminado, troquelado y cordón. Acerca el móvil a 1–4 cm y la página web se abre sola, sin cámara ni escaneo.">NFC 吊牌的核心是一枚薄如纸片的芯片嵌体（inlay），贴合在吊牌纸卡内部，与纸卡一起过覆膜、模切、穿绳。顾客把手机靠近吊牌 1–4 厘米，系统自动弹出网页，无需打开相机或扫码。</p>
       <p data-zh="与普通吊牌相比，差别不在印刷，而在「距离」：二维码需要顾客主动对准、对焦、等待跳转；NFC 只需靠近。对高端品牌、礼盒与门店场景而言，这个动作更顺滑，版面也更干净——芯片藏在纸里，没有黑色方块。"
          data-en="Compared with a normal tag, the difference is not the printing but the effort: a QR code asks the customer to aim, focus and wait; NFC only asks them to come close. For premium brands, gift boxes and retail floors, that gesture is smoother — and the layout stays clean, because the chip hides inside the paper with no black square."
+         data-ja="一般的なタグとの違いは、印刷ではなく「距離」にあります。QR コードはお客様が自分で向きを合わせ、ピントを合わせ、読み込みを待つ必要がありますが、NFC は近づけるだけです。ハイエンドブランド、ギフトボックス、店頭シーンではこの動作がよりスムーズで、版面もすっきりします。チップが紙の中に隠れ、黒い四角がないからです。"
+         data-ko="일반 행택과의 차이는 인쇄가 아니라 &quot;거리&quot;에 있습니다. QR 코드는 고객이 직접 맞추고 초점을 잡고 이동을 기다려야 하지만, NFC는 가까이 대기만 하면 됩니다. 프리미엄 브랜드, 선물 상자, 매장 환경에서는 이 동작이 더 매끄럽고 레이아웃도 깔끔합니다. 칩이 종이 안에 숨겨져 검은 사각형이 없기 때문입니다."
          data-fr="Par rapport à une étiquette classique, la différence n'est pas l'impression mais l'effort demandé : un QR code oblige à viser, faire la mise au point et attendre ; la NFC demande seulement de s'approcher. Pour les marques haut de gamme, les coffrets et le point de vente, le geste est plus fluide — et la mise en page reste propre, la puce étant cachée dans le papier, sans carré noir."
          data-es="Frente a una etiqueta normal, la diferencia no está en la impresión sino en el esfuerzo: un código QR obliga a apuntar, enfocar y esperar; la NFC solo pide acercarse. Para marcas premium, cajas de regalo y tienda física, el gesto es más fluido y la maquetación queda más limpia, porque el chip se esconde en el papel sin ningún cuadrado negro.">与普通吊牌相比，差别不在印刷，而在「距离」：二维码需要顾客主动对准、对焦、等待跳转；NFC 只需靠近。对高端品牌、礼盒与门店场景而言，这个动作更顺滑，版面也更干净——芯片藏在纸里，没有黑色方块。</p>
 
-      <h2 data-zh="2. 芯片选型：NTAG213、215、216 与 424 DNA" data-en="2. Chip Selection: NTAG213, 215, 216 and 424 DNA" data-fr="2. Choix de la puce : NTAG213, 215, 216 et 424 DNA" data-es="2. Elección del chip: NTAG213, 215, 216 y 424 DNA">2. 芯片选型：NTAG213、215、216 与 424 DNA</h2>
+      <h2 data-zh="2. 芯片选型：NTAG213、215、216 与 424 DNA" data-en="2. Chip Selection: NTAG213, 215, 216 and 424 DNA" data-ja="2. チップの選定：NTAG213・215・216 と 424 DNA" data-ko="2. 칩 선정: NTAG213, 215, 216 및 424 DNA" data-fr="2. Choix de la puce : NTAG213, 215, 216 et 424 DNA" data-es="2. Elección del chip: NTAG213, 215, 216 y 424 DNA">2. 芯片选型：NTAG213、215、216 与 424 DNA</h2>
       <p data-zh="吊牌里最常用的是 NXP 的 NTAG 系列。选型只看两件事：要写进去多少内容，以及是否需要防克隆。"
          data-en="The NTAG family from NXP dominates hang tag projects. Selection comes down to two questions: how much data you need to store, and whether you need anti-cloning protection."
+         data-ja="タグで最もよく使われるのは NXP の NTAG シリーズです。選定のポイントは二つだけ、書き込む情報量と、クローン防止が必要かどうかです。"
+         data-ko="행택에 가장 많이 쓰이는 것은 NXP의 NTAG 시리즈입니다. 선택 기준은 두 가지, 얼마나 많은 내용을 기록할지와 복제 방지가 필요한지 여부입니다."
          data-fr="La famille NTAG de NXP domine les projets d'étiquettes suspendues. Le choix dépend de deux questions : quelle quantité de données stocker, et faut-il une protection anti-clonage."
          data-es="La familia NTAG de NXP domina los proyectos de etiquetas colgantes. La elección depende de dos preguntas: cuántos datos hay que guardar y si se necesita protección anticlonación.">吊牌里最常用的是 NXP 的 NTAG 系列。选型只看两件事：要写进去多少内容，以及是否需要防克隆。</p>
       <table>
-        <tr><th data-zh="芯片型号" data-en="Chip" data-fr="Puce" data-es="Chip">芯片型号</th><th data-zh="可用存储" data-en="Usable memory" data-fr="Mémoire utile" data-es="Memoria útil">可用存储</th><th data-zh="典型用途" data-en="Typical use" data-fr="Usage typique" data-es="Uso típico">典型用途</th><th data-zh="说明" data-en="Notes" data-fr="Remarques" data-es="Notas">说明</th></tr>
-        <tr><td data-zh="NTAG213" data-en="NTAG213" data-fr="NTAG213" data-es="NTAG213">NTAG213</td><td data-zh="约 144 字节" data-en="About 144 bytes" data-fr="Environ 144 octets" data-es="Unos 144 bytes">约 144 字节</td><td data-zh="单一品牌短链、会员注册" data-en="One short brand link, membership sign-up" data-fr="Un lien court de marque, inscription" data-es="Un enlace corto de marca, registro">单一品牌短链、会员注册</td><td data-zh="成本最低，一个短链接足够" data-en="Lowest cost; one short URL fits easily" data-fr="Coût le plus bas ; une URL courte suffit" data-es="Coste más bajo; una URL corta basta">成本最低，一个短链接足够</td></tr>
-        <tr><td data-zh="NTAG215" data-en="NTAG215" data-fr="NTAG215" data-es="NTAG215">NTAG215</td><td data-zh="约 504 字节" data-en="About 504 bytes" data-fr="Environ 504 octets" data-es="Unos 504 bytes">约 504 字节</td><td data-zh="品牌吊牌主力型号" data-en="The workhorse for brand hang tags" data-fr="Le standard des étiquettes de marque" data-es="El estándar en etiquetas de marca">品牌吊牌主力型号</td><td data-zh="可写多语言入口与短序列号" data-en="Holds multi-language entry points and a short serial" data-fr="Contient des entrées multilingues et un numéro de série" data-es="Admite entradas multilingües y un número de serie">可写多语言入口与短序列号</td></tr>
-        <tr><td data-zh="NTAG216" data-en="NTAG216" data-fr="NTAG216" data-es="NTAG216">NTAG216</td><td data-zh="约 888 字节" data-en="About 888 bytes" data-fr="Environ 888 octets" data-es="Unos 888 bytes">约 888 字节</td><td data-zh="多链接、图文信息、序列号" data-en="Several links, rich text, serial numbers" data-fr="Plusieurs liens, textes enrichis, numéros de série" data-es="Varios enlaces, textos ampliados, números de serie">多链接、图文信息、序列号</td><td data-zh="信息量大或需写入自定义数据时选它" data-en="Choose it when data volume is higher or custom fields are needed" data-fr="À retenir lorsque le volume de données ou les champs personnalisés augmentent" data-es="Elegirlo cuando el volumen de datos o los campos personalizados son mayores">信息量大或需写入自定义数据时选它</td></tr>
-        <tr><td data-zh="NTAG 424 DNA" data-en="NTAG 424 DNA" data-fr="NTAG 424 DNA" data-es="NTAG 424 DNA">NTAG 424 DNA</td><td data-zh="可加密，支持动态验证" data-en="Encrypted, dynamic authentication" data-fr="Chiffré, authentification dynamique" data-es="Cifrado, autenticación dinámica">可加密，支持动态验证</td><td data-zh="高价值单品的防克隆验证" data-en="Anti-cloning checks for high-value items" data-fr="Anti-clonage pour articles de grande valeur" data-es="Anticlonación para artículos de alto valor">高价值单品的防克隆验证</td><td data-zh="需配套验证系统，建议先小批测试" data-en="Requires a validation system; pilot it first" data-fr="Nécessite un système de validation ; tester d'abord" data-es="Requiere un sistema de validación; probar primero">需配套验证系统，建议先小批测试</td></tr>
+        <tr><th data-zh="芯片型号" data-en="Chip" data-ja="チップ型番" data-ko="칩 모델" data-fr="Puce" data-es="Chip">芯片型号</th><th data-zh="可用存储" data-en="Usable memory" data-ja="使用可能メモリ" data-ko="사용 가능 메모리" data-fr="Mémoire utile" data-es="Memoria útil">可用存储</th><th data-zh="典型用途" data-en="Typical use" data-ja="主な用途" data-ko="주요 용도" data-fr="Usage typique" data-es="Uso típico">典型用途</th><th data-zh="说明" data-en="Notes" data-ja="備考" data-ko="비고" data-fr="Remarques" data-es="Notas">说明</th></tr>
+        <tr><td data-zh="NTAG213" data-en="NTAG213" data-ja="NTAG213" data-ko="NTAG213" data-fr="NTAG213" data-es="NTAG213">NTAG213</td><td data-zh="约 144 字节" data-en="About 144 bytes" data-ja="約 144 バイト" data-ko="약 144바이트" data-fr="Environ 144 octets" data-es="Unos 144 bytes">约 144 字节</td><td data-zh="单一品牌短链、会员注册" data-en="One short brand link, membership sign-up" data-ja="単一のブランド短縮リンク、会員登録" data-ko="단일 브랜드 단축 링크, 회원 가입" data-fr="Un lien court de marque, inscription" data-es="Un enlace corto de marca, registro">单一品牌短链、会员注册</td><td data-zh="成本最低，一个短链接足够" data-en="Lowest cost; one short URL fits easily" data-ja="コスト最小、短いリンク 1 本で十分" data-ko="비용 최저, 짧은 링크 하나면 충분" data-fr="Coût le plus bas ; une URL courte suffit" data-es="Coste más bajo; una URL corta basta">成本最低，一个短链接足够</td></tr>
+        <tr><td data-zh="NTAG215" data-en="NTAG215" data-ja="NTAG215" data-ko="NTAG215" data-fr="NTAG215" data-es="NTAG215">NTAG215</td><td data-zh="约 504 字节" data-en="About 504 bytes" data-ja="約 504 バイト" data-ko="약 504바이트" data-fr="Environ 504 octets" data-es="Unos 504 bytes">约 504 字节</td><td data-zh="品牌吊牌主力型号" data-en="The workhorse for brand hang tags" data-ja="ブランドタグの主力型番" data-ko="브랜드 행택의 주력 모델" data-fr="Le standard des étiquettes de marque" data-es="El estándar en etiquetas de marca">品牌吊牌主力型号</td><td data-zh="可写多语言入口与短序列号" data-en="Holds multi-language entry points and a short serial" data-ja="多言語の入り口と短いシリアル番号を書き込み可能" data-ko="다국어 진입점과 짧은 시리얼 번호 기록 가능" data-fr="Contient des entrées multilingues et un numéro de série" data-es="Admite entradas multilingües y un número de serie">可写多语言入口与短序列号</td></tr>
+        <tr><td data-zh="NTAG216" data-en="NTAG216" data-ja="NTAG216" data-ko="NTAG216" data-fr="NTAG216" data-es="NTAG216">NTAG216</td><td data-zh="约 888 字节" data-en="About 888 bytes" data-ja="約 888 バイト" data-ko="약 888바이트" data-fr="Environ 888 octets" data-es="Unos 888 bytes">约 888 字节</td><td data-zh="多链接、图文信息、序列号" data-en="Several links, rich text, serial numbers" data-ja="複数リンク、図文情報、シリアル番号" data-ko="다중 링크, 이미지·텍스트 정보, 시리얼 번호" data-fr="Plusieurs liens, textes enrichis, numéros de série" data-es="Varios enlaces, textos ampliados, números de serie">多链接、图文信息、序列号</td><td data-zh="信息量大或需写入自定义数据时选它" data-en="Choose it when data volume is higher or custom fields are needed" data-ja="情報量が多い場合やカスタムデータを書き込む場合に選択" data-ko="정보량이 많거나 사용자 정의 데이터를 기록할 때 선택" data-fr="À retenir lorsque le volume de données ou les champs personnalisés augmentent" data-es="Elegirlo cuando el volumen de datos o los campos personalizados son mayores">信息量大或需写入自定义数据时选它</td></tr>
+        <tr><td data-zh="NTAG 424 DNA" data-en="NTAG 424 DNA" data-ja="NTAG 424 DNA" data-ko="NTAG 424 DNA" data-fr="NTAG 424 DNA" data-es="NTAG 424 DNA">NTAG 424 DNA</td><td data-zh="可加密，支持动态验证" data-en="Encrypted, dynamic authentication" data-ja="暗号化可能、動的認証に対応" data-ko="암호화 가능, 동적 인증 지원" data-fr="Chiffré, authentification dynamique" data-es="Cifrado, autenticación dinámica">可加密，支持动态验证</td><td data-zh="高价值单品的防克隆验证" data-en="Anti-cloning checks for high-value items" data-ja="高額商品のクローン防止検証" data-ko="고가 단품의 복제 방지 검증" data-fr="Anti-clonage pour articles de grande valeur" data-es="Anticlonación para artículos de alto valor">高价值单品的防克隆验证</td><td data-zh="需配套验证系统，建议先小批测试" data-en="Requires a validation system; pilot it first" data-ja="検証システムが必要、まず小ロットでテストすることを推奨" data-ko="검증 시스템이 필요하므로 우선 소량 테스트 권장" data-fr="Nécessite un système de validation ; tester d'abord" data-es="Requiere un sistema de validación; probar primero">需配套验证系统，建议先小批测试</td></tr>
       </table>
       <p data-zh="如果只是想让顾客轻触打开品牌故事页，NTAG213 就够了；把 NTAG215 当作吊牌的默认选择最稳妥；只有当防伪是核心诉求、且品牌已有一套验证后台时，才值得上 NTAG 424 DNA。"
          data-en="If the goal is simply a tap-to-open brand story, NTAG213 is enough. NTAG215 is the safest default for a hang tag. Only move to NTAG 424 DNA when authentication is the core objective and the brand already runs a validation backend."
+         data-ja="お客様にタップしてブランドストーリーページを開いてほしいだけなら、NTAG213 で十分です。タグの標準的な選択としては NTAG215 が最も安心です。真贋検証が中心の目的で、ブランド側に検証バックエンドがある場合にのみ、NTAG 424 DNA を選ぶ価値があります。"
+         data-ko="고객이 대면 브랜드 스토리 페이지가 열리는 것만 원한다면 NTAG213으로 충분합니다. 행택의 기본 선택으로는 NTAG215가 가장 안전합니다. 진품 인증이 핵심 목적이고 브랜드에 검증 백엔드가 이미 있을 때만 NTAG 424 DNA를 선택할 가치가 있습니다."
          data-fr="Si l'objectif se limite à ouvrir l'histoire de la marque d'un contact, la NTAG213 suffit. La NTAG215 est le choix par défaut le plus sûr. Passez à la NTAG 424 DNA seulement si l'authentification est l'enjeu central et qu'un back-office de validation existe déjà."
          data-es="Si el objetivo es solo abrir la historia de la marca con un toque, el NTAG213 basta. El NTAG215 es el valor por defecto más seguro. Solo conviene pasar al NTAG 424 DNA cuando la autenticación es el objetivo central y la marca ya dispone de un sistema de validación.">如果只是想让顾客轻触打开品牌故事页，NTAG213 就够了；把 NTAG215 当作吊牌的默认选择最稳妥；只有当防伪是核心诉求、且品牌已有一套验证后台时，才值得上 NTAG 424 DNA。</p>
 
-      <h2 data-zh="3. 吊牌里可以放什么内容" data-en="3. What You Can Put on the Tag" data-fr="3. Ce que l'on peut mettre dans l'étiquette" data-es="3. Qué se puede incluir en la etiqueta">3. 吊牌里可以放什么内容</h2>
+      <h2 data-zh="3. 吊牌里可以放什么内容" data-en="3. What You Can Put on the Tag" data-ja="3. タグに載せられるコンテンツ" data-ko="3. 행택에 담을 수 있는 콘텐츠" data-fr="3. Ce que l'on peut mettre dans l'étiquette" data-es="3. Qué se puede incluir en la etiqueta">3. 吊牌里可以放什么内容</h2>
       <ul>
         <li data-zh="<strong>真伪验证</strong>——写入带唯一序列号的验证链接，顾客轻触即可确认真假，也便于品牌追踪假货流通"
             data-en="<strong>Authenticity checks</strong> — a validation link with a unique serial lets customers confirm the item and helps the brand track counterfeits"
+            data-ja="<strong>真贋検証</strong>——固有のシリアル番号付き検証リンクを書き込み、お客様がタップするだけで真偽を確認でき、ブランド側も偽造品の流通を追跡しやすくなります"
+            data-ko="<strong>진위 검증</strong>——고유 시리얼 번호가 포함된 검증 링크를 기록하면 고객이 대기만 하면 진위를 확인할 수 있고, 브랜드가 위조품 유통을 추적하기도 쉬워집니다"
             data-fr="<strong>Vérification d'authenticité</strong> — un lien de validation avec numéro de série unique permet au client de confirmer l'article et à la marque de suivre les contrefaçons"
             data-es="<strong>Verificación de autenticidad</strong> — un enlace de validación con número de serie único permite al cliente confirmar el artículo y a la marca seguir las falsificaciones"><strong>真伪验证</strong>——写入带唯一序列号的验证链接，顾客轻触即可确认真假，也便于品牌追踪假货流通</li>
         <li data-zh="<strong>品牌内容</strong>——面料故事、产地与工艺、搭配建议、洗护视频，把吊牌上的几行字扩展成一段体验"
             data-en="<strong>Brand content</strong> — fabric stories, origin and craft, styling advice, care videos: a few printed lines become an experience"
+            data-ja="<strong>ブランドコンテンツ</strong>——生地のストーリー、産地と製法、コーディネート提案、お手入れ動画など、タグの数行の文字を一つの体験に広げます"
+            data-ko="<strong>브랜드 콘텐츠</strong>——원단 스토리, 산지와 공정, 코디 제안, 관리 영상 등 행택의 몇 줄 문구를 하나의 경험으로 확장합니다"
             data-fr="<strong>Contenu de marque</strong> — histoire du tissu, origine et savoir-faire, conseils de style, vidéos d'entretien : quelques lignes imprimées deviennent une expérience"
             data-es="<strong>Contenido de marca</strong> — historia del tejido, origen y oficio, consejos de estilo, vídeos de cuidado: unas líneas impresas se convierten en una experiencia"><strong>品牌内容</strong>——面料故事、产地与工艺、搭配建议、洗护视频，把吊牌上的几行字扩展成一段体验</li>
         <li data-zh="<strong>会员与复购</strong>——跳转注册页或优惠券页，把线下吊牌变成私域入口，扫码率通常高于包装上的二维码"
             data-en="<strong>Membership and repeat purchase</strong> — link to a sign-up or coupon page and turn the tag into an owned-channel entry point, usually with higher engagement than a printed QR code"
+            data-ja="<strong>会員登録とリピート</strong>——登録ページやクーポンページへ誘導し、店頭のタグを自社チャネルの入り口に変えます。読み取り率は包装の QR コードより一般的に高くなります"
+            data-ko="<strong>회원 가입과 재구매</strong>——가입 페이지나 쿠폰 페이지로 연결하여 오프라인 행택을 자사 채널 진입점으로 만듭니다. 스캔율은 포장의 QR 코드보다 일반적으로 높습니다"
             data-fr="<strong>Fidélisation</strong> — un lien vers une inscription ou un coupon transforme l'étiquette en point d'entrée propriétaire, avec un taux d'activation généralement supérieur à un QR code imprimé"
             data-es="<strong>Fidelización</strong> — un enlace a un registro o un cupón convierte la etiqueta en punto de entrada propio, normalmente con más activación que un código QR impreso"><strong>会员与复购</strong>——跳转注册页或优惠券页，把线下吊牌变成私域入口，扫码率通常高于包装上的二维码</li>
         <li data-zh="<strong>数字产品护照（DPP）</strong>——欧盟正在推进纺织品的数字产品护照，芯片可承载成分、产地、可回收信息，是长期最值得预留的能力"
             data-en="<strong>Digital Product Passport (DPP)</strong> — the EU is moving ahead with digital product passports for textiles; a chip can carry composition, origin and recyclability data, which makes it the capability worth reserving now"
+            data-ja="<strong>デジタルプロダクトパスポート（DPP）</strong>——EU は繊維製品のデジタルプロダクトパスポートを推進しており、チップには組成・産地・リサイクル情報を載せられます。長期的に最も備えておく価値のある機能です"
+            data-ko="<strong>디지털 제품 여권(DPP)</strong>——EU는 섬유 제품의 디지털 제품 여권을 추진하고 있으며, 칩에는 조성·산지·재활용 정보를 담을 수 있어 장기적으로 가장 대비할 가치가 있는 기능입니다"
             data-fr="<strong>Passeport numérique de produit (DPP)</strong> — l'Union européenne avance sur le passeport numérique des textiles ; une puce peut porter composition, origine et recyclabilité, une capacité à réserver dès aujourd'hui"
             data-es="<strong>Pasaporte Digital de Producto (DPP)</strong> — la UE avanza hacia el pasaporte digital de los textiles; un chip puede llevar composición, origen y reciclabilidad, la capacidad que conviene reservar desde ya"><strong>数字产品护照（DPP）</strong>——欧盟正在推进纺织品的数字产品护照，芯片可承载成分、产地、可回收信息，是长期最值得预留的能力</li>
         <li data-zh="<strong>转售与维修</strong>——吊牌随衣物转手，产品履历与保养记录可以持续跟随，服务循环时尚模式"
             data-en="<strong>Resale and repair</strong> — the tag travels with the garment, so product history and care records follow it, which supports circular fashion models"
+            data-ja="<strong>再販と修理</strong>——タグは衣類と一緒に受け渡されるため、製品履歴とメンテナンス記録が継続して付いてゆき、循環型ファッションに対応します"
+            data-ko="<strong>재판매와 수선</strong>——행택은 의류와 함께 이동하므로 제품 이력과 관리 기록이 계속 따라가 순환 패션 모델을 지원합니다"
             data-fr="<strong>Revente et réparation</strong> — l'étiquette suit le vêtement, l'historique du produit et les conseils d'entretien l'accompagnent, au service des modèles circulaires"
             data-es="<strong>Reventa y reparación</strong> — la etiqueta viaja con la prenda, de modo que el historial del producto y del cuidado la acompaña, apoyando modelos circulares"><strong>转售与维修</strong>——吊牌随衣物转手，产品履历与保养记录可以持续跟随，服务循环时尚模式</li>
       </ul>
 
-      <h2 data-zh="4. NFC 与二维码：不是替代，而是分工" data-en="4. NFC vs QR Code: Division of Labour, Not Replacement" data-fr="4. NFC et QR code : une répartition des rôles, pas un remplacement" data-es="4. NFC y código QR: reparto de funciones, no sustitución">4. NFC 与二维码：不是替代，而是分工</h2>
+      <h2 data-zh="4. NFC 与二维码：不是替代，而是分工" data-en="4. NFC vs QR Code: Division of Labour, Not Replacement" data-ja="4. NFC と QR コード：置き換えではなく役割分担" data-ko="4. NFC와 QR 코드: 대체가 아니라 역할 분담" data-fr="4. NFC et QR code : une répartition des rôles, pas un remplacement" data-es="4. NFC y código QR: reparto de funciones, no sustitución">4. NFC 与二维码：不是替代，而是分工</h2>
       <table>
-        <tr><th data-zh="维度" data-en="Dimension" data-fr="Critère" data-es="Criterio">维度</th><th data-zh="NFC" data-en="NFC" data-fr="NFC" data-es="NFC">NFC</th><th data-zh="二维码" data-en="QR code" data-fr="QR code" data-es="Código QR">二维码</th></tr>
-        <tr><td data-zh="读取方式" data-en="How it is read" data-fr="Lecture" data-es="Lectura">读取方式</td><td data-zh="手机靠近 1–4 厘米自动弹出" data-en="Tap within 1–4 cm, page opens automatically" data-fr="Approche à 1–4 cm, la page s'ouvre seule" data-es="Acercar a 1–4 cm, la página se abre sola">手机靠近 1–4 厘米自动弹出</td><td data-zh="打开相机对准扫描" data-en="Open the camera and scan" data-fr="Ouvrir l'appareil photo et scanner" data-es="Abrir la cámara y escanear">打开相机对准扫描</td></tr>
-        <tr><td data-zh="机型要求" data-en="Device support" data-fr="Compatibilité" data-es="Compatibilidad">机型要求</td><td data-zh="需支持 NFC（iPhone 7 以上、主流安卓）" data-en="Requires NFC (iPhone 7+, most Android)" data-fr="NFC requis (iPhone 7+, Android récents)" data-es="Requiere NFC (iPhone 7+, Android actuales)">需支持 NFC（iPhone 7 以上、主流安卓）</td><td data-zh="几乎所有智能手机" data-en="Almost every smartphone" data-fr="Quasiment tous les smartphones" data-es="Casi todos los smartphones">几乎所有智能手机</td></tr>
-        <tr><td data-zh="干扰因素" data-en="Interference" data-fr="Interférences" data-es="Interferencias">干扰因素</td><td data-zh="金属、水、过厚覆膜削弱信号" data-en="Metal, water and heavy lamination weaken the signal" data-fr="Métal, eau et pelliculage épais affaiblissent le signal" data-es="Metal, agua y laminados gruesos debilitan la señal">金属、水、过厚覆膜削弱信号</td><td data-zh="污损、褶皱、反光影响识别" data-en="Dirt, creases and glare hurt recognition" data-fr="Salissures, plis et reflets nuisent à la lecture" data-es="Suciedad, pliegues y brillos afectan la lectura">污损、褶皱、反光影响识别</td></tr>
-        <tr><td data-zh="抗复制性" data-en="Copy resistance" data-fr="Résistance à la copie" data-es="Resistencia a la copia">抗复制性</td><td data-zh="芯片 UID 唯一，可加密防克隆" data-en="Unique chip UID, encryptable against cloning" data-fr="UID unique, chiffrable contre le clonage" data-es="UID único, cifrable contra la clonación">芯片 UID 唯一，可加密防克隆</td><td data-zh="可被拍照复制，防伪能力弱" data-en="Can be photographed and copied; weak anti-counterfeit value" data-fr="Photographiable et copiable ; faible valeur anti-contrefaçon" data-es="Se puede fotografiar y copiar; poca capacidad antifalsificación">可被拍照复制，防伪能力弱</td></tr>
-        <tr><td data-zh="版面影响" data-en="Layout impact" data-fr="Impact sur la maquette" data-es="Impacto en la maqueta">版面影响</td><td data-zh="芯片埋入纸内，版面干净" data-en="Chip hidden inside the card, layout stays clean" data-fr="Puce noyée dans la carte, maquette propre" data-es="Chip oculto en la tarjeta, maqueta limpia">芯片埋入纸内，版面干净</td><td data-zh="需占用一块固定面积" data-en="Occupies a fixed block of space" data-fr="Occupe une zone fixe" data-es="Ocupa una zona fija">需占用一块固定面积</td></tr>
+        <tr><th data-zh="维度" data-en="Dimension" data-ja="項目" data-ko="항목" data-fr="Critère" data-es="Criterio">维度</th><th data-zh="NFC" data-en="NFC" data-ja="NFC" data-ko="NFC" data-fr="NFC" data-es="NFC">NFC</th><th data-zh="二维码" data-en="QR code" data-ja="QR コード" data-ko="QR 코드" data-fr="QR code" data-es="Código QR">二维码</th></tr>
+        <tr><td data-zh="读取方式" data-en="How it is read" data-ja="読み取り方" data-ko="읽는 방식" data-fr="Lecture" data-es="Lectura">读取方式</td><td data-zh="手机靠近 1–4 厘米自动弹出" data-en="Tap within 1–4 cm, page opens automatically" data-ja="スマホを 1～4cm 近づけると自動表示" data-ko="스마트폰을 1~4cm 대면 자동 열림" data-fr="Approche à 1–4 cm, la page s'ouvre seule" data-es="Acercar a 1–4 cm, la página se abre sola">手机靠近 1–4 厘米自动弹出</td><td data-zh="打开相机对准扫描" data-en="Open the camera and scan" data-ja="カメラを開いてかざしてスキャン" data-ko="카메라를 열어 맞추고 스캔" data-fr="Ouvrir l'appareil photo et scanner" data-es="Abrir la cámara y escanear">打开相机对准扫描</td></tr>
+        <tr><td data-zh="机型要求" data-en="Device support" data-ja="対応機種" data-ko="기기 요건" data-fr="Compatibilité" data-es="Compatibilidad">机型要求</td><td data-zh="需支持 NFC（iPhone 7 以上、主流安卓）" data-en="Requires NFC (iPhone 7+, most Android)" data-ja="NFC 対応が必要（iPhone 7 以降、主要 Android）" data-ko="NFC 지원 필요(iPhone 7 이상, 주요 안드로이드)" data-fr="NFC requis (iPhone 7+, Android récents)" data-es="Requiere NFC (iPhone 7+, Android actuales)">需支持 NFC（iPhone 7 以上、主流安卓）</td><td data-zh="几乎所有智能手机" data-en="Almost every smartphone" data-ja="ほぼすべてのスマートフォン" data-ko="거의 모든 스마트폰" data-fr="Quasiment tous les smartphones" data-es="Casi todos los smartphones">几乎所有智能手机</td></tr>
+        <tr><td data-zh="干扰因素" data-en="Interference" data-ja="妨害要因" data-ko="간섭 요인" data-fr="Interférences" data-es="Interferencias">干扰因素</td><td data-zh="金属、水、过厚覆膜削弱信号" data-en="Metal, water and heavy lamination weaken the signal" data-ja="金属・水・厚すぎるラミネートは信号を弱めます" data-ko="금속, 물, 과도한 라미네이팅은 신호를 약화시킵니다" data-fr="Métal, eau et pelliculage épais affaiblissent le signal" data-es="Metal, agua y laminados gruesos debilitan la señal">金属、水、过厚覆膜削弱信号</td><td data-zh="污损、褶皱、反光影响识别" data-en="Dirt, creases and glare hurt recognition" data-ja="汚れ・しわ・反射が認識に影響します" data-ko="오염, 주름, 반사가 인식에 영향을 줍니다" data-fr="Salissures, plis et reflets nuisent à la lecture" data-es="Suciedad, pliegues y brillos afectan la lectura">污损、褶皱、反光影响识别</td></tr>
+        <tr><td data-zh="抗复制性" data-en="Copy resistance" data-ja="複製耐性" data-ko="복제 저항성" data-fr="Résistance à la copie" data-es="Resistencia a la copia">抗复制性</td><td data-zh="芯片 UID 唯一，可加密防克隆" data-en="Unique chip UID, encryptable against cloning" data-ja="チップ UID が固有で、暗号化によりクローンを防止できます" data-ko="칩 UID가 고유하며 암호화로 복제를 방지할 수 있습니다" data-fr="UID unique, chiffrable contre le clonage" data-es="UID único, cifrable contra la clonación">芯片 UID 唯一，可加密防克隆</td><td data-zh="可被拍照复制，防伪能力弱" data-en="Can be photographed and copied; weak anti-counterfeit value" data-ja="撮影して複製でき、偽造防止能力は弱い" data-ko="촬영으로 복제 가능하며 위조 방지 능력이 약합니다" data-fr="Photographiable et copiable ; faible valeur anti-contrefaçon" data-es="Se puede fotografiar y copiar; poca capacidad antifalsificación">可被拍照复制，防伪能力弱</td></tr>
+        <tr><td data-zh="版面影响" data-en="Layout impact" data-ja="版面への影響" data-ko="레이아웃 영향" data-fr="Impact sur la maquette" data-es="Impacto en la maqueta">版面影响</td><td data-zh="芯片埋入纸内，版面干净" data-en="Chip hidden inside the card, layout stays clean" data-ja="チップは紙の中に埋め込まれ、版面はすっきり" data-ko="칩이 종이 안에 내장되어 레이아웃이 깔끔합니다" data-fr="Puce noyée dans la carte, maquette propre" data-es="Chip oculto en la tarjeta, maqueta limpia">芯片埋入纸内，版面干净</td><td data-zh="需占用一块固定面积" data-en="Occupies a fixed block of space" data-ja="一定の面積を占有します" data-ko="일정한 면적을 차지합니다" data-fr="Occupe une zone fixe" data-es="Ocupa una zona fija">需占用一块固定面积</td></tr>
       </table>
       <div class="callout" data-zh="<strong>💡 建议：</strong>高价值单品用 NFC，大众线用二维码，两者同放一张吊牌也很常见——NFC 负责最顺畅的触达，二维码作为所有机型的兜底方案。"
            data-en="<strong>💡 Recommendation:</strong> use NFC for high-value items and QR for volume lines. Putting both on one tag is common practice — NFC for the smoothest tap, QR as the universal fallback."
+           data-ja="<strong>💡 提案：</strong>高額商品には NFC、量販ラインには QR コードを使い、両方を 1 枚のタグに載せるのも一般的です——NFC が最もスムーズな接点を担い、QR コードがすべての機種への保険となります。"
+           data-ko="<strong>💡 제안:</strong> 고가 단품에는 NFC, 대중 라인에는 QR 코드를 사용하며 두 가지를 한 장의 행택에 함께 넣는 것도 일반적입니다——NFC가 가장 매끄러운 접점을 담당하고, QR 코드가 모든 기기를 위한 대비책이 됩니다."
            data-fr="<strong>💡 Recommandation :</strong> la NFC pour les articles de valeur, le QR code pour les gammes de volume. Réunir les deux sur une même étiquette est courant : la NFC pour le contact le plus fluide, le QR comme solution de repli universelle."
            data-es="<strong>💡 Recomendación:</strong> NFC para artículos de valor y QR para las líneas de volumen. Combinar ambos en la misma etiqueta es habitual: NFC para el toque más fluido y QR como alternativa universal."><strong>💡 建议：</strong>高价值单品用 NFC，大众线用二维码，两者同放一张吊牌也很常见——NFC 负责最顺畅的触达，二维码作为所有机型的兜底方案。</div>
 
-      <h2 data-zh="5. 工艺避让：决定成败的六个细节" data-en="5. Production Rules: Six Details That Decide Whether It Works" data-fr="5. Contraintes de fabrication : six détails décisifs" data-es="5. Reglas de producción: seis detalles decisivos">5. 工艺避让：决定成败的六个细节</h2>
+      <h2 data-zh="5. 工艺避让：决定成败的六个细节" data-en="5. Production Rules: Six Details That Decide Whether It Works" data-ja="5. 工程上の回避ポイント：成否を分ける六つの細部" data-ko="5. 공정 회피 포인트: 성패를 가르는 여섯 가지 세부 사항" data-fr="5. Contraintes de fabrication : six détails décisifs" data-es="5. Reglas de producción: seis detalles decisivos">5. 工艺避让：决定成败的六个细节</h2>
       <p data-zh="NFC 吊牌的问题很少出在芯片本身，绝大多数出现在工艺配合上。以下是我们在量产中最常遇到的六个点。"
          data-en="Problems with NFC hang tags rarely come from the chip itself; almost all of them come from how the card is made. These are the six issues we meet most often in production."
+         data-ja="NFC タグのトラブルはチップ自体にあることはまれで、ほとんどは製造工程の組み合わせに起因します。以下は当社が量産で最もよく遭遇する六つのポイントです。"
+         data-ko="NFC 행택의 문제는 칩 자체에서 발생하는 경우가 드물고, 대부분 제조 공정의 조합에서 비롯됩니다. 아래는 당사가 양산에서 가장 자주 만나는 여섯 가지 포인트입니다."
          data-fr="Les problèmes des étiquettes NFC viennent rarement de la puce : ils naissent presque toujours de la fabrication de la carte. Voici les six points que nous rencontrons le plus souvent en production."
          data-es="Los problemas de las etiquetas NFC rara vez vienen del chip; casi siempre surgen de la fabricación de la tarjeta. Estos son los seis puntos que vemos con más frecuencia en producción.">NFC 吊牌的问题很少出在芯片本身，绝大多数出现在工艺配合上。以下是我们在量产中最常遇到的六个点。</p>
       <ul>
         <li data-zh="<strong>天线区留白</strong>——芯片天线通常占据吊牌中上部一片区域，该区域避免烫金、压凸、局部 UV 与金属油墨，金属会屏蔽信号"
             data-en="<strong>Keep the antenna area clear</strong> — the antenna usually occupies a band across the upper middle of the tag; avoid foil, embossing, spot UV and metallic inks there, because metal shields the signal"
+            data-ja="<strong>アンテナ領域の余白</strong>——チップのアンテナは通常タグの中央上部を占めるため、その領域では箔押し・エンボス・部分 UV・金属インクを避けます。金属は信号を遮蔽します"
+            data-ko="<strong>안테나 영역 여백</strong>——칩 안테나는 일반적으로 행택 중상단 영역을 차지하므로 해당 영역에는 박, 엠보싱, 부분 UV, 금속 잉크를 피해야 합니다. 금속은 신호를 차단합니다"
             data-fr="<strong>Dégager la zone d'antenne</strong> — l'antenne occupe souvent une bande au milieu supérieur de l'étiquette ; évitez y dorure, gaufrage, UV sélectif et encres métalliques, le métal faisant écran"
             data-es="<strong>Dejar libre la zona de antena</strong> — la antena suele ocupar una franja en la parte media superior; evita allí estampado, relieve, UV selectivo y tintas metálicas, porque el metal apantalla la señal"><strong>天线区留白</strong>——芯片天线通常占据吊牌中上部一片区域，该区域避免烫金、压凸、局部 UV 与金属油墨，金属会屏蔽信号</li>
         <li data-zh="<strong>贴合层次</strong>——把嵌体贴在面纸与覆膜之间，减少中间纸层；灰板裱贴的对裱结构更容易削弱磁场"
             data-en="<strong>Inlay position</strong> — place the inlay between the top sheet and the lamination to cut down the paper layers between chip and phone; heavy mounted board structures weaken the field"
+            data-ja="<strong>貼合のレイヤー</strong>——インレーは表紙とラミネートの間に貼り、中間の紙層を減らします。厚紙を貼り合わせた台紙構造は磁界を弱めやすくなります"
+            data-ko="<strong>합지 구조</strong>——인레이는 표지와 라미네이트 사이에 붙여 중간 종이층을 줄입니다. 두꺼운 판지를 합지한 구조는 자기장을 약화시키기 쉽습니다"
             data-fr="<strong>Position de l'inlay</strong> — placez l'inlay entre la couche supérieure et le pelliculage pour réduire les épaisseurs de papier ; les structures contrecollées sur carton épais affaiblissent le champ"
             data-es="<strong>Posición del inlay</strong> — coloca el inlay entre la capa superior y el laminado para reducir las capas de papel; las estructuras contracoladas sobre cartón grueso debilitan el campo"><strong>贴合层次</strong>——把嵌体贴在面纸与覆膜之间，减少中间纸层；灰板裱贴的对裱结构更容易削弱磁场</li>
         <li data-zh="<strong>模切与冲孔避让</strong>——冲孔位、模切边与芯片、天线边缘保持 3 毫米以上距离，避免切断天线回路"
             data-en="<strong>Die-cutting and punching clearance</strong> — keep holes and cut lines at least 3 mm away from the chip and antenna edges so the antenna loop is never severed"
+            data-ja="<strong>型抜き・穴あけの回避</strong>——穴あけ位置や型抜き線はチップとアンテナの縁から 3mm 以上離し、アンテナ回路を切断しないようにします"
+            data-ko="<strong>다이커팅·타공 회피</strong>——타공 위치와 다이커팅 선은 칩과 안테나 가장자리에서 3mm 이상 떨어뜨려 안테나 회로가 끊기지 않게 합니다"
             data-fr="<strong>Marge de découpe et de perçage</strong> — laissez au moins 3 mm entre les trous et traits de coupe et les bords de puce et d'antenne, pour ne jamais rompre la boucle"
             data-es="<strong>Margen de troquelado y perforado</strong> — deja al menos 3 mm entre los agujeros y las líneas de corte y los bordes del chip y la antena, para no cortar el circuito"><strong>模切与冲孔避让</strong>——冲孔位、模切边与芯片、天线边缘保持 3 毫米以上距离，避免切断天线回路</li>
         <li data-zh="<strong>金属配件位置</strong>——金属鸡眼、金属挂扣靠近天线会明显缩短读取距离，尽量移到吊牌另一端或改用塑料线圈"
             data-en="<strong>Metal hardware placement</strong> — a metal eyelet or clip near the antenna shortens read range noticeably; move it to the far end of the tag or switch to a plastic loop"
+            data-ja="<strong>金属パーツの位置</strong>——金属のハトメや金具がアンテナに近いと読み取り距離が明らかに短くなります。タグの反対側へ移すか、樹脂製のループに変更してください"
+            data-ko="<strong>금속 부자재 위치</strong>——금속 아일렛이나 클립이 안테나에 가까우면 읽기 거리가 뚜렷하게 줄어듭니다. 행택 반대쪽 끝으로 옮기거나 플라스틱 루프로 바꾸세요"
             data-fr="<strong>Placement des fixations métal</strong> — un œillet ou un clip métallique proche de l'antenne réduit nettement la portée ; éloignez-le ou passez à une boucle plastique"
             data-es="<strong>Posición de los herrajes metálicos</strong> — un ojal o clip metálico cerca de la antena reduce claramente el alcance; llévalo al otro extremo o usa un lazo de plástico"><strong>金属配件位置</strong>——金属鸡眼、金属挂扣靠近天线会明显缩短读取距离，尽量移到吊牌另一端或改用塑料线圈</li>
         <li data-zh="<strong>潮气与洗护</strong>——纸基 NFC 吊牌不适合进洗衣机，它与洗水标分工不同；泳装、户外类如需水洗耐久标签，应改用可水洗的柔性标签方案"
             data-en="<strong>Moisture and laundering</strong> — paper-based NFC tags are not meant for the washing machine; that is the care label's job. Swimwear and outdoor lines that need a wash-durable tag should use a flexible washable label format instead"
+            data-ja="<strong>湿気と洗濯</strong>——紙ベースの NFC タグは洗濯機には向きません。洗濯表示ラベルとは役割が異なります。水洗い耐久が必要な水着やアウトドアには、洗濯可能な柔軟ラベル仕様に変更してください"
+            data-ko="<strong>습기와 세탁</strong>——종이 기반 NFC 행택은 세탁기에 적합하지 않으며 세탁 표시 라벨과 역할이 다릅니다. 수영복이나 아웃도어처럼 세탁 내구성이 필요한 경우에는 세탁 가능한 유연 라벨 방식으로 변경해야 합니다"
             data-fr="<strong>Humidité et lavage</strong> — une étiquette NFC papier n'est pas faite pour la machine à laver, c'est le rôle de l'étiquette d'entretien. Pour le maillot de bain ou l'outdoor, préférez un format souple lavable"
             data-es="<strong>Humedad y lavado</strong> — una etiqueta NFC de papel no está pensada para la lavadora; para eso está la etiqueta de cuidado. En baño y outdoor conviene un formato flexible lavable"><strong>潮气与洗护</strong>——纸基 NFC 吊牌不适合进洗衣机，它与洗水标分工不同；泳装、户外类如需水洗耐久标签，应改用可水洗的柔性标签方案</li>
         <li data-zh="<strong>批量读取测试</strong>——打样阶段用多款手机（iPhone 与安卓各两台以上）实测读取距离与成功率，大货按批抽检并留样"
             data-en="<strong>Batch read testing</strong> — during sampling, measure read range and success rate with several phones (two or more iPhones and Androids) and keep references from every bulk batch"
+            data-ja="<strong>ロット読み取りテスト</strong>——サンプル段階で複数のスマホ（iPhone と Android 各 2 台以上）で読み取り距離と成功率を実測し、量産ではロットごとに抜き取り検査とサンプル保管を行います"
+            data-ko="<strong>로트 읽기 테스트</strong>——샘플 단계에서 여러 스마트폰(iPhone과 안드로이드 각 2대 이상)으로 읽기 거리와 성공률을 실측하고, 양산에서는 로트별로 샘플링 검사와 샘플 보관을 진행합니다"
             data-fr="<strong>Tests de lecture par lot</strong> — lors de l'échantillonnage, mesurez la portée et le taux de réussite sur plusieurs téléphones (au moins deux iPhone et deux Android) et conservez des références de chaque lot"
             data-es="<strong>Pruebas de lectura por lote</strong> — en el muestreo, mide el alcance y la tasa de éxito con varios móviles (al menos dos iPhone y dos Android) y guarda referencias de cada lote"><strong>批量读取测试</strong>——打样阶段用多款手机（iPhone 与安卓各两台以上）实测读取距离与成功率，大货按批抽检并留样</li>
       </ul>
 
-      <h2 data-zh="6. 从选型到量产：六步落地流程" data-en="6. From Selection to Bulk: A Six-Step Process" data-fr="6. Du choix à la production : un processus en six étapes" data-es="6. De la elección a la producción: un proceso en seis pasos">6. 从选型到量产：六步落地流程</h2>
+      <h2 data-zh="6. 从选型到量产：六步落地流程" data-en="6. From Selection to Bulk: A Six-Step Process" data-ja="6. 選定から量産まで：六ステップの実行フロー" data-ko="6. 선정부터 양산까지: 6단계 실행 프로세스" data-fr="6. Du choix à la production : un processus en six étapes" data-es="6. De la elección a la producción: un proceso en seis pasos">6. 从选型到量产：六步落地流程</h2>
       <ol>
         <li data-zh="明确目标：验证真伪、品牌内容、会员注册，还是为数字产品护照预留能力"
             data-en="Define the objective: authentication, brand content, membership sign-up, or reserving a path to the Digital Product Passport"
+            data-ja="目的の明確化：真贋検証、ブランドコンテンツ、会員登録、あるいはデジタルプロダクトパスポートへの備え"
+            data-ko="목표 설정: 진위 검증, 브랜드 콘텐츠, 회원 가입 또는 디지털 제품 여권 대비"
             data-fr="Définir l'objectif : authentification, contenu de marque, inscription, ou ouverture vers le passeport numérique"
             data-es="Definir el objetivo: autenticación, contenido de marca, registro o preparar el pasaporte digital">明确目标：验证真伪、品牌内容、会员注册，还是为数字产品护照预留能力</li>
         <li data-zh="确定芯片与数据格式：单链接用 NTAG213，多语言入口用 NTAG215/216，防克隆考虑 NTAG 424 DNA"
             data-en="Pick the chip and data format: NTAG213 for a single link, NTAG215/216 for multi-language entries, NTAG 424 DNA when anti-cloning matters"
+            data-ja="チップとデータ形式の決定：単一リンクは NTAG213、多言語の入り口は NTAG215/216、クローン防止なら NTAG 424 DNA"
+            data-ko="칩과 데이터 형식 결정: 단일 링크는 NTAG213, 다국어 진입점은 NTAG215/216, 복제 방지는 NTAG 424 DNA"
             data-fr="Choisir la puce et le format : NTAG213 pour un lien unique, NTAG215/216 pour des entrées multilingues, NTAG 424 DNA si l'anti-clonage prime"
             data-es="Elegir chip y formato: NTAG213 para un enlace único, NTAG215/216 para entradas multilingües, NTAG 424 DNA si pesa la anticlonación">确定芯片与数据格式：单链接用 NTAG213，多语言入口用 NTAG215/216，防克隆考虑 NTAG 424 DNA</li>
         <li data-zh="写下链接策略：用可更换的中转短链，后续换落地页时不必重做吊牌"
             data-en="Plan the link strategy: use a short redirect you control, so changing the landing page later does not require reprinting tags"
+            data-ja="リンク戦略の策定：差し替え可能な中継短縮リンクを使い、後でランディングページを変えてもタグを作り直さずに済むようにします"
+            data-ko="링크 전략 수립: 교체 가능한 중계 단축 링크를 사용해 나중에 랜딩 페이지를 바꿔도 행택을 다시 만들 필요가 없도록 합니다"
             data-fr="Prévoir la stratégie de lien : un lien court redirigé que vous contrôlez évite de refaire les étiquettes si la page change"
             data-es="Planificar la estrategia de enlace: usa un enlace corto propio con redirección para no rehacer etiquetas si cambia la página">写下链接策略：用可更换的中转短链，后续换落地页时不必重做吊牌</li>
         <li data-zh="确认使用场景：吊牌挂在成衣上、装进礼盒、还是贴在包装外部，读取距离要求各不相同"
             data-en="Confirm the use case: on a garment, inside a gift box, or on the outer packaging — each has a different read-range requirement"
+            data-ja="使用シーンの確認：タグを衣類に付けるのか、ギフトボックスに入れるのか、包装の外側に貼るのかで、読み取り距離の要件が異なります"
+            data-ko="사용 환경 확인: 행택을 완성 의류에 다는지, 선물 상자에 넣는지, 포장 외부에 붙이는지에 따라 읽기 거리 요건이 다릅니다"
             data-fr="Confirmer l'usage : sur le vêtement, dans un coffret ou sur l'emballage extérieur ; les exigences de portée diffèrent"
             data-es="Confirmar el uso: en la prenda, en una caja de regalo o en el embalaje exterior; cada caso exige un alcance distinto">确认使用场景：吊牌挂在成衣上、装进礼盒、还是贴在包装外部，读取距离要求各不相同</li>
         <li data-zh="做一次完整打样：贴合、覆膜、烫金、模切、穿绳一次做全，先小批量验证成品状态下的读取表现"
             data-en="Sample the whole process once: inlay, lamination, foil, die-cutting and stringing in one pass, then test how the finished tag reads"
+            data-ja="完全なサンプルを一度作成：貼合・ラミネート・箔押し・型抜き・紐通しを一通り行い、まず小ロットで完成品状態の読み取りを検証します"
+            data-ko="전체 공정 샘플 제작: 합지, 라미네이팅, 박, 다이커팅, 끈 통과를 한 번에 진행하고 우선 소량으로 완제품 상태의 읽기 성능을 검증합니다"
             data-fr="Échantillonner tout le process : inlay, pelliculage, dorure, découpe et cordon en une seule fois, puis tester la lecture du produit fini"
             data-es="Muestrear el proceso completo: inlay, laminado, estampado, troquelado y cordón de una vez, y probar la lectura del producto acabado">做一次完整打样：贴合、覆膜、烫金、模切、穿绳一次做全，先小批量验证成品状态下的读取表现</li>
         <li data-zh="量产与绑定：把嵌体批次号与吊牌订单号对应记录，出现问题时可快速定位是哪一批"
             data-en="Produce and link records: tie the inlay batch number to the tag order number, so any issue can be traced back to a batch"
+            data-ja="量産と紐付け：インレーのロット番号とタグの注文番号を対応させて記録し、問題発生時にどのロットかを素早く特定できるようにします"
+            data-ko="양산과 연계: 인레이 로트 번호와 행택 주문 번호를 대응시켜 기록하면 문제 발생 시 어느 로트인지 빠르게 파악할 수 있습니다"
             data-fr="Produire et tracer : associez le numéro de lot d'inlay au numéro de commande, pour remonter rapidement à un lot en cas de problème"
             data-es="Producir y vincular registros: asocia el número de lote del inlay al número de pedido para localizar cualquier lote con rapidez">量产与绑定：把嵌体批次号与吊牌订单号对应记录，出现问题时可快速定位是哪一批</li>
       </ol>
       <div class="callout" data-zh="<strong>💡 提示：</strong>NFC 吊牌真正的成本不只在芯片，还在写入管理与验证页面。如果验证系统还没准备好，不妨先用 NTAG213 写一条品牌短链跑通链路，等流程顺了再升级芯片。"
            data-en="<strong>💡 Tip:</strong> the real cost of an NFC tag is not only the chip but the encoding workflow and the landing pages. If the validation system is not ready, start with NTAG213 pointing at a short brand link, prove the journey, then upgrade the chip."
+           data-ja="<strong>💡 ヒント：</strong>NFC タグの本当のコストはチップだけでなく、書き込み管理と検証ページにもあります。検証システムがまだ整っていない場合は、まず NTAG213 にブランドの短縮リンクを書き込んで導線を通し、運用が安定してからチップをアップグレードするとよいでしょう。"
+           data-ko="<strong>💡 팁:</strong> NFC 행택의 실제 비용은 칩뿐 아니라 인코딩 관리와 검증 페이지에도 있습니다. 검증 시스템이 아직 준비되지 않았다면 우선 NTAG213에 브랜드 단축 링크를 기록해 동선을 검증하고, 운영이 안정된 뒤 칩을 업그레이드하는 것이 좋습니다."
            data-fr="<strong>💡 Conseil :</strong> le coût réel d'une étiquette NFC ne tient pas qu'à la puce, mais aussi à l'encodage et aux pages d'arrivée. Si le système de validation n'est pas prêt, commencez par une NTAG213 vers un lien court, validez le parcours, puis changez de puce."
            data-es="<strong>💡 Consejo:</strong> el coste real de una etiqueta NFC no está solo en el chip, sino en la gestión de la codificación y las páginas de destino. Si el sistema de validación aún no está listo, empieza con un NTAG213 apuntando a un enlace corto, valida el recorrido y luego sube de chip."><strong>💡 提示：</strong>NFC 吊牌真正的成本不只在芯片，还在写入管理与验证页面。如果验证系统还没准备好，不妨先用 NTAG213 写一条品牌短链跑通链路，等流程顺了再升级芯片。</div>
 
-      <h2 data-zh="7. 常见误区" data-en="7. Common Mistakes" data-fr="7. Erreurs fréquentes" data-es="7. Errores frecuentes">7. 常见误区</h2>
+      <h2 data-zh="7. 常见误区" data-en="7. Common Mistakes" data-ja="7. よくある誤解" data-ko="7. 흔한 오해" data-fr="7. Erreurs fréquentes" data-es="7. Errores frecuentes">7. 常见误区</h2>
       <ul>
         <li data-zh="把长链接直接写进芯片——不同手机打开速度差异明显，务必用短链并做跳转"
             data-en="Writing a long URL straight into the chip — open times vary widely across phones, so always use a short link with a redirect"
+            data-ja="長い URL をそのままチップに書き込む——機種によって表示速度の差が大きく、必ず短縮リンクとリダイレクトを使います"
+            data-ko="긴 URL을 그대로 칩에 기록——기기별로 열리는 속도 차이가 크므로 반드시 단축 링크와 리다이렉트를 사용해야 합니다"
             data-fr="Écrire une URL longue dans la puce — les temps d'ouverture varient fortement selon le téléphone ; utilisez toujours un lien court redirigé"
             data-es="Escribir una URL larga en el chip — los tiempos de apertura varían mucho entre móviles; usa siempre un enlace corto con redirección">把长链接直接写进芯片——不同手机打开速度差异明显，务必用短链并做跳转</li>
         <li data-zh="芯片贴在金属标、金属铭牌或烫金大面积区域下方，成品读取距离骤减"
             data-en="Placing the chip under a metal label, a metal plate or a large foil block — read range collapses in the finished tag"
+            data-ja="チップを金属ラベルや金属プレート、広い箔押しエリアの下に貼ると、完成品の読み取り距離が急激に短くなります"
+            data-ko="칩을 금속 라벨, 금속 명판 또는 넓은 박 영역 아래에 붙이면 완제품의 읽기 거리가 급격히 줄어듭니다"
             data-fr="Placer la puce sous une étiquette métallique, une plaque métal ou une grande surface dorée : la portée s'effondre sur le produit fini"
             data-es="Colocar el chip bajo una etiqueta metálica, una placa de metal o una gran zona estampada: el alcance se desploma en el producto acabado">芯片贴在金属标、金属铭牌或烫金大面积区域下方，成品读取距离骤减</li>
         <li data-zh="所有单品共用一个链接——等于放弃了防伪与序列号追踪能力，只留下一个营销入口"
             data-en="Using one identical link for every unit — you lose authentication and serial tracking and keep only a marketing redirect"
+            data-ja="すべての商品で同じリンクを共用する——偽造防止とシリアル番号追跡の能力を放棄し、マーケティングの入り口だけが残ります"
+            data-ko="모든 단품이 하나의 링크를 공유——진품 인증과 시리얼 번호 추적 능력을 포기하고 마케팅 진입점만 남게 됩니다"
             data-fr="Utiliser un lien identique pour toutes les pièces — vous perdez l'authentification et le suivi par numéro de série au profit d'une simple redirection marketing"
             data-es="Usar un mismo enlace para todas las unidades — pierdes la autenticación y el seguimiento por número de serie y solo queda una redirección de marketing">所有单品共用一个链接——等于放弃了防伪与序列号追踪能力，只留下一个营销入口</li>
       </ul>
 
-      <h2 data-zh="相关文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
+      <h2 data-zh="相关文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相关文章</h2>
       <ul>
-        <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
-        <li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌二维码应用指南：溯源与营销" data-en="Hang Tag QR Code Guide: Traceability and Marketing" data-fr="Guide du QR code sur étiquette : traçabilité et marketing" data-es="Guía del código QR en etiquetas: trazabilidad y marketing">吊牌二维码应用指南：溯源与营销</a></li>
-        <li><a href="hang-tag-anti-counterfeiting.html" data-zh="吊牌防伪工艺指南" data-en="Hang Tag Anti-Counterfeiting Guide" data-fr="Guide anti-contrefaçon des étiquettes" data-es="Guía antifalsificación de etiquetas">吊牌防伪工艺指南</a></li>
-        <li><a href="garment-trims-sampling-process.html" data-zh="辅料打样流程详解" data-en="Garment Trims Sampling Process" data-fr="Processus d'échantillonnage des accessoires" data-es="Proceso de muestreo de accesorios">辅料打样流程详解</a></li>
+        <li><a href="index.html" data-zh="辅料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">辅料 FAQ：全部文章</a></li>
+        <li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌二维码应用指南：溯源与营销" data-en="Hang Tag QR Code Guide: Traceability and Marketing" data-ja="タグ QR コード活用ガイド：トレーサビリティとマーケティング" data-ko="행택 QR 코드 활용 가이드: 이력 추적과 마케팅" data-fr="Guide du QR code sur étiquette : traçabilité et marketing" data-es="Guía del código QR en etiquetas: trazabilidad y marketing">吊牌二维码应用指南：溯源与营销</a></li>
+        <li><a href="hang-tag-anti-counterfeiting.html" data-zh="吊牌防伪工艺指南" data-en="Hang Tag Anti-Counterfeiting Guide" data-ja="タグ偽造防止加工のガイド" data-ko="행택 위조 방지 공정 가이드" data-fr="Guide anti-contrefaçon des étiquettes" data-es="Guía antifalsificación de etiquetas">吊牌防伪工艺指南</a></li>
+        <li><a href="garment-trims-sampling-process.html" data-zh="辅料打样流程详解" data-en="Garment Trims Sampling Process" data-ja="副資材サンプル作成プロセスの解説" data-ko="의류 부자재 샘플 제작 프로세스 안내" data-fr="Processus d'échantillonnage des accessoires" data-es="Proceso de muestreo de accesorios">辅料打样流程详解</a></li>
       </ul>
 
       <div class="cta-box">
-        <p data-zh="想把 NFC 芯片做进您的吊牌？告诉我们芯片型号与使用场景，我们先做一张样卡。" data-en="Want to build NFC into your hang tags? Tell us the chip and the use case and we will produce a sample card first." data-fr="Vous souhaitez intégrer la NFC à vos étiquettes ? Indiquez-nous la puce et l'usage, nous réalisons d'abord une carte échantillon." data-es="¿Quieres integrar NFC en tus etiquetas? Cuéntanos el chip y el uso y hacemos primero una tarjeta de muestra.">想把 NFC 芯片做进您的吊牌？告诉我们芯片型号与使用场景，我们先做一张样卡。</p>
-        <a class="cta-btn" href="../contact.html" data-zh="获取 NFC 吊牌报价 →" data-en="Request an NFC hang tag quote →" data-fr="Demander un devis étiquette NFC →" data-es="Solicitar presupuesto de etiquetas NFC →">获取 NFC 吊牌报价 →</a>
+        <p data-zh="想把 NFC 芯片做进您的吊牌？告诉我们芯片型号与使用场景，我们先做一张样卡。" data-en="Want to build NFC into your hang tags? Tell us the chip and the use case and we will produce a sample card first." data-ja="NFC チップをタグに組み込みませんか。チップ型番と使用シーンをお知らせいただければ、まずサンプルカードをお作りします。" data-ko="NFC 칩을 행택에 적용하고 싶으신가요? 칩 모델과 사용 환경을 알려주시면 먼저 샘플 카드를 제작해 드립니다." data-fr="Vous souhaitez intégrer la NFC à vos étiquettes ? Indiquez-nous la puce et l'usage, nous réalisons d'abord une carte échantillon." data-es="¿Quieres integrar NFC en tus etiquetas? Cuéntanos el chip y el uso y hacemos primero una tarjeta de muestra.">想把 NFC 芯片做进您的吊牌？告诉我们芯片型号与使用场景，我们先做一张样卡。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="获取 NFC 吊牌报价 →" data-en="Request an NFC hang tag quote →" data-ja="NFC タグのお見積りを依頼 →" data-ko="NFC 행택 견적 요청 →" data-fr="Demander un devis étiquette NFC →" data-es="Solicitar presupuesto de etiquetas NFC →">获取 NFC 吊牌报价 →</a>
       </div>
 
     </div>
@@ -323,39 +387,39 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging">泰阁包装</h4>
-        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
+        <h4 data-zh="泰阁包装" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰阁包装</h4>
+        <p data-zh="专业服装辅料与包装印刷制造商，位于中国东莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">专业服装辅料与包装印刷制造商，位于中国东莞。</p>
       </div>
       <div>
-        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products">产品</h4>
+        <h4 data-zh="产品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">产品</h4>
         <ul>
-          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags">服装吊牌</a></li>
-          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels">织唛 / 主唛</a></li>
-          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels">洗水标</a></li>
-          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags">包装袋</a></li>
-          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags">环保纸袋</a></li>
-          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures">宣传手册</a></li>
+          <li><a href="../products.html#hangtags" data-zh="服装吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服装吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="织唛 / 主唛" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">织唛 / 主唛</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水标" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水标</a></li>
+          <li><a href="../products.html#bags" data-zh="包装袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包装袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="环保纸袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">环保纸袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣传手册" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣传手册</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links">快捷链接</h4>
+        <h4 data-zh="快捷链接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷链接</h4>
         <ul>
-          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us">关于我们</a></li>
-          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</a></li>
-          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote">获取报价</a></li>
+          <li><a href="../about.html" data-zh="关于我们" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">关于我们</a></li>
+          <li><a href="../contact.html" data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">联系我们</a></li>
+          <li><a href="../contact.html" data-zh="获取报价" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">获取报价</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact">联系我们</h4>
+        <h4 data-zh="联系我们" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">联系我们</h4>
         <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
         <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
         <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
         <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
-        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China">广东省东莞市虎门镇</span></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="广东省东莞市虎门镇" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">广东省东莞市虎门镇</span></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd.">© 2026 东莞泰阁包装制品有限公司</span>
+      <span data-zh="© 2026 东莞泰阁包装制品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 东莞泰阁包装制品有限公司</span>
     </div>
   </div>
 </footer>
@@ -372,7 +436,7 @@
   </div>
 </div>
 
-<script src="../js/main.js?v=51"></script>
-<script src="../js/assist.js?v=46"></script>
+<script src="../js/main.js?v=62"></script>
+<script src="../js/assist.js?v=47"></script>
 </body>
 </html>

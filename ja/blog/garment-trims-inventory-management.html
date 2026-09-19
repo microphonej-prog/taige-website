@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣料副資材の在庫・補充管理ガイド：安全在庫・発注点・滞留在庫のコントロール | TAGE</title>
+<meta name="description" content="衣料副資材の在庫管理を誤ると、欠品によるライン停止と滞留在庫の山が同時に発生します。本記事では副資材リスト（BOM）を出発点に、安全在庫と発注点の計算方法、ロットと色差の管理、フレームオーダーとローリング予測によるサプライヤーとの連携、そして棚卸しと端数の扱いの要点を解説します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ja/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-inventory-management.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-inventory-management.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+.related{margin-top:36px}
+.related ul{padding-left:22px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+     "item": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装辅料库存与补货管理指南：安全库存、补货点与呆滞料控制",
+   "url": "https://taigetag.com/blog/garment-trims-inventory-management.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-inventory-management.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>副資材の在庫と補充</span></div>
+      <h1>衣料副資材の在庫・補充管理ガイド：安全在庫・発注点・滞留在庫のコントロール</h1>
+      <p>泰閣包装  ·  2026年9月11日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+<p>衣料副資材の在庫管理は、ブランドと工場が最も「削る場所を間違えやすい」領域です。副資材は単価が低く資金負担が小さいため後回しにされがちですが、織りラベル1枚、タグ1枚が欠けるだけで、成衣のロット全体が出荷できなくなります。本記事では副資材リスト（BOM）から始め、安全在庫と発注点の計算方法、ロットと色差の管理、フレームオーダーとローリング予測によるサプライヤーとの連携、さらに滞留在庫と端数の処理方法を解説します。</p>
+
+<p>まず原則を明確にします。副資材在庫の目的は「多ければ安全」ではなく、「正しい時期に、正しいロットで、正しい数量を保有する」ことです。欠品によるライン停止の損失は、通常、副資材そのものの価値をはるかに上回ります。一方で過剰な備蓄は、型替えや季節替えの際に滞留在庫と色差のリスクに変わります。</p>
+
+<h2>1. なぜ副資材在庫は「小さな部材、大きなリスク」なのか</h2>
+
+<p>1着の衣料はさまざまな副資材で構成されています。タグ、織りラベル、洗濯表示ラベル、包装袋、さらにタグピン、ステッカー、パンフレットカードが付くこともあります。どれか一つでも欠品すれば、その衣料は仕上げ・出荷できません。副資材の特徴は「単価が低く、数量が多く、専用性が高い」ことです。とくにブランドロゴ、指定色番、専用形状の副資材は、急に代替することがほぼできません。</p>
+
+<ul>
+<li><strong>欠品コストが高い：</strong>ライン停止、納期変更、航空便での補充は、その損失が副資材の貨物価値の数十倍に達することがあります。</li>
+<li><strong>調達リードタイムは短くない：</strong>タグや織りラベルは通常サンプル作成と生産が必要で、納期は週単位です。「明日必要」には対応できません。</li>
+<li><strong>ロット差に敏感：</strong>ロットが異なると用紙、糸、インキに色差が生じることがあり、混ロット使用は同一モデルの均一性を損ないます。</li>
+<li><strong>資金負担は低いが陳腐化リスクは高い：</strong>副資材は金額が小さく軽視されがちですが、季節替えの後には型遅れで全数廃棄となることがよくあります。</li>
+</ul>
+
+<h2>2. 副資材リスト（BOM）から在庫の基準を作る</h2>
+
+<p>BOM がなければ、管理できる在庫もありません。各スタイルには副資材リストを用意し、品名、仕様、色、1着あたりの使用量、サプライヤー、最小ロット、標準納期を明記します。リストができて初めて、在庫管理は「勘による補充」から「データによる補充」へ変わります。</p>
+
+<ul>
+<li><strong>汎用副資材と専用副資材を分ける：</strong>包装袋や汎用の織りラベルは共通色番で備蓄できますが、専用ロゴ、異形型抜き、特殊箔押しの副資材はスタイルごとに備蓄する必要があります。</li>
+<li><strong>1着あたりの使用量とロス率を記録する：</strong>例えば1着につきメインラベル1枚、洗濯表示ラベル1枚、タグ1枚とし、一定比率の補損をあらかじめ確保します。</li>
+<li><strong>標準納期と最小ロットを記録する：</strong>この2つの数値が発注点を直接決め、フレームオーダー交渉の基礎にもなります。</li>
+<li><strong>サプライヤーと版をそろえる：</strong>承認サンプル、色番、加工パラメータを保管し、再注文時にそのまま参照することで、再サンプル作成や偏差を避けます。</li>
+</ul>
+
+<h2>3. 安全在庫と発注点の計算方法</h2>
+
+<p>実務で最も役立つ式は2つです。「安全在庫 ≈ 最大日消費量 × 最大納期 − 平均日消費量 × 平均納期」、「発注点 = 平均日消費量 × 平均納期 + 安全在庫」。その意味は精緻さを求めることではなく、納期の変動と需要の変動をあわせて考慮し、補充のアクションを早めに起こすことにあります。</p>
+
+<table>
+<tr><th>パラメータ</th><th>入手方法</th><th>よくある誤り</th></tr>
+<tr><td>1日あたりの消費量</td><td>生産計画 × 1着あたり使用量</td><td>過去平均のみで算出し、繁忙期や新モデルの立ち上がりを無視する</td></tr>
+<tr><td>調達納期</td><td>サプライヤー回答納期 + 生産 + 輸送</td><td>最良ケース（例：10日）で見積もり、通常納期を使わない</td></tr>
+<tr><td>納期の変動</td><td>直近半年の実際の入荷記録</td><td>実際の入荷日を集計せず、印象だけで判断する</td></tr>
+<tr><td>安全係数</td><td>許容できる欠品リスクで設定し、重要副資材はより保守的に</td><td>すべての副資材を同一基準にすると、無駄とリスクが併存する</td></tr>
+</table>
+
+<div class="callout"><strong>💡 ヒント：</strong>式はあくまで出発点です。まず3か月運用し、実際の入荷日と実際の消費量でパラメータを校正するほうが、最初から精度を追うより効果的です。副資材の価値は安定供給にあり、在庫数字の見栄えではありません。</div>
+
+<h2>4. ロット、色差、倉庫管理</h2>
+
+<ul>
+<li><strong>ロットと色番の表示：</strong>入庫ごとにロット番号、生産日、色番を登録し、同一スタイルの衣料はできるだけ同じロットの副資材を使用します。</li>
+<li><strong>先入れ先出し（FIFO）：</strong>古いロットから使用し、倉庫奥の副資材が長期保管で変色、吸湿、べたつきを起こすのを防ぎます。</li>
+<li><strong>防湿・退色防止：</strong>紙の副資材は湿気と直射日光を避け、織りラベルと洗濯表示ラベルは長期の重ね置きによる変形を避けます。床から離し、遮光して保管することをおすすめします。</li>
+<li><strong>混ロット使用の禁止：</strong>欠品により同一注文で別ロットを使う必要がある場合は、必ず事前にお客様へ伝え、色差が許容範囲であることを確認してください。独自の判断で混ぜてはいけません。</li>
+</ul>
+
+<h2>5. サプライヤーとの連携：フレームオーダーとローリング予測</h2>
+
+<p>副資材の納期安定性は、サプライヤーがあなたの使用量をどれだけ早く把握しているかに大きく左右されます。毎回その場で発注するよりも、使用量の情報を前倒しで共有し、仕組みで納期を確保するほうが有効です。</p>
+
+<ul>
+<li><strong>フレームオーダー：</strong>年間または四半期の使用量と価格を確定し、分割で引き取ることで、生産能力と材料を確保しながら一度あたりの資金負担を抑えます。</li>
+<li><strong>ローリング予測：</strong>毎月、今後3か月の使用量予測を提供します。発注を約束しなくても、サプライヤーが糸や紙を事前に準備できます。</li>
+<li><strong>安全在庫の連携：</strong>高頻度で再注文される汎用副資材については、サプライヤーが一定の完成品または半製品在庫を保有するよう協議し、補充サイクルを短縮できます。</li>
+<li><strong>納期台帳の作成：</strong>各注文の回答納期と実際の入荷日を記録し、次回の交渉と安全在庫の校正の根拠とします。</li>
+</ul>
+
+<h2>6. 滞留在庫と端数の処理</h2>
+
+<ul>
+<li><strong>滞留在庫の発生要因：</strong>多くは「最小ロットを満たすため」の過剰発注、スタイルの取消し、改版による旧資材の廃棄です。</li>
+<li><strong>管理方法：</strong>色と仕様をできるだけ汎用化し（専用色番を減らす）、最小ロットではなく実需で発注し、長納期の副資材には明確なキャンセル可能期限を設けます。</li>
+<li><strong>端数管理：</strong>量産時に一定比率の補損分を余分に印刷するのは通常のやり方ですが、端数は入庫登録し、次の再注文に優先して使うべきで、そのまま廃棄してはいけません。</li>
+<li><strong>定期的な見直し：</strong>毎シーズン滞留在庫を棚卸しし、改版できるものは改版し、汎用できるものは汎用し、どうしても使えないものは速やかに処理して、庫内スペースと資金を圧迫しないようにします。</li>
+</ul>
+
+<h2>7. 棚卸しと受入検収の要点</h2>
+
+<ul>
+<li>入荷時に<strong>数量、ロット番号、色番</strong>が注文と一致するか確認し、外観と寸法を抜き取り検査します。</li>
+<li><strong>高価値または長納期の副資材</strong>は棚卸し周期を短縮し、帳簿と実在庫の一致を確保します。</li>
+<li><strong>補充アラート</strong>を設定し（発注点を下回ると自動で通知）、人の記憶に頼らないようにします。</li>
+<li>各副資材の<strong>承認サンプルと色見本</strong>を保管し、再注文やクレーム時の唯一の比較基準とします。</li>
+</ul>
+
+<div class="callout"><strong>💡 泰閣からのヒント：</strong>副資材供給が安定する鍵は、サプライヤーにあなたのリズムを早く知ってもらうことです。長期取引先のブランドには、常用の織りラベル・洗濯表示ラベルの半製品在庫を確保し、フレームオーダーとローリング予測を組み合わせることで、再注文の納期を 10–25 日の範囲の前半に短縮できます。サンプル作成は 3–7 日、最小ロットは柔軟に対応します。</div>
+
+<div class="related">
+<h2>関連記事</h2>
+<ul>
+<li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+<li><a href="garment-trims-order-guide.html">衣料副資材の発注ガイド：問い合わせから納品までの全工程</a></li>
+<li><a href="garment-trims-lead-time-guide.html">衣料副資材の納期ガイド：サンプル作成・生産・輸送の期間を分解</a></li>
+<li><a href="clothing-brand-first-trims-order.html">アパレルブランド初回副資材発注チェックリスト</a></li>
+</ul>
+</div>
+
+<div class="cta-box">
+<p>副資材の供給をより安定させたいですか。スタイルごとの使用量と補充のリズムをお知らせください。フレームオーダーと安全在庫を一緒に設計します。</p>
+<a class="cta-btn" href="../contact.html">副資材の長期供給プランを相談する →</a>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 브랜드 부자재 규격집(Trim Book) 제작 가이드: 번호, 사양, 버전 관리 | TAGE</title>
+<meta name="description" content="부자재 규격집(Trim Book)은 의류 브랜드가 행택, 직조 라벨, 세탁 표시 라벨, 포장을 관리하는 표준 문서입니다. 본 글에서는 Trim Book에 포함해야 할 내용, 부자재 번호 규칙, 버전 관리와 변경 이력, 부자재 공급업체와의 협업 방법, 로트 불일치를 피하는 방법을 설명합니다. 둥관 TAGE 패키징 제공.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trim-book-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trim-book-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装品牌辅料规范手册（Trim Book）制作指南",
+     "item": "https://taigetag.com/blog/garment-trim-book-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装品牌辅料规范手册（Trim Book）制作指南：编号、规格与版本管理",
+   "url": "https://taigetag.com/blog/garment-trim-book-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trim-book-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>부자재 규격집</span></div>
+      <h1>의류 브랜드 부자재 규격집(Trim Book) 제작 가이드</h1>
+      <p>TAGE 패키징 · 2026년 9월 13일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 규격집(Trim Book, 부자재 표준집, Trim Card라고도 합니다)은 의류 브랜드가 모든 부자재의 사양, 도안, 공급업체, 시험 요건을 일원 관리하는 표준 문서입니다. 감으로 발주하던 방식을 표준에 따른 발주로 바꾸는 것으로, 행택·직조 라벨·세탁 표시 라벨·포장을 로트마다 일치시키는 핵심 도구입니다.</p>
+
+      <p>본 글에서는 Trim Book에 포함해야 할 내용, 부자재 번호와 버전 관리 규칙 설계 방법, 부자재 공급업체와의 협업 방법, 가장 자주 간과되는 오류를 설명합니다.</p>
+
+      <h2>1. 브랜드에 부자재 규격집이 필요한 이유</h2>
+      <p>하나의 브랜드는 흔히 여러 봉제 공장과 여러 부자재 공급업체와 동시에 거래합니다. 통일된 표준이 없으면 같은 행택이 공장마다 다른 색으로 인쇄되고, 같은 직조 라벨이 로트마다 반 색상 차이가 납니다. Trim Book은 세 주체 모두에게 이익을 줍니다.</p>
+      <ul>
+        <li><strong>브랜드 측</strong>: 공장이나 공급업체를 바꿔도 제품 외관이 항상 일치합니다</li>
+        <li><strong>봉제 공장</strong>: 입고된 부자재를 표준과 대조할 수 있어 소통과 재작업이 줄어듭니다</li>
+        <li><strong>부자재 공급업체</strong>: 완전한 사양을 한 번에 받고 재주문은 번호대로 생산할 수 있어 납기가 안정됩니다</li>
+      </ul>
+
+      <h2>2. Trim Book에 포함해야 할 내용</h2>
+      <p>실용적인 Trim Book은 보통 한 페이지에 부자재 하나를 배정하고 실물 샘플과 사양표를 합철합니다. 핵심 항목은 다음과 같습니다.</p>
+      <table>
+        <tr><th>항목</th><th>기재 내용</th><th>핵심 포인트</th></tr>
+        <tr><td>부자재 목록</td><td>번호, 명칭, 용도, 사용 위치</td><td>한 품목에 한 번호, 전 카테고리 포괄</td></tr>
+        <tr><td>사양</td><td>치수, 소재, 평량, 두께, 색상 번호</td><td>밀리미터 단위로 정확하게, 어림수는 피합니다</td></tr>
+        <tr><td>도안</td><td>벡터 원본, 폰트, 로고 사용 규정</td><td>도련과 최소 선폭을 확보</td></tr>
+        <tr><td>가공</td><td>인쇄 방식, 박, 라미네이팅, 봉제 또는 열압착</td><td>실물 기준 샘플을 첨부하여 대조</td></tr>
+        <tr><td>공급업체 정보</td><td>공장, 담당자, 최소 주문량, 납기</td><td>대체 공급업체를 확보</td></tr>
+        <tr><td>규정 준수 요건</td><td>조성, 세탁 기호, 법규·규격 인용</td><td>목적 시장별로 구분</td></tr>
+      </table>
+
+      <h2>3. 부자재 번호와 버전 관리</h2>
+      <p>번호 규칙은 카테고리 약어와 일련번호의 조합을 권장합니다. 예를 들어 HT는 행택, WL은 직조 라벨, CL은 세탁 표시 라벨, PB는 포장백을 나타냅니다. 한 번 확정한 번호는 변경하지 마십시오. Trim Book, 발주서, 실물 라벨 사이에서 유일하게 통용되는 언어입니다.</p>
+      <ul>
+        <li><strong>버전 번호</strong>: 주 버전은 사양 변경(소재 교체, 치수 변경)에, 부 버전은 문구 미세 조정에 사용합니다</li>
+        <li><strong>변경 이력</strong>: 누가, 무엇을, 언제부터 적용했는지, 기존 재고를 어떻게 처리할지를 항목별로 기록합니다</li>
+        <li><strong>기준 샘플</strong>: 번호별로 서명 확인된 기준 샘플을 보관하고 재주문 입고품과 대조합니다</li>
+        <li><strong>전자화</strong>: 사양표와 벡터 도안을 동일한 명명 규칙의 폴더에 두어 신·구 버전 혼용을 피합니다</li>
+      </ul>
+
+      <h2>4. 부자재 공급업체와 협업하는 방법</h2>
+      <ul>
+        <li>구두 설명이나 스마트폰으로 찍은 사진이 아니라 Trim Book의 사양 페이지와 벡터 도안을 전달합니다</li>
+        <li>기준 샘플이 기준임을 명확히 하고 공급업체에 기준 샘플대로 샘플 제작과 반송 확인을 요구하며 확인 후 양산합니다</li>
+        <li>재주문 첫 입고품은 기준 샘플과 표본 대조하고 색상, 치수, 촉감을 중점 확인합니다</li>
+        <li>공급업체를 초기 샘플 제작부터 참여시켜 박 면적이 너무 작거나 선폭이 너무 가는 등 가공 불가 항목을 조기에 발견합니다</li>
+      </ul>
+
+      <h2>5. 흔한 오류와 개선 제안</h2>
+      <ul>
+        <li>행택과 직조 라벨만 기재하고 포장백, 봉제사, 행택 핀 등 소형 부자재를 빠뜨립니다</li>
+        <li>사양에 약 50mm라고 쓰고 정확한 값을 쓰지 않아 로트마다 치수가 달라집니다</li>
+        <li>Pantone 번호만 전달하고 참고 샘플을 첨부하지 않아 공급업체마다 색 해석에 큰 차이가 납니다</li>
+        <li>도안이 JPG뿐이고 벡터 원본이 없어 공급업체를 바꿀 때마다 다시 그려야 합니다</li>
+        <li>버전 기록이 없어 문제가 생겼을 때 어느 사양 버전이 원인인지 판단할 수 없습니다</li>
+      </ul>
+      <div class="callout"><strong>💡 팁:</strong> Trim Book은 처음부터 두껍게 만들 필요가 없습니다. 먼저 표 하나와 실물 기준 샘플로 주력 부자재를 운영하고 이후 법규와 시험 항목을 단계적으로 보완하는 것이 처음부터 완벽을 추구하는 것보다 정착시키기 쉽습니다.</div>
+      <p><strong>둥관 TAGE 패키징</strong>은 행택, 직조 라벨, 세탁 표시 라벨, 가죽 패치, 의류 포장을 전문으로 하며 브랜드의 부자재 사양과 기준 샘플 체계 구축을 지원하고 샘플 제작부터 양산까지 원스톱으로 대응합니다.</p>
+
+      <h2>관련 글</h2>
+      <ul>
+      <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+      <li><a href="garment-trims-sourcing-guide.html">의류 부자재 구매 가이드: 공급업체 선택 방법</a></li>
+      <li><a href="garment-trims-order-guide.html">의류 부자재 발주 가이드: 문의부터 입고까지의 전 과정</a></li>
+      <li><a href="garment-trims-inventory-management.html">의류 부자재 재고 관리: 결품과 사장 재고를 피하는 방법</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>브랜드 부자재 규격과 기준 샘플 체계를 구축하시겠습니까?</p>
+        <a class="cta-btn" href="../contact.html">부자재 규격 자문 문의하기 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품 소개</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

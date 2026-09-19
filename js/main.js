@@ -6,7 +6,7 @@
 
   /* ---------- 语言检测（?lang= 参数 > localStorage > 默认zh） ---------- */
   var LANG_KEY = "taige_lang";
-  var LANGS = ["zh", "en", "fr", "es"];
+  var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
   /* 独立语言目录 /en/ /fr/ /es/：固定对应语言，忽略 ?lang/localStorage/浏览器语言，
      语言切换按钮跳回根目录对应语言版本 */
   var DIR_LANG = null;
@@ -15,9 +15,11 @@
     if (_p.indexOf("/en/") >= 0) DIR_LANG = "en";
     else if (_p.indexOf("/fr/") >= 0) DIR_LANG = "fr";
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
+    else if (_p.indexOf("/ja/") >= 0) DIR_LANG = "ja";
+    else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
   /* 缓存击穿版本号：每次部署升级此值，语言跳转 URL 带 &v= 强制绕过 GitHub Pages 缓存 */
-  var BUST_VERSION = "88";
+  var BUST_VERSION = "89";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -50,12 +52,14 @@
     if (sys.indexOf("zh") === 0) current = "zh";
     else if (sys.indexOf("fr") === 0) current = "fr";
     else if (sys.indexOf("es") === 0) current = "es";
+    else if (sys.indexOf("ja") === 0) current = "ja";
+    else if (sys.indexOf("ko") === 0) current = "ko";
     else if (sys.indexOf("en") === 0) current = "en";
     else current = "en";
   }
   if (LANGS.indexOf(current) < 0) current = "zh";
 
-  var LANG_HTML = { zh: "zh-CN", en: "en", fr: "fr", es: "es" };
+  var LANG_HTML = { zh: "zh-CN", en: "en", ja: "ja", ko: "ko", fr: "fr", es: "es" };
 
   /* 只处理内容元素：跳过 void 元素与头部元素 */
   var SKIP_TAGS = { TITLE: 1, META: 1, LINK: 1, SCRIPT: 1, STYLE: 1, BR: 1, HR: 1, IMG: 1, INPUT: 1, SOURCE: 1, TRACK: 1, WBR: 1, AREA: 1, BASE: 1, COL: 1, EMBED: 1, PARAM: 1 };
@@ -119,7 +123,7 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
-      var rel = location.pathname.replace(/^\/(en|fr|es)\//, "").replace(/^\/+|\/+$/g, "");
+      var rel = location.pathname.replace(/^\/(en|ja|ko|fr|es)\//, "").replace(/^\/+|\/+$/g, "");
       if (!rel || rel === "index.html") {
         /* 首页：根目录 zh 用 /，语言目录用 /xx/ */
         location.href = (lang === "zh" ? "/" : "/" + lang + "/") + "?v=" + BUST_VERSION;

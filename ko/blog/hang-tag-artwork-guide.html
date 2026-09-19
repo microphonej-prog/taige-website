@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 인쇄 파일 제작 가이드: 도련, 해상도, 색상 설정 | TAGE</title>
+<meta name="description" content="행택 인쇄 파일을 제대로 만들지 못해 흰 테두리가 생기거나 번져 나온 적이 있으신가요? 이 가이드에서는 도련선과 안전 여백, 300dpi 해상도, CMYK와 별색 선택, 폰트 아웃라인, 칼선 레이어 요구 사항을 설명하고 인쇄 전 체크리스트도 제공합니다. 행택 샘플 검사를 한 번에 통과할 수 있습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-artwork-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-artwork-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌印刷文件制作指南：出血、分辨率与色彩设置",
+     "item": "https://taigetag.com/blog/hang-tag-artwork-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌印刷文件制作指南：出血、分辨率与色彩设置",
+   "url": "https://taigetag.com/blog/hang-tag-artwork-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-artwork-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>행택 인쇄 파일 가이드</span></div>
+      <h1>행택 인쇄 파일 제작 가이드: 도련, 해상도, 색상 설정</h1>
+      <p>TAGE 패키징 · 2026년 9월 4일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>행택 인쇄 파일의 완성도가 완제품이 명품이 될지 불량품이 될지를 직접 좌우합니다. 도련을 충분히 두지 않으면 재단 후 흰 테두리가 생기고, 이미지 해상도가 부족하면 LOGO 윤곽이 모두 톱니 모양이 되며, 색상 모드를 잘못 설정하면 브랜드 색상이 전혀 다르게 인쇄됩니다. 이 세 가지 문제가 행택 인쇄 재작업의 대부분을 차지하며, 대부분 파일 단계에서 예방할 수 있습니다. 이 행택 인쇄 파일 가이드에서는 도련, 해상도, 색상, 칼선의 설정 요점을 설명하여 샘플 검사를 한 번에 통과하도록 돕습니다.</p>
+
+      <p>디자이너든 브랜드 구매 담당자든, 직접 편집해 공장에 발주하든 인쇄사에 파일 제작을 맡기든, 아래의 필수 기준을 숙지하면 소통 효율과 샘플 통과율이 뚜렷하게 높아집니다.</p>
+
+      <h2>1. 도련과 안전 여백</h2>
+      <p>인쇄물 재단에는 공차가 있어 완성 크기가 디자인 파일과 항상 일치하지는 않습니다. 그래서 디자인 파일 사방에 3mm의 도련을 두어야 합니다. 즉 배경색과 이미지를 최종 재단선 밖으로 3mm까지 확장하면 재단 후 흰 테두리가 드러나지 않습니다. 안전 여백은 텍스트, LOGO, 바코드 등 내용에서 완제품 가장자리까지의 거리로, 2–3mm 이상을 권장하며 재단이 어긋나도 내용이 잘리지 않도록 합니다.</p>
+
+      <h2>2. 해상도와 이미지 품질</h2>
+      <ul>
+        <li><strong>비트맵은 300dpi 이상:</strong> 완성 크기 1:1로 배치하고, 200dpi 미만 이미지는 확대하면 톱니와 모자이크가 뚜렷하게 나타납니다</li>
+        <li><strong>LOGO는 되도록 벡터로:</strong> 일러스트와 브랜드 마크는 AI/EPS/PDF 벡터 형식을 사용하면 확대·축소해도 품질이 손상되지 않습니다</li>
+        <li><strong>QR코드와 바코드:</strong> 600dpi 이상으로 생성하고 주위에 최소 2mm의 여백(콰이어트 존)을 두며, 인쇄 후에는 하나씩 스캔하여 표본 검사합니다</li>
+      </ul>
+      <p>특히 주의하십시오. 스마트폰 스크린샷이나 웹페이지에서 저장한 이미지는 대부분 72dpi에 불과해 확대하면 흐려지므로 인쇄에 그대로 사용할 수 없습니다.</p>
+
+      <h2>3. CMYK와 별색: 색이 달라지는 이유</h2>
+      <p>화면은 RGB 발광으로 색을 표현하고 인쇄는 CMYK 잉크를 겹쳐 색을 만들기 때문에 두 색역이 달라 화면 색과 인쇄 색에는 본질적인 차이가 있으며 100% 일치시킬 수 없습니다. 브랜드 색상에 엄격한 고객께서는 팬톤 별색 인쇄를 지정하고 색상 견본으로 인쇄사와 대조하시기를 권장합니다.</p>
+      <table>
+        <tr><th>색상 모드</th><th>적용 용도</th><th>주요 사항</th></tr>
+        <tr><td>CMYK 4색</td><td>사진, 그라데이션, 다색 패턴</td><td>디지털 교정본과 인쇄 샘플을 기준으로 하며 화면 색상은 참고용입니다</td></tr>
+        <tr><td>팬톤 별색</td><td>브랜드 LOGO, VI 메인 컬러</td><td>색차가 최소이며 구체적인 색상 번호(예: PMS 872C)를 지정해야 합니다</td></tr>
+        <tr><td>금박/엠보싱/UV</td><td>공정 효과이며 잉크 색상이 아닙니다</td><td>파일 안에서 단색 벡터 레이어로 위치와 효과를 표시합니다</td></tr>
+      </table>
+      <p>같은 파일이라도 용지가 다르면 결과가 달라집니다. 아트지는 선명하고 채도가 높으며, 크라프트지는 잉크를 흡수해 어둡게 나옵니다. 브랜드 색상이 중요하다면 반드시 실물 샘플로 확인한 후 발주하십시오.</p>
+
+      <h2>4. 텍스트: 아웃라인, 글자 크기, 정보 확인</h2>
+      <ul>
+        <li><strong>폰트 아웃라인:</strong> 납품 전에 텍스트를 패스로 변환하여 인쇄사에 폰트가 없어 글자가 깨지거나 다른 폰트로 대체되는 것을 방지합니다</li>
+        <li><strong>최소 글자 크기:</strong> 본문 글자는 6pt 이상을 권장하며, 반전 문자와 가는 서체는 한 단계 더 키웁니다</li>
+        <li><strong>정보 대조:</strong> 브랜드명, 공식 웹사이트, 사이즈, 원산지 등을 한 글자씩 교정합니다. 행택에 한 글자만 틀려도 전체 로트가 폐기됩니다</li>
+      </ul>
+
+      <h2>5. 납품 형식과 파일 명명</h2>
+      <ul>
+        <li>도련이 포함된 PDF(칼선 레이어 포함) 또는 AI/CDR 원본 파일을 우선 납품하시고, 편집에 사용한 이미지와 폰트도 함께 패키징해 주십시오</li>
+        <li>파일명 권장: 브랜드명_스타일번호_크기_버전날짜 (예: TAGE_HT001_54x90_v1_20260904)</li>
+        <li>여러 스타일과 크기를 한 파일에 합칠 때는 레이어나 페이지로 명확히 구분하여 생산 시 혼동을 방지합니다</li>
+      </ul>
+
+      <h2>6. 인쇄 전 체크리스트</h2>
+      <table>
+        <tr><th>점검 항목</th><th>요구 사항</th></tr>
+        <tr><td>도련</td><td>네 방향 각 3mm, 배경색을 도련선까지 확장</td></tr>
+        <tr><td>안전 여백</td><td>텍스트, LOGO를 완성 크기 가장자리에서 최소 2–3mm 이격</td></tr>
+        <tr><td>해상도</td><td>비트맵 300dpi 이상(완성 크기 1:1 기준)</td></tr>
+        <tr><td>색상</td><td>CMYK 또는 지정 팬톤 번호, 색상 샘플 요구 사항 명시</td></tr>
+        <tr><td>텍스트</td><td>아웃라인 완료, 철자와 정보가 한 글자도 틀리지 않아야 함</td></tr>
+        <tr><td>칼선 레이어</td><td>특수 형태 다이컷 시 별도 레이어로 명확하게 표시</td></tr>
+        <tr><td>파일 형식</td><td>PDF/AI/CDR 원본 파일 + 미리보기 이미지</td></tr>
+      </table>
+      <div class="callout"><strong>💡 팁:</strong> 인쇄사마다 공정 허용 범위가 조금씩 다릅니다. 가장 간편한 방법은 발주 전에 공장에 &quot;인쇄 파일 템플릿과 체크리스트&quot;를 요청하여 상대방 규정에 맞춰 파일을 준비하는 것입니다. 이렇게 하면 샘플을 한 번에 통과할 확률이 가장 높습니다.</div>
+
+      <p>파일 규정을 디자인 단계에서 미리 확보하면 행택 샘플 제작은 보통 3–7일이면 완료됩니다. <strong>둥관 TAGE 패키징</strong>의 행택 사업은 오프셋, 디지털, 금박, 엠보싱, 특수 형태 다이컷을 아우르며 인쇄 파일 검토와 최적화를 지원하고 파일 템플릿과 실물 샘플 서비스를 제공합니다.</p>
+
+      <div class="related">
+        <h2>관련 기사</h2>
+        <ul>
+          <li><a href="index.html">부자재 FAQ: 전체 기사</a></li>
+          <li><a href="hang-tag-printing-methods.html">행택 인쇄 공정 해설: 오프셋/디지털/금박/엠보싱/UV</a></li>
+          <li><a href="hang-tag-die-cutting-guide.html">행택 다이컷 가이드: 특수 형태 다이컷, 접지, 타공</a></li>
+          <li><a href="woven-label-artwork-guide.html">직조 라벨 원고 및 제판 가이드: 선 굵기, 글자 크기, 파일 형식</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>행택 인쇄 파일 템플릿이 필요하시거나 색상과 공정을 샘플로 먼저 확인하고 싶으신가요?</p>
+        <a class="cta-btn" href="../contact.html">행택 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

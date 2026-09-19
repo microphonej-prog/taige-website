@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 NFC 스마트 행택 가이드: 칩 선정, 인코딩 및 양산 공정 | TAGE</title>
+<meta name="description" content="의류 NFC 스마트 행택 완전 가이드: NTAG213/215/216 및 424 DNA 칩 선택 방법, 읽기·쓰기 거리와 인코딩 방식, NFC와 QR 코드의 역할 분담, 진위 검증과 디지털 제품 여권 활용, 그리고 라미네이팅·박·다이커팅 회피 요점과 양산 테스트 체크리스트까지. 둥관 TAGE 패키징 제공.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ko/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/nfc-hang-tag-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/nfc-hang-tag-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺",
+     "item": "https://taigetag.com/blog/nfc-hang-tag-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装 NFC 智能吊牌指南：芯片选型、写入与量产工艺",
+   "url": "https://taigetag.com/blog/nfc-hang-tag-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/nfc-hang-tag-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>NFC 스마트 행택 가이드</span></div>
+      <h1>의류 NFC 스마트 행택 가이드: 스마트폰을 대기만 하면 브랜드가 전달됩니다</h1>
+      <p>TAGE 패키징 · 2026년 9월 17일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>점점 더 많은 의류 브랜드가 행택 안에 NFC 칩을 내장하고 있습니다. 고객이 스마트폰을 행택에 대면 브랜드 페이지 열기, 진위 확인, 회원 가입, 관리 영상 시청이 가능합니다. 행택은 인쇄물에서 하나의 진입점으로 바뀌었습니다.</p>
+
+      <p>NFC(근거리 무선 통신)는 13.56MHz에서 작동하며 스마트폰이 기본 지원하는 기능입니다. iPhone 7 이후 모델과 대부분의 안드로이드 기기가 앱 설치 없이 바로 읽을 수 있습니다. 이 글에서는 칩 선정과 콘텐츠 기획부터 라미네이팅·다이커팅 공정의 회피 요점까지, NFC를 행택에 적용하는 전 과정을 정리합니다.</p>
+
+      <h2>1. NFC 행택의 작동 원리</h2>
+      <p>NFC 행택의 핵심은 종이처럼 얇은 칩 인레이입니다. 종이 카드 안쪽에 합지한 뒤 카드와 함께 라미네이팅, 다이커팅, 끈 통과 공정을 거칩니다. 고객이 스마트폰을 행택 1~4cm 이내로 대면 카메라를 열거나 스캔할 필요 없이 웹페이지가 자동으로 열립니다.</p>
+      <p>일반 행택과의 차이는 인쇄가 아니라 &quot;거리&quot;에 있습니다. QR 코드는 고객이 직접 맞추고 초점을 잡고 이동을 기다려야 하지만, NFC는 가까이 대기만 하면 됩니다. 프리미엄 브랜드, 선물 상자, 매장 환경에서는 이 동작이 더 매끄럽고 레이아웃도 깔끔합니다. 칩이 종이 안에 숨겨져 검은 사각형이 없기 때문입니다.</p>
+
+      <h2>2. 칩 선정: NTAG213, 215, 216 및 424 DNA</h2>
+      <p>행택에 가장 많이 쓰이는 것은 NXP의 NTAG 시리즈입니다. 선택 기준은 두 가지, 얼마나 많은 내용을 기록할지와 복제 방지가 필요한지 여부입니다.</p>
+      <table>
+        <tr><th>칩 모델</th><th>사용 가능 메모리</th><th>주요 용도</th><th>비고</th></tr>
+        <tr><td>NTAG213</td><td>약 144바이트</td><td>단일 브랜드 단축 링크, 회원 가입</td><td>비용 최저, 짧은 링크 하나면 충분</td></tr>
+        <tr><td>NTAG215</td><td>약 504바이트</td><td>브랜드 행택의 주력 모델</td><td>다국어 진입점과 짧은 시리얼 번호 기록 가능</td></tr>
+        <tr><td>NTAG216</td><td>약 888바이트</td><td>다중 링크, 이미지·텍스트 정보, 시리얼 번호</td><td>정보량이 많거나 사용자 정의 데이터를 기록할 때 선택</td></tr>
+        <tr><td>NTAG 424 DNA</td><td>암호화 가능, 동적 인증 지원</td><td>고가 단품의 복제 방지 검증</td><td>검증 시스템이 필요하므로 우선 소량 테스트 권장</td></tr>
+      </table>
+      <p>고객이 대면 브랜드 스토리 페이지가 열리는 것만 원한다면 NTAG213으로 충분합니다. 행택의 기본 선택으로는 NTAG215가 가장 안전합니다. 진품 인증이 핵심 목적이고 브랜드에 검증 백엔드가 이미 있을 때만 NTAG 424 DNA를 선택할 가치가 있습니다.</p>
+
+      <h2>3. 행택에 담을 수 있는 콘텐츠</h2>
+      <ul>
+        <li><strong>진위 검증</strong>——고유 시리얼 번호가 포함된 검증 링크를 기록하면 고객이 대기만 하면 진위를 확인할 수 있고, 브랜드가 위조품 유통을 추적하기도 쉬워집니다</li>
+        <li><strong>브랜드 콘텐츠</strong>——원단 스토리, 산지와 공정, 코디 제안, 관리 영상 등 행택의 몇 줄 문구를 하나의 경험으로 확장합니다</li>
+        <li><strong>회원 가입과 재구매</strong>——가입 페이지나 쿠폰 페이지로 연결하여 오프라인 행택을 자사 채널 진입점으로 만듭니다. 스캔율은 포장의 QR 코드보다 일반적으로 높습니다</li>
+        <li><strong>디지털 제품 여권(DPP)</strong>——EU는 섬유 제품의 디지털 제품 여권을 추진하고 있으며, 칩에는 조성·산지·재활용 정보를 담을 수 있어 장기적으로 가장 대비할 가치가 있는 기능입니다</li>
+        <li><strong>재판매와 수선</strong>——행택은 의류와 함께 이동하므로 제품 이력과 관리 기록이 계속 따라가 순환 패션 모델을 지원합니다</li>
+      </ul>
+
+      <h2>4. NFC와 QR 코드: 대체가 아니라 역할 분담</h2>
+      <table>
+        <tr><th>항목</th><th>NFC</th><th>QR 코드</th></tr>
+        <tr><td>읽는 방식</td><td>스마트폰을 1~4cm 대면 자동 열림</td><td>카메라를 열어 맞추고 스캔</td></tr>
+        <tr><td>기기 요건</td><td>NFC 지원 필요(iPhone 7 이상, 주요 안드로이드)</td><td>거의 모든 스마트폰</td></tr>
+        <tr><td>간섭 요인</td><td>금속, 물, 과도한 라미네이팅은 신호를 약화시킵니다</td><td>오염, 주름, 반사가 인식에 영향을 줍니다</td></tr>
+        <tr><td>복제 저항성</td><td>칩 UID가 고유하며 암호화로 복제를 방지할 수 있습니다</td><td>촬영으로 복제 가능하며 위조 방지 능력이 약합니다</td></tr>
+        <tr><td>레이아웃 영향</td><td>칩이 종이 안에 내장되어 레이아웃이 깔끔합니다</td><td>일정한 면적을 차지합니다</td></tr>
+      </table>
+      <div class="callout"><strong>💡 제안:</strong> 고가 단품에는 NFC, 대중 라인에는 QR 코드를 사용하며 두 가지를 한 장의 행택에 함께 넣는 것도 일반적입니다——NFC가 가장 매끄러운 접점을 담당하고, QR 코드가 모든 기기를 위한 대비책이 됩니다.</div>
+
+      <h2>5. 공정 회피 포인트: 성패를 가르는 여섯 가지 세부 사항</h2>
+      <p>NFC 행택의 문제는 칩 자체에서 발생하는 경우가 드물고, 대부분 제조 공정의 조합에서 비롯됩니다. 아래는 당사가 양산에서 가장 자주 만나는 여섯 가지 포인트입니다.</p>
+      <ul>
+        <li><strong>안테나 영역 여백</strong>——칩 안테나는 일반적으로 행택 중상단 영역을 차지하므로 해당 영역에는 박, 엠보싱, 부분 UV, 금속 잉크를 피해야 합니다. 금속은 신호를 차단합니다</li>
+        <li><strong>합지 구조</strong>——인레이는 표지와 라미네이트 사이에 붙여 중간 종이층을 줄입니다. 두꺼운 판지를 합지한 구조는 자기장을 약화시키기 쉽습니다</li>
+        <li><strong>다이커팅·타공 회피</strong>——타공 위치와 다이커팅 선은 칩과 안테나 가장자리에서 3mm 이상 떨어뜨려 안테나 회로가 끊기지 않게 합니다</li>
+        <li><strong>금속 부자재 위치</strong>——금속 아일렛이나 클립이 안테나에 가까우면 읽기 거리가 뚜렷하게 줄어듭니다. 행택 반대쪽 끝으로 옮기거나 플라스틱 루프로 바꾸세요</li>
+        <li><strong>습기와 세탁</strong>——종이 기반 NFC 행택은 세탁기에 적합하지 않으며 세탁 표시 라벨과 역할이 다릅니다. 수영복이나 아웃도어처럼 세탁 내구성이 필요한 경우에는 세탁 가능한 유연 라벨 방식으로 변경해야 합니다</li>
+        <li><strong>로트 읽기 테스트</strong>——샘플 단계에서 여러 스마트폰(iPhone과 안드로이드 각 2대 이상)으로 읽기 거리와 성공률을 실측하고, 양산에서는 로트별로 샘플링 검사와 샘플 보관을 진행합니다</li>
+      </ul>
+
+      <h2>6. 선정부터 양산까지: 6단계 실행 프로세스</h2>
+      <ol>
+        <li>목표 설정: 진위 검증, 브랜드 콘텐츠, 회원 가입 또는 디지털 제품 여권 대비</li>
+        <li>칩과 데이터 형식 결정: 단일 링크는 NTAG213, 다국어 진입점은 NTAG215/216, 복제 방지는 NTAG 424 DNA</li>
+        <li>링크 전략 수립: 교체 가능한 중계 단축 링크를 사용해 나중에 랜딩 페이지를 바꿔도 행택을 다시 만들 필요가 없도록 합니다</li>
+        <li>사용 환경 확인: 행택을 완성 의류에 다는지, 선물 상자에 넣는지, 포장 외부에 붙이는지에 따라 읽기 거리 요건이 다릅니다</li>
+        <li>전체 공정 샘플 제작: 합지, 라미네이팅, 박, 다이커팅, 끈 통과를 한 번에 진행하고 우선 소량으로 완제품 상태의 읽기 성능을 검증합니다</li>
+        <li>양산과 연계: 인레이 로트 번호와 행택 주문 번호를 대응시켜 기록하면 문제 발생 시 어느 로트인지 빠르게 파악할 수 있습니다</li>
+      </ol>
+      <div class="callout"><strong>💡 팁:</strong> NFC 행택의 실제 비용은 칩뿐 아니라 인코딩 관리와 검증 페이지에도 있습니다. 검증 시스템이 아직 준비되지 않았다면 우선 NTAG213에 브랜드 단축 링크를 기록해 동선을 검증하고, 운영이 안정된 뒤 칩을 업그레이드하는 것이 좋습니다.</div>
+
+      <h2>7. 흔한 오해</h2>
+      <ul>
+        <li>긴 URL을 그대로 칩에 기록——기기별로 열리는 속도 차이가 크므로 반드시 단축 링크와 리다이렉트를 사용해야 합니다</li>
+        <li>칩을 금속 라벨, 금속 명판 또는 넓은 박 영역 아래에 붙이면 완제품의 읽기 거리가 급격히 줄어듭니다</li>
+        <li>모든 단품이 하나의 링크를 공유——진품 인증과 시리얼 번호 추적 능력을 포기하고 마케팅 진입점만 남게 됩니다</li>
+      </ul>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="hang-tag-qr-code-guide.html">행택 QR 코드 활용 가이드: 이력 추적과 마케팅</a></li>
+        <li><a href="hang-tag-anti-counterfeiting.html">행택 위조 방지 공정 가이드</a></li>
+        <li><a href="garment-trims-sampling-process.html">의류 부자재 샘플 제작 프로세스 안내</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>NFC 칩을 행택에 적용하고 싶으신가요? 칩 모델과 사용 환경을 알려주시면 먼저 샘플 카드를 제작해 드립니다.</p>
+        <a class="cta-btn" href="../contact.html">NFC 행택 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

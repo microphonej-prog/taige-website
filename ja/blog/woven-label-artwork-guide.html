@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>織りラベルの入稿と製版ガイド：線幅、文字サイズ、ファイル形式 | TAGE</title>
+<meta name="description" content="織りラベルの製版は、原稿が織りの法則に合わないために差し戻されることがほとんどです。線が細すぎれば糸が切れ、文字が小さすぎればつぶれ、グラデーションや写真は織り出せません。本記事では、織りラベルの入稿ファイル形式、最小線幅と文字サイズの下限、各加工の制約を整理し、原稿を一度でサンプル承認まで進められるようにします。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ja/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-artwork-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-artwork-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "织唛来稿与制版指南：线条粗细、字号与文件格式",
+     "item": "https://taigetag.com/blog/woven-label-artwork-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "织唛来稿与制版指南：线条粗细、字号与文件格式",
+   "url": "https://taigetag.com/blog/woven-label-artwork-guide.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-artwork-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>織りラベルの入稿と製版</span></div>
+      <h1>織りラベルの入稿と製版ガイド：線幅、文字サイズ、ファイル形式</h1>
+      <p>泰閣包装 · 2026年9月3日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>織りラベルの製版と印刷の製版は別の論理です。印刷は写真レベルのグラデーションを再現できますが、織りラベルは縦糸と横糸を1本ずつ織り上げた「グリッド画」です。糸には太さがあり、密度には上限があり、色は1色ごとに糸を割り当てる必要があります。美しいデザインデータで織りラベルのサンプルを依頼し、何度も差し戻される原因は工場の能力ではなく、原稿が織りの法則に合っていないことである場合がほとんどです。本ガイドでは、ファイルの出し方、線幅と文字サイズの下限、織り出せない表現を明確にします。</p>
+
+      <h2>1. 織りラベルの入稿要件が印刷より厳しい理由</h2>
+      <p>織りラベルの「解像度」は縦糸と横糸の密度で決まり、一般的には1センチあたり 30–50 本の範囲です。つまり、糸1〜2本分より細かいディテールは再現できません。細い線は切れ、小さな文字はつぶれ、グラデーションの階調は分断されます。印刷機のインキの点はマイクロメートル単位ですが、織りラベルの最小単位は糸の直径です。画面では完璧に見えるデザインが、織ると原型をとどめない理由はここにあります。したがって織りラベルの入稿は、デザイン段階から織りの論理に合わせて処理する必要があります。線を太くし、文字を大きくし、グラデーションは色面に置き換えます。</p>
+
+      <h2>2. ファイル形式と基本設定</h2>
+      <ul>
+        <li><strong>ベクターデータを優先</strong>：AI、PDF、CDR などのベクター形式が最も理想的で、拡大縮小しても劣化せず、分版製版も最も正確です。ビットマップの場合は 300dpi 以上の 1:1 原寸データをご用意ください</li>
+        <li><strong>1:1 の成品サイズでレイアウト</strong>：成品幅（折り返し方法を含む）を明記し、文字と図形は実際の成品サイズでデザインします。「大きく描いてから縮小」すると比率が崩れます</li>
+        <li><strong>文字はアウトライン化し、外枠線は削除</strong>：フォント欠落によるレイアウト崩れを防ぎます。文字を残す場合は書体名を明記してください</li>
+        <li><strong>色番と色位置を明記</strong>：各色面に Pantone 番号を記載し、近い色は色面番号で区別します。製版の分色と色合わせはこれに依存します</li>
+      </ul>
+
+      <h2>3. 線幅、文字サイズ、間隔の実務的な下限</h2>
+      <p>実行可能なおおよその下限を示します（糸番手と密度により異なるため、最終的にはサンプルで判断します）。<strong>線幅</strong>は 0.3mm 以上を推奨し、反転（濃い下地に淡い文字）の線はさらに太くします。<strong>欧文の文字高</strong>は 1.5mm 以上、<strong>中文の文字高</strong>は 3mm 以上を推奨し、画数の多い文字はさらに大きくします。<strong>隣接する色面の間隔</strong>は最低 0.5mm 空けないと、2種類の糸が交差する部分で色が混ざり、輪郭がぼやけます。小さな文字は「もう少し細く試す」では解決しません。糸のグリッドはそこにあり、グリッドより細い画線は物理的に存在しないからです。</p>
+      <div class="callout"><strong>💡 ヒント：</strong>判断に迷う場合は、デザインデータをサプライヤーに送り「試織サンプル」を依頼してください。最も細い線と最も小さい文字でサンプルを作り、限界を自分の目で確認してから最終稿を決めれば、差し戻しを繰り返すよりはるかに時間を節約できます。</div>
+
+      <h2>4. 加工選定がデザインに与える影響</h2>
+      <table>
+        <tr><th>加工</th><th>適したデザイン</th><th>制約</th></tr>
+        <tr><td>サテン（Satin）</td><td>大きな色面、太字、光沢感</td><td>細かい小さな文字は平織りより表現力が劣ります</td></tr>
+        <tr><td>平織り（Taffeta）</td><td>細い文字、密度の高い情報、経済的なコスト</td><td>大きな色面は質感が平坦になります</td></tr>
+        <tr><td>ジャカード（Jacquard）</td><td>複雑な図柄、多色、立体的な階調</td><td>製版と生産コストが最も高く、色数が増えるほど高価になります</td></tr>
+        <tr><td>二重織り端</td><td>折り返しや毛羽立ちのないメインラベルが必要な場合</td><td>幅と坪量は比較的固定されています</td></tr>
+      </table>
+
+      <h2>5. 「織り出せない」よくある原因と修正方法</h2>
+      <ul>
+        <li><strong>グラデーション/写真</strong>：織りラベルは滑らかな階調を再現できないため、主色面 + 補助色面の分割デザインに変更するか、線や網点で階調を模します</li>
+        <li><strong>文字が小さすぎる</strong>：印刷用のデータを流用せず、織りラベルの下限に合わせて個別に拡大して組み直します</li>
+        <li><strong>色数が多すぎる</strong>：織りラベルは1色増えるごとに糸の組み合わせと色合わせのポイントが増えます。近い色は統合し、4–6 色以内に収めると安定します</li>
+        <li><strong>極細線の密集</strong>：縦線が多いほど糸が切れやすくなります。面で表現する形に変え、線が必要な場合は線幅と間隔を広げます</li>
+        <li><strong>明暗のコントラスト不足</strong>：濃い下地に濃い文字を織ると差が出ません。濃い下地では白や淡色の糸で反転処理します</li>
+      </ul>
+
+      <h2>6. データから承認サンプルまでの流れ</h2>
+      <p>合格レベルの織りラベルデータであれば、通常は1回の修正で工程が完了します。デザインデータ → デジタル分色と加工評価（色数、密度、折り返し方法の確認）→ 確認用の電子シミュレーション → 試織サンプル（3–7 日）→ 実物の色合わせと試し縫い → 承認サンプル。承認後は色番、寸法公差、密度を契約に明記し、量産は承認サンプルに従って進めます。サプライヤーに 1:1 のベクターデータと Pantone 番号を渡せば、全体の流れが格段にスムーズになります。</p>
+
+      <div class="related">
+        <h2>関連記事</h2>
+        <ul>
+          <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+          <li><a href="woven-label-types.html">織りラベルの種類解説：サテン、平織り、ジャカード、二重織り</a></li>
+          <li><a href="woven-label-color-matching.html">織りラベルの色合わせガイド：Pantone と色差管理</a></li>
+          <li><a href="woven-label-width-guide.html">織りラベルのサイズ・幅ガイド</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>織りラベルのデザインデータの評価やサンプル作成をご希望ですか？</p>
+        <a class="cta-btn" href="../contact.html">織りラベルのお見積りはこちら →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>

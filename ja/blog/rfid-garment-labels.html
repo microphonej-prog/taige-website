@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣料用 RFID タグとスマートタグのガイド：盗難防止・棚卸・トレーサビリティの実装 | TAGE</title>
+<meta name="description" content="衣料ブランドは RFID をどう導入するのか。本記事では UHF と NFC の違い、RFID ハードタグ／織りラベル／洗濯表示ラベルという3つの媒体の選び方、盗難防止と棚卸でそれぞれ使う技術を解説し、用途定義からエンコード、サンプルテストまでの導入手順と問い合わせチェックリストを紹介します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=9">
+<link rel="canonical" href="https://taigetag.com/ja/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="zh-CN" href="https://taigetag.com/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/rfid-garment-labels.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/rfid-garment-labels.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "东莞泰阁包装制品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎门镇连升路143号连升广场2栋1042室",
+    "addressLocality": "东莞市",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首页",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "辅料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地",
+     "item": "https://taigetag.com/blog/rfid-garment-labels.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服装 RFID 标签与智能吊牌指南：防盗、盘点与溯源怎么落地",
+   "url": "https://taigetag.com/blog/rfid-garment-labels.html",
+   "inLanguage": [
+    "zh-CN",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/rfid-garment-labels.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.85,6.5 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>RFID 衣料タグガイド</span></div>
+      <h1>衣料用 RFID タグとスマートタグ：盗難防止からトレーサビリティまでのガイド</h1>
+      <p>泰閣包装 · 2026年9月9日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>衣料用 RFID タグはもはやテック大手だけのものではありません。ファストファッションから高級メンズまで、RFID チップをタグや織りラベル、洗濯表示ラベルに組み込み、在庫管理・盗難防止・トレーサビリティに活用するブランドが増えています。しかし「RFID」という一言の背後には、周波数・媒体・エンコード・読み取り機器という一連の選択があり、一歩間違えれば投資が無駄になります。本記事では衣料副資材の視点から、RFID 衣料タグの主な用途、3つの媒体の選び方、そして企画からサンプル作成までの導入手順を解説します。</p>
+
+      <h2>1. RFID が衣料品で解決すること</h2>
+
+      <p>まずニーズを切り分けてから技術を選びます。盗難警報、在庫棚卸、洗濯トラッキング、消費者との連携は、それぞれ別の仕組みを使います。「盗難防止」と「RFID」を同一視するブランドも少なくありませんが、実際に店舗のゲートに入っているのは大半が EAS の音響磁気式／RF タグであり、棚卸に使う RFID とは別系統のシステムです。</p>
+
+      <ul>
+        <li><strong>在庫棚卸と商品捜索</strong>：UHF RFID のハンディ端末でひと通りスキャンすれば、数百点の商品を数秒で棚卸でき、オンラインでは売れているのに店舗で見つからない商品の所在も特定できます</li>
+        <li><strong>セルフレジ</strong>：試着室やレジで衣類をまとめて読み取り、1点ずつバーコードをスキャンする手間が不要になります</li>
+        <li><strong>洗濯・レンタル管理</strong>：作業服、ホテルのリネン、ユニフォームのレンタルでは、耐洗濯性のある RFID 織りラベル／洗濯表示ラベルを使い、工業洗濯を数十回繰り返しても読み取れます</li>
+        <li><strong>真贋対策とマーケティング</strong>：NFC チップをタグに内蔵し、スマホをかざすだけで公式サイトへ遷移。真贋確認・コーデ提案の閲覧・会員ポイントの獲得まで一度に完了します</li>
+      </ul>
+
+      <h2>2. 3つの媒体の選び方</h2>
+
+      <p>同じチップでも、入れる副資材が違えば別の製品になります。媒体を選ぶ際は、ラベルが商品のライフサイクルの中でどれだけ残るか、水をくぐるか、誰が読み取るか、という3点を見ます。</p>
+
+      <table>
+        <tr><th>媒体</th><th>対応周波数</th><th>代表的な用途</th><th>注意点</th></tr>
+        <tr><td>RFID ハードタグ（紙・カードに inlay 内蔵）</td><td>UHF または NFC</td><td>店舗棚卸・セルフレジ・真贋対策とマーケティング。販売時に取り外して回収</td><td>タグ表面に金属箔のラミネートは不可。信号を遮蔽します</td></tr>
+        <tr><td>RFID 織りラベル／洗濯表示ラベル（チップを織り込むか封入）</td><td>主に UHF、一部は低周波</td><td>レンタル・作業服・リネンの耐洗濯トラッキング。ラベルは衣料品と同じ寿命</td><td>封入工法が耐洗濯回数を決めるため、発注前に洗濯テスト報告書を求めましょう</td></tr>
+        <tr><td>NFC ステッカー／スマートタグカード</td><td>NFC 13.56 MHz</td><td>消費者のスマホ連携：真贋確認・トレーサビリティ・コンテンツへの遷移</td><td>読み取り距離が数センチしかなく、店舗レベルの棚卸には不向き</td></tr>
+      </table>
+
+      <h2>3. 周波数と業界の基本知識</h2>
+
+      <ul>
+        <li><strong>UHF（860〜960 MHz、RAIN RFID / EPC Gen2）</strong>：読み取り距離は数メートルで一括読み取りが可能。衣料小売の棚卸における事実上の標準です。国によって周波数帯が異なるため（例：EU 865〜868 MHz、米国 902〜928 MHz）、多国向けに出荷する商品はチップ選定時に互換性を確認してください</li>
+        <li><strong>HF / NFC（13.56 MHz）</strong>：読み取り距離は数センチでスマホが標準対応。消費者向けの真贋確認や連携に適していますが、倉庫の棚卸には向きません</li>
+        <li><strong>エンコードは適当な数字列ではありません</strong>：業界では EPC のコーディング規格（SGTIN-96 などで型番とシリアル番号を紐付け）がよく使われますが、ブランド独自のコード体系を書き込むこともできます。TID（チップ固有の識別番号）は出荷時にロックされており、真贋照合によく用いられます</li>
+      </ul>
+
+      <h2>4. 導入の5ステップ：企画からサンプル作成まで</h2>
+
+      <ol>
+        <li><strong>用途と読み取り側の確定</strong>：誰が読むのか、どこで読むのか、どれくらい速く読むのか。店舗のハンディ端末、レジの固定リーダー、それとも消費者のスマホか。まず読み取り側を決めてから周波数を選びます</li>
+        <li><strong>媒体と副資材の結合点の選定</strong>：タグ（販売前に取り外す）か、織りラベル／洗濯表示ラベル（衣類と一生を共にする）か。結合点が封入工法とコストを決めます</li>
+        <li><strong>エンコード方案とデータフローの確定</strong>：単品ごとの一品一码か、カテゴリー単位か、それとも注文単位か。何を書き、誰が書き、いつ書くのか（出荷前の事前書き込みか、店舗での書き込みか）</li>
+        <li><strong>サンプル作成と実環境テスト</strong>：実際の衣類とタグにラベルを組み込み、想定環境で読み取り距離・誤読率・一括読み取りを検証します。耐洗濯性が必要な場合は洗濯サイクル試験を行います</li>
+        <li><strong>量産ロットの抜き取り検証</strong>：入荷時に読み書きの一致性、エンコードの正確率、外観加工を抜き取り検査します。店頭に並べてから全数読めないと気づく事態を避けましょう</li>
+      </ol>
+
+      <div class="callout"><strong>💡 RFID を万能薬と考えないでください：</strong>金属ファスナーの近く、液体のある環境、密集した積み重ねは、いずれも読み取りに影響します。数メートルの読み取り距離が必要か数センチでよいか、工業洗濯を数十回くぐるのか販売前に取り外すのかで、方案と予算の桁が変わります。これらの条件を明確にしてからサンプル作成に進めば、多くの手直しを省けます。</div>
+
+      <h2>5. サプライヤーへの問い合わせ項目</h2>
+
+      <ul>
+        <li>チップと周波数帯：RAIN UHF（EPC Gen2）か NFC か。読み書き距離の実測値はどれくらいか</li>
+        <li>封入と耐洗濯性：媒体は何回の洗濯に耐えられるか、どのテスト規格か。報告書はあるか</li>
+        <li>エンコードサービス：対応するコーディング形式（SGTIN-96 など）、自社コード体系での事前書き込み可否、書き込み検証データの提供有無</li>
+        <li>副資材との結合：チップとタグ印刷や織りラベルの織造工程をどう組み合わせるか、外観と手触りへの影響はどれくらいか</li>
+        <li>数量とコスト：inlay・封入・エンコードはそれぞれどう価格設定されるか、最小ロットはいくらか</li>
+      </ul>
+
+      <p><strong>東莞泰閣包装</strong>の主力事業は、タグ・織りラベル・洗濯表示ラベルといった従来の副資材です。RFID とこれらの媒体の組み合わせをご検討であれば、副資材の加工面からサンプル作成の実現性を判断いたします。どのタグ構造が inlay の内蔵に適しているか、どの織りラベルの封入が洗濯に耐えられるか、印刷とチップが互いに干渉しないようにする方法など、まず評価してから投資をご判断ください。</p>
+
+      <div class="related">
+        <h2>関連記事</h2>
+        <ul>
+          <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+          <li><a href="hang-tag-qr-code-guide.html">タグの二次元コード活用ガイド：トレーサビリティ・マーケティング・一品一码</a></li>
+          <li><a href="hang-tag-anti-counterfeiting.html">タグの偽造防止加工ガイド：ホログラム箔・可変二次元コード・シリアル番号の選び方</a></li>
+          <li><a href="care-label-wash-durability.html">洗濯表示ラベルの耐洗濯性ガイド：数回洗うと文字が薄れる理由</a></li>
+          <li><a href="woven-label-types.html">織りラベルの種類解説：サテン・平織り・ジャカード・二重織りの選び方</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <p>RFID とタグ・織りラベル・洗濯表示ラベルの組み合わせをご検討ですか？用途と数量をお知らせいただければ、媒体の実現可能性をご提案します。</p>
+        <a class="cta-btn" href="../contact.html">スマートラベルのご相談 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞に拠点を置く、アパレル資材・包装印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提问">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在线</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">发送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=62"></script>
+<script src="../../js/assist.js?v=47"></script>
+</body>
+</html>
