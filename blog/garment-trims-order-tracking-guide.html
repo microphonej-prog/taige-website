@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料跟單指南：生產進度跟蹤與延期預警 | TAGE" data-en="Apparel Trims Order Tracking: Milestones, Reports &amp; Delay Alerts | TAGE" data-ja="衣料副資材の受発注管理ガイド：進捗の節目と遅延アラート | TAGE" data-ko="의류 부자재 수주 관리 가이드: 진행 단계와 지연 경보 | TAGE" data-fr="Suivi de commande d'accessoires : jalons, reports et alertes de retard | TAGE" data-es="Seguimiento de pedidos de accesorios: hitos, reportes y alertas de retraso | TAGE">服裝輔料跟單指南：生產進度跟蹤與延期預警 | TAGE</title>
+<meta name="description" data-zh="服裝輔料跟單指南：把下單到交貨拆成訂單確認、材料到位、首件確認與出貨檢驗四個可見節點，附進度表字段、每週彙報節奏、三級延期預警與出貨前48小時清單，可直接寫進訂單確認單。來自東莞泰閣包裝。"
+      data-en="Apparel trims order tracking: four visible milestones, tracking-sheet fields, weekly reports, a three-level delay alert and the 48-hour pre-shipment checklist." data-ja="衣料副資材の受発注管理ガイド。注文確認・材料入荷・初品承認・出荷検査という4つの節目、進捗表の項目、週2回の報告リズム、3段階の遅延アラート、出荷48時間前チェックリストを解説します。東莞泰閣包装。" data-ko="의류 부자재 수주 관리 가이드: 주문 확인·자재 입고·초품 승인·출하 검사의 네 단계, 진행표 항목, 주 2회 보고 주기, 3단계 지연 경보, 출하 48시간 전 체크리스트를 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="Suivi de commande d'accessoires : quatre jalons visibles, champs du tableau de suivi, cadence de reporting, alerte de retard à trois niveaux et liste des 48 heures avant expédition."
+      data-es="Seguimiento de pedidos de accesorios: cuatro hitos visibles, campos de la hoja de seguimiento, ritmo de reporte, alerta de retraso en tres niveles y lista de 48 horas."
+      content="服裝輔料跟單指南：把下單到交貨拆成訂單確認、材料到位、首件確認與出貨檢驗四個可見節點，附進度表字段、每週彙報節奏、三級延期預警與出貨前48小時清單，可直接寫進訂單確認單。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-order-tracking-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-order-tracking-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料跟單指南：生產進度跟蹤與延期預警",
+     "item": "https://taigetag.com/blog/garment-trims-order-tracking-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料跟單指南：生產進度跟蹤與延期預警",
+   "url": "https://taigetag.com/blog/garment-trims-order-tracking-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-order-tracking-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="輔料跟單" data-en="Trims Order Tracking" data-ja="受発注管理" data-ko="수주 관리" data-fr="Suivi de commande" data-es="Seguimiento de pedidos">輔料跟單</span></div>
+      <h1 data-zh="服裝輔料跟單指南：生產進度跟蹤與延期預警" data-en="Apparel Trims Order Tracking: Milestones, Reports and Delay Alerts" data-ja="衣料副資材の受発注管理ガイド：進捗の節目と遅延アラート" data-ko="의류 부자재 수주 관리 가이드: 진행 단계와 지연 경보" data-fr="Suivi de commande d'accessoires : jalons, reports et alertes de retard" data-es="Seguimiento de pedidos de accesorios: hitos, reportes y alertas de retraso">服裝輔料跟單指南：生產進度跟蹤與延期預警</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年9月22日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 22, 2026" data-ja="泰閣包装 · 2026年9月22日更新" data-ko="TAGE 패키징 · 2026년 9월 22일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 22 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 22 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月22日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="服裝輔料跟單的核心，是把「下單到交貨」這段路切成客戶看得見、驗得了的節點。吊牌、織嘜、洗水標、包裝袋都是小件定製，單筆金額不大，可一旦延期，成衣的出貨計劃、門店上掛時間與電商備貨會一起被推後。"
+         data-en="The core of apparel trims order tracking is slicing the road from order to delivery into milestones the buyer can see and check. Hang tags, woven labels, care labels and packaging are small custom items with modest order values, yet a delay pushes back garment shipping dates, store hanging schedules and e-commerce restocking together."
+         data-ja="衣料副資材の受発注管理の要点は、「発注から納品まで」の道のりを、バイヤーが見えて検証できる節目に切り分けることです。タグ、織りラベル、洗濯表示ラベル、包装は少量・小口のカスタム品で金額も大きくありませんが、遅れれば衣料の出荷計画、店頭への掛け込み時期、EC の在庫補充が同時に後ろへずれます。"
+         data-ko="의류 부자재 수주 관리의 핵심은 '발주에서 납품까지'의 과정을 바이어가 확인하고 검증할 수 있는 단계로 나누는 것입니다. 행택, 직조 라벨, 세탁 표시 라벨, 포장은 소량 맞춤 품목이라 금액은 크지 않지만, 지연되면 의류 출하 일정과 매장 진열 시점, 이커머스 재고 보충이 함께 밀립니다."
+         data-fr="Le suivi de commande d'accessoires consiste à découper le trajet entre la commande et la livraison en jalons que l'acheteur peut voir et vérifier. Étiquettes suspendues, tissées, d'entretien et emballages sont de petits articles sur mesure à faible valeur, mais un retard décale à la fois les expéditions de vêtements, la mise en rayon et le réassort e-commerce."
+         data-es="El seguimiento de pedidos de accesorios consiste en dividir el trayecto entre el pedido y la entrega en hitos que el comprador puede ver y verificar. Etiquetas colgantes, tejidas, de cuidado y embalajes son artículos pequeños a medida de valor reducido, pero un retraso desplaza a la vez los envíos de prendas, la colocación en tienda y el reabastecimiento online.">服裝輔料跟單的核心，是把「下單到交貨」這段路切成客戶看得見、驗得了的節點。吊牌、織嘜、洗水標、包裝袋都是小件定製，單筆金額不大，可一旦延期，成衣的出貨計劃、門店上掛時間與電商備貨會一起被推後。</p>
+
+      <p data-zh="本文按四個可見節點、一張進度表的字段、彙報節奏、三級延期預警、客戶側常見誤區與出貨前清單六部分展開，給出的模板可以直接用在訂單確認單裏。"
+         data-en="This guide runs through six parts — four visible milestones, the fields a tracking sheet needs, reporting rhythm, a three-level delay warning system, buyer-side mistakes and a pre-shipment checklist — so the templates can be pasted straight into your order confirmation."
+         data-ja="本記事は、4つの節目、進捗表に必要な項目、報告のリズム、3段階の遅延アラート、バイヤー側のよくある落とし穴、出荷前チェックリストの6部構成で、テンプレートはそのまま注文確認書に使えます。"
+         data-ko="이 글은 네 가지 단계, 진행표에 필요한 항목, 보고 주기, 3단계 지연 경보, 바이어 측 실수, 출하 전 체크리스트의 여섯 부분으로 구성되며, 템플릿은 주문 확인서에 바로 사용할 수 있습니다."
+         data-fr="Ce guide aborde six volets : quatre jalons visibles, les champs d'un tableau de suivi, le rythme de reporting, une alerte de retard à trois niveaux, les erreurs côté acheteur et une liste avant expédition — les modèles sont réutilisables tels quels."
+         data-es="Esta guía cubre seis bloques: cuatro hitos visibles, los campos de una hoja de seguimiento, el ritmo de reporte, una alerta de retraso en tres niveles, los errores del comprador y una lista previa al envío; las plantillas se pueden usar tal cual.">本文按四個可見節點、一張進度表的字段、彙報節奏、三級延期預警、客戶側常見誤區與出貨前清單六部分展開，給出的模板可以直接用在訂單確認單裏。</p>
+
+      <h2 data-zh="1. 跟單到底跟什麼：四個可見節點" data-en="1. What You Actually Track: Four Visible Milestones" data-ja="1. 何を追うのか：4つの見える節目" data-ko="1. 무엇을 추적하는가: 네 가지 단계" data-fr="1. Ce que l'on suit vraiment : quatre jalons visibles" data-es="1. Qué se sigue de verdad: cuatro hitos visibles">1. 跟單到底跟什麼：四個可見節點</h2>
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="節點" data-en="Milestone" data-ja="節目" data-ko="단계" data-fr="Jalon" data-es="Hito">節點</th>
+            <th data-zh="相對交期" data-en="Timing" data-ja="納期との関係" data-ko="납기 기준" data-fr="Délai relatif" data-es="Momento">相對交期</th>
+            <th data-zh="客戶應拿到什麼" data-en="What the Buyer Receives" data-ja="バイヤーが受け取るもの" data-ko="바이어가 받는 것" data-fr="Ce que reçoit l'acheteur" data-es="Qué recibe el comprador">客戶應拿到什麼</th>
+            <th data-zh="常見風險" data-en="Usual Risk" data-ja="よくあるリスク" data-ko="흔한 위험" data-fr="Risque courant" data-es="Riesgo habitual">常見風險</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="訂單確認" data-en="Order confirmation" data-ja="注文確認" data-ko="주문 확인" data-fr="Confirmation" data-es="Confirmación">訂單確認</td>
+            <td data-zh="下單後 1–2 天" data-en="1–2 days after PO" data-ja="発注後1〜2日" data-ko="발주 후 1–2일" data-fr="1 à 2 jours après le PO" data-es="1–2 días tras el pedido">下單後 1–2 天</td>
+            <td data-zh="規格書回籤、確認單（工藝、數量、單價、交期）" data-en="Signed spec sheet and confirmation with process, quantity, price and date" data-ja="仕様書の返簽と、工程・数量・単価・納期を記載した確認書" data-ko="사양서 회신 서명, 공정·수량·단가·납기 확인서" data-fr="Fiche technique signée et confirmation (procédé, quantité, prix, délai)" data-es="Ficha técnica firmada y confirmación con proceso, cantidad, precio y fecha">規格書回籤、確認單（工藝、數量、單價、交期）</td>
+            <td data-zh="版本混亂、文件理解偏差" data-en="Version mix-ups, misread artwork" data-ja="版の混乱、図面の読み違い" data-ko="버전 혼선, 도안 해석 오류" data-fr="Confusion de versions, lecture erronée" data-es="Confusión de versiones, lectura errónea">版本混亂、文件理解偏差</td>
+          </tr>
+          <tr>
+            <td data-zh="材料到位" data-en="Materials in house" data-ja="材料入荷" data-ko="자재 입고" data-fr="Matières réceptionnées" data-es="Material recibido">材料到位</td>
+            <td data-zh="交期前 7–12 天" data-en="7–12 days before ship date" data-ja="納期の7〜12日前" data-ko="납기 7–12일 전" data-fr="7 à 12 jours avant expédition" data-es="7–12 días antes del envío">交期前 7–12 天</td>
+            <td data-zh="紙張克重、線色、袋膜厚度確認" data-en="Confirmed paper weight, thread colour and film thickness" data-ja="紙の坪量、糸色、フィルム厚の確認" data-ko="종이 평량, 실 색상, 필름 두께 확인" data-fr="Grammage, couleur de fil et épaisseur de film confirmés" data-es="Gramaje, color de hilo y espesor de film confirmados">紙張克重、線色、袋膜厚度確認</td>
+            <td data-zh="指定材料缺貨、色卡未批" data-en="Specified material out of stock, colour unapproved" data-ja="指定材料の欠品、色見本の未承認" data-ko="지정 자재 결품, 색상 미승인" data-fr="Matière en rupture, coloris non validé" data-es="Material agotado, color sin aprobar">指定材料缺貨、色卡未批</td>
+          </tr>
+          <tr>
+            <td data-zh="首件確認" data-en="First article approval" data-ja="初品承認" data-ko="초품 승인" data-fr="Validation de la première pièce" data-es="Aprobación de primera pieza">首件確認</td>
+            <td data-zh="交期前 5–8 天" data-en="5–8 days before ship date" data-ja="納期の5〜8日前" data-ko="납기 5–8일 전" data-fr="5 à 8 jours avant expédition" data-es="5–8 días antes del envío">交期前 5–8 天</td>
+            <td data-zh="首件實拍、尺寸與顏色數據、書面批准" data-en="First-article photos, measured size and colour data, written approval" data-ja="初品の実物写真、寸法と色のデータ、書面承認" data-ko="초품 실물 사진, 치수·색상 데이터, 서면 승인" data-fr="Photos de la première pièce, données de taille et de couleur, accord écrit" data-es="Fotos de la primera pieza, datos de medida y color, aprobación escrita">首件實拍、尺寸與顏色數據、書面批准</td>
+            <td data-zh="未籤樣直接投產" data-en="Mass production started without signed sample" data-ja="見本承認なしでの量産開始" data-ko="승인 없이 양산 시작" data-fr="Production lancée sans témoin signé" data-es="Producción sin muestra firmada">未籤樣直接投產</td>
+          </tr>
+          <tr>
+            <td data-zh="出貨檢驗" data-en="Pre-shipment check" data-ja="出荷検査" data-ko="출하 검사" data-fr="Contrôle avant expédition" data-es="Inspección previa al envío">出貨檢驗</td>
+            <td data-zh="交期前 1–2 天" data-en="1–2 days before ship date" data-ja="納期の1〜2日前" data-ko="납기 1–2일 전" data-fr="1 à 2 jours avant expédition" data-es="1–2 días antes del envío">交期前 1–2 天</td>
+            <td data-zh="抽檢報告、裝箱單、嘜頭與外箱照片" data-en="Inspection report, packing list, mark and carton photos" data-ja="検査報告、パッキングリスト、マークと外箱の写真" data-ko="검사 보고서, 패킹리스트, 마크·외박스 사진" data-fr="Rapport de contrôle, liste de colisage, photos des marques et cartons" data-es="Informe de inspección, lista de empaque, fotos de marcas y cajas">抽檢報告、裝箱單、嘜頭與外箱照片</td>
+            <td data-zh="短裝、嘜頭錯、箱規不符" data-en="Short shipment, wrong mark, wrong carton spec" data-ja="数量不足、マーク違い、箱規格の不一致" data-ko="수량 부족, 마크 오류, 박스 규격 불일치" data-fr="Manquant, marquage erroné, format de carton non conforme" data-es="Faltante, marca errónea, formato de caja incorrecto">短裝、嘜頭錯、箱規不符</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="2. 一張進度表要有什麼字段" data-en="2. The Fields a Tracking Sheet Needs" data-ja="2. 進捗表に必要な項目" data-ko="2. 진행표에 필요한 항목" data-fr="2. Les champs d'un tableau de suivi" data-es="2. Los campos de una hoja de seguimiento">2. 一張進度表要有什麼字段</h2>
+      <ul>
+        <li data-zh="訂單號與客戶 PO 號，兩邊對得上" data-en="Our order number and your PO number, both matching" data-ja="当社の注文番号と貴社 PO 番号を突き合わせる" data-ko="당사 주문번호와 고객 PO 번호를 서로 맞춤" data-fr="Notre numéro de commande et votre numéro de PO, concordants" data-es="Nuestro número de pedido y su PO, coincidentes">訂單號與客戶 PO 號，兩邊對得上</li>
+        <li data-zh="產品與規格摘要：材質、工藝、尺寸、顏色" data-en="Item and spec summary: material, process, size, colour" data-ja="製品と仕様の要約：材質・工程・寸法・色" data-ko="제품·사양 요약: 소재, 공정, 치수, 색상" data-fr="Résumé article et spec : matière, procédé, taille, couleur" data-es="Resumen de artículo y especificación: material, proceso, medida, color">產品與規格摘要：材質、工藝、尺寸、顏色</li>
+        <li data-zh="數量與分批計劃，包括每批的可出貨日期" data-en="Quantity and split-shipment plan, with a ship-ready date per lot" data-ja="数量と分割出荷計画。各ロットの出荷可能日を含む" data-ko="수량과 분할 출하 계획, 로트별 출하 가능일 포함" data-fr="Quantité et plan d'expéditions partielles, avec date de disponibilité par lot" data-es="Cantidad y plan de envíos parciales, con fecha disponible por lote">數量與分批計劃，包括每批的可出貨日期</li>
+        <li data-zh="承諾交期與當前預計交期，兩列並排" data-en="Committed date and current forecast date, side by side" data-ja="約束納期と現時点の予測納期を並記" data-ko="약정 납기와 현재 예상 납기를 나란히 표기" data-fr="Date promise et date prévue actuelle, côte à côte" data-es="Fecha comprometida y fecha prevista actual, en paralelo">承諾交期與當前預計交期，兩列並排</li>
+        <li data-zh="當前節點與阻塞項，寫清責任方與解決日期" data-en="Current milestone and blockers, with owner and resolution date" data-ja="現在の節目と阻害要因。担当と解決予定日を明記" data-ko="현재 단계와 지연 요인, 담당자와 해결 날짜 명시" data-fr="Jalon en cours et points bloquants, avec responsable et date de résolution" data-es="Hito actual y bloqueos, con responsable y fecha de resolución">當前節點與阻塞項，寫清責任方與解決日期</li>
+        <li data-zh="下次彙報時間，以及所有附件的版本號" data-en="Next report date, plus a version number for every attachment" data-ja="次回報告の日時と、全添付ファイルの版番号" data-ko="다음 보고 시점과 모든 첨부 파일 버전 번호" data-fr="Prochaine date de report et numéro de version de chaque pièce jointe" data-es="Fecha del próximo reporte y número de versión de cada adjunto">下次彙報時間，以及所有附件的版本號</li>
+      </ul>
+      <p data-zh="字段的價值在於讓「現在卡在哪」一眼可見，而不是每次追問都要等對方去車間看一圈再回話。"
+         data-en="The point of these fields is that bottlenecks become visible at a glance, instead of waiting for someone to walk the floor before answering every question."
+         data-ja="項目を決めておく価値は、「今どこで止まっているか」が一目で分かることです。問い合わせるたびに担当者が現場を見に行ってから返答する、という状態を避けられます。"
+         data-ko="항목을 정하는 이유는 '지금 어디서 막혀 있는지'를 한눈에 보기 위해서입니다. 문의할 때마다 담당자가 현장을 확인한 뒤 답하는 상황을 피할 수 있습니다."
+         data-fr="L'intérêt de ces champs est de rendre les blocages visibles d'un coup d'œil, au lieu d'attendre que quelqu'un aille voir en atelier avant chaque réponse."
+         data-es="La utilidad de estos campos es que los bloqueos se ven de un vistazo, en lugar de esperar a que alguien recorra la planta antes de responder.">字段的價值在於讓「現在卡在哪」一眼可見，而不是每次追問都要等對方去車間看一圈再回話。</p>
+
+      <h2 data-zh="3. 彙報節奏：固定頻率比頻繁追問有效" data-en="3. Reporting Rhythm: A Fixed Cadence Beats Constant Chasing" data-ja="3. 報告のリズム：頻繁な催促より定時の報告" data-ko="3. 보고 주기: 잦은 독촉보다 정기 보고" data-fr="3. Rythme de reporting : une cadence fixe vaut mieux que les relances" data-es="3. Ritmo de reporte: una cadencia fija supera al acoso constante">3. 彙報節奏：固定頻率比頻繁追問有效</h2>
+      <ul>
+        <li data-zh="常規訂單每週固定兩次彙報，例如週二與週五，節點當天再加報一次" data-en="Two fixed reports a week on regular orders, say Tuesday and Friday, plus one on each milestone day" data-ja="通常案件は週2回の定時報告（例：火曜と金曜）。節目の当日は追加報告" data-ko="일반 주문은 주 2회 정기 보고(예: 화·금), 단계 당일에는 추가 보고" data-fr="Deux reports fixes par semaine, par exemple mardi et vendredi, plus un le jour de chaque jalon" data-es="Dos reportes fijos por semana, por ejemplo martes y viernes, más uno el día de cada hito">常規訂單每週固定兩次彙報，例如週二與週五，節點當天再加報一次</li>
+        <li data-zh="出現風險時改爲每日彙報，並在郵件標題寫明「風險」字樣" data-en="Switch to daily reporting when risk appears, and label the subject line with the word risk" data-ja="リスクが生じたら毎日報告に切り替え、件名に「リスク」と明記" data-ko="위험이 생기면 매일 보고로 전환하고 제목에 '위험' 표기" data-fr="Passez à un report quotidien en cas de risque, avec le mot risque dans l'objet" data-es="Pase a reporte diario cuando aparezca un riesgo y marque la palabra riesgo en el asunto">出現風險時改爲每日彙報，並在郵件標題寫明「風險」字樣</li>
+        <li data-zh="每次彙報控制在一頁內，照片不超過六張，先結論後附件" data-en="Keep each report to one page and under six photos, conclusion first, attachments after" data-ja="1回の報告は1ページ以内、写真は6枚まで。結論を先に、添付は後で" data-ko="보고는 한 페이지 이내, 사진 6장 이하, 결론을 먼저" data-fr="Un report par page, six photos au maximum, conclusion d'abord" data-es="Cada reporte en una página y con menos de seis fotos, primero la conclusión">每次彙報控制在一頁內，照片不超過六張，先結論後附件</li>
+        <li data-zh="電話或語音溝通的結論，24 小時內用郵件補一份書面確認" data-en="Follow any phone or voice agreement with a written confirmation within 24 hours" data-ja="電話や音声でまとまった内容は、24時間以内にメールで書面確認" data-ko="전화·음성으로 정한 내용은 24시간 내 이메일로 서면 확인" data-fr="Tout accord téléphonique ou vocal doit être confirmé par écrit sous 24 heures" data-es="Todo acuerdo telefónico o de voz se confirma por escrito en 24 horas">電話或語音溝通的結論，24 小時內用郵件補一份書面確認</li>
+      </ul>
+      <p data-zh="最關鍵的一條約定：任何交期變更都必須書面確認。聊天窗口裏的「應該沒問題」不構成承諾，寫進郵件或確認單的回籤纔算。"
+         data-en="The single most important rule: every date change needs written confirmation. A reassuring message in a chat window is not a commitment — a reply to an email or a signed confirmation is."
+         data-ja="最も重要な取り決めは、納期変更は必ず書面で確認することです。チャットの「たぶん大丈夫」は約束になりません。メールへの返信や確認書の返簽が約束です。"
+         data-ko="가장 중요한 원칙은 모든 납기 변경은 서면으로 확인하는 것입니다. 채팅의 '아마 문제없을 것'은 약속이 아닙니다. 이메일 회신이나 확인서 서명이 약속입니다."
+         data-fr="La règle essentielle : tout changement de date exige une confirmation écrite. Un « ça devrait aller » dans une messagerie n'est pas un engagement ; une réponse à un e-mail ou une confirmation signée l'est."
+         data-es="La regla esencial: todo cambio de fecha requiere confirmación escrita. Un «debería ir bien» en un chat no es un compromiso; una respuesta por correo o una confirmación firmada sí lo es.">最關鍵的一條約定：任何交期變更都必須書面確認。聊天窗口裏的「應該沒問題」不構成承諾，寫進郵件或確認單的回籤纔算。</p>
+
+      <h2 data-zh="4. 延期預警：三級信號與對應動作" data-en="4. Delay Alerts: Three Levels and What to Do" data-ja="4. 遅延アラート：3段階と対応" data-ko="4. 지연 경보: 3단계와 대응" data-fr="4. Alerte retard : trois niveaux et les actions" data-es="4. Alerta de retraso: tres niveles y qué hacer">4. 延期預警：三級信號與對應動作</h2>
+      <ul>
+        <li data-zh="<strong>一級（黃）：</strong>材料未按期到廠，或首件未按期確認。要求當天給出補救方案與新的節點日期"
+            data-en="<strong>Level one (yellow):</strong> material late to the factory or first article not approved on time. Demand a recovery plan and new milestone dates the same day"
+            data-ja="<strong>第1段階（黄）：</strong>材料の入荷遅れ、または初品承認の遅延。当日中に挽回策と新たな節目の日付を求める"
+            data-ko="<strong>1단계(황색):</strong> 자재 입고 지연 또는 초품 승인 지연. 당일 내 보완 계획과 새 단계 날짜를 요구"
+            data-fr="<strong>Niveau un (jaune) :</strong> matière en retard ou première pièce non validée. Exigez le jour même un plan de rattrapage et de nouvelles dates"
+            data-es="<strong>Nivel uno (amarillo):</strong> material con retraso o primera pieza sin aprobar. Exija el mismo día un plan de recuperación y nuevas fechas"><strong>一級（黃）：</strong>材料未按期到廠，或首件未按期確認。要求當天給出補救方案與新的節點日期</li>
+        <li data-zh="<strong>二級（橙）：</strong>預計延期三到五天。啓動分批出貨，先把不影響上架的品類發出"
+            data-en="<strong>Level two (orange):</strong> three to five days late is forecast. Start split shipments and release the items that do not block your launch first"
+            data-ja="<strong>第2段階（橙）：</strong>3〜5日の遅延見込み。分割出荷を開始し、立ち上げに影響しない品番から先に出す"
+            data-ko="<strong>2단계(주황):</strong> 3~5일 지연 예상. 분할 출하를 시작해 출시에 영향 없는 품목부터 발송"
+            data-fr="<strong>Niveau deux (orange) :</strong> trois à cinq jours de retard prévus. Lancez des expéditions partielles et libérez d'abord les articles non bloquants"
+            data-es="<strong>Nivel dos (naranja):</strong> se prevén de tres a cinco días de retraso. Inicie envíos parciales y libere primero los artículos que no bloquean el lanzamiento"><strong>二級（橙）：</strong>預計延期三到五天。啓動分批出貨，先把不影響上架的品類發出</li>
+        <li data-zh="<strong>三級（紅）：</strong>預計延期超過一週或材料缺貨。立刻評估替代工藝與替代材料，例如織嘜改印嘜、燙金改絲印，並同步下游"
+            data-en="<strong>Level three (red):</strong> more than a week late or material unavailable. Assess alternative processes and materials immediately — a printed label instead of woven, screen print instead of foil — and inform everyone downstream"
+            data-ja="<strong>第3段階（赤）：</strong>1週間以上の遅延、または材料欠品。代替工程・代替材料を即検討し（織りラベル→印刷ラベル、箔押し→スクリーン印刷など）、後工程にも共有する"
+            data-ko="<strong>3단계(적색):</strong> 1주 이상 지연 또는 자재 결품. 대체 공정과 대체 자재를 즉시 검토하고(직조→인쇄 라벨, 박→스크린 인쇄) 후속 공정에 공유"
+            data-fr="<strong>Niveau trois (rouge) :</strong> plus d'une semaine de retard ou matière indisponible. Évaluez immédiatement procédés et matières de substitution (étiquette imprimée au lieu de tissée, sérigraphie au lieu de dorure) et informez l'aval"
+            data-es="<strong>Nivel tres (rojo):</strong> más de una semana de retraso o material no disponible. Evalúe de inmediato procesos y materiales alternativos (etiqueta impresa en lugar de tejida, serigrafía en lugar de estampado en caliente) e informe aguas abajo"><strong>三級（紅）：</strong>預計延期超過一週或材料缺貨。立刻評估替代工藝與替代材料，例如織嘜改印嘜、燙金改絲印，並同步下游</li>
+      </ul>
+      <div class="callout" data-zh="分批出貨通常比整單等齊更划算：先上架的款式能帶動銷售，晚到的部分走補貨物流即可，整批壓倉的持有成本往往更高。"
+           data-en="Split shipments usually beat waiting for the whole order: the styles that land first start selling, the balance follows as replenishment, and holding the entire order in the warehouse rarely pays."
+           data-ja="分割出荷は、全量が揃うのを待つより通常は有利です。先に入った品番は売り始められ、残りは追加便として送れます。全量を倉庫で寝かせる保管コストは高くつきます。"
+           data-ko="분할 출하는 전체를 기다리는 것보다 대개 유리합니다. 먼저 도착한 품목은 판매를 시작하고 나머지는 보충 물류로 보내면 됩니다. 전량을 창고에 묶어 두는 비용이 더 큽니다."
+           data-fr="Les expéditions partielles battent souvent l'attente de la commande complète : les modèles arrivés en premier se vendent, le solde suit en réassort, et stocker l'ensemble coûte rarement moins cher."
+           data-es="Los envíos parciales suelen superar el esperar el pedido completo: los modelos que llegan antes empiezan a venderse, el resto va como reposición y retener todo en almacén rara vez compensa.">分批出貨通常比整單等齊更划算：先上架的款式能帶動銷售，晚到的部分走補貨物流即可，整批壓倉的持有成本往往更高。</div>
+
+      <h2 data-zh="5. 客戶側最容易踩的三個坑" data-en="5. Three Mistakes Buyers Make Most" data-ja="5. バイヤー側が最も陥りやすい3つの落とし穴" data-ko="5. 바이어가 가장 자주 하는 세 가지 실수" data-fr="5. Trois erreurs fréquentes côté acheteur" data-es="5. Tres errores habituales del comprador">5. 客戶側最容易踩的三個坑</h2>
+      <ul>
+        <li data-zh="只盯最終交期，不盯中間節點，直到交期前三天才發現文件還沒批" data-en="Watching only the final date and ignoring milestones, then discovering three days out that the artwork was never approved" data-ja="最終納期だけを見て中間の節目を見ず、納期3日前にファイル未承認に気づく" data-ko="최종 납기만 보고 중간 단계를 놓쳐, 납기 3일 전에 파일 미승인을 발견" data-fr="Ne surveiller que la date finale et découvrir trois jours avant que le fichier n'a jamais été validé" data-es="Vigilar solo la fecha final y descubrir tres días antes que el archivo nunca se aprobó">只盯最終交期，不盯中間節點，直到交期前三天才發現文件還沒批</li>
+        <li data-zh="多版本並行：設計師改稿後只發了一張聊天截圖，工廠按舊版繼續生產" data-en="Parallel versions: the designer sends a chat screenshot with a change while the factory keeps producing the approved old version" data-ja="版が並立：デザイナーがチャット画像で修正を伝え、工場は承認済みの旧版で生産を続ける" data-ko="버전 병행: 디자이너가 채팅 캡처로 수정을 전달하고 공장은 승인된 구버전으로 생산 지속" data-fr="Versions parallèles : le designer envoie une capture d'écran de la modification, l'usine poursuit avec l'ancienne version validée" data-es="Versiones paralelas: el diseñador envía una captura del cambio y la fábrica sigue con la versión antigua aprobada">多版本並行：設計師改稿後只發了一張聊天截圖，工廠按舊版繼續生產</li>
+        <li data-zh="把「沒有消息」當成「進展順利」，實際上彙報頻率應該寫進訂單條款，成爲雙方的義務" data-en="Reading silence as progress, when report frequency should be written into the order terms as an obligation on both sides" data-ja="「連絡がない＝順調」と受け取ること。報告頻度は注文条件に明記し、双方の義務とすべきです" data-ko="'연락이 없다'를 '순조롭다'로 해석하는 것. 보고 주기는 주문 조건에 명시해 양측 의무로 삼아야 합니다" data-fr="Prendre le silence pour un bon signe, alors que la fréquence de reporting devrait figurer au contrat comme obligation réciproque" data-es="Interpretar el silencio como buena señal, cuando la frecuencia de reporte debería figurar en las condiciones como obligación mutua">把「沒有消息」當成「進展順利」，實際上彙報頻率應該寫進訂單條款，成爲雙方的義務</li>
+      </ul>
+
+      <h2 data-zh="6. 出貨前 48 小時清單" data-en="6. The 48-Hour Pre-Shipment Checklist" data-ja="6. 出荷48時間前チェックリスト" data-ko="6. 출하 48시간 전 체크리스트" data-fr="6. La liste des 48 heures avant expédition" data-es="6. La lista de 48 horas antes del envío">6. 出貨前 48 小時清單</h2>
+      <ul>
+        <li data-zh="抽檢數量是否達到約定比例，判定標準與 AQL 是否寫清" data-en="Sample size meets the agreed ratio, with the acceptance criteria and AQL written down" data-ja="抜取数が取り決めた比率に達しているか。判定基準と AQL が明記されているか" data-ko="샘플 수량이 합의 비율에 도달했는지, 판정 기준과 AQL이 명시되었는지" data-fr="Taille d'échantillon conforme au ratio convenu, critères et AQL écrits noir sur blanc" data-es="Tamaño de muestra según la proporción acordada, con criterios y AQL por escrito">抽檢數量是否達到約定比例，判定標準與 AQL 是否寫清</li>
+        <li data-zh="顏色、尺寸、克重是否與籤樣一致，差異是否在允差內" data-en="Colour, size and weight match the signed sample, with deviations inside tolerance" data-ja="色・寸法・坪量が署名見本と一致し、差異が許容範囲内か" data-ko="색상·치수·평량이 서명 견본과 일치하고 편차가 허용 범위 내인지" data-fr="Couleur, taille et grammage conformes au témoin signé, écarts dans la tolérance" data-es="Color, medida y gramaje coinciden con la muestra firmada y los desvíos están en tolerancia">顏色、尺寸、克重是否與籤樣一致，差異是否在允差內</li>
+        <li data-zh="外箱嘜頭、箱嘜與裝箱單三者一致，箱規與堆碼要求相符" data-en="Carton marks, box labels and packing list agree, and carton specs match palletising needs" data-ja="外箱マーク、箱ラベル、パッキングリストが三者一致し、箱規格が積み付け要件に合うか" data-ko="외박스 마크, 박스 라벨, 패킹리스트가 일치하고 박스 규격이 적재 요건에 맞는지" data-fr="Marques, étiquettes de carton et liste de colisage concordent, et les formats correspondant à la palettisation" data-es="Marcas, etiquetas de caja y lista de empaque coinciden, y el formato se ajusta al paletizado">外箱嘜頭、箱嘜與裝箱單三者一致，箱規與堆碼要求相符</li>
+        <li data-zh="配件是否配套齊全：吊繩、別針、膠袋、備用扣等" data-en="Accessories complete: cords, pins, poly bags, spare fasteners" data-ja="付属品の揃い：吊りひも、ピン、ポリ袋、予備の留め具など" data-ko="부속품 완비: 끈, 핀, 비닐봉투, 예비 잠금구" data-fr="Accessoires complets : cordons, épingles, sachets, attaches de rechange" data-es="Accesorios completos: cordones, alfileres, bolsas, cierres de repuesto">配件是否配套齊全：吊繩、別針、膠袋、備用扣等</li>
+        <li data-zh="出貨文件齊備：裝箱單、商業發票，以及客戶要求的檢測報告或聲明" data-en="Shipping documents ready: packing list, commercial invoice and any test reports or declarations the buyer requires" data-ja="出荷書類の準備：パッキングリスト、商業送り状、顧客が求める試験報告や宣言書" data-ko="출하 서류 준비: 패킹리스트, 상업송장, 고객이 요구하는 시험 성적서·선언서" data-fr="Documents prêts : liste de colisage, facture commerciale et rapports d'essai ou déclarations exigés" data-es="Documentos listos: lista de empaque, factura comercial y los informes o declaraciones que exija el cliente">出貨文件齊備：裝箱單、商業發票，以及客戶要求的檢測報告或聲明</li>
+      </ul>
+
+      <div class="callout" data-zh="本文按輔料出口實務整理，各節點的具體天數取決於工藝複雜度、材料庫存與季節產能，實際執行以訂單確認單上的書面約定爲準。"
+           data-en="This guide follows export practice for trims. Exact milestone days depend on process complexity, material stock and seasonal capacity — the written terms on the order confirmation govern."
+           data-ja="本記事は副資材輸出の実務に基づきます。各節目の日数は工程の複雑さ、材料在庫、季節的な生産能力によります。実際の運用は注文確認書の書面条件に従います。"
+           data-ko="이 글은 부자재 수출 실무를 정리한 것입니다. 각 단계의 일수는 공정 복잡도, 자재 재고, 계절 생산 능력에 따라 달라지며 실제 적용은 주문 확인서의 서면 조건을 따릅니다."
+           data-fr="Ce guide suit la pratique export des accessoires. Les jours exacts dépendent de la complexité, du stock et de la capacité saisonnière ; les conditions écrites de la confirmation de commande prévalent."
+           data-es="Esta guía sigue la práctica de exportación de accesorios. Los días exactos dependen de la complejidad, el stock y la capacidad estacional; prevalecen las condiciones escritas de la confirmación del pedido.">本文按輔料出口實務整理，各節點的具體天數取決於工藝複雜度、材料庫存與季節產能，實際執行以訂單確認單上的書面約定爲準。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 글" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="garment-trims-lead-time-guide.html" data-zh="服裝輔料交期怎麼看" data-en="Apparel Trims Lead Times Explained" data-ja="衣料副資材の納期の見方" data-ko="의류 부자재 납기 이해" data-fr="Comprendre les délais des accessoires" data-es="Cómo leer los plazos de los accesorios">服裝輔料交期怎麼看</a></li>
+        <li><a href="garment-trims-sampling-process.html" data-zh="服裝輔料打樣流程" data-en="Apparel Trims Sampling Process" data-ja="衣料副資材のサンプル作成フロー" data-ko="의류 부자재 샘플 제작 절차" data-fr="Le processus d'échantillonnage des accessoires" data-es="El proceso de muestreo de accesorios">服裝輔料打樣流程</a></li>
+        <li><a href="garment-trims-order-guide.html" data-zh="服裝輔料下單指南" data-en="Apparel Trims Order Guide" data-ja="衣料副資材の発注ガイド" data-ko="의류 부자재 발주 가이드" data-fr="Guide de commande d'accessoires" data-es="Guía para pedir accesorios">服裝輔料下單指南</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="想把跟單節點寫進訂單？把您的輔料清單、目標交期與目標市場發給我們，我們回一份含節點日期、分批方案與檢驗方式的確認單，並按周彙報進度。"
+           data-en="Want milestone tracking built into your order? Send your trims list, target dates and destination market — we reply with a confirmation carrying milestone dates, a split-shipment plan and the inspection method, then report weekly."
+           data-ja="受発注の節目を注文に組み込みませんか。副資材リスト、目標納期、販売市場をお送りください。節目の日付、分割出荷案、検査方法を記載した確認書をお送りし、週次で進捗を報告します。"
+           data-ko="수주 단계를 주문에 반영하고 싶으신가요? 부자재 목록, 목표 납기, 판매 시장을 보내주시면 단계 날짜와 분할 출하안, 검사 방식을 담은 확인서를 보내드리고 매주 진행 상황을 보고합니다."
+           data-fr="Vous voulez intégrer le suivi des jalons à votre commande ? Envoyez la liste d'accessoires, les dates cibles et le marché : nous répondons par une confirmation avec jalons, plan d'expéditions partielles et méthode de contrôle, puis un report hebdomadaire."
+           data-es="¿Quieres incluir el seguimiento de hitos en tu pedido? Envía la lista de accesorios, las fechas objetivo y el mercado: respondemos con una confirmación con hitos, plan de envíos parciales y método de inspección, y reportamos cada semana.">想把跟單節點寫進訂單？把您的輔料清單、目標交期與目標市場發給我們，我們回一份含節點日期、分批方案與檢驗方式的確認單，並按周彙報進度。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取輔料跟單方案 →" data-en="Request a tracking plan →" data-ja="進捗管理体制の相談 →" data-ko="진행 관리 방안 상담 →" data-fr="Demander un plan de suivi →" data-es="Solicitar un plan de seguimiento →">獲取輔料跟單方案 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
