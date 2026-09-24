@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>춘절과 부자재 납기 계획: 휴무 전에 생산 물량을 확보하는 방법 | TAGE</title>
+<meta name="description" content="춘절 전후 부자재 납기 계획 가이드. 마감·휴무·재가동 세 단계, 해상·항공 운임과 선복 변화, 입고일에서 역산한 6단계, 네 가지 리스크 대응, 휴무 전 재고 확보 품목과 발주 전 체크리스트를 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/chinese-new-year-trims-order-planning.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/chinese-new-year-trims-order-planning.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "春節排產與輔料交期規劃：海外買家怎麼提前鎖定旺季產能",
+     "item": "https://taigetag.com/blog/chinese-new-year-trims-order-planning.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "春節排產與輔料交期規劃：海外買家怎麼提前鎖定旺季產能",
+   "url": "https://taigetag.com/blog/chinese-new-year-trims-order-planning.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/chinese-new-year-trims-order-planning.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>춘절 생산 계획</span></div>
+      <h1>춘절과 부자재 납기 계획: 휴무 전에 생산 물량을 확보하는 방법</h1>
+      <p>TAGE 패키징 · 2026년 9월 24일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 납기는 생산만 보면 10~25일이지만 실제 변수는 춘절(설)입니다. 공장은 휴무 2~4주 전부터 생산 일정이 차고, 휴무 후 정상 생산 능력으로 회복하는 데 다시 2~3주가 걸립니다. 게다가 12월 중하순에는 해상·항공 운임이 오르고 선복도 부족해집니다. 해외 바이어가 납기 불일치를 알아차리는 시점은 대개 12월이며, 그때는 출시 일정을 지키기 어렵습니다. 이 글은 춘절 전후 발주 리듬, 역산 일정표, 네 가지 리스크와 대응, 견적 요청에 그대로 옮겨 쓸 수 있는 체크리스트를 정리합니다.</p>
+
+      <p>이 글은 9~11월에 발주를 확정해야 하는 이유, 휴무의 세 단계, 역산 일정표, 네 가지 리스크와 대응, 휴무 전에 재고를 확보할 부자재, 발주 전 체크리스트 순서로 구성됩니다.</p>
+
+      <h2>1. 춘절 주문을 9~11월에 확정해야 하는 이유</h2>
+
+      <p>춘절의 영향은 &#x27;며칠 더 기다리는 것&#x27;이 아닙니다. 공급망 전체가 같은 시점에 동시에 조여집니다. 가을에 미리 리듬을 정해야 하는 이유는 네 가지입니다.</p>
+
+      <ul>
+        <li><strong>생산 일정이 일찍 잠깁니다:</strong> 휴무 2~4주 전에는 인쇄·직조·봉제 가방 라인이 동시에 몰려 사양이 확정되고 계약금이 입금된 주문만 받습니다. 뒤늦은 끼어들기는 거의 불가능합니다.</li>
+        <li><strong>운임과 선복이 동시에 조여집니다:</strong> 12월 중하순에는 해상·항공 운임이 연중 최고치에 이르고 선복은 먼저 예약한 쪽이 가져갑니다. 휴무 후에는 적체 화물이 다시 줄을 섭니다.</li>
+        <li><strong>확인 기간은 줄일 수 없습니다:</strong> 샘플 3~7일에 내부 승인과 외국어 라벨 교정까지 더하면 생산 자체보다 시간이 더 걸리는 경우가 많습니다.</li>
+        <li><strong>재가동은 계단식입니다:</strong> 휴무 후 1~3주는 기존 직원 복귀와 신입 교육에 쓰여 초기 생산 능력은 보통의 50~60% 수준입니다.</li>
+      </ul>
+
+      <h2>2. 춘절 휴무의 세 단계</h2>
+
+      <p>춘절을 세 단계로 나누면 어떤 주문을 휴무 전에 보내야 하고 어떤 것을 이후로 미룰 수 있는지 분명해집니다.</p>
+
+      <table>
+        <tr>
+          <th>단계</th>
+          <th>기간</th>
+          <th>공급사 측 실제 상황</th>
+          <th>바이어에게 미치는 영향</th>
+        </tr>
+        <tr>
+          <td>마감 몰이 기간</td>
+          <td>휴무 2~4주 전</td>
+          <td>생산 일정 만재, 잔업 지속, 확정 주문과 기존 고객만 수용</td>
+          <td>이 시점 발주는 휴무 전 출하에 거의 못 들어갑니다</td>
+        </tr>
+        <tr>
+          <td>휴무 기간</td>
+          <td>휴무 3~10일 전부터 이후 5~10일까지</td>
+          <td>공장 정지, 대부분 당직만 남고 일부 공급사는 원격으로 메일 대응</td>
+          <td>샘플, 생산, 출하는 전면 중단되고 소통만 가능</td>
+        </tr>
+        <tr>
+          <td>재가동 상승 기간</td>
+          <td>휴무 후 1~3주</td>
+          <td>직원 순차 복귀, 신입 교육, 설비 재조정</td>
+          <td>납기는 평시의 약 1.5배로 계산</td>
+        </tr>
+      </table>
+
+      <p>날짜는 음력 기준이며 2027년 춘절은 2월 상순입니다. 구체적인 휴무 일수와 대체 근무는 전년도 11~12월에 국무원 판공청이 발표하며 보통 7~8일입니다. 다만 실제 휴무 기간은 법정 연휴보다 긴 경우가 많고 조기 가동 중단과 지연 재개도 흔하므로, 법정 달력이 아니라 공장 달력으로 계획해야 합니다.</p>
+
+      <h2>3. 역산 일정표: 필요한 입고일에서 거꾸로 계산</h2>
+
+      <p>발주일부터 앞으로 세지 말고 필요한 입고일에서 거꾸로 계산하십시오. 아래 리드타임은 둥관에서 해외 소매 출시를 기준으로 한 값이며 운송 방식에 따라 조정하면 됩니다.</p>
+
+      <table>
+        <tr>
+          <th>주요 단계</th>
+          <th>권장 리드타임</th>
+        </tr>
+        <tr>
+          <td>필요한 입고일(기준)</td>
+          <td>0 (모든 일정은 이 날부터 역산)</td>
+        </tr>
+        <tr>
+          <td>출하일</td>
+          <td>해상 25~40일 전, 항공은 5~10일 전 예약하고 운송 2~5일</td>
+        </tr>
+        <tr>
+          <td>양산 완료일</td>
+          <td>생산 10~25일(공법과 수량에 따라)</td>
+        </tr>
+        <tr>
+          <td>생산 시작일</td>
+          <td>휴무 후 시작이면 2~3주 상승 여유를 추가</td>
+        </tr>
+        <tr>
+          <td>샘플 승인</td>
+          <td>샘플 3~7일과 내부 승인 3~7일</td>
+        </tr>
+        <tr>
+          <td>발주와 계약금</td>
+          <td>샘플 승인 즉시 실행해 생산 일정 확보</td>
+        </tr>
+      </table>
+
+      <p>예: 2027년 3월 1일 출시를 원하면 해상 선적은 1월 15일경 출항해야 하고 양산은 1월 하순에 끝나야 합니다. 즉 12월 상순에 발주해야 합니다. 같은 주문을 휴무 후 생산으로 돌리면 입고는 보통 4월로 밀립니다. 출시일을 고정하려면 휴무 전 출하가 가장 안전합니다.</p>
+
+      <h2>4. 네 가지 리스크와 대응</h2>
+
+      <ul>
+        <li><strong>생산 물량 경쟁:</strong> 휴무 2~4주 전이 가장 빡빡합니다. 계약금을 일찍 지급해 일정을 확보하고, 휴무 전 출하가 필수인 품목을 우선순위로 명시해 일반 주문에 밀리지 않게 하십시오.</li>
+        <li><strong>운임 급등과 선복 부족:</strong> 12월 중하순에는 운임이 오르고 선복은 선착순입니다. 일찍 예약하고, 부자재는 가급적 의류 화물과 합쳐 통관과 운임을 한 번으로 줄이십시오.</li>
+        <li><strong>재가동 시점 불확실:</strong> 복귀율은 해마다 다르고 인력난이 심하면 회복이 늦습니다. 출시에 중요한 품목은 휴무 전에 출하하고, 휴무 후 납기는 예비로만 두고 1.5배 여유를 두십시오.</li>
+        <li><strong>날씨와 항만:</strong> 겨울 강풍과 안개는 선편 지연과 터미널 혼잡을 일으킵니다. 출하 계획에 5~7일 여유를 두고 중요한 단계는 항공으로 보완하십시오.</li>
+      </ul>
+
+      <h2>5. 휴무 전에 재고를 확보할 부자재</h2>
+
+      <p>판단 기준은 두 가지입니다. 버전의 안정성과 자금 부담을 감당할 수 있는지입니다.</p>
+
+      <ul>
+        <li><strong>3~6개월분을 미리 확보하기 좋은 품목:</strong> 세탁 표시 라벨, 메인 라벨, 직조 라벨, 표준 포장 비닐, 끈과 고정구. 버전 변경이 적고 부피가 작아 미리 생산하면 휴무 전 인상과 대기를 피할 수 있습니다.</li>
+        <li><strong>대량 재고에 부적합:</strong> 행택은 가격, 프로모션, 시즌 정보가 들어가 자주 바뀝니다. 용지와 가공 일정을 먼저 확보하고 분기별로 분할 출하하는 것이 합리적입니다.</li>
+        <li><strong>&#x27;연간 수량 확정 + 분할 납품&#x27;도 협의 가능:</strong> 연간 물량을 한 번에 정하고 출시 일정에 맞춰 나눠 받으면 물량 할인을 받으면서 자사 창고에 재고를 쌓지 않아도 됩니다.</li>
+      </ul>
+
+      <h2>6. 발주 전 체크리스트</h2>
+
+      <ul>
+        <li>필요한 입고일과 최종 출하일, 그리고 승인자</li>
+        <li>샘플 승인 여부와 라벨 문구(외국어 포함) 확정 여부</li>
+        <li>수량과 납품 방식: 일괄인지 분할인지</li>
+        <li>운송 방식과 예상 운임: 해상, 항공, 특송</li>
+        <li>우선순위: 휴무 전 출하 필수 품목과 이후 가능 품목</li>
+        <li>대안: 자재 부족이나 긴급 변경 시 대체 소재와 색상 합의</li>
+      </ul>
+
+      <div class="callout"><strong>💡 팁:</strong> 춘절에서 확실한 것은 매년 온다는 점, 그리고 휴무 일정 발표가 늦다는 점입니다. &#x27;휴무 전 출하&#x27;를 기본안으로, 휴무 후 납기를 예비안으로 두는 편이 출시일을 지키기 쉽습니다. 당사 생산 일정은 휴무 한 달 전에 차므로 봄 시즌 사양은 11월 중순까지 확정하시길 권합니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-lead-time-guide.html">의류 부자재 납기 가이드: 샘플부터 양산까지</a></li>
+        <li><a href="small-batch-fast-reorder-trims.html">소량 신속 재주문</a></li>
+        <li><a href="garment-trims-inventory-management.html">부자재 재고 관리</a></li>
+        <li><a href="garment-trims-order-tracking-guide.html">부자재 주문 진행 추적 가이드</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>봄 시즌 부자재 생산 일정을 확보하시겠습니까? 품목, 수량, 필요한 입고일과 목표 시장을 보내주시면 춘절 일정을 반영한 생산·출하 계획을 제안합니다. 샘플 3~7일, 양산 10~25일, 휴무 전 물량은 선착순입니다.</p>
+        <a class="cta-btn" href="../contact.html">춘절 전 생산 계획 상담 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
