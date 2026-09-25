@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""2026-09-25 早间批次线上验证：
+"""2026-09-25 下午批次线上验证：
 1) 无头 Chrome dump DOM → 校验 2 篇新文章 × 6 语言的 title / h1 渲染；
 2) curl 线上 sitemap.xml → 确认 2 篇 × 6 语 URL 已上线；
-3) 线上 main.js BUST_VERSION = 108。
+3) 线上 main.js BUST_VERSION = 109。
 """
 import os, re, subprocess, sys, time
 
@@ -12,24 +12,24 @@ CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 TMP = os.path.join(os.environ["LOCALAPPDATA"], "Temp")
 os.chdir(TMP)
 
-SLUGS = ["nonwoven-canvas-bag-guide.html", "certification-claims-label-guide.html"]
+SLUGS = ["footwear-luggage-trims-guide.html", "trim-artwork-copyright-guide.html"]
 LANGS = ["zh", "en", "ja", "ko", "fr", "es"]
 BASE = "https://taigetag.com"
-V = "108"
+V = "109"
 
 EXPECT = {
-    ("nonwoven-canvas-bag-guide.html", "zh"): "不織布袋與帆布袋定製指南",
-    ("nonwoven-canvas-bag-guide.html", "en"): "Canvas Bag Guide",
-    ("nonwoven-canvas-bag-guide.html", "ja"): "不織布バッグとキャンバスバッグ",
-    ("nonwoven-canvas-bag-guide.html", "ko"): "부직포·캔버스 가방",
-    ("nonwoven-canvas-bag-guide.html", "fr"): "Guide des sacs non tissés",
-    ("nonwoven-canvas-bag-guide.html", "es"): "Guía de bolsas de non tejido",
-    ("certification-claims-label-guide.html", "zh"): "吊牌認證標誌與環保聲明指南",
-    ("certification-claims-label-guide.html", "en"): "Certification Logos and Green Claims",
-    ("certification-claims-label-guide.html", "ja"): "認証ロゴと環境訴求",
-    ("certification-claims-label-guide.html", "ko"): "행택 인증 로고와 친환경 문구",
-    ("certification-claims-label-guide.html", "fr"): "Logos de certification",
-    ("certification-claims-label-guide.html", "es"): "Logos de certificación",
+    ("footwear-luggage-trims-guide.html", "zh"): "鞋類與箱包輔料標籤指南",
+    ("footwear-luggage-trims-guide.html", "en"): "Bag Trim Labels",
+    ("footwear-luggage-trims-guide.html", "ja"): "靴・バッグ副資材ラベルガイド",
+    ("footwear-luggage-trims-guide.html", "ko"): "신발·가방 부자재 라벨 가이드",
+    ("footwear-luggage-trims-guide.html", "fr"): "accessoires pour chaussures et sacs",
+    ("footwear-luggage-trims-guide.html", "es"): "accesorios para calzado y bolsos",
+    ("trim-artwork-copyright-guide.html", "zh"): "吊牌與輔料印刷的版權與商標授權指南",
+    ("trim-artwork-copyright-guide.html", "en"): "Copyright and Trademark Clearance",
+    ("trim-artwork-copyright-guide.html", "ja"): "タグ・副資材印刷の著作権と商標ガイド",
+    ("trim-artwork-copyright-guide.html", "ko"): "행택·부자재 인쇄의 저작권과 상표 가이드",
+    ("trim-artwork-copyright-guide.html", "fr"): "marques pour",
+    ("trim-artwork-copyright-guide.html", "es"): "Derechos de autor y marcas",
 }
 
 
@@ -41,7 +41,7 @@ print("== 1) 线上 DOM 渲染（无头 Chrome） ==")
 bad = 0
 for slug in SLUGS:
     for lang in LANGS:
-        out = "dom_am_20260925_%s_%s.html" % (lang, slug.replace(".html", ""))
+        out = "dom_pm_20260925_%s_%s.html" % (lang, slug.replace(".html", ""))
         if os.path.exists(out):
             os.remove(out)
         with open(out, "w", encoding="utf-8") as fh:
@@ -63,7 +63,7 @@ for slug in SLUGS:
             bad += 1
 
 print("== 2) 线上 sitemap.xml ==")
-sp = os.path.join(TMP, "sitemap_am_20260925.xml")
+sp = os.path.join(TMP, "sitemap_pm_20260925.xml")
 subprocess.run(["curl", "-s", "--noproxy", "*", "-o", sp, "%s/sitemap.xml?cb=%d" % (BASE, int(time.time()))],
                timeout=120)
 sm = open(sp, encoding="utf-8", errors="replace").read()
@@ -78,7 +78,7 @@ for slug in SLUGS:
 print("  新 URL 缺失数 = %d" % miss)
 
 print("== 3) 线上 main.js BUST_VERSION ==")
-mj = os.path.join(TMP, "main_am_20260925.js")
+mj = os.path.join(TMP, "main_pm_20260925.js")
 subprocess.run(["curl", "-s", "--noproxy", "*", "-o", mj, "%s/js/main.js?cb=%d" % (BASE, int(time.time()))],
                timeout=120)
 js = open(mj, encoding="utf-8", errors="replace").read()
