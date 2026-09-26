@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣料副資材の発注数量と単位換算ガイド：ヤード・メートル・ダース・ロールの計算 | TAGE</title>
+<meta name="description" content="衣料副資材の発注数量と単位換算ガイド。BOMから1着あたりの使用量を算出し、ヤード・メートル・ダース・ロールの換算、品目別ロス率、最小ロットと倍数、過不足納入の検収基準、そのまま見積りメールに使える数量確認シートを解説します。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-quantity-unit-conversion.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料訂購數量與單位換算指南：碼/米/卷/打怎麼算，損耗率留多少",
+     "item": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料訂購數量與單位換算指南：碼/米/卷/打怎麼算，損耗率留多少",
+   "url": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>発注数量と単位換算</span></div>
+      <h1>衣料副資材の発注数量と単位換算ガイド：ヤード・メートル・ダース・ロールの計算</h1>
+      <p>泰閣包装 · 2026年9月26日更新</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>副資材の発注で最も失敗しやすいのは価格ではなく数量です。3,000着の生産に対して織りラベルを3,000枚だけ発注すると、裁ち直し・サイズ変更・付け替えが発生した時点で不足します。また、ヤードで見積もった数量をメートル単価の工場に伝えると、実際の入荷は約8%少なくなります。本記事では、1着あたりの使用量（単耗）の計算方法、主要な取引単位の換算、多めに発注すべきロス率、最小ロットと過不足納入の考え方を整理し、そのまま見積り依頼メールに貼れる数量確認シートを掲載します。</p>
+
+      <p>数量を間違えると、多くの場合単価以上のコストになります。追加発注は新たな生産枠を取り直すことになり、前ロットとの色差が出る可能性もあり、リードタイムもまた待つことになります。したがって発注前の第一歩は、「1着あたりの使用量」「総必要量」「ロス分」の3つの数字を1枚の表にまとめ、工場に送る前に自分で確認することです。</p>
+
+      <h2>1. 副資材は価格より数量で失敗しやすい理由</h2>
+      <ul>
+        <li><strong>小さくて比率が大きい：</strong>副資材は単価が低いため数百枚の不足は気づかれませんが、メインラベルが50枚足りないだけで完成品50着が出荷できません。数量が少ない案件ほど影響が大きくなります</li>
+        <li><strong>計量単位が不統一：</strong>同じ品目でも、枚で見積もる工場、ダースで見積もる工場、巻で見積もる工場があり、基準が違えば計算違いが起きます</li>
+        <li><strong>数え方が多すぎる：</strong>タグは枚、織りラベルは枚（個）、洗濯表示ラベルは本、ポリ袋は枚またはkg、紙袋は枚というように、1枚の発注書に5種類の数え方が並ぶのは普通です</li>
+        <li><strong>追加発注の隠れコスト：</strong>織りラベルは再び織機をセットし、タグは色を合わせ直す必要があり、数百枚の追加は通常単価の1.5倍以上になります</li>
+      </ul>
+
+      <h2>2. 単位換算表：価格の前に基準を揃える</h2>
+      <table>
+        <tr>
+          <th>単位</th>
+          <th>主な用途</th>
+          <th>換算</th>
+        </tr>
+        <tr>
+          <td>ヤード</td>
+          <td>織りラベル、テープ、ロール洗濯表示ラベル</td>
+          <td>1ヤード = 0.9144 m</td>
+        </tr>
+        <tr>
+          <td>メートル</td>
+          <td>同上、欧州と中国で一般的</td>
+          <td>1 m = 1.0936ヤード</td>
+        </tr>
+        <tr>
+          <td>ロール</td>
+          <td>織りラベル、洗濯表示ラベル、テープ</td>
+          <td>100ヤード、100 m、200 mなど。巻長は発注書に明記が必要</td>
+        </tr>
+        <tr>
+          <td>ダース</td>
+          <td>織りラベル・洗濯表示ラベルの束包装</td>
+          <td>1ダース = 12枚</td>
+        </tr>
+        <tr>
+          <td>枚／連</td>
+          <td>タグ、カード、ステッカー</td>
+          <td>1連 = 500枚の全判用紙。完成枚数は取り数で変わります</td>
+        </tr>
+        <tr>
+          <td>キログラム</td>
+          <td>重量単価で見積もる袋類</td>
+          <td>まず1枚あたりのグラム数を確認し、枚数に換算します</td>
+        </tr>
+      </table>
+      <div class="callout"><strong>最も損をしやすい点：</strong>ヤードとメートルは9.36%違います。数量が多いほど差額は無視できません。発注書に「1000ヤード/メートル」のような曖昧な表記をせず、「1000 m（1093.6ヤード）」と書くか単位を別行にし、サンプル確認時に巻長と1枚の長さを検証します。</div>
+
+      <h2>3. BOMから発注数量までの計算</h2>
+      <p>単耗（1着あたりの使用量）とは、完成品1着が使う副資材の量です。基本式は1行です。<strong>発注数量 = 生産枚数 × 1着あたり使用量 ×（1 + ロス率）</strong>。単純に見えますが、実際に間違えやすいのは「1着あたり使用量」の項目です。同じ洗濯表示ラベルでも1本縫う款式と2本縫う款式があり、同じタグでも1枚掛けと表裏2枚掛けがあります。</p>
+      <h3>3,000着の計算例</h3>
+      <table>
+        <tr>
+          <th>副資材</th>
+          <th>1着あたり</th>
+          <th>ロス率目安</th>
+          <th>推奨発注量</th>
+        </tr>
+        <tr>
+          <td>メインラベル（織り）</td>
+          <td>1枚</td>
+          <td>3%〜5%</td>
+          <td>3,100〜3,150枚</td>
+        </tr>
+        <tr>
+          <td>洗濯表示ラベル</td>
+          <td>2本（脇縫い＋後ろ衿）</td>
+          <td>3%〜5%</td>
+          <td>6,200〜6,300本</td>
+        </tr>
+        <tr>
+          <td>タグ</td>
+          <td>1枚＋予備タグ</td>
+          <td>5%〜8%</td>
+          <td>3,200〜3,300枚</td>
+        </tr>
+        <tr>
+          <td>ポリ袋</td>
+          <td>1枚</td>
+          <td>3%〜5%</td>
+          <td>3,100〜3,150枚</td>
+        </tr>
+        <tr>
+          <td>紙袋（店頭用）</td>
+          <td>店舗の必要数で別計算</td>
+          <td>5%〜8%</td>
+          <td>店舗配分ごとに別行で記載</td>
+        </tr>
+      </table>
+      <ul>
+        <li><strong>色・サイズ別：</strong>メインラベルとタグは通常1スタイル1版ですが、サイズや色で分かれる洗濯表示ラベルと袋は配分比で分割し、色・サイズごとの最小ロットにも注意します</li>
+        <li><strong>予備品は別行：</strong>予備のメインラベル、タグ、ボタンはロス率に混ぜず別行に記載します。予備品は別包装・別表示が必要になることが多いためです</li>
+        <li><strong>ロール換算：</strong>織りラベルをロール納品する場合、1ロールの枚数 = 巻長 ÷ ラベル長となり、端数は必ず出ます。枚数で商談しロールで納品される場合は、許容できる端数比率を発注書に明記します</li>
+      </ul>
+
+      <h2>4. ロス率の目安：品目別に考える</h2>
+      <table>
+        <tr>
+          <th>品目</th>
+          <th>目安範囲</th>
+          <th>主なロス要因</th>
+        </tr>
+        <tr>
+          <td>タグ、カード</td>
+          <td>5%〜8%</td>
+          <td>印刷の予備、型抜きの端材、穴あけや紐通しの破損</td>
+        </tr>
+        <tr>
+          <td>織りラベル、印刷ラベル</td>
+          <td>3%〜5%</td>
+          <td>スリット端、縫製不良、巻端の端数</td>
+        </tr>
+        <tr>
+          <td>洗濯表示ラベル</td>
+          <td>3%〜5%</td>
+          <td>縫製不良、印刷ずれ、巻末</td>
+        </tr>
+        <tr>
+          <td>ポリ袋</td>
+          <td>3%〜5%</td>
+          <td>立ち上げ調整、シール初品、輸送の圧縮</td>
+        </tr>
+        <tr>
+          <td>紙袋</td>
+          <td>5%〜8%</td>
+          <td>接着不良、紐通しの手直し、輸送のへこみ</td>
+        </tr>
+        <tr>
+          <td>ボタン、金属部品</td>
+          <td>2%〜3%</td>
+          <td>メッキ不良、落下、検針での排除</td>
+        </tr>
+      </table>
+      <div class="callout"><strong>ロスを増やせば安全とは限りません：</strong>織りラベルを20%多く発注すると安心に見えますが、翌シーズンにロゴが変われば在庫の死蔵になります。現実的には初回は3%〜5%にとどめ、版データ・色見本・接着条件を保存し、追加発注時にすぐつながるようにします。</div>
+
+      <h2>5. 最小ロットと倍数：MOQに満たない場合の対処</h2>
+      <p>最小ロットは工場が恣意的に設けた門ではありません。版、型、機械の立ち上げという固定費を一定数量で割る分岐点です。タグは印刷予備が必要で、織りラベルは織機に糸を通す必要があり、この固定費は数量で吸収されます。数量が少なすぎると単価は急に上がるため、「値引き交渉」より「数量の作り方」が重要です。</p>
+      <ul>
+        <li><strong>版をまとめる：</strong>多言語・多サイズ・多色でも同じレイアウトのタグは1版にまとめて印刷でき、1版番で全数量をまかなえます</li>
+        <li><strong>トライアル数量から：</strong>仕上がりが未確認なら試作数量で発注します。タグ2,000〜3,000枚、織りラベル1,000枚、洗濯表示ラベル300〜500本が一般的な下限で、確認後に本生産へ進みます</li>
+        <li><strong>複数型番で型を共用：</strong>同一シリーズのタグが同じ型とサイズを共用し、印刷内容だけを変えれば、各型番のハードルを下げられます</li>
+        <li><strong>倍数で発注：</strong>梱包数、巻長、1版の取り数を確認し、端数が出ないよう倍数にまとめます。「37枚多い」といった納品不能な数を作らないことが重要です</li>
+      </ul>
+
+      <h2>6. 過不足納入と検収の基準</h2>
+      <p>副資材は小さな部品のまとめ買いで、1枚ずつ数えるのは現実的でないため、一定割合の過不足納入が慣行です。取り決めが曖昧だと入荷時に揉めます。発注書に「許容範囲」「請求は実数か発注数か」「端数の最終箱の扱い」の3点を明記します。</p>
+      <ul>
+        <li><strong>±3%〜±5%を明記：</strong>通常の小物副資材はこの範囲。貴金属部品、異形型抜き、特殊加工を含む品目は±2%〜±3%に絞るのが安全です</li>
+        <li><strong>検収方法を明記：</strong>織りラベルと洗濯表示ラベルは重量換算または抜き取り束数の確認、タグは重量換算で枚数を出し、1〜2箱は全数確認します</li>
+        <li><strong>端数箱の表示：</strong>基本は梱包数を統一し、最後の端数箱には実際の数量を外装に表示します。倉庫が満数で登録するのを避けられます</li>
+        <li><strong>不足分の申告期限：</strong>検収で不足を見つけたら3〜5営業日以内に申し出て、追加納品か値引きかを取り決めます。期限を過ぎると多くの工場は検収済みとみなします</li>
+      </ul>
+
+      <h2>7. 価格照会メールにそのまま使える数量確認シート</h2>
+      <ul>
+        <li>生産枚数、サイズ・色の配分（予備分を含む）</li>
+        <li>1着あたりの副資材使用量（型番別に本数・枚数を明記）</li>
+        <li>計量単位と単価の基準（枚、ダース、ロール、メートル）</li>
+        <li>ロス率、予備品が数量に含まれるか</li>
+        <li>過不足の許容範囲と請求の基準（実数か発注数か）</li>
+        <li>包装方法と梱包数（1箱、1ロール、1束あたり）</li>
+        <li>追加発注の最小数と想定納期（通常は初回より短い）</li>
+      </ul>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+        <li><a href="garment-trims-order-guide.html">衣料副資材の発注ガイド：仕様・色・公差・条件の書き方</a></li>
+        <li><a href="hang-tag-moq-cost.html">タグの最小ロットとコスト：数量が単価をどう変えるか</a></li>
+        <li><a href="garment-trims-inventory-management.html">副資材在庫管理：安全在庫・ロット・死蔵在庫</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">副資材見積りの比較：基準を揃える方法</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>BOMはあるけれど発注数量が決められない。生産枚数、サイズ配分、1着あたりの使用量を含む副資材リストをお送りください。単耗と加工に基づいて数量・ロス・梱包数を整理し、そのまま実行できる価格をご提示します。サンプル3〜7日、量産10〜25日、最小ロットは柔軟です。</p>
+        <a class="cta-btn" href="../contact.html">数量計算と見積りを依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

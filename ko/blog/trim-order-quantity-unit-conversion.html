@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 부자재 발주 수량과 단위 환산 가이드: 야드·미터·다스·롤 계산 | TAGE</title>
+<meta name="description" content="의류 부자재 발주 수량과 단위 환산 가이드. BOM에서 착장당 사용량을 계산하고 야드·미터·다스·롤 환산, 품목별 로스율, 최소 수량과 배수, 과부족 납품 검수 기준, 견적 메일에 바로 쓰는 수량 확인 시트를 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-quantity-unit-conversion.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-quantity-unit-conversion.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料訂購數量與單位換算指南：碼/米/卷/打怎麼算，損耗率留多少",
+     "item": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料訂購數量與單位換算指南：碼/米/卷/打怎麼算，損耗率留多少",
+   "url": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-quantity-unit-conversion.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>발주 수량과 단위 환산</span></div>
+      <h1>의류 부자재 발주 수량과 단위 환산 가이드: 야드·미터·다스·롤 계산</h1>
+      <p>TAGE 패키징 · 2026년 9월 26일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 발주에서 가장 흔한 실수는 가격이 아니라 수량입니다. 3,000장 생산에 직조 라벨을 정확히 3,000개만 발주하면 재단 실수, 사이즈 교체, 판넬 재봉이 한 번만 생겨도 수량이 모자랍니다. 또 야드 기준으로 계산한 수량을 미터 단가 공장에 그대로 전달하면 실제 입고는 약 8% 부족합니다. 이 글은 착장당 소요량(단위 소모) 계산법, 주요 거래 단위 환산, 넉넉히 잡아야 할 로스율, 최소 수량과 과부족 납품 기준을 정리하고, 견적 요청 메일에 그대로 붙일 수 있는 수량 확인 시트를 제공합니다.</p>
+
+      <p>수량을 틀리면 단가보다 더 큰 비용이 생깁니다. 추가 발주는 생산 일정을 다시 잡아야 하고, 첫 로트와 색상 차이가 날 수 있으며, 리드타임도 한 번 더 기다려야 합니다. 그래서 발주 전 첫 단계는 &#x27;착장당 사용량, 총 필요량, 로스분&#x27; 세 숫자를 한 장의 표에 정리해 공장에 보내기 전에 직접 확인하는 것입니다.</p>
+
+      <h2>1. 부자재는 가격보다 수량에서 실수가 많은 이유</h2>
+      <ul>
+        <li><strong>작은 부품, 큰 비율:</strong> 부자재는 단가가 낮아 몇 백 개 부족해도 눈에 띄지 않지만, 메인 라벨 50개가 부족하면 완성 의류 50장이 묶입니다. 수량이 적은 오더일수록 치명적입니다</li>
+        <li><strong>단위가 제각각:</strong> 같은 품목도 개, 다스, 롤 단위로 견적이 나오며 기준이 다르면 계산 오류가 생깁니다</li>
+        <li><strong>집계 기준이 너무 많음:</strong> 행택은 장, 직조 라벨은 개, 세탁 표시 라벨은 개(줄), 비닐 봉투는 개 또는 kg, 종이백은 개로, 발주서 한 장에 다섯 가지 기준이 섞이는 것이 일반적입니다</li>
+        <li><strong>추가 발주 숨은 비용:</strong> 직조 라벨은 직기를 다시 세팅하고 행택은 색을 다시 맞춰야 하며, 수백 개 추가 주문 단가는 보통 원래 단가의 1.5배 이상입니다</li>
+      </ul>
+
+      <h2>2. 단위 환산표: 가격보다 기준 통일이 먼저</h2>
+      <table>
+        <tr>
+          <th>단위</th>
+          <th>주요 용도</th>
+          <th>환산</th>
+        </tr>
+        <tr>
+          <td>야드</td>
+          <td>직조 라벨, 테이프, 롤 세탁 표시 라벨</td>
+          <td>1야드 = 0.9144 m</td>
+        </tr>
+        <tr>
+          <td>미터</td>
+          <td>위와 동일, 유럽과 중국에서 일반적</td>
+          <td>1 m = 1.0936야드</td>
+        </tr>
+        <tr>
+          <td>롤</td>
+          <td>직조 라벨, 세탁 표시 라벨, 테이프</td>
+          <td>보통 100야드, 100 m, 200 m이며 롤 길이는 발주서에 명시해야 합니다</td>
+        </tr>
+        <tr>
+          <td>다스</td>
+          <td>직조 라벨, 세탁 표시 라벨 묶음 포장</td>
+          <td>1다스 = 12개</td>
+        </tr>
+        <tr>
+          <td>장 / 연</td>
+          <td>행택, 카드, 스티커</td>
+          <td>1연 = 전지 500장이며 완성 수량은 재단 수에 따라 달라집니다</td>
+        </tr>
+        <tr>
+          <td>킬로그램</td>
+          <td>중량 단가로 견적하는 봉투류</td>
+          <td>먼저 1개당 중량을 확인한 뒤 개수로 환산합니다</td>
+        </tr>
+      </table>
+      <div class="callout"><strong>가장 손해 보기 쉬운 부분:</strong> 야드와 미터는 9.36% 차이가 나며 수량이 많을수록 금액 차이가 큽니다. 발주서에 &#x27;1000야드/미터&#x27; 같은 모호한 표현을 쓰지 말고 &#x27;1000 m(1093.6야드)&#x27;로 쓰거나 단위를 별도 행에 두고, 샘플 단계에서 롤 길이와 라벨 1개 길이를 확인합니다.</div>
+
+      <h2>3. BOM에서 발주 수량까지 계산</h2>
+      <p>단위 소모(착장당 사용량)는 완성 의류 1장이 사용하는 부자재 양입니다. 기본 공식은 한 줄입니다. <strong>발주 수량 = 생산 수량 × 착장당 사용량 × (1 + 로스율)</strong>. 단순해 보이지만 실제로 틀리기 쉬운 항목이 &#x27;착장당 사용량&#x27;입니다. 같은 세탁 표시 라벨도 한 줄만 붙이는 스타일과 두 줄 붙이는 스타일이 있고, 같은 행택도 한 장만 다는 경우와 앞뒤 두 장을 다는 경우가 있습니다.</p>
+      <h3>3,000장 계산 예시</h3>
+      <table>
+        <tr>
+          <th>부자재</th>
+          <th>착장당 사용량</th>
+          <th>로스율 기준</th>
+          <th>권장 발주량</th>
+        </tr>
+        <tr>
+          <td>메인 라벨(직조)</td>
+          <td>1개</td>
+          <td>3% ~ 5%</td>
+          <td>3,100 ~ 3,150개</td>
+        </tr>
+        <tr>
+          <td>세탁 표시 라벨</td>
+          <td>2개(옆선 + 뒤목)</td>
+          <td>3% ~ 5%</td>
+          <td>6,200 ~ 6,300개</td>
+        </tr>
+        <tr>
+          <td>행택</td>
+          <td>1장 + 예비 태그</td>
+          <td>5% ~ 8%</td>
+          <td>3,200 ~ 3,300장</td>
+        </tr>
+        <tr>
+          <td>비닐 봉투</td>
+          <td>1개</td>
+          <td>3% ~ 5%</td>
+          <td>3,100 ~ 3,150개</td>
+        </tr>
+        <tr>
+          <td>종이백(매장용)</td>
+          <td>매장 필요량으로 별도 계산</td>
+          <td>5% ~ 8%</td>
+          <td>매장 배분별로 별도 행 기재</td>
+        </tr>
+      </table>
+      <ul>
+        <li><strong>색상·사이즈별:</strong> 메인 라벨과 행택은 보통 스타일당 1종이지만, 사이즈나 색상으로 나뉘는 세탁 표시 라벨과 봉투는 배분 비율로 나누고 색상·사이즈별 최소 수량도 확인해야 합니다</li>
+        <li><strong>예비품은 별도 행:</strong> 예비 메인 라벨, 행택, 단추는 로스율에 섞지 말고 별도 행으로 적습니다. 예비품은 보통 별도 포장과 표기가 필요합니다</li>
+        <li><strong>롤 환산:</strong> 직조 라벨을 롤로 납품하면 롤당 수량 = 롤 길이 ÷ 라벨 길이이며 잔여분이 반드시 생깁니다. 개수로 협의하고 롤로 납품받을 때는 허용 잔여 비율을 발주서에 명시합니다</li>
+      </ul>
+
+      <h2>4. 로스율 기준: 품목별로 다릅니다</h2>
+      <table>
+        <tr>
+          <th>품목</th>
+          <th>경험 범위</th>
+          <th>주요 로스 원인</th>
+        </tr>
+        <tr>
+          <td>행택, 카드</td>
+          <td>5% ~ 8%</td>
+          <td>인쇄 여분, 타발 잔여, 타공과 끈 작업 손상</td>
+        </tr>
+        <tr>
+          <td>직조 라벨, 인쇄 라벨</td>
+          <td>3% ~ 5%</td>
+          <td>슬리팅 끝단, 봉제 불량, 롤 잔여</td>
+        </tr>
+        <tr>
+          <td>세탁 표시 라벨</td>
+          <td>3% ~ 5%</td>
+          <td>봉제 불량, 인쇄 어긋남, 롤 끝</td>
+        </tr>
+        <tr>
+          <td>비닐 봉투</td>
+          <td>3% ~ 5%</td>
+          <td>초기 세팅, 실링 초기품, 운송 압착</td>
+        </tr>
+        <tr>
+          <td>종이백</td>
+          <td>5% ~ 8%</td>
+          <td>접착 불량, 끈 재작업, 운송 눌림</td>
+        </tr>
+        <tr>
+          <td>단추, 금속 부품</td>
+          <td>2% ~ 3%</td>
+          <td>도금 불량, 낙하, 검침 선별</td>
+        </tr>
+      </table>
+      <div class="callout"><strong>로스를 늘린다고 안전해지지 않습니다:</strong> 직조 라벨을 20% 더 발주하면 안심될 것 같지만 다음 시즌 로고가 바뀌면 재고만 남습니다. 더 현실적인 방법은 첫 주문을 3~5%로 잡고 도안, 색상 샘플, 접착 조건을 보관해 추가 발주가 바로 이어지게 하는 것입니다.</div>
+
+      <h2>5. 최소 수량과 배수: MOQ에 미달할 때</h2>
+      <p>최소 수량은 공장이 임의로 만든 장벽이 아니라 판, 금형, 기계 세팅 같은 고정비를 일정 수량으로 나누는 분기점입니다. 행택은 인쇄 여분이 필요하고 직조 라벨은 직기에 실을 걸어야 하며 이 고정비는 수량으로 흡수됩니다. 수량이 너무 적으면 단가가 급격히 오르므로 가격 흥정보다 수량을 만드는 방법이 더 중요합니다.</p>
+      <ul>
+        <li><strong>판 합치기:</strong> 다국어, 다사이즈, 다색상이라도 레이아웃이 같은 행택은 한 판으로 모아 인쇄해 판 하나로 전체 수량을 소화합니다</li>
+        <li><strong>시험 수량으로 시작:</strong> 결과가 검증되지 않았다면 시험 수량으로 발주합니다. 행택 2,000~3,000장, 직조 라벨 1,000개, 세탁 표시 라벨 300~500개가 일반적인 하한이며 확인 후 본생산으로 넘어갑니다</li>
+        <li><strong>여러 스타일이 금형 공유:</strong> 같은 시즌 행택이 동일 금형과 치수를 쓰고 인쇄 내용만 달라지면 스타일별 최소 수량 부담이 크게 낮아집니다</li>
+        <li><strong>배수로 발주:</strong> 박스 입수량, 롤 길이, 판당 수량을 확인해 배수로 맞춥니다. &#x27;37개가 남는&#x27; 식의 납품 불가능한 잔수를 만들지 않습니다</li>
+      </ul>
+
+      <h2>6. 과부족 납품과 검수 기준</h2>
+      <p>부자재는 작은 부품을 대량으로 다루므로 한 개씩 세는 것이 비현실적이어서 일정 비율의 과부족 납품이 관행입니다. 기준이 모호하면 입고 시 분쟁이 생기므로 발주서에 허용 범위, 청구가 실수량 기준인지 발주 수량 기준인지, 잔수 마지막 박스 처리 방법을 명시합니다.</p>
+      <ul>
+        <li><strong>±3%~±5% 합의:</strong> 일반 소형 부자재는 이 범위로 하고, 귀금속 부품이나 이형 타발, 특수 공정 품목은 ±2%~±3%로 좁히는 것이 좋습니다</li>
+        <li><strong>검수 방법 명시:</strong> 직조 라벨과 세탁 표시 라벨은 중량 환산 또는 표본 묶음 계수로, 행택은 중량으로 환산해 수량을 산출하고 1~2박스는 전수 확인합니다</li>
+        <li><strong>잔수 박스 표기:</strong> 원칙적으로 박스 입수량을 통일하고 마지막 잔수 박스에는 실제 수량을 외부에 표기해 창고가 가득 찬 수량으로 등록하는 것을 막습니다</li>
+        <li><strong>부족분 청구 기한:</strong> 검수에서 부족을 발견하면 3~5영업일 내에 제기하고 추가 납품인지 가격 조정인지 합의합니다. 기한이 지나면 대부분의 공장은 검수 완료로 봅니다</li>
+      </ul>
+
+      <h2>7. 견적 메일에 그대로 쓰는 수량 확인 시트</h2>
+      <ul>
+        <li>생산 수량, 사이즈·색상 배분(예비 포함)</li>
+        <li>착장당 부자재 사용량(스타일별 개수 명시)</li>
+        <li>단위와 단가 기준(개, 다스, 롤, 미터)</li>
+        <li>로스율, 예비품 포함 여부</li>
+        <li>과부족 허용 범위와 청구 기준(실수량 또는 발주 수량)</li>
+        <li>포장 방식과 입수량(박스, 롤, 묶음당)</li>
+        <li>추가 발주 최소 수량과 예상 납기(보통 첫 주문보다 짧음)</li>
+      </ul>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-order-guide.html">의류 부자재 발주 가이드: 사양, 색상, 공차, 조건 작성</a></li>
+        <li><a href="hang-tag-moq-cost.html">행택 최소 수량과 원가: 수량이 단가에 미치는 영향</a></li>
+        <li><a href="garment-trims-inventory-management.html">부자재 재고 관리: 안전 재고, 로트, 사장 재고</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">부자재 견적 비교: 기준을 통일하는 방법</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>BOM은 있는데 얼마나 발주할지 고민되시나요? 생산 수량, 사이즈 배분, 착장당 사용량이 포함된 부자재 목록을 보내주시면 소요량과 공정에 맞춰 수량, 로스, 박스 입수량을 계산하고 실행 가능한 가격을 제시합니다. 샘플 3~7일, 양산 10~25일, 최소 수량은 유연합니다.</p>
+        <a class="cta-btn" href="../contact.html">수량 산출과 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
