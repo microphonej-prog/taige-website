@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定 | TAGE" data-en="Limit Samples for Trim Inspection: Setting Visual Defect Standards | TAGE" data-ja="副資材の限界見本ガイド：外観判定基準の決め方 | TAGE" data-ko="부자재 한계 견본 가이드: 외관 판정 기준 정하는 법 | TAGE" data-fr="Échantillons limites pour le contrôle des accessoires | TAGE" data-es="Muestras límite en la inspección de accesorios | TAGE">輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定 | TAGE</title>
+<meta name="description" data-zh="輔料驗收總在爭「這算不算缺陷」？界限樣品把可接受的最差一件做成實物標準，比文字有效得多。本文講清黃金樣、界限樣與不可接受樣的分工，四類輔料的高頻爭議缺陷，現場製作五步法，與 AQL 抽檢的判定閉環，以及保存更新與爭議處理。來自東莞泰閣包裝。"
+      data-en="Limit samples for trim inspection: turning the worst acceptable piece into a visual standard for labels, tags and bags, with a five-step build and AQL grading." data-ja="限界見本ガイド：黄金見本・限界見本・不可見本の役割、織りラベル・タグ・洗濯表示・包装袋の紛争になりやすい欠点、現場での作り方5ステップ、AQLとの組み合わせ、保管と更新の考え方。" data-ko="한계 견본 가이드: 골든 샘플·한계 견본·불합격 견본의 역할, 직조 라벨·행택·세탁 표시·포장백의 분쟁 잦은 결점, 현장 제작 5단계, AQL 샘플링과의 결합, 보관과 갱신 기준."
+      data-fr="Échantillons limites : transformer la pire pièce acceptable en référence visuelle, rôles des trois types, création en cinq étapes et articulation avec l'AQL."
+      data-es="Muestras límite: convertir la peor pieza aceptable en referencia visual, funciones de los tres tipos, creación en cinco pasos, uso con el AQL y conservación."
+      content="輔料驗收總在爭「這算不算缺陷」？界限樣品把可接受的最差一件做成實物標準，比文字有效得多。本文講清黃金樣、界限樣與不可接受樣的分工，四類輔料的高頻爭議缺陷，現場製作五步法，與 AQL 抽檢的判定閉環，以及保存更新與爭議處理。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-limit-sample-inspection-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-limit-sample-inspection-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定",
+     "item": "https://taigetag.com/blog/trim-limit-sample-inspection-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定",
+   "url": "https://taigetag.com/blog/trim-limit-sample-inspection-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-limit-sample-inspection-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="驗收界限樣品" data-en="Limit Samples" data-ja="限界見本" data-ko="한계 견본" data-fr="Échantillons limites" data-es="Muestras límite">驗收界限樣品</span></div>
+      <h1 data-zh="輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定" data-en="Limit Samples for Trim Inspection: How to Set Visual Defect Standards" data-ja="副資材の限界見本：外観判定基準の決め方" data-ko="부자재 한계 견본: 외관 판정 기준 정하는 법" data-fr="Échantillons limites pour le contrôle des accessoires" data-es="Muestras límite para la inspección de accesorios">輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年9月26日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 26, 2026" data-ja="泰閣包装 · 2026年9月26日更新" data-ko="TAGE 패키징 · 2026년 9월 26일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 26 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 26 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月26日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="輔料驗收最容易吵架的地方，不是「有沒有缺陷」，而是「這算不算缺陷、算到哪一檔」。織嘜上一根浮線、吊牌上一道輕微套印偏移、洗水標塗層有一點不勻，供應商覺得正常，品牌方覺得不可接受——最後還是回到扯皮。解決辦法不是把驗收標準寫得更長，而是做一套界限樣品（Limit Sample）：三件實物，擺在桌上，雙方都照着它判。這篇文章講清界限樣品與黃金樣品的區別、哪些輔料最需要它、怎麼在現場做出來、怎麼和 AQL 抽檢配合，以及保存與爭議處理的口徑。"
+         data-en="The argument at trim inspection is rarely about whether a defect exists, but about whether it counts and at what level. A float on a woven label, a slight misregistration on a tag, an uneven coating on a care label: the supplier calls it normal, the brand calls it unacceptable, and the discussion goes in circles. The fix is not a longer standard but a set of limit samples — three physical pieces on the table that both sides judge against. This guide covers how limit samples differ from a golden sample, which trims need them most, how to create them on site, how they combine with AQL sampling, and how to store and use them when a dispute arises."
+         data-ja="副資材の検品で揉めるのは「欠点があるか」ではなく「それが欠点に当たるか、どの程度まで許容か」です。織りラベルの浮き糸、タグのわずかな見当ずれ、洗濯表示ラベルの塗工ムラ。サプライヤーは通常範囲と言い、ブランドは不可とする。解決策は基準書を長くすることではなく、限界見本（リミットサンプル）を用意することです。机の上に3点の実物を置き、双方がそれに照らして判定します。本記事では黄金見本との違い、必要度の高い品目、現場での作り方、AQL抜き取りとの組み合わせ、保管と紛争時の扱いを解説します。"
+         data-ko="부자재 검수에서 다툼이 생기는 지점은 '결점이 있느냐'가 아니라 '이것이 결점이냐, 어느 수준까지 허용이냐'입니다. 직조 라벨의 뜬 실, 행택의 약간의 겹침 어긋남, 세탁 표시 라벨의 코팅 불균일. 공급업체는 정상이라 하고 브랜드는 불가라 합니다. 해결책은 기준서를 길게 쓰는 것이 아니라 한계 견본(리밋 샘플)을 만드는 것입니다. 책상 위에 실물 세 점을 두고 양측이 그것에 대고 판정합니다. 이 글은 골든 샘플과의 차이, 가장 필요한 품목, 현장 제작 방법, AQL 샘플링과의 결합, 보관과 분쟁 시 처리 기준을 다룹니다."
+         data-fr="Au contrôle des accessoires, le litige porte rarement sur l'existence d'un défaut, mais sur sa qualification et son niveau. Un fil flottant sur un tissé, un léger défaut de repérage sur une étiquette, un couchage irrégulier sur une étiquette d'entretien : le fournisseur juge cela normal, la marque inacceptable, et le débat tourne en rond. La solution n'est pas un cahier des charges plus long, mais des échantillons limites : trois pièces physiques sur la table, servant de référence aux deux parties. Ce guide couvre la différence avec l'échantillon d'or, les accessoires les plus concernés, la création en atelier, l'articulation avec le contrôle AQL et la gestion en cas de litige."
+         data-es="En la inspección de accesorios la discusión rara vez es si existe un defecto, sino si cuenta y con qué grado. Un hilo flotante en una tejida, un ligero desregistro en un colgante, un recubrimiento irregular en una etiqueta de cuidado: el proveedor lo llama normal, la marca inaceptable, y el debate gira en círculo. La solución no es un estándar más largo, sino un juego de muestras límite: tres piezas físicas sobre la mesa con las que ambas partes juzgan. Esta guía cubre en qué se diferencian de la muestra de oro, qué accesorios las necesitan más, cómo crearlas en planta, cómo se combinan con el AQL y cómo almacenarlas y usarlas ante una disputa.">輔料驗收最容易吵架的地方，不是「有沒有缺陷」，而是「這算不算缺陷、算到哪一檔」。織嘜上一根浮線、吊牌上一道輕微套印偏移、洗水標塗層有一點不勻，供應商覺得正常，品牌方覺得不可接受——最後還是回到扯皮。解決辦法不是把驗收標準寫得更長，而是做一套界限樣品（Limit Sample）：三件實物，擺在桌上，雙方都照着它判。這篇文章講清界限樣品與黃金樣品的區別、哪些輔料最需要它、怎麼在現場做出來、怎麼和 AQL 抽檢配合，以及保存與爭議處理的口徑。</p>
+
+      <h2 data-zh="1. 爲什麼「標準寫清楚」還是會吵" data-en="1. Why a Written Standard Still Leaves Room to Argue" data-ja="1. 基準書を書いても揉める理由" data-ko="1. 기준서를 써도 다투게 되는 이유" data-fr="1. Pourquoi un standard écrit ne suffit pas" data-es="1. Por qué un estándar escrito no basta">1. 爲什麼「標準寫清楚」還是會吵</h2>
+      <ul>
+        <li data-zh="<strong>形容詞無法量化：</strong>「輕微」「明顯」「可接受」在不同人眼裏是不同的。同一處浮線，採購看是輕微，品牌設計師看是致命" data-en="<strong>Adjectives do not measure:</strong> slight, visible and acceptable mean different things to different people. The same float reads as minor to a buyer and fatal to a designer" data-ja="<strong>形容詞は定量化できません：</strong>「わずか」「目立つ」「許容範囲」は人によって異なります。同じ浮き糸でも、購買には軽微、デザイナーには致命的です" data-ko="<strong>형용사는 정량화되지 않습니다:</strong> '약간', '눈에 띄는', '허용 가능'은 사람마다 다릅니다. 같은 뜬 실도 구매 담당자에게는 경미하고 디자이너에게는 치명적입니다" data-fr="<strong>Les adjectifs ne mesurent rien :</strong> léger, visible et acceptable varient selon les personnes. Le même fil flottant est mineur pour l'acheteur et rédhibitoire pour le styliste" data-es="<strong>Los adjetivos no miden:</strong> leve, visible y aceptable significan cosas distintas según quién. El mismo hilo flotante es menor para el comprador y fatal para el diseñador"><strong>形容詞無法量化：</strong>「輕微」「明顯」「可接受」在不同人眼裏是不同的。同一處浮線，採購看是輕微，品牌設計師看是致命</li>
+        <li data-zh="<strong>描述位置說不清：</strong>「邊緣不許有毛邊」——正面邊緣？背面？兩側？離縫線 2 mm 還是 5 mm？沒有實物示例，全憑理解" data-en="<strong>Position is hard to describe:</strong> no fraying on the edge — front or back, both sides, within 2 mm or 5 mm of the seam? Without a physical example it is interpretation" data-ja="<strong>位置の記述が困難：</strong>「端に毛羽なし」とは、表側か裏側か、両側か、縫い目から2mmか5mmか。実物例がなければ解釈次第です" data-ko="<strong>위치 설명이 어렵습니다:</strong> '가장자리 올 풀림 금지'가 앞면인지 뒷면인지, 양쪽인지, 봉제선에서 2mm인지 5mm인지. 실물 예시가 없으면 해석에 달려 있습니다" data-fr="<strong>La position est difficile à décrire :</strong> pas d'effilochage sur le bord — recto, verso, les deux, à 2 ou 5 mm de la couture ? Sans pièce physique, c'est une interprétation" data-es="<strong>La posición es difícil de describir:</strong> sin deshilachado en el borde: ¿delante, detrás, ambos lados, a 2 o 5 mm de la costura? Sin una pieza física es interpretación"><strong>描述位置說不清：</strong>「邊緣不許有毛邊」——正面邊緣？背面？兩側？離縫線 2 mm 還是 5 mm？沒有實物示例，全憑理解</li>
+        <li data-zh="<strong>觀者條件不同：</strong>顏色與外觀判定受光源影響很大。同樣的比色，日光燈下、自然光下和燈箱裏結論可能不一樣，所以界限樣品必須和使用同一觀察條件的雙方一起確認" data-en="<strong>The viewer's conditions vary:</strong> light changes how colour and appearance read. The same comparison can pass under daylight, fail under fluorescent or flip inside a light box, so limit samples must be agreed under the same viewing conditions on both sides" data-ja="<strong>観察条件が異なります：</strong>色と外観の判定は光源に大きく左右されます。昼光、蛍光灯、色評価用ライトボックスで結論が変わることがあるため、限界見本は同じ観察条件で双方確認する必要があります" data-ko="<strong>관찰 조건이 다릅니다:</strong> 색과 외관 판정은 광원의 영향을 크게 받습니다. 주광, 형광등, 검사용 라이트박스에서 결론이 달라질 수 있으므로 한계 견본은 동일한 관찰 조건에서 양측이 확인해야 합니다" data-fr="<strong>Les conditions d'observation diffèrent :</strong> la lumière change la lecture de la couleur et de l'aspect. La même comparaison passe en lumière du jour et échoue en fluorescent ou en cabine, d'où l'accord à établir sous les mêmes conditions" data-es="<strong>Las condiciones del observador varían:</strong> la luz cambia la lectura del color y el aspecto. La misma comparación pasa con luz natural, falla con fluorescente o cambia en cabina, así que las muestras límite deben acordarse bajo las mismas condiciones"><strong>觀者條件不同：</strong>顏色與外觀判定受光源影響很大。同樣的比色，日光燈下、自然光下和燈箱裏結論可能不一樣，所以界限樣品必須和使用同一觀察條件的雙方一起確認</li>
+      </ul>
+
+      <h2 data-zh="2. 界限樣品、黃金樣品與不可接受樣：三件套怎麼分工" data-en="2. Limit Sample, Golden Sample and Reject Sample" data-ja="2. 限界見本・黄金見本・不可見本の役割分担" data-ko="2. 한계 견본·골든 샘플·불합격 견본의 역할" data-fr="2. Échantillon limite, échantillon d'or et rebut" data-es="2. Muestra límite, muestra de oro y muestra rechazable">2. 界限樣品、黃金樣品與不可接受樣：三件套怎麼分工</h2>
+      <table>
+        <tr>
+          <th data-zh="樣品" data-en="Sample" data-ja="見本" data-ko="견본" data-fr="Échantillon" data-es="Muestra">樣品</th>
+          <th data-zh="作用" data-en="Purpose" data-ja="役割" data-ko="역할" data-fr="Rôle" data-es="Función">作用</th>
+          <th data-zh="要幾件" data-en="How many" data-ja="必要な数" data-ko="수량" data-fr="Combien" data-es="Cuántas">要幾件</th>
+        </tr>
+        <tr>
+          <td data-zh="黃金樣品（Golden Sample）" data-en="Golden sample" data-ja="黄金見本" data-ko="골든 샘플" data-fr="Échantillon d'or" data-es="Muestra de oro">黃金樣品（Golden Sample）</td>
+          <td data-zh="標準樣：顏色、尺寸、手感、縫製的目標值，雙方簽字確認後各自留一份" data-en="The target: colour, dimensions, hand feel and make-up, signed by both sides with a copy each" data-ja="基準：色、寸法、風合い、縫製の目標値。双方署名のうえ各1点保管" data-ko="기준: 색, 치수, 촉감, 봉제 목표값. 양측 서명 후 각 1점 보관" data-fr="La cible : couleur, dimensions, toucher et confection, signée par les deux parties" data-es="El objetivo: color, medidas, tacto y confección, firmado por ambas partes">標準樣：顏色、尺寸、手感、縫製的目標值，雙方簽字確認後各自留一份</td>
+          <td data-zh="2 至 3 件" data-en="Two to three" data-ja="2〜3点" data-ko="2~3점" data-fr="Deux à trois" data-es="Dos o tres">2 至 3 件</td>
+        </tr>
+        <tr>
+          <td data-zh="界限樣品（Limit Sample）" data-en="Limit sample" data-ja="限界見本" data-ko="한계 견본" data-fr="Échantillon limite" data-es="Muestra límite">界限樣品（Limit Sample）</td>
+          <td data-zh="可接受的最差一檔：寫在實物上，驗收時比它差就拒收，比它好就放行" data-en="The worst acceptable level: judged physically, anything worse is rejected and anything better passes" data-ja="許容される最悪レベル：実物で示し、これより悪ければ拒否、良ければ合格" data-ko="허용 가능한 최악 수준: 실물로 제시해 이보다 나쁘면 거부, 좋으면 합격" data-fr="Le pire niveau acceptable : tout ce qui est pire est refusé, tout ce qui est meilleur est accepté" data-es="El peor nivel aceptable: lo peor se rechaza, lo mejor pasa">可接受的最差一檔：寫在實物上，驗收時比它差就拒收，比它好就放行</td>
+          <td data-zh="2 至 3 件（客方、工廠、必要時第三方各一）" data-en="Two to three: client, factory and, if needed, a third party" data-ja="2〜3点（客先・工場・必要なら第三者）" data-ko="2~3점(고객·공장·필요 시 제3자)" data-fr="Deux à trois : client, atelier et, si besoin, un tiers" data-es="Dos o tres: cliente, fábrica y, si hace falta, un tercero">2 至 3 件（客方、工廠、必要時第三方各一）</td>
+        </tr>
+        <tr>
+          <td data-zh="不可接受樣（Reject Sample）" data-en="Reject sample" data-ja="不可見本" data-ko="불합격 견본" data-fr="Échantillon rebut" data-es="Muestra rechazable">不可接受樣（Reject Sample）</td>
+          <td data-zh="明確越線的樣子：讓新員工與驗貨員一眼知道「這樣不行」，比文字有效得多" data-en="A clearly out-of-spec piece: new operators and inspectors see at a glance that this is not acceptable, which text cannot achieve" data-ja="明確に逸脱した例：新人や検品員が一目で「これは不可」と分かります。文章より効果的です" data-ko="명확히 기준을 벗어난 예: 신입 작업자와 검사원이 한눈에 '불가'를 알 수 있어 문서보다 효과적입니다" data-fr="Une pièce clairement hors norme : un opérateur ou un contrôleur voit immédiatement que c'est refusé, ce que le texte ne fait pas" data-es="Una pieza claramente fuera de norma: un operario o inspector ve al instante que no es aceptable, algo que el texto no logra">明確越線的樣子：讓新員工與驗貨員一眼知道「這樣不行」，比文字有效得多</td>
+          <td data-zh="1 至 2 件" data-en="One to two" data-ja="1〜2点" data-ko="1~2점" data-fr="Une à deux" data-es="Una o dos">1 至 2 件</td>
+        </tr>
+      </table>
+
+      <h2 data-zh="3. 哪些輔料最需要界限樣品" data-en="3. Which Trims Need Them Most" data-ja="3. 限界見本が特に必要な品目" data-ko="3. 한계 견본이 가장 필요한 품목" data-fr="3. Les accessoires les plus concernés" data-es="3. Qué accesorios las necesitan más">3. 哪些輔料最需要界限樣品</h2>
+      <table>
+        <tr>
+          <th data-zh="輔料" data-en="Trim" data-ja="品目" data-ko="품목" data-fr="Accessoire" data-es="Accesorio">輔料</th>
+          <th data-zh="高頻爭議缺陷" data-en="Most-debated defects" data-ja="紛争になりやすい欠点" data-ko="분쟁이 잦은 결점" data-fr="Défauts les plus débattus" data-es="Defectos más discutidos">高頻爭議缺陷</th>
+          <th data-zh="界限樣品的判定要點" data-en="What the limit sample fixes" data-ja="限界見本で決める点" data-ko="한계 견본으로 결정할 점" data-fr="Ce que l'échantillon fixe" data-es="Lo que fija la muestra">界限樣品的判定要點</th>
+        </tr>
+        <tr>
+          <td data-zh="織嘜" data-en="Woven labels" data-ja="織りラベル" data-ko="직조 라벨" data-fr="Tissés" data-es="Tejidas">織嘜</td>
+          <td data-zh="浮線長度、跳線針數、邊緣毛邊、字跡清晰度" data-en="Float length, skipped picks, edge fraying, letter clarity" data-ja="浮き糸の長さ、欠糸の数、端の毛羽、文字の鮮明度" data-ko="뜬 실 길이, 결실 수, 가장자리 올 풀림, 글자 선명도" data-fr="Longueur de fil flottant, fils manquants, effilochage, netteté des lettres" data-es="Longitud de hilo flotante, hilos saltados, deshilachado, nitidez de letras">浮線長度、跳線針數、邊緣毛邊、字跡清晰度</td>
+          <td data-zh="允許幾毫米浮線、允許幾針跳線、毛邊在折邊內還是外" data-en="Millimetres of float allowed, number of skipped picks tolerated, whether fraying sits inside the fold" data-ja="許容する浮き糸のmm、欠糸の針数、毛羽が折り内か外か" data-ko="허용 뜬 실 mm, 허용 결실 바늘 수, 올 풀림이 접힘 안쪽인지" data-fr="Millimètres de fil tolérés, nombre de duites manquantes, effilochage dans le repli ou non" data-es="Milímetros de hilo tolerados, pasadas saltadas admitidas, si el deshilachado queda dentro del doblez">允許幾毫米浮線、允許幾針跳線、毛邊在折邊內還是外</td>
+        </tr>
+        <tr>
+          <td data-zh="吊牌" data-en="Hang tags" data-ja="タグ" data-ko="행택" data-fr="Étiquettes suspendues" data-es="Colgantes">吊牌</td>
+          <td data-zh="套印偏移、燙金飛金、模切毛邊、壓痕深淺、顏色偏差" data-en="Misregistration, foil flaking, die-cut burrs, crease depth, colour shift" data-ja="見当ずれ、箔の飛び、抜きムシ、押し罫の深さ、色ぶれ" data-ko="겹침 어긋남, 박 벗겨짐, 타발 버, 압선 깊이, 색 편차" data-fr="Défaut de repérage, éclats de dorure, bavures de découpe, profondeur de rainage, écart de teinte" data-es="Desregistro, desconchado de estampado, rebabas de troquel, profundidad de hendido, desvío de color">套印偏移、燙金飛金、模切毛邊、壓痕深淺、顏色偏差</td>
+          <td data-zh="偏移多少毫米內可接受、飛金面積上限、毛邊用哪個倍數觀察" data-en="Millimetres of offset accepted, maximum flaked area, and the magnification used to judge burrs" data-ja="許容する見当ずれのmm、箔飛びの面積上限、毛羽を何倍で見るか" data-ko="허용 어긋남 mm, 박 벗겨짐 면적 상한, 버를 판단하는 배율" data-fr="Millimètres de décalage acceptés, surface d'éclat maximale, grossissement retenu" data-es="Milímetros de desvío aceptados, área máxima de desconchado y aumento con que se juzgan las rebabas">偏移多少毫米內可接受、飛金面積上限、毛邊用哪個倍數觀察</td>
+        </tr>
+        <tr>
+          <td data-zh="洗水標" data-en="Care labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado">洗水標</td>
+          <td data-zh="印刷虛點、字跡粗細不勻、塗層氣泡、裁切尺寸偏差" data-en="Dotty print, uneven stroke weight, coating bubbles, cut size variation" data-ja="印刷のかすれ、線の太さムラ、コーティングの気泡、裁断寸法のばらつき" data-ko="인쇄 번짐, 획 굵기 불균일, 코팅 기포, 재단 치수 편차" data-fr="Impression mouchetée, épaisseur de trait inégale, bulles de couchage, variation de coupe" data-es="Impresión punteada, grosor de trazo irregular, burbujas de recubrimiento, variación de corte">印刷虛點、字跡粗細不勻、塗層氣泡、裁切尺寸偏差</td>
+          <td data-zh="小字號在閱讀距離下是否清晰、氣泡尺寸上限、尺寸公差" data-en="Whether small text is legible at reading distance, bubble size limit, dimensional tolerance" data-ja="小さい文字が読距で判読できるか、気泡の上限、寸法公差" data-ko="작은 글자가 판독 거리에서 읽히는지, 기포 크기 한도, 치수 공차" data-fr="Lisibilité du petit texte à distance de lecture, taille de bulle limite, tolérance dimensionnelle" data-es="Legibilidad del texto pequeño a distancia de lectura, límite de burbuja, tolerancia dimensional">小字號在閱讀距離下是否清晰、氣泡尺寸上限、尺寸公差</td>
+        </tr>
+        <tr>
+          <td data-zh="包裝袋" data-en="Packaging bags" data-ja="包装袋" data-ko="포장백" data-fr="Sachets" data-es="Bolsas">包裝袋</td>
+          <td data-zh="封口偏移、印刷錯位、開口鬆緊、厚度手感" data-en="Seal offset, print misalignment, opening tension, thickness feel" data-ja="シールのずれ、印刷ずれ、口の開きやすさ、厚みの手触り" data-ko="실링 어긋남, 인쇄 어긋남, 입구 벌어짐, 두께 감촉" data-fr="Décalage de soudure, décalage d'impression, ouverture, sensation d'épaisseur" data-es="Desvío de sellado, desalineación de impresión, apertura, sensación de espesor">封口偏移、印刷錯位、開口鬆緊、厚度手感</td>
+          <td data-zh="封口寬度與偏移上限、印刷離邊距離、不同厚度樣各留一件" data-en="Seal width and offset limits, print distance from the edge, one piece per thickness" data-ja="シール幅とずれの上限、印刷の端からの距離、厚み違いを各1点" data-ko="실링 폭과 어긋남 한도, 인쇄 가장자리 거리, 두께별 각 1점" data-fr="Largeur et décalage de soudure, distance d'impression au bord, une pièce par épaisseur" data-es="Ancho y desvío de sellado, distancia de impresión al borde, una pieza por espesor">封口寬度與偏移上限、印刷離邊距離、不同厚度樣各留一件</td>
+        </tr>
+      </table>
+
+      <h2 data-zh="4. 一套可用的界限樣品怎麼定出來" data-en="4. How to Build a Usable Set" data-ja="4. 実用的な限界見本の作り方" data-ko="4. 실제 쓸 수 있는 한계 견본 만드는 법" data-fr="4. Comment constituer un jeu utilisable" data-es="4. Cómo crear un juego utilizable">4. 一套可用的界限樣品怎麼定出來</h2>
+      <ul>
+        <li data-zh="<strong>第一步，先在樣品上找問題：</strong>不要憑空寫字，讓工廠把首件、試產件、歷史爭議件都擺出來，一件件挑出「這個可以接受」「這個不行」" data-en="<strong>Step one, work from real pieces:</strong> do not draft from imagination; ask the factory to lay out first articles, trial pieces and past problem pieces and go through them one by one" data-ja="<strong>第一に実物から始めます：</strong>机上で書かず、工場に初品・試作・過去のトラブル品を並べてもらい、一件ずつ可／不可を選びます" data-ko="<strong>1단계, 실물에서 출발:</strong> 상상으로 쓰지 말고 공장이 초품, 시험 생산품, 과거 문제품을 늘어놓게 하고 하나씩 가/부를 정합니다" data-fr="<strong>Étape un, partir de pièces réelles :</strong> ne rédigez pas dans l'abstrait ; demandez à l'atelier de présenter les premières pièces, les essais et les anciens litiges et triez-les une à une" data-es="<strong>Paso uno, parte de piezas reales:</strong> no redactes en abstracto; pide a la fábrica que presente primeras piezas, pruebas e históricos conflictivos y clasifícalos una a una"><strong>第一步，先在樣品上找問題：</strong>不要憑空寫字，讓工廠把首件、試產件、歷史爭議件都擺出來，一件件挑出「這個可以接受」「這個不行」</li>
+        <li data-zh="<strong>第二步，把可接受的最差一件挑出來：</strong>它成爲界限樣品。注意是「最差但可接受」，不是「平均」，也不是「最好」" data-en="<strong>Step two, pick the worst acceptable piece:</strong> that becomes the limit sample. It is the worst piece you would still accept, not the average and not the best" data-ja="<strong>第二に、許容できる最悪の1点を選びます：</strong>それが限界見本になります。「平均」でも「最良」でもなく、許容できる最悪です" data-ko="<strong>2단계, 허용 가능한 최악 1점 선정:</strong> 그것이 한계 견본입니다. 평균도 최선도 아닌, 허용 가능한 최악입니다" data-fr="<strong>Étape deux, retenez la pire pièce encore acceptable :</strong> elle devient l'échantillon limite — pas la moyenne, pas la meilleure" data-es="<strong>Paso dos, elige la peor pieza aún aceptable:</strong> esa es la muestra límite; no el promedio ni la mejor"><strong>第二步，把可接受的最差一件挑出來：</strong>它成爲界限樣品。注意是「最差但可接受」，不是「平均」，也不是「最好」</li>
+        <li data-zh="<strong>第三步，當場確認、當場簽字：</strong>品牌方、採購與工廠質檢三方在場，同一光源、同一距離、同一倍數看，避免寄來寄去各說各話" data-en="<strong>Step three, agree and sign on site:</strong> brand, buyer and factory QC in the same room, same light, same distance, same magnification, instead of couriering samples and disagreeing by mail" data-ja="<strong>第三に、その場で合意し署名：</strong>ブランド、購買、工場QCが同席し、同じ光源・距離・倍率で確認します。送付し合って食い違う事態を避けます" data-ko="<strong>3단계, 현장에서 합의·서명:</strong> 브랜드, 구매, 공장 QC가 함께 같은 광원·거리·배율로 확인합니다. 주고받으며 서로 다르게 해석하는 일을 피합니다" data-fr="<strong>Étape trois, validez et signez sur place :</strong> marque, acheteur et QC de l'atelier, même lumière, même distance, même grossissement, plutôt que des allers-retours par colis" data-es="<strong>Paso tres, acuerda y firma en sitio:</strong> marca, comprador y QC de fábrica, misma luz, distancia y aumento, en lugar de enviar muestras y discrepar por correo"><strong>第三步，當場確認、當場簽字：</strong>品牌方、採購與工廠質檢三方在場，同一光源、同一距離、同一倍數看，避免寄來寄去各說各話</li>
+        <li data-zh="<strong>第四步，做三份、編號封存：</strong>每個樣品貼上標籤，寫明輔料名稱、缺陷類型、判定檔位、確認日期與簽字人，三方各留一份" data-en="<strong>Step four, make three copies and seal them:</strong> label each with the trim, the defect type, the grade accepted, the date and the signatures, one set per party" data-ja="<strong>第四に、3部作製し封印：</strong>品名、欠点の種類、許容等級、確認日、署名者を記載し、三者が各1部保管します" data-ko="<strong>4단계, 3부 제작·봉인:</strong> 품목, 결점 유형, 허용 등급, 확인일, 서명자를 기재하고 세 주체가 각 1부 보관합니다" data-fr="<strong>Étape quatre, trois exemplaires scellés :</strong> étiquetez chacun avec l'accessoire, le type de défaut, le grade accepté, la date et les signatures ; un jeu par partie" data-es="<strong>Paso cuatro, tres copias selladas:</strong> etiqueta cada una con el accesorio, el tipo de defecto, el grado aceptado, la fecha y las firmas; un juego por parte"><strong>第四步，做三份、編號封存：</strong>每個樣品貼上標籤，寫明輔料名稱、缺陷類型、判定檔位、確認日期與簽字人，三方各留一份</li>
+        <li data-zh="<strong>第五步，寫進文件：</strong>界限樣品編號要同時出現在規格書與採購訂單上。只做實物不進文件，換一位業務或驗貨員，這套樣品就作廢了" data-en="<strong>Step five, put it in the documents:</strong> the limit sample number belongs in the spec sheet and the purchase order. Physical samples alone are useless once the account manager or inspector changes" data-ja="<strong>第五に、文書に落とします：</strong>限界見本の番号は仕様書と注文書の両方に記載します。実物だけでは、担当者や検品員が変われば機能しません" data-ko="<strong>5단계, 문서에 반영:</strong> 한계 견본 번호를 사양서와 발주서 모두에 기재합니다. 실물만으로는 담당자나 검사원이 바뀌면 무용지물입니다" data-fr="<strong>Étape cinq, intégrez au dossier :</strong> le numéro d'échantillon limite figure dans la fiche technique et le bon de commande. Les pièces seules deviennent inutiles dès que l'interlocuteur change" data-es="<strong>Paso cinco, llévalo a los documentos:</strong> el número de muestra límite va en la ficha técnica y en el pedido. Las piezas solas se pierden en cuanto cambia el interlocutor"><strong>第五步，寫進文件：</strong>界限樣品編號要同時出現在規格書與採購訂單上。只做實物不進文件，換一位業務或驗貨員，這套樣品就作廢了</li>
+      </ul>
+
+      <h2 data-zh="5. 和 AQL 抽檢怎麼配合" data-en="5. Combining Limit Samples with AQL Sampling" data-ja="5. AQL抜き取りとの組み合わせ" data-ko="5. AQL 샘플링과의 결합" data-fr="5. Articulation avec le contrôle AQL" data-es="5. Cómo se combinan con el muestreo AQL">5. 和 AQL 抽檢怎麼配合</h2>
+      <p data-zh="界限樣品解決「什麼叫缺陷」，AQL 抽樣解決「抽多少、允許多少」。兩者缺一不可：只寫 AQL 2.5 卻沒有界限樣品，驗貨員各自理解，判定結果隨人而變；只有界限樣品沒有抽樣計劃，又是全檢不可行的困境。工程上常見的閉環是：按 AQL 抽取樣本量 → 每件對照界限樣品判嚴重／主要／輕微 → 按 AQL 接受數與拒絕數決定這一批放行還是返工。"
+         data-en="The limit sample defines what counts as a defect; the AQL plan defines how much you inspect and how many you tolerate. You need both. An AQL of 2.5 without limit samples means each inspector judges differently; limit samples without a sampling plan leave you inspecting everything. The practical loop is: draw the sample per AQL, grade each piece against the limit sample as critical, major or minor, then apply the accept and reject numbers to release or rework the lot."
+         data-ja="限界見本は「何が欠点か」を、AQLは「何個検査し、何個まで許容するか」を決めます。両方が必要です。AQL 2.5だけでは検品員ごとに判定がばらつき、限界見本だけでは全数検査になり現実的ではありません。実務的な流れは、AQLに従いサンプルを抜き取り、各点を限界見本と照合して致命・主要・軽微に分類し、合格数・不合格数でロットの可否を決めるというものです。"
+         data-ko="한계 견본은 '무엇이 결점인가'를, AQL은 '얼마나 검사하고 얼마나 허용하는가'를 정합니다. 둘 다 필요합니다. AQL 2.5만 있으면 검사원마다 판정이 달라지고, 한계 견본만 있으면 전수 검사가 되어 비현실적입니다. 실무 흐름은 AQL에 따라 표본을 뽑고, 각 점을 한계 견본과 대조해 치명·주요·경미로 분류한 뒤, 합격·불합격 수치로 로트의 출하 여부를 결정하는 것입니다."
+         data-fr="L'échantillon limite définit ce qui constitue un défaut ; le plan AQL définit combien vous inspectez et combien vous tolérez. Les deux sont nécessaires : un AQL 2,5 sans échantillon limite fait varier le jugement d'un contrôleur à l'autre ; des échantillons limites sans plan de prélèvement imposent un contrôle à 100 %. La boucle pratique : prélever selon l'AQL, classer chaque pièce en critique, majeur ou mineur face à l'échantillon limite, puis appliquer les seuils d'acceptation."
+         data-es="La muestra límite define qué cuenta como defecto; el plan AQL define cuánto inspeccionas y cuánto toleras. Se necesitan ambos: un AQL 2,5 sin muestras límite hace que cada inspector juzgue distinto; las muestras límite sin plan de muestreo obligan a inspeccionar todo. El circuito práctico: extraer la muestra según AQL, clasificar cada pieza frente a la muestra límite como crítica, mayor o menor, y aplicar los números de aceptación y rechazo al lote.">界限樣品解決「什麼叫缺陷」，AQL 抽樣解決「抽多少、允許多少」。兩者缺一不可：只寫 AQL 2.5 卻沒有界限樣品，驗貨員各自理解，判定結果隨人而變；只有界限樣品沒有抽樣計劃，又是全檢不可行的困境。工程上常見的閉環是：按 AQL 抽取樣本量 → 每件對照界限樣品判嚴重／主要／輕微 → 按 AQL 接受數與拒絕數決定這一批放行還是返工。</p>
+      <ul>
+        <li data-zh="把「嚴重缺陷零容忍、主要缺陷按 AQL 2.5、輕微缺陷按 AQL 4.0」這類分級直接寫進規格書，配上下面的界限樣品，判定就不用靠商量" data-en="Write tiers such as zero tolerance for critical, AQL 2.5 for major and AQL 4.0 for minor into the spec sheet, pair them with the limit samples, and judgement stops being a negotiation" data-ja="「致命はゼロ容認、主要はAQL 2.5、軽微はAQL 4.0」といった区分を仕様書に明記し、限界見本と組にすれば判定は協議不要になります" data-ko="'치명은 무관용, 주요는 AQL 2.5, 경미는 AQL 4.0' 같은 등급을 사양서에 명시하고 한계 견본과 결합하면 판정이 협상 대상이 되지 않습니다" data-fr="Inscrivez des niveaux comme zéro tolérance pour le critique, AQL 2,5 pour le majeur et AQL 4,0 pour le mineur dans la fiche technique : le jugement cesse d'être une négociation" data-es="Escribe niveles como tolerancia cero para lo crítico, AQL 2,5 para lo mayor y AQL 4,0 para lo menor en la ficha técnica: la decisión deja de ser una negociación">把「嚴重缺陷零容忍、主要缺陷按 AQL 2.5、輕微缺陷按 AQL 4.0」這類分級直接寫進規格書，配上下面的界限樣品，判定就不用靠商量</li>
+        <li data-zh="返工批要按同一套界限樣品復判，並且換一位驗貨員，避免同一個人「自己判自己」" data-en="Reworked lots should be re-judged against the same set by a different inspector, so no one audits their own work" data-ja="再加工ロットは同じ見本で再判定し、別の検品員が担当します。自己判定を避けるためです" data-ko="재작업 로트는 동일 견본으로 재판정하고 다른 검사원이 담당해 자기 판정을 피합니다" data-fr="Les lots retouchés sont rejugés sur le même jeu par un autre contrôleur, pour éviter l'auto-évaluation" data-es="Los lotes retrabajados se rejuzgan con el mismo juego por otro inspector, para evitar la autoevaluación">返工批要按同一套界限樣品復判，並且換一位驗貨員，避免同一個人「自己判自己」</li>
+      </ul>
+
+      <h2 data-zh="6. 保存、更新與爭議處理" data-en="6. Storage, Updates and Disputes" data-ja="6. 保管・更新・紛争時の扱い" data-ko="6. 보관·갱신·분쟁 처리" data-fr="6. Conservation, mise à jour et litiges" data-es="6. Conservación, actualización y disputas">6. 保存、更新與爭議處理</h2>
+      <ul>
+        <li data-zh="<strong>界限樣品會老化：</strong>紙樣會泛黃、塑料會變脆、織物會吸塵。建議每 12 個月複覈一次，或換材料、換工藝、換供應商時立即重做" data-en="<strong>Limit samples age:</strong> paper yellows, plastics embrittle, fabric gathers dust. Review every 12 months, and remake them immediately when the material, process or supplier changes" data-ja="<strong>限界見本は劣化します：</strong>紙は黄変し、樹脂は脆くなり、布は埃を吸います。12か月ごとに見直し、材料・加工・サプライヤー変更時は即作り直します" data-ko="<strong>한계 견본은 노화합니다:</strong> 종이는 변색되고 플라스틱은 취성화되며 직물은 먼지를 흡착합니다. 12개월마다 재검토하고 소재·공정·공급업체 변경 시 즉시 재제작합니다" data-fr="<strong>Les échantillons vieillissent :</strong> le papier jaunit, les plastiques durcissent, le tissu prend la poussière. Revoyez-les tous les 12 mois et refaites-les dès qu'une matière, un procédé ou un fournisseur change" data-es="<strong>Las muestras envejecen:</strong> el papel amarillea, el plástico se vuelve frágil, el tejido acumula polvo. Revísalas cada 12 meses y rehazlas cuando cambien material, proceso o proveedor"><strong>界限樣品會老化：</strong>紙樣會泛黃、塑料會變脆、織物會吸塵。建議每 12 個月複覈一次，或換材料、換工藝、換供應商時立即重做</li>
+        <li data-zh="<strong>爭議時以封樣爲準：</strong>雙方各持一份、編號一致的那份實物，是爭議時最有說服力的依據。微信裏發的照片受光源與手機算法影響，只作輔助" data-en="<strong>In a dispute the sealed sample governs:</strong> the piece with matching numbers held by each side is the strongest evidence. Photos sent by chat are affected by light and phone processing and only support the case" data-ja="<strong>紛争時は封印見本が基準：</strong>番号が一致する双方の実物が最も強い根拠です。チャット写真は光源と端末補正の影響を受け、補助資料にとどまります" data-ko="<strong>분쟁 시 봉인 견본이 기준:</strong> 번호가 일치하는 양측 보관 실물이 가장 강력한 근거입니다. 메신저 사진은 광원과 기기 보정의 영향을 받아 보조 자료에 그칩니다" data-fr="<strong>En litige, l'échantillon scellé fait foi :</strong> la pièce à numéro identique détenue par chaque partie est la preuve la plus solide ; les photos envoyées par messagerie subissent lumière et traitement du téléphone" data-es="<strong>En una disputa manda la muestra sellada:</strong> la pieza con número coincidente que guarda cada parte es la prueba más sólida; las fotos por mensajería sufren luz y procesado del móvil"><strong>爭議時以封樣爲準：</strong>雙方各持一份、編號一致的那份實物，是爭議時最有說服力的依據。微信裏發的照片受光源與手機算法影響，只作輔助</li>
+        <li data-zh="<strong>把界限樣品編號寫進索賠條款：</strong>「判定按 LS-2026-03 執行」一句話，比再寫三百字描述都管用" data-en="<strong>Reference the sample number in the claim clause:</strong> one line that judgement follows LS-2026-03 beats three hundred words of description" data-ja="<strong>限界見本の番号をクレーム条項に：</strong>「判定はLS-2026-03による」の一行が、300字の説明より有効です" data-ko="<strong>한계 견본 번호를 클레임 조항에:</strong> '판정은 LS-2026-03에 따른다' 한 줄이 300자 설명보다 효과적입니다" data-fr="<strong>Citez le numéro dans la clause de réclamation :</strong> une ligne « jugement selon LS-2026-03 » vaut trois cents mots" data-es="<strong>Cita el número en la cláusula de reclamación:</strong> una línea «juicio según LS-2026-03» supera trescientas palabras"><strong>把界限樣品編號寫進索賠條款：</strong>「判定按 LS-2026-03 執行」一句話，比再寫三百字描述都管用</li>
+        <li data-zh="<strong>留一套參考庫存：</strong>量產用的界限樣品放在工廠質檢臺，不要收進櫃子。判定標準放在看得見的地方，執行率才高" data-en="<strong>Keep a working set on the inspection bench:</strong> limit samples belong next to the QC table, not locked in a drawer; standards that are visible get applied" data-ja="<strong>検品台に常用セットを：</strong>限界見本は戸棚ではなく検品台に置きます。見える場所にある基準だけが実行されます" data-ko="<strong>검사대에 상용 세트 비치:</strong> 한계 견본은 캐비닛이 아니라 검사대 옆에 둡니다. 눈에 보이는 기준만 실행됩니다" data-fr="<strong>Gardez un jeu sur le poste de contrôle :</strong> les échantillons limites vont à côté de la table QC, pas dans un tiroir ; un standard visible est appliqué" data-es="<strong>Mantén un juego en la mesa de inspección:</strong> las muestras límite van junto a la mesa de QC, no en un cajón; un estándar visible se aplica"><strong>留一套參考庫存：</strong>量產用的界限樣品放在工廠質檢臺，不要收進櫃子。判定標準放在看得見的地方，執行率才高</li>
+      </ul>
+
+      <div class="callout" data-zh="<strong>三步就能起步：</strong>拿一款最常返工或最常被投訴的輔料，把最近的合格品與邊角品擺一排，挑出「最差但可接受」的一件，貼上標籤簽上名，一式三份。這樣一套動作，往往比一份十頁的驗收規範更快消除扯皮。"
+         data-en="<strong>You can start in three steps:</strong> take the trim that generates the most rework or complaints, lay out recent good pieces and borderline pieces, pick the worst one you would still accept, label it, sign it and make three copies. That beats a ten-page specification at ending arguments."
+         data-ja="<strong>3ステップで始められます：</strong>最も手直しやクレームが多い品目を選び、最近の良品と境界品を並べ、許容できる最悪の1点を選んでラベルと署名を付け、3部作ります。10ページの規格書より早く揉め事を減らせます。"
+         data-ko="<strong>세 단계로 시작할 수 있습니다:</strong> 재작업이나 클레임이 가장 많은 품목을 골라 최근 양품과 경계품을 늘어놓고, 허용 가능한 최악 1점을 선택해 라벨과 서명을 붙이고 3부를 만듭니다. 열 장짜리 규격서보다 분쟁을 빨리 줄입니다."
+         data-fr="<strong>Trois étapes suffisent :</strong> prenez l'accessoire qui génère le plus de retouches ou de réclamations, alignez les bonnes pièces récentes et les cas limites, retenez la pire encore acceptable, étiquetez, signez et faites trois copies. Plus efficace qu'un cahier des charges de dix pages."
+         data-es="<strong>Puedes empezar en tres pasos:</strong> toma el accesorio que más retrabajo o reclamaciones genera, alinea piezas buenas recientes y casos límite, elige la peor aún aceptable, etiquétala, fírmala y haz tres copias. Rinde más que un pliego de diez páginas."><strong>三步就能起步：</strong>拿一款最常返工或最常被投訴的輔料，把最近的合格品與邊角品擺一排，挑出「最差但可接受」的一件，貼上標籤簽上名，一式三份。這樣一套動作，往往比一份十頁的驗收規範更快消除扯皮。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="輔料質量檢驗指南：AQL 抽樣與各品類驗貨要點" data-en="Trim Quality Inspection: AQL Sampling and What to Check" data-ja="副資材の品質検査：AQL抜き取りと品目別要点" data-ko="부자재 품질 검사: AQL 샘플링과 품목별 요점" data-fr="Contrôle qualité des accessoires : AQL et points clés" data-es="Inspección de calidad de accesorios: AQL y puntos clave">輔料質量檢驗指南：AQL 抽樣與各品類驗貨要點</a></li>
+        <li><a href="apparel-trims-spec-sheet-guide.html" data-zh="輔料規格書指南：字段清單、顏色與公差怎麼寫" data-en="Trim Spec Sheet Guide: Fields, Colour and Tolerance" data-ja="副資材仕様書：項目・色・公差の書き方" data-ko="부자재 사양서: 항목·색·공차 작성법" data-fr="Fiche technique accessoires : champs, couleur et tolérance" data-es="Ficha técnica de accesorios: campos, color y tolerancia">輔料規格書指南：字段清單、顏色與公差怎麼寫</a></li>
+        <li><a href="garment-trims-claims-liability-guide.html" data-zh="輔料索賠與責任界定指南" data-en="Trim Claims and Liability: How Responsibility Is Decided" data-ja="副資材のクレームと責任範囲" data-ko="부자재 클레임과 책임 범위" data-fr="Réclamations et responsabilité sur les accessoires" data-es="Reclamaciones y responsabilidad en accesorios">輔料索賠與責任界定指南</a></li>
+        <li><a href="woven-label-color-matching.html" data-zh="織嘜對色指南：潘通色卡、ΔE 標準與色牢度" data-en="Woven Label Colour Matching: Pantone, ΔE and Colour Fastness" data-ja="織りラベルの色合わせ：パントン・ΔE・染色堅牢度" data-ko="직조 라벨 색 맞춤: 팬톤·ΔE·염색 견뢰도" data-fr="Raccord couleur des tissés : Pantone, ΔE et solidité" data-es="Igualación de color en tejidas: Pantone, ΔE y solidez">織嘜對色指南：潘通色卡、ΔE 標準與色牢度</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="怕貨到手上才發現「和想象的不一樣」？把輔料品類、最擔心的外觀問題與目標市場發給我們，我們可以在打樣階段就幫你把黃金樣與界限樣品一起做出來、編號簽字，寄樣時一併附上：確認樣 3-7 天，大貨 10-25 天，起訂量靈活。"
+           data-en="Worried the shipment will not look like what you pictured? Send us the trim categories, the appearance issues you fear most and your target markets; we can build the golden sample and the limit samples with you at the sampling stage, numbered and signed, and ship them with the sample. Confirmation samples in 3 to 7 days, bulk in 10 to 25 days, flexible minimums."
+           data-ja="届いてから「イメージと違う」を避けたい場合。品目、最も気になる外観項目、対象市場をお送りください。サンプル段階で黄金見本と限界見本を一緒に作り、番号と署名を付けてサンプルに同梱できます。確認サンプル3〜7日、量産10〜25日、最小ロットは柔軟です。"
+           data-ko="받아보고 '생각과 다르다'를 피하고 싶으십니까? 품목, 가장 우려되는 외관 항목, 목표 시장을 보내주시면 샘플 단계에서 골든 샘플과 한계 견본을 함께 제작해 번호와 서명을 붙여 샘플과 동봉할 수 있습니다. 확인 샘플 3~7일, 양산 10~25일, 최소 수량은 유연합니다."
+           data-fr="Vous craignez une marchandise différente de l'image attendue ? Envoyez-nous les catégories, les défauts d'aspect que vous redoutez et vos marchés : nous pouvons constituer l'échantillon d'or et les échantillons limites dès la maquette, numérotés et signés, et les joindre à l'envoi. Échantillons en 3 à 7 jours, production en 10 à 25 jours, minimums souples."
+           data-es="¿Te preocupa que el envío no se parezca a lo que imaginabas? Envíanos las categorías, los defectos de aspecto que más temes y tus mercados: podemos preparar la muestra de oro y las muestras límite en la fase de muestra, numeradas y firmadas, y adjuntarlas al envío. Muestras en 3 a 7 días, producción en 10 a 25 días, mínimos flexibles.">怕貨到手上才發現「和想象的不一樣」？把輔料品類、最擔心的外觀問題與目標市場發給我們，我們可以在打樣階段就幫你把黃金樣與界限樣品一起做出來、編號簽字，寄樣時一併附上：確認樣 3-7 天，大貨 10-25 天，起訂量靈活。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="一起做一套黃金樣與界限樣品 →" data-en="Build a golden and limit sample set with us →" data-ja="黄金見本と限界見本を一緒に作成 →" data-ko="골든 샘플과 한계 견본 함께 제작 →" data-fr="Constituer un jeu d'échantillons avec nous →" data-es="Preparar un juego de muestras con nosotros →">一起做一套黃金樣與界限樣品 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>

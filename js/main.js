@@ -19,7 +19,7 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "112";
+  var BUST_VERSION = "113";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
