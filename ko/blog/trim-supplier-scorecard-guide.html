@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 공급업체 성과 평가: 납기 준수율·불량률·분기 스코어카드 | TAGE</title>
+<meta name="description" content="부자재 공급업체 성과 평가 가이드: 납기 준수율·품질 불량률·이상 대응·변경 대응·문서 등 다섯 지표의 집계 기준과 참고 구간, 분기 스코어카드 가중치와 A/B/C/D 등급, 발주 배분·개선 계획·대체 공급 활용법, 흔한 실수 세 가지를 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-supplier-scorecard-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-supplier-scorecard-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料供應商績效考覈指南：準交率、不良率與季度評分表怎麼定",
+     "item": "https://taigetag.com/blog/trim-supplier-scorecard-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料供應商績效考覈指南：準交率、不良率與季度評分表怎麼定",
+   "url": "https://taigetag.com/blog/trim-supplier-scorecard-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-supplier-scorecard-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>공급업체 성과 평가</span></div>
+      <h1>부자재 공급업체 성과 평가: 납기 준수율·불량률과 분기 스코어카드 설계</h1>
+      <p>TAGE 패키징 · 2026년 9월 27일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 공급업체 성과 평가(서플라이어 스코어카드)는 아주 구체적인 문제를 해결합니다. 같은 세탁 표시 라벨이 지난달에는 3일 만에 납품되었는데 이번 달에는 2주가 걸리는 경우, 같은 직조 라벨 공장의 1차 로트는 색이 맞았지만 3차 로트는 반 톤 어긋나는 경우입니다. 공장 심사는 &#x27;능력이 있는가&#x27;에 답하고, 스코어카드는 &#x27;매달 실제로 해냈는가&#x27;에 답합니다. 브랜드와 봉제공장에게 부자재는 단가가 낮고 금액이 작으며 품번이 잘고 변경이 잦아, 몇 퍼센트의 가격 차이보다 공급 안정성이 출고 일정에 훨씬 직접적으로 영향을 줍니다. 세탁 표시 라벨이 사흘 늦으면 봉제 라인 전체가 멈출 수 있습니다.</p>
+
+      <h2>1. 심사 통과는 시작일 뿐</h2>
+      <p>공장 심사는 입구의 관문으로 설비·공정·생산 능력·문서·규정 준수를 보고 &#x27;거래할 가치가 있는가&#x27;에 답합니다. 스코어카드는 일상 검진으로, 지난달의 약속이 지켜졌는지, 이상 대응이 빨랐는지, 변경에 얼마나 대응했는지를 보여 줍니다. 차이는 시간축입니다. 심사는 연 1회, 스코어카드는 월·분기마다 갱신되며 발주 배분에 직접 반영됩니다.</p>
+      <ul>
+        <li>평가는 적고 정확하게: 다섯~여섯 지표면 충분합니다. 너무 많으면 아무도 기입하지 않고 아무도 보지 않아 빈 표만 남습니다</li>
+        <li>정의를 먼저 합의합니다. &#x27;정시&#x27;가 출하일인지 도착일인지, &#x27;불량 로트&#x27;가 무엇인지는 첫 발주 전에 정해야 합니다</li>
+        <li>점수는 추적 가능해야 합니다. 각 항목 뒤에 주문 번호·로트 번호·일자가 있어야 하며, 없으면 분기 리뷰가 평행선이 됩니다</li>
+      </ul>
+
+      <h2>2. 다섯 가지 핵심 지표와 집계 기준</h2>
+      <p>아래 다섯 지표는 부자재 구매에서 문제가 되는 대부분을 커버합니다. 참고 구간은 업계에서 흔한 수준이며, 자사 품목과 기준에 맞게 조정하면 됩니다.</p>
+      <table>
+        <tr>
+          <th>지표</th>
+          <th>집계 기준</th>
+          <th>참고 구간</th>
+          <th>데이터 출처</th>
+        </tr>
+        <tr>
+          <td>납기 준수율(OTD)</td>
+          <td>실제 출하일과 약속 출하일 비교, ±1 영업일은 정시. 건수와 수량 두 기준으로 집계 권장</td>
+          <td>성숙한 공급업체 95% 이상, 신규 90%부터</td>
+          <td>발주 대장과 출하 통지</td>
+        </tr>
+        <tr>
+          <td>품질 불량률</td>
+          <td>입고 검사에서의 외관·기능 불량 수와 로트 합격률. 외관은 샘플링 비율로 환산</td>
+          <td>로트 합격률 98% 이상, 외관 불량 0.5% 미만</td>
+          <td>입고 기록과 검사 보고서</td>
+        </tr>
+        <tr>
+          <td>이상 대응 속도</td>
+          <td>문제 제기부터 첫 유효 답변까지, 다시 실행 가능한 처리안까지의 시간</td>
+          <td>첫 답변 24시간 이내, 처리안 3영업일 이내</td>
+          <td>이상 티켓과 메일 타임스탬프</td>
+        </tr>
+        <tr>
+          <td>변경·샘플 대응</td>
+          <td>변경 응답 시간, 샘플 소요 기간, 초도 샘플 합격률</td>
+          <td>샘플 3~7일, 초도 합격률 80% 이상</td>
+          <td>변경서와 샘플 기록</td>
+        </tr>
+        <tr>
+          <td>문서와 규정 준수</td>
+          <td>출하 문서(패킹리스트, 검사 보고서, 재질·시험 성적서, 인보이스, 변경 확인)의 완비율과 적시성</td>
+          <td>95% 이상 완비, 화물과 동시 도착</td>
+          <td>출하 문서 세트</td>
+        </tr>
+      </table>
+
+      <h2>3. 데이터 출처: 새 시스템을 만들지 않습니다</h2>
+      <p>성과 평가가 실패하는 가장 흔한 이유는 지표 설계가 아니라 데이터를 아무도 관리하지 않기 때문입니다. 현실적인 방법은 이미 있는 세 가지 기록에 연결하는 것입니다. 발주 대장, 입고 기록, 이상 티켓입니다. 발주·입고·문제 발생마다 한 줄만 기록하면 월말 집계는 10분이면 끝납니다.</p>
+      <ul>
+        <li>발주 대장: 주문 번호, 품목, 수량, 확인 샘플 버전, 약속 출하일(계약서 기재일), 실제 출하일, 단가와 판 비용 기준</li>
+        <li>입고 기록: 도착일, 입고 수량, 샘플링 결과, 외관 불량 내용, 포장 상태, 사진 증빙</li>
+        <li>이상 티켓: 문제 유형(품질·납기·수량·문서), 영향 범위, 제기 시각, 회신 시각, 최종 처리와 비용 부담을 한 장에 기록</li>
+        <li>샘플 기록: 송부일, 승인일, 수정 횟수, 초도 합격 여부. 이 네 가지로 소통 효율이 보입니다</li>
+      </ul>
+
+      <h2>4. 분기 스코어카드 설계: 가중치와 등급</h2>
+      <p>가중치는 실제로 중요한 것을 반영합니다. 대부분의 브랜드와 봉제공장에 합리적인 배분은 납기와 품질에 각 30%입니다. 부자재는 이 둘 중 하나가 무너지면 다른 노력이 상쇄되기 때문입니다. 가격은 5% 정도면 충분합니다. 견적 비교 단계에서 이미 걸러졌고, 가중치를 높이면 가격 압박만 커집니다.</p>
+      <table>
+        <tr>
+          <th>평가 축</th>
+          <th>권장 가중치</th>
+          <th>평가 요점</th>
+        </tr>
+        <tr>
+          <td>납기</td>
+          <td>30%</td>
+          <td>납기 준수율, 지연 일수 분포, 긴급·끼어들기 대응, 지연 사전 통보 여부</td>
+        </tr>
+        <tr>
+          <td>품질</td>
+          <td>30%</td>
+          <td>로트 합격률, 외관 불량률, 확인 샘플과의 일치, 색차 관리, 불량 로트 처리 결과</td>
+        </tr>
+        <tr>
+          <td>대응과 소통</td>
+          <td>15%</td>
+          <td>첫 답변 속도, 진행 상황 자발적 보고, 설명의 명확성, 대안 제시</td>
+        </tr>
+        <tr>
+          <td>변경·샘플 대응</td>
+          <td>10%</td>
+          <td>변경 대응, 샘플 소요 기간, 초도 합격률, 변경 비용의 투명성</td>
+        </tr>
+        <tr>
+          <td>문서와 규정 준수</td>
+          <td>10%</td>
+          <td>출하 문서 완비와 적시성, 시험 성적서 유효성, 변경 확인 회수, 인보이스와 대사 정확도</td>
+        </tr>
+        <tr>
+          <td>가격과 원가 개선</td>
+          <td>5%</td>
+          <td>견적 경쟁력, 원가 개선 제안의 자발성과 실행 가능성(합판, 사양 합리화 등)</td>
+        </tr>
+      </table>
+      <p>점수가 나오면 등급을 정하고, 등급이 발주 배분을 결정합니다. 같은 품목에 최소 두 곳의 합격 공급업체를 두고, 세탁 표시·메인 라벨 같은 핵심 부자재는 한 곳에 의존하지 않습니다.</p>
+      <ul>
+        <li><strong>A등급(90점 이상):</strong> 물량 우선 배정, 연간 계약과 유리한 결제 조건 협의 가능. 신규 스타일 초도 발주와 긴급 건에 적합합니다</li>
+        <li><strong>B등급(75~89점):</strong> 현 점유를 유지하고 감점 항목에 1~2개의 정량 목표를 설정해 다음 분기에 점검합니다</li>
+        <li><strong>C등급(60~74점):</strong> 신규 스타일 중단, 기존 스타일만 유지. 개선 기한과 검증 방법을 명시합니다</li>
+        <li><strong>D등급(60점 미만):</strong> 대체 공급업체 시험 발주를 시작하고 인수인계 목록을 정비해 급한 교체가 결품으로 이어지지 않게 합니다</li>
+      </ul>
+
+      <h2>5. 결과 활용: 배분·개선 계획·대체 공급</h2>
+      <p>평가가 &#x27;점수 매기기&#x27;로만 쓰이면 곧 아무도 진지하게 받아들이지 않습니다. 작동하게 하는 것은 세 가지입니다. 배분 규칙을 문서화하고, 개선 목표를 구체화하고, 대체 공급업체를 실제로 가동해 두는 것입니다.</p>
+      <ul>
+        <li>배분 규칙을 공개합니다. 예: A 60~70%, B 20~30%, C 10% 이내. 공개되면 공급업체는 점유를 늘리는 길을 알게 되며, 비공식 압박보다 훨씬 효과적입니다</li>
+        <li>개선 계획은 한두 개 목표로 좁힙니다. 예: &#x27;다음 분기 납기 준수율 88%에서 93%로&#x27;. 검증 방법(월간 데이터 2회)을 정하고, 구매자 측 협조 사항(확인 샘플 5일 조기 제공 등)도 함께 적습니다</li>
+        <li>대체 공급업체는 실제로 검증해 둡니다. 최소 한 차례 샘플과 소량 시험 발주를 완료하고 판과 도안 데이터도 준비해 두어야, 급한 교체 때 2주 일정을 다시 밟지 않습니다</li>
+        <li>점수를 상대에게 보여 줍니다. 감점 내역과 근거를 첨부합니다. 데이터를 논의하는 공급업체는 대개 한 분기 안에 개선되고, 보려 하지 않는 곳은 그 자체가 신호입니다</li>
+      </ul>
+
+      <h2>6. 흔한 세 가지 실수</h2>
+      <ul>
+        <li><strong>가격만 보기:</strong> 저가의 숨은 비용은 반년 뒤 재작업·지연·클레임·라인 정지로 나타납니다. 가격은 관문이며 유일한 순위 기준이 아닙니다</li>
+        <li><strong>단일 지표 평가:</strong> 납기만 보면 품질을 깎고, 버퍼를 늘리고, 문제를 숨기는 방향으로 압박합니다. 가격만 보면 서비스와 샘플 투자가 사라집니다. 지표는 서로 균형이 필요합니다</li>
+        <li><strong>기록 없는 인상론:</strong> &#x27;요즘 이 업체가 별로다&#x27;는 가장 논하기 어려운 결론입니다. 기록을 습관으로 만들면 리뷰 때 데이터가 손에 있고 상대도 받아들이기 쉽습니다</li>
+      </ul>
+
+      <div class="callout"><strong>한 줄 요약:</strong> 부자재 공급업체 성과 평가의 목적은 우열을 가르는 것이 아니라 &#x27;약속&#x27;을 &#x27;대조 가능한 숫자&#x27;로 바꾸는 것입니다. 숫자가 있으면 물량 배정, 가격 협상, 공급업체 교체가 근거 있는 결정이 됩니다. 없으면 구매는 매번 심리전이 됩니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-supplier-audit.html">부자재 공급업체 공장 심사: 반드시 볼 여섯 축과 평가표</a></li>
+        <li><a href="garment-trims-sourcing-guide.html">의류 부자재 소싱: 공급업체 선정과 관리</a></li>
+        <li><a href="garment-trims-order-tracking-guide.html">부자재 주문 진행 관리: 배치부터 출하까지</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>실제로 쓰는 부자재 공급업체 평가표를 만들고 싶으십니까? 주로 발주하는 품목, 현재의 문제(지연·색차·변경 대응 지연), 분기 발주량을 보내주시면 실무에 맞는 지표와 가중치 제안, 당사 납기 기준(샘플 3~7일, 양산 10~25일)과 문서 목록을 회신합니다. 기존 공급업체와 바로 비교할 수 있습니다.</p>
+        <a class="cta-btn" href="../contact.html">문제점을 알려주시면 평가표를 드립니다 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
