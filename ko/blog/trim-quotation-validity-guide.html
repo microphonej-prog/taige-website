@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 견적 유효기간과 원자재 가격 변동: 가격 고정·조정·분할 납품 | TAGE</title>
+<meta name="description" content="부자재 견적에 유효기간이 있는 이유를 정리합니다. 행택용지, 직조 라벨 원사, 봉투 원료, 금속 부품의 재료 비중과 변동 요인, 견적서에 반드시 필요한 여섯 항목, 고정가·변동가·단계 가격의 선택, 가격 고정과 사전 자재 준비, 계약금과 환율 조항, 분할 납품과 인수 지연을 다룹니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-quotation-validity-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談",
+     "item": "https://taigetag.com/blog/trim-quotation-validity-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談",
+   "url": "https://taigetag.com/blog/trim-quotation-validity-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-quotation-validity-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>견적 유효기간</span></div>
+      <h1>부자재 견적 유효기간과 원자재 변동: 가격 고정·조정·분할 납품 협상법</h1>
+      <p>TAGE 패키징 · 2026년 9월 27일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 견적서에서 가장 자주 다툼이 생기는 부분은 단가가 아니라 맨 아래 &#x27;견적 유효기간&#x27;입니다. 행택, 직조 라벨, 봉투의 주원료는 종이, 실, 플라스틱 원료이며 국제 원자재 시세에 따라 움직입니다. 30일 유효 견적도 기간이 지나면 같은 가격이 성립하지 않을 수 있습니다. 가격 구조와 변동 요인을 이해해야 가격 고정, 조정, 분할 납품을 양측에 공정한 조항으로 만들 수 있습니다.</p>
+
+      <h2>1. 원자재 시세에 가장 민감한 부자재</h2>
+      <p>부자재 가격은 재료, 가공, 후가공, 로스, 관리비와 이윤의 다섯 부분으로 구성됩니다. 재료 비중이 높고 원료가 단순할수록 시세에 민감합니다. 아래 비율은 일반적 참고 구간으로, 고정가와 변동가 중 무엇으로 협상할지 판단하는 기준이 됩니다.</p>
+      <table>
+        <tr>
+          <th>품목</th>
+          <th>주요 원료</th>
+          <th>재료비 비중 참고</th>
+          <th>변동의 주된 원인</th>
+        </tr>
+        <tr>
+          <td>행택·카드류</td>
+          <td>백판지, 코팅지, 크라프트지</td>
+          <td>대략 5할 전후</td>
+          <td>펄프 가격과 제지사 가격 조정 공지</td>
+        </tr>
+        <tr>
+          <td>직조 라벨</td>
+          <td>폴리에스터 또는 면사, 직조 공수</td>
+          <td>대략 3~4할</td>
+          <td>화학섬유 원료와 방적사 견적</td>
+        </tr>
+        <tr>
+          <td>세탁 표시(테이프 또는 코팅)</td>
+          <td>기재 테이프, 코팅 수지, 잉크</td>
+          <td>대략 3~4.5할</td>
+          <td>기재와 수지 가격, 잉크 규격 대응</td>
+        </tr>
+        <tr>
+          <td>비닐 봉투(OPP·PE·CPE)</td>
+          <td>플라스틱 원료, 필름 가공</td>
+          <td>대략 4~6.5할</td>
+          <td>원유와 원료 시세, 필름 공장 가동률</td>
+        </tr>
+        <tr>
+          <td>친환경 종이백</td>
+          <td>크라프트지, 판지, 수작업 공수</td>
+          <td>대략 4~5.5할</td>
+          <td>종이 가격과 인건비, 수작업 접착 생산능력</td>
+        </tr>
+        <tr>
+          <td>금속 부품(택핀, 아일릿, 체결구)</td>
+          <td>아연 합금, 구리, 스테인리스</td>
+          <td>대략 4~7할</td>
+          <td>비철금속 시세, 도금 비용과 환경 규제</td>
+        </tr>
+      </table>
+      <div class="callout">위 비율은 민감도를 판단하기 위한 참고치이며 견적 근거가 아닙니다. 같은 품목도 평량, 크기, 인쇄 방식, 수량에 따라 재료 비중이 달라집니다. 수량이 커지면 가공비와 관리비가 희석되어 재료 비중이 높아지고 가격이 원료를 더 따라갑니다.</div>
+
+      <h2>2. 쓸 수 있는 견적서에 반드시 있어야 할 여섯 항목</h2>
+      <ul>
+        <li><strong>유효기간：</strong>일수와 기산일을 명시합니다. 견적일, 샘플 승인일, 계약금 수령일 중 어느 것인지에 따라 의미가 크게 달라집니다</li>
+        <li><strong>통화와 환율 기준：</strong>미국 달러, 유로, 위안화 여부와 환율 변동 조항 유무(예: ±3% 이내 조정 없음)</li>
+        <li><strong>무역 조건：</strong>EXW, FOB, CIF, DDP 여부에 따라 운임, 보험, 통관 책임이 달라집니다</li>
+        <li><strong>수량 구간과 단계 가격：</strong>수량별 단가와 금형비, 판비, 샘플비 부과 여부</li>
+        <li><strong>포장과 운임 기준：</strong>내포장 수량, 외박스 규격과 중량, 적재 방식. 부피 기준인지 중량 기준인지 나중에 다투지 않도록 합니다</li>
+        <li><strong>가격 조정 메커니즘：</strong>재협상 기준이 되는 변동 폭, 기준 지표(제지사 통지, 업계 지수, 공동 확인 매입가), 검토 주기</li>
+      </ul>
+
+      <h2>3. 고정가·변동가·단계 가격 선택법</h2>
+      <table>
+        <tr>
+          <th>방식</th>
+          <th>운영 방식</th>
+          <th>적합한 상황</th>
+        </tr>
+        <tr>
+          <td>고정가</td>
+          <td>유효기간 동안 가격 유지, 원료 변동 위험은 공급자가 부담합니다</td>
+          <td>수량이 확정되고 납기가 짧은 단기 발주. 브랜드 예산 확정에 유리합니다</td>
+        </tr>
+        <tr>
+          <td>변동가</td>
+          <td>고정 가공비에 재료 기준가를 더하고 재료 부분을 합의된 지표로 월별·분기별 조정합니다</td>
+          <td>장기 협업, 정규 품목, 연간 프레임 주문</td>
+        </tr>
+        <tr>
+          <td>단계 가격</td>
+          <td>수량 구간별 단가를 한 번에 정하고 분할 발주해 재료 사전 준비 비용을 반영합니다</td>
+          <td>연간 물량 예측이 가능하고 스타일이 안정적이며 분할 납품이 필요한 경우</td>
+        </tr>
+      </table>
+
+      <h2>4. 가격 고정·사전 자재 준비·계약금 협상</h2>
+      <ul>
+        <li><strong>가격과 수량을 분리해 협상：</strong>수량만 고정하면 구간 할인은 받지만 가격은 원료를 따릅니다. 가격만 고정하면 최소 수량이 필요하며 그렇지 않으면 단가에 위험 프리미엄이 붙습니다</li>
+        <li><strong>자재 사전 확보가 가장 확실한 가격 고정：</strong>주문 확정 시 총량 분의 종이·실·원료를 확보하면 재료비가 고정됩니다. 대가는 보관과 로트 관리이며, 색상 불일치를 막으려면 색상 또는 로트 단위로 한 번에 준비합니다</li>
+        <li><strong>계약금과 고정 기간 연동：</strong>계약금 입금 후 납품까지 가격을 고정하는 방식이 일반적입니다. 비율이 높고 기간이 길수록 공급자 양보 여지가 커집니다</li>
+        <li><strong>구두 약속은 문서로：</strong>&#x27;납품까지 가격 고정&#x27;, &#x27;재료가 5% 이상 변동 시 재협상&#x27; 같은 문구를 주문서나 계약 부속서에 넣습니다. 메일상 동의는 근거로 약합니다</li>
+      </ul>
+
+      <h2>5. 분할 납품과 기한 초과 인수</h2>
+      <p>분할 납품은 가격과 재고 사이의 절충안입니다. 가격을 한 번 정하고 분기별 또는 스타일별로 출하하면 전량을 보관하지 않아도 됩니다. 다만 두 가지 숨은 비용을 미리 정리해야 합니다.</p>
+      <ul>
+        <li><strong>로트 차이：</strong>다른 로트의 종이·실·잉크는 미세한 색차가 생깁니다. 금속 부품은 문제가 적지만 나란히 보이는 메인 라벨과 행택은 같은 로트로 생산합니다</li>
+        <li><strong>분할 물류비：</strong>매 회차마다 포장, 표시, 운송이 필요해 횟수가 늘수록 회차당 비용이 커집니다. 협상 시 횟수를 명시합니다</li>
+        <li><strong>인수 지연：</strong>총량 분의 자재를 준비하고 제품도 입고되었는데 인수가 늦으면 창고 부담과 자재 가격 하락 위험이 생깁니다. 무상 보관 기간, 초과 보관료, 최종 인수일을 계약에 명시합니다</li>
+      </ul>
+
+      <h2>6. 환율 조항: 견적서에서 가장 놓치기 쉬운 한 줄</h2>
+      <p>달러로 견적하고 위안화로 자재를 매입하면 환차가 공급자의 위험이 됩니다. 금액이 작은 부자재 주문은 몇 퍼센트의 환율 변동으로 이익이 사라지기도 하므로 &#x27;±3% 이내 조정 없음, 초과분 절반 부담&#x27; 같은 중립 구간을 두는 것이 현실적입니다. 위험을 한쪽에 모두 떠넘기지 않습니다. 위안화 결제는 이 위험을 없애지만 재무와 세금계산 처리가 이를 지원해야 합니다.</p>
+
+      <h2>7. 협상 전 자체 점검</h2>
+      <ul>
+        <li>연간 물량과 발주 리듬이 명확합니까? 물량 예측이 없으면 단계 가격을 얻기 어렵습니다</li>
+        <li>원료 브랜드나 제지사를 지정합니까? 지정은 비용 상승과 자재 준비 기간 연장을 부릅니다</li>
+        <li>결제 조건과 계약금 비율이 정해졌습니까? 가격 고정 가능 여부를 좌우합니다</li>
+        <li>분할 납품이 가능합니까? 횟수와 최종 인수일을 계약에 넣을 수 있습니까</li>
+        <li>비교 시 무역 조건, 수량 구간, 포장 기준을 맞췄습니까? 기준이 다르면 가격 비교가 무의미합니다</li>
+      </ul>
+      <div class="callout">한 줄 요약: 단기 주문은 고정가, 장기는 변동가와 조정 산식, 그 사이는 자재 사전 준비와 계약금으로 고정 기간을 확보합니다. &#x27;유효기간, 기준, 조정 폭, 검토 주기&#x27; 네 가지 숫자를 한 문서에 넣으면 가격 분쟁이 조항으로 해결되는 문제가 됩니다.</div>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">부자재 견적 비교: 다른 공장 견적을 한 표에서 비교하기</a></li>
+        <li><a href="apparel-trims-payment-terms-guide.html">의류 부자재 결제 조건과 여신 기간</a></li>
+        <li><a href="garment-trims-cost-saving-guide.html">품질을 낮추지 않고 부자재 원가를 줄이는 방법</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>계약에 넣을 수 있는 가격과 납기 조건이 필요하십니까? 품목, 연간 물량 예상, 판매 시장, 무역 조건, 결제 방식을 보내주시면 유효기간, 수량 구간, 조정 기준을 담은 견적을 회신하고 가격 고정에 적합한 품목과 변동제가 나은 품목을 안내합니다. 샘플 3~7일, 양산 10~25일, 최소 수량 유연합니다.</p>
+        <a class="cta-btn" href="../contact.html">물량과 품목을 보내면 조건 포함 견적부터 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

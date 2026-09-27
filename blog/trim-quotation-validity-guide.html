@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="輔料報價有效期與原材料價格波動：鎖價、調價與分批交付 | TAGE" data-en="Trim Quotation Validity and Raw Material Price Moves | TAGE" data-ja="副資材見積りの有効期限と原材料価格の変動：価格固定・改定・分割納入 | TAGE" data-ko="부자재 견적 유효기간과 원자재 가격 변동: 가격 고정·조정·분할 납품 | TAGE" data-fr="Validité d'un devis d'accessoires et volatilité des matières premières | TAGE" data-es="Validez del presupuesto de accesorios y volatilidad de materias primas | TAGE">輔料報價有效期與原材料價格波動：鎖價、調價與分批交付 | TAGE</title>
+<meta name="description" data-zh="輔料報價爲什麼有有效期：吊牌紙張、織嘜紗線、膠袋粒子與金屬件的材料佔比與波動來源，報價單必須寫清的六項，固定價、浮動價與階梯價的適用場景，鎖價與備料、定金與匯率條款、分批交付與超期提貨的談法，附談價前自查清單。來自東莞泰閣包裝。"
+      data-en="Why trims quotes expire: material shares, six things a quotation must state, fixed vs floating vs tiered pricing, price locks, deposits and currency clauses." data-ja="副資材の見積りに有効期限がある理由を解説。タグ用紙、織りラベル糸、袋のペレット、金属部品の材料比率と変動要因、見積書に必須の6項目、固定価格・変動価格・階段価格の使い分け、価格固定と先行手配、着手金と為替条項、分割納入と引き取り遅延まで整理します。" data-ko="부자재 견적에 유효기간이 있는 이유를 정리합니다. 행택용지, 직조 라벨 원사, 봉투 원료, 금속 부품의 재료 비중과 변동 요인, 견적서에 반드시 필요한 여섯 항목, 고정가·변동가·단계 가격의 선택, 가격 고정과 사전 자재 준비, 계약금과 환율 조항, 분할 납품과 인수 지연을 다룹니다."
+      data-fr="Pourquoi un devis d'accessoires expire : part matière par catégorie, six mentions obligatoires, prix ferme, variable ou par paliers, blocage de prix, acompte, clause de change et livraisons fractionnées."
+      data-es="Por qué caduca un presupuesto de accesorios: parte de material por categoría, seis datos obligatorios, precio fijo, variable o por tramos, bloqueo de precio, anticipo, cláusula de cambio y entregas parciales."
+      content="輔料報價爲什麼有有效期：吊牌紙張、織嘜紗線、膠袋粒子與金屬件的材料佔比與波動來源，報價單必須寫清的六項，固定價、浮動價與階梯價的適用場景，鎖價與備料、定金與匯率條款、分批交付與超期提貨的談法，附談價前自查清單。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-quotation-validity-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-quotation-validity-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談",
+     "item": "https://taigetag.com/blog/trim-quotation-validity-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談",
+   "url": "https://taigetag.com/blog/trim-quotation-validity-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-quotation-validity-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="報價有效期與價格波動" data-en="Quote Validity" data-ja="見積り有効期限" data-ko="견적 유효기간" data-fr="Validité des devis" data-es="Validez de la oferta">報價有效期與價格波動</span></div>
+      <h1 data-zh="輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談" data-en="Trim Quotation Validity and Raw Material Volatility: Locking Prices and Splitting Deliveries" data-ja="副資材見積りの有効期限と原材料変動：価格固定・改定・分割納入の進め方" data-ko="부자재 견적 유효기간과 원자재 변동: 가격 고정·조정·분할 납품 협상법" data-fr="Validité du devis et volatilité des matières : blocage de prix, révisions et livraisons fractionnées" data-es="Validez del presupuesto y volatilidad de materias: bloqueo de precio, revisiones y entregas parciales">輔料報價有效期與原材料價格波動：鎖價、調價與分批交付怎麼談</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年9月27日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 27, 2026" data-ja="泰閣包装 · 2026年9月27日更新" data-ko="TAGE 패키징 · 2026년 9월 27일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 27 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 27 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月27日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="輔料報價單上最容易起爭執的，往往不是單價，而是最後那四個字：報價有效期。吊牌、織嘜與膠袋的主要原料是紙、紗線和塑料粒子，它們的價格隨國際原料行情浮動，一份寫着「有效期 30 天」的報價，到期後原價可能已經不再成立。理解價格是怎麼算出來的、波動從哪裏來，才能把鎖價、調價與分批交付談成對雙方都公平的條款。"
+         data-en="The line that causes the most trouble on a trims quotation is rarely the unit price — it is the validity period printed at the bottom. Paper, yarn and plastic granules move with global commodity markets, so a quotation valid for thirty days may be obsolete the day it expires. Understanding how the price is built and where the volatility comes from is what lets a buyer and a supplier agree on price locking, adjustments and split deliveries that are fair to both sides."
+         data-ja="副資材の見積書でもめやすいのは、単価よりも最後の一行「見積有効期限」です。タグや織りラベル、袋の主要原料は紙、糸、プラスチックペレットで、国際的な原料相場で動きます。30日有効の見積もりも、期限が切れれば同じ価格では成立しないことがあります。価格の成り立ちと変動要因を理解しておくことが、価格固定・改定・分割納入を双方に公平な条項にする前提です。"
+         data-ko="부자재 견적서에서 가장 자주 다툼이 생기는 부분은 단가가 아니라 맨 아래 '견적 유효기간'입니다. 행택, 직조 라벨, 봉투의 주원료는 종이, 실, 플라스틱 원료이며 국제 원자재 시세에 따라 움직입니다. 30일 유효 견적도 기간이 지나면 같은 가격이 성립하지 않을 수 있습니다. 가격 구조와 변동 요인을 이해해야 가격 고정, 조정, 분할 납품을 양측에 공정한 조항으로 만들 수 있습니다."
+         data-fr="Sur un devis d'accessoires, ce qui fâche le plus n'est pas le prix unitaire mais la mention du bas de page : la durée de validité. Papier, fil et granulés plastiques suivent les marchés mondiaux : un devis valable trente jours peut être caduc le jour de son expiration. Comprendre la construction du prix et l'origine de la volatilité permet de négocier blocage de prix, révisions et livraisons fractionnées de façon équitable."
+         data-es="En un presupuesto de accesorios lo que más discusiones genera no es el precio unitario, sino la línea final: la validez de la oferta. Papel, hilo y granza plástica siguen los mercados internacionales, así que un presupuesto válido treinta días puede quedar obsoleto al expirar. Entender cómo se forma el precio y de dónde viene la volatilidad permite pactar bloqueo de precio, revisiones y entregas parciales de forma equilibrada.">輔料報價單上最容易起爭執的，往往不是單價，而是最後那四個字：報價有效期。吊牌、織嘜與膠袋的主要原料是紙、紗線和塑料粒子，它們的價格隨國際原料行情浮動，一份寫着「有效期 30 天」的報價，到期後原價可能已經不再成立。理解價格是怎麼算出來的、波動從哪裏來，才能把鎖價、調價與分批交付談成對雙方都公平的條款。</p>
+
+      <h2 data-zh="一、哪些輔料的價格最容易被原料行情牽動" data-en="1. Which Trims Are Most Exposed to Raw Material Markets" data-ja="1. 原料相場の影響を最も受けやすい副資材" data-ko="1. 원자재 시세에 가장 민감한 부자재" data-fr="1. Quels accessoires subissent le plus les matières premières" data-es="1. Qué accesorios dependen más de las materias primas">一、哪些輔料的價格最容易被原料行情牽動</h2>
+      <p data-zh="輔料價格大致由五塊構成：材料、加工、後道工藝、損耗、管理費與利潤。材料佔比越高、原料越單一，價格對行情就越敏感。下表給出行業裏常見的佔比區間，用來判斷某個品類該談固定價還是該談浮動價。"
+         data-en="A trim price is built from five blocks: material, conversion, finishing, waste allowance, and overhead plus margin. The higher the material share and the simpler the material, the more sensitive the price. The ranges below are typical and help decide whether a category calls for a fixed or a floating price."
+         data-ja="副資材の価格は、材料・加工・後工程・ロス・管理費と利益の5つで構成されます。材料比率が高く、原料が単一なほど相場に敏感です。下表の比率レンジは一般的な目安で、固定価格と変動価格のどちらで交渉すべきかの判断に使えます。"
+         data-ko="부자재 가격은 재료, 가공, 후가공, 로스, 관리비와 이윤의 다섯 부분으로 구성됩니다. 재료 비중이 높고 원료가 단순할수록 시세에 민감합니다. 아래 비율은 일반적 참고 구간으로, 고정가와 변동가 중 무엇으로 협상할지 판단하는 기준이 됩니다."
+         data-fr="Un prix d'accessoire se compose de cinq blocs : matière, transformation, finition, rebut et frais généraux avec marge. Plus la part matière est élevée et la matière simple, plus le prix est sensible. Les plages ci-dessous sont indicatives et aident à choisir entre prix ferme et prix variable."
+         data-es="El precio de un accesorio se compone de cinco bloques: material, transformación, acabado, merma y gastos generales con margen. Cuanto mayor sea la parte de material y más simple sea este, más sensible será el precio. Los rangos siguientes son orientativos y ayudan a decidir entre precio fijo y variable.">輔料價格大致由五塊構成：材料、加工、後道工藝、損耗、管理費與利潤。材料佔比越高、原料越單一，價格對行情就越敏感。下表給出行業裏常見的佔比區間，用來判斷某個品類該談固定價還是該談浮動價。</p>
+      <table>
+        <tr>
+          <th data-zh="品類" data-en="Category" data-ja="品目" data-ko="품목" data-fr="Catégorie" data-es="Categoría">品類</th>
+          <th data-zh="主要原料" data-en="Main material" data-ja="主な原料" data-ko="주요 원료" data-fr="Matière principale" data-es="Material principal">主要原料</th>
+          <th data-zh="材料佔報價的大致比例" data-en="Typical material share" data-ja="材料費の目安比率" data-ko="재료비 비중 참고" data-fr="Part matière indicative" data-es="Proporción de material">材料佔報價的大致比例</th>
+          <th data-zh="波動主要來自" data-en="Main driver of movement" data-ja="変動の主因" data-ko="변동의 주된 원인" data-fr="Source de variation" data-es="Origen de la variación">波動主要來自</th>
+        </tr>
+        <tr>
+          <td data-zh="吊牌、卡片類" data-en="Hang tags and cards" data-ja="タグ・カード類" data-ko="행택·카드류" data-fr="Étiquettes et cartes" data-es="Colgantes y tarjetas">吊牌、卡片類</td>
+          <td data-zh="白卡紙、銅版紙、牛皮紙" data-en="Coated and uncoated card, kraft" data-ja="白板紙、コート紙、クラフト紙" data-ko="백판지, 코팅지, 크라프트지" data-fr="Carte blanche, couché, kraft" data-es="Cartulina, estucado, kraft">白卡紙、銅版紙、牛皮紙</td>
+          <td data-zh="約五成上下" data-en="Around half" data-ja="おおむね5割前後" data-ko="대략 5할 전후" data-fr="Environ la moitié" data-es="Cerca de la mitad">約五成上下</td>
+          <td data-zh="紙漿價格與紙廠調價通知" data-en="Pulp prices and mill price notices" data-ja="パルプ価格と製紙会社の値上げ通知" data-ko="펄프 가격과 제지사 가격 조정 공지" data-fr="Prix de la pâte et annonces des papeteries" data-es="Precio de la pasta y avisos de las papeleras">紙漿價格與紙廠調價通知</td>
+        </tr>
+        <tr>
+          <td data-zh="織嘜、主嘜" data-en="Woven labels" data-ja="織りラベル" data-ko="직조 라벨" data-fr="Étiquettes tissées" data-es="Etiquetas tejidas">織嘜、主嘜</td>
+          <td data-zh="滌綸或棉紗線、織造工時" data-en="Polyester or cotton yarn, weaving time" data-ja="ポリエステルまたは綿糸、織造工数" data-ko="폴리에스터 또는 면사, 직조 공수" data-fr="Fil polyester ou coton, temps de tissage" data-es="Hilo de poliéster o algodón, tiempo de telar">滌綸或棉紗線、織造工時</td>
+          <td data-zh="約三到四成" data-en="Roughly a third to 40 per cent" data-ja="おおむね3〜4割" data-ko="대략 3~4할" data-fr="Environ un tiers à 40 pour cent" data-es="Alrededor de un tercio al 40 por ciento">約三到四成</td>
+          <td data-zh="化纖原料與紗廠報價" data-en="Synthetic fibre feedstock and yarn quotes" data-ja="化繊原料と紡績会社の見積り" data-ko="화학섬유 원료와 방적사 견적" data-fr="Matières synthétiques et devis des filatures" data-es="Materias sintéticas y cotizaciones de hilatura">化纖原料與紗廠報價</td>
+        </tr>
+        <tr>
+          <td data-zh="洗水標（織帶或塗層）" data-en="Care labels (woven tape or coated)" data-ja="洗濯表示（テープまたはコーティング）" data-ko="세탁 표시(테이프 또는 코팅)" data-fr="Étiquettes d'entretien (ruban ou enduit)" data-es="Etiquetas de cuidado (cinta o recubiertas)">洗水標（織帶或塗層）</td>
+          <td data-zh="基布、塗層樹脂與油墨" data-en="Base tape, coating resin and ink" data-ja="基布、コーティング樹脂、インキ" data-ko="기재 테이프, 코팅 수지, 잉크" data-fr="Ruban support, résine de couchage, encre" data-es="Cinta base, resina de recubrimiento y tinta">基布、塗層樹脂與油墨</td>
+          <td data-zh="約三到四成五" data-en="Roughly 30 to 45 per cent" data-ja="おおむね3〜4.5割" data-ko="대략 3~4.5할" data-fr="Environ 30 à 45 pour cent" data-es="Alrededor del 30 al 45 por ciento">約三到四成五</td>
+          <td data-zh="基布與樹脂價格、油墨合規升級" data-en="Tape and resin prices, ink compliance upgrades" data-ja="基布と樹脂価格、インキの規格対応" data-ko="기재와 수지 가격, 잉크 규격 대응" data-fr="Prix du ruban et de la résine, mise à niveau des encres" data-es="Precio de cinta y resina, actualización de tintas">基布與樹脂價格、油墨合規升級</td>
+        </tr>
+        <tr>
+          <td data-zh="膠袋（OPP、PE、CPE）" data-en="Poly bags (OPP, PE, CPE)" data-ja="ポリ袋（OPP・PE・CPE）" data-ko="비닐 봉투(OPP·PE·CPE)" data-fr="Sachets plastique (OPP, PE, CPE)" data-es="Bolsas plásticas (OPP, PE, CPE)">膠袋（OPP、PE、CPE）</td>
+          <td data-zh="塑料粒子、薄膜加工" data-en="Plastic granules, film conversion" data-ja="プラスチックペレット、フィルム加工" data-ko="플라스틱 원료, 필름 가공" data-fr="Granulés plastiques, transformation de film" data-es="Granza plástica, transformación de film">塑料粒子、薄膜加工</td>
+          <td data-zh="約四到六成五" data-en="Roughly 40 to 65 per cent" data-ja="おおむね4〜6.5割" data-ko="대략 4~6.5할" data-fr="Environ 40 à 65 pour cent" data-es="Alrededor del 40 al 65 por ciento">約四到六成五</td>
+          <td data-zh="原油與粒子行情、吹膜廠開工率" data-en="Crude and resin markets, film-line utilisation" data-ja="原油とペレット相場、製膜会社の稼働率" data-ko="원유와 원료 시세, 필름 공장 가동률" data-fr="Marchés du brut et des granulés, taux d'utilisation" data-es="Mercados de crudo y granza, utilización de líneas">原油與粒子行情、吹膜廠開工率</td>
+        </tr>
+        <tr>
+          <td data-zh="環保紙袋" data-en="Eco paper bags" data-ja="環境対応紙袋" data-ko="친환경 종이백" data-fr="Sacs papier écologiques" data-es="Bolsas de papel ecológicas">環保紙袋</td>
+          <td data-zh="牛皮紙、白卡與手工工時" data-en="Kraft, card and manual labour" data-ja="クラフト紙、板紙と手作業工数" data-ko="크라프트지, 판지, 수작업 공수" data-fr="Kraft, carton et main-d'oeuvre" data-es="Kraft, cartón y mano de obra">牛皮紙、白卡與手工工時</td>
+          <td data-zh="約四到五成五" data-en="Roughly 40 to 55 per cent" data-ja="おおむね4〜5.5割" data-ko="대략 4~5.5할" data-fr="Environ 40 à 55 pour cent" data-es="Alrededor del 40 al 55 por ciento">約四到五成五</td>
+          <td data-zh="紙價與人工成本、手工粘袋產能" data-en="Paper and labour cost, hand-gluing capacity" data-ja="紙価格と人件費、手貼り製袋の生産能力" data-ko="종이 가격과 인건비, 수작업 접착 생산능력" data-fr="Prix du papier et coût du travail, capacité de collage" data-es="Precio del papel y coste laboral, capacidad de pegado">紙價與人工成本、手工粘袋產能</td>
+        </tr>
+        <tr>
+          <td data-zh="金屬配件（吊粒、雞眼、扣件）" data-en="Metal hardware (tag pins, eyelets, fasteners)" data-ja="金属部品（タグピン、ハトメ、留め具）" data-ko="금속 부품(택핀, 아일릿, 체결구)" data-fr="Pièces métalliques (attaches, oeillets, fermoirs)" data-es="Piezas metálicas (pines, ojales, cierres)">金屬配件（吊粒、雞眼、扣件）</td>
+          <td data-zh="鋅合金、銅、不鏽鋼" data-en="Zinc alloy, copper, stainless steel" data-ja="亜鉛合金、銅、ステンレス" data-ko="아연 합금, 구리, 스테인리스" data-fr="Alliage de zinc, cuivre, inox" data-es="Aleación de zinc, cobre, acero inoxidable">鋅合金、銅、不鏽鋼</td>
+          <td data-zh="約四到七成" data-en="Roughly 40 to 70 per cent" data-ja="おおむね4〜7割" data-ko="대략 4~7할" data-fr="Environ 40 à 70 pour cent" data-es="Alrededor del 40 al 70 por ciento">約四到七成</td>
+          <td data-zh="有色金屬行情、電鍍成本與環保要求" data-en="Non-ferrous markets, plating cost and environmental rules" data-ja="非鉄金属相場、メッキコストと環境規制" data-ko="비철금속 시세, 도금 비용과 환경 규제" data-fr="Marchés des métaux, coût de revêtement et règles environnementales" data-es="Mercados de metales, coste de galvanizado y normas ambientales">有色金屬行情、電鍍成本與環保要求</td>
+        </tr>
+      </table>
+      <div class="callout" data-zh="上表只用於判斷敏感度，不是報價依據。同一品類因克重、尺寸、印刷方式與批量不同，材料佔比會明顯變化；批量越大，加工與管理費被攤薄，材料佔比反而越高，價格也就更跟着原料走。"
+           data-en="These ranges indicate sensitivity only; they are not a pricing basis. Within one category the material share shifts with weight, size, printing method and volume: larger runs dilute conversion and overhead, so the material share rises and price tracks raw materials more closely."
+           data-ja="上表は感度を判断するための目安で、見積りの根拠ではありません。同じ品目でも坪量・寸法・印刷方式・数量で材料比率は変わります。数量が増えると加工費と管理費が薄まり、材料比率が上がるため、価格は原料に連動しやすくなります。"
+           data-ko="위 비율은 민감도를 판단하기 위한 참고치이며 견적 근거가 아닙니다. 같은 품목도 평량, 크기, 인쇄 방식, 수량에 따라 재료 비중이 달라집니다. 수량이 커지면 가공비와 관리비가 희석되어 재료 비중이 높아지고 가격이 원료를 더 따라갑니다."
+           data-fr="Ces plages indiquent une sensibilité, pas un prix. Dans une même catégorie, la part matière varie avec le grammage, le format, l'impression et le volume : les grandes séries diluent transformation et frais généraux, la part matière augmente et le prix suit davantage les matières."
+           data-es="Estos rangos indican sensibilidad, no son base de precio. Dentro de una categoría la parte de material varía con gramaje, formato, impresión y volumen: las tiradas grandes diluyen transformación y gastos, sube la parte de material y el precio sigue más a la materia prima.">上表只用於判斷敏感度，不是報價依據。同一品類因克重、尺寸、印刷方式與批量不同，材料佔比會明顯變化；批量越大，加工與管理費被攤薄，材料佔比反而越高，價格也就更跟着原料走。</div>
+
+      <h2 data-zh="二、一張合格的報價單必須寫清六件事" data-en="2. Six Things a Usable Quotation Must State" data-ja="2. 使える見積書に必ず書くべき6項目" data-ko="2. 쓸 수 있는 견적서에 반드시 있어야 할 여섯 항목" data-fr="2. Six mentions obligatoires dans un devis utilisable" data-es="2. Seis datos obligatorios en un presupuesto utilizable">二、一張合格的報價單必須寫清六件事</h2>
+      <ul>
+        <li data-zh="<strong>有效期：</strong>寫明有效期天數，以及從哪一天起算——報價日、客戶確認樣之日，還是收到定金之日，三者差別很大" data-en="<strong>Validity:</strong> state the number of days and the starting point — quotation date, sample approval or deposit received; the three differ a lot" data-ja="<strong>有効期限：</strong>日数と起算日を明記します。見積日、サンプル承認日、着手金受領日のどれかで意味が大きく変わります" data-ko="<strong>유효기간：</strong>일수와 기산일을 명시합니다. 견적일, 샘플 승인일, 계약금 수령일 중 어느 것인지에 따라 의미가 크게 달라집니다" data-fr="<strong>Validité :</strong> indiquez le nombre de jours et le point de départ — date du devis, validation de l'échantillon ou réception de l'acompte" data-es="<strong>Validez:</strong> indica los días y desde cuándo cuentan — fecha del presupuesto, aprobación de muestra o recepción del anticipo"><strong>有效期：</strong>寫明有效期天數，以及從哪一天起算——報價日、客戶確認樣之日，還是收到定金之日，三者差別很大</li>
+        <li data-zh="<strong>幣種與匯率基準：</strong>美元、歐元還是人民幣；是否含匯率浮動條款，例如波動在正負百分之三以內不調價" data-en="<strong>Currency and rate basis:</strong> USD, EUR or CNY, and whether a rate clause applies, for example no adjustment within plus or minus three per cent" data-ja="<strong>通貨と為替基準：</strong>米ドル、ユーロ、人民元の別、および為替変動条項の有無（例：±3％以内は据え置き）" data-ko="<strong>통화와 환율 기준：</strong>미국 달러, 유로, 위안화 여부와 환율 변동 조항 유무(예: ±3% 이내 조정 없음)" data-fr="<strong>Devise et base de change :</strong> USD, EUR ou CNY, et l'existence d'une clause de change, par exemple sans révision dans une fourchette de plus ou moins trois pour cent" data-es="<strong>Moneda y base de cambio:</strong> USD, EUR o CNY, y si aplica cláusula de cambio, por ejemplo sin revisión dentro de más o menos el tres por ciento"><strong>幣種與匯率基準：</strong>美元、歐元還是人民幣；是否含匯率浮動條款，例如波動在正負百分之三以內不調價</li>
+        <li data-zh="<strong>貿易術語：</strong>EXW、FOB、CIF 還是 DDP，直接影響運費、保險與清關責任落在誰頭上" data-en="<strong>Incoterms:</strong> EXW, FOB, CIF or DDP — this decides who carries freight, insurance and customs clearance" data-ja="<strong>貿易条件：</strong>EXW・FOB・CIF・DDP の別。運賃、保険、通関責任の所在が変わります" data-ko="<strong>무역 조건：</strong>EXW, FOB, CIF, DDP 여부에 따라 운임, 보험, 통관 책임이 달라집니다" data-fr="<strong>Incoterms :</strong> EXW, FOB, CIF ou DDP, ce qui détermine fret, assurance et dédouanement" data-es="<strong>Incoterms:</strong> EXW, FOB, CIF o DDP, lo que determina flete, seguro y despacho"><strong>貿易術語：</strong>EXW、FOB、CIF 還是 DDP，直接影響運費、保險與清關責任落在誰頭上</li>
+        <li data-zh="<strong>數量檔與階梯價：</strong>不同數量對應的單價，以及是否另收模具費、版費或打樣費" data-en="<strong>Quantity tiers:</strong> unit prices per quantity band, and whether tooling, plate or sampling charges apply" data-ja="<strong>数量段と階段価格：</strong>数量別の単価、および型代・版代・サンプル代の有無" data-ko="<strong>수량 구간과 단계 가격：</strong>수량별 단가와 금형비, 판비, 샘플비 부과 여부" data-fr="<strong>Paliers de quantité :</strong> prix unitaires par tranche, et frais de moule, de plaque ou d'échantillon" data-es="<strong>Tramos de cantidad:</strong> precios por tramo y si hay cargo de molde, plancha o muestras"><strong>數量檔與階梯價：</strong>不同數量對應的單價，以及是否另收模具費、版費或打樣費</li>
+        <li data-zh="<strong>包裝與運費口徑：</strong>內包裝計數、外箱規格與重量、裝櫃方式，避免到貨後才發現運費是按體積還是按重量算" data-en="<strong>Packing and freight basis:</strong> inner counts, carton size and weight, container loading — so nobody discovers later whether freight is charged by volume or weight" data-ja="<strong>梱包と運賃の基準：</strong>内袋の入数、外箱の寸法と重量、積載方法。容積建てか重量建てかで後から揉めないようにします" data-ko="<strong>포장과 운임 기준：</strong>내포장 수량, 외박스 규격과 중량, 적재 방식. 부피 기준인지 중량 기준인지 나중에 다투지 않도록 합니다" data-fr="<strong>Emballage et base de fret :</strong> quantités internes, dimensions et poids des cartons, chargement — pour éviter les surprises sur le calcul au volume ou au poids" data-es="<strong>Embalaje y base de flete:</strong> unidades interiores, medidas y peso de cajas, estiba, para no discutir luego si se cobra por volumen o peso"><strong>包裝與運費口徑：</strong>內包裝計數、外箱規格與重量、裝櫃方式，避免到貨後才發現運費是按體積還是按重量算</li>
+        <li data-zh="<strong>調價機制：</strong>材料上漲或下跌到多少幅度時重談，以什麼爲基準（紙廠通知、行業指數或雙方共同採購價），重談的週期是月度還是季度" data-en="<strong>Adjustment mechanism:</strong> the movement threshold that triggers a renegotiation, the index used (mill notice, published index or jointly verified purchase price) and the review frequency" data-ja="<strong>価格改定の仕組み：</strong>再協議に至る変動幅、基準（製紙会社の通知、業界指数、双方確認の仕入価格）、見直しの頻度" data-ko="<strong>가격 조정 메커니즘：</strong>재협상 기준이 되는 변동 폭, 기준 지표(제지사 통지, 업계 지수, 공동 확인 매입가), 검토 주기" data-fr="<strong>Mécanisme de révision :</strong> seuil de variation déclenchant une renégociation, indice retenu (avis de la papeterie, indice public, prix négocié conjointement) et fréquence de revue" data-es="<strong>Mecanismo de revisión:</strong> umbral de variación que abre renegociación, referencia aplicada (aviso del fabricante, índice público, precio de compra verificado) y periodicidad"><strong>調價機制：</strong>材料上漲或下跌到多少幅度時重談，以什麼爲基準（紙廠通知、行業指數或雙方共同採購價），重談的週期是月度還是季度</li>
+      </ul>
+
+      <h2 data-zh="三、固定價、浮動價與階梯價，怎麼選" data-en="3. Fixed, Floating or Tiered Pricing: How to Choose" data-ja="3. 固定価格・変動価格・階段価格の選び方" data-ko="3. 고정가·변동가·단계 가격 선택법" data-fr="3. Prix ferme, variable ou par paliers : comment choisir" data-es="3. Precio fijo, variable o por tramos: cómo elegir">三、固定價、浮動價與階梯價，怎麼選</h2>
+      <table>
+        <tr>
+          <th data-zh="機制" data-en="Mechanism" data-ja="仕組み" data-ko="방식" data-fr="Mécanisme" data-es="Mecanismo">機制</th>
+          <th data-zh="怎麼運作" data-en="How it works" data-ja="運用方法" data-ko="운영 방식" data-fr="Fonctionnement" data-es="Funcionamiento">怎麼運作</th>
+          <th data-zh="適合什麼場景" data-en="Best suited to" data-ja="向く場面" data-ko="적합한 상황" data-fr="Adapté à" data-es="Adecuado para">適合什麼場景</th>
+        </tr>
+        <tr>
+          <td data-zh="固定價" data-en="Fixed price" data-ja="固定価格" data-ko="고정가" data-fr="Prix ferme" data-es="Precio fijo">固定價</td>
+          <td data-zh="報價在有效期內不變，供應商自行承擔原料波動風險" data-en="The price holds for the validity period, and the supplier carries the raw material risk" data-ja="有効期間内は価格を維持し、原料変動リスクは供給側が負担します" data-ko="유효기간 동안 가격 유지, 원료 변동 위험은 공급자가 부담합니다" data-fr="Le prix est maintenu pendant la validité, le fournisseur assume le risque matière" data-es="El precio se mantiene durante la validez y el riesgo de materia prima lo asume el proveedor">報價在有效期內不變，供應商自行承擔原料波動風險</td>
+          <td data-zh="數量明確、交期緊、短期訂單，便於品牌鎖預算" data-en="Clear quantities, tight schedules and short orders, so the brand can lock its budget" data-ja="数量が確定し納期が短い短期発注。ブランドの予算確定に便利です" data-ko="수량이 확정되고 납기가 짧은 단기 발주. 브랜드 예산 확정에 유리합니다" data-fr="Quantités claires, délais courts et commandes brèves, pour figer un budget" data-es="Cantidades claras, plazos cortos y pedidos breves, para fijar presupuesto">數量明確、交期緊、短期訂單，便於品牌鎖預算</td>
+        </tr>
+        <tr>
+          <td data-zh="浮動價" data-en="Floating price" data-ja="変動価格" data-ko="변동가" data-fr="Prix variable" data-es="Precio variable">浮動價</td>
+          <td data-zh="固定加工費加材料基準，材料部分按約定基準或指數半年或季度調整" data-en="A fixed conversion fee plus a material basis, with the material element adjusted against an agreed index monthly or quarterly" data-ja="固定の加工費に材料基準を加え、材料部分を合意した基準や指数で月次・四半期に調整します" data-ko="고정 가공비에 재료 기준가를 더하고 재료 부분을 합의된 지표로 월별·분기별 조정합니다" data-fr="Un coût de transformation fixe et une base matière, la part matière étant ajustée selon un indice convenu" data-es="Un coste de transformación fijo y una base de material, ajustando esta última según un índice acordado">固定加工費加材料基準，材料部分按約定基準或指數半年或季度調整</td>
+          <td data-zh="長期合作、常規品種、年度框架訂單" data-en="Long-term partnerships, standard items and annual framework orders" data-ja="長期取引、定番品、年間フレーム契約" data-ko="장기 협업, 정규 품목, 연간 프레임 주문" data-fr="Partenariats longs, articles courants et accords-cadres annuels" data-es="Colaboraciones largas, artículos estándar y acuerdos marco anuales">長期合作、常規品種、年度框架訂單</td>
+        </tr>
+        <tr>
+          <td data-zh="階梯價" data-en="Tiered price" data-ja="階段価格" data-ko="단계 가격" data-fr="Prix par paliers" data-es="Precio por tramos">階梯價</td>
+          <td data-zh="按數量段給單價，一次談定、分批釋放，覆蓋材料備料成本" data-en="Unit prices per quantity band, negotiated once and released in stages, covering the cost of stocking material" data-ja="数量段ごとの単価を一度に決め、分割で発注。材料の先行手配コストを吸収します" data-ko="수량 구간별 단가를 한 번에 정하고 분할 발주해 재료 사전 준비 비용을 반영합니다" data-fr="Prix unitaires par tranche, négociés une fois et libérés par étapes, pour couvrir le stockage matière" data-es="Precios por tramo negociados una vez y liberados por etapas, cubriendo el acopio de material">按數量段給單價，一次談定、分批釋放，覆蓋材料備料成本</td>
+          <td data-zh="年度用量可預估、款式穩定、需要分批交付" data-en="Predictable annual volume, stable styles and split deliveries" data-ja="年間数量が予測でき、型が安定し、分割納入が必要な場合" data-ko="연간 물량 예측이 가능하고 스타일이 안정적이며 분할 납품이 필요한 경우" data-fr="Volume annuel prévisible, styles stables et livraisons fractionnées" data-es="Volumen anual previsible, estilos estables y entregas parciales">年度用量可預估、款式穩定、需要分批交付</td>
+        </tr>
+      </table>
+
+      <h2 data-zh="四、鎖價、備料與定金怎麼談" data-en="4. Negotiating Price Locks, Material Stocking and Deposits" data-ja="4. 価格固定・先行手配・着手金の交渉" data-ko="4. 가격 고정·사전 자재 준비·계약금 협상" data-fr="4. Négocier blocage de prix, approvisionnement et acompte" data-es="4. Negociar bloqueo de precio, acopio de material y anticipo">四、鎖價、備料與定金怎麼談</h2>
+      <ul>
+        <li data-zh="<strong>鎖價與鎖量分開談：</strong>「鎖量不鎖價」只能在數量上獲得階梯優惠，價格仍隨材料走；「鎖價不鎖量」價格固定但供應商會要求最低數量，否則單價裏必然包含更高的風險溢價" data-en="<strong>Separate price from volume:</strong> locking volume alone earns a quantity discount while the price still follows material; locking price without volume gets a firm price only against a minimum quantity, otherwise the unit price carries a higher risk premium" data-ja="<strong>価格と数量は分けて交渉：</strong>数量だけ固定なら段階割引は得られますが価格は原料に連動します。価格だけ固定する場合は最低数量が必要で、そうでなければ単価にリスク分が上乗せされます" data-ko="<strong>가격과 수량을 분리해 협상：</strong>수량만 고정하면 구간 할인은 받지만 가격은 원료를 따릅니다. 가격만 고정하면 최소 수량이 필요하며 그렇지 않으면 단가에 위험 프리미엄이 붙습니다" data-fr="<strong>Séparez prix et volume :</strong> bloquer le volume donne une remise de quantité, le prix suivant la matière ; bloquer le prix exige un minimum de quantité, sinon le prix inclut une prime de risque" data-es="<strong>Separa precio y volumen:</strong> fijar solo el volumen da descuento por cantidad pero el precio sigue al material; fijar solo el precio exige un mínimo, o el unitario incluirá prima de riesgo"><strong>鎖價與鎖量分開談：</strong>「鎖量不鎖價」只能在數量上獲得階梯優惠，價格仍隨材料走；「鎖價不鎖量」價格固定但供應商會要求最低數量，否則單價裏必然包含更高的風險溢價</li>
+        <li data-zh="<strong>備料是最實在的鎖價方式：</strong>訂單確認後先按總量備紙、備紗或備粒子，材料成本就固定下來，代價是倉儲與批次管理，所以要一次備齊一個顏色或一個批次，避免顏色對不上" data-en="<strong>Stocking material is the most concrete way to lock a price:</strong> buying the full paper, yarn or resin requirement when the order is confirmed fixes the material cost. The price is storage and batch control, so buy one colour or one batch at a time to avoid mismatched shades" data-ja="<strong>先行手配が最も確実な価格固定：</strong>受注確定時に総量分の紙・糸・ペレットを確保すれば材料費が固定されます。代償は保管とロット管理で、色違いを避けるため色またはロット単位でまとめて手配します" data-ko="<strong>자재 사전 확보가 가장 확실한 가격 고정：</strong>주문 확정 시 총량 분의 종이·실·원료를 확보하면 재료비가 고정됩니다. 대가는 보관과 로트 관리이며, 색상 불일치를 막으려면 색상 또는 로트 단위로 한 번에 준비합니다" data-fr="<strong>Stocker la matière est le moyen le plus concret :</strong> acheter la totalité du papier, du fil ou des granulés à la confirmation fixe le coût matière. Le prix à payer est le stockage et la gestion des lots : commandez par couleur ou par lot" data-es="<strong>Acopiar material es la forma más concreta:</strong> comprar todo el papel, hilo o granza al confirmar el pedido fija el coste. El precio es almacenaje y control de lotes: compra por color o por lote"><strong>備料是最實在的鎖價方式：</strong>訂單確認後先按總量備紙、備紗或備粒子，材料成本就固定下來，代價是倉儲與批次管理，所以要一次備齊一個顏色或一個批次，避免顏色對不上</li>
+        <li data-zh="<strong>定金與鎖價窗口掛鉤：</strong>常見的做法是定金到賬後價格鎖定至交貨；定金比例越高、鎖定時間越長，供應商願意讓出的空間也越大" data-en="<strong>Tie the deposit to the lock window:</strong> a common rule is that the price is locked until delivery once the deposit clears; a larger deposit and a longer window buy more room from the supplier" data-ja="<strong>着手金と固定期間を連動：</strong>着手金の入金後に納品まで価格を固定するのが一般的です。比率が高く期間が長いほど供給側の譲歩余地も広がります" data-ko="<strong>계약금과 고정 기간 연동：</strong>계약금 입금 후 납품까지 가격을 고정하는 방식이 일반적입니다. 비율이 높고 기간이 길수록 공급자 양보 여지가 커집니다" data-fr="<strong>Lie l'acompte à la fenêtre de blocage :</strong> souvent le prix est figé jusqu'à la livraison dès réception de l'acompte ; un acompte plus élevé et une fenêtre plus longue donnent plus de marge" data-es="<strong>Vincula el anticipo a la ventana de bloqueo:</strong> lo habitual es fijar el precio hasta la entrega cuando se cobra el anticipo; un anticipo mayor y una ventana más larga dan más margen"><strong>定金與鎖價窗口掛鉤：</strong>常見的做法是定金到賬後價格鎖定至交貨；定金比例越高、鎖定時間越長，供應商願意讓出的空間也越大</li>
+        <li data-zh="<strong>把口頭承諾落到文字：</strong>「價格鎖定至交貨」「材料漲跌超過百分之五時雙方重新議價」這類句子要寫進訂單或合同附件，郵件裏的口頭同意很難作爲依據" data-en="<strong>Put verbal promises in writing:</strong> sentences such as price locked until delivery, or parties to renegotiate if material moves more than five per cent, belong in the order or a contract annex, not in an email thread" data-ja="<strong>口約束は文書化：</strong>「納品まで価格固定」「材料が5％以上変動した場合は再協議」といった文言は注文書や契約別紙に入れます。メールの同意は根拠として弱いものです" data-ko="<strong>구두 약속은 문서로：</strong>'납품까지 가격 고정', '재료가 5% 이상 변동 시 재협상' 같은 문구를 주문서나 계약 부속서에 넣습니다. 메일상 동의는 근거로 약합니다" data-fr="<strong>Formalisez :</strong> des phrases comme prix ferme jusqu'à la livraison ou renégociation au-delà de cinq pour cent de variation appartiennent à la commande ou à une annexe, pas à un fil d'e-mails" data-es="<strong>Pon por escrito lo verbal:</strong> frases como precio fijo hasta la entrega o renegociación si el material varía más del cinco por ciento van en el pedido o en un anexo, no en un correo"><strong>把口頭承諾落到文字：</strong>「價格鎖定至交貨」「材料漲跌超過百分之五時雙方重新議價」這類句子要寫進訂單或合同附件，郵件裏的口頭同意很難作爲依據</li>
+      </ul>
+
+      <h2 data-zh="五、分批交付與超期提貨" data-en="5. Split Deliveries and Late Collection" data-ja="5. 分割納入と期限超過の引き取り" data-ko="5. 분할 납품과 기한 초과 인수" data-fr="5. Livraisons fractionnées et enlèvements tardifs" data-es="5. Entregas parciales y recogidas tardías">五、分批交付與超期提貨</h2>
+      <p data-zh="分批交付是價格與倉儲之間的折中：一次談定價格，工廠按季度或按款式分批出貨，買方不用一次性壓滿倉庫。但它有兩個隱性成本必須提前講清。"
+         data-en="Split delivery is the compromise between price and storage: the price is agreed once and the factory ships by quarter or by style, so the buyer is not warehousing the whole quantity. Two hidden costs must be settled in advance."
+         data-ja="分割納入は価格と在庫の折衷案です。価格を一度決め、四半期ごとまたは型ごとに出荷すれば、全量を保管せずに済みます。ただし2つの隠れコストを事前に明確にする必要があります。"
+         data-ko="분할 납품은 가격과 재고 사이의 절충안입니다. 가격을 한 번 정하고 분기별 또는 스타일별로 출하하면 전량을 보관하지 않아도 됩니다. 다만 두 가지 숨은 비용을 미리 정리해야 합니다."
+         data-fr="La livraison fractionnée est le compromis entre prix et stockage : prix négocié une fois, expéditions par trimestre ou par style, sans stocker la totalité. Deux coûts cachés doivent être réglés d'avance."
+         data-es="La entrega parcial es el compromiso entre precio y almacén: el precio se pacta una vez y la fábrica envía por trimestre o por estilo, sin almacenar todo. Hay dos costes ocultos que deben cerrarse antes.">分批交付是價格與倉儲之間的折中：一次談定價格，工廠按季度或按款式分批出貨，買方不用一次性壓滿倉庫。但它有兩個隱性成本必須提前講清。</p>
+      <ul>
+        <li data-zh="<strong>批次差異：</strong>不同批次生產的紙、紗或油墨可能帶來輕微色差，配件類問題不大，主嘜與吊牌這類需要並排出現的物料要同批生產" data-en="<strong>Batch variation:</strong> different production runs can shift shade slightly. It rarely matters for hardware, but items displayed side by side, such as a neck label and a hang tag, should come from one batch" data-ja="<strong>ロット差：</strong>別ロットの紙・糸・インキでは微妙な色差が出ます。金具では問題になりにくいものの、並べて見える主ラベルやタグは同一ロットで生産します" data-ko="<strong>로트 차이：</strong>다른 로트의 종이·실·잉크는 미세한 색차가 생깁니다. 금속 부품은 문제가 적지만 나란히 보이는 메인 라벨과 행택은 같은 로트로 생산합니다" data-fr="<strong>Variation de lot :</strong> deux lots de papier, fil ou encre donnent de légères différences de teinte. Peu sensible sur la quincaillerie, à éviter pour des articles vus côte à côte" data-es="<strong>Variación de lote:</strong> distintos lotes de papel, hilo o tinta cambian ligeramente el tono. Poco relevante en herrajes, crítico en piezas que se ven juntas"><strong>批次差異：</strong>不同批次生產的紙、紗或油墨可能帶來輕微色差，配件類問題不大，主嘜與吊牌這類需要並排出現的物料要同批生產</li>
+        <li data-zh="<strong>分批的物流成本：</strong>每批都要單獨包裝、貼標與運輸，批次越多單批運費越高，談價時要把分批次數寫清" data-en="<strong>Logistics of split shipping:</strong> every shipment needs its own packing, labelling and freight, so more batches mean a higher landed cost per batch. Fix the number of batches when negotiating" data-ja="<strong>分割の物流費：</strong>各回で梱包・表示・輸送が必要になり、回数が増えるほど1回あたりのコストが上がります。交渉時に回数を明記します" data-ko="<strong>분할 물류비：</strong>매 회차마다 포장, 표시, 운송이 필요해 횟수가 늘수록 회차당 비용이 커집니다. 협상 시 횟수를 명시합니다" data-fr="<strong>Logistique :</strong> chaque envoi exige son emballage, son étiquetage et son fret : plus de lots, plus de coût unitaire. Fixez le nombre d'envois à la négociation" data-es="<strong>Logística:</strong> cada envío requiere su embalaje, etiquetado y flete: más lotes, mayor coste por lote. Fija el número de envíos al negociar"><strong>分批的物流成本：</strong>每批都要單獨包裝、貼標與運輸，批次越多單批運費越高，談價時要把分批次數寫清</li>
+        <li data-zh="<strong>超期提貨：</strong>原料已經按總量備好、成品已經入庫卻遲遲不提貨，工廠會面臨倉庫壓力與材料跌價風險，合同裏應寫明免費倉儲期、超期倉儲費與最晚提貨日" data-en="<strong>Late collection:</strong> material bought for the full quantity and goods sitting in the warehouse tie up space and expose the factory to falling prices, so agree a free storage period, a storage fee and a final collection date" data-ja="<strong>引き取り遅延：</strong>総量分の材料を手配し製品も入庫済みなのに引き取られないと、倉庫負担と材料値下がりのリスクが生じます。無償保管期間、超過保管料、最終引き取り日を契約に明記します" data-ko="<strong>인수 지연：</strong>총량 분의 자재를 준비하고 제품도 입고되었는데 인수가 늦으면 창고 부담과 자재 가격 하락 위험이 생깁니다. 무상 보관 기간, 초과 보관료, 최종 인수일을 계약에 명시합니다" data-fr="<strong>Enlèvement tardif :</strong> matière achetée pour la totalité et marchandise stockée immobilisent de l'espace et exposent au risque de baisse : prévoyez période de stockage gratuite, redevance et date limite" data-es="<strong>Recogida tardía:</strong> material comprado para el total y mercancía almacenada ocupan espacio y exponen a la bajada de precios: pacta plazo gratuito, tarifa de almacenaje y fecha límite"><strong>超期提貨：</strong>原料已經按總量備好、成品已經入庫卻遲遲不提貨，工廠會面臨倉庫壓力與材料跌價風險，合同裏應寫明免費倉儲期、超期倉儲費與最晚提貨日</li>
+      </ul>
+
+      <h2 data-zh="六、匯率條款：報價表上最容易被忽略的一行" data-en="6. The Currency Clause: The Line Most Often Overlooked" data-ja="6. 為替条項：見積書で最も見落とされる一行" data-ko="6. 환율 조항: 견적서에서 가장 놓치기 쉬운 한 줄" data-fr="6. La clause de change : la ligne la plus négligée" data-es="6. La cláusula de cambio: la línea que más se pasa por alto">六、匯率條款：報價表上最容易被忽略的一行</h2>
+      <p data-zh="用美元報價、用人民幣採購原料，中間的匯率差就是供應商的風險敞口。金額不大的輔料訂單，匯率波動幾個百分點就足以喫掉全部利潤，因此務實的做法是約定一箇中性區間（例如正負百分之三以內不調價，超出部分雙方各承擔一半），而不是把風險全部推給一方。人民幣結算能消除這層風險，但要注意你的財務與開票方式能否對應。"
+         data-en="Quoting in dollars while buying material in renminbi leaves the supplier exposed to the exchange rate. On small trims orders, a few percentage points of currency movement can wipe out the entire margin, so the practical answer is a neutral band — for instance no adjustment within plus or minus three per cent, with any excess shared equally — rather than pushing all the risk onto one side. Settling in renminbi removes that exposure, provided your finance and invoicing can support it."
+         data-ja="米ドルで見積り人民元で原料を調達すれば、為替差が供給側のリスクになります。金額の小さい副資材では数％の変動で利益が消えることもあり、「±3％以内は据え置き、超過分は折半」といった中立帯を設けるのが現実的です。リスクを一方に押し付けるべきではありません。人民元決済はこのリスクを消せますが、財務と請求の運用が対応している必要があります。"
+         data-ko="달러로 견적하고 위안화로 자재를 매입하면 환차가 공급자의 위험이 됩니다. 금액이 작은 부자재 주문은 몇 퍼센트의 환율 변동으로 이익이 사라지기도 하므로 '±3% 이내 조정 없음, 초과분 절반 부담' 같은 중립 구간을 두는 것이 현실적입니다. 위험을 한쪽에 모두 떠넘기지 않습니다. 위안화 결제는 이 위험을 없애지만 재무와 세금계산 처리가 이를 지원해야 합니다."
+         data-fr="Vendre en dollars et acheter la matière en yuans expose le fournisseur au change. Sur de petites commandes, quelques points de variation suffisent à effacer la marge : mieux vaut une bande neutre, par exemple aucune révision dans plus ou moins trois pour cent, l'excédent étant partagé, plutôt que de tout transférer à une partie. Régler en yuans supprime ce risque, à condition que votre gestion financière et la facturation le permettent."
+         data-es="Presupuestar en dólares y comprar el material en renminbi deja al proveedor expuesto al cambio. En pedidos pequeños, unos puntos porcentuales borran el margen, así que lo práctico es una banda neutra —por ejemplo sin revisión dentro de más o menos el tres por ciento y el exceso repartido— en vez de trasladar todo el riesgo a una parte. Liquidar en renminbi elimina esa exposición si tu gestión financiera y la facturación lo permiten.">用美元報價、用人民幣採購原料，中間的匯率差就是供應商的風險敞口。金額不大的輔料訂單，匯率波動幾個百分點就足以喫掉全部利潤，因此務實的做法是約定一箇中性區間（例如正負百分之三以內不調價，超出部分雙方各承擔一半），而不是把風險全部推給一方。人民幣結算能消除這層風險，但要注意你的財務與開票方式能否對應。</p>
+
+      <h2 data-zh="七、談價前自查清單" data-en="7. Self-Check Before You Negotiate" data-ja="7. 交渉前のセルフチェック" data-ko="7. 협상 전 자체 점검" data-fr="7. À vérifier avant de négocier" data-es="7. Autochequeo antes de negociar">七、談價前自查清單</h2>
+      <ul>
+        <li data-zh="年用量與釋放節奏是否明確？沒有用量預估，就談不出階梯價" data-en="Is the annual volume and its release schedule clear? Without a volume forecast there is no tier to negotiate" data-ja="年間数量と発注リズムは明確ですか。数量予測がなければ階段価格は引き出せません" data-ko="연간 물량과 발주 리듬이 명확합니까? 물량 예측이 없으면 단계 가격을 얻기 어렵습니다" data-fr="Le volume annuel et son calendrier sont-ils clairs ? Sans prévision, pas de palier" data-es="¿Volumen anual y calendario claros? Sin previsión no hay tramo que negociar">年用量與釋放節奏是否明確？沒有用量預估，就談不出階梯價</li>
+        <li data-zh="是否指定原料品牌或紙廠？指定會推高成本，也需要更長的備料時間" data-en="Are you specifying a material brand or paper mill? Specification raises cost and lengthens stocking lead time" data-ja="原料メーカーや製紙会社を指定しますか。指定はコスト増と手配期間の長期化を招きます" data-ko="원료 브랜드나 제지사를 지정합니까? 지정은 비용 상승과 자재 준비 기간 연장을 부릅니다" data-fr="Imposez-vous une marque ou une papeterie ? Cela renchérit et allonge l'approvisionnement" data-es="¿Especificas marca o papelera? Eleva el coste y alarga el acopio">是否指定原料品牌或紙廠？指定會推高成本，也需要更長的備料時間</li>
+        <li data-zh="付款方式與定金比例是否已定？這直接決定能不能拿到鎖價" data-en="Are payment terms and deposit ratio settled? They decide whether a price lock is available at all" data-ja="支払条件と着手金比率は決まっていますか。価格固定が可能かどうかを左右します" data-ko="결제 조건과 계약금 비율이 정해졌습니까? 가격 고정 가능 여부를 좌우합니다" data-fr="Conditions de paiement et acompte fixés ? Ils déterminent l'accès au blocage de prix" data-es="¿Condiciones de pago y anticipo cerrados? Determinan si hay bloqueo de precio">付款方式與定金比例是否已定？這直接決定能不能拿到鎖價</li>
+        <li data-zh="能否接受分批？分批次數與最晚提貨日能不能寫進合同" data-en="Can you accept split deliveries, and can the number of batches and final collection date be written into the contract?" data-ja="分割納入は可能ですか。回数と最終引き取り日を契約に書けますか" data-ko="분할 납품이 가능합니까? 횟수와 최종 인수일을 계약에 넣을 수 있습니까" data-fr="Acceptez-vous le fractionné, et le nombre d'envois et la date limite peuvent-ils figurer au contrat ?" data-es="¿Aceptas entregas parciales y pueden ir al contrato número de lotes y fecha límite?">能否接受分批？分批次數與最晚提貨日能不能寫進合同</li>
+        <li data-zh="比價時是否統一了貿易術語、數量檔與包裝口徑？口徑不同，價格沒有可比性" data-en="When comparing suppliers, are Incoterms, quantity band and packing basis identical? Different bases are not comparable" data-ja="比較の際に貿易条件・数量段・梱包基準を揃えましたか。条件が違えば価格は比較できません" data-ko="비교 시 무역 조건, 수량 구간, 포장 기준을 맞췄습니까? 기준이 다르면 가격 비교가 무의미합니다" data-fr="Lors de la comparaison, Incoterms, palier et emballage sont-ils identiques ? Sinon la comparaison n'a pas de sens" data-es="Al comparar, ¿coinciden Incoterms, tramo y embalaje? Si no, la comparación no vale">比價時是否統一了貿易術語、數量檔與包裝口徑？口徑不同，價格沒有可比性</li>
+      </ul>
+      <div class="callout" data-zh="一句話總結：短單談固定價，長單談浮動價與調價公式，中間用備料和定金換鎖價窗口。把「有效期、基準、調整幅度、重談週期」四個數字寫進同一份文件，價格爭議就變成了可以按條款解決的問題。"
+           data-en="In one line: use fixed prices for short orders, floating prices with a formula for long ones, and buy the lock window with material stocking and a deposit. Put validity, index, adjustment threshold and review cycle in one document, and a pricing dispute becomes a contractual question with an answer."
+           data-ja="要約すると、短期は固定価格、長期は変動価格と改定算式、その中間は先行手配と着手金で固定期間を買う、ということです。「有効期間・基準・変動幅・見直し周期」の4つの数字を同じ文書に書けば、価格の議論は条項で解決できる問題になります。"
+           data-ko="한 줄 요약: 단기 주문은 고정가, 장기는 변동가와 조정 산식, 그 사이는 자재 사전 준비와 계약금으로 고정 기간을 확보합니다. '유효기간, 기준, 조정 폭, 검토 주기' 네 가지 숫자를 한 문서에 넣으면 가격 분쟁이 조항으로 해결되는 문제가 됩니다."
+           data-fr="En résumé : prix ferme pour les commandes courtes, prix variable avec formule pour les longues, et achat de la fenêtre de blocage par le stockage et l'acompte. Réunissez validité, indice, seuil et périodicité dans un même document : le litige devient une question contractuelle."
+           data-es="En resumen: precio fijo para pedidos cortos, variable con fórmula para los largos, y compra de la ventana de bloqueo con acopio y anticipo. Reúne validez, índice, umbral y periodicidad en un mismo documento y la disputa pasa a ser una cuestión contractual.">一句話總結：短單談固定價，長單談浮動價與調價公式，中間用備料和定金換鎖價窗口。把「有效期、基準、調整幅度、重談週期」四個數字寫進同一份文件，價格爭議就變成了可以按條款解決的問題。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 글" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="trim-quotation-comparison-guide.html" data-zh="輔料報價對比指南：怎麼把不同工廠的報價放在同一張表上" data-en="Comparing Trim Quotations: Putting Different Factories on One Sheet" data-ja="副資材見積りの比較：別々の工場を同じ表で比べる方法" data-ko="부자재 견적 비교: 다른 공장 견적을 한 표에서 비교하기" data-fr="Comparer les devis d'accessoires : une seule feuille pour plusieurs usines" data-es="Comparar presupuestos de accesorios: varias fábricas en una hoja">輔料報價對比指南：怎麼把不同工廠的報價放在同一張表上</a></li>
+        <li><a href="apparel-trims-payment-terms-guide.html" data-zh="服裝輔料付款方式與賬期指南" data-en="Payment Terms for Garment Trims" data-ja="衣料副資材の支払条件と与信期間" data-ko="의류 부자재 결제 조건과 여신 기간" data-fr="Conditions de paiement des accessoires" data-es="Condiciones de pago en accesorios">服裝輔料付款方式與賬期指南</a></li>
+        <li><a href="garment-trims-cost-saving-guide.html" data-zh="服裝輔料降本指南：不改品質的省錢方法" data-en="Cost Saving on Garment Trims Without Cutting Quality" data-ja="品質を落とさず副資材コストを下げる方法" data-ko="품질을 낮추지 않고 부자재 원가를 줄이는 방법" data-fr="Réduire le coût des accessoires sans baisser la qualité" data-es="Reducir el coste de los accesorios sin bajar la calidad">服裝輔料降本指南：不改品質的省錢方法</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要一份能寫進合同的價格與交期條款？把品類、年用量預估、目標市場、貿易術語與付款方式發給我們，我們會回一版含有效期、數量階梯與調價基準的報價，並說明哪些品種適合鎖價、哪些建議按材料浮動；打樣 3–7 天寄出，大貨 10–25 天，起訂量靈活。"
+           data-en="Need price and delivery terms you can put into a contract? Send the categories, annual volume estimate, destination market, Incoterms and payment method; we reply with a quotation showing validity, quantity tiers and the adjustment basis, and flag which items suit a price lock and which should float with material. Samples in 3–7 days, bulk in 10–25 days, flexible minimums."
+           data-ja="契約にそのまま入れられる価格・納期条件が必要ですか。品目、年間数量の想定、販売市場、貿易条件、支払方法をお送りください。有効期間・数量段・改定基準を示した見積りを返信し、価格固定に向く品目と変動制が妥当な品目をお伝えします。サンプル3〜7日、量産10〜25日、最小ロットは柔軟です。"
+           data-ko="계약에 넣을 수 있는 가격과 납기 조건이 필요하십니까? 품목, 연간 물량 예상, 판매 시장, 무역 조건, 결제 방식을 보내주시면 유효기간, 수량 구간, 조정 기준을 담은 견적을 회신하고 가격 고정에 적합한 품목과 변동제가 나은 품목을 안내합니다. 샘플 3~7일, 양산 10~25일, 최소 수량 유연합니다."
+           data-fr="Besoin de conditions de prix et de délai intégrables au contrat ? Envoyez les catégories, l'estimation annuelle, le marché, les Incoterms et le mode de paiement : nous répondons avec validité, paliers et base de révision, en précisant ce qui se prête au prix ferme et ce qui doit suivre la matière. Échantillons en 3 à 7 jours, production en 10 à 25 jours."
+           data-es="¿Necesitas condiciones de precio y plazo que puedas incluir en el contrato? Envíanos las categorías, estimación anual, mercado, Incoterms y forma de pago: respondemos con validez, tramos y base de revisión, señalando qué conviene a precio fijo y qué debe seguir al material. Muestras en 3 a 7 días, producción en 10 a 25 días.">需要一份能寫進合同的價格與交期條款？把品類、年用量預估、目標市場、貿易術語與付款方式發給我們，我們會回一版含有效期、數量階梯與調價基準的報價，並說明哪些品種適合鎖價、哪些建議按材料浮動；打樣 3–7 天寄出，大貨 10–25 天，起訂量靈活。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="發來年用量與品類，先出含條款的報價 →" data-en="Send volume and categories, get a quotation with terms →" data-ja="年間数量と品目を送って、条件付き見積りを →" data-ko="물량과 품목을 보내면 조건 포함 견적부터 →" data-fr="Envoyez volumes et catégories, recevez un devis avec conditions →" data-es="Envía volumen y categorías y recibe un presupuesto con condiciones →">發來年用量與品類，先出含條款的報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
