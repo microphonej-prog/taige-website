@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modificar o cancelar un pedido de accesorios: artes, cantidades y puntos de corte | TAGE</title>
+<meta name="description" content="Modificar un pedido de accesorios: los cinco escalones de coste (sin programar, material pedido, utillaje hecho, en producción, terminado), efecto de cambiar texto o medidas, cantidades y cancelación al coste real.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/es/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-change-cancellation-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料訂單變更與取消指南：改稿、加減量與生效斷點怎麼管",
+     "item": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料訂單變更與取消指南：改稿、加減量與生效斷點怎麼管",
+   "url": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Cambios de pedido</span></div>
+      <h1>Modificar o cancelar un pedido de accesorios: artes, cantidades y puntos de corte</h1>
+      <p>Por TAGE Packaging  ·  Actualizado el 27 de septiembre de 2026</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>El pedido de accesorios está confirmado, después el diseñador cambia el logo, marketing quiere pasar de 3.000 a 6.000 colgantes, un cliente pide de repente la etiqueta de cuidado en otro idioma: ocurre cada semana en el textil. Lo que decide el coste de un cambio no es su dificultad sino el momento en que llega: la misma corrección de texto cuesta un correo antes de programar, unos honorarios de plancha tras grabar el cliché y una pérdida real después de 2.000 metros de tejida. Esta guía ordena los escalones de coste, la liquidación de cantidades y la gestión de los puntos de corte.</p>
+
+      <h2>1. Los cinco escalones de coste de un cambio</h2>
+      <p>Cuando llega una solicitud de cambio, la primera pregunta es en qué punto está la producción, antes que qué se cambia. El mismo cambio puede ser gratuito, exigir utillaje nuevo, material desechado o incluso repetir el lote. Relacionar etapa y coste permite concluir en minutos en lugar de discutir primero y valorar después.</p>
+      <table>
+        <tr>
+          <th>Etapa</th>
+          <th>Coste ya incurrido</th>
+          <th>Coste del cambio</th>
+        </tr>
+        <tr>
+          <td>Confirmado, sin programar</td>
+          <td>Casi ninguno, salvo comunicación y maquetación</td>
+          <td>Normalmente gratis, o efectivo en la siguiente tanda</td>
+        </tr>
+        <tr>
+          <td>Material pedido</td>
+          <td>Papel, hilo, tinta o bolsas comprados según la especificación anterior</td>
+          <td>El material nuevo se cobra; el anterior se reutiliza o se descuenta</td>
+        </tr>
+        <tr>
+          <td>Utillaje fabricado</td>
+          <td>Troquel, cliché, jacquard o plancha ya fabricados</td>
+          <td>Se cobra nuevo utillaje; a veces se reutiliza si medidas y aspecto no cambian</td>
+        </tr>
+        <tr>
+          <td>En producción</td>
+          <td>Trabajo en curso, material consumido, tiempo de máquina</td>
+          <td>Parada, reajuste y merma, normalmente facturados por cantidad producida y tiempo de parada</td>
+        </tr>
+        <tr>
+          <td>Terminado, pendiente de envío</td>
+          <td>Todo el producto terminado y el embalaje</td>
+          <td>Equivale a una cancelación: negocia la siguiente versión y el destino del stock terminado</td>
+        </tr>
+      </table>
+
+      <h2>2. Tipos de revisión: qué mueven texto, color, medida y código de barras</h2>
+      <p>Cada tipo de corrección mueve pasos muy distintos; distinguirlos permite negociar con precisión. Casi siempre lo caro no es la corrección sino que la impresión ya ha empezado.</p>
+      <ul>
+        <li><strong>Cambio de texto</strong> (el más habitual): razón social, tabla de tallas, cuidado, idioma añadido. En impreso suele bastar una plancha o archivo nuevo; en tejida, si solo cambia el texto y la densidad y el ligamento se mantienen, casi todos los talleres modifican el archivo jacquard sin rehacer el cilindro</li>
+        <li><strong>Cambio de color</strong>: exige reconfirmar referencia y igualar, quizá un lote nuevo de hilo o tinta. Lo ya tejido o impreso en color equivocado es merma: comunícalo pronto y envía referencia o muestra física, no una captura de pantalla</li>
+        <li><strong>Cambio de medida</strong>: variar largo o ancho del colgante afecta al troquel, y cualquier cambio de contorno exige troquel nuevo. En tejidas, cambiar el ancho suele implicar reenhebrar la urdimbre: revisión pesada. En bolsas puede afectar al cilindro y al corte del rollo</li>
+        <li><strong>Código de barras o QR</strong>: regenera el gráfico y verifica la nota de lectura; precisión o contraste insuficientes reducen la tasa de lectura, así que prueba una muestra física y no valides solo el archivo</li>
+      </ul>
+
+      <h2>3. Subir o bajar cantidad: material pedido o producto terminado</h2>
+      <p>Subir cantidad se negocia mejor: los talleres suelen tener holgura y, con material y capacidad, la serie entra a costa de un plazo más tardío y no de un sobreprecio. Bajar es el lado arriesgado: material ya cortado, hilo en el telar, bolsas interiores impresas. Bajar del producto terminado deja stock muerto real, así que la regla es liquidar al coste incurrido, no al precio unitario por la cantidad reducida.</p>
+      <ul>
+        <li>Antes de subir, comprueba tres cosas: material del mismo lote, continuidad del tejido o la impresión y embalaje suficiente. Si las tres pasan, subir es sobre todo programación</li>
+        <li>Si reduces, pide desglose: material comprado, piezas semiterminadas cortadas, horas invertidas. Revisar línea a línea y luego acordar el reparto es más fácil que borrar una cifra</li>
+        <li>Convierte el sobrante útil en recurso del siguiente modelo: el mismo papel, un tono de hilo coincidente o bolsas genéricas suelen pasar a la siguiente tanda y la pérdida real es menor que la contable</li>
+      </ul>
+
+      <h2>4. Puntos de corte: orden de cambio, versiones e inventario</h2>
+      <p>La secuela habitual de un cambio no es el sobrecoste sino la mezcla: dos versiones de colgante en un mismo modelo, o etiquetas de cuidado en idioma antiguo dentro del lote. Aparecen en el almacén de producto terminado o en tienda y cuestan mucho más que el cambio. La solución es escribir el punto de corte: desde qué lote se aplica, qué número de lote cierra la versión anterior, hasta cuándo se puede vender ese stock y si hay que avisar a las tiendas.</p>
+      <ul>
+        <li>Usa una orden de cambio de una página: qué cambia, por qué, desde qué lote, destino de la versión anterior, producto terminado y accesorios afectados, quién paga y firmas. Un cambio verbal se olvida en tres meses; la orden escrita evita una repetición total</li>
+        <li>Pon la versión en el nombre del archivo y en la ficha: fecha y revisión en el nombre del arte, versión en el pie de la ficha y cita la misma revisión en presupuestos y confirmaciones para que los departamentos no pidan con archivos distintos</li>
+        <li>Cuenta el stock antiguo físicamente: que el proveedor recuente, precinte y etiquete los accesorios de la versión anterior, y confirma cantidades en el taller, en el confeccionista y en tu almacén, o aparecerá una caja en el peor momento</li>
+      </ul>
+
+      <h2>5. Cancelar o pausar: liquidar al coste incurrido, no al prorata</h2>
+      <p>Las cancelaciones se atascan porque una parte calcula un porcentaje del importe y la otra lo gastado. El criterio defendible es liquidar al coste real: material comprado, utillaje hecho o reutilizable, horas invertidas y merma generada, línea por línea, excluyendo lo reutilizable como troqueles estándar o bolsas comunes. En una pausa, fija un límite: superado cierto número de días cuenta como cancelación, y quién paga el almacenaje, para que el semiterminado no duerma seis meses antes del cálculo.</p>
+
+      <h2>6. Qué debe incluir un correo de cambio</h2>
+      <ul>
+        <li>Número de pedido y lote original, estado actual, con el proveedor confirmando la etapa para evitar desfases</li>
+        <li>El cambio exacto y el archivo nuevo, con versión y fecha, indicando que rige el adjunto</li>
+        <li>El lote o cantidad desde el que aplicar, y si se agota antes el stock antiguo, lo más económico y habitual en las marcas</li>
+        <li>Base de coste: pide un desglose de costes incurridos y no una cifra global, para revisar cada línea y comparar después</li>
+        <li>Calendario: fecha de aprobación de la nueva muestra y reprogramación de la producción; que el proveedor confirme ambas</li>
+        <li>Decisión sobre el material antiguo: devolución, retención para agotar, descuento o destrucción; y para colgantes y etiquetas con marca, prohibición expresa de llegar al mercado</li>
+      </ul>
+
+      <div class="callout"><strong>El cambio rara vez cuesta caro; lo caro es descubrirlo tarde:</strong> haz del avance real la primera pregunta y del lote de aplicación y el destino del stock antiguo la última frase, y el medio se gestiona solo. Un proveedor que ve a un comprador ordenado suele dar el desglose de costes reales, y una orden de cambio archivada será tu respaldo al negociar urgencias, reducciones o un nuevo proveedor.</div>
+
+      <h2>Artículos relacionados</h2>
+      <ul>
+        <li><a href="index.html">FAQ Accesorios: todos los artículos</a></li>
+        <li><a href="trim-order-contract-terms-guide.html">Condiciones contractuales del pedido de accesorios: plazos, calidad y reclamaciones</a></li>
+        <li><a href="trim-tooling-ownership-guide.html">Propiedad de los utillajes: costes, titularidad y traslado</a></li>
+        <li><a href="garment-trims-order-tracking-guide.html">Seguimiento del pedido de accesorios: de la programación al envío</a></li>
+        <li><a href="small-batch-fast-reorder-trims.html">Series cortas y reposiciones rápidas de accesorios: probar y reponer</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>¿Planeas una revisión, una subida o una pausa y quieres el coste primero? Envíanos el número de pedido, el estado actual y lo que debe cambiar: respondemos con un desglose por etapas de los costes incurridos y alternativas como agotar el stock antiguo antes del cambio o pasar el sobrante a la siguiente serie, y registramos el lote de aplicación en la orden de cambio. Muestras en 3 a 7 días, producción en 10 a 25 días, mínimos flexibles.</p>
+        <a class="cta-btn" href="../contact.html">Envía el cambio y recibe primero el coste →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

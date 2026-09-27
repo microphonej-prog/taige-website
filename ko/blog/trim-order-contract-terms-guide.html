@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 주문 계약 조건 가이드: 납기·품질 판정·클레임 기한 | TAGE</title>
+<meta name="description" content="부자재 주문 계약 조건 가이드: 납기를 출하일로 볼지 도착일로 볼지, 검수 기준은 확인 샘플인지 사양서인지, 외관 클레임 기한, 원자재 인상과 불가항력의 구분, 종료 시 판 비용과 잔여 재고 처리까지 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-contract-terms-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-contract-terms-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料訂單合同條款指南：交期、質量判定與索賠期限怎麼寫",
+     "item": "https://taigetag.com/blog/trim-order-contract-terms-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料訂單合同條款指南：交期、質量判定與索賠期限怎麼寫",
+   "url": "https://taigetag.com/blog/trim-order-contract-terms-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-contract-terms-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>계약 조건</span></div>
+      <h1>부자재 주문 계약 조건: 납기·품질 판정·클레임 기한 작성법</h1>
+      <p>TAGE 패키징 · 2026년 9월 27일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 금액은 의류 원가에서 작은 비중이지만, 발주 후 분쟁이 가장 잦은 품목입니다. 행택 색상이 지난번과 조금 다르다, 직조 라벨이 5일 늦었다, 포장백이 2mm 짧다, 원자재 인상으로 단가 조정을 요구한다——대부분은 품질 문제가 아니라 발주 시 조건을 명시하지 않은 데서 비롯됩니다. 이 글은 발주 확인서에 담아야 할 조건을 항목별로 정리하고, 견적 메일에 그대로 쓸 수 있는 체크리스트를 제공합니다.</p>
+
+      <h2>1. 발주 확인서는 계약서가 아닙니다: 여섯 항목을 한 문서에</h2>
+      <p>부자재는 단가와 금액이 작아 메일 한 통으로 발주하고 나중에 서로 다른 주장을 하는 경우가 많습니다. 여섯 항목을 한 문서에 담으면(메일 본문도 가능하나 &#x27;본 메일을 기준으로 한다&#x27;고 명시하고 상대 확인 회신을 받으십시오) 이후 분쟁의 대부분은 근거를 갖게 됩니다. 사양과 확인 샘플, 수량과 과부족 허용, 단가와 판 비용, 납기와 운송 방식, 검수 기준, 이상 시 대응입니다.</p>
+      <table>
+        <tr>
+          <th>항목</th>
+          <th>일반적 문구</th>
+          <th>가장 자주 빠지는 부분</th>
+        </tr>
+        <tr>
+          <td>사양과 확인 샘플</td>
+          <td>양측 서명 확인 샘플과 사양서 기준</td>
+          <td>치수만 있고 소재·평량·가공 누락</td>
+        </tr>
+        <tr>
+          <td>수량</td>
+          <td>과부족 허용 명시(보통 3~5%, 품목·협의에 따름)</td>
+          <td>미기재 시 8% 초과분도 전량 수령해야 함</td>
+        </tr>
+        <tr>
+          <td>납기</td>
+          <td>출하일을 명확히 하고 운송 방식도 기재</td>
+          <td>&#x27;가능한 빨리&#x27;, &#x27;2주 정도&#x27;만 기재</td>
+        </tr>
+        <tr>
+          <td>검수</td>
+          <td>샘플링 기준 명시(예: AQL 2.5 + 한계 견본)</td>
+          <td>&#x27;샘플 부합&#x27;만으로는 기준이 되지 않음</td>
+        </tr>
+        <tr>
+          <td>이상 대응</td>
+          <td>자재 부족·설비 고장·정전 시 통보 기한 합의</td>
+          <td>납기가 지나고 나서야 알게 됨</td>
+        </tr>
+      </table>
+
+      <h2>2. 납기 기준: 출하일인가 도착일인가</h2>
+      <p>어느 표기도 틀리지 않지만 구매자 리스크는 전혀 다릅니다. &#x27;출하일&#x27;이면 공급자는 생산 배치, 생산, 운송사 인도까지 통제하므로 책임 경계가 명확합니다. &#x27;도착일&#x27;은 항공·해상 운송과 통관 일정까지 포함되어 성수기 적재 대기나 세관 검사는 공급자가 통제할 수 없고 사후에 책임 공방만 남습니다. 실무적으로는 출하일을 본 조건으로 하고 예상 운송 기간과 운송 방식을 함께 적고, 운송 지연을 누가 조정할지 명시합니다.</p>
+      <ul>
+        <li>생산 기간은 공정에 따라 크게 다릅니다. 일반 옵셋 행택과 박 인쇄·이형 타발은 배치가 다르고, 직조 라벨은 자카드기 일정에 달려 있습니다. 견적 단계에서 모든 품목에 같은 기간을 적용하지 마십시오</li>
+        <li>&#x27;긴급&#x27;은 명확한 옵션으로 협의합니다. 생산 배치를 압축하는지 항공으로 전환하는지, 할증 여부, 며칠 단축 가능한지를 주문서에 기재하고 출하 직전 구두 요청은 피하십시오</li>
+        <li>분할 출하는 수량·출하일·납품처를 각각 명시합니다. 그렇지 않으면 1차분이 도착해도 2차분이 공장에 남아 판매 일정이 어긋납니다</li>
+      </ul>
+
+      <h2>3. 품질 판정: 확인 샘플·한계 견본·사양서 중 무엇을 기준으로</h2>
+      <p>부자재 분쟁에서 가장 시간이 걸리는 것은 &#x27;이것이 불량인가&#x27;입니다. 판정 기준을 세 층으로 나눠 쓰면 대부분의 이견은 현장에서 정리됩니다. 확인 샘플은 색상·촉감·전체 인상, 한계 견본은 허용 가능한 최악의 외관(예: 직조 라벨 가장자리 올 풀림 허용 정도), 사양서는 수치화 가능한 항목(치수, 평량, 두께, 색상 번호, 인장·염색 견뢰도)을 담당합니다. 세 층 밖의 이견은 제3자 검사기관 판정이나 공동 재검사로 하고, 검사비는 이의 제기 측이 선지급하고 판정 후 책임 측이 정산합니다.</p>
+      <ul>
+        <li>&#x27;AQL 2.5 + 한계 견본&#x27;이 &#x27;전수 검사&#x27;보다 현실적입니다. 부자재는 수만 개 단위이고 전수 검사는 경제적이지도 실행 가능하지도 않습니다. 핵심은 치명·중대·경미 결점 구분과 허용 수준 명시입니다</li>
+        <li>&#x27;허용&#x27;과 &#x27;불가&#x27;를 모두 실물로 남깁니다. 좋은 샘플만 있으면 상대는 항상 주장할 수 있고, 명확한 불가 샘플이 있어야 경계가 성립합니다</li>
+        <li>색상 분쟁은 광원을 먼저 정합니다. 같은 색상 번호도 일광·매장 조명·휴대폰 플래시에서 다르게 보입니다. D65 표준 광원기에서 육안 비교를 명시하고 필요 시 색차계 수치를 보조로 사용합니다</li>
+      </ul>
+
+      <h2>4. 클레임과 이의 제기 기한: 입고 후 며칠 이내</h2>
+      <p>부자재는 작고 수량이 많아 입고 시 전수 확인이 사실상 불가능합니다. &#x27;서명 시 수량 이상 없음&#x27;이라는 기본 관행은 구매자에게 불리합니다. 주문서에는 두 가지 기한을 적습니다. 외관·수량 이의 제기는 품목과 협의에 따라 보통 7~30일, 잠재 결함은 별도로 더 길게 설정해 세탁 후 드러나는 수축이나 이염 등은 발견 후 일정 기일 내에 로트 번호와 함께 제기하도록 합니다. 기한 초과는 수락으로 간주되며, 이는 구매자에게 신속한 샘플링 검사를, 공급자에게 생산·검사 기록 보관을 요구합니다.</p>
+      <ul>
+        <li>이의 제기 시 세 가지를 함께 보냅니다. 로트 번호와 출하일, 결점 사진 또는 영상(동일 광원·동일 거리), 검사 수량과 불량 수. 그래야 전체 문제인지 개별 문제인지 빠르게 판단됩니다</li>
+        <li>구제 수단의 우선순위를 미리 정합니다. 사용 가능분은 선별 사용 후 비례 할인, 불가분은 추가 생산·재제작, 긴급 시 항공 보충 후 비용 부담은 추후 협의. 사후 반품 요구보다 시간이 절약됩니다</li>
+      </ul>
+
+      <h2>5. 불가항력과 원자재 변동: 인상이 면책 사유인가</h2>
+      <p>종이, 원사, 전력, 환율은 모두 움직입니다. 핵심은 &#x27;누가 부담하는가&#x27;를 사전에 명시하는 것입니다. 일반적 기준은 원자재 인상 자체가 불가항력은 아니며, 공급자가 일방적으로 단가를 바꾸거나 납기를 미룰 수 없다는 것입니다. 조정 메커니즘을 두려면 근거(상류 공개 가격, 변동 폭 기준, 사전 통보 일수)와 가격을 유지하는 기간을 명시합니다. 진정한 불가항력(자연재해, 정책 중단, 항만 폐쇄)은 서면 통지·이행 정지·증빙 제출 후 연기나 종료를 협의해야 합니다.</p>
+
+      <h2>6. 종료·판 비용·잔여 재고: 마무리 조건을 비워두지 마십시오</h2>
+      <p>주문을 중간에 멈추는 상황이 가장 분쟁이 잦은 이유는 이미 발생한 비용에 대한 인식이 양측이 전혀 다르기 때문입니다. 조건에는 세 문장을 넣습니다. 중단·정지 시 주문 금액 비율이 아니라 실제 발생 원가로 정산한다. 고객이 판 비용을 부담한 판은 고객 소유이며 공급자가 보관하고 보존 연한과 인수 방법을 명시한다. 잔여 수량과 여분 재고 처리(공급자의 자체 판매, 폐기, 고객 할인 양도 가능 여부), 특히 브랜드 표시가 있는 행택과 직조 라벨은 시장에 유통되지 않도록 명시합니다.</p>
+
+      <h2>7. 발주 전 여섯 항목 체크리스트</h2>
+      <ul>
+        <li>사양·확인 샘플·한계 견본 세트가 갖춰지고 양측이 보관하는가</li>
+        <li>수량과 과부족 허용이 명시되고 분할 출하가 세분화되었는가</li>
+        <li>납기가 명확한 출하일이고 운송 방식과 지연 조정 책임이 명시되었는가</li>
+        <li>검수 기준이 실행 가능한 내용(샘플링 방식, 판정 층위)인지, &#x27;샘플 부합&#x27;에 그치지 않았는가</li>
+        <li>이의 제기 기한과 잠재 결함 기한이 명시되고 기한 초과가 수락으로 간주되는가</li>
+        <li>종료 정산·판 귀속·잔여 재고 세 문장이 주문서나 확인 메일에 들어 있는가</li>
+      </ul>
+
+      <div class="callout"><strong>조건은 불신이 아니라 시간을 아끼는 도구입니다:</strong> 부자재 주문에서 가장 비싼 비용은 단가 몇 푼이 아니라 문제 발생 후 확인 왕복으로 잃는 2주입니다. 사양·납기·검수·이의 기한·불가항력·마무리 조건을 한 단락으로 정리해 매 견적 메일에 넣으면, 공급자는 규칙대로 거래하는 구매자로 인식하고 견적과 협조가 오히려 안정됩니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="trim-order-change-cancellation-guide.html">부자재 주문 변경과 취소: 도안 변경·수량 증감·적용 분기점</a></li>
+        <li><a href="apparel-trims-payment-terms-guide.html">부자재 결제 조건: 지급 단계·인코텀즈·숨은 비용</a></li>
+        <li><a href="garment-trims-claims-liability-guide.html">부자재 표시와 책임: 한 문장 오류의 대가</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">부자재 견적 비교: 같은 단가에 총액이 다른 이유</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>납기·검수·이의 기한·마무리 조건이 명시된 발주 확인서가 필요하십니까? 스타일, 수량, 목표 납기, 목적지를 알려주시면 견적에 사양 확인표, 확인 샘플과 한계 견본 진행 방식, 분할 출하와 긴급 옵션 설명을 첨부합니다. 샘플 3~7일, 양산 10~25일, 최소 수량은 유연합니다(행택 시험 발주 2,000~3,000장부터, 직조 라벨 1,000부터, 세탁 표시 라벨 300~500부터).</p>
+        <a class="cta-btn" href="../contact.html">조건이 명시된 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 주문 변경·취소 가이드: 도안 변경·수량 증감·적용 분기점 | TAGE</title>
+<meta name="description" content="부자재 주문 변경 가이드: 미배치·자재 준비·판 제작·생산 중·완성 5단계별 변경 비용, 문구 변경과 치수 변경의 차이, 수량 증감 정산, 변경서와 버전 관리로 신구 혼입 방지, 취소 시 실비 정산 원칙을 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-change-cancellation-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-change-cancellation-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料訂單變更與取消指南：改稿、加減量與生效斷點怎麼管",
+     "item": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料訂單變更與取消指南：改稿、加減量與生效斷點怎麼管",
+   "url": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-change-cancellation-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>주문 변경</span></div>
+      <h1>부자재 주문 변경과 취소: 도안 변경·수량 증감·적용 분기점 관리</h1>
+      <p>TAGE 패키징 · 2026년 9월 27일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 발주가 확정된 뒤 디자이너가 로고를 고치고, 마케팅이 행택을 3,000장에서 6,000장으로 늘리고, 고객이 세탁 표시 라벨 언어 변경을 갑자기 요청합니다. 의류 업계에서 매주 일어나는 일입니다. 변경 비용을 결정하는 것은 난이도가 아니라 &#x27;어느 단계에서 바꾸는가&#x27;입니다. 같은 문구 수정도 배치 전이면 메일 한 통, 박판을 만든 뒤면 판 비용 재계상, 직조 라벨을 2,000m 짠 뒤면 실제 손실입니다. 이 글은 변경·취소의 비용 단계, 수량 증감 정산 기준, 적용 분기점 관리 방법을 정리합니다.</p>
+
+      <h2>1. 변경 비용의 다섯 단계</h2>
+      <p>변경 요청이 오면 먼저 &#x27;지금 어느 단계까지 진행되었는가&#x27;를 확인합니다. 무엇을 바꾸는지 논의보다 중요합니다. 같은 변경도 단계에 따라 비용이 없을 수도, 금형 재제작·자재 폐기, 심하면 전량 재생산이 될 수도 있습니다. 단계와 비용을 대응시켜 두면 먼저 논쟁하는 대신 몇 분 만에 결론을 낼 수 있습니다.</p>
+      <table>
+        <tr>
+          <th>단계</th>
+          <th>이미 발생한 비용</th>
+          <th>변경 비용</th>
+        </tr>
+        <tr>
+          <td>확정·미배치</td>
+          <td>거의 없음. 소통과 조판 시간뿐</td>
+          <td>대개 무료, 또는 다음 배치부터 적용</td>
+        </tr>
+        <tr>
+          <td>자재 준비 완료</td>
+          <td>종이·원사·잉크·포장백을 기존 사양으로 발주</td>
+          <td>신규 자재는 별도 계상, 기존 자재는 타 스타일 전용 또는 할인</td>
+        </tr>
+        <tr>
+          <td>판 제작 완료</td>
+          <td>타발 금형·박판·자카드 판·인쇄판 제작 완료</td>
+          <td>판 비용 재계상. 치수와 외관이 같으면 재사용 가능한 경우도</td>
+        </tr>
+        <tr>
+          <td>생산 중</td>
+          <td>재공품, 투입 자재, 점유한 기계 시간</td>
+          <td>기종 변경 시간과 폐기. 보통 생산 수량과 정지 시간으로 계상</td>
+        </tr>
+        <tr>
+          <td>완성·출하 대기</td>
+          <td>완제품과 포장 전액</td>
+          <td>사실상 취소. 다음 버전 내용과 완제품 재고 처리 협의</td>
+        </tr>
+      </table>
+
+      <h2>2. 수정 유형: 문구·색상·치수·바코드 변경 시 움직이는 것</h2>
+      <p>수정 내용에 따라 움직이는 공정이 크게 다릅니다. 구분해야 정확히 협의할 수 있습니다. 대개 비싼 것은 수정 자체가 아니라 &#x27;이미 인쇄가 시작되었다&#x27;는 사실입니다.</p>
+      <ul>
+        <li><strong>문구 변경</strong>(가장 흔함): 회사명, 사이즈표, 세탁 문구, 언어 추가. 인쇄물은 보통 인쇄판이나 제판 데이터 재작성으로 끝납니다. 직조 라벨은 글자만 바뀌고 침수·조직이 같으면 대부분 자카드 파일을 수정할 수 있고 실린더를 새로 만들 필요는 없습니다</li>
+        <li><strong>색상 변경</strong>: 색상 번호 재확인과 배색이 필요하며 원사나 잉크 로트 교체를 동반할 수 있습니다. 이미 짠·인쇄한 부분은 색이 다르면 폐기되므로 색상 변경은 조기에 제기해야 합니다. 제출 시 화면 캡처가 아니라 색상 번호나 실물 견본을 보내십시오</li>
+        <li><strong>치수 변경</strong>: 행택 길이나 폭이 바뀌면 타발 금형에 영향이 있고, 이형 외곽 변경은 반드시 금형 재제작입니다. 직조 라벨은 폭 변경 시 경사 재걸이가 필요한 경우가 많아 무거운 변경입니다. 포장백 치수 변경은 인쇄 실린더와 원단 슬리팅 사양에 영향을 줍니다</li>
+        <li><strong>바코드·QR 변경</strong>: 그래픽을 재생성하고 판독 등급을 검증합니다. 인쇄 정밀도나 대비가 부족하면 판독률에 직접 영향을 주므로 이미지 파일 확인이 아니라 샘플로 실측하십시오</li>
+      </ul>
+
+      <h2>3. 수량 증감: 자재 기준인가 완제품 기준인가</h2>
+      <p>증량은 비교적 협의가 쉽습니다. 공급자는 대개 여유가 있어 자재와 생산 능력만 있으면 끼워 넣을 수 있고, 대가는 단가 인상이 아니라 납기 지연인 경우가 많습니다. 문제는 감량입니다. 자재가 재단되었거나 원사가 걸려 있거나 내포장백이 인쇄된 상태에서 완제품 수량 이하로 줄이면 남는 것은 실질적인 사장 재고입니다. 따라서 감량은 &#x27;실제 발생 원가로 정산&#x27;이 관행이며 감한 수량 × 단가가 아닙니다.</p>
+      <ul>
+        <li>증량 전 세 가지를 확인합니다. 동일 로트 자재가 있는가, 직조·인쇄 공정을 이어갈 수 있는가, 포장 자재가 충분한가. 세 가지가 통과하면 증량은 대부분 배치 문제입니다</li>
+        <li>감량 시에는 명세를 요청합니다. 조달 자재, 재단된 재공품, 투입 공수를 항목별로 제시받아 확인한 뒤 부담 비율을 협의합니다. 숫자를 그대로 깎는 것보다 합의가 쉽습니다</li>
+        <li>사용 가능한 여분은 다음 스타일 자원으로 협의합니다. 같은 행택 용지, 동일 색상 원사, 범용 내포장백은 다음 배치로 돌릴 수 있어 실손실은 장부보다 작습니다</li>
+      </ul>
+
+      <h2>4. 적용 분기점: 변경서·버전 번호·기존 자재 실사</h2>
+      <p>부자재 변경의 전형적인 후유증은 추가 비용이 아니라 신구 혼입입니다. 같은 스타일에 두 버전의 행택이 붙거나, 같은 로트의 세탁 표시 라벨에 구 언어판이 섞입니다. 이는 완제품 창고나 매장에서 발견되며 변경 자체보다 훨씬 큰 대가를 치릅니다. 해결책은 &#x27;적용 분기점&#x27;을 문서화하는 것입니다. 어느 로트부터 적용하는지, 구버전 마지막 로트 번호는 무엇인지, 그 재고를 언제까지 판매할 수 있는지, 매장에 통지가 필요한지를 적습니다.</p>
+      <ul>
+        <li>변경서는 한 장으로 통일합니다. 변경 내용, 사유, 적용 로트, 구버전 처리, 영향받는 완제품과 부자재, 비용 부담, 양측 서명. 구두 변경은 3개월 뒤 아무도 기억하지 못하지만 서면 변경서는 전량 재작업을 한 번 막습니다</li>
+        <li>버전 번호를 파일명과 사양서에 넣습니다. 행택 도안 파일명에 날짜와 판번호, 사양서 하단에 버전, 견적과 확인 메일에도 같은 버전을 인용해 부서별로 다른 파일로 발주하는 일을 막습니다</li>
+        <li>기존 자재 실사는 실물로 합니다. 구버전 재고 수량을 공급자가 계수하고 봉인·표시하며, 공장·봉제공장·자사 창고 세 곳의 수량을 확인합니다. 그렇지 않으면 마무리 단계에서 반드시 한 상자가 나옵니다</li>
+      </ul>
+
+      <h2>5. 취소·일시 중지: 주문 비율이 아니라 실제 원가로 정산</h2>
+      <p>취소 협의가 결렬되는 이유는 한쪽은 주문 금액 비율로, 다른 쪽은 실제 투입으로 계산하기 때문입니다. 설득력 있는 기준은 실비 정산입니다. 조달 자재, 제작했거나 재사용 가능한 판, 투입 공수, 발생 폐품을 목록화해 항목별로 확인하고 정산하며, 범용 금형이나 표준 포장백 같은 재사용 항목은 손실에서 제외합니다. 일시 중지는 기한을 정해 일정 일수를 넘으면 취소로 간주하고 보관 비용 부담자를 명시해, 재공품이 반년 방치된 뒤 정산하는 일을 막습니다.</p>
+
+      <h2>6. 변경 메일에 담아야 할 내용</h2>
+      <ul>
+        <li>원 주문 번호와 로트 번호, 현재 진행 단계(상대가 단계를 확인 회신해 인식을 맞춥니다)</li>
+        <li>변경 내용과 새 파일(버전 번호·날짜 포함, 본 메일 첨부를 기준으로 한다고 명시)</li>
+        <li>적용을 원하는 로트 또는 수량, 기존 자재를 소진할지(구자재를 먼저 소진한 뒤 전환하는 것이 가장 저렴해 많은 브랜드가 선택)</li>
+        <li>비용 기준: 총액이 아니라 &#x27;발생 원가 명세&#x27;로 회신을 요청해 항목별 확인과 이후 비교에 대비합니다</li>
+        <li>일정: 새 버전 샘플 확인 시점과 양산 재배치 시점 두 날짜를 적어 상대 확인을 받습니다</li>
+        <li>구버전 자재 처리 결론: 반송, 소진용 보관, 할인, 폐기. 특히 브랜드 표시가 있는 행택·라벨은 시장 유통 금지를 명시합니다</li>
+      </ul>
+
+      <div class="callout"><strong>변경 자체는 비싸지 않습니다. 비싼 것은 늦은 발견입니다:</strong> &#x27;지금 어느 단계인가&#x27;를 변경의 첫 질문으로, 적용 로트와 구자재 처리를 마지막 문장으로 삼으면 중간 과정은 거의 흔들리지 않습니다. 변경에 성실히 대응하는 구매자에게는 공급자도 실제 원가 명세를 내기 쉬워지고, 변경서를 보관해 두면 다음에 긴급·감량·공급업체 교체를 협의할 때 근거가 됩니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="trim-order-contract-terms-guide.html">부자재 주문 계약 조건: 납기·품질 판정·클레임 기한 작성법</a></li>
+        <li><a href="trim-tooling-ownership-guide.html">부자재 금형·판 소유권: 판 비용·귀속·공장 이전</a></li>
+        <li><a href="garment-trims-order-tracking-guide.html">부자재 주문 진행 관리: 배치부터 출하까지</a></li>
+        <li><a href="small-batch-fast-reorder-trims.html">소량·신속 재주문 부자재: 테스트 판매와 추가 발주</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>변경·증량·일시 중지를 검토 중이고 비용을 먼저 알고 싶으십니까? 원 주문 번호, 현재 진행 상황, 변경 내용을 보내주시면 단계별 발생 원가 명세와 기존 자재를 소진한 뒤 전환하거나 여분을 다음 스타일로 돌리는 대안을 회신하고, 새 버전 적용 로트를 변경서에 기재합니다. 샘플 3~7일, 양산 10~25일, 최소 수량은 유연합니다.</p>
+        <a class="cta-btn" href="../contact.html">변경 내용을 보내면 원가 명세 먼저 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
