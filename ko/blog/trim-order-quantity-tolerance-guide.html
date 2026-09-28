@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 발주 수량 허용 오차 가이드: 초과 납품·부족·예비율 | TAGE</title>
+<meta name="description" content="10,000장 발주에 10,300장이 오면 초과 납품인지, 200장 부족은 보충해야 하는지. 수량 차이의 네 가지 원인, 품목별 허용 오차와 계약 표기, 초과·부족 처리와 정산, 예비율 설정, 색상·사이즈별 최소량, 재발주 조건을 정리합니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-quantity-tolerance-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-quantity-tolerance-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料訂單數量容差指南：多交、少交、備損率與補單怎麼約定",
+     "item": "https://taigetag.com/blog/trim-order-quantity-tolerance-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料訂單數量容差指南：多交、少交、備損率與補單怎麼約定",
+   "url": "https://taigetag.com/blog/trim-order-quantity-tolerance-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-quantity-tolerance-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>수량 허용 오차·예비율</span></div>
+      <h1>부자재 발주 수량 허용 오차 가이드: 초과 납품·부족·예비율·재발주</h1>
+      <p>TAGE 패키징 · 2026년 9월 28일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>부자재 주문에서 가장 자주 다투는 부분은 수량입니다. 발주서에 10,000장이라 적고 10,300장이 오면 초과 납품인지, 200장이 부족하면 보충해야 하는지가 쟁점입니다. 인쇄 여유분, 직조 손실, 재단, 샘플링 때문에 실제 수량은 발주 수량과 정확히 일치하지 않으며 업계에는 합리적인 범위가 있습니다. 그 범위가 얼마인지, 계약서에 어떻게 쓰는지, 초과·부족분을 누가 부담하는지를 정하지 않으면 입고 단계에서 분쟁이 생깁니다. 이 글은 수량 차이의 원인, 허용 오차 표기, 예비율, 재발주 규칙을 정리합니다.</p>
+
+      <h2>1. 수량 차이가 생기는 네 가지 원인</h2>
+
+      <ul>
+
+        <li>인쇄·타발 여유분: 세팅과 종이 손실로 실제 산출이 오르내림</li>
+
+        <li>직조·재단 손실: 직조 라벨과 세탁 라벨은 제직·염색·재단·접힘에서 손실 발생</li>
+
+        <li>샘플링: AQL 검사로 꺼낸 수량을 납품 수량에 포함할지 사전 합의</li>
+
+        <li>색상·사이즈 분류와 부속품 계수: 계산 착오가 가장 잦은 구간</li>
+
+      </ul>
+
+      <h2>2. 허용 오차 범위와 표기 방법</h2>
+
+      <p>허용 오차는 공급자가 임의로 정하는 것이 아니라 공정 손실과 설비 최소 배치를 기준으로 협의해 정합니다. 품목별 허용 오차를 주문 확인서에 미리 명시하는 것이 입고 시 논쟁보다 훨씬 효과적입니다. 아래 범위는 업계에서 흔히 쓰이지만 공정과 색상 수에 따라 달라집니다.</p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>품목</th>
+
+            <th>일반적 범위</th>
+
+            <th>설명</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>행택(인쇄·타발)</td>
+
+            <td>약 ±3%~±5%</td>
+
+            <td>이형 타발·박·엠보싱은 여유분이 더 필요</td>
+
+          </tr>
+
+          <tr>
+
+            <td>직조 라벨(제직·자카드)</td>
+
+            <td>약 ±5%~±10%</td>
+
+            <td>제직·재단 손실이 크며 색상·음영이 많을수록 심함</td>
+
+          </tr>
+
+          <tr>
+
+            <td>세탁 표시 라벨(테이프·코팅)</td>
+
+            <td>약 ±5%~±10%</td>
+
+            <td>장수·롤 단위는 계수 오차가 조금 더 큼</td>
+
+          </tr>
+
+          <tr>
+
+            <td>봉투(비닐·종이)</td>
+
+            <td>약 ±3%~±5%</td>
+
+            <td>인쇄·제대 여유분이 함께 발생, 박스 단위 계수가 확인에 유리</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p>표기 시 세 가지를 명확히 하십시오. 허용 오차가 품목별인지 전체 주문 기준인지, 범위를 벗어난 부분의 처리 방식, 수량을 채우기 위한 분할 납품 허용 여부입니다. 이 세 가지가 있으면 입고 근거가 됩니다.</p>
+
+      <h2>3. 초과 납품과 부족분 처리</h2>
+
+      <ul>
+
+        <li>범위 내 초과: 실수량으로 검수·정산, 초과분 단가를 미리 합의</li>
+
+        <li>범위 초과: 발주 수량만 검수·지급 가능하며 초과분은 공급자 부담</li>
+
+        <li>범위 내 부족: 보통 위반이 아니며 실수량 정산</li>
+
+        <li>범위 초과 부족: 생산 영향 확인 후 기한 내 보충, 불가하면 계약 조항 적용</li>
+
+        <li>분할 납품: 횟수와 각 도착 시점을 명시하지 않으면 마지막 배치에서 분쟁</li>
+
+      </ul>
+
+      <h2>4. 예비율 산정: 많을수록 좋은 것이 아님</h2>
+
+      <p>예비율은 봉제 라인의 보험이지 무료 증량이 아닙니다. 품목과 공정별로 정하는 편이 일률 10% 추가보다 비용이 적습니다. 일반 인쇄 행택과 세탁 라벨은 1%~3%, 직조 라벨과 수작업 조립 부자재는 2%~5%가 기준입니다. 예비분은 별도 포장하고 예비품으로 표기하면 입고 시 본 납품분과 분리 계수할 수 있어 보충과 대조가 쉽습니다.</p>
+
+      <h2>5. 색상·사이즈 분할: 실제 장벽은 여기</h2>
+
+      <p>10,000장을 네 색상 각 2,500장으로 나누는 것과 단색 10,000장은 비용 구조가 완전히 다릅니다. 인쇄·박·제직은 색상마다 세팅이 늘어나므로 실제 장벽은 색상별 최소 수량입니다. 색상을 합칠지 디지털 인쇄로 전환할지 결정하기 전에 색상별 최소량을 확인하십시오.</p>
+
+      <ul>
+
+        <li>색상별 최소량이 전체 MOQ에 가까울수록 양산가에 근접</li>
+
+        <li>색상이 많고 수량이 적으면 디지털 인쇄나 합리적 합판이 유리</li>
+
+        <li>사이즈 라벨을 사이즈별 포장하면 사이즈별 최소량도 확인</li>
+
+      </ul>
+
+      <h2>6. 재발주: 판 비용을 줄일 수 있는 조건</h2>
+
+      <ul>
+
+        <li>같은 시안·재질·공정의 재발주는 보통 판 재제작이 불필요하지만 최소 수량은 적용</li>
+
+        <li>수량이 너무 적으면 최소 수량 가격 또는 세팅비가 붙음</li>
+
+        <li>시안·재질이 바뀌면 신규 주문이며 허용 오차와 최소 수량 재산정</li>
+
+        <li>장기 예비품이 필요하면 최초 발주에 함께 넣는 편이 이후 소량 보충보다 저렴</li>
+
+      </ul>
+
+      <h2>7. 발주 전 수량표에 명시할 여섯 가지</h2>
+
+      <ol>
+
+        <li>품목별 발주 수량과 허용 오차</li>
+
+        <li>색상·사이즈 분할 여부와 조합별 최소량</li>
+
+        <li>예비율과 예비품 별도 포장·표기 여부</li>
+
+        <li>납품 수량 기준 주체와 확인 방법</li>
+
+        <li>초과·부족 처리와 정산 기준</li>
+
+        <li>재발주 최소 수량과 세팅비·판 비용 여부</li>
+
+      </ol>
+
+      <div class="callout">💡 실무 팁: 발주 수량, 허용 오차, 색상별 최소량, 예비율 네 가지를 한 장의 수량표에 담아 시안과 함께 확인하십시오. 계수 기준을 미리 정하면 입고 시 사정에 기대지 않아도 됩니다.</div>
+
+      <h2>관련 글</h2>
+
+      <ul>
+
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+
+        <li><a href="trim-order-quantity-unit-conversion.html">부자재 수량 단위: 다스·그로스·개·세트</a></li>
+
+        <li><a href="hang-tag-moq-cost.html">행택 최소 수량과 비용: 소량 시험 발주 협상</a></li>
+
+        <li><a href="trim-order-contract-terms-guide.html">부자재 계약 조항: 놓치기 쉬운 항목</a></li>
+
+      </ul>
+
+      <div class="cta-box">
+
+        <p>색상과 예비를 반영한 수량 제안이 필요하면 품목, 색상별 수량, 사이즈 배분을 보내주세요. 허용 오차와 색상별 최소량을 제안합니다. 샘플 3~7일, 양산 10~25일, 최소 수량 유연(행택은 시험 발주 2,000~3,000장, 직조 라벨 1,000장~, 세탁 표시 라벨 300~500장~). 예비품은 별도 포장·표기로 계수와 보충이 쉽습니다.</p>
+
+        <a class="cta-btn" href="../contact.html">수량과 색상 구성을 보내 허용 오차 제안 요청 →</a>
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
