@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 공급 연속성 가이드: 2차 공급사·대체 소재·비상 대응 | TAGE</title>
+<meta name="description" content="부자재 공급 연속성 가이드. 자재 부족·생산 능력 부족·공정 중단·물류 지연 네 가지 유형의 차이, 단일 공급에 취약한 부자재, 낮은 비용으로 2차 공급사를 유지하는 네 가지 방법, 대체 소재에서 실측할 다섯 항목, 3단계 비상 대응과 계약 조항을 정리합니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-supply-continuity-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-supply-continuity-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料供應中斷風險指南：備選供應商、替代料與應急預案",
+     "item": "https://taigetag.com/blog/trim-supply-continuity-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料供應中斷風險指南：備選供應商、替代料與應急預案",
+   "url": "https://taigetag.com/blog/trim-supply-continuity-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-supply-continuity-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>공급 연속성·2차 공급사</span></div>
+      <h1>부자재 공급 중단 리스크 가이드: 2차 공급사·대체 소재·비상 대응</h1>
+      <p>TAGE 패키징 · 2026년 9월 29일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 공급 리스크는 가격이 아니라 &#x27;만들 수 있는 곳이 한 곳뿐&#x27;이라는 점에서 옵니다. 전용 칼틀로만 만드는 이형 행택, 한 대의 직기에서만 짜는 메인 라벨, 단일 수입 필름에 의존하는 포장 백 — 어느 한 고리가 끊겨도 봉제 라인은 멈춰 서서 기다립니다. 부자재는 원가 비중이 작지만 납품 체인의 맨 끝에 있어, 없으면 완성된 의류도 출고할 수 없습니다. 이 글은 네 가지 공급 중단 유형의 차이, 단일 공급에 가장 취약한 부자재, 낮은 비용으로 두 번째 공급사를 유지하는 방법, 대체 소재에서 반드시 검증할 항목, 3단계 대응 계획과 계약에 넣을 조항을 정리합니다.</p>
+
+      <h2>1. 네 가지 공급 중단, 대응 방식도 각각 다릅니다</h2>
+      <ul>
+        <li><strong>자재 부족:</strong> 종이, 실, 필름 등 원자재 재고 소진. 대체 소재, 안전 재고, 조기 자재 확보로 대응하며 공급사를 재촉하는 것으로는 해결되지 않습니다.</li>
+        <li><strong>생산 능력 부족:</strong> 설비·인력·생산 일정이 다른 주문으로 꽉 찬 상태로 성수기에 가장 흔합니다. 60~90일 전 생산 능력 예약, 분할 납품, 주문 우선순위 합의로 대응합니다.</li>
+        <li><strong>공정 중단:</strong> 전용 칼틀·판 롤·박판이 파손되거나 소유권 분쟁이 생기면 공급사 교체 시 판을 새로 만들어야 합니다. 판 대장, 소유권 합의, 전자 파일 자체 보관으로 대비합니다.</li>
+        <li><strong>물류 중단:</strong> 항만 혼잡, 선복 부족, 통관 검사로 운송이 지연됩니다. 운송 방식 전환(해상→항공·택배), 조기 예약, 분할 출고로 대응합니다.</li>
+      </ul>
+
+      <h2>2. 단일 공급에 가장 취약한 부자재</h2>
+      <table>
+        <tr><th>부자재</th><th>단일 공급 의존의 원인</th><th>우선 완화 수단</th></tr>
+        <tr><td>이형 행택</td><td>전용 칼틀과 박판, 공급사 교체 시 재제작</td><td>판 소유권 계약화, 전자 파일 보관, 표준 규격 판 병행</td></tr>
+        <tr><td>자카드 직조 라벨</td><td>원사 색상 번호와 기계가 결합되어 교체 시 색차 위험이 큼</td><td>표준 광원에서 승인 샘플 서명, 양측 실물 보관, 색차 허용치 문서화</td></tr>
+        <tr><td>세탁 표시 라벨</td><td>다국어 표시 내용과 잉크 배합이 한 곳에 고정</td><td>내용 버전 관리, 최소 글자 높이 규격화, 법규 문구는 한 곳에서 관리</td></tr>
+        <tr><td>포장 백</td><td>특정 두께나 생분해 필름 의존, 자재 조달 기간 김</td><td>허용 두께 범위와 대체 소재를 사양에 함께 기재</td></tr>
+        <tr><td>친환경 종이백</td><td>수입 크라프트지·재생지는 로트 차이가 크고 인증지 재고가 제한적</td><td>대체 지종과 평량 허용치 사전 승인, FSC 등 표시는 조기 확보</td></tr>
+      </table>
+
+      <h2>3. 낮은 비용으로 두 번째 공급사 유지하기</h2>
+      <p>두 번째 공급사는 명단에 있는 후보가 아니라, 이미 한 번이라도 작업을 해본 곳입니다. 공급이 끊긴 날에 찾기 시작하면 샘플 제작·색 맞춤·검증 시간을 가장 촉박한 시기에 몰아넣게 됩니다.</p>
+      <ul>
+        <li><strong>시즌마다 소량 발주:</strong> 한 스타일, 한 색상을 두 번째 공급사에 맡겨 납기·색차·촉감을 검증합니다. 비용은 작고 생산 능력은 살아 있게 유지됩니다.</li>
+        <li><strong>동일 사양서 공유:</strong> 같은 사양서, 같은 코드, 같은 허용치를 양쪽에 주면 견적 비교가 가능하고 교체 시 재설명이 필요 없습니다.</li>
+        <li><strong>실물 기준 각각 보관:</strong> 색상 카드와 승인 샘플을 양측이 보관해 기준이 한 곳에만 남지 않게 합니다.</li>
+        <li><strong>금형과 파일은 자사 소유:</strong> 칼틀·판 롤·박판·인쇄 원본 파일·폰트 라이선스의 소유권과 보관 위치를 계약에 명시해 교체 시 재구매를 피합니다.</li>
+      </ul>
+
+      <h2>4. 대체 소재 검증: 평량과 색상만으로는 부족합니다</h2>
+      <p>같은 평량의 크라프트지라도 제조사가 다르면 촉감이 다릅니다. 대체 소재 양산 전 최소 다섯 가지를 확인하세요:</p>
+      <ul>
+        <li><strong>색상:</strong> 표준 광원에서 비교하고 허용치를 숫자로 표시합니다(예: ΔE ≤ 2). &#x27;비슷함&#x27; 같은 표현은 쓰지 않습니다.</li>
+        <li><strong>촉감과 두께:</strong> 같은 평량이라도 지종과 광택 처리에 따라 크게 달라지며 행택의 강성과 걸림 느낌에 직접 영향을 줍니다.</li>
+        <li><strong>세탁·마찰 내구성:</strong> 세탁 표시 라벨 대체 소재는 세탁 횟수와 잉크 부착력을 다시 실측해야 하며 기존 결과를 그대로 쓸 수 없습니다.</li>
+        <li><strong>규정·표시:</strong> 잉크 이행, 니켈 용출, FSC·GRS 표시는 소재에 따라 달라지므로 EU·미국 수출 시 재확인이 필요합니다.</li>
+        <li><strong>설비 적합성:</strong> 백 두께나 마찰 계수가 바뀌면 자동 포장기와 실링 온도를 다시 조정해야 하니 양산 전에 확인하세요.</li>
+      </ul>
+
+      <div class="callout">💡 실무 기준: 먼저 &#x27;같은 스타일, 다른 소재&#x27; 비교 샘플을 만듭니다. 스타일·위치·치수는 같고 소재만 달리해 표준 광원에서 승인 샘플과 나란히 비교하고, 브랜드의 서면 승인 후 양산합니다. A사 기준으로 B사 소재를 판단하거나 사진만으로 승인하지 마십시오.</div>
+
+      <h2>5. 3단계 비상 대응: 먼저 등급을 나누고 움직입니다</h2>
+      <ul>
+        <li><strong>1단계(1주 이내):</strong> 안전 재고를 풀고 항공·택배로 소량을 보충해 가장 급한 두 스타일을 지킵니다.</li>
+        <li><strong>2단계(1~3주):</strong> 두 번째 공급사를 가동해 &#x27;먼저 세트, 이후 수량&#x27; 순으로 스타일별 완세트를 우선합니다.</li>
+        <li><strong>3단계(3주 이상 또는 출시 일정 위험):</strong> 단계적으로 출시하거나 범용 행택+스티커, 간이 포장으로 먼저 출고하고 맞춤 부품 도착 후 보충합니다. 카드 한 장 때문에 전체를 기다리게 하지 마십시오.</li>
+      </ul>
+
+      <h2>6. 계약에 명문화: &#x27;우선&#x27;을 조항으로 만듭니다</h2>
+      <ul>
+        <li><strong>생산 능력 예약:</strong> 성수기 60~90일 전에 월 생산 능력과 최단 착수일을 서면으로 확정합니다. 구두 약속은 능력이 아닙니다.</li>
+        <li><strong>변경 통지:</strong> 소재·설비·생산지·하청 변경은 사전 서면 통지하고 샘플 승인을 다시 진행합니다.</li>
+        <li><strong>불가항력과 대체안:</strong> 불가항력 시 통지 기한, 대체 소재 제안 의무, 가격 처리 방식을 명시합니다.</li>
+        <li><strong>물량 배분:</strong> 이중 공급이라면 70/30 같은 비율과 정기 발주 리듬을 명확히 합니다. 그렇지 않으면 두 번째 공급사는 늘 후순위 고객이 되어 결정적일 때 순서가 오지 않습니다.</li>
+      </ul>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-supplier-audit.html">부자재 공급사 심사: 현장에서 볼 것과 물을 것</a></li>
+        <li><a href="small-batch-fast-reorder-trims.html">부자재 소량·신속 재발주 가이드</a></li>
+        <li><a href="garment-trims-inventory-management.html">부자재 재고와 보충 관리: 안전 재고, 발주점, 장기 체화</a></li>
+        <li><a href="trim-tooling-ownership-guide.html">칼틀·인쇄판·판 롤 소유권 가이드</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>보유하신 부자재 목록의 공급 리스크 점검이 필요하신가요? 품번, 수량, 목표 출시일을 보내주시면 카테고리별 단일 공급 의존 항목, 대체 소재 제안과 비교 샘플을 제공합니다. 행택·직조 라벨·세탁 표시 라벨·포장을 함께 대응하며 샘플은 3~7일 내 발송합니다. 둥관 후먼 공장 방문도 환영합니다.</p>
+        <a class="cta-btn" href="../contact.html">2차 공급사·대체 소재 방안 상담 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
