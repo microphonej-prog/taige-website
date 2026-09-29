@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計 | TAGE" data-en="Woven Label Shrinkage Guide: Stability After Washing | TAGE" data-ja="織りラベルと洗濯表示ラベルの収縮率ガイド：洗濯後の寸法安定性 | TAGE" data-ko="직조 라벨·세탁 표시 라벨 수축률 가이드: 세탁 후 치수 안정성 | TAGE" data-fr="Retrait des labels tissés : stabilité après lavage | TAGE" data-es="Encogimiento de etiquetas tejidas: estabilidad tras lavar | TAGE">織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計 | TAGE</title>
+<meta name="description" data-zh="織嘜洗後縮水、起皺、字位偏移，是驗收最容易漏、售後最容易爆的問題。本文拆解三類收縮機制，對比材質與切邊方式的縮率差異，講清 ISO 6330 與 AATCC 135 洗後測量做法與織造尺寸留量換算，並列清下單前必寫的六項規格約定。來自東莞泰閣包裝。"
+      data-en="Woven label shrinkage explained: why labels shrink, rate differences by material and edge cut, how to measure after washing, and the allowance to weave in." data-ja="織りラベルの収縮率ガイド。洗濯後に縮む3つのメカニズム、素材と裁断方法による収縮率の違い、ISO 6330・AATCC 135に基づく洗濯後の測定方法、織り寸法に織り込む余裕の考え方、仕様書に書く6項目を解説します。東莞泰閣包装。" data-ko="직조 라벨 수축률 가이드. 세탁 후 수축하는 세 가지 원인, 소재와 재단 방식에 따른 수축률 차이, ISO 6330·AATCC 135 기준 세탁 후 측정법, 제직 치수 여유 설계, 사양서에 넣을 여섯 항목을 정리합니다. 둥관 TAGE 패키징."
+      data-fr="Retrait des labels tissés : les trois mécanismes en jeu, les écarts selon matière et coupe, la mesure après lavage et les marges de tissage à prévoir."
+      data-es="Encogimiento de etiquetas tejidas: los tres mecanismos, diferencias según material y corte, cómo medir tras el lavado y el margen de tejido necesario."
+      content="織嘜洗後縮水、起皺、字位偏移，是驗收最容易漏、售後最容易爆的問題。本文拆解三類收縮機制，對比材質與切邊方式的縮率差異，講清 ISO 6330 與 AATCC 135 洗後測量做法與織造尺寸留量換算，並列清下單前必寫的六項規格約定。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/woven-label-shrinkage-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-shrinkage-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計",
+     "item": "https://taigetag.com/blog/woven-label-shrinkage-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計",
+   "url": "https://taigetag.com/blog/woven-label-shrinkage-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-shrinkage-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="織嘜縮水率與尺寸穩定性" data-en="Label Shrinkage and Stability" data-ja="ラベルの収縮率と寸法安定性" data-ko="라벨 수축률과 치수 안정성" data-fr="Retrait et stabilité des labels" data-es="Encogimiento y estabilidad">織嘜縮水率與尺寸穩定性</span></div>
+      <h1 data-zh="織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計" data-en="Woven Label Shrinkage: Dimensional Stability After Washing" data-ja="織りラベルと洗濯表示ラベルの収縮率ガイド：洗濯後の寸法安定性と余裕の設計" data-ko="직조 라벨·세탁 표시 라벨 수축률 가이드: 세탁 후 치수 안정성과 여유 설계" data-fr="Retrait des labels tissés et étiquettes d'entretien : stabilité dimensionnelle" data-es="Encogimiento de etiquetas tejidas y de cuidado: estabilidad dimensional">織嘜與洗水標縮水率指南：洗後尺寸穩定性與留量設計</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年9月29日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 29, 2026" data-ja="泰閣包装 · 2026年9月29日更新" data-ko="TAGE 패키징 · 2026년 9월 29일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 29 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 29 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月29日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="織嘜與洗水標洗後縮水、起皺、字位偏移，是驗收時最容易被忽略、售後最容易爆發的問題：出廠時的 30mm 寬主嘜明明合格，顧客洗兩次以後卻縮到 28mm，字位被拉歪、邊緣起皺、甚至頂到領口縫線。縮率不是隨機誤差，而是材質、切邊方式、後整理與洗滌條件共同決定的物理量。這篇指南把縮率的來源、不同方案的差異、洗後測量的做法與留量換算講清，最後給出一份可以直接寫進規格書的約定。"
+         data-en="Shrinkage, wrinkling and drifting print on woven labels and care labels are the defects that quietly pass inspection and then surface after two washes: a 30mm neck label that was perfect at delivery measures 28mm, the print sits off-centre, the edge ripples and it pulls against the neckline seam. Shrinkage is not random error — it is a physical result of material, edge finish, post-treatment and washing conditions. This guide covers where shrinkage comes from, how the common options differ, how to measure after washing and how to convert a washed dimension into a weaving size, and it ends with clauses you can put straight into your specification."
+         data-ja="織りラベルや洗濯表示ラベルの収縮・しわ・印字位置のずれは、検品では見逃されやすく、販売後に表面化しやすい不良です。納品時に合格だった幅30mmのメインラベルが、2回の洗濯後に28mmになり、印字が傾き、端が波打ち、衿の縫い目に突っ張る。収縮はランダムな誤差ではなく、素材・裁断方法・後加工・洗濯条件で決まる物性値です。本ガイドでは収縮の発生源、方式ごとの違い、洗濯後の測定方法、洗濯後寸法から製織寸法への換算を整理し、最後に仕様書へそのまま書ける条項を掲載します。"
+         data-ko="직조 라벨과 세탁 표시 라벨의 수축·주름·인쇄 위치 이동은 검수에서는 조용히 통과되고 판매 후에 드러나는 결함입니다. 납품 시 합격이던 폭 30mm 메인 라벨이 세탁 두 번 후 28mm가 되고, 인쇄가 기울고, 가장자리가 물결치고, 목선 봉제선을 당깁니다. 수축은 무작위 오차가 아니라 소재·재단 방식·후가공·세탁 조건이 결정하는 물성입니다. 이 가이드는 수축의 원인, 방식별 차이, 세탁 후 측정법, 세탁 후 치수에서 제직 치수로의 환산을 정리하고, 마지막에 사양서에 그대로 쓸 수 있는 조항을 제시합니다."
+         data-fr="Rétrécissement, plissement et décalage d'impression sur les labels tissés et les étiquettes d'entretien : des défauts qui passent discrètement le contrôle et ressortent après deux lavages. Un label de col de 30 mm parfait à la livraison mesure 28 mm, l'impression se décale, le bord ondule et tire sur la couture d'encolure. Le retrait n'est pas une erreur aléatoire : c'est une grandeur physique déterminée par la matière, la finition des bords, les post-traitements et les conditions de lavage. Ce guide couvre l'origine du retrait, les écarts entre solutions, la mesure après lavage, la conversion d'une cote lavée en dimension de tissage, et se termine par des clauses à recopier dans la fiche technique."
+         data-es="Encogimiento, arrugas y desplazamiento de la impresión en etiquetas tejidas y de cuidado: defectos que pasan discretamente el control y aparecen tras dos lavados. Una etiqueta de cuello de 30 mm perfecta en la entrega mide 28 mm, la impresión queda descentrada, el borde ondula y tira de la costura del cuello. El encogimiento no es un error aleatorio: es una magnitud física que determinan el material, el acabado del borde, los postratamientos y las condiciones de lavado. Esta guía cubre su origen, las diferencias entre opciones, la medición tras el lavado y la conversión de una medida lavada a medida de tejido, y cierra con cláusulas listas para la ficha técnica.">織嘜與洗水標洗後縮水、起皺、字位偏移，是驗收時最容易被忽略、售後最容易爆發的問題：出廠時的 30mm 寬主嘜明明合格，顧客洗兩次以後卻縮到 28mm，字位被拉歪、邊緣起皺、甚至頂到領口縫線。縮率不是隨機誤差，而是材質、切邊方式、後整理與洗滌條件共同決定的物理量。這篇指南把縮率的來源、不同方案的差異、洗後測量的做法與留量換算講清，最後給出一份可以直接寫進規格書的約定。</p>
+
+      <h2 data-zh="1. 縮率從哪裏來：三種收縮機制" data-en="1. Where Shrinkage Comes From: Three Mechanisms" data-ja="1. 収縮はどこから来るか：3つのメカニズム" data-ko="1. 수축은 어디서 오는가: 세 가지 메커니즘" data-fr="1. D'où vient le retrait : trois mécanismes" data-es="1. De dónde viene el encogimiento: tres mecanismos">1. 縮率從哪裏來：三種收縮機制</h2>
+      <p data-zh="同一批紗線織出來的兩條嘜，縮率可能差一倍，原因就在於三種機制的作用方式不同。分清機制才能談緩解手段——例如張力的自然回縮靠洗前鬆弛可以解決，而熱切引入的熱收縮只能靠切邊方案本身調整。"
+         data-en="Two labels woven from the same yarn batch can shrink at double the rate, because three different mechanisms are at work. Naming the mechanism is what makes a remedy possible: natural relaxation can be handled by resting the goods before washing, whereas thermal contraction from hot cutting can only be managed by changing the edge finish itself."
+         data-ja="同じ糸ロットから織った2枚のラベルで収縮率が2倍違うことがあります。作用するメカニズムが異なるためです。メカニズムを特定して初めて対策が立てられます。張力の自然な戻りは洗濯前のなじませで対応でき、熱カットによる熱収縮は裁断方式そのものを変えるしかありません。"
+         data-ko="같은 실 로트로 짠 두 장의 라벨이 수축률이 두 배 차이 나기도 합니다. 서로 다른 메커니즘이 작용하기 때문입니다. 메커니즘을 구분해야 대응이 가능합니다. 장력의 자연 회복은 세탁 전 안정화로 대응되고, 열절단에 의한 열수축은 재단 방식 자체를 바꿔야 합니다."
+         data-fr="Deux labels tissés dans le même lot de fil peuvent se rétracter du double, car trois mécanismes différents entrent en jeu. Nommer le mécanisme, c'est ce qui rend la solution possible : le relâchement naturel se traite par un repos avant lavage, tandis que la contraction thermique de la coupe à chaud ne se corrige qu'en changeant la finition du bord."
+         data-es="Dos etiquetas tejidas del mismo lote de hilo pueden encoger el doble, porque actúan tres mecanismos distintos. Nombrar el mecanismo es lo que permite una solución: la relajación natural se trata con reposo antes del lavado, mientras que la contracción térmica del corte en caliente solo se corrige cambiando el acabado del borde.">同一批紗線織出來的兩條嘜，縮率可能差一倍，原因就在於三種機制的作用方式不同。分清機制才能談緩解手段——例如張力的自然回縮靠洗前鬆弛可以解決，而熱切引入的熱收縮只能靠切邊方案本身調整。</p>
+      <ul>
+        <li data-zh="<strong>織造張力回縮：</strong>經紗在織機上被拉緊，下機後需要時間回彈。織完立即裁切、立即縫製的嘜，洗後回縮更明顯；預縮整理或充分回潮靜置可顯著降低這項。"
+            data-en="<strong>Relaxation of weaving tension:</strong> warp yarn is held under tension on the loom and needs time to recover after weaving. Labels cut and sewn immediately after weaving shrink more; pre-shrinking or a full conditioning rest cuts this component sharply."
+            data-ja="<strong>製織張力の戻り：</strong>経糸は織機上で張力をかけられており、下機後に戻る時間が必要です。織り上がり直後に裁断・縫製したラベルは収縮が大きくなります。予備収縮加工や十分な吸湿なじませでこの成分を大幅に減らせます。"
+            data-ko="<strong>제직 장력 회복:</strong> 경사는 직기에서 장력이 걸려 있어 하기 후 되돌아갈 시간이 필요합니다. 직조 직후 재단·봉제한 라벨은 수축이 더 큽니다. 예비 수축 가공이나 충분한 흡습 안정화로 이 성분을 크게 줄일 수 있습니다."
+            data-fr="<strong>Relâchement de la tension de tissage :</strong> les fils de chaîne sont tendus sur le métier et doivent récupérer après tissage. Un label coupé et cousu immédiatement se rétracte davantage ; un pré-rétrécissement ou un repos complet de conditionnement réduit nettement cette part."
+            data-es="<strong>Relajación de la tensión de tejido:</strong> los hilos de urdimbre van tensos en el telar y necesitan recuperarse después. Una etiqueta cortada y cosida de inmediato encoge más; el preencogimiento o un reposo completo de acondicionamiento reduce mucho esta parte."><strong>織造張力回縮：</strong>經紗在織機上被拉緊，下機後需要時間回彈。織完立即裁切、立即縫製的嘜，洗後回縮更明顯；預縮整理或充分回潮靜置可顯著降低這項。</li>
+        <li data-zh="<strong>熱切與熱定型的熱收縮：</strong>熱切邊、熱定型與熱壓折邊會引入局部收縮。切邊溫度、走刀速度與材料熔點越接近，熱收縮區越寬，邊部也就越容易呈波浪狀。"
+            data-en="<strong>Thermal contraction from hot cutting and heat setting:</strong> hot-cut edges, heat setting and pressed folds introduce local contraction. The closer the cutting temperature runs to the melting point of the yarn, the wider the affected zone and the more the edge ripples."
+            data-ja="<strong>熱カットと熱セットによる熱収縮：</strong>熱カット端、熱セット、熱プレス折りは局部的な収縮を生みます。裁断温度が糸の融点に近いほど影響域が広がり、端が波打ちやすくなります。"
+            data-ko="<strong>열절단·열고정에 의한 열수축:</strong> 열절단 가장자리, 열고정, 열프레스 접기는 국부 수축을 만듭니다. 절단 온도가 실 융점에 가까울수록 영향 범위가 넓어지고 가장자리가 물결칩니다."
+            data-fr="<strong>Contraction thermique de la coupe à chaud et du thermofixage :</strong> bords coupés à chaud, thermofixage et plis pressés créent une contraction locale. Plus la température de coupe approche le point de fusion du fil, plus la zone affectée s'élargit et plus le bord ondule."
+            data-es="<strong>Contracción térmica del corte en caliente y el termofijado:</strong> bordes cortados en caliente, termofijado y pliegues prensados introducen contracción local. Cuanto más se acerca la temperatura de corte al punto de fusión del hilo, mayor es la zona afectada y más ondula el borde."><strong>熱切與熱定型的熱收縮：</strong>熱切邊、熱定型與熱壓折邊會引入局部收縮。切邊溫度、走刀速度與材料熔點越接近，熱收縮區越寬，邊部也就越容易呈波浪狀。</li>
+        <li data-zh="<strong>洗水與烘乾的溼熱收縮：</strong>纖維在溼熱狀態下重新排列，聚酯與尼龍在高溫水洗加轉筒烘乾時收縮最明顯；棉與再生纖維素纖維則更多表現爲溶脹後回縮。洗滌溫度、是否轉筒烘乾、有無柔順劑都會改變結果。"
+            data-en="<strong>Wet-heat shrinkage in washing and drying:</strong> fibres rearrange under moist heat. Polyester and nylon move most when washed hot and tumble dried, while cotton and regenerated cellulose swell and then contract. Wash temperature, tumble drying and fabric softener all change the outcome."
+            data-ja="<strong>洗濯・乾燥による湿熱収縮：</strong>繊維は湿熱下で再配列します。ポリエステルとナイロンは高温洗濯とタンブラー乾燥で最も収縮し、綿と再生セルロースは膨潤後の収縮として現れます。洗濯温度、タンブラー乾燥、柔軟剤の有無で結果が変わります。"
+            data-ko="<strong>세탁·건조에 의한 습열 수축:</strong> 섬유는 습열 상태에서 재배열합니다. 폴리에스터와 나일론은 고온 세탁과 텀블러 건조에서 가장 크게 수축하고, 면과 재생 셀룰로스는 팽윤 후 수축으로 나타납니다. 세탁 온도, 텀블러 건조, 섬유유연제가 결과를 바꿉니다."
+            data-fr="<strong>Retrait hydrothermique au lavage et au séchage :</strong> les fibres se réorganisent en milieu humide et chaud. Le polyester et le polyamide bougent le plus en lavage chaud avec séchage en tambour ; le coton et la cellulose régénérée gonflent puis se contractent. Température, tambour et adoucissant changent le résultat."
+            data-es="<strong>Retracción hidrotérmica en lavado y secado:</strong> las fibras se reordenan con calor húmedo. El poliéster y la poliamida son los que más se mueven en lavado caliente con secadora; el algodón y la celulosa regenerada se hinchan y luego se contraen. La temperatura, la secadora y el suavizante cambian el resultado."><strong>洗水與烘乾的溼熱收縮：</strong>纖維在溼熱狀態下重新排列，聚酯與尼龍在高溫水洗加轉筒烘乾時收縮最明顯；棉與再生纖維素纖維則更多表現爲溶脹後回縮。洗滌溫度、是否轉筒烘乾、有無柔順劑都會改變結果。</li>
+      </ul>
+
+      <h2 data-zh="2. 不同材質與切邊方式的縮率差異" data-en="2. How Material and Edge Finish Change the Rate" data-ja="2. 素材と裁断方法による収縮率の違い" data-ko="2. 소재와 재단 방식에 따른 수축률 차이" data-fr="2. Écarts selon la matière et la finition du bord" data-es="2. Diferencias según material y acabado del borde">2. 不同材質與切邊方式的縮率差異</h2>
+      <p data-zh="下表是常見組合的典型區間，實際數值受織機張力、定型工藝與洗滌條件影響，務必以雙方實測數據爲準。值得注意的是寬向縮率通常大於長向——因爲經密方向受張力影響更直接。"
+         data-en="The table below gives typical ranges for common combinations. Actual figures depend on loom tension, setting process and wash conditions, so always work from measured data agreed between both parties. Note that width usually shrinks more than length, because the warp direction is affected more directly by tension."
+         data-ja="下表は一般的な組み合わせの目安レンジです。実際の数値は織機張力・セット加工・洗濯条件で変わるため、必ず双方の実測値で確認してください。なお経糸方向は張力の影響を直接受けやすく、幅方向の収縮が長さ方向より大きくなるのが一般的です。"
+         data-ko="아래 표는 일반적인 조합의 기준 범위입니다. 실제 수치는 직기 장력, 열고정 공정, 세탁 조건에 따라 달라지므로 반드시 양측 실측값으로 확인하십시오. 경사 방향이 장력 영향을 더 직접 받아 폭 방향 수축이 길이 방향보다 큰 것이 일반적입니다."
+         data-fr="Le tableau donne des plages usuelles. Les valeurs réelles dépendent de la tension du métier, du thermofixage et des conditions de lavage : travaillez toujours sur des mesures convenues entre les deux parties. La largeur se rétracte en général plus que la longueur, la chaîne étant plus directement soumise à la tension."
+         data-es="La tabla recoge rangos habituales. Los valores reales dependen de la tensión del telar, del termofijado y del lavado, así que trabaje siempre con datos medidos y acordados entre las partes. El ancho suele encoger más que el largo, porque la urdimbre recibe más directamente la tensión.">下表是常見組合的典型區間，實際數值受織機張力、定型工藝與洗滌條件影響，務必以雙方實測數據爲準。值得注意的是寬向縮率通常大於長向——因爲經密方向受張力影響更直接。</p>
+      <table>
+        <tr><th data-zh="材質與切邊" data-en="Material and edge" data-ja="素材と端処理" data-ko="소재와 가장자리" data-fr="Matière et bord" data-es="Material y borde">材質與切邊</th><th data-zh="30℃ 輕柔洗後典型縮率" data-en="Typical shrink after 30°C gentle wash" data-ja="30℃弱洗後の目安収縮率" data-ko="30℃ 약세탁 후 기준 수축률" data-fr="Retrait usuel après lavage doux 30°C" data-es="Encogimiento típico a 30°C suave">30℃ 輕柔洗後典型縮率</th><th data-zh="受力與注意事項" data-en="Behaviour and notes" data-ja="挙動と注意点" data-ko="거동과 유의점" data-fr="Comportement et remarques" data-es="Comportamiento y notas">受力與注意事項</th></tr>
+        <tr><td data-zh="緞面織嘜（熱切邊）" data-en="Satin label, hot-cut edge" data-ja="サテン織りラベル（熱カット端）" data-ko="새틴 직조 라벨(열절단)" data-fr="Label satin, bord coupé à chaud" data-es="Etiqueta de satén, borde cortado en caliente">緞面織嘜（熱切邊）</td><td data-zh="長向 1–2.5%，寬向 2–4%" data-en="1–2.5% length, 2–4% width" data-ja="長さ1–2.5%、幅2–4%" data-ko="길이 1–2.5%, 폭 2–4%" data-fr="1–2,5 % en long, 2–4 % en large" data-es="1–2,5 % largo, 2–4 % ancho">長向 1–2.5%，寬向 2–4%</td><td data-zh="表面平滑、字跡清晰；熱切端洗後易卷邊，需控制切刀溫度" data-en="Smooth surface and crisp type; hot-cut edges curl after washing, so control blade temperature" data-ja="表面が平滑で文字が鮮明。熱カット端は洗濯後にカールしやすいため刃温度の管理が必要" data-ko="표면이 매끄럽고 글자가 선명합니다. 열절단 끝은 세탁 후 말리기 쉬워 칼날 온도 관리가 필요합니다" data-fr="Surface lisse et caractères nets ; les bords coupés à chaud s'enroulent après lavage, d'où le contrôle de la température de lame" data-es="Superficie lisa y letra nítida; los bordes cortados en caliente se enrollan tras el lavado, así que controle la temperatura de cuchilla">表面平滑、字跡清晰；熱切端洗後易卷邊，需控制切刀溫度</td></tr>
+        <tr><td data-zh="平紋織嘜（熱切邊）" data-en="Plain-weave label, hot-cut" data-ja="平織りラベル（熱カット端）" data-ko="평직 라벨(열절단)" data-fr="Label armure toile, coupé à chaud" data-es="Etiqueta tafetán, cortada en caliente">平紋織嘜（熱切邊）</td><td data-zh="長向 1–3%，寬向 2.5–4.5%" data-en="1–3% length, 2.5–4.5% width" data-ja="長さ1–3%、幅2.5–4.5%" data-ko="길이 1–3%, 폭 2.5–4.5%" data-fr="1–3 % en long, 2,5–4,5 % en large" data-es="1–3 % largo, 2,5–4,5 % ancho">長向 1–3%，寬向 2.5–4.5%</td><td data-zh="手感柔軟、成本友好；縮率略高於緞面，適合洗水標與內裏嘜" data-en="Soft and cost-effective; shrinks slightly more than satin, well suited to care labels and inner labels" data-ja="柔らかくコストに優れる。収縮はサテンよりやや大きく、洗濯表示ラベルや内側ラベルに適します" data-ko="부드럽고 원가가 유리합니다. 수축은 새틴보다 조금 크며 세탁 표시 라벨과 안쪽 라벨에 적합합니다" data-fr="Souple et économique ; se rétracte un peu plus que le satin, adapté aux étiquettes d'entretien et aux labels intérieurs" data-es="Suave y económica; encoge algo más que el satén, adecuada para etiquetas de cuidado e interiores">手感柔軟、成本友好；縮率略高於緞面，適合洗水標與內裏嘜</td></tr>
+        <tr><td data-zh="厚提花織嘜（平切後折邊）" data-en="Heavy jacquard, cut and folded" data-ja="厚手ジャカード（平カット後折り）" data-ko="두꺼운 자카드(평절단 후 접기)" data-fr="Jacquard épais, coupé puis plié" data-es="Jacquard grueso, cortado y plegado">厚提花織嘜（平切後折邊）</td><td data-zh="長向 2–4%，寬向 3–5%" data-en="2–4% length, 3–5% width" data-ja="長さ2–4%、幅3–5%" data-ko="길이 2–4%, 폭 3–5%" data-fr="2–4 % en long, 3–5 % en large" data-es="2–4 % largo, 3–5 % ancho">長向 2–4%，寬向 3–5%</td><td data-zh="立體感強但厚度大，洗後字位易偏移；折邊處會疊加局部收縮，需單獨留量" data-en="Rich relief but thick, and the logo can drift after washing; folded edges add local contraction on top, so allow separately" data-ja="立体感は高いが厚みがあり、洗濯後に図柄位置がずれやすい。折り返し部は局部的な収縮が重なるため別途余裕が必要" data-ko="입체감은 좋지만 두껍고 세탁 후 로고 위치가 밀리기 쉽습니다. 접힌 부분은 국부 수축이 더해져 별도 여유가 필요합니다" data-fr="Relief marqué mais épaisseur importante : le logo peut se décaler après lavage ; les bords pliés ajoutent une contraction locale, à prévoir séparément" data-es="Relieve marcado pero grosor alto: el logo puede desplazarse tras el lavado; los bordes plegados añaden contracción local que hay que prever aparte">立體感強但厚度大，洗後字位易偏移；折邊處會疊加局部收縮，需單獨留量</td></tr>
+        <tr><td data-zh="雙層織邊嘜（原邊不切）" data-en="Double-layer selvedge label, no cut edge" data-ja="二重織り耳ラベル（端を切らない）" data-ko="이중 셀비지 라벨(재단 없음)" data-fr="Label double lisière, bords non coupés" data-es="Etiqueta de doble orillo, sin corte">雙層織邊嘜（原邊不切）</td><td data-zh="長向 0.5–1.5%，寬向 1–2%" data-en="0.5–1.5% length, 1–2% width" data-ja="長さ0.5–1.5%、幅1–2%" data-ko="길이 0.5–1.5%, 폭 1–2%" data-fr="0,5–1,5 % en long, 1–2 % en large" data-es="0,5–1,5 % largo, 1–2 % ancho">長向 0.5–1.5%，寬向 1–2%</td><td data-zh="最穩定，無毛邊與卷邊；但門幅固定、排版自由度低，適合大批量標準尺寸" data-en="The most stable option with no fraying or curling, but widths are fixed and layout freedom is limited — best for large runs of standard sizes" data-ja="最も安定し、毛羽やカールもありません。ただし幅が固定でレイアウトの自由度は低く、標準サイズの大量生産に向きます" data-ko="가장 안정적이고 올풀림과 말림이 없습니다. 다만 폭이 고정되어 배치 자유도가 낮아 표준 치수 대량 생산에 적합합니다" data-fr="La solution la plus stable, sans effilochage ni enroulement, mais largeurs fixes et liberté de mise en page réduite — idéale pour les grandes séries" data-es="La opción más estable, sin deshilachado ni enrollado, pero anchos fijos y poca libertad de maquetación: ideal para grandes series estándar">最穩定，無毛邊與卷邊；但門幅固定、排版自由度低，適合大批量標準尺寸</td></tr>
+        <tr><td data-zh="塗層印刷洗水標（啞光塗層）" data-en="Coated printed care label" data-ja="コーティング印刷洗濯表示ラベル" data-ko="코팅 인쇄 세탁 표시 라벨" data-fr="Étiquette d'entretien enduite" data-es="Etiqueta de cuidado estucada">塗層印刷洗水標（啞光塗層）</td><td data-zh="長向 1–2%，寬向 2–3%" data-en="1–2% length, 2–3% width" data-ja="長さ1–2%、幅2–3%" data-ko="길이 1–2%, 폭 2–3%" data-fr="1–2 % en long, 2–3 % en large" data-es="1–2 % largo, 2–3 % ancho">長向 1–2%，寬向 2–3%</td><td data-zh="信息量大、印刷清晰；塗層與基布的收縮差會在摺痕處起細裂，避免用高溫轉筒烘乾" data-en="Holds a lot of information legibly; the coating and base shrink differently, cracking at folds, so avoid hot tumble drying" data-ja="情報量が多く印字も明瞭です。コーティングと基布の収縮差で折り目に微細なひびが入るため、高温タンブラー乾燥は避けます" data-ko="정보량이 많고 인쇄가 선명합니다. 코팅과 기재의 수축 차이로 접힌 곳에 미세 균열이 생기므로 고온 텀블러 건조는 피합니다" data-fr="Beaucoup d'informations lisibles ; l'enduction et le support se rétractent différemment et fissurent aux plis — évitez le tambour chaud" data-es="Mucha información legible; el estucado y el soporte encogen distinto y se agrietan en los pliegues: evite la secadora caliente">信息量大、印刷清晰；塗層與基布的收縮差會在摺痕處起細裂，避免用高溫轉筒烘乾</td></tr>
+      </table>
+
+      <h2 data-zh="3. 洗後測量怎麼做：三次洗、同一基準點" data-en="3. How to Measure After Washing: Three Washes, One Datum" data-ja="3. 洗濯後の測定手順：3回洗濯と同一基準点" data-ko="3. 세탁 후 측정 절차: 3회 세탁, 동일 기준점" data-fr="3. Mesurer après lavage : trois lavages, un même repère" data-es="3. Cómo medir tras el lavado: tres lavados, una referencia">3. 洗後測量怎麼做：三次洗、同一基準點</h2>
+      <p data-zh="縮率必須測出來纔有意義，口頭說「不縮水」沒有約束力。可執行的做法如下，國際買家通常引用 ISO 6330（家庭洗滌程序）或 AATCC 135（織物家庭洗滌尺寸變化），兩者都要求洗前洗後各測一次並計算變化率。"
+         data-en="Shrinkage only means something when it is measured — a verbal promise of no shrinkage carries no weight. The method below is practical, and international buyers normally cite ISO 6330 (domestic washing procedures) or AATCC 135 (dimensional changes after home laundering), both of which require a measurement before and after washing and a calculated change rate."
+         data-ja="収縮率は測って初めて意味を持ちます。「縮みません」という口頭の約束は効力を持ちません。以下は実行可能な手順です。海外バイヤーは通常 ISO 6330（家庭洗濯手順）または AATCC 135（家庭洗濯後の寸法変化）を引用し、どちらも洗濯前後の測定と変化率の算出を求めます。"
+         data-ko="수축률은 측정해야 의미가 있습니다. '줄지 않는다'는 구두 약속은 구속력이 없습니다. 아래는 실행 가능한 절차입니다. 해외 바이어는 보통 ISO 6330(가정용 세탁 절차) 또는 AATCC 135(가정 세탁 후 치수 변화)를 인용하며, 두 기준 모두 세탁 전후 측정과 변화율 계산을 요구합니다."
+         data-fr="Un retrait n'a de sens que mesuré : une promesse orale d'absence de retrait n'a aucune valeur. La méthode ci-dessous est applicable. Les acheteurs internationaux citent en général l'ISO 6330 (procédures de lavage domestique) ou l'AATCC 135 (variations dimensionnelles après lavage domestique), qui exigent une mesure avant et après et le calcul du taux."
+         data-es="El encogimiento solo significa algo cuando se mide: prometer de palabra que no encoge no obliga a nada. El método siguiente es aplicable. Los compradores internacionales citan normalmente ISO 6330 o AATCC 135, que exigen medir antes y después del lavado y calcular la variación.">縮率必須測出來纔有意義，口頭說「不縮水」沒有約束力。可執行的做法如下，國際買家通常引用 ISO 6330（家庭洗滌程序）或 AATCC 135（織物家庭洗滌尺寸變化），兩者都要求洗前洗後各測一次並計算變化率。</p>
+      <ol>
+        <li data-zh="同批取三片完整嘜，避免取邊角料；同時留一片不洗作爲對照樣，顏色與尺寸比對都用它。"
+            data-en="Take three full labels from the same batch, not offcuts, and keep one unwashed as the control for both size and colour comparison."
+            data-ja="同一ロットから端切れではなく完全なラベルを3枚取り、洗わない1枚を寸法と色の比較用に対照として保管します。"
+            data-ko="같은 로트에서 자투리가 아닌 완전한 라벨 3장을 취하고, 세탁하지 않은 1장을 치수와 색상 비교용 대조로 보관합니다."
+            data-fr="Prélevez trois labels entiers du même lot, pas des chutes, et conservez-en un non lavé comme témoin pour la taille et la couleur."
+            data-es="Tome tres etiquetas completas del mismo lote, no recortes, y guarde una sin lavar como testigo de talla y color.">同批取三片完整嘜，避免取邊角料；同時留一片不洗作爲對照樣，顏色與尺寸比對都用它。</li>
+        <li data-zh="洗前在每片上用不易褪色的記號畫出固定基準：例如沿長向與寬向各畫一段 50mm 或 100mm 的標記線，線端儘量落在平整處，避開摺痕與孔位。"
+            data-en="Before washing, mark a fixed datum on each piece with a fade-resistant pen: for example a 50mm or 100mm line along the length and another across the width, with the ends on flat areas away from folds and holes."
+            data-ja="洗濯前に耐色落ち性のペンで各片に基準を付けます。例えば長さ方向と幅方向にそれぞれ50mmまたは100mmの線を引き、線端は折り目や穴を避けた平坦な位置に置きます。"
+            data-ko="세탁 전에 변색되지 않는 펜으로 각 장에 기준을 표시합니다. 예를 들어 길이 방향과 폭 방향으로 각각 50mm 또는 100mm 선을 긋고, 선 끝은 접힘과 타공을 피한 평평한 곳에 둡니다."
+            data-fr="Avant lavage, tracez un repère fixe au feutre indélébile : par exemple 50 ou 100 mm dans le sens de la longueur et autant dans la largeur, les extrémités sur des zones planes, à l'écart des plis et des trous."
+            data-es="Antes de lavar, marque una referencia fija con rotulador indeleble: por ejemplo 50 o 100 mm en el largo y otro tanto en el ancho, con los extremos en zonas planas, lejos de pliegues y taladros.">洗前在每片上用不易褪色的記號畫出固定基準：例如沿長向與寬向各畫一段 50mm 或 100mm 的標記線，線端儘量落在平整處，避開摺痕與孔位。</li>
+        <li data-zh="按目標市場的慣例選洗滌程序：通常 30℃ 或 40℃ 常規程序、標準洗滌劑、洗三次；吊幹與轉筒烘乾分開做，因爲兩者結果可能相差 1 個百分點以上。"
+            data-en="Run the cycle the destination market expects: normally 30°C or 40°C, standard detergent, three washes. Do line drying and tumble drying as separate runs, because the results can differ by more than one percentage point."
+            data-ja="想定市場の慣行に合わせて洗濯条件を選びます。通常は30℃または40℃の標準コース、標準洗剤、3回洗濯。吊り干しとタンブラー乾燥は別々に行います。結果が1ポイント以上異なることがあるためです。"
+            data-ko="목표 시장의 관행에 맞춰 세탁 조건을 정합니다. 보통 30℃ 또는 40℃ 표준 코스, 표준 세제, 3회 세탁입니다. 걸이 건조와 텀블러 건조는 따로 진행합니다. 결과가 1%p 이상 차이 날 수 있기 때문입니다."
+            data-fr="Choisissez le cycle attendu par le marché visé : en général 30 ou 40°C, détergent standard, trois lavages. Séparez séchage à plat et séchage en tambour : les résultats peuvent différer de plus d'un point."
+            data-es="Use el ciclo que espera el mercado destino: normalmente 30 o 40 °C, detergente estándar, tres lavados. Haga secado al aire y en secadora por separado, porque pueden diferir más de un punto.">按目標市場的慣例選洗滌程序：通常 30℃ 或 40℃ 常規程序、標準洗滌劑、洗三次；吊幹與轉筒烘乾分開做，因爲兩者結果可能相差 1 個百分點以上。</li>
+        <li data-zh="洗後在同溫溼度環境下回潮靜置，再測同一基準點。縮率 =（洗前長度 − 洗後長度）÷ 洗前長度 × 100%，長向與寬向、三個樣本都要分別記錄，取最大值做設計依據。"
+            data-en="After washing, condition the pieces at the same temperature and humidity and re-measure the same datum. Shrinkage = (before minus after) divided by before, times 100. Report length and width separately for all three samples and design to the worst case."
+            data-ja="洗濯後は同じ温湿度でなじませてから同一基準点を再測定します。収縮率＝（洗濯前−洗濯後）÷洗濯前×100%。長さ方向と幅方向、3サンプルすべてを個別に記録し、最悪値を設計根拠にします。"
+            data-ko="세탁 후 같은 온습도에서 안정화한 뒤 동일 기준점을 다시 측정합니다. 수축률=(세탁 전−세탁 후)÷세탁 전×100%. 길이와 폭, 3개 샘플을 모두 개별 기록하고 최악값을 설계 근거로 삼습니다."
+            data-fr="Après lavage, conditionnez à température et humidité identiques puis remesurez le même repère. Retrait = (avant moins après) divisé par avant, fois 100. Consignez longueur et largeur pour les trois échantillons et dimensionnez sur le pire cas."
+            data-es="Tras el lavado, acondicione a la misma temperatura y humedad y vuelva a medir la misma referencia. Encogimiento = (antes menos después) entre antes, por 100. Registre largo y ancho de las tres muestras y diseñe con el peor caso.">洗後在同溫溼度環境下回潮靜置，再測同一基準點。縮率 =（洗前長度 − 洗後長度）÷ 洗前長度 × 100%，長向與寬向、三個樣本都要分別記錄，取最大值做設計依據。</li>
+      </ol>
+
+      <h2 data-zh="4. 留量設計：把洗後尺寸換成織造尺寸" data-en="4. Allowance: Turning a Washed Size Into a Weaving Size" data-ja="4. 余裕の設計：洗濯後寸法を製織寸法に換算する" data-ko="4. 여유 설계: 세탁 후 치수를 제직 치수로 환산" data-fr="4. Marge : convertir une cote lavée en dimension de tissage" data-es="4. Margen: pasar de medida lavada a medida de tejido">4. 留量設計：把洗後尺寸換成織造尺寸</h2>
+      <p data-zh="買家真正要的是「洗淨後尺寸」，而織機給的必須是「織造尺寸」。兩者的關係是除法而不是乘法：織造尺寸 = 洗淨後尺寸 ÷（1 − 縮率）。例如要求洗後 30mm、實測縮率 3%，織造尺寸應訂 30 ÷ 0.97 ≈ 30.9mm。用 30 × 1.03 = 30.9mm 在 3% 附近結果相同，但縮率到 8% 時誤差開始顯現。"
+         data-en="What the buyer wants is the washed dimension; what the loom produces is the weaving size. The relationship is a division, not a multiplication: weaving size = washed size divided by (1 minus shrinkage). If you need 30mm after washing and measured shrinkage is 3%, weave 30 divided by 0.97, about 30.9mm. Multiplying by 1.03 gives the same answer near 3%, but the error grows once shrinkage reaches 8%."
+         data-ja="買い手が求めるのは「洗濯後寸法」で、織機が作るのは「製織寸法」です。関係は掛け算ではなく割り算です。製織寸法＝洗濯後寸法÷（1−収縮率）。洗濯後30mm、実測収縮率3%なら、30÷0.97で約30.9mmを織ります。1.03を掛けても3%付近では同じですが、収縮率が8%になると誤差が現れます。"
+         data-ko="바이어가 원하는 것은 '세탁 후 치수'이고 직기가 만드는 것은 '제직 치수'입니다. 관계는 곱셈이 아니라 나눗셈입니다. 제직 치수=세탁 후 치수÷(1−수축률). 세탁 후 30mm, 실측 수축률 3%라면 30÷0.97로 약 30.9mm를 짭니다. 1.03을 곱해도 3% 근처에서는 같지만 수축률이 8%가 되면 오차가 나타납니다."
+         data-fr="L'acheteur veut une cote après lavage, le métier produit une dimension de tissage. La relation est une division, pas une multiplication : dimension de tissage = cote lavée divisée par (1 moins retrait). Pour 30 mm après lavage et un retrait mesuré de 3 %, tissez 30 divisé par 0,97, soit environ 30,9 mm. Multiplier par 1,03 donne le même résultat vers 3 %, mais l'erreur apparaît dès 8 %."
+         data-es="El comprador quiere la medida tras el lavado; el telar produce la medida de tejido. La relación es una división, no una multiplicación: medida de tejido = medida lavada entre (1 menos encogimiento). Para 30 mm tras el lavado con un encogimiento medido del 3 %, teje 30 entre 0,97, unos 30,9 mm. Multiplicar por 1,03 da lo mismo cerca del 3 %, pero el error aparece con el 8 %.">買家真正要的是「洗淨後尺寸」，而織機給的必須是「織造尺寸」。兩者的關係是除法而不是乘法：織造尺寸 = 洗淨後尺寸 ÷（1 − 縮率）。例如要求洗後 30mm、實測縮率 3%，織造尺寸應訂 30 ÷ 0.97 ≈ 30.9mm。用 30 × 1.03 = 30.9mm 在 3% 附近結果相同，但縮率到 8% 時誤差開始顯現。</p>
+      <ul>
+        <li data-zh="<strong>先測面料再定嘜：</strong>成衣面料洗後收縮 5%、嘜只縮 1%，縫上去就會起皺；嘜與面料的縮率差儘量控制在 2 個百分點以內，差得多就改用後貼或熱轉印方案。"
+            data-en="<strong>Test the fabric before fixing the label:</strong> if the garment fabric shrinks 5% and the label only 1%, sewing it on creates wrinkles. Keep the gap between label and fabric shrinkage within about two percentage points; if it is wider, switch to an applied or heat-transfer label."
+            data-ja="<strong>生地を測ってからラベルを決める：</strong>生地が5%収縮し、ラベルが1%しか縮まないと縫い付けたときにしわになります。ラベルと生地の収縮率差は2ポイント以内を目安にし、それを超える場合は後貼りや熱転写に切り替えます。"
+            data-ko="<strong>원단을 먼저 측정하고 라벨을 정합니다:</strong> 원단이 5% 수축하고 라벨이 1%만 수축하면 봉제 시 주름이 생깁니다. 라벨과 원단의 수축률 차이는 2%p 이내를 기준으로 하고, 그보다 크면 후부착이나 열전사로 전환합니다."
+            data-fr="<strong>Mesurez le tissu avant de figer le label :</strong> si le tissu se rétracte de 5 % et le label de 1 %, la couture froisse. Gardez l'écart sous deux points ; au-delà, passez à une pose rapportée ou à un transfert thermique."
+            data-es="<strong>Mida la tela antes de fijar la etiqueta:</strong> si la tela encoge un 5 % y la etiqueta un 1 %, coserla arruga. Mantenga la diferencia por debajo de dos puntos; si es mayor, pase a una etiqueta aplicada o de transferencia térmica."><strong>先測面料再定嘜：</strong>成衣面料洗後收縮 5%、嘜只縮 1%，縫上去就會起皺；嘜與面料的縮率差儘量控制在 2 個百分點以內，差得多就改用後貼或熱轉印方案。</li>
+        <li data-zh="<strong>不要把補償藏進成品尺寸：</strong>規格書上同時寫「織造尺寸」與「洗淨後尺寸」兩個數字，並註明洗滌條件。只寫一個尺寸時，供應商會按自己的慣例理解，雙方必然對不上。"
+            data-en="<strong>Never hide the compensation inside the finished dimension:</strong> state both the weaving size and the washed size in the specification, with the wash conditions. With a single number, each supplier applies its own convention and the two sides inevitably disagree."
+            data-ja="<strong>補正を完成寸法に隠さない：</strong>仕様書には「製織寸法」と「洗濯後寸法」の両方を、洗濯条件とともに記載します。1つしか書かないと、サプライヤーは自社の慣例で解釈し、必ず食い違います。"
+            data-ko="<strong>보정을 완성 치수에 숨기지 않습니다:</strong> 사양서에 '제직 치수'와 '세탁 후 치수'를 세탁 조건과 함께 모두 기재합니다. 하나만 적으면 공급사가 자체 관행으로 해석해 반드시 어긋납니다."
+            data-fr="<strong>Ne dissimulez jamais la compensation dans la cote finie :</strong> indiquez la dimension de tissage et la cote après lavage, avec les conditions de lavage. Avec un seul chiffre, chaque fournisseur applique sa convention et l'écart est inévitable."
+            data-es="<strong>Nunca esconda la compensación en la cota final:</strong> indique la medida de tejido y la medida tras el lavado, con las condiciones de lavado. Con un solo número, cada proveedor aplica su convención y el desacuerdo es seguro."><strong>不要把補償藏進成品尺寸：</strong>規格書上同時寫「織造尺寸」與「洗淨後尺寸」兩個數字，並註明洗滌條件。只寫一個尺寸時，供應商會按自己的慣例理解，雙方必然對不上。</li>
+        <li data-zh="<strong>折位與孔位要單獨留量：</strong>對摺或包邊處的局部收縮會疊加在整體縮率上，孔位與字位相對中心的位置也要按縮率換算，否則洗後出現「字偏左、孔偏上」的觀感問題。"
+            data-en="<strong>Allow separately for folds and holes:</strong> local contraction at a fold or a turned edge adds to the overall rate, and the position of holes and print relative to the centre has to be converted too — otherwise the washed label reads as off-centre, with the hole sitting high."
+            data-ja="<strong>折り位置と穴位置は別に余裕を取る：</strong>折り返しや包み部分の局部的な収縮は全体の収縮率に加算されます。穴位置や印字位置の中心からの距離も換算しないと、洗濯後に「文字が左寄り、穴が上寄り」に見えます。"
+            data-ko="<strong>접힘과 타공 위치는 따로 여유를 둡니다:</strong> 접기나 말아 넣기 부분의 국부 수축은 전체 수축률에 더해집니다. 타공과 인쇄 위치의 중심 대비 거리도 환산하지 않으면 세탁 후 '글자가 왼쪽, 구멍이 위쪽'으로 보입니다."
+            data-fr="<strong>Prévoyez des marges séparées pour plis et trous :</strong> la contraction locale d'un pli ou d'un bord rabattu s'ajoute au taux global, et la position des trous et de l'impression par rapport au centre doit aussi être convertie, faute de quoi le label paraît décentré après lavage."
+            data-es="<strong>Prevea márgenes separados para pliegues y taladros:</strong> la contracción local de un pliegue o dobladillo se suma al valor global, y la posición de taladros e impresión respecto al centro también hay que convertirla; si no, tras el lavado la etiqueta parece descentrada."><strong>折位與孔位要單獨留量：</strong>對摺或包邊處的局部收縮會疊加在整體縮率上，孔位與字位相對中心的位置也要按縮率換算，否則洗後出現「字偏左、孔偏上」的觀感問題。</li>
+      </ul>
+
+      <h2 data-zh="5. 主嘜與洗水標同件不同縮率：起皺與鼓包從哪來" data-en="5. Neck Label and Care Label on the Same Garment: Why It Creases" data-ja="5. 同じ製品内での主ラベルと洗濯表示ラベルの収縮差：しわと浮きの原因" data-ko="5. 같은 제품의 메인 라벨과 세탁 표시 라벨 수축 차이: 주름과 들뜸의 원인" data-fr="5. Label de col et étiquette d'entretien sur la même pièce : d'où viennent les plis" data-es="5. Etiqueta de cuello y de cuidado en la misma prenda: de dónde salen las arrugas">5. 主嘜與洗水標同件不同縮率：起皺與鼓包從哪來</h2>
+      <p data-zh="常見的客訴是「洗完領口起皺、洗水標鼓起來」，檢驗時卻完全看不出來。原因往往是兩種嘜選了不同材質與不同後整理，縮率差 2–3 個百分點；縫在同一段縫線上，洗後一個縮、一個不縮，多餘的量只能以褶皺的形式出現。"
+         data-en="A frequent complaint is that the neckline wrinkles and the care label bubbles after washing, yet nothing shows at inspection. The cause is usually two labels in different materials with different finishes, shrinking two or three percentage points apart. Sewn into the same seam, one contracts and the other does not, and the excess has nowhere to go but into a crease."
+         data-ja="よくあるクレームは「洗濯後に衿元がしわになり、洗濯表示ラベルが浮く」というものです。検品時には見えません。原因は多くの場合、2種類のラベルが異なる素材と後加工で、収縮率が2〜3ポイント違うことです。同じ縫い目に縫い付けられているため、洗濯後に一方だけが縮み、余った分がしわとして現れます。"
+         data-ko="흔한 클레임은 '세탁 후 목선이 주름지고 세탁 표시 라벨이 부풀어 오른다'는 것입니다. 검수 시에는 보이지 않습니다. 원인은 대개 두 라벨이 다른 소재와 후가공으로 수축률이 2~3%p 차이 나기 때문입니다. 같은 봉제선에 붙어 있어 세탁 후 한쪽만 줄고 남는 분량이 주름으로 나타납니다."
+         data-fr="Une réclamation fréquente : l'encolure se froisse et l'étiquette d'entretien cloque après lavage, alors que rien n'apparaît au contrôle. La cause est souvent deux étiquettes de matières et de finitions différentes, avec deux ou trois points d'écart de retrait. Cousues dans la même couture, l'une se rétracte et l'autre non : l'excédent se transforme en pli."
+         data-es="Una queja habitual: el cuello se arruga y la etiqueta de cuidado se abomba tras el lavado, aunque en el control no se ve nada. La causa suele ser dos etiquetas de materiales y acabados distintos, con dos o tres puntos de diferencia de encogimiento. Cosidas en la misma costura, una encoge y la otra no, y el sobrante solo puede ir a una arruga.">常見的客訴是「洗完領口起皺、洗水標鼓起來」，檢驗時卻完全看不出來。原因往往是兩種嘜選了不同材質與不同後整理，縮率差 2–3 個百分點；縫在同一段縫線上，洗後一個縮、一個不縮，多餘的量只能以褶皺的形式出現。</p>
+      <ul>
+        <li data-zh="同款產品的主嘜與洗水標儘量選同一材質系列、同一預縮工藝，把縮率差壓到 1.5 個百分點以內。"
+            data-en="Choose the same material family and the same pre-shrinking process for the neck label and care label of one style, keeping the difference within about 1.5 percentage points."
+            data-ja="同じ型の主ラベルと洗濯表示ラベルは、できるだけ同じ素材系列・同じ予備収縮加工を選び、収縮率差を1.5ポイント以内に抑えます。"
+            data-ko="같은 스타일의 메인 라벨과 세탁 표시 라벨은 가능한 같은 소재 계열과 같은 예비 수축 공정을 선택해 수축률 차이를 1.5%p 이내로 줄입니다."
+            data-fr="Pour un même modèle, choisissez la même famille de matière et le même pré-rétrécissement pour le label de col et l'étiquette d'entretien, en gardant moins de 1,5 point d'écart."
+            data-es="Para un mismo modelo, elija la misma familia de material y el mismo preencogimiento en la etiqueta de cuello y en la de cuidado, con menos de 1,5 puntos de diferencia.">同款產品的主嘜與洗水標儘量選同一材質系列、同一預縮工藝，把縮率差壓到 1.5 個百分點以內。</li>
+        <li data-zh="縫製時給洗水標留一點活動餘量：不要整條邊密密包縫到底，中間留 5–8mm 的自由段，或改用單點固定，讓兩端可以各自活動。"
+            data-en="Leave the care label a little freedom in sewing: avoid overlocking the entire edge with dense stitches, keep a 5–8mm free run in the middle, or secure it at a single point so both ends can move."
+            data-ja="縫製時に洗濯表示ラベルへ少し余裕を持たせます。辺全体を細かくかがり縫いせず、中央に5〜8mmの自由部分を残すか、1点留めにして両端が動けるようにします。"
+            data-ko="봉제 시 세탁 표시 라벨에 약간의 여유를 둡니다. 가장자리를 촘촘히 오버록으로 전부 고정하지 말고 가운데에 5~8mm 자유 구간을 두거나 한 점 고정으로 양끝이 움직이게 합니다."
+            data-fr="Laissez un peu de liberté à l'étiquette d'entretien : évitez le surjet serré sur toute la longueur, gardez 5 à 8 mm libres au milieu, ou fixez-la en un seul point pour que les extrémités bougent."
+            data-es="Deje algo de libertad al coser la etiqueta de cuidado: evite rematar todo el borde con puntada densa, deje 5–8 mm libres en el centro o fíjela en un solo punto para que los extremos se muevan.">縫製時給洗水標留一點活動餘量：不要整條邊密密包縫到底，中間留 5–8mm 的自由段，或改用單點固定，讓兩端可以各自活動。</li>
+        <li data-zh="信息量大的洗水標優先選織物基材而不是塗層紙感材質，前者與織嘜的縮率更接近，褶皺投訴會明顯下降。"
+            data-en="For care labels with a lot of information, prefer a textile base over a coated paper-like substrate — it shrinks closer to the woven label and crease complaints drop sharply."
+            data-ja="情報量の多い洗濯表示ラベルは、コーティングされた紙状素材より織物基材を優先します。織りラベルに収縮率が近く、しわのクレームが明確に減ります。"
+            data-ko="정보량이 많은 세탁 표시 라벨은 코팅된 종이 질감 소재보다 직물 기재를 우선합니다. 직조 라벨에 수축률이 가까워 주름 클레임이 뚜렷하게 줄어듭니다."
+            data-fr="Pour une étiquette d'entretien riche en informations, préférez un support textile à un support enduit aspect papier : son retrait est plus proche du label tissé et les réclamations de plis chutent nettement."
+            data-es="Para etiquetas de cuidado con mucha información, prefiera una base textil a un soporte estucado tipo papel: encoge más cerca de la etiqueta tejida y las quejas por arrugas bajan claramente.">信息量大的洗水標優先選織物基材而不是塗層紙感材質，前者與織嘜的縮率更接近，褶皺投訴會明顯下降。</li>
+      </ul>
+
+      <h2 data-zh="6. 下單前寫進規格書的六項" data-en="6. Six Clauses to Write Into the Specification" data-ja="6. 発注前に仕様書へ書く6項目" data-ko="6. 발주 전 사양서에 넣을 여섯 항목" data-fr="6. Six clauses à inscrire au cahier des charges" data-es="6. Seis cláusulas para la ficha técnica">6. 下單前寫進規格書的六項</h2>
+      <table>
+        <tr><th data-zh="項目" data-en="Item" data-ja="項目" data-ko="항목" data-fr="Élément" data-es="Concepto">項目</th><th data-zh="建議寫法" data-en="What to write" data-ja="記載例" data-ko="기재 예" data-fr="Formulation" data-es="Redacción">建議寫法</th></tr>
+        <tr><td data-zh="尺寸口徑" data-en="Dimension basis" data-ja="寸法の基準" data-ko="치수 기준" data-fr="Base dimensionnelle" data-es="Base dimensional">尺寸口徑</td><td data-zh="分別標註織造尺寸與洗淨後尺寸，如 31mm / 30mm ±1mm" data-en="State weaving size and washed size separately, e.g. 31mm / 30mm ±1mm" data-ja="製織寸法と洗濯後寸法を分けて記載（例：31mm／30mm ±1mm）" data-ko="제직 치수와 세탁 후 치수를 따로 기재 (예: 31mm/30mm ±1mm)" data-fr="Indiquez dimension de tissage et cote lavée, ex. 31 mm / 30 mm ±1 mm" data-es="Indique tejido y medida lavada, p. ej. 31 mm / 30 mm ±1 mm">分別標註織造尺寸與洗淨後尺寸，如 31mm / 30mm ±1mm</td></tr>
+        <tr><td data-zh="允差方向" data-en="Tolerance direction" data-ja="公差の方向" data-ko="공차 방향" data-fr="Sens de tolérance" data-es="Sentido de tolerancia">允差方向</td><td data-zh="註明是否單邊：如寬向只允許負偏差，避免縫製時溢出" data-en="State whether it is one-sided, e.g. width may only run minus, so it cannot overflow when sewn" data-ja="片側公差かどうかを明記（例：幅はマイナス側のみ、縫製時の張り出しを防ぐ）" data-ko="단방향 공차 여부를 명기 (예: 폭은 마이너스만 허용해 봉제 시 삐져나오지 않게)" data-fr="Précisez si la tolérance est unilatérale, ex. largeur en moins seulement, pour éviter le débord à la couture" data-es="Indique si es unilateral, p. ej. ancho solo en menos, para que no rebase al coser">註明是否單邊：如寬向只允許負偏差，避免縫製時溢出</td></tr>
+        <tr><td data-zh="洗後要求" data-en="After-wash requirement" data-ja="洗濯後の要件" data-ko="세탁 후 요건" data-fr="Exigence après lavage" data-es="Requisito tras lavado">洗後要求</td><td data-zh="寫出洗滌條件與允許縮率上限，如 30℃ 三次洗、縮率 ≤3%" data-en="Give the wash conditions and the shrinkage ceiling, e.g. three washes at 30°C, shrinkage 3% or less" data-ja="洗濯条件と許容収縮率の上限を記載（例：30℃3回洗濯、収縮率3%以下）" data-ko="세탁 조건과 허용 수축률 상한 기재 (예: 30℃ 3회 세탁, 수축률 3% 이하)" data-fr="Indiquez les conditions de lavage et le plafond de retrait, ex. trois lavages à 30 °C, retrait ≤ 3 %" data-es="Indique condiciones de lavado y tope de encogimiento, p. ej. tres lavados a 30 °C, encogimiento ≤ 3 %">寫出洗滌條件與允許縮率上限，如 30℃ 三次洗、縮率 ≤3%</td></tr>
+        <tr><td data-zh="測量方法" data-en="Measurement method" data-ja="測定方法" data-ko="측정 방법" data-fr="Méthode de mesure" data-es="Método de medición">測量方法</td><td data-zh="引用 ISO 6330 或 AATCC 135，註明乾燥方式與基準點畫法" data-en="Cite ISO 6330 or AATCC 135, and state the drying method and how the datum is marked" data-ja="ISO 6330またはAATCC 135を引用し、乾燥方法と基準点の取り方を明記" data-ko="ISO 6330 또는 AATCC 135를 인용하고 건조 방식과 기준점 표시법 명기" data-fr="Citez l'ISO 6330 ou l'AATCC 135, en précisant le séchage et le tracé du repère" data-es="Cite ISO 6330 o AATCC 135, con el secado y el trazado de la referencia">引用 ISO 6330 或 AATCC 135，註明乾燥方式與基準點畫法</td></tr>
+        <tr><td data-zh="面料匹配" data-en="Fabric match" data-ja="生地との整合" data-ko="원단 매칭" data-fr="Accord avec le tissu" data-es="Concordancia con la tela">面料匹配</td><td data-zh="提供面料小樣與其洗後縮率，要求嘜的縮率差 ≤2 個百分點" data-en="Send a fabric swatch with its washed shrinkage and require the label to stay within two points" data-ja="生地見本とその洗濯後収縮率を提示し、ラベルの収縮率差を2ポイント以内とする" data-ko="원단 샘플과 세탁 후 수축률을 제공하고 라벨 수축률 차이를 2%p 이내로 요구" data-fr="Fournissez un échantillon de tissu avec son retrait et exigez moins de deux points d'écart" data-es="Facilite una muestra de tela con su encogimiento y exija menos de dos puntos de diferencia">提供面料小樣與其洗後縮率，要求嘜的縮率差 ≤2 個百分點</td></tr>
+        <tr><td data-zh="驗收口徑" data-en="Inspection rule" data-ja="検収の基準" data-ko="검수 기준" data-fr="Règle de réception" data-es="Criterio de recepción">驗收口徑</td><td data-zh="明確定量抽檢數量、超差處理方式（讓步接收、返工或補貨）與留樣期" data-en="Fix the sample size, how out-of-tolerance lots are handled (concession, rework or replacement) and the retention period" data-ja="抜き取り数、外れ品の扱い（特採・手直し・補充）、保存見本の期間を明記" data-ko="샘플 수량, 초과품 처리(조건부 수용·재작업·보충), 보관 샘플 기간을 명기" data-fr="Fixez l'échantillon, le traitement des lots hors tolérance (dérogation, reprise, remplacement) et la durée des témoins" data-es="Fije el tamaño de muestra, el tratamiento de lotes fuera de tolerancia (concesión, retrabajo o reposición) y la conservación de testigos">明確定量抽檢數量、超差處理方式（讓步接收、返工或補貨）與留樣期</td></tr>
+      </table>
+
+      <div class="callout" data-zh="<strong>💡 提示：</strong>縮率問題幾乎都能在打樣階段暴露，前提是把洗滌測試當真做。把面料小樣、目標洗滌條件與洗標語言一起發給我們，我們會在打樣時同步做洗前洗後對比，把織造尺寸與洗淨後尺寸兩個數字一起寫進確認單。"
+           data-en="<strong>💡 Tip:</strong> shrinkage problems almost always show up at sampling — provided the wash test is actually run. Send the fabric swatch, the intended wash conditions and your care-label languages, and we will run the before-and-after comparison during sampling and put both the weaving size and the washed size into the confirmation sheet."
+           data-ja="<strong>💡 ヒント：</strong>収縮の問題は、洗濯試験を実際に行えばほぼサンプル段階で判明します。生地見本、想定する洗濯条件、洗濯表示の言語を当社にお送りください。サンプル作成時に洗濯前後の比較を行い、製織寸法と洗濯後寸法の両方を確認書に記載します。"
+           data-ko="<strong>💡 팁:</strong> 수축 문제는 세탁 시험을 실제로 하면 대부분 샘플 단계에서 드러납니다. 원단 샘플, 예상 세탁 조건, 세탁 표시 언어를 보내주시면 샘플 제작 시 세탁 전후 비교를 진행하고 제직 치수와 세탁 후 치수를 모두 확인서에 기재합니다."
+           data-fr="<strong>💡 Conseil :</strong> les problèmes de retrait apparaissent presque toujours à l'échantillonnage — à condition de faire réellement le test de lavage. Envoyez l'échantillon de tissu, les conditions de lavage prévues et vos langues d'étiquette : nous ferons la comparaison avant et après lavage et inscrirons les deux dimensions sur la fiche de confirmation."
+           data-es="<strong>💡 Consejo:</strong> los problemas de encogimiento casi siempre aparecen en la muestra, siempre que el ensayo de lavado se haga de verdad. Envíe la muestra de tela, las condiciones de lavado previstas y los idiomas de la etiqueta: haremos la comparación antes y después y pondremos ambas medidas en la hoja de confirmación."><strong>💡 提示：</strong>縮率問題幾乎都能在打樣階段暴露，前提是把洗滌測試當真做。把面料小樣、目標洗滌條件與洗標語言一起發給我們，我們會在打樣時同步做洗前洗後對比，把織造尺寸與洗淨後尺寸兩個數字一起寫進確認單。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="trim-measurement-tolerance-guide.html" data-zh="輔料尺寸測量與公差指南：量什麼、用什麼量具、允差給多少" data-en="Trims Measurement and Tolerance: What to Measure and With What" data-ja="副資材の寸法測定と公差ガイド：何を、どの器具で測るか" data-ko="부자재 치수 측정과 공차 가이드: 무엇을, 어떤 기구로" data-fr="Mesure et tolérance des accessoires : quoi mesurer et avec quoi" data-es="Medición y tolerancia de accesorios: qué medir y con qué">輔料尺寸測量與公差指南：量什麼、用什麼量具、允差給多少</a></li>
+        <li><a href="garment-trims-fabric-compatibility-guide.html" data-zh="輔料與面料配伍指南：縮率、色牢度與洗護匹配" data-en="Trims and Fabric Compatibility: Shrinkage, Colour and Care" data-ja="副資材と生地の適合ガイド：収縮率・色堅牢度・洗濯条件" data-ko="부자재와 원단 적합성 가이드: 수축률·색견뢰도·세탁 조건" data-fr="Compatibilité accessoires et tissu : retrait, couleur et entretien" data-es="Compatibilidad de accesorios y tejido: encogimiento, color y cuidado">輔料與面料配伍指南：縮率、色牢度與洗護匹配</a></li>
+        <li><a href="woven-label-folding-finishing.html" data-zh="織嘜折邊與後整理指南：平切、熱切與摺疊方式怎麼選" data-en="Woven Label Folding and Finishing: Cut, Hot-Cut and Fold Options" data-ja="織りラベルの折りと後加工：平カット・熱カット・折りの選び方" data-ko="직조 라벨 접기와 후가공: 평절단·열절단·접힘 선택" data-fr="Pliage et finition des labels tissés : coupe, coupe à chaud, plis" data-es="Plegado y acabado de etiquetas tejidas: corte, corte en caliente y pliegues">織嘜折邊與後整理指南：平切、熱切與摺疊方式怎麼選</a></li>
+        <li><a href="care-label-wash-durability.html" data-zh="洗水標耐洗性指南：印刷牢度與測試怎麼看" data-en="Care Label Wash Durability: Print Fastness and Testing" data-ja="洗濯表示ラベルの耐洗濯性ガイド：印刷堅牢度と試験の見方" data-ko="세탁 표시 라벨 내구성 가이드: 인쇄 견뢰도와 시험 확인법" data-fr="Tenue au lavage des étiquettes d'entretien : solidité et tests" data-es="Resistencia al lavado de la etiqueta de cuidado: solidez y ensayos">洗水標耐洗性指南：印刷牢度與測試怎麼看</a></li>
+        <li><a href="garment-label-sewing-thread-guide.html" data-zh="服裝標籤縫製用線指南：線號、張力與縮率配合" data-en="Garment Label Sewing Thread: Counts, Tension and Shrinkage" data-ja="衣料ラベルの縫い糸ガイド：番手・張力・収縮率の整合" data-ko="의류 라벨 봉제사 가이드: 번수·장력·수축률" data-fr="Fil de couture pour étiquettes : titres, tension et retrait" data-es="Hilo de cosido de etiquetas: títulos, tensión y encogimiento">服裝標籤縫製用線指南：線號、張力與縮率配合</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="手上有洗後縮水或起皺的樣衣、嘜頭？把面料小樣、洗滌條件與目標尺寸發給我們，我們按織造尺寸與洗淨後尺寸兩個口徑回一份確認單，再把縮率數據寫進打樣報告，3–7 天寄樣。"
+           data-en="Have a garment or label that shrank or creased after washing? Send the fabric swatch, wash conditions and target dimensions. We reply with a confirmation sheet in both weaving size and washed size, then put the shrinkage data into the sampling report, with samples in 3 to 7 days."
+           data-ja="洗濯後の収縮やしわが出た製品・ラベルをお持ちですか。生地見本、洗濯条件、目標寸法をお送りください。製織寸法と洗濯後寸法の両方で確認書を作成し、収縮率データをサンプル報告に記載します。サンプルは3〜7日で発送します。"
+           data-ko="세탁 후 수축이나 주름이 생긴 제품이나 라벨이 있으신가요? 원단 샘플, 세탁 조건, 목표 치수를 보내주십시오. 제직 치수와 세탁 후 치수 두 가지로 확인서를 작성하고 수축률 데이터를 샘플 보고서에 넣어 드립니다. 샘플은 3~7일 내 발송합니다."
+           data-fr="Un vêtement ou un label qui se rétracte ou se froisse au lavage ? Envoyez l'échantillon de tissu, les conditions de lavage et les dimensions cibles. Nous répondons par une fiche en dimension de tissage et en cote lavée, puis intégrons les données de retrait au rapport d'échantillon. Échantillons en 3 à 7 jours."
+           data-es="¿Una prenda o etiqueta que encoge o se arruga al lavar? Envíe la muestra de tela, las condiciones de lavado y las medidas objetivo. Respondemos con una hoja en medida de tejido y medida lavada, e incluimos los datos de encogimiento en el informe de muestra. Muestras en 3 a 7 días.">手上有洗後縮水或起皺的樣衣、嘜頭？把面料小樣、洗滌條件與目標尺寸發給我們，我們按織造尺寸與洗淨後尺寸兩個口徑回一份確認單，再把縮率數據寫進打樣報告，3–7 天寄樣。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取縮率測試與報價 →" data-en="Request a shrinkage test and quote →" data-ja="収縮試験とお見積りを依頼 →" data-ko="수축 시험과 견적 요청 →" data-fr="Demander un test de retrait et un devis →" data-es="Solicitar ensayo de encogimiento y presupuesto →">索取縮率測試與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
