@@ -17,7 +17,7 @@ for lang, d in LANGS:
             links.extend([x.strip() for x in L.split(",") if x.strip()])
         miss = []
         for L in links:
-            if L.startswith(("http", "mailto", "tel", "data:")):
+            if L.startswith(("http", "mailto", "tel", "data:", "<")):
                 continue
             target = os.path.normpath(os.path.join(d, L))
             if not os.path.exists(target):
