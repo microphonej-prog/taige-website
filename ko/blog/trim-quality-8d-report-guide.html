@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 품질 이상 대응 가이드: 봉쇄·8D 보고서·시정 조치 추적 | TAGE</title>
+<meta name="description" content="부자재 품질 이상 대응 가이드. 이상 발견 후 조치 순서(격리·실물 파악·통보·증거 확보·납기 만회), 8D 여덟 단계를 부자재에 적용하는 방법, 검증 가능한 문제 기술 작성법, 5Why와 특성 요인도로 확인할 대표적 근본 원인, 시정 조치를 데이터로 검증해 종결하는 기준을 정리합니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-quality-8d-report-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-quality-8d-report-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料質量異常處理指南：圍堵、8D 報告與整改跟蹤",
+     "item": "https://taigetag.com/blog/trim-quality-8d-report-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料質量異常處理指南：圍堵、8D 報告與整改跟蹤",
+   "url": "https://taigetag.com/blog/trim-quality-8d-report-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-quality-8d-report-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>품질 이상과 시정</span></div>
+      <h1>부자재 품질 이상 대응 가이드: 봉쇄, 8D 보고서, 시정 추적</h1>
+      <p>TAGE 패키징 · 2026년 9월 30일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 문제에서 정말 비싼 것은 보상금이 아니라 원인을 모른 채 다음 로트에서 재발하는 일입니다. 행택의 오타는 전체 재인쇄, 색사 로트 변경은 색상 이탈, 비닐백 두께 부족은 포장 파손으로 이어집니다. 필요한 것은 사과 메일이 아니라 검증하고 종결하고 재발을 막을 수 있는 프로세스입니다.</p>
+
+      <h2>1. 이상 발견 후 72시간: 순서가 중요합니다</h2>
+      <ol>
+        <li>먼저 격리하고 사용을 중단합니다. 의심 로트를 분리해 표시하고 재공품과 입고 재고도 동시에 동결합니다. 격리 전에 고객이나 공급사에 알리면 절반이 이미 사용될 수 있습니다.</li>
+        <li>다음으로 실물 파악과 증거 기록입니다. 영향 로트, 수량, 어떤 주문으로 흘러갔는지 정리하고 동일한 광원, 각도, 배경에서 촬영하며 사진에 자나 색상 카드를 넣어 결함 위치와 비율을 수치로 남깁니다.</li>
+        <li>그다음 통보입니다. 사실, 영향 범위, 필요한 지원을 한 번에 정리해 공급사에 보내고 며칠간 조각조각 연락하지 않습니다. 내부 관련 부서, 특히 생산 계획 중인 현장에도 공유합니다.</li>
+        <li>마지막으로 납기를 평가합니다. 선별·재작업, 긴급 추가 생산, 일정 변경 세 가지 중 비용이 가장 작은 길을 고르고 결정 시한을 명확히 정해 출하 직전까지 끌지 않습니다.</li>
+      </ol>
+
+      <h2>2. 부자재에 적용한 8D 여덟 단계</h2>
+      <p>8D는 고객용 형식 문서가 아니라 한 건의 이상을 여덟 단계 산출물로 나누는 틀입니다. 핵심은 각 단계가 확인 가능한 산출물을 내는 것이며 &#x27;개선했습니다&#x27; 한마디로 끝내지 않는 것입니다.</p>
+      <table>
+        <tr><th>단계</th><th>산출물</th><th>부자재 적용 요점</th></tr>
+        <tr><td>D1 팀</td><td>명단, 책임자, 일정</td><td>구매, 품질, 생산에 공급사 지정 담당자를 더하고 사안별 창구를 일원화</td></tr>
+        <tr><td>D2 문제 기술</td><td>검증 가능한 정량 기술</td><td>품목, 로트 번호, 결함 위치와 비율, 치수나 색차 수치</td></tr>
+        <tr><td>D3 봉쇄</td><td>격리와 선별 계획</td><td>창고, 재공품, 출하 완료 세 곳을 모두 포함하고 선별 비율과 판정 기준을 정함</td></tr>
+        <tr><td>D4 근본 원인</td><td>실측으로 입증된 진짜 원인</td><td>대조 시험으로 검증: 자재 로트, 금형, 교대조를 하나씩 바꿔 소량 비교</td></tr>
+        <tr><td>D5 항구 대책</td><td>조치, 책임자, 완료일</td><td>작업 지침서 개정, 공정 자체 검사 추가, 종이·색사 공급원 고정, 지그 추가</td></tr>
+        <tr><td>D6 효과 검증</td><td>효과를 입증하는 데이터</td><td>연속 세 로트 기록, 보관 견본 재검사 결과, 불량률 전후 비교</td></tr>
+        <tr><td>D7 재발 방지</td><td>기준과 공정 업데이트</td><td>수입 검사 기준, 도면 버전, 변경 통지 합의에 반영해 담당자가 바뀌어도 재발하지 않게 함</td></tr>
+        <tr><td>D8 종결</td><td>종결 보고서와 경험 보관</td><td>양측이 서명해 종결하고 교훈을 다음 견적 사양서에 반영</td></tr>
+      </table>
+
+      <h2>3. 검증을 견디는 문제 기술 작성법</h2>
+      <p>&#x27;색이 다르다&#x27;, &#x27;치수가 어긋난다&#x27; 같은 기술은 논의를 평행선으로 만듭니다. 검증 가능한 기술에는 다섯 요소가 필요합니다. 어느 품목과 로트인지, 어느 위치인지, 어느 정도 비율인지, 편차의 구체적 수치, 어느 기준과 비교했는지입니다.</p>
+      <ul>
+        <li>키워드가 아니라 완전한 문장으로 씁니다. &#x27;스타일 X 직조 라벨, 로트 A123, 중앙 기준 약 1.5mm 이탈, 200장 표본 중 23장 발생, 봉인 견본 S-04 대비 허용치 초과&#x27;처럼 적습니다.</li>
+        <li>사진과 수치를 함께 제시합니다. 사진은 위치를, 수치는 비율과 정도를 전달합니다. 사진만 있으면 &#x27;잘 모르겠다&#x27;는 답이 오고, 수치만 있으면 재현할 수 없습니다.</li>
+        <li>판정 기준을 명시합니다. 봉인 견본인지, 도면인지, 업계 관행인지, 그리고 적용한 검사 기준과 표본 수입니다. 이것이 없으면 같은 로트에서 두 가지 결론이 나옵니다.</li>
+      </ul>
+
+      <h2>4. 근본 원인 분석: 세 가지 도구와 흔한 방향</h2>
+      <p>부자재 이상의 원인은 대개 정해진 몇 방향에 있으며, 적절한 도구를 쓰면 &#x27;추측&#x27;이 &#x27;조사&#x27;로 바뀝니다.</p>
+      <ul>
+        <li><strong>5Why:</strong> 현상에 대해 변경 가능한 파라미터에 도달할 때까지 계속 묻습니다. &#x27;작업자 부주의&#x27;에서 멈추지 말고 공정이 왜 그것을 허용했는지 묻습니다.</li>
+        <li><strong>특성 요인도:</strong> 사람, 설비, 자재, 방법, 환경, 측정 여섯 방향으로 후보를 나열하고 소거한 뒤 집중합니다. 익숙한 항목만 보는 것을 피하기 위함입니다.</li>
+        <li><strong>양품 로트와 불량 로트 비교:</strong> 기록을 나란히 놓습니다. 색사·종이 로트, 잉크·접착제 조건, 금형 사용 횟수, 설비와 교대조, 보관 환경까지 비교하면 차이가 바로 드러납니다.</li>
+      </ul>
+
+      <h2>5. 시정 검증과 종결: 약속이 아니라 데이터로</h2>
+      <ol>
+        <li>검증 로트와 지표(불량률, 색차, 치수 편차)를 시정 통지서에서 미리 정해 &#x27;효과가 있었는지&#x27;를 나중에 다시 다투지 않게 합니다.</li>
+        <li>보관 견본 재검사: 시정 전후 실물을 각각 한 세트 보관하고 동일 조건에서 재검사합니다. 실물 비교가 어떤 보고서보다 직접적입니다.</li>
+        <li>서면으로 종결하고 기준에 반영합니다. 양측 서명 후 새로운 판정 기준을 수입 검사 기준과 도면 버전에 반영해야 해당 로트가 아니라 문제 자체가 끝납니다.</li>
+      </ol>
+
+      <div class="callout"><strong>💡 팁:</strong> 8D를 서식 채우기로 쓰면 가치는 거의 없고, 현장 조사와 기준 업데이트로 운영하면 가치가 생깁니다. 공급사가 방문할 수 없다면 양품 로트와 불량 로트의 파라미터를 각각 한 번씩 재현하게 해 두 데이터를 나란히 놓으십시오. 대부분의 부자재 이상은 이 비교표에서 드러납니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-quality-inspection.html">부자재 품질 검사 가이드: 행택·직조 라벨·세탁 표시 라벨 검품 요점</a></li>
+        <li><a href="garment-trims-claims-liability-guide.html">부자재 품질 클레임 가이드: 책임 판단과 손실 산정</a></li>
+        <li><a href="trim-pre-production-sample-guide.html">생산 전 샘플(PP)과 초물 승인 가이드: 양산이 샘플과 다른 이유</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>부자재 이상의 원인을 함께 규명해야 한다면 로트 번호, 결함 사진, 검사 기록을 보내주십시오. 먼저 봉쇄와 실물 비교를 진행하고 서면 원인 분석과 시정 계획을 제출하며, 필요 시 납기를 지키기 위한 추가 생산을 배치합니다.</p>
+        <a class="cta-btn" href="../contact.html">품질 이상 지원 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

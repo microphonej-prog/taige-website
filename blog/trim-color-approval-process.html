@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料顏色批覈流程指南：批色單、對色燈箱與批次放行 | TAGE" data-en="Trims Colour Approval Process: Shade Card, Light Box, Batch Release | TAGE" data-ja="副資材の色承認プロセス：色番確認・色評価光源・ロット放行 | TAGE" data-ko="부자재 색상 승인 프로세스: 색상 번호·검사 광원·로트 출하 승인 | TAGE" data-fr="Validation des couleurs d'accessoires : référence, cabine lumière, libération de lot | TAGE" data-es="Aprobación de color de accesorios: referencia, cabina de luz y liberación de lote | TAGE">服裝輔料顏色批覈流程指南：批色單、對色燈箱與批次放行 | TAGE</title>
+<meta name="description" data-zh="輔料顏色批覈不是看一眼像不像，而是把判斷變成可存檔的證據。本文講清批覈要的三份文件、對色時最易出錯的光源與背景條件、ΔE 與目視怎麼配合、不同材質允差爲何不能一刀切，以及批次放行怎麼籤、超差怎麼辦。來自東莞泰閣包裝。"
+      data-en="How trims colour approval really works: the three documents to keep, light box and background conditions, ΔE versus visual judgement, and batch release notes." data-ja="副資材の色承認プロセスの解説。押さえるべき3つの書類（色番確認書・色見本・初回封入見本）、色評価の光源と背景条件、ΔEと目視の併用、素材別に許容差を変える理由、ロット放行書の記載事項、外れた場合の特別採用の手順までを整理します。東莞泰閣包装。" data-ko="부자재 색상 승인 프로세스 안내. 반드시 남길 세 가지 서류(색상 확인서·색상 견본·초물 봉인 견본), 색 평가 시 광원과 배경 조건, ΔE 수치와 육안 판정의 병행, 소재별 허용치를 달리해야 하는 이유, 로트 출하 승인서 기재 사항, 초과 시 특채 절차까지 정리합니다. 둥관 TAGE 패키징."
+      data-fr="Comment valider une couleur d'accessoire : les trois documents à conserver, les conditions de cabine lumière, ΔE et jugement visuel, et la libération de lot."
+      data-es="Cómo aprobar el color de un accesorio: los tres documentos a conservar, condiciones de cabina de luz, ΔE frente a la vista y liberación de lote."
+      content="輔料顏色批覈不是看一眼像不像，而是把判斷變成可存檔的證據。本文講清批覈要的三份文件、對色時最易出錯的光源與背景條件、ΔE 與目視怎麼配合、不同材質允差爲何不能一刀切，以及批次放行怎麼籤、超差怎麼辦。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-color-approval-process.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-color-approval-process.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料顏色批覈與放行流程：從色卡確認單到批次放行",
+     "item": "https://taigetag.com/blog/trim-color-approval-process.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料顏色批覈與放行流程：從色卡確認單到批次放行",
+   "url": "https://taigetag.com/blog/trim-color-approval-process.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-color-approval-process.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="顏色批覈與放行" data-en="Colour Approval" data-ja="色承認と放行" data-ko="색상 승인과 출하" data-fr="Validation couleur" data-es="Aprobación de color">顏色批覈與放行</span></div>
+      <h1 data-zh="服裝輔料顏色批覈與放行流程：從色卡確認單到批次放行" data-en="Trims Colour Approval Process: From Shade Card to Batch Release" data-ja="副資材の色承認と放行プロセス：色番確認書からロット放行まで" data-ko="부자재 색상 승인과 출하 프로세스: 색상 확인서부터 로트 승인까지" data-fr="Processus de validation couleur : de la fiche de référence à la libération du lot" data-es="Proceso de aprobación de color: de la ficha de referencia a la liberación del lote">服裝輔料顏色批覈與放行流程：從色卡確認單到批次放行</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年9月30日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated September 30, 2026" data-ja="泰閣包装 · 2026年9月30日更新" data-ko="TAGE 패키징 · 2026년 9월 30일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 30 septembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 30 de septiembre de 2026">泰閣包裝 · 更新於 2026年9月30日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="顏色是輔料最容易出問題、也最難事後講清的一項。書面溝通講的是「怎麼把要求說清楚」，這篇文章講流程的另一半：誰來判定合格、在什麼條件下判定、判定結果怎麼留證，以及某一批做偏了之後怎麼處理——把這三個環節定下來，顏色糾紛會少一大半。"
+         data-en="Colour is the trim attribute most likely to go wrong and the hardest to settle after the fact. Written communication covers how to state the requirement; this article covers the other half of the process: who decides that a colour passes, under which conditions that decision is made, how it is recorded, and what happens when one batch drifts. Settle those three points and most colour disputes disappear."
+         data-ja="色は副資材で最もトラブルになりやすく、後から話をつけるのが最も難しい項目です。書面のやり取りは「要件をどう伝えるか」を扱いますが、本記事はその反対側、つまり誰が合格を判定するのか、どの条件で判定するのか、判定結果をどう記録するのか、そしてあるロットが外れたときにどう扱うのかを扱います。この3点を決めておけば、色のトラブルは大きく減ります。"
+         data-ko="색상은 부자재에서 가장 문제가 생기기 쉽고 사후에 논의하기 가장 어려운 항목입니다. 서면 커뮤니케이션은 '요건을 어떻게 전달할지'를 다루지만, 이 글은 그 반대편, 즉 누가 합격을 판정하는지, 어떤 조건에서 판정하는지, 판정 결과를 어떻게 기록하는지, 그리고 특정 로트가 어긋났을 때 어떻게 처리하는지를 다룹니다. 이 세 가지를 정해두면 색상 분쟁의 상당 부분이 사라집니다."
+         data-fr="La couleur est l'attribut d'accessoire le plus souvent en défaut et le plus difficile à trancher après coup. La communication écrite traite la façon d'énoncer l'exigence ; cet article traite l'autre moitié du processus : qui décide qu'une couleur est conforme, dans quelles conditions, comment la décision est consignée, et que faire lorsqu'un lot dérive. Fixez ces trois points et la plupart des litiges de couleur disparaissent."
+         data-es="El color es el atributo del accesorio que más falla y el más difícil de discutir a posteriori. La comunicación escrita cubre cómo enunciar el requisito; este artículo cubre la otra mitad del proceso: quién decide que un color es conforme, en qué condiciones, cómo se registra esa decisión y qué se hace cuando un lote se desvía. Si fijas esos tres puntos, la mayoría de los litigios de color desaparece.">顏色是輔料最容易出問題、也最難事後講清的一項。書面溝通講的是「怎麼把要求說清楚」，這篇文章講流程的另一半：誰來判定合格、在什麼條件下判定、判定結果怎麼留證，以及某一批做偏了之後怎麼處理——把這三個環節定下來，顏色糾紛會少一大半。</p>
+
+      <h2 data-zh="1. 批覈要留的三份文件"
+          data-en="1. The Three Documents Colour Approval Must Leave Behind"
+          data-ja="1. 色承認で残すべき3つの書類"
+          data-ko="1. 색상 승인에서 남겨야 할 세 가지 서류"
+          data-fr="1. Les trois documents à conserver"
+          data-es="1. Los tres documentos que hay que conservar">1. 批覈要留的三份文件</h2>
+      <p data-zh="顏色批覈不是「看一眼像不像」，而是把主觀判斷變成可存檔的實物與文件。少任何一份，後面都爭不清："
+         data-en="Colour approval is not a glance and a nod; it turns a subjective judgement into archived objects and records. Miss any one of the three and the argument cannot be settled:"
+         data-ja="色の承認は「見て似ているかどうか」ではなく、主観的な判断を保存可能な実物と書類に変える作業です。どれか一つ欠けると、後から話がつきません。"
+         data-ko="색상 승인은 '보고 비슷한가'가 아니라 주관적 판단을 보관 가능한 실물과 서류로 바꾸는 일입니다. 셋 중 하나라도 빠지면 사후에 정리가 되지 않습니다."
+         data-fr="Valider une couleur n'est pas un coup d'œil : c'est transformer un jugement subjectif en objets et documents archivables. S'il en manque un, le litige ne se règle pas :"
+         data-es="Aprobar un color no es mirar y asentir: es convertir un juicio subjetivo en objetos y documentos archivables. Si falta uno de los tres, el litigio no se resuelve:">顏色批覈不是「看一眼像不像」，而是把主觀判斷變成可存檔的實物與文件。少任何一份，後面都爭不清：</p>
+      <ul>
+        <li data-zh="<strong>色卡確認單：</strong>把色號、允差、觀察光源、材質與工藝寫法固定下來，作爲訂單附件。只寫「深藏青」等於沒有標準。"
+            data-en="<strong>Shade card confirmation:</strong> fixes the reference, tolerance, viewing light, material and process in writing as an annex to the order. Close to navy is not a standard."
+            data-ja="<strong>色番確認書：</strong>色番、許容差、観察光源、素材と加工の書き方を確定し、注文書の付属書類とします。「濃紺に近い」は基準になりません。"
+            data-ko="<strong>색상 확인서:</strong> 색상 번호, 허용치, 관찰 광원, 소재와 공정 표기를 확정해 발주서 부속 서류로 둡니다. '네이비에 가까움'은 기준이 아닙니다."
+            data-fr="<strong>Fiche de référence :</strong> fige référence, tolérance, lumière d'observation, matière et procédé, en annexe de la commande. Proche du marine n'est pas un standard."
+            data-es="<strong>Ficha de referencia:</strong> fija referencia, tolerancia, luz de observación, material y proceso como anexo del pedido. Cercano al marino no es un estándar."><strong>色卡確認單：</strong>把色號、允差、觀察光源、材質與工藝寫法固定下來，作爲訂單附件。只寫「深藏青」等於沒有標準。</li>
+        <li data-zh="<strong>批色樣：</strong>用真實材料、真實工藝做的小樣——紙張克重與覆膜、色紗編號、油墨類型都應與大貨一致。數碼樣只能看版面，不能當顏色標準。"
+            data-en="<strong>Dyed sample:</strong> a swatch made with the real material and the real process — paper grammage and lamination, yarn reference, ink type all matching bulk. A digital proof shows layout, not colour."
+            data-ja="<strong>色見本：</strong>実素材と実工程で作った見本。紙の坪量とラミネート、色糸の番号、インクの種類を量産と一致させます。デジタル校正はレイアウト確認用で、色の基準にはなりません。"
+            data-ko="<strong>색상 견본:</strong> 실제 소재와 실제 공정으로 만든 견본으로, 종이 평량과 라미네이팅, 색사 번호, 잉크 종류를 양산과 일치시킵니다. 디지털 교정은 판면 확인용이며 색상 기준이 될 수 없습니다."
+            data-fr="<strong>Échantillon teinté :</strong> réalisé avec la matière et le procédé réels — grammage et lamination du papier, référence de fil, type d'encre identiques au production. L'épreuve numérique montre la mise en page, pas la couleur."
+            data-es="<strong>Muestra teñida:</strong> hecha con el material y el proceso reales —gramaje y laminado del papel, referencia de hilo, tipo de tinta idénticos al lote—. La prueba digital muestra el diseño, no el color."><strong>批色樣：</strong>用真實材料、真實工藝做的小樣——紙張克重與覆膜、色紗編號、油墨類型都應與大貨一致。數碼樣只能看版面，不能當顏色標準。</li>
+        <li data-zh="<strong>首件封樣：</strong>首批生產完成後雙方簽字蓋章留存的實物標準。之後每一批都對照它做實物比對，而不是對照屏幕。"
+            data-en="<strong>Sealed first article:</strong> the physical standard from the first approved run, signed and stamped by both sides. Every later batch is compared against it as an object, not against a screen."
+            data-ja="<strong>初回封入見本：</strong>初回生産の承認後に双方が署名・捺印して保管する実物基準です。以後の各ロットは画面ではなくこの実物と比べます。"
+            data-ko="<strong>초물 봉인 견본:</strong> 첫 생산 승인 후 양측이 서명·날인해 보관하는 실물 기준입니다. 이후 모든 로트는 화면이 아니라 이 실물과 비교합니다."
+            data-fr="<strong>Étalon de première pièce :</strong> le standard physique du premier lot approuvé, signé et paraphé par les deux parties. Chaque lot suivant se compare à cet objet, pas à un écran."
+            data-es="<strong>Patrón de primera pieza:</strong> el estándar físico del primer lote aprobado, firmado y sellado por ambas partes. Cada lote posterior se compara con ese objeto, no con una pantalla."><strong>首件封樣：</strong>首批生產完成後雙方簽字蓋章留存的實物標準。之後每一批都對照它做實物比對，而不是對照屏幕。</li>
+      </ul>
+
+      <h2 data-zh="2. 對色條件：最容易出錯的五個變量"
+          data-en="2. Viewing Conditions: The Five Variables That Break a Colour Check"
+          data-ja="2. 色評価の条件：最も失敗しやすい5つの変数"
+          data-ko="2. 색 평가 조건: 가장 자주 실패하는 다섯 변수"
+          data-fr="2. Conditions d'observation : les cinq variables qui font échouer un contrôle"
+          data-es="2. Condiciones de observación: las cinco variables que hacen fallar un control">2. 對色條件：最容易出錯的五個變量</h2>
+      <p data-zh="同一塊樣品，在不同條件下能看出完全不同的顏色。以下五個變量是最常被忽略、也最容易造成「各說各話」的："
+         data-en="The same swatch can read as a different colour under different conditions. These five variables are the most often overlooked — and the ones that produce two sides talking past each other:"
+         data-ja="同じ見本でも、条件が違えば全く違う色に見えます。以下は最も見落とされやすく、言い分が食い違いやすい5つの変数です。"
+         data-ko="같은 견본도 조건이 다르면 전혀 다른 색으로 보입니다. 아래 다섯 변수는 가장 자주 간과되며, 서로 다른 주장이 나오는 원인입니다."
+         data-fr="Un même échantillon peut se lire comme une couleur différente selon les conditions. Ces cinq variables sont les plus négligées — et celles qui font parler les deux parties sans se comprendre :"
+         data-es="Una misma muestra puede leerse como un color distinto según las condiciones. Estas cinco variables son las más olvidadas —y las que hacen que cada parte hable de algo distinto—:">同一塊樣品，在不同條件下能看出完全不同的顏色。以下五個變量是最常被忽略、也最容易造成「各說各話」的：</p>
+      <table>
+        <tr><th data-zh="變量" data-en="Variable" data-ja="変数" data-ko="변수" data-fr="Variable" data-es="Variable">變量</th><th data-zh="常見錯誤做法" data-en="What usually goes wrong" data-ja="よくある誤ったやり方" data-ko="흔한 잘못된 방법" data-fr="Erreur fréquente" data-es="Error frecuente">常見錯誤做法</th><th data-zh="建議做法" data-en="Recommended practice" data-ja="推奨する方法" data-ko="권장 방법" data-fr="Pratique recommandée" data-es="Práctica recomendada">建議做法</th></tr>
+        <tr><td data-zh="光源" data-en="Light source" data-ja="光源" data-ko="광원" data-fr="Source lumineuse" data-es="Fuente de luz">光源</td><td data-zh="在辦公室頂燈或手機屏幕上看" data-en="Judging under office lighting or on a phone screen" data-ja="事務所の天井灯やスマホ画面で見る" data-ko="사무실 천장등이나 휴대폰 화면으로 판단" data-fr="Juger sous l'éclairage de bureau ou sur un écran" data-es="Juzgar con la luz de oficina o en la pantalla del móvil">在辦公室頂燈或手機屏幕上看</td><td data-zh="約定 D65 或 TL84 燈箱；如需日光觀察，註明陰天還是直射" data-en="Agree a D65 or TL84 light box; if daylight is used, state overcast versus direct sun" data-ja="D65またはTL84のライトボックスを指定。日光観察なら曇天か直射かを明記" data-ko="D65 또는 TL84 라이트 박스를 지정하고, 일광 관찰 시 음영인지 직사광인지 명시" data-fr="Convenir d'une cabine D65 ou TL84 ; en lumière du jour, préciser couvert ou soleil direct" data-es="Acordar cabina D65 o TL84; con luz natural, indicar nublado o sol directo">約定 D65 或 TL84 燈箱；如需日光觀察，註明陰天還是直射</td></tr>
+        <tr><td data-zh="角度與距離" data-en="Angle and distance" data-ja="角度と距離" data-ko="각도와 거리" data-fr="Angle et distance" data-es="Ángulo y distancia">角度與距離</td><td data-zh="隨手斜看，或把樣品湊到眼前" data-en="Looking at an angle, or holding the swatch right up to the eye" data-ja="斜めから見たり、目に近づけすぎたりする" data-ko="비스듬히 보거나 눈 가까이 대고 봄" data-fr="Regarder de biais ou coller l'échantillon à l'œil" data-es="Mirar en ángulo o acercar la muestra al ojo">隨手斜看，或把樣品湊到眼前</td><td data-zh="約 45 度觀察、距離 30–40 釐米，標準樣與待檢樣並排放在同一平面" data-en="View at roughly 45 degrees from 30–40 cm, with standard and candidate side by side on the same plane" data-ja="約45度・30〜40cmで観察し、基準見本と被検見本を同一平面に並べる" data-ko="약 45도, 30~40cm 거리에서 관찰하고 기준 견본과 검사 견본을 같은 평면에 나란히 둠" data-fr="Observer à environ 45° et 30–40 cm, étalon et pièce côte à côte sur un même plan" data-es="Observar a unos 45° y 30–40 cm, con patrón y pieza lado a lado en el mismo plano">約 45 度觀察、距離 30–40 釐米，標準樣與待檢樣並排放在同一平面</td></tr>
+        <tr><td data-zh="背景" data-en="Background" data-ja="背景" data-ko="배경" data-fr="Fond" data-es="Fondo">背景</td><td data-zh="放在彩色桌面或有圖案的檯面上看" data-en="Laying samples on a coloured or patterned surface" data-ja="色の付いた机や柄のある台に置いて見る" data-ko="색이 있거나 무늬가 있는 책상 위에 올려놓고 봄" data-fr="Poser les échantillons sur un support coloré ou à motif" data-es="Colocar las muestras sobre una superficie con color o dibujo">放在彩色桌面或有圖案的檯面上看</td><td data-zh="用中性灰背景；深色樣品配灰或白卡，避免與周圍顏色互相影響" data-en="Use a neutral grey background; pair dark shades with grey or white card so surrounding colour cannot influence the eye" data-ja="中性グレーの背景を使い、濃色はグレーか白の台紙に合わせて周囲の色の影響を避ける" data-ko="중성 회색 배경을 사용하고 진한 색은 회색이나 흰 카드에 올려 주변 색의 영향을 배제" data-fr="Fond gris neutre ; associer les teintes foncées à un carton gris ou blanc pour éviter toute influence" data-es="Fondo gris neutro; acompañar los tonos oscuros con cartón gris o blanco para evitar influencias">用中性灰背景；深色樣品配灰或白卡，避免與周圍顏色互相影響</td></tr>
+        <tr><td data-zh="可比性" data-en="Comparability" data-ja="比較可能性" data-ko="비교 가능성" data-fr="Comparabilité" data-es="Comparabilidad">可比性</td><td data-zh="拿薄紙樣對厚紙，或拿未覆膜的樣對覆膜成品" data-en="Comparing thin paper with thick, or uncoated with laminated" data-ja="薄い紙と厚い紙、未ラミネートとラミネート品を比べる" data-ko="얇은 종이와 두꺼운 종이, 미라미네이팅과 라미네이팅 제품을 비교" data-fr="Comparer papier fin et épais, ou non laminé et laminé" data-es="Comparar papel fino con grueso, o sin laminar con laminado">拿薄紙樣對厚紙，或拿未覆膜的樣對覆膜成品</td><td data-zh="材質、層數、覆膜與後道一致的兩個樣品才能互比" data-en="Only two samples matching in material, thickness, lamination and finishing may be compared" data-ja="素材・厚み・ラミネート・後加工が一致する見本どうしでのみ比較可能" data-ko="소재, 두께, 라미네이팅, 후가공이 일치하는 견본끼리만 비교 가능" data-fr="Seuls deux échantillons identiques en matière, épaisseur, lamination et finition se comparent" data-es="Solo se comparan dos muestras idénticas en material, grosor, laminado y acabado">材質、層數、覆膜與後道一致的兩個樣品才能互比</td></tr>
+        <tr><td data-zh="觀察者" data-en="Observer" data-ja="観察者" data-ko="관찰자" data-fr="Observateur" data-es="Observador">觀察者</td><td data-zh="一個人看一眼就拍板" data-en="One person decides with a single glance" data-ja="一人が一目見て決める" data-ko="한 사람이 한 번 보고 결정" data-fr="Une seule personne tranche d'un coup d'œil" data-es="Una sola persona decide de un vistazo">一個人看一眼就拍板</td><td data-zh="至少兩人複覈；色覺異常者不參與判定；關鍵色號輔以儀器讀數" data-en="At least two reviewers; exclude anyone with impaired colour vision; back critical shades with instrument readings" data-ja="最低2人で確認。色覚に異常のある人は判定から外し、重要色番は測色値も併用" data-ko="최소 두 명이 확인하고, 색각 이상자는 판정에서 제외하며, 중요 색상은 측색값을 병행" data-fr="Au moins deux personnes ; exclure toute anomalie de vision des couleurs ; appuyer les teintes critiques par une mesure" data-es="Al menos dos revisores; excluir alteraciones de la visión del color; apoyar tonos críticos con medición">至少兩人複覈；色覺異常者不參與判定；關鍵色號輔以儀器讀數</td></tr>
+      </table>
+
+      <h2 data-zh="3. 數字與目視怎麼配合"
+          data-en="3. How Numbers and Eyes Work Together"
+          data-ja="3. 数値と目視の併用"
+          data-ko="3. 수치와 육안의 병행"
+          data-fr="3. Combiner le chiffre et l'œil"
+          data-es="3. Cómo combinar la cifra y la vista">3. 數字與目視怎麼配合</h2>
+      <p data-zh="ΔE 這類數字指標能讓爭議變簡單，但用錯場景會製造新爭議。它適合同一材質、同一工藝之間的比較；跨材質（紙對布、印刷對色紗）時數值參考意義有限，仍要以實物爲準。"
+         data-en="A numeric index such as ΔE makes disputes simpler, but applied to the wrong case it creates new ones. It suits comparison within one material and one process; across materials — paper against fabric, printing against dyed yarn — the number means little and the physical standard still rules."
+         data-ja="ΔE などの数値指標はトラブルを簡単にしますが、使いどころを誤ると新たな問題を生みます。同一素材・同一工程の比較には有効ですが、素材をまたぐ場合（紙と布、印刷と色糸）は数値の意味が限られ、実物が優先します。"
+         data-ko="ΔE 같은 수치 지표는 분쟁을 단순하게 만들지만, 상황을 잘못 잡으면 새로운 분쟁을 만듭니다. 동일 소재·동일 공정 비교에는 적합하지만, 소재를 넘는 경우(종이와 원단, 인쇄와 색사)에는 수치의 의미가 제한적이며 실물이 우선합니다."
+         data-fr="Un indice comme le ΔE simplifie les litiges, mais mal appliqué il en crée d'autres. Il convient à une comparaison à matière et procédé identiques ; d'une matière à l'autre — papier contre tissu, impression contre fil teint — le chiffre signifie peu et l'étalon physique reste la référence."
+         data-es="Un índice como el ΔE simplifica los litigios, pero mal aplicado crea otros nuevos. Sirve para comparar dentro de un mismo material y proceso; entre materiales —papel frente a tejido, impresión frente a hilo teñido— la cifra dice poco y manda el patrón físico.">ΔE 這類數字指標能讓爭議變簡單，但用錯場景會製造新爭議。它適合同一材質、同一工藝之間的比較；跨材質（紙對布、印刷對色紗）時數值參考意義有限，仍要以實物爲準。</p>
+      <ul>
+        <li data-zh="深色與高飽和色人眼更敏感，允差通常要收緊，同樣的 ΔE 在小面積深色上更容易被看出來。"
+            data-en="The eye is more sensitive in dark and highly saturated shades, so tolerances usually tighten: the same ΔE is far more visible on a small dark patch."
+            data-ja="濃色や高彩度色は人の目が敏感なため、許容差は通常厳しくします。同じΔEでも小さな濃色面では目立ちます。"
+            data-ko="진한 색과 고채도 색은 눈이 더 민감해 허용치를 보통 좁힙니다. 같은 ΔE라도 작은 진한 면에서 더 잘 보입니다."
+            data-fr="L'œil est plus sensible dans les teintes foncées et saturées : la tolérance se resserre, car un même ΔE se voit bien plus sur une petite zone foncée."
+            data-es="El ojo es más sensible en tonos oscuros y saturados, por lo que la tolerancia suele estrecharse: el mismo ΔE se nota mucho más en una zona oscura pequeña.">深色與高飽和色人眼更敏感，允差通常要收緊，同樣的 ΔE 在小面積深色上更容易被看出來。</li>
+        <li data-zh="熒光色與金屬色（燙金、金銀墨）難以被常規色差儀穩定測量，以封樣實物加固定光源目視爲主。"
+            data-en="Fluorescent and metallic finishes — foil, gold and silver inks — are hard for a standard spectrophotometer to read reliably, so the sealed standard plus a fixed light source governs."
+            data-ja="蛍光色や金属色（箔押し・金銀インク）は通常の測色計で安定して測りにくいため、封入見本と固定光源での目視を優先します。"
+            data-ko="형광색과 금속색(박압, 금·은 잉크)은 일반 측색기로 안정적으로 측정하기 어려워 봉인 견본과 고정 광원의 육안 판정을 우선합니다."
+            data-fr="Les teintes fluorescentes et métalliques — dorure, encres or et argent — se mesurent mal au spectrocolorimètre : l'étalon scellé et une lumière fixe font foi."
+            data-es="Los tonos fluorescentes y metalizados —estampado en caliente, tintas oro y plata— son difíciles de medir con un espectrofotómetro: manda el patrón sellado con luz fija.">熒光色與金屬色（燙金、金銀墨）難以被常規色差儀穩定測量，以封樣實物加固定光源目視爲主。</li>
+        <li data-zh="織嘜受色紗批號影響，洗水標與吊牌受基材吸墨、覆膜影響，允差口徑要按品類分別寫進訂單，不能一刀切。"
+            data-en="Woven labels vary with the yarn lot; care labels and hang tags shift with substrate ink absorption and lamination. Write the tolerance per category in the order — never one figure for all."
+            data-ja="織りラベルは色糸のロットに左右され、洗濯表示ラベルやタグは基材の吸インクとラミネートに左右されます。許容差は品目ごとに発注書へ記載し、一律にはできません。"
+            data-ko="직조 라벨은 색사 로트에, 세탁 표시 라벨과 행택은 기재 잉크 흡수와 라미네이팅에 영향을 받습니다. 허용치는 품목별로 발주서에 적어야 하며 일률적으로 정할 수 없습니다."
+            data-fr="Le label tissé varie avec le lot de fil ; l'étiquette d'entretien et le tag dépendent de l'absorption du support et de la lamination. La tolérance s'écrit par catégorie dans la commande, jamais en un chiffre unique."
+            data-es="La etiqueta tejida varía con el lote de hilo; la de cuidado y la colgante dependen de la absorción del soporte y del laminado. La tolerancia se escribe por categoría en el pedido, nunca con una cifra única.">織嘜受色紗批號影響，洗水標與吊牌受基材吸墨、覆膜影響，允差口徑要按品類分別寫進訂單，不能一刀切。</li>
+      </ul>
+
+      <h2 data-zh="4. 批次放行：誰籤、籤什麼、留什麼"
+          data-en="4. Batch Release: Who Signs, What It Says, What Is Kept"
+          data-ja="4. ロット放行：誰が署名し、何を記載し、何を残すか"
+          data-ko="4. 로트 출하 승인: 누가 서명하고, 무엇을 적고, 무엇을 남기는가"
+          data-fr="4. Libération de lot : qui signe, ce qui est écrit, ce qui est conservé"
+          data-es="4. Liberación de lote: quién firma, qué se escribe, qué se conserva">4. 批次放行：誰籤、籤什麼、留什麼</h2>
+      <ol>
+        <li data-zh="每批出貨或到貨前，在同一套約定條件下對照首件封樣做實物比對，並記錄日期、批次號與判定人。"
+            data-en="Before each batch ships or is received, compare it physically against the sealed first article under the same agreed conditions, and record date, batch number and who judged."
+            data-ja="各ロットの出荷または入荷前に、同じ約定条件下で初回封入見本と実物比較し、日付・ロット番号・判定者を記録します。"
+            data-ko="각 로트 출하 또는 입고 전에 동일한 합의 조건에서 초물 봉인 견본과 실물 비교하고 날짜, 로트 번호, 판정자를 기록합니다."
+            data-fr="Avant chaque expédition ou réception, comparer physiquement au premier article scellé dans les mêmes conditions convenues, et noter date, numéro de lot et responsable."
+            data-es="Antes de cada envío o recepción, comparar físicamente con el patrón de primera pieza en las mismas condiciones acordadas y anotar fecha, número de lote y responsable.">每批出貨或到貨前，在同一套約定條件下對照首件封樣做實物比對，並記錄日期、批次號與判定人。</li>
+        <li data-zh="放行單至少寫清：品類與規格、批次號與數量、對照的封樣編號、判定結論、異常說明。"
+            data-en="A release note should carry at least: category and specification, batch number and quantity, the sealed standard reference used, the verdict, and any remark on anomalies."
+            data-ja="放行書には最低限、品目と仕様、ロット番号と数量、照合した封入見本の番号、判定結論、異常の記載を残します。"
+            data-ko="출하 승인서에는 최소한 품목과 사양, 로트 번호와 수량, 대조한 봉인 견본 번호, 판정 결론, 이상 사항을 적습니다."
+            data-fr="La fiche de libération porte au minimum : catégorie et spécification, numéro de lot et quantité, référence de l'étalon utilisé, verdict et remarque éventuelle."
+            data-es="La nota de liberación incluye al menos: categoría y especificación, número de lote y cantidad, referencia del patrón usado, veredicto y observaciones.">放行單至少寫清：品類與規格、批次號與數量、對照的封樣編號、判定結論、異常說明。</li>
+        <li data-zh="按約定比例留實物樣並保存到約定期限，作爲日後爭議的實物依據；留樣要與放行單編號對應。"
+            data-en="Retain physical samples at the agreed rate for the agreed period as evidence for later disputes, with the retention ID matching the release note."
+            data-ja="約定した割合で実物見本を保管し、約定期間保存して将来の紛争時の物的根拠とします。保管番号は放行書と対応させます。"
+            data-ko="합의한 비율로 실물 견본을 보관해 약정 기간 유지하며, 이후 분쟁의 실물 근거로 삼습니다. 보관 번호는 출하 승인서와 대응시킵니다."
+            data-fr="Conserver des échantillons à la fréquence convenue, pour la durée convenue, comme preuve en cas de litige, avec un identifiant lié à la fiche de libération."
+            data-es="Conservar muestras físicas en la proporción acordada durante el plazo acordado como prueba ante futuros litigios, con un identificador vinculado a la nota de liberación.">按約定比例留實物樣並保存到約定期限，作爲日後爭議的實物依據；留樣要與放行單編號對應。</li>
+        <li data-zh="超差走「讓步接收」而不是口頭放過：提出方書面說明偏差幅度與影響範圍，使用方書面同意，雙方留檔。"
+            data-en="Out-of-tolerance lots go through a written deviation, not a verbal pass: the producing side states the extent and impact, the receiving side agrees in writing, both file it."
+            data-ja="許容差を外れた場合は口頭で済ませず「特別採用」とします。提出側が偏差の程度と影響範囲を書面で示し、使用側が書面で同意して双方保管します。"
+            data-ko="허용치를 벗어난 경우 구두로 넘기지 않고 '특채'로 처리합니다. 제출 측이 편차 범위와 영향을 서면으로 밝히고, 사용 측이 서면 동의해 양측이 보관합니다."
+            data-fr="Un lot hors tolérance passe par une dérogation écrite, jamais un accord oral : le producteur précise l'ampleur et l'impact, le receveur accepte par écrit, les deux archivent."
+            data-es="Un lote fuera de tolerancia pasa por una desviación escrita, nunca por un visto bueno verbal: quien produce detalla magnitud e impacto, quien recibe acepta por escrito y ambos archivan.">超差走「讓步接收」而不是口頭放過：提出方書面說明偏差幅度與影響範圍，使用方書面同意，雙方留檔。</li>
+      </ol>
+
+      <div class="callout" data-zh="<strong>💡 提示：</strong>把判定條件寫進訂單，比事後爭論顏色值更有效。下大貨前確認三件事——光源、允差、封樣編號，之後每次放行都按同一套條件做，顏色糾紛會少一大半。"
+           data-en="<strong>💡 Tip:</strong> writing the judgement conditions into the order beats arguing over colour values afterwards. Confirm three things before bulk — light source, tolerance and the sealed standard reference — then release against the same conditions every time."
+           data-ja="<strong>💡 ヒント：</strong>判定条件を発注書に書き込むほうが、後から色の数値を議論するより有効です。量産前に光源・許容差・封入見本番号の3点を確認し、以後の放行も同じ条件で行えば、色のトラブルは大きく減ります。"
+           data-ko="<strong>💡 팁:</strong> 판정 조건을 발주서에 적는 것이 사후에 색상 수치를 다투는 것보다 효과적입니다. 양산 전에 광원, 허용치, 봉인 견본 번호 세 가지를 확인하고 이후에도 같은 조건으로 승인하면 색상 분쟁이 크게 줄어듭니다."
+           data-fr="<strong>💡 Conseil :</strong> inscrire les conditions de jugement dans la commande vaut mieux que discuter des valeurs de couleur après coup. Confirmez trois points avant le lancement — lumière, tolérance, référence d'étalon — puis libérez toujours dans les mêmes conditions."
+           data-es="<strong>💡 Consejo:</strong> escribir las condiciones de juicio en el pedido es mejor que discutir valores de color después. Confirma tres puntos antes de producir —luz, tolerancia y referencia del patrón— y libera siempre con las mismas condiciones."><strong>💡 提示：</strong>把判定條件寫進訂單，比事後爭論顏色值更有效。下大貨前確認三件事——光源、允差、封樣編號，之後每次放行都按同一套條件做，顏色糾紛會少一大半。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="hang-tag-color-management.html" data-zh="吊牌色彩管理指南：專色、四色與色差控制全解析" data-en="Hang Tag Colour Management: Spot, CMYK and Colour Control" data-ja="タグの色彩管理ガイド：特色・4色印刷と色差管理" data-ko="행택 색상 관리 가이드: 별색·4도 인쇄와 색차 관리" data-fr="Gestion de la couleur des étiquettes : tons directs, CMJN et écarts" data-es="Gestión de color de la etiqueta: tintas directas, CMYK y desviaciones">吊牌色彩管理指南：專色、四色與色差控制全解析</a></li>
+        <li><a href="woven-label-color-matching.html" data-zh="織嘜顏色對色指南：潘通色卡、色差控制與色牢度要求" data-en="Woven Label Colour Matching: Pantone, Tolerances and Fastness" data-ja="織りラベルの色合わせ：パントン・色差管理・堅牢度" data-ko="직조 라벨 색상 맞춤: 팬톤·색차 관리·견뢰도" data-fr="Correspondance des couleurs en label tissé : Pantone et solidité" data-es="Igualación de color en etiqueta tejida: Pantone y solidez">織嘜顏色對色指南：潘通色卡、色差控制與色牢度要求</a></li>
+        <li><a href="trim-limit-sample-inspection-guide.html" data-zh="輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定" data-en="Limit Sample Guide: Defining Defect Acceptance for Trims" data-ja="限界見本ガイド：副資材の欠陥判定基準の決め方" data-ko="한계 견본 가이드: 부자재 결함 판정 기준 정하기" data-fr="Guide des échantillons limites : définir le seuil de défaut" data-es="Guía de muestras límite: definir el criterio de defecto">輔料外觀驗收的界限樣品指南：缺陷判定口徑怎麼定</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="準備爲下一季定做吊牌、織嘜或洗水標？把品牌色號、材質與用量發給我們，先出一套批色樣與封樣，把顏色判定條件一次定清，3–7 天寄出實物樣品。" data-en="Planning hang tags, woven labels or care labels for next season? Send us your brand references, materials and quantities — we produce dyed samples and a sealed standard first so the colour rules are fixed, with physical samples in 3–7 days." data-ja="来季のタグ、織りラベル、洗濯表示ラベルをご検討ですか。ブランド色番・素材・数量をお送りいただければ、まず色見本と封入見本を作成して判定条件を一度に確定し、3〜7日で実物サンプルをお届けします。" data-ko="다음 시즌 행택, 직조 라벨, 세탁 표시 라벨을 준비하시나요? 브랜드 색상 번호, 소재, 수량을 보내주시면 먼저 색상 견본과 봉인 견본을 만들어 판정 조건을 한 번에 확정하고 3~7일 내 실물 샘플을 발송합니다." data-fr="Vous préparez étiquettes suspendues, labels tissés ou étiquettes d'entretien pour la prochaine saison ? Envoyez références de couleur, matières et quantités : nous réalisons d'abord échantillons teintés et étalon scellé, puis les échantillons physiques partent en 3 à 7 jours." data-es="¿Preparas etiquetas colgantes, tejidas o de cuidado para la próxima temporada? Envíanos referencias de color, materiales y cantidades: primero producimos muestras teñidas y un patrón sellado y las muestras físicas salen en 3–7 días.">準備爲下一季定做吊牌、織嘜或洗水標？把品牌色號、材質與用量發給我們，先出一套批色樣與封樣，把顏色判定條件一次定清，3–7 天寄出實物樣品。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取顏色批覈方案 →" data-en="Ask about colour approval →" data-ja="色承認のご相談はこちら →" data-ko="색상 승인 상담 받기 →" data-fr="Demander un accompagnement couleur →" data-es="Consultar la aprobación de color →">獲取顏色批覈方案 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
