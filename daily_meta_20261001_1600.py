@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""2026-10-01 下午（16:00）每日更新：2 篇新文章元数据（六语：zh-Hant 根 / en / ja / ko / fr / es）
+
+选题（主题池 30 项与历次扩展选题均已上线，本次沿「辅料备货/寄售库存」与
+「辅料外箱托盘装柜」两个方向扩展；已核对 blog/、en|ja|ko|fr|es/blog/ 与 sitemap.xml 无重复，
+且与 garment-trims-inventory-management（厂内库存管理）、garment-trims-freight-mode-guide（运输方式）
+两篇既有文章主题区分明确）：
+- trim-vmi-consignment-stock-guide.html   服装辅料寄售（VMI）与海外仓备料：库存水位、结算与合同要点
+- garment-trims-carton-loading-guide.html 服装辅料外箱、托盘与装柜指南：堆码、装载率与防压防潮
+"""
+
+ARTICLES = [
+    dict(
+        slug="trim-vmi-consignment-stock-guide.html",
+        body="blog/_body_vmi.html",
+        title_zh="服装辅料寄售（VMI）与海外仓备料指南：库存水位、结算与合同要点 | TAGE",
+        title_en="Consignment and VMI Stock for Garment Trims: Levels, Billing, Contracts | TAGE",
+        title_ja="衣料副資材の委託在庫（VMI）と海外倉ガイド：水準・請求・契約の要点 | TAGE",
+        title_ko="의류 부자재 위탁 재고(VMI)와 해외창 가이드: 수준·정산·계약 | TAGE",
+        title_fr="Stock en consignation (VMI) pour accessoires textiles : niveaux, facturation, contrat | TAGE",
+        title_es="Stock en consigna (VMI) para accesorios textiles: niveles, facturación y contrato | TAGE",
+        desc_zh="辅料寄售（VMI）怎么落地？本文对比买断、缓冲库存与寄售三种模式，给出库存水位的计算方法、消耗式开票与月度对账规则、供应商仓保税仓海外仓的取舍，以及合同必写条款与洽谈六项。来自东莞泰阁包装。",
+        desc_en="Consignment and VMI for garment trims: outright purchase, buffer stock and consignment compared, reorder levels, billing on consumption and contract clauses.",
+        desc_ja="衣料副資材の委託在庫（VMI）ガイド。買い取り・緩衝在庫・委託の比較、発注点と安全在庫の計算、使用量ベースの請求と月次照合、サプライヤー倉・保税倉・海外倉の使い分け、契約条項と打ち合わせの6項目をまとめました。東莞泰閣包装。",
+        desc_ko="의류 부자재 위탁 재고(VMI) 가이드. 매입·완충 재고·위탁 비교, 발주점과 안전 재고 계산, 사용량 기준 청구와 월별 정산, 공급자 창고·보세창고·해외창 선택, 계약 조항과 협의 6항목을 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Stock en consignation (VMI) pour accessoires textiles : comparaison achat ferme, stock tampon et consignation, points de commande, facturation à la consommation et clauses contractuelles.",
+        desc_es="Stock en consigna (VMI) para accesorios textiles: compra en firme, stock tampón y consigna comparados, puntos de pedido, facturación por consumo y cláusulas del contrato.",
+        crumb_zh="辅料寄售与 VMI",
+        crumb_en="Consignment and VMI",
+        crumb_ja="委託在庫と VMI",
+        crumb_ko="위탁 재고와 VMI",
+        crumb_fr="Consignation et VMI",
+        crumb_es="Consigna y VMI",
+        h1_zh="服装辅料寄售（VMI）与海外仓备料：库存水位、结算与合同要点",
+        h1_en="Consignment and VMI Stock for Garment Trims: Levels, Billing and Contract Terms",
+        h1_ja="衣料副資材の委託在庫（VMI）と海外倉：水準・請求・契約の要点",
+        h1_ko="의류 부자재 위탁 재고(VMI)와 해외창: 수준·정산·계약 핵심",
+        h1_fr="Stock en consignation (VMI) pour accessoires textiles : niveaux, facturation et contrat",
+        h1_es="Stock en consigna (VMI) para accesorios textiles: niveles, facturación y contrato",
+        tag_zh="供应链", tag_en="Supply Chain", tag_ja="サプライチェーン", tag_ko="공급망",
+        tag_fr="Chaîne d'approvisionnement", tag_es="Cadena de suministro",
+        sum_zh="洗水标、主唛、吊牌、吊粒这类辅料单价低，但缺一件整批成衣就不能出货，于是「把一部分库存提前放在客户那边」成了常见做法。本文先把买断、缓冲库存与寄售（VMI）三种模式的资金与风险归属摆在一起对比，再给出什么条件下寄售才划算的五条判断、补货点与安全库存的计算方法、消耗式开票与月度对账的规则设计；落点选择上比较供应商仓、客户厂内、保税仓与海外仓的仓租、税务与灵活性差异；最后列出合同里必须写清的七条（最低采购承诺、库存上限与滞销处理、版本变更、索赔时限、数据可见性、终止回购、排他性）与洽谈时应当提供的六项信息。",
+        sum_en="Care labels, neck labels, hang tags and fasteners cost little per piece, yet a single missing item can hold back a whole garment shipment, so holding part of the stock closer to the customer has become standard practice. This guide sets the money and risk of outright purchase, buffer stock and consignment (VMI) side by side, then gives five tests for when consignment really pays, the arithmetic behind reorder points and safety stock, and how to design consumption-based invoicing and monthly reconciliation. It compares holding the goods at the supplier's warehouse, inside the customer's plant, in a bonded warehouse or in an overseas warehouse by storage cost, tax and flexibility, and closes with the seven clauses that must be explicit — minimum commitment, stock ceiling and slow movers, revisions, claim windows, data visibility, buy-back on termination, exclusivity — plus the six items to bring to the discussion.",
+        sum_ja="洗濯表示ラベル、メインラベル、ハンガータグ、タグ止め具などの副資材は単価が安い一方、一つ欠けると荷口全体が出荷できません。そのため「在庫の一部を顧客側に前倒しで置く」運用が一般化しました。本記事は買い取り・緩衝在庫・委託（VMI）の三モデルを資金とリスクの所在で比較し、委託が割に合う5つの条件、発注点と安全在庫の計算、使用量ベース請求と月次照合の設計を示します。置き場所はサプライヤー倉・顧客工場内・保税倉・海外倉を倉庫費・税務・柔軟性で比較。最後に契約に明記すべき7条（最低購入コミット、在庫上限と滞留在庫、版変更、クレーム期限、データ可視性、終了時の買い戻し、独占性）と、打ち合わせで用意すべき6項目を挙げます。",
+        sum_ko="세탁 표시 라벨, 메인 라벨, 행택, 고정구 같은 부자재는 단가가 낮지만 하나만 없어도 화물 전체를 출하할 수 없습니다. 그래서 재고 일부를 고객 쪽에 미리 두는 운영이 일반화되었습니다. 이 글은 매입·완충 재고·위탁(VMI) 세 모델을 자금과 리스크 위치로 비교하고, 위탁이 이득이 되는 다섯 가지 조건, 발주점과 안전 재고 계산, 사용량 기준 청구와 월별 정산 설계를 제시합니다. 보관 위치는 공급자 창고·고객 공장 내·보세창고·해외창을 보관료, 세무, 유연성으로 비교합니다. 끝으로 계약서에 반드시 명시할 7개 조항(최소 구매 약정, 재고 상한과 장기 재고, 버전 변경, 클레임 기한, 데이터 가시성, 종료 시 매입, 독점성)과 협의 시 준비할 6가지 항목을 정리합니다.",
+        sum_fr="Les étiquettes d'entretien, labels de col, étiquettes suspendues et attaches coûtent peu à l'unité, mais une seule pièce manquante bloque toute une expédition : d'où la pratique courante de rapprocher une partie du stock du client. Ce guide compare d'abord l'achat ferme, le stock tampon et la consignation (VMI) du point de vue de l'argent et du risque, puis donne cinq tests pour savoir quand la consignation est rentable, le calcul des points de commande et du stock de sécurité, et la conception d'une facturation à la consommation avec rapprochement mensuel. Il compare ensuite l'entrepôt fournisseur, l'usine du client, l'entrepôt sous douane et l'entrepôt à l'étranger en coût de stockage, fiscalité et souplesse, et termine par les sept clauses à expliciter (engagement minimum, plafond et dormants, révisions, délais de réclamation, visibilité des données, rachat à la sortie, exclusivité) et les six éléments à apporter à la discussion.",
+        sum_es="Las etiquetas de cuidado, de cuello, colgantes y enganches cuestan poco por pieza, pero una sola ausencia bloquea todo un envío de prendas, de ahí la práctica de acercar parte del stock al cliente. Esta guía compara primero la compra en firme, el stock tampón y la consigna (VMI) en términos de dinero y riesgo, y después da cinco pruebas para saber cuándo la consigna compensa, el cálculo de puntos de pedido y stock de seguridad, y el diseño de la facturación por consumo con conciliación mensual. Compara el almacén del proveedor, la planta del cliente, el depósito aduanero y el almacén en el extranjero por coste de almacenaje, fiscalidad y flexibilidad, y cierra con las siete cláusulas que deben quedar explícitas (compromiso mínimo, tope de stock y parados, revisiones, plazos de reclamación, visibilidad de datos, recompra al terminar, exclusividad) y los seis datos para la conversación.",
+    ),
+    dict(
+        slug="garment-trims-carton-loading-guide.html",
+        body="blog/_body_loading.html",
+        title_zh="服装辅料外箱、托盘与装柜指南：堆码、装载率与防压防潮 | TAGE",
+        title_en="Cartons, Pallets and Container Loading for Garment Trims | TAGE",
+        title_ja="衣料副資材の外箱・パレット・コンテナ積載ガイド：積み段数と防湿・防圧 | TAGE",
+        title_ko="의류 부자재 외박스·팔레트·컨테이너 적재 가이드: 적재율과 방습·방압 | TAGE",
+        title_fr="Cartons, palettes et chargement en conteneur pour accessoires textiles | TAGE",
+        title_es="Cajas, palés y carga de contenedor para accesorios textiles | TAGE",
+        desc_zh="辅料装柜为什么常「轻货重损」？本文讲外箱箱型与瓦楞选择、四种托盘规格与堆码层数、20GP/40GP/40HQ 装载估算、与成衣同柜混装的顺序与隔离、防潮防压配置及破损责任划分，附装箱前六项信息。来自东莞泰阁包装。",
+        desc_en="Cartons, pallets and container loading for garment trims: board grade, pallet sizes, stacking limits, 20GP/40GP/40HQ estimates, mixed loads and moisture protection.",
+        desc_ja="衣料副資材の外箱・パレット・コンテナ積載ガイド。段ボール仕様、4種のパレット寸法と積み段数、20GP/40GP/40HQの積載見積り、衣類との混載、防湿・防圧、破損時の責任分担をまとめました。東莞泰閣包装。",
+        desc_ko="의류 부자재 외박스·팔레트·컨테이너 적재 가이드. 골판지 사양, 4가지 팔레트 규격과 적재 단수, 20GP/40GP/40HQ 적재 산정, 의류 혼적, 방습·방압, 파손 책임 분담을 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Cartons, palettes et chargement en conteneur pour accessoires textiles : cannelure, formats de palette, hauteurs d'empilage, 20 GP/40 GP/40 HQ, mixte et anti-humidité.",
+        desc_es="Cajas, palés y carga de contenedor para accesorios textiles: corrugado, formatos de palé, alturas de apilado, 20GP/40GP/40HQ, carga mixta y antihumedad.",
+        crumb_zh="辅料装柜与堆码",
+        crumb_en="Container Loading",
+        crumb_ja="コンテナ積載",
+        crumb_ko="컨테이너 적재",
+        crumb_fr="Chargement conteneur",
+        crumb_es="Carga de contenedor",
+        h1_zh="服装辅料外箱、托盘与装柜指南：堆码、装载率与防压防潮",
+        h1_en="Cartons, Pallets and Container Loading for Garment Trims",
+        h1_ja="衣料副資材の外箱・パレット・コンテナ積載ガイド：積み段数・積載率・防湿防圧",
+        h1_ko="의류 부자재 외박스·팔레트·컨테이너 적재 가이드: 적재율과 방습·방압",
+        h1_fr="Cartons, palettes et chargement en conteneur pour accessoires textiles",
+        h1_es="Cajas, palés y carga de contenedor para accesorios textiles",
+        tag_zh="包装物流", tag_en="Packaging &amp; Logistics", tag_ja="包装・物流", tag_ko="포장·물류",
+        tag_fr="Emballage et logistique", tag_es="Embalaje y logística",
+        sum_zh="服装辅料在海运里有个反常识的特点：货值不高，却常常是整柜里最先坏的那部分。吊牌是纸、包装袋是薄膜、纸盒与卡头怕压怕潮、金属吊粒有硬边，一次挤压或一次受潮就可能造成整批返工。本文从「轻货重损」的四个成因讲起：纸张吸湿、薄膜体积大、硬边顶破、堆码承压；接着讲外箱箱型与瓦楞配置怎么选、尺寸与填充留多少；给出四种托盘规格与单托典型装载的对照表、含托高度与堆码层数的反推方法、重下轻上的码放原则；再用一张表说明 20GP、40GP、40HQ 的内容积、理论装载与辅料实用装载区间，以及散装与托盘、托数估算与柜内加固；之后讲与成衣同柜混装的顺序、隔离与收货节奏，防潮防压的干燥剂用量、集装箱雨与防潮包装做法，以及索赔三件套与到货抽查窗口。",
+        sum_en="Garment trims behave counter-intuitively at sea: low in value, yet often the first part of the container to be damaged. Hang tags are paper, bags are film, boxes and header cards hate compression and moisture, metal fasteners have hard edges, and one crush or one damp crossing can mean reworking a whole batch. This guide starts from the four causes behind heavy damage to light cargo — paper absorbing moisture, bulky film, hard edges punching through, and stacking load — then covers how to choose carton style and corrugated grade and how much void to fill. It gives a table of four pallet formats against typical load per pallet, the way to derive total height and stacking levels from the bottom carton's strength, and the heavy-low-light-high rule. A second table sets out internal volume, theoretical load and practical trims load for 20GP, 40GP and 40HQ, followed by loose versus palletised loading, pallet counting and securing. It closes with mixed loads alongside finished garments, desiccant dosing, container rain and moisture-proof packing, and the three claim documents plus the arrival inspection window.",
+        sum_ja="衣料副資材は海上輸送で逆説的な挙動を示します。貨物価値は低いのに、コンテナの中で最初に傷む部分になりがちです。ハンガータグは紙、袋はフィルム、箱やヘッダーカードは圧縮と湿気に弱く、金属の止め具は角が硬い。一度の圧迫や一度の湿気で1ロット作り直しになりかねません。本記事は「軽貨物の重損害」の4つの原因（紙の吸湿、フィルムの容積、硬い角の突き破り、積載荷重）から始め、外箱の形状と段ボール仕様の選び方、余裕と詰め物の量を扱います。4種のパレット寸法と1パレットの目安、パレット込み高さと積み段数を最下段の強度から逆算する方法、重いものを下に置く原則を示し、20GP・40GP・40HQの内容積・理論積載・副資材の実用積載を表にまとめます。バラ積みとパレット積み、パレット数の見積り、固縛、衣類との混載、乾燥剤の量、コンテナレインと防湿包装、クレームの三点セットと着荷検査についても解説します。",
+        sum_ko="의류 부자재는 해상 운송에서 역설적인 특성을 보입니다. 화물 가치는 낮지만 컨테이너에서 가장 먼저 손상되는 부분이 되곤 합니다. 행택은 종이, 봉투는 필름, 박스와 헤더 카드는 압축과 습기에 약하고, 금속 고정구는 모서리가 단단합니다. 한 번의 압력이나 습기로 한 로트를 다시 만들어야 할 수 있습니다. 이 글은 '경량 화물의 큰 손상' 네 가지 원인(종이 흡습, 필름 부피, 경질 모서리 관통, 적재 하중)에서 시작해 외박스 형태와 골판지 등급 선택, 여유와 완충재 양을 다룹니다. 4가지 팔레트 규격과 팔레트당 기준, 팔레트 포함 높이와 적재 단수를 최하단 강도에서 역산하는 방법, 무거운 것을 아래에 두는 원칙을 제시하고, 20GP·40GP·40HQ의 내부 용적·이론 적재·부자재 실용 적재를 표로 정리합니다. 벌크와 팔레트 적재, 팔레트 수 산정, 고정, 의류 혼적, 건조제 양, 컨테이너 레인과 방습 포장, 클레임 3종 세트와 도착 검사도 설명합니다.",
+        sum_fr="Les accessoires textiles ont un comportement contre-intuitif en mer : faible valeur, mais souvent la première partie du conteneur à s'abîmer. Étiquettes suspendues en papier, sacs en film, boîtes et cartes d'en-tête sensibles à la compression et à l'humidité, attaches métalliques à arêtes vives : un écrasement ou une traversée humide suffit à faire reprendre tout un lot. Ce guide part des quatre causes de ces dégâts sur une charge légère — papier qui absorbe, film volumineux, arêtes qui percent, charge d'empilage — puis traite le choix du type de caisse et de la cannelure et la quantité de calage. Il donne un tableau de quatre formats de palette avec la charge type, la méthode pour déduire hauteur et niveaux de la résistance du carton du bas, et la règle du lourd en bas. Un second tableau chiffre volume interne, charge théorique et charge pratique pour 20 GP, 40 GP et 40 HQ, suivi du vrac contre palette, du comptage des palettes et de l'arrimage. Il termine sur le mixte avec les vêtements finis, le dosage du déshydratant, la pluie de conteneur et l'emballage anti-humidité, les trois pièces d'une réclamation et la fenêtre d'inspection à l'arrivée.",
+        sum_es="Los accesorios textiles se comportan de forma contraintuitiva en el mar: poco valor, pero a menudo la primera parte del contenedor que se daña. Etiquetas de papel, bolsas de film, cajas y tarjetas cabecera sensibles a la compresión y la humedad, enganches metálicos con aristas duras: un aplastamiento o una travesía húmeda basta para rehacer todo un lote. Esta guía parte de las cuatro causas del daño en carga ligera —papel que absorbe, film voluminoso, aristas que perforan, carga de apilado— y después trata la elección de tipo de caja y corrugado y cuánto relleno dejar. Incluye una tabla de cuatro formatos de palé con la carga típica, el método para deducir altura y niveles de la resistencia de la caja inferior, y la regla de lo pesado abajo. Una segunda tabla cifra volumen interior, carga teórica y carga práctica en 20GP, 40GP y 40HQ, seguida de carga suelta frente a paletizada, conteo de palés y sujeción. Cierra con el mix con prendas terminadas, dosis de desecante, lluvia de contenedor y embalaje antihumedad, el trío de la reclamación y la ventana de inspección a la llegada.",
+    ),
+]

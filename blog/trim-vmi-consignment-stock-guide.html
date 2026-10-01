@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料寄售（VMI）與海外倉備料指南：庫存水位、結算與合同要點 | TAGE" data-en="Consignment and VMI Stock for Garment Trims: Levels, Billing, Contracts | TAGE" data-ja="衣料副資材の委託在庫（VMI）と海外倉ガイド：水準・請求・契約の要点 | TAGE" data-ko="의류 부자재 위탁 재고(VMI)와 해외창 가이드: 수준·정산·계약 | TAGE" data-fr="Stock en consignation (VMI) pour accessoires textiles : niveaux, facturation, contrat | TAGE" data-es="Stock en consigna (VMI) para accesorios textiles: niveles, facturación y contrato | TAGE">服裝輔料寄售（VMI）與海外倉備料指南：庫存水位、結算與合同要點 | TAGE</title>
+<meta name="description" data-zh="輔料寄售（VMI）怎麼落地？本文對比買斷、緩衝庫存與寄售三種模式，給出庫存水位的計算方法、消耗式開票與月度對賬規則、供應商倉保稅倉海外倉的取捨，以及合同必寫條款與洽談六項。來自東莞泰閣包裝。"
+      data-en="Consignment and VMI for garment trims: outright purchase, buffer stock and consignment compared, reorder levels, billing on consumption and contract clauses." data-ja="衣料副資材の委託在庫（VMI）ガイド。買い取り・緩衝在庫・委託の比較、発注点と安全在庫の計算、使用量ベースの請求と月次照合、サプライヤー倉・保税倉・海外倉の使い分け、契約条項と打ち合わせの6項目をまとめました。東莞泰閣包装。" data-ko="의류 부자재 위탁 재고(VMI) 가이드. 매입·완충 재고·위탁 비교, 발주점과 안전 재고 계산, 사용량 기준 청구와 월별 정산, 공급자 창고·보세창고·해외창 선택, 계약 조항과 협의 6항목을 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="Stock en consignation (VMI) pour accessoires textiles : comparaison achat ferme, stock tampon et consignation, points de commande, facturation à la consommation et clauses contractuelles."
+      data-es="Stock en consigna (VMI) para accesorios textiles: compra en firme, stock tampón y consigna comparados, puntos de pedido, facturación por consumo y cláusulas del contrato."
+      content="輔料寄售（VMI）怎麼落地？本文對比買斷、緩衝庫存與寄售三種模式，給出庫存水位的計算方法、消耗式開票與月度對賬規則、供應商倉保稅倉海外倉的取捨，以及合同必寫條款與洽談六項。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-vmi-consignment-stock-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料寄售（VMI）與海外倉備料：庫存水位、結算與合同要點",
+     "item": "https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料寄售（VMI）與海外倉備料：庫存水位、結算與合同要點",
+   "url": "https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-vmi-consignment-stock-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="輔料寄售與 VMI" data-en="Consignment and VMI" data-ja="委託在庫と VMI" data-ko="위탁 재고와 VMI" data-fr="Consignation et VMI" data-es="Consigna y VMI">輔料寄售與 VMI</span></div>
+      <h1 data-zh="服裝輔料寄售（VMI）與海外倉備料：庫存水位、結算與合同要點" data-en="Consignment and VMI Stock for Garment Trims: Levels, Billing and Contract Terms" data-ja="衣料副資材の委託在庫（VMI）と海外倉：水準・請求・契約の要点" data-ko="의류 부자재 위탁 재고(VMI)와 해외창: 수준·정산·계약 핵심" data-fr="Stock en consignation (VMI) pour accessoires textiles : niveaux, facturation et contrat" data-es="Stock en consigna (VMI) para accesorios textiles: niveles, facturación y contrato">服裝輔料寄售（VMI）與海外倉備料：庫存水位、結算與合同要點</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月1日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 1, 2026" data-ja="泰閣包装 · 2026年10月1日更新" data-ko="TAGE 패키징 · 2026년 10월 1일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 1 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 1 de octubre de 2026">泰閣包裝 · 更新於 2026年10月1日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="服裝輔料裏有幾類東西用量不大，卻經不起斷料：洗水標、主嘜、吊牌、吊粒、包裝袋。它們單價低，但缺一件整批成衣就不能出貨，於是「提前把一部分庫存壓在客戶那邊」成了常見做法。寄售（consignment）與供應商管理庫存（VMI，Vendor Managed Inventory）說的就是這件事：貨放在客戶或第三方倉裏，所有權仍在供應商手上，用多少結多少。聽上去簡單，落地時難的是庫存水位、對賬方式與退出條款。"
+         data-en="A few garment trims are small in volume yet unforgiving when they run out: care labels, neck labels, hang tags, tag fasteners and packaging bags. Their unit price is low, but a single missing piece can hold back a whole garment shipment, so holding a slice of stock close to the customer has become common practice. That is what consignment and vendor managed inventory (VMI) mean: goods sit in the customer's or a third party's warehouse, ownership stays with the supplier, and only what is consumed gets invoiced. Simple in outline; what makes it hard in practice is the stock level, the reconciliation and the exit clause."
+         data-ja="衣料副資材には、数量は多くないのに欠品が許されないものがいくつかあります。洗濯表示ラベル、メインラベル、ハンガータグ、タグ止め具、ポリ袋です。単価は安いのですが、一つ欠けるとその荷口全体が出荷できません。そこで「在庫の一部を顧客側に置いておく」という運用が一般化しました。委託在庫（consignment）とベンダー管理在庫（VMI）がこれにあたります。荷物は顧客または第三者の倉庫にあり、所有権はサプライヤーに残り、使用分だけ請求します。理屈は簡単ですが、実務で難しいのは在庫水準・照合・終了条項です。"
+         data-ko="의류 부자재 중에는 물량은 적지만 결품이 용납되지 않는 품목이 있습니다. 세탁 표시 라벨, 메인 라벨, 행택, 고정구, 포장 봉투입니다. 단가는 낮지만 하나만 없어도 해당 화물 전체를 출하할 수 없습니다. 그래서 재고 일부를 고객 쪽에 미리 두는 운영이 일반화되었습니다. 위탁 재고(consignment)와 공급자 관리 재고(VMI)가 그것입니다. 물건은 고객 또는 제3자 창고에 있고 소유권은 공급자에게 남아 있으며, 사용한 만큼만 청구합니다. 개념은 단순하지만 실무에서 어려운 것은 재고 수준, 정산, 종료 조항입니다."
+         data-fr="Quelques accessoires textiles représentent peu de volume mais ne tolèrent aucune rupture : étiquettes d'entretien, labels de col, étiquettes suspendues, attaches et sacs d'emballage. Leur prix unitaire est faible, mais une seule pièce manquante bloque toute une expédition de vêtements ; d'où la pratique courante de rapprocher une partie du stock du client. C'est le sens de la consignation et du stock géré par le fournisseur (VMI) : la marchandise reste dans l'entrepôt du client ou d'un tiers, la propriété demeure chez le fournisseur, et seule la consommation est facturée. Simple sur le papier ; ce qui coince en pratique, ce sont le niveau de stock, le rapprochement et la clause de sortie."
+         data-es="Algunos accesorios textiles mueven poco volumen pero no admiten roturas de stock: etiquetas de cuidado, etiquetas de cuello, etiquetas colgantes, enganches y bolsas de embalaje. Su precio unitario es bajo, pero una sola pieza ausente bloquea todo un envío de prendas, de ahí la práctica común de acercar una parte del inventario al cliente. Eso es la consignación y el inventario gestionado por el proveedor (VMI): la mercancía está en el almacén del cliente o de un tercero, la propiedad sigue en el proveedor y solo se factura lo consumido. Sencillo sobre el papel; lo difícil en la práctica es el nivel de stock, la conciliación y la cláusula de salida.">服裝輔料裏有幾類東西用量不大，卻經不起斷料：洗水標、主嘜、吊牌、吊粒、包裝袋。它們單價低，但缺一件整批成衣就不能出貨，於是「提前把一部分庫存壓在客戶那邊」成了常見做法。寄售（consignment）與供應商管理庫存（VMI，Vendor Managed Inventory）說的就是這件事：貨放在客戶或第三方倉裏，所有權仍在供應商手上，用多少結多少。聽上去簡單，落地時難的是庫存水位、對賬方式與退出條款。</p>
+
+      <p data-zh="本文把寄售從「要不要做」講到「怎麼寫進合同」：三種備貨模式的差別、什麼條件下寄售才划算、庫存水位怎麼算、消耗式開票與月度對賬怎麼做、落點選在供應商倉、客戶廠內、保稅區還是海外倉，以及合同裏必須寫清的幾條。最後一節給出洽談時需要交代的六項信息。"
+         data-en="This guide moves from whether to do consignment to how to write it into a contract: the difference between three stocking models, the conditions under which consignment pays, how to set stock levels, how consumption-based invoicing and monthly reconciliation work, whether to hold the goods at the supplier's warehouse, inside the customer's factory, in a bonded warehouse or in an overseas warehouse, and the clauses that have to be explicit. The final section lists the six items worth stating in the conversation."
+         data-ja="本記事は、委託在庫を「やるかどうか」から「契約にどう書くか」まで整理します。三つの在庫モデルの違い、委託が割に合う条件、在庫水準の計算、使用量ベースの請求と月次照合の運用、置き場所をサプライヤー倉庫・顧客工場内・保税倉庫・海外倉のどれにするかの判断、そして契約に明記すべき条項です。最後に、打ち合わせ時に伝えるべき6項目を挙げます。"
+         data-ko="이 글은 위탁 재고를 '할 것인가'에서 '계약서에 어떻게 쓸 것인가'까지 다룹니다. 세 가지 재고 모델의 차이, 위탁이 이득이 되는 조건, 재고 수준 계산, 사용량 기준 청구와 월별 정산 운영, 보관 위치를 공급자 창고·고객 공장 내·보세창고·해외창 중 어디로 둘지의 판단, 그리고 계약서에 반드시 명시해야 할 조항입니다. 마지막으로 협의 시 알려야 할 6가지 항목을 제시합니다."
+         data-fr="Ce guide va de la question « faut-il consigner ? » à sa rédaction contractuelle : la différence entre trois modèles de stock, les conditions dans lesquelles la consignation est rentable, le calcul des niveaux, la facturation à la consommation et le rapprochement mensuel, le choix entre entrepôt fournisseur, usine du client, entrepôt sous douane ou entrepôt à l'étranger, et les clauses à expliciter. La dernière section liste les six informations à préciser lors de la discussion."
+         data-es="Esta guía va desde si conviene consignar hasta cómo redactarlo en el contrato: la diferencia entre tres modelos de stock, las condiciones en que la consignación compensa, cómo calcular los niveles, la facturación por consumo y la conciliación mensual, si ubicar la mercancía en el almacén del proveedor, dentro de la fábrica del cliente, en depósito aduanero o en un almacén en el extranjero, y las cláusulas que deben quedar explícitas. La última sección enumera los seis datos que conviene indicar en la conversación.">本文把寄售從「要不要做」講到「怎麼寫進合同」：三種備貨模式的差別、什麼條件下寄售才划算、庫存水位怎麼算、消耗式開票與月度對賬怎麼做、落點選在供應商倉、客戶廠內、保稅區還是海外倉，以及合同裏必須寫清的幾條。最後一節給出洽談時需要交代的六項信息。</p>
+
+      <h2 data-zh="1. 三種備貨模式，先分清再談寄售"
+          data-en="1. Three Stocking Models: Separate Them First"
+          data-ja="1. 三つの在庫モデルをまず切り分ける"
+          data-ko="1. 세 가지 재고 모델을 먼저 구분합니다"
+          data-fr="1. Trois modèles de stock : à distinguer avant tout"
+          data-es="1. Tres modelos de stock: distinguirlos primero">1. 三種備貨模式，先分清再談寄售</h2>
+      <p data-zh="同樣叫「備庫存」，資金與風險歸屬完全不同。把三種模式放在一起看，才知道寄售是不是你真正需要的那一種。"
+         data-en="All three are called stocking, yet the money and the risk sit in different places. Lining them up side by side shows whether consignment is really the model you need."
+         data-ja="同じ「在庫を持つ」でも、資金とリスクの所在はまったく異なります。三つを並べて見れば、委託在庫が本当に必要な選択かどうかが分かります。"
+         data-ko="모두 '재고를 둔다'지만 자금과 리스크의 위치는 전혀 다릅니다. 세 가지를 나란히 보면 위탁 재고가 정말 필요한 모델인지 판단할 수 있습니다."
+         data-fr="Les trois se nomment stock, mais l'argent et le risque n'y sont pas placés au même endroit. Les comparer montre si la consignation est réellement le modèle qu'il vous faut."
+         data-es="Los tres se llaman stock, pero el dinero y el riesgo están en sitios distintos. Compararlos muestra si la consignación es realmente el modelo que necesitas.">同樣叫「備庫存」，資金與風險歸屬完全不同。把三種模式放在一起看，才知道寄售是不是你真正需要的那一種。</p>
+      <table>
+        <tr><th data-zh="模式" data-en="Model" data-ja="モデル" data-ko="모델" data-fr="Modèle" data-es="Modelo">模式</th><th data-zh="貨放在哪裏" data-en="Where the goods sit" data-ja="荷物の置き場所" data-ko="물건 보관 위치" data-fr="Où sont les marchandises" data-es="Dónde está la mercancía">貨放在哪裏</th><th data-zh="誰佔用資金" data-en="Who funds the stock" data-ja="誰が資金を負担するか" data-ko="누가 자금을 부담하는가" data-fr="Qui finance le stock" data-es="Quién financia el stock">誰佔用資金</th><th data-zh="結算方式" data-en="Billing basis" data-ja="請求の基準" data-ko="청구 기준" data-fr="Base de facturation" data-es="Base de facturación">結算方式</th><th data-zh="適合場景" data-en="Suits" data-ja="向く場面" data-ko="적합한 상황" data-fr="Adapté à" data-es="Adecuado para">適合場景</th></tr>
+        <tr><td data-zh="買斷（常規採購）" data-en="Outright purchase" data-ja="買い取り（通常発注）" data-ko="매입(일반 발주)" data-fr="Achat ferme" data-es="Compra en firme">買斷（常規採購）</td><td data-zh="客戶倉庫" data-en="Customer warehouse" data-ja="顧客の倉庫" data-ko="고객 창고" data-fr="Entrepôt du client" data-es="Almacén del cliente">客戶倉庫</td><td data-zh="客戶" data-en="The customer" data-ja="顧客" data-ko="고객" data-fr="Le client" data-es="El cliente">客戶</td><td data-zh="發貨或到貨即開票" data-en="Invoiced on shipment or arrival" data-ja="出荷または着荷で請求" data-ko="출하 또는 도착 시 청구" data-fr="Facturé à l'expédition ou à l'arrivée" data-es="Facturado al envío o a la llegada">發貨或到貨即開票</td><td data-zh="用量穩定、單次量大" data-en="Steady usage, large single orders" data-ja="使用量が安定し、まとまった数量" data-ko="사용량 안정, 대량 단일 발주" data-fr="Usage régulier, gros volumes" data-es="Uso estable, grandes volúmenes">用量穩定、單次量大</td></tr>
+        <tr><td data-zh="緩衝庫存（供應商備料）" data-en="Buffer stock at the supplier" data-ja="緩衝在庫（サプライヤー側）" data-ko="완충 재고(공급자 보유)" data-fr="Stock tampon chez le fournisseur" data-es="Stock tampón en el proveedor">緩衝庫存（供應商備料）</td><td data-zh="供應商倉庫" data-en="Supplier warehouse" data-ja="サプライヤーの倉庫" data-ko="공급자 창고" data-fr="Entrepôt du fournisseur" data-es="Almacén del proveedor">供應商倉庫</td><td data-zh="供應商（約定上限）" data-en="The supplier, up to an agreed cap" data-ja="サプライヤー（上限を合意）" data-ko="공급자(상한 합의)" data-fr="Le fournisseur, dans une limite convenue" data-es="El proveedor, con un tope acordado">供應商（約定上限）</td><td data-zh="客戶下單時開票" data-en="Invoiced when the customer orders" data-ja="顧客の発注時点で請求" data-ko="고객 발주 시 청구" data-fr="Facturé à la commande du client" data-es="Facturado al pedido del cliente">客戶下單時開票</td><td data-zh="客戶週轉快、不想壓貨" data-en="Fast turnaround, no desire to hold stock" data-ja="回転が速く在庫を持ちたくない" data-ko="회전이 빠르고 재고를 두기 싫은 경우" data-fr="Rotation rapide, sans vouloir stocker" data-es="Rotación rápida sin querer almacenar">客戶週轉快、不想壓貨</td></tr>
+        <tr><td data-zh="寄售 / VMI" data-en="Consignment / VMI" data-ja="委託在庫 / VMI" data-ko="위탁 재고 / VMI" data-fr="Consignation / VMI" data-es="Consigna / VMI">寄售 / VMI</td><td data-zh="客戶倉或第三方倉" data-en="Customer or third-party warehouse" data-ja="顧客倉または第三者倉" data-ko="고객 또는 제3자 창고" data-fr="Entrepôt client ou tiers" data-es="Almacén del cliente o de un tercero">客戶倉或第三方倉</td><td data-zh="供應商，直到被領用" data-en="The supplier, until the goods are drawn" data-ja="払い出されるまでサプライヤー" data-ko="출고될 때까지 공급자" data-fr="Le fournisseur jusqu'au prélèvement" data-es="El proveedor hasta el consumo">供應商，直到被領用</td><td data-zh="按實際領用量月度開票" data-en="Monthly, on actual consumption" data-ja="実際の払い出し量で月次請求" data-ko="실제 출고량 기준 월 청구" data-fr="Mensuel, sur la consommation réelle" data-es="Mensual, según consumo real">按實際領用量月度開票</td><td data-zh="SKU 少、消耗可預測、斷料代價高" data-en="Few SKUs, predictable draw, costly stockouts" data-ja="SKUが少なく消費が予測でき、欠品コストが高い" data-ko="SKU 적고 소비 예측 가능, 결품 비용 큼" data-fr="Peu de références, consommation prévisible, rupture coûteuse" data-es="Pocas referencias, consumo previsible, rotura costosa">SKU 少、消耗可預測、斷料代價高</td></tr>
+      </table>
+
+      <h2 data-zh="2. 什麼條件下寄售才划算"
+          data-en="2. When Consignment Actually Pays"
+          data-ja="2. 委託在庫が割に合う条件"
+          data-ko="2. 위탁 재고가 이득이 되는 조건"
+          data-fr="2. Quand la consignation est réellement rentable"
+          data-es="2. Cuándo compensa realmente la consignación">2. 什麼條件下寄售才划算</h2>
+      <ul>
+        <li data-zh="用量可預測：同一款連續翻單，月用量波動大致在正負三成以內，水位纔好算。"
+            data-en="Predictable usage: the same style reorders continuously and monthly volume stays within roughly plus or minus thirty per cent, which is what makes a stock level calculable."
+            data-ja="使用量が予測できること。同じ型番の追加発注が続き、月次使用量の変動がおおむねプラスマイナス3割以内なら、水準を計算できます。"
+            data-ko="사용량 예측 가능: 같은 스타일의 재발주가 이어지고 월 사용량 변동이 대략 ±30% 이내여야 수준을 계산할 수 있습니다."
+            data-fr="Consommation prévisible : la même référence est réassortie en continu et le volume mensuel varie d'environ plus ou moins trente pour cent, ce qui rend le niveau calculable."
+            data-es="Consumo previsible: la misma referencia se repone de forma continua y el volumen mensual varía en torno a más o menos un treinta por ciento, lo que hace calculable el nivel.">用量可預測：同一款連續翻單，月用量波動大致在正負三成以內，水位纔好算。</li>
+        <li data-zh="SKU 少而精：寄售適合 5 到 20 個常備碼；把幾十上百個 SKU 全部放上寄售，管理成本會喫掉省下的資金。"
+            data-en="Few, well-chosen SKUs: consignment suits five to twenty standing items; putting dozens or hundreds of SKUs on consignment lets the administrative cost eat the capital it saves."
+            data-ja="SKUは絞る。常備5〜20品番程度が適正で、数十〜百品番を委託にすると管理コストが節減分を上回ります。"
+            data-ko="SKU는 소수로: 상비 5~20개 품번이 적정하며 수십~수백 개를 위탁에 올리면 관리 비용이 절감분을 잠식합니다."
+            data-fr="Peu de références, bien choisies : cinq à vingt articles courants conviennent ; mettre des dizaines ou centaines de références en consignation fait manger l'économie par l'administratif."
+            data-es="Pocas referencias y bien elegidas: entre cinco y veinte artículos habituales; poner decenas o cientos de referencias en consigna hace que el coste administrativo se coma el ahorro.">SKU 少而精：寄售適合 5 到 20 個常備碼；把幾十上百個 SKU 全部放上寄售，管理成本會喫掉省下的資金。</li>
+        <li data-zh="單件價值低、斷料代價高：一箱洗水標或吊粒的貨值有限，可一旦缺貨停線，損失往往遠超庫存佔用的資金。"
+            data-en="Low unit value, high cost of a stockout: a carton of care labels or fasteners ties up little money, but one missing item stopping a line costs far more than the capital held."
+            data-ja="単価が低く欠品コストが高いこと。洗濯ラベルやタグ止め具は1箱の金額は小さいものの、欠品でラインが止まれば在庫資金をはるかに超える損害になります。"
+            data-ko="단가가 낮고 결품 비용이 큼: 세탁 라벨이나 고정구 한 박스의 가액은 작지만 결품으로 라인이 멈추면 재고 자금을 훨씬 넘는 손실이 납니다."
+            data-fr="Faible valeur unitaire, rupture coûteuse : un carton d'étiquettes d'entretien ou d'attaches immobilise peu d'argent, mais une pièce manquante qui arrête une ligne coûte bien plus que le capital immobilisé."
+            data-es="Valor unitario bajo y rotura costosa: una caja de etiquetas de cuidado o enganches inmoviliza poco dinero, pero una pieza que pare la línea cuesta mucho más que el capital retenido.">單件價值低、斷料代價高：一箱洗水標或吊粒的貨值有限，可一旦缺貨停線，損失往往遠超庫存佔用的資金。</li>
+        <li data-zh="補貨週期長於客戶能忍受的缺口：海運 25 到 35 天的線路，寄售的價值最明顯。"
+            data-en="Replenishment longer than the customer can tolerate: on a lane where sea freight takes 25 to 35 days, consignment shows its value most clearly."
+            data-ja="補充リードタイムが顧客の許容欠品期間より長いこと。海上輸送25〜35日の路線では委託の効果が最も出ます。"
+            data-ko="보충 리드타임이 고객이 견딜 수 있는 결품 기간보다 김: 해상 25~35일 노선에서 위탁 효과가 가장 큽니다."
+            data-fr="Un réapprovisionnement plus long que ce que le client tolère : sur une liaison à 25–35 jours de mer, la consignation montre tout son intérêt."
+            data-es="Reposición más larga de lo que el cliente tolera: en una ruta con 25 a 35 días de mar, la consignación muestra todo su valor.">補貨週期長於客戶能忍受的缺口：海運 25 到 35 天的線路，寄售的價值最明顯。</li>
+        <li data-zh="客戶願意給數據：至少每週提供庫存與消耗，否則 VMI 只是把貨搬到客戶那邊，不叫管理。"
+            data-en="A customer willing to share data: at least weekly stock and consumption figures, otherwise VMI is just stock parked at the customer's site, not management."
+            data-ja="顧客がデータを出すこと。少なくとも週次の在庫と消費量の共有が必要で、それがなければVMIは単なる「置き荷」です。"
+            data-ko="고객이 데이터를 제공: 최소 주간 재고와 소비량을 공유해야 하며, 아니면 VMI는 물건을 옮겨 둔 것일 뿐입니다."
+            data-fr="Un client prêt à partager les données : au minimum stock et consommation chaque semaine, sinon le VMI n'est qu'un stock garé chez le client."
+            data-es="Un cliente dispuesto a compartir datos: al menos stock y consumo semanales; sin eso, el VMI es solo mercancía aparcada en el cliente.">客戶願意給數據：至少每週提供庫存與消耗，否則 VMI 只是把貨搬到客戶那邊，不叫管理。</li>
+      </ul>
+
+      <h2 data-zh="3. 庫存水位怎麼算"
+          data-en="3. Setting the Stock Level"
+          data-ja="3. 在庫水準の計算"
+          data-ko="3. 재고 수준 계산"
+          data-fr="3. Calculer le niveau de stock"
+          data-es="3. Cómo calcular el nivel de stock">3. 庫存水位怎麼算</h2>
+      <p data-zh="水位不是拍腦袋定的，三個數就能搭起框架：日均消耗（D）、補貨提前期（L）、安全庫存（S）。剩下的都是在這三個數上調係數。"
+         data-en="A stock level is not a guess. Three numbers build the frame: average daily consumption (D), replenishment lead time (L) and safety stock (S). Everything else is adjusting the coefficients between them."
+         data-ja="在庫水準は勘で決めるものではありません。三つの数値で枠組みが作れます。日平均消費量（D）、補充リードタイム（L）、安全在庫（S）です。あとはこの三つの係数を調整するだけです。"
+         data-ko="재고 수준은 감으로 정하지 않습니다. 세 숫자로 틀이 잡힙니다. 일평균 소비량(D), 보충 리드타임(L), 안전 재고(S)입니다. 나머지는 이 세 수치의 계수 조정입니다."
+         data-fr="Un niveau de stock ne se devine pas. Trois chiffres en donnent la trame : consommation journalière moyenne (D), délai de réapprovisionnement (L) et stock de sécurité (S). Le reste consiste à ajuster les coefficients."
+         data-es="Un nivel de stock no se adivina. Tres cifras dan la estructura: consumo diario medio (D), plazo de reposición (L) y stock de seguridad (S). Lo demás es ajustar coeficientes.">水位不是拍腦袋定的，三個數就能搭起框架：日均消耗（D）、補貨提前期（L）、安全庫存（S）。剩下的都是在這三個數上調係數。</p>
+      <ul>
+        <li data-zh="補貨點 = D × L + S。安全庫存常見取 D × L 的三成到五成，波動大的品種可以按 1 到 1.65 倍標準差計算。"
+            data-en="Reorder point = D × L + S. Safety stock is commonly thirty to fifty per cent of D × L; for volatile items use one to 1.65 standard deviations instead."
+            data-ja="発注点 = D × L + S。安全在庫は D × L の3〜5割が一般的で、変動が大きい品番は標準偏差の1〜1.65倍で計算します。"
+            data-ko="발주점 = D × L + S. 안전 재고는 D × L의 30~50%가 일반적이며, 변동이 큰 품번은 표준편차의 1~1.65배로 계산합니다."
+            data-fr="Point de commande = D × L + S. Le stock de sécurité représente couramment trente à cinquante pour cent de D × L ; pour les articles volatils, comptez un à 1,65 écart-type."
+            data-es="Punto de pedido = D × L + S. El stock de seguridad suele ser un treinta a un cincuenta por ciento de D × L; en artículos volátiles, entre uno y 1,65 desviaciones típicas.">補貨點 = D × L + S。安全庫存常見取 D × L 的三成到五成，波動大的品種可以按 1 到 1.65 倍標準差計算。</li>
+        <li data-zh="最高水位 = 補貨點 + 每次補貨批量。批量不要低於供應商的最小起訂量：吊牌試單常見 2000 到 3000 張，織嘜與洗水標常在 1000 米或 300 到 500 件起。"
+            data-en="Maximum level = reorder point + replenishment lot. Keep the lot above the supplier's minimum: trial orders for hang tags commonly start at 2,000 to 3,000 pieces, woven and care labels often at 1,000 metres or 300 to 500 pieces."
+            data-ja="最大水準 = 発注点 + 1回の発注ロット。ロットは最小発注量を下回らないようにします。ハンガータグの試作は2,000〜3,000枚、織ラベルや洗濯ラベルは1,000mまたは300〜500枚が目安です。"
+            data-ko="최고 수준 = 발주점 + 1회 보충 로트. 로트는 최소 주문량 이상으로 유지합니다. 행택 시험 주문은 보통 2,000~3,000장, 직조·세탁 라벨은 1,000m 또는 300~500개부터입니다."
+            data-fr="Niveau maximum = point de commande + lot de réapprovisionnement. Gardez le lot au-dessus du minimum fournisseur : pour les étiquettes suspendues, les essais démarrent couramment à 2 000–3 000 pièces, et pour les tissées ou d'entretien à 1 000 mètres ou 300–500 pièces."
+            data-es="Nivel máximo = punto de pedido + lote de reposición. Mantén el lote por encima del mínimo del proveedor: en etiquetas colgantes los ensayos suelen partir de 2.000 a 3.000 unidades y en tejidas o de cuidado de 1.000 metros o 300 a 500 unidades.">最高水位 = 補貨點 + 每次補貨批量。批量不要低於供應商的最小起訂量：吊牌試單常見 2000 到 3000 張，織嘜與洗水標常在 1000 米或 300 到 500 件起。</li>
+        <li data-zh="每月覆盤一次實際消耗與預測的偏差。連續兩個月偏差超過三成，說明該調水位或收緊預測，而不是繼續加庫存。"
+            data-en="Review actual against forecast monthly. If the deviation exceeds thirty per cent two months running, the level or the forecast needs adjusting, not more stock."
+            data-ja="月次で実績と予測の乖離を確認します。2か月連続で3割を超えるなら、在庫を増やすのではなく水準か予測を見直す合図です。"
+            data-ko="매월 실적과 예측의 차이를 점검합니다. 두 달 연속 30%를 넘으면 재고를 늘릴 것이 아니라 수준이나 예측을 조정할 신호입니다."
+            data-fr="Comparez réel et prévision chaque mois. Si l'écart dépasse trente pour cent deux mois de suite, il faut ajuster le niveau ou la prévision, pas ajouter du stock."
+            data-es="Revisa mensualmente real contra previsión. Si la desviación supera el treinta por ciento dos meses seguidos, hay que ajustar el nivel o la previsión, no añadir stock.">每月覆盤一次實際消耗與預測的偏差。連續兩個月偏差超過三成，說明該調水位或收緊預測，而不是繼續加庫存。</li>
+        <li data-zh="用兩箱法或 min/max 看板能減少人工判斷：第一箱見底就觸發補貨，第二箱只作緩衝，規則越簡單越容易堅持執行。"
+            data-en="Two-bin or min/max boards cut down on human judgement: when the first bin empties, replenishment triggers, and the second bin is only buffer. The simpler the rule, the more likely it is followed."
+            data-ja="ツービン方式や min/max かんばんを使えば判断が減ります。1箱目が空になったら補充をかけ、2箱目は緩衝のみ。ルールが簡単なほど運用が続きます。"
+            data-ko="투빈(two-bin) 방식이나 min/max 간판을 쓰면 판단이 줄어듭니다. 첫 번째 박스가 비면 보충하고 두 번째는 완충용입니다. 규칙이 단순할수록 지켜집니다."
+            data-fr="La méthode des deux bacs ou un tableau min/max réduit le jugement humain : quand le premier bac se vide, le réassort se déclenche, le second n'est qu'un tampon. Plus la règle est simple, mieux elle est tenue."
+            data-es="El método de dos cajas o un tablero min/max reduce el juicio humano: cuando se vacía la primera caja se dispara la reposición y la segunda es solo colchón. Cuanto más simple la regla, mejor se cumple.">用兩箱法或 min/max 看板能減少人工判斷：第一箱見底就觸發補貨，第二箱只作緩衝，規則越簡單越容易堅持執行。</li>
+      </ul>
+
+      <h2 data-zh="4. 結算與對賬：寄售最容易吵架的地方"
+          data-en="4. Billing and Reconciliation: Where Consignment Argues Most"
+          data-ja="4. 請求と照合：委託在庫でもめる最大の論点"
+          data-ko="4. 청구와 정산: 위탁 재고에서 가장 다투는 부분"
+          data-fr="4. Facturation et rapprochement : le point de friction de la consignation"
+          data-es="4. Facturación y conciliación: donde más se discute la consigna">4. 結算與對賬：寄售最容易吵架的地方</h2>
+      <ul>
+        <li data-zh="所有權與風險轉移時點必須寫清：多數做法是「領用時轉移」，運輸與倉儲期間的損耗仍由供應商承擔；也有的約定到倉即轉移，價格隨之調整。兩種都可以，含糊不行。"
+            data-en="The point at which ownership and risk pass must be explicit. Most arrangements transfer on draw, leaving transit and storage losses with the supplier; others transfer on arrival, with the price adjusted accordingly. Either works, ambiguity does not."
+            data-ja="所有権とリスクの移転時点は明記が必須です。多くは払い出し時に移転し、輸送・保管中の損耗はサプライヤー負担とします。入庫時移転として価格を調整する方法もあります。どちらでも構いませんが、曖昧さは許されません。"
+            data-ko="소유권과 리스크 이전 시점은 반드시 명시합니다. 대부분 출고 시 이전하며 운송·보관 중 손실은 공급자가 부담합니다. 입고 시 이전하고 가격을 조정하는 방식도 있습니다. 어느 쪽이든 모호함은 안 됩니다."
+            data-fr="Le transfert de propriété et de risque doit être explicite. La plupart des montages transfèrent au prélèvement, les pertes de transport et de stockage restant au fournisseur ; d'autres transfèrent à l'arrivée, avec un prix ajusté. Les deux se défendent, l'ambiguïté non."
+            data-es="El momento de transmisión de propiedad y riesgo debe ser explícito. Lo habitual es transferir al consumo, dejando las mermas de transporte y almacenaje en el proveedor; otros transfieren a la llegada con el precio ajustado. Cualquiera vale, la ambigüedad no.">所有權與風險轉移時點必須寫清：多數做法是「領用時轉移」，運輸與倉儲期間的損耗仍由供應商承擔；也有的約定到倉即轉移，價格隨之調整。兩種都可以，含糊不行。</li>
+        <li data-zh="消耗式開票：按客戶實際的領用記錄（出庫單或系統數據）月度開票，對賬日固定下來，例如每月 5 日前核對上月。"
+            data-en="Consumption-based invoicing: invoice monthly against the customer's actual draw records, whether issue notes or system data, with a fixed reconciliation date such as the fifth of each month for the previous month."
+            data-ja="使用量ベースの請求：顧客の実際の払い出し記録（出庫票またはシステムデータ）で月次請求し、照合日を固定します。例えば毎月5日までに前月分を突き合わせます。"
+            data-ko="사용량 기준 청구: 고객의 실제 출고 기록(출고표 또는 시스템 데이터)으로 월 1회 청구하고 대조일을 고정합니다. 예를 들어 매월 5일까지 전월분을 확인합니다."
+            data-fr="Facturation à la consommation : émise mensuellement sur les bons de sortie ou les données du client, avec une date de rapprochement fixe, par exemple le 5 de chaque mois pour le mois précédent."
+            data-es="Facturación por consumo: mensual contra los registros reales de salida o datos del sistema, con fecha fija de conciliación, por ejemplo el día 5 de cada mes para el anterior.">消耗式開票：按客戶實際的領用記錄（出庫單或系統數據）月度開票，對賬日固定下來，例如每月 5 日前核對上月。</li>
+        <li data-zh="盤點差異：約定允許差異率（常見百分之正負一），超出部分由責任方承擔；盤點頻率建議每季度一次，或在換季前後各做一次。"
+            data-en="Count variances: agree a tolerance, commonly plus or minus one per cent, with anything beyond it borne by the responsible party. Count quarterly, or once before and after each season change."
+            data-ja="棚卸差異：許容差異率（通常プラスマイナス1%）を合意し、超過分は責任側が負担します。棚卸は四半期に1回、または季節の切り替え前後に各1回が目安です。"
+            data-ko="재고 실사 차이: 허용 차이율(보통 ±1%)을 합의하고 초과분은 책임 당사자가 부담합니다. 실사는 분기 1회, 또는 시즌 전환 전후 각 1회를 권합니다."
+            data-fr="Écarts d'inventaire : convenez d'une tolérance, souvent plus ou moins un pour cent, le surplus étant à la charge du responsable. Inventaire trimestriel, ou avant et après chaque changement de saison."
+            data-es="Diferencias de recuento: acuerda una tolerancia, habitualmente más o menos un uno por ciento, y el exceso a cargo de quien corresponda. Recuento trimestral, o antes y después de cada cambio de temporada.">盤點差異：約定允許差異率（常見百分之正負一），超出部分由責任方承擔；盤點頻率建議每季度一次，或在換季前後各做一次。</li>
+        <li data-zh="價格調整窗口：紙張、紗線、匯率都波動，約定每季度可調一次、調整需提前 30 天書面通知，比隨時漲價更容易維持長期合作。"
+            data-en="Price adjustment windows: paper, yarn and exchange rates all move, so agree a quarterly adjustment with thirty days' written notice; that holds a long relationship far better than ad hoc increases."
+            data-ja="価格改定の窓口：紙・糸・為替は変動するため、四半期に1回の改定と30日前の書面通知を合意します。随時の値上げより長期的な協力関係を保ちやすくなります。"
+            data-ko="가격 조정 창구: 종이, 원사, 환율이 모두 변동하므로 분기 1회 조정과 30일 전 서면 통지를 합의합니다. 수시 인상보다 장기 협력이 유지됩니다."
+            data-fr="Fenêtres de révision : papier, fil et devises bougent, donc convenez d'un ajustement trimestriel avec préavis écrit de trente jours ; c'est bien plus tenable qu'une hausse improvisée."
+            data-es="Ventanas de revisión de precio: papel, hilo y divisas se mueven, así que acuerda un ajuste trimestral con aviso escrito de treinta días; sostiene la relación mucho mejor que subir cuando convenga.">價格調整窗口：紙張、紗線、匯率都波動，約定每季度可調一次、調整需提前 30 天書面通知，比隨時漲價更容易維持長期合作。</li>
+        <li data-zh="幣種與匯率口徑：外幣結算時明確匯率取值方式，例如開票日中間價或上月均價。不寫口徑，最常在季度末變成爭議。"
+            data-en="Currency and rate basis: in foreign currency, state which rate applies, for example the mid-rate on the invoice date or last month's average. Leaving it open is the classic quarter-end dispute."
+            data-ja="通貨と為替の基準：外貨建てでは適用レートを明記します。請求日の中間相場か前月平均か。未記載のままにすると四半期末に必ず揉めます。"
+            data-ko="통화와 환율 기준: 외화 결제 시 적용 환율을 명시합니다. 청구일 매매기준율 또는 전월 평균 등입니다. 기준이 없으면 분기 말에 분쟁이 생깁니다."
+            data-fr="Devise et taux appliqué : en devise étrangère, précisez le taux retenu, par exemple le cours moyen du jour de facturation ou la moyenne du mois précédent. L'imprécision finit en litige en fin de trimestre."
+            data-es="Moneda y tipo aplicable: en divisa, especifica qué tipo se usa, por ejemplo el tipo medio del día de facturación o la media del mes anterior. La imprecisión acaba en disputa de fin de trimestre.">幣種與匯率口徑：外幣結算時明確匯率取值方式，例如開票日中間價或上月均價。不寫口徑，最常在季度末變成爭議。</li>
+      </ul>
+
+      <h2 data-zh="5. 落點選在哪裏：四種位置的取捨"
+          data-en="5. Where to Hold the Goods: Four Locations Compared"
+          data-ja="5. 置き場所の選択：四つの候補の比較"
+          data-ko="5. 보관 위치 선택: 네 가지 후보 비교"
+          data-fr="5. Où stocker : quatre emplacements comparés"
+          data-es="5. Dónde ubicar la mercancía: cuatro opciones comparadas">5. 落點選在哪裏：四種位置的取捨</h2>
+      <table>
+        <tr><th data-zh="落點" data-en="Location" data-ja="置き場所" data-ko="보관 위치" data-fr="Emplacement" data-es="Ubicación">落點</th><th data-zh="倉租誰出" data-en="Who pays storage" data-ja="倉庫費の負担" data-ko="창고료 부담" data-fr="Qui paie le stockage" data-es="Quién paga el almacenaje">倉租誰出</th><th data-zh="稅務與關務" data-en="Tax and customs" data-ja="税務・通関" data-ko="세무·통관" data-fr="Fiscalité et douane" data-es="Fiscalidad y aduana">稅務與關務</th><th data-zh="靈活性" data-en="Flexibility" data-ja="柔軟性" data-ko="유연성" data-fr="Souplesse" data-es="Flexibilidad">靈活性</th><th data-zh="適用" data-en="Suits" data-ja="向く場面" data-ko="적합한 경우" data-fr="Adapté à" data-es="Adecuado para">適用</th></tr>
+        <tr><td data-zh="供應商倉（境內）" data-en="Supplier warehouse (domestic)" data-ja="サプライヤー倉（国内）" data-ko="공급자 창고(국내)" data-fr="Entrepôt fournisseur (national)" data-es="Almacén del proveedor (nacional)">供應商倉（境內）</td><td data-zh="供應商" data-en="The supplier" data-ja="サプライヤー" data-ko="공급자" data-fr="Le fournisseur" data-es="El proveedor">供應商</td><td data-zh="最簡單" data-en="Simplest" data-ja="最も簡単" data-ko="가장 단순" data-fr="Le plus simple" data-es="Lo más simple">最簡單</td><td data-zh="最高，可改規格或合併出貨" data-en="Highest: specification changes and consolidated shipments are easy" data-ja="最も高い。仕様変更やまとめ出荷が容易" data-ko="가장 높음, 사양 변경·통합 출하 용이" data-fr="Maximale : changement de spécification et regroupement faciles" data-es="Máxima: cambios de especificación y envíos consolidados sencillos">最高，可改規格或合併出貨</td><td data-zh="首次合作、用量還不確定" data-en="First cooperation, usage still uncertain" data-ja="初回協力、使用量が未確定" data-ko="첫 협업, 사용량 미확정" data-fr="Première collaboration, usage incertain" data-es="Primera colaboración, uso aún incierto">首次合作、用量還不確定</td></tr>
+        <tr><td data-zh="客戶廠內或客戶倉" data-en="Inside the customer's plant or warehouse" data-ja="顧客工場内・顧客倉" data-ko="고객 공장 내·고객 창고" data-fr="Usine ou entrepôt du client" data-es="Planta o almacén del cliente">客戶廠內或客戶倉</td><td data-zh="通常分攤或客戶承擔" data-en="Usually shared or paid by the customer" data-ja="通常は分担または顧客負担" data-ko="보통 분담 또는 고객 부담" data-fr="Généralement partagé ou à la charge du client" data-es="Normalmente compartido o a cargo del cliente">通常分攤或客戶承擔</td><td data-zh="簡單" data-en="Simple" data-ja="簡単" data-ko="단순" data-fr="Simple" data-es="Simple">簡單</td><td data-zh="中，就近領用快" data-en="Medium: fast local draw" data-ja="中。近くから素早く払い出せる" data-ko="중간, 근거리 출고가 빠름" data-fr="Moyenne : prélèvement local rapide" data-es="Media: consumo local rápido">中，就近領用快</td><td data-zh="同城或同國、長期合作" data-en="Same city or country, long-term cooperation" data-ja="同一都市・同一国内の長期協力" data-ko="동일 도시·국가, 장기 협업" data-fr="Même ville ou pays, collaboration longue" data-es="Misma ciudad o país, cooperación larga">同城或同國、長期合作</td></tr>
+        <tr><td data-zh="保稅倉" data-en="Bonded warehouse" data-ja="保税倉庫" data-ko="보세창고" data-fr="Entrepôt sous douane" data-es="Depósito aduanero">保稅倉</td><td data-zh="供應商（含倉儲費）" data-en="The supplier, storage fees included" data-ja="サプライヤー（保管料込み）" data-ko="공급자(보관료 포함)" data-fr="Le fournisseur, frais inclus" data-es="El proveedor, con gastos incluidos">供應商（含倉儲費）</td><td data-zh="未清關不計進口稅，領用時清關" data-en="No import duty until cleared; cleared at draw" data-ja="通関前は輸入税なし、払い出し時に関税手続き" data-ko="통관 전 관세 없음, 출고 시 통관" data-fr="Pas de droits avant dédouanement, dédouané au prélèvement" data-es="Sin aranceles hasta el despacho; se despacha al consumo">未清關不計進口稅，領用時清關</td><td data-zh="中" data-en="Medium" data-ja="中" data-ko="중간" data-fr="Moyenne" data-es="Media">中</td><td data-zh="希望推遲繳納進口環節稅金" data-en="Delaying import taxes and duties" data-ja="輸入時税金の支払いを遅らせたい" data-ko="수입 세금 납부를 늦추고 싶은 경우" data-fr="Reporter les taxes et droits à l'importation" data-es="Aplazar impuestos y aranceles de importación">希望推遲繳納進口環節稅金</td></tr>
+        <tr><td data-zh="海外倉（客戶所在國）" data-en="Overseas warehouse (customer's country)" data-ja="海外倉（顧客の国）" data-ko="해외창(고객 국가)" data-fr="Entrepôt à l'étranger (pays du client)" data-es="Almacén en el extranjero (país del cliente)">海外倉（客戶所在國）</td><td data-zh="供應商" data-en="The supplier" data-ja="サプライヤー" data-ko="공급자" data-fr="Le fournisseur" data-es="El proveedor">供應商</td><td data-zh="已完成進口清關，稅負提前" data-en="Import already cleared, taxes paid earlier" data-ja="輸入通関済みで税負担は前倒し" data-ko="수입 통관 완료, 세금 선납" data-fr="Import déjà dédouané, taxes payées plus tôt" data-es="Importación ya despachada, impuestos pagados antes">已完成進口清關，稅負提前</td><td data-zh="中高，本地週轉明顯變快" data-en="Medium to high: local turnaround speeds up markedly" data-ja="中〜高。現地回転が明確に速くなる" data-ko="중간~높음, 현지 회전이 크게 빨라짐" data-fr="Moyenne à élevée : la rotation locale s'accélère nettement" data-es="Media-alta: la rotación local se acelera claramente">中高，本地週轉明顯變快</td><td data-zh="海運週期長，客戶要求 48 到 72 小時補貨" data-en="Long sea transit with a 48 to 72 hour replenishment expectation" data-ja="海上輸送が長く、48〜72時間での補充を求められる" data-ko="해상 운송이 길고 48~72시간 보충 요구" data-fr="Transit maritime long, réassort attendu en 48 à 72 heures" data-es="Tránsito marítimo largo y reposición exigida en 48 a 72 horas">海運週期長，客戶要求 48 到 72 小時補貨</td></tr>
+      </table>
+
+      <h2 data-zh="6. 合同裏必須寫清的幾條"
+          data-en="6. Clauses That Have to Be Explicit"
+          data-ja="6. 契約に必ず明記すべき条項"
+          data-ko="6. 계약서에 반드시 명시할 조항"
+          data-fr="6. Les clauses à expliciter"
+          data-es="6. Cláusulas que deben quedar explícitas">6. 合同裏必須寫清的幾條</h2>
+      <ul>
+        <li data-zh="最低採購承諾：寄售不等於客戶沒有義務。約定年度最低消耗量或最低採購額，否則庫存風險單向壓在供應商一側。"
+            data-en="Minimum purchase commitment: consignment does not mean the customer has no obligation. Agree an annual minimum draw or minimum purchase value, or the stock risk sits entirely on one side."
+            data-ja="最低購入のコミットメント：委託は顧客に義務がないという意味ではありません。年間最低消費量または最低購入額を合意しないと、在庫リスクが一方的にサプライヤーへ寄ります。"
+            data-ko="최소 구매 약정: 위탁이 고객에게 의무가 없다는 뜻은 아닙니다. 연간 최소 소비량이나 최소 구매액을 합의하지 않으면 재고 리스크가 한쪽에만 쌓입니다."
+            data-fr="Engagement d'achat minimum : la consignation ne signifie pas que le client n'a aucune obligation. Convenez d'un volume ou d'un montant annuel minimum, sinon le risque de stock repose d'un seul côté."
+            data-es="Compromiso mínimo de compra: la consigna no significa que el cliente no tenga obligación. Acuerda un consumo o importe anual mínimo, o el riesgo de stock recae en un solo lado.">最低採購承諾：寄售不等於客戶沒有義務。約定年度最低消耗量或最低採購額，否則庫存風險單向壓在供應商一側。</li>
+        <li data-zh="庫存上限與滯銷處理：設一個最高水位，並約定超期未領用（例如 12 個月）的庫存由客戶按折扣價買斷或退回，運費由誰承擔寫清楚。"
+            data-en="Stock ceiling and slow-moving stock: set a maximum level and agree that items untouched beyond a period, twelve months for example, are either bought out at a discount or returned, with freight responsibility stated."
+            data-ja="在庫上限と滞留在庫の扱い：最大水準を定め、一定期間（例：12か月）払い出しのない在庫は顧客が割引価格で買い取るか返品する、運賃負担も明記します。"
+            data-ko="재고 상한과 장기 재고 처리: 최고 수준을 정하고 일정 기간(예: 12개월) 출고되지 않은 재고는 고객이 할인가로 매입하거나 반품하며 운임 부담을 명시합니다."
+            data-fr="Plafond de stock et stock dormant : fixez un niveau maximum et convenez que les articles non prélevés au-delà d'une durée, douze mois par exemple, sont rachetés à prix réduit ou retournés, avec prise en charge du transport précisée."
+            data-es="Tope de stock y mercancía parada: fija un nivel máximo y acuerda que lo no consumido más allá de un plazo, doce meses por ejemplo, se compre con descuento o se devuelva, indicando quién paga el transporte.">庫存上限與滯銷處理：設一個最高水位，並約定超期未領用（例如 12 個月）的庫存由客戶按折扣價買斷或退回，運費由誰承擔寫清楚。</li>
+        <li data-zh="版本與改版：輔料一旦改材質或改色號，舊庫存怎麼處理要提前寫。常見的做法是給一個過渡期，過渡期內新舊版本並行發貨。"
+            data-en="Versions and revisions: once a trim changes material or colour reference, the fate of old stock must be written in advance. The usual answer is a transition window during which both versions ship."
+            data-ja="版と改訂：副資材の素材や色番が変わったとき、旧在庫の扱いを事前に決めます。一般的には移行期間を設け、その間は新旧を併行して出荷します。"
+            data-ko="버전과 개정: 부자재의 소재나 색상 번호가 바뀌면 구재고 처리를 미리 정합니다. 보통 전환 기간을 두고 신구 버전을 병행 출하합니다."
+            data-fr="Versions et révisions : dès qu'un accessoire change de matière ou de référence couleur, le sort de l'ancien stock doit être écrit. La réponse habituelle est une période de transition avec expédition des deux versions."
+            data-es="Versiones y revisiones: cuando un accesorio cambia de material o de referencia de color, el destino del stock antiguo debe quedar escrito. Lo habitual es un periodo de transición con envío de ambas versiones.">版本與改版：輔料一旦改材質或改色號，舊庫存怎麼處理要提前寫。常見的做法是給一個過渡期，過渡期內新舊版本並行發貨。</li>
+        <li data-zh="質量責任與索賠時限：寄售貨在客戶倉發現不良，追溯方式與補貨時限要寫清，例如接到書面通知後三個工作日內補發。"
+            data-en="Quality liability and claim windows: when defects surface at the customer's warehouse, the traceability route and the replenishment deadline must be clear, three working days after written notice for instance."
+            data-ja="品質責任とクレーム期限：顧客倉で不良が見つかった場合の追跡方法と補充期限を明記します。例：書面通知から3営業日以内に補充発送。"
+            data-ko="품질 책임과 클레임 기한: 고객 창고에서 불량이 발견될 때 추적 방식과 보충 기한을 명시합니다. 예: 서면 통지 후 3영업일 내 보충 발송."
+            data-fr="Responsabilité qualité et délais de réclamation : si un défaut apparaît chez le client, la traçabilité et le délai de réassort doivent être clairs, par exemple trois jours ouvrés après notification écrite."
+            data-es="Responsabilidad de calidad y plazos de reclamación: si aparece un defecto en el almacén del cliente, deben quedar claros la trazabilidad y el plazo de reposición, por ejemplo tres días laborables tras el aviso escrito.">質量責任與索賠時限：寄售貨在客戶倉發現不良，追溯方式與補貨時限要寫清，例如接到書面通知後三個工作日內補發。</li>
+        <li data-zh="數據可見性：客戶應提供實時或至少每週的庫存與消耗數據。這是 VMI 能運轉的前提，也是把水位降下來的唯一依據。"
+            data-en="Data visibility: the customer provides real-time or at least weekly stock and consumption data. This is the premise that makes VMI work and the only basis for lowering the level."
+            data-ja="データの可視性：顧客はリアルタイム、または少なくとも週次の在庫・消費データを提供します。これがVMIの前提であり、水準を下げる唯一の根拠です。"
+            data-ko="데이터 가시성: 고객은 실시간 또는 최소 주간 재고·소비 데이터를 제공합니다. 이것이 VMI의 전제이며 수준을 낮출 수 있는 유일한 근거입니다."
+            data-fr="Visibilité des données : le client fournit les stocks et consommations en temps réel, ou au moins chaque semaine. C'est la condition du VMI et la seule base pour baisser le niveau."
+            data-es="Visibilidad de datos: el cliente facilita stock y consumo en tiempo real o al menos semanalmente. Es la premisa del VMI y la única base para bajar el nivel.">數據可見性：客戶應提供實時或至少每週的庫存與消耗數據。這是 VMI 能運轉的前提，也是把水位降下來的唯一依據。</li>
+        <li data-zh="終止與回購：合作終止時剩餘庫存的回購比例、時限與運費歸屬，一定要在開始時就寫，而不是等到分手那天再談。"
+            data-en="Termination and buy-back: the buy-back ratio for remaining stock, the deadline and who pays freight should be written at the start, not negotiated on the day the partnership ends."
+            data-ja="終了と買い戻し：契約終了時の残存在庫の買い取り比率、期限、運賃負担は開始時に決めます。終わる日に話し合うものではありません。"
+            data-ko="종료와 매입: 계약 종료 시 잔여 재고의 매입 비율, 기한, 운임 부담은 시작할 때 정합니다. 끝나는 날 협상할 사항이 아닙니다."
+            data-fr="Résiliation et rachat : le taux de rachat du stock restant, le délai et la charge du transport s'écrivent au départ, pas le jour de la séparation."
+            data-es="Terminación y recompra: el porcentaje de recompra del stock restante, el plazo y quién paga el transporte deben escribirse al inicio, no el día de la ruptura.">終止與回購：合作終止時剩餘庫存的回購比例、時限與運費歸屬，一定要在開始時就寫，而不是等到分手那天再談。</li>
+        <li data-zh="排他性：是否要求該品類獨家供應，會直接影響後續比價空間，建議約定一段時間的獨家，而不是無限期。"
+            data-en="Exclusivity: whether the supplier is exclusive for the category affects future negotiating room, so bound it by time rather than leaving it open-ended."
+            data-ja="独占性：そのカテゴリーを独占供給とするかは、今後の価格交渉余地に直結します。無期限ではなく期間を区切ることを勧めます。"
+            data-ko="독점성: 해당 카테고리 독점 공급 여부는 향후 가격 협상 여지에 직접 영향을 줍니다. 무기한보다 기간을 정하는 편이 좋습니다."
+            data-fr="Exclusivité : imposer un fournisseur unique pour la catégorie réduit la marge de négociation future ; mieux vaut la borner dans le temps que la laisser ouverte."
+            data-es="Exclusividad: exigir proveedor único para la categoría reduce el margen de negociación futuro; conviene acotarla en el tiempo en lugar de dejarla abierta.">排他性：是否要求該品類獨家供應，會直接影響後續比價空間，建議約定一段時間的獨家，而不是無限期。</li>
+      </ul>
+
+      <h2 data-zh="7. 洽談寄售時請提供這六項"
+          data-en="7. Six Items to Bring to a Consignment Discussion"
+          data-ja="7. 委託在庫の打ち合わせで用意すべき6項目"
+          data-ko="7. 위탁 재고 협의 시 준비할 6가지"
+          data-fr="7. Six éléments à apporter à une discussion de consignation"
+          data-es="7. Seis datos para la conversación sobre consigna">7. 洽談寄售時請提供這六項</h2>
+      <ul>
+        <li data-zh="常備 SKU 清單與單件規格：材質、尺寸、工藝與包裝方式。"
+            data-en="The list of standing SKUs with per-item specifications: material, size, process and packing."
+            data-ja="常備SKUのリストと各品番の仕様：素材、寸法、加工、梱包方法。"
+            data-ko="상비 SKU 목록과 품목별 사양: 소재, 치수, 가공, 포장 방식."
+            data-fr="La liste des références courantes avec leurs spécifications : matière, dimensions, procédé et conditionnement."
+            data-es="La lista de referencias habituales con especificaciones: material, medidas, proceso y embalaje.">常備 SKU 清單與單件規格：材質、尺寸、工藝與包裝方式。</li>
+        <li data-zh="每款的月均消耗與季節波動：旺季是淡季的幾倍。"
+            data-en="Monthly consumption per item and the seasonal swing: how many times busier the peak is."
+            data-ja="品番ごとの月平均消費量と季節変動：繁忙期が閑散期の何倍か。"
+            data-ko="품번별 월평균 소비량과 계절 변동: 성수기가 비수기의 몇 배인지."
+            data-fr="La consommation mensuelle par article et l'amplitude saisonnière : combien de fois le pic dépasse le creux."
+            data-es="Consumo mensual por artículo y oscilación estacional: cuántas veces el pico supera al valle.">每款的月均消耗與季節波動：旺季是淡季的幾倍。</li>
+        <li data-zh="現有補貨提前期與最不能接受的斷料天數。"
+            data-en="Your current replenishment lead time and the longest stockout you can accept."
+            data-ja="現在の補充リードタイムと、許容できない欠品日数。"
+            data-ko="현재 보충 리드타임과 허용할 수 없는 결품 일수."
+            data-fr="Votre délai de réapprovisionnement actuel et la durée de rupture maximale acceptable."
+            data-es="Tu plazo actual de reposición y la rotura máxima que puedes aceptar.">現有補貨提前期與最不能接受的斷料天數。</li>
+        <li data-zh="期望的落點與倉庫所在地：供應商倉、廠內、保稅倉還是海外倉。"
+            data-en="The preferred location and its city: supplier warehouse, your plant, bonded or overseas."
+            data-ja="希望する置き場所と倉庫所在地：サプライヤー倉、工場内、保税倉、海外倉のいずれか。"
+            data-ko="희망 보관 위치와 창고 소재지: 공급자 창고, 공장 내, 보세창고, 해외창 중 선택."
+            data-fr="L'emplacement souhaité et sa ville : entrepôt fournisseur, votre usine, sous douane ou à l'étranger."
+            data-es="La ubicación deseada y su ciudad: almacén del proveedor, tu planta, depósito aduanero o extranjero.">期望的落點與倉庫所在地：供應商倉、廠內、保稅倉還是海外倉。</li>
+        <li data-zh="結算週期、幣種與賬期：月結還是雙月結，賬期多少天。"
+            data-en="Billing cycle, currency and payment terms: monthly or bimonthly, and how many days."
+            data-ja="請求サイクル、通貨、支払条件：月次か隔月か、サイト何日か。"
+            data-ko="청구 주기, 통화, 결제 조건: 월 결제 또는 격월 결제, 지급 기한."
+            data-fr="Cycle de facturation, devise et conditions de paiement : mensuel ou bimestriel, et à combien de jours."
+            data-es="Ciclo de facturación, divisa y condiciones de pago: mensual o bimestral, y a cuántos días.">結算週期、幣種與賬期：月結還是雙月結，賬期多少天。</li>
+        <li data-zh="年度用量預估與最低採購承諾：能給出承諾的量級，供應商纔有空間把價格與水位一起優化。"
+            data-en="Annual volume forecast and the minimum commitment you can offer: with a committed volume the supplier has room to optimise both price and level."
+            data-ja="年間使用量の予測と最低購入コミットメント：コミットできる量があれば、サプライヤーは価格と水準を同時に最適化できます。"
+            data-ko="연간 사용량 예측과 최소 구매 약정: 약정 물량이 있으면 공급자가 가격과 재고 수준을 함께 최적화할 수 있습니다."
+            data-fr="Prévision annuelle et engagement minimum : avec un volume engagé, le fournisseur peut optimiser à la fois prix et niveau."
+            data-es="Previsión anual y compromiso mínimo: con un volumen comprometido el proveedor puede optimizar precio y nivel a la vez.">年度用量預估與最低採購承諾：能給出承諾的量級，供應商纔有空間把價格與水位一起優化。</li>
+      </ul>
+
+      <div class="callout" data-zh="<strong>💡 提示：</strong>寄售不是「把倉庫搬到客戶那邊」，本質是用信息換庫存——客戶給出真實的消耗數據，供應商纔敢把水位降下來，雙方一起省下資金佔用。數據不透明的時候，寄售只會變成更貴的壓貨。談之前先問一句：客戶能每週給庫存與領用數據嗎？"
+           data-en="<strong>💡 Tip:</strong> consignment is not moving a warehouse to the customer's site; it is trading information for inventory. Only when the customer shares real consumption data can the supplier lower the level, and only then do both sides free up capital. Without transparency, consignment is just more expensive stock. Before talking, ask one question: can the customer send stock and draw data every week?"
+           data-ja="<strong>💡 ヒント：</strong>委託在庫は「倉庫を顧客側に移す」ことではなく、情報と在庫を交換することです。顧客が実際の消費データを出して初めてサプライヤーは水準を下げられ、双方が資金を解放できます。透明性がなければ、委託はより高くつく置き荷にすぎません。話を始める前に一つ確認しましょう。顧客は毎週、在庫と払い出しデータを出せますか。"
+           data-ko="<strong>💡 팁:</strong> 위탁 재고는 창고를 고객 쪽으로 옮기는 것이 아니라 정보와 재고를 맞바꾸는 것입니다. 고객이 실제 소비 데이터를 제공해야 공급자가 수준을 낮출 수 있고 양쪽이 자금을 확보합니다. 투명성이 없으면 위탁은 더 비싼 적치일 뿐입니다. 상담 전에 한 가지를 확인하십시오. 고객이 매주 재고와 출고 데이터를 보낼 수 있습니까?"
+           data-fr="<strong>💡 Conseil :</strong> la consignation n'est pas un déménagement d'entrepôt chez le client, c'est un échange d'informations contre du stock. Ce n'est que lorsque le client partage sa consommation réelle que le fournisseur peut baisser le niveau et que les deux parties libèrent du capital. Sans transparence, la consignation n'est qu'un stock plus cher. Avant d'en parler, posez une question : le client peut-il envoyer stock et prélèvements chaque semaine ?"
+           data-es="<strong>💡 Consejo:</strong> la consigna no es trasladar un almacén al cliente, es cambiar información por inventario. Solo cuando el cliente comparte su consumo real el proveedor puede bajar el nivel y ambos liberan capital. Sin transparencia, la consigna es solo stock más caro. Antes de hablar, haz una pregunta: ¿el cliente puede enviar stock y consumos cada semana?"><strong>💡 提示：</strong>寄售不是「把倉庫搬到客戶那邊」，本質是用信息換庫存——客戶給出真實的消耗數據，供應商纔敢把水位降下來，雙方一起省下資金佔用。數據不透明的時候，寄售只會變成更貴的壓貨。談之前先問一句：客戶能每週給庫存與領用數據嗎？</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="garment-trims-inventory-management.html" data-zh="輔料庫存管理：安全庫存、補貨點與呆滯料處理" data-en="Trims Inventory Management: Safety Stock, Reorder Points and Slow Movers" data-ja="副資材の在庫管理：安全在庫・発注点・滞留在庫の処理" data-ko="부자재 재고 관리: 안전 재고, 발주점, 장기 재고 처리" data-fr="Gestion des stocks d'accessoires : stock de sécurité, points de commande et dormants" data-es="Gestión de inventario de accesorios: stock de seguridad, puntos de pedido y parados">輔料庫存管理：安全庫存、補貨點與呆滯料處理</a></li>
+        <li><a href="small-batch-fast-reorder-trims.html" data-zh="小單快反：輔料小批量與快速翻單方案" data-en="Small Batch, Fast Reorder: Trims for Quick Turnaround" data-ja="小ロット快速リピート：副資材の小口発注と素早い追加生産" data-ko="소량·신속 재주문: 부자재 소량 발주와 빠른 리오더" data-fr="Petits lots et réassort rapide : accessoires pour cycles courts" data-es="Lotes pequeños y reposición rápida: accesorios para ciclos cortos">小單快反：輔料小批量與快速翻單方案</a></li>
+        <li><a href="trim-supply-continuity-guide.html" data-zh="輔料供應連續性：斷供預案與備選供應商" data-en="Trims Supply Continuity: Contingency Plans and Backup Suppliers" data-ja="副資材の供給継続：断供への備えと代替サプライヤー" data-ko="부자재 공급 연속성: 공급 중단 대비와 대체 공급자" data-fr="Continuité d'approvisionnement : plans de secours et fournisseurs alternatifs" data-es="Continuidad de suministro: planes de contingencia y proveedores alternativos">輔料供應連續性：斷供預案與備選供應商</a></li>
+        <li><a href="garment-trims-lead-time-guide.html" data-zh="輔料交期指南：打樣、生產與大貨排期" data-en="Trims Lead Time Guide: Sampling, Production and Bulk Scheduling" data-ja="副資材のリードタイム：試作・生産・量産日程" data-ko="부자재 리드타임 가이드: 샘플, 생산, 양산 일정" data-fr="Guide des délais : échantillons, production et planning" data-es="Guía de plazos: muestras, producción y planificación">輔料交期指南：打樣、生產與大貨排期</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="正在考慮把常用輔料放在客戶倉或海外倉備料？把 SKU 清單、月均消耗與落點告訴我們，我們按您的補貨週期算出建議水位與結算方案，先寄實物樣品確認規格。"
+           data-en="Considering holding your everyday trims at the customer's site or in an overseas warehouse? Send the SKU list, monthly consumption and preferred location — we will propose stock levels and a billing scheme around your replenishment cycle, with physical samples first."
+           data-ja="常用副資材を顧客倉や海外倉に置くことを検討中ですか。SKUリスト、月平均消費量、置き場所をお送りください。補充サイクルに合わせた推奨水準と請求スキームをご提案し、まず実物サンプルで仕様をご確認いただきます。"
+           data-ko="상용 부자재를 고객 창고나 해외창에 두는 방안을 검토 중이십니까? SKU 목록, 월평균 소비량, 희망 보관 위치를 보내주십시오. 보충 주기에 맞춘 권장 수준과 정산 방식을 제안하고 먼저 실물 샘플로 사양을 확인하실 수 있습니다."
+           data-fr="Vous envisagez de stocker vos accessoires courants chez le client ou dans un entrepôt à l'étranger ? Envoyez la liste des références, la consommation mensuelle et l'emplacement souhaité : nous proposons niveaux et schéma de facturation adaptés à votre cycle, avec échantillons physiques d'abord."
+           data-es="¿Planteas guardar tus accesorios habituales en el cliente o en un almacén en el extranjero? Envía la lista de referencias, el consumo mensual y la ubicación deseada: propondremos niveles y un esquema de facturación acorde a tu ciclo, con muestras físicas primero.">正在考慮把常用輔料放在客戶倉或海外倉備料？把 SKU 清單、月均消耗與落點告訴我們，我們按您的補貨週期算出建議水位與結算方案，先寄實物樣品確認規格。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取寄售備料方案 →" data-en="Discuss a consignment plan →" data-ja="委託在庫のご相談 →" data-ko="위탁 재고 상담 →" data-fr="Discuter d'un plan de consignation →" data-es="Consultar un plan de consigna →">獲取寄售備料方案 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
