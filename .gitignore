@@ -1,2 +1,4 @@
 *.bak_v*
 __pycache__/
+_live_sitemap.xml
+_indexnow_*.json
