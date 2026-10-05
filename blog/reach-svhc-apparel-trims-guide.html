@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報 | TAGE" data-en="REACH SVHC for Apparel Trims: 0.1% Threshold, Article 33 and SCIP | TAGE" data-ja="衣料副資材の REACH SVHC 対応ガイド：0.1% 閾値・通知義務・SCIP 届出 | TAGE" data-ko="의류 부자재 REACH SVHC 가이드: 0.1% 기준·고지 의무·SCIP 신고 | TAGE" data-fr="REACH SVHC et accessoires textiles : seuil 0,1 %, article 33 et SCIP | TAGE" data-es="REACH SVHC en accesorios textiles: umbral del 0,1 %, artículo 33 y SCIP | TAGE">REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報 | TAGE</title>
+<meta name="description" data-zh="服裝輔料出口歐盟要過的不只是禁限用清單：SVHC 含量超過 0.1% 就有告知義務，2021 年起還要做 SCIP 申報。本文講清閾值怎麼算、金屬件與軟 PVC 的風險點、替代選材與要備齊的合規文件，來自東莞泰閣包裝。"
+      data-en="REACH SVHC for apparel trims: how the 0.1% threshold is calculated, Article 33 duties, SCIP filing, high-risk materials and the documents EU buyers request." data-ja="衣料副資材の REACH SVHC 対応ガイド。0.1% 閾値の計算方法、Article 33 の情報伝達義務、SCIP への届出、金属部品や軟質 PVC の高リスク物質、低リスクへの置換、EU バイヤーが求める書類を整理。東莞泰閣包装。" data-ko="의류 부자재 REACH SVHC 가이드. 0.1% 기준 계산법, Article 33 정보 전달 의무, SCIP 신고, 금속 부품과 연질 PVC의 고위험 물질, 저위험 대체, EU 바이어가 요구하는 서류를 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="REACH SVHC pour les accessoires textiles : calcul du seuil de 0,1 %, obligations de l'article 33, dépôt SCIP, substances à risque et documents demandés par les acheteurs européens."
+      data-es="REACH SVHC en accesorios textiles: cálculo del umbral del 0,1 %, obligaciones del artículo 33, presentación SCIP, sustancias de riesgo y documentos que piden los compradores europeos."
+      content="服裝輔料出口歐盟要過的不只是禁限用清單：SVHC 含量超過 0.1% 就有告知義務，2021 年起還要做 SCIP 申報。本文講清閾值怎麼算、金屬件與軟 PVC 的風險點、替代選材與要備齊的合規文件，來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/reach-svhc-apparel-trims-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報",
+     "item": "https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報",
+   "url": "https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/reach-svhc-apparel-trims-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="REACH SVHC 合規" data-en="REACH SVHC" data-ja="REACH SVHC 対応" data-ko="REACH SVHC 대응" data-fr="REACH SVHC" data-es="REACH SVHC">REACH SVHC 合規</span></div>
+      <h1 data-zh="REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報" data-en="REACH SVHC for Apparel Trims: 0.1% Threshold, Article 33 and SCIP" data-ja="衣料副資材の REACH SVHC 対応ガイド：0.1% 閾値・通知義務・SCIP 届出" data-ko="의류 부자재 REACH SVHC 가이드: 0.1% 기준·고지 의무·SCIP 신고" data-fr="REACH SVHC et accessoires textiles : seuil de 0,1 %, article 33 et SCIP" data-es="REACH SVHC en accesorios textiles: umbral del 0,1 %, artículo 33 y SCIP">REACH SVHC 與服裝輔料合規指南：0.1% 閾值、告知義務與 SCIP 申報</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月5日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 5, 2026" data-ja="泰閣包装 · 2026年10月5日更新" data-ko="TAGE 패키징 · 2026년 10월 5일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 5 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 5 de octubre de 2026">泰閣包裝 · 更新於 2026年10月5日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="歐盟買家在詢價單裏問「輔料是否含 SVHC」時，要的從來不只是一份檢測報告，而是一條完整的證據鏈：SVHC 含量有沒有超過 0.1%（w/w）、超過時告知義務有沒有履行、SCIP 申報做了沒有、以及供貨方能不能出具材料聲明。REACH（歐盟法規 No 1907/2006）對服裝輔料的約束分兩層——一層是禁限用物質（Annex XVII），另一層是信息傳遞義務（SVHC 候選清單與 Article 33）。兩層都缺，貨到了歐盟一樣會被客戶退回或下架。"
+         data-en="When an EU buyer asks whether your trims contain SVHC, they are not asking for a test report — they are asking for an evidence chain: is any SVHC present above 0.1% (w/w), if so has the communication duty been met, has the SCIP submission been made, and can the supplier issue a material declaration? REACH (Regulation (EC) No 1907/2006) constrains apparel trims on two levels — restricted substances under Annex XVII, and the duty to pass information along the chain (the SVHC Candidate List and Article 33). Miss either layer and the goods can still be rejected or delisted in the EU."
+         data-ja="EU のバイヤーが「副資材に SVHC は含まれますか」と尋ねるとき、求めているのは試験報告書ではなく証拠の連鎖です。SVHC が 0.1%（w/w）を超えて含まれるか、超える場合に情報伝達義務を果たしたか、SCIP への届出を行ったか、そして材料宣言書を発行できるか。REACH（EU 規則 No 1907/2006）は衣料副資材を二層で規律します。ひとつは Annex XVII の制限物質、もうひとつは情報伝達義務（候補リストと Article 33）です。どちらかが欠けると、EU 到着後も返品や販売停止の対象になり得ます。"
+         data-ko="EU 바이어가 부자재에 SVHC가 포함되어 있는지 물을 때 원하는 것은 시험 성적서 한 장이 아니라 증거 체인입니다. SVHC가 0.1%(w/w)를 초과하는지, 초과한다면 정보 전달 의무를 이행했는지, SCIP 신고를 했는지, 공급자가 물질 선언서를 발급할 수 있는지입니다. REACH(EU 규정 No 1907/2006)는 의류 부자재를 두 층으로 규율합니다. 하나는 Annex XVII의 제한 물질이고, 다른 하나는 정보 전달 의무(SVHC 후보 목록과 Article 33)입니다. 어느 한 층이 비면 EU에 도착한 뒤에도 반품되거나 판매 중단될 수 있습니다."
+         data-fr="Lorsqu'un acheteur européen demande si vos accessoires contiennent des SVHC, il ne demande pas un rapport d'essai mais une chaîne de preuves : y a-t-il un SVHC au-delà de 0,1 % (m/m), si oui l'obligation d'information a-t-elle été remplie, la déclaration SCIP a-t-elle été déposée, et le fournisseur peut-il délivrer une déclaration matière ? REACH (règlement (CE) n° 1907/2006) encadre les accessoires sur deux niveaux : les substances restreintes de l'Annexe XVII et l'obligation de transmission d'information (liste candidate et article 33). Si l'un des deux manque, la marchandise peut être refusée ou déréférencée dans l'UE."
+         data-es="Cuando un comprador de la UE pregunta si tus accesorios contienen SVHC, no pide un informe de ensayo, sino una cadena de pruebas: ¿hay algún SVHC por encima del 0,1 % (p/p)?, si lo hay, ¿se cumplió el deber de información?, ¿se presentó la declaración SCIP?, ¿puede el proveedor emitir una declaración de materiales? REACH (Reglamento (CE) n.º 1907/2006) afecta a los accesorios en dos niveles: sustancias restringidas del Anexo XVII y deber de transmisión de información (lista de candidatas y artículo 33). Si falta cualquier nivel, la mercancía puede rechazarse o retirarse del catálogo en la UE.">歐盟買家在詢價單裏問「輔料是否含 SVHC」時，要的從來不只是一份檢測報告，而是一條完整的證據鏈：SVHC 含量有沒有超過 0.1%（w/w）、超過時告知義務有沒有履行、SCIP 申報做了沒有、以及供貨方能不能出具材料聲明。REACH（歐盟法規 No 1907/2006）對服裝輔料的約束分兩層——一層是禁限用物質（Annex XVII），另一層是信息傳遞義務（SVHC 候選清單與 Article 33）。兩層都缺，貨到了歐盟一樣會被客戶退回或下架。</p>
+
+      <p data-zh="本文分七部分：REACH 對輔料的四條硬約束、輔料最常被查出的風險物質、0.1% 閾值怎麼算、SCIP 數據庫該誰申報、供應商要備齊哪些文件、從選材端降低風險，以及把 REACH 要求寫進詢價單的做法。"
+         data-en="This guide has seven parts: the four hard obligations REACH places on trims, the substances most often found in trims, how the 0.1% threshold is calculated, who files SCIP, which documents a supplier should hold, reducing risk at the material-selection stage, and how to write REACH requirements into a quotation request."
+         data-ja="本ガイドは7部構成です。REACH が副資材に課す4つの義務、副資材で最も多く検出される物質、0.1% 閾値の計算方法、SCIP の届出主体、供給者が用意すべき書類、選材段階でのリスク低減、そして見積依頼に REACH 要件を書き込む方法を扱います。"
+         data-ko="이 가이드는 일곱 부분으로 구성됩니다. REACH가 부자재에 부과하는 네 가지 의무, 부자재에서 가장 자주 검출되는 물질, 0.1% 기준 계산 방법, SCIP 신고 주체, 공급자가 갖춰야 할 서류, 소재 선정 단계의 위험 저감, 견적 요청서에 REACH 요건을 기재하는 방법입니다."
+         data-fr="Ce guide comporte sept parties : les quatre obligations fermes que REACH impose aux accessoires, les substances les plus souvent détectées, le calcul du seuil de 0,1 %, qui dépose SCIP, les documents à détenir, la réduction du risque dès le choix des matières et la rédaction des exigences REACH dans une demande de prix."
+         data-es="Esta guía tiene siete partes: las cuatro obligaciones firmes que REACH impone a los accesorios, las sustancias que más se detectan, cómo se calcula el umbral del 0,1 %, quién presenta SCIP, los documentos que debe tener el proveedor, la reducción del riesgo desde la elección de materiales y cómo redactar los requisitos REACH en una solicitud de precio.">本文分七部分：REACH 對輔料的四條硬約束、輔料最常被查出的風險物質、0.1% 閾值怎麼算、SCIP 數據庫該誰申報、供應商要備齊哪些文件、從選材端降低風險，以及把 REACH 要求寫進詢價單的做法。</p>
+
+      <h2 data-zh="一、REACH 對輔料的四條硬約束"
+          data-en="1. Four Hard Obligations REACH Places on Trims"
+          data-ja="1. REACH が副資材に課す4つの義務"
+          data-ko="1. REACH가 부자재에 부과하는 네 가지 의무"
+          data-fr="1. Les quatre obligations fermes de REACH pour les accessoires"
+          data-es="1. Las cuatro obligaciones firmes de REACH para los accesorios">一、REACH 對輔料的四條硬約束</h2>
+      <p data-zh="<strong>SVHC 候選清單</strong>：ECHA 每年 1 月與 6 月更新，目前約 250 項物質（寫稿與報價請以官網最新版本爲準）。物質一旦入單，只要在物品中的含量超過 0.1%（w/w），Article 33 就要求供應鏈向下遊客戶提供足夠信息，消費者提出請求時須在 45 天內免費答覆。<strong>Annex XVII 限制清單</strong>：偶氮染料、鎳釋放、鄰苯二甲酸酯、多環芳烴、鎘與鉛等條目設有直接限值，與是否入候選清單無關。<strong>SCIP 數據庫</strong>：自 2021 年 1 月 5 日起，投放歐盟市場、含超閾值 SVHC 的物品須申報到 ECHA 的 SCIP 數據庫。<strong>信息傳遞</strong>：化學品隨貨提供 SDS，物品要能出具成分聲明或 RSL 符合性聲明，並在材料或工藝變更時更新。"
+         data-en="<strong>SVHC Candidate List:</strong> ECHA updates it in January and June each year, with roughly 250 substances today (always check the current version before quoting). Once a substance is listed, Article 33 requires the supply chain to give downstream customers enough information whenever it is present in an article above 0.1% (w/w), and to answer consumer requests free of charge within 45 days. <strong>Annex XVII restrictions:</strong> azo colorants, nickel release, phthalates, PAHs, cadmium and lead carry direct limits regardless of the Candidate List. <strong>SCIP database:</strong> since 5 January 2021, articles placed on the EU market containing an SVHC above the threshold must be notified to ECHA's SCIP database. <strong>Information transfer:</strong> chemicals ship with an SDS, articles need a composition declaration or an RSL conformity statement, updated whenever materials or processes change."
+         data-ja="<strong>SVHC 候補リスト</strong>：ECHA が毎年1月と6月に更新し、現在は約250物質です（見積時は最新版を必ず確認してください）。物質がリストに載ると、物品中の含有量が 0.1%（w/w）を超える場合に Article 33 により、川下の顧客へ十分な情報を提供し、消費者からの請求には45日以内に無償で回答する義務が生じます。<strong>Annex XVII の制限</strong>：偶氮染料、ニッケル溶出、フタル酸エステル、多環芳香族炭化水素、カドミウムと鉛などは候補リストとは無関係に直接の限度値が設けられています。<strong>SCIP データベース</strong>：2021年1月5日以降、閾値を超える SVHC を含む物品を EU 市場に投入する際は ECHA の SCIP への届出が必要です。<strong>情報伝達</strong>：化学品は SDS を、物品は組成宣言書または RSL 適合宣言書を用意し、材料や工程の変更時に更新します。"
+         data-ko="<strong>SVHC 후보 목록</strong>: ECHA가 매년 1월과 6월에 갱신하며 현재 약 250개 물질입니다(견적 시 최신본을 확인하세요). 물질이 목록에 오르면 물품 내 함량이 0.1%(w/w)를 초과할 때마다 Article 33에 따라 하위 고객에게 충분한 정보를 제공하고, 소비자 요청에는 45일 이내에 무료로 답변해야 합니다. <strong>Annex XVII 제한</strong>: 아조 염료, 니켈 용출, 프탈레이트, 다환방향족탄화수소, 카드뮴과 납 등은 후보 목록과 무관하게 직접 한도가 적용됩니다. <strong>SCIP 데이터베이스</strong>: 2021년 1월 5일부터 기준을 초과하는 SVHC를 함유한 물품을 EU 시장에 출시할 때는 ECHA의 SCIP에 신고해야 합니다. <strong>정보 전달</strong>: 화학물질은 SDS를, 물품은 조성 선언서나 RSL 적합 선언서를 준비하고 소재나 공정 변경 시 갱신합니다."
+         data-fr="<strong>Liste candidate SVHC :</strong> l'ECHA la met à jour en janvier et en juin, avec environ 250 substances aujourd'hui (vérifiez toujours la version en vigueur avant de chiffrer). Dès qu'une substance est inscrite, l'article 33 impose de fournir aux clients en aval des informations suffisantes lorsque la teneur dans un article dépasse 0,1 % (m/m), et de répondre gratuitement aux demandes des consommateurs sous 45 jours. <strong>Restrictions de l'Annexe XVII :</strong> colorants azoïques, libération de nickel, phtalates, HAP, cadmium et plomb ont des limites directes, indépendamment de la liste candidate. <strong>Base SCIP :</strong> depuis le 5 janvier 2021, les articles mis sur le marché de l'UE contenant un SVHC au-delà du seuil doivent être notifiés à la base SCIP de l'ECHA. <strong>Transmission d'information :</strong> les produits chimiques partent avec une FDS ; les articles nécessitent une déclaration de composition ou une déclaration de conformité RSL, actualisée à chaque changement de matière ou de procédé."
+         data-es="<strong>Lista de candidatas SVHC:</strong> la ECHA la actualiza en enero y junio, con unas 250 sustancias hoy (comprueba siempre la versión vigente antes de cotizar). Cuando una sustancia se incluye, el artículo 33 obliga a dar a los clientes aguas abajo información suficiente siempre que esté presente en un artículo por encima del 0,1 % (p/p), y a responder gratis a las solicitudes de los consumidores en 45 días. <strong>Restricciones del Anexo XVII:</strong> colorantes azoicos, liberación de níquel, ftalatos, HAP, cadmio y plomo tienen límites directos, al margen de la lista de candidatas. <strong>Base SCIP:</strong> desde el 5 de enero de 2021, los artículos comercializados en la UE que contengan un SVHC por encima del umbral deben notificarse a la base SCIP de la ECHA. <strong>Transmisión de información:</strong> los productos químicos viajan con FDS; los artículos necesitan una declaración de composición o una declaración de conformidad RSL, actualizada con cada cambio de material o proceso."><strong>SVHC 候選清單</strong>：ECHA 每年 1 月與 6 月更新，目前約 250 項物質（寫稿與報價請以官網最新版本爲準）。物質一旦入單，只要在物品中的含量超過 0.1%（w/w），Article 33 就要求供應鏈向下遊客戶提供足夠信息，消費者提出請求時須在 45 天內免費答覆。<strong>Annex XVII 限制清單</strong>：偶氮染料、鎳釋放、鄰苯二甲酸酯、多環芳烴、鎘與鉛等條目設有直接限值，與是否入候選清單無關。<strong>SCIP 數據庫</strong>：自 2021 年 1 月 5 日起，投放歐盟市場、含超閾值 SVHC 的物品須申報到 ECHA 的 SCIP 數據庫。<strong>信息傳遞</strong>：化學品隨貨提供 SDS，物品要能出具成分聲明或 RSL 符合性聲明，並在材料或工藝變更時更新。</p>
+
+      <h2 data-zh="二、輔料最常被查出的風險物質"
+          data-en="2. The Substances Most Often Found in Trims"
+          data-ja="2. 副資材で最も多く検出される物質"
+          data-ko="2. 부자재에서 가장 자주 검출되는 물질"
+          data-fr="2. Les substances les plus souvent détectées dans les accessoires"
+          data-es="2. Las sustancias que más aparecen en los accesorios">二、輔料最常被查出的風險物質</h2>
+      <p data-zh="下面這張表按輔料類別歸納高風險物質、法規出處與低風險替代方向，可以直接用來做選材評審。"
+         data-en="The table below groups the high-risk substances by trim family, with the legal source and a lower-risk substitution — usable directly in a material review."
+         data-ja="下表は副資材のカテゴリ別に高リスク物質、規制の根拠、低リスクの代替方向をまとめたもので、選材レビューにそのまま使えます。"
+         data-ko="아래 표는 부자재 종류별로 고위험 물질, 법규 근거, 저위험 대체 방향을 정리한 것으로 소재 검토에 바로 활용할 수 있습니다."
+         data-fr="Le tableau ci-dessous regroupe par famille d'accessoires les substances à risque, la source réglementaire et la substitution à moindre risque, utilisable directement en revue matière."
+         data-es="La tabla siguiente agrupa por familia de accesorios las sustancias de riesgo, la fuente normativa y la sustitución de menor riesgo, y sirve directamente para una revisión de materiales.">下面這張表按輔料類別歸納高風險物質、法規出處與低風險替代方向，可以直接用來做選材評審。</p>
+      <table>
+        <tr><th data-zh="輔料類別" data-en="Trim family" data-ja="副資材カテゴリ" data-ko="부자재 종류" data-fr="Famille d'accessoires" data-es="Familia de accesorios">輔料類別</th><th data-zh="典型風險物質" data-en="Typical substances" data-ja="典型的な物質" data-ko="대표 물질" data-fr="Substances typiques" data-es="Sustancias típicas">典型風險物質</th><th data-zh="法規出處" data-en="Legal source" data-ja="規制の根拠" data-ko="법규 근거" data-fr="Source réglementaire" data-es="Fuente normativa">法規出處</th><th data-zh="低風險替代方向" data-en="Lower-risk option" data-ja="低リスクの選択肢" data-ko="저위험 대안" data-fr="Option à moindre risque" data-es="Opción de menor riesgo">低風險替代方向</th></tr>
+        <tr><td data-zh="金屬件（拉鍊、扣件、雞眼、吊牌金屬配件）" data-en="Metal parts (zips, fasteners, eyelets, hang-tag hardware)" data-ja="金属部品（ファスナー、留め具、ハトメ、タグ金具）" data-ko="금속 부품(지퍼, 잠금구, 아일릿, 행택 금속 부품)" data-fr="Pièces métalliques (zips, fermetures, œillets, quincaillerie d'étiquette)" data-es="Piezas metálicas (cremalleras, cierres, ojales, herrajes de etiqueta)">金屬件（拉鍊、扣件、雞眼、吊牌金屬配件）</td><td data-zh="鎳釋放；鉛、鎘" data-en="Nickel release; lead, cadmium" data-ja="ニッケル溶出、鉛、カドミウム" data-ko="니켈 용출, 납, 카드뮴" data-fr="Libération de nickel ; plomb, cadmium" data-es="Liberación de níquel; plomo, cadmio">鎳釋放；鉛、鎘</td><td data-zh="Annex XVII 第 27 條（長期皮膚接觸 0.5 µg/cm²/周）、第 23 條" data-en="Annex XVII entries 27 (0.5 µg/cm²/week in prolonged skin contact) and 23" data-ja="Annex XVII 第27条（皮膚に長時間接触する物品は 0.5 µg/cm²/週）と第23条" data-ko="Annex XVII 제27조(장시간 피부 접촉 0.5 µg/cm²/주)와 제23조" data-fr="Annexe XVII entrées 27 (0,5 µg/cm²/semaine en contact cutané prolongé) et 23" data-es="Anexo XVII entradas 27 (0,5 µg/cm²/semana en contacto prolongado con la piel) y 23">Annex XVII 第 27 條（長期皮膚接觸 0.5 µg/cm²/周）、第 23 條</td><td data-zh="無鎳電鍍、不鏽鋼、銅合金；避免來源不明的回收金屬" data-en="Nickel-free plating, stainless steel, copper alloys; avoid recycled metal of unknown origin" data-ja="ニッケルフリーめっき、ステンレス、銅合金。由来不明の再生金属は避ける" data-ko="무니켈 도금, 스테인리스, 구리 합금. 출처 불명 재생 금속 회피" data-fr="Revêtement sans nickel, inox, alliages de cuivre ; éviter les métaux recyclés d'origine inconnue" data-es="Recubrimiento sin níquel, acero inoxidable, aleaciones de cobre; evitar metal reciclado de origen desconocido">無鎳電鍍、不鏽鋼、銅合金；避免來源不明的回收金屬</td></tr>
+        <tr><td data-zh="軟 PVC 膠袋、PVC 標、塗層織物" data-en="Soft PVC bags, PVC labels, coated fabric" data-ja="軟質 PVC 袋、PVC ラベル、コーティング生地" data-ko="연질 PVC 백, PVC 라벨, 코팅 원단" data-fr="Sacs PVC souple, étiquettes PVC, tissu enduit" data-es="Bolsas de PVC flexible, etiquetas de PVC, tejido recubierto">軟 PVC 膠袋、PVC 標、塗層織物</td><td data-zh="鄰苯二甲酸酯（DEHP、DBP、BBP、DIBP）" data-en="Phthalates (DEHP, DBP, BBP, DIBP)" data-ja="フタル酸エステル（DEHP・DBP・BBP・DIBP）" data-ko="프탈레이트(DEHP, DBP, BBP, DIBP)" data-fr="Phtalates (DEHP, DBP, BBP, DIBP)" data-es="Ftalatos (DEHP, DBP, BBP, DIBP)">鄰苯二甲酸酯（DEHP、DBP、BBP、DIBP）</td><td data-zh="Annex XVII 第 51 與 52 條（0.1%）" data-en="Annex XVII entries 51 and 52 (0.1%)" data-ja="Annex XVII 第51・52条（0.1%）" data-ko="Annex XVII 제51·52조(0.1%)" data-fr="Annexe XVII entrées 51 et 52 (0,1 %)" data-es="Anexo XVII entradas 51 y 52 (0,1 %)">Annex XVII 第 51 與 52 條（0.1%）</td><td data-zh="TPU、PE、PP、硅膠" data-en="TPU, PE, PP, silicone" data-ja="TPU、PE、PP、シリコーン" data-ko="TPU, PE, PP, 실리콘" data-fr="TPU, PE, PP, silicone" data-es="TPU, PE, PP, silicona">TPU、PE、PP、硅膠</td></tr>
+        <tr><td data-zh="深色橡膠件、彈性織帶、印刷油墨" data-en="Dark rubber parts, elastic tape, printing inks" data-ja="黒色ゴム部品、伸縮テープ、印刷インキ" data-ko="검정 고무 부품, 신축 테이프, 인쇄 잉크" data-fr="Pièces en caoutchouc foncé, rubans élastiques, encres" data-es="Piezas de caucho oscuro, cintas elásticas, tintas">深色橡膠件、彈性織帶、印刷油墨</td><td data-zh="多環芳烴（PAH）" data-en="Polycyclic aromatic hydrocarbons (PAHs)" data-ja="多環芳香族炭化水素（PAH）" data-ko="다환방향족탄화수소(PAH)" data-fr="Hydrocarbures aromatiques polycycliques (HAP)" data-es="Hidrocarburos aromáticos policíclicos (HAP)">多環芳烴（PAH）</td><td data-zh="Annex XVII 第 50 條（消費品 1 mg/kg）" data-en="Annex XVII entry 50 (1 mg/kg for consumer articles)" data-ja="Annex XVII 第50条（消費者用物品 1 mg/kg）" data-ko="Annex XVII 제50조(소비자용 물품 1 mg/kg)" data-fr="Annexe XVII entrée 50 (1 mg/kg pour les articles de consommation)" data-es="Anexo XVII entrada 50 (1 mg/kg en artículos de consumo)">Annex XVII 第 50 條（消費品 1 mg/kg）</td><td data-zh="無炭黑配方、水性油墨、色粉替代炭黑" data-en="Carbon-black-free formulations, water-based inks, pigment instead of carbon black" data-ja="カーボンブラックフリー配合、水性インキ、顔料への置換" data-ko="카본블랙 무첨가 배합, 수성 잉크, 안료 대체" data-fr="Formulations sans noir de carbone, encres aqueuses, pigments de substitution" data-es="Formulaciones sin negro de carbono, tintas al agua, pigmentos sustitutivos">無炭黑配方、水性油墨、色粉替代炭黑</td></tr>
+        <tr><td data-zh="染色織物、織帶、皮標" data-en="Dyed fabric, tape, leather patches" data-ja="染色生地、テープ、革パッチ" data-ko="염색 원단, 테이프, 가죽 패치" data-fr="Tissu teint, rubans, patches cuir" data-es="Tejido teñido, cintas, parches de cuero">染色織物、織帶、皮標</td><td data-zh="可釋放致癌芳香胺的偶氮染料" data-en="Azo colorants releasing carcinogenic aromatic amines" data-ja="発がん性芳香族アミンを放出する偶氮染料" data-ko="발암성 방향족 아민을 방출하는 아조 염료" data-fr="Colorants azoïques libérant des amines aromatiques cancérogènes" data-es="Colorantes azoicos que liberan aminas aromáticas cancerígenas">可釋放致癌芳香胺的偶氮染料</td><td data-zh="Annex XVII 第 43 條（30 mg/kg）" data-en="Annex XVII entry 43 (30 mg/kg)" data-ja="Annex XVII 第43条（30 mg/kg）" data-ko="Annex XVII 제43조(30 mg/kg)" data-fr="Annexe XVII entrée 43 (30 mg/kg)" data-es="Anexo XVII entrada 43 (30 mg/kg)">Annex XVII 第 43 條（30 mg/kg）</td><td data-zh="OEKO-TEX 認證色布、環保染料、化學品清單管控" data-en="OEKO-TEX certified dyed lots, eco dyes, chemical-list control" data-ja="OEKO-TEX 認証の染色ロット、環境対応染料、薬品リスト管理" data-ko="OEKO-TEX 인증 염색 로트, 친환경 염료, 약품 목록 관리" data-fr="Lots teints certifiés OEKO-TEX, colorants écologiques, contrôle de la liste chimique" data-es="Lotes teñidos con certificación OEKO-TEX, tintes ecológicos, control de la lista química">OEKO-TEX 認證色布、環保染料、化學品清單管控</td></tr>
+        <tr><td data-zh="全部紡織類輔料" data-en="All textile trims" data-ja="すべての繊維系副資材" data-ko="모든 섬유 부자재" data-fr="Tous les accessoires textiles" data-es="Todos los accesorios textiles">全部紡織類輔料</td><td data-zh="CMR 物質（附錄 12 清單）" data-en="CMR substances (Appendix 12 list)" data-ja="CMR 物質（附属書12のリスト）" data-ko="CMR 물질(부속서 12 목록)" data-fr="Substances CMR (liste de l'annexe 12)" data-es="Sustancias CMR (lista del apéndice 12)">CMR 物質（附錄 12 清單）</td><td data-zh="Annex XVII 第 72 條（2020 年 11 月起適用，限值 1 mg/kg）" data-en="Annex XVII entry 72 (applies from November 2020, 1 mg/kg limit)" data-ja="Annex XVII 第72条（2020年11月から適用、限度 1 mg/kg）" data-ko="Annex XVII 제72조(2020년 11월부터 적용, 한도 1 mg/kg)" data-fr="Annexe XVII entrée 72 (applicable depuis novembre 2020, limite 1 mg/kg)" data-es="Anexo XVII entrada 72 (aplicable desde noviembre de 2020, límite 1 mg/kg)">Annex XVII 第 72 條（2020 年 11 月起適用，限值 1 mg/kg）</td><td data-zh="供應鏈化學品清單管控與逐批文件" data-en="Supply-chain chemical list control with batch documentation" data-ja="サプライチェーンの薬品リスト管理とロット単位の書類" data-ko="공급망 화학물질 목록 관리와 로트별 서류" data-fr="Contrôle de la liste chimique de la chaîne d'approvisionnement et documents par lot" data-es="Control de la lista química de la cadena de suministro y documentación por lote">供應鏈化學品清單管控與逐批文件</td></tr>
+        <tr><td data-zh="防潑水整理、含氟塗層" data-en="DWR finishes, fluorinated coatings" data-ja="撥水加工、フッ素系コーティング" data-ko="발수 가공, 불소 코팅" data-fr="Traitements déperlants, enductions fluorées" data-es="Acabados repelentes, recubrimientos fluorados">防潑水整理、含氟塗層</td><td data-zh="PFAS 相關物質" data-en="PFAS-related substances" data-ja="PFAS 関連物質" data-ko="PFAS 관련 물질" data-fr="Substances liées aux PFAS" data-es="Sustancias relacionadas con los PFAS">PFAS 相關物質</td><td data-zh="部分已列入候選清單或限制清單，歐盟正在推進全面限制" data-en="Some already on the Candidate or restriction lists; the EU is moving towards a broad restriction" data-ja="一部は候補リスト・制限リストに掲載済み。EU は包括的制限を検討中" data-ko="일부는 후보 목록·제한 목록에 등재, EU는 포괄 제한 추진 중" data-fr="Certaines figurent déjà sur la liste candidate ou de restriction ; l'UE prépare une restriction globale" data-es="Algunas ya figuran en la lista de candidatas o de restricciones; la UE prepara una restricción amplia">部分已列入候選清單或限制清單，歐盟正在推進全面限制</td><td data-zh="無氟拒水整理、物理防水結構" data-en="Fluorine-free DWR, physical water-repellent construction" data-ja="フッ素フリー撥水、物理的な防水構造" data-ko="무불소 발수 가공, 물리적 방수 구조" data-fr="Déperlant sans fluor, structure physiquement imperméable" data-es="Repelencia sin flúor, estructura físicamente impermeable">無氟拒水整理、物理防水結構</td></tr>
+      </table>
+
+      <h2 data-zh="三、0.1% 閾值怎麼算"
+          data-en="3. How the 0.1% Threshold Is Calculated"
+          data-ja="3. 0.1% 閾値の計算方法"
+          data-ko="3. 0.1% 기준은 어떻게 계산하는가"
+          data-fr="3. Comment se calcule le seuil de 0,1 %"
+          data-es="3. Cómo se calcula el umbral del 0,1 %">三、0.1% 閾值怎麼算</h2>
+      <p data-zh="0.1%（w/w）按「物品」（article）的整體重量計算，不按整件衣服計算。REACH 對物品的定義是生產過程中被賦予特定形狀、表面或設計的物體，因此一件成衣裏的每個輔料——拉鍊頭、紐扣、織嘜、吊牌、膠袋——通常各自構成一個物品，要單獨判斷濃度。這解釋了爲什麼輔料商常被單獨追問：一個只有幾克的金屬扣，只要其中某種 SVHC 超過 0.1%，就會觸發告知義務，哪怕它在整件衣服裏的重量佔比微乎其微。"
+         data-en="The 0.1% (w/w) figure is calculated on the weight of the article itself, not on the whole garment. REACH defines an article as an object given a specific shape, surface or design during production, so each trim in a garment — a zip pull, a button, a woven label, a hang tag, a poly bag — is normally its own article and is assessed on its own. That is why trim suppliers get asked separately: a few-gram metal fastener triggers the communication duty if any SVHC exceeds 0.1% of it, even when its share of the finished garment is negligible."
+         data-ja="0.1%（w/w）は衣服全体ではなく「物品」（article）単位の重量で計算します。REACH の物品とは、製造工程で特定の形状・表面・デザインを与えられた物体を指すため、1着の中の各副資材（ファスナー引き手、ボタン、ネーム、タグ、ポリ袋）は通常それぞれが独立した物品として個別に判断します。数グラムの金属留め具でも、その中の SVHC が 0.1% を超えれば情報伝達義務が生じるのはこのためです。完成品に占める重量比がごくわずかでも関係ありません。"
+         data-ko="0.1%(w/w)는 완성 의류 전체가 아니라 '물품'(article) 자체의 무게로 계산합니다. REACH에서 물품은 생산 과정에서 특정 형상·표면·디자인이 부여된 물체를 뜻하므로, 한 벌의 옷에 들어가는 각 부자재(지퍼 손잡이, 단추, 메인 라벨, 행택, 비닐봉투)는 보통 각각 독립된 물품으로 개별 판단합니다. 몇 그램짜리 금속 잠금구라도 그 안의 SVHC가 0.1%를 넘으면 고지 의무가 발생하는 이유입니다. 완성품에서 차지하는 무게 비중은 무관합니다."
+         data-fr="Le seuil de 0,1 % (m/m) se calcule sur le poids de l'article lui-même, non sur celui du vêtement entier. REACH définit un article comme un objet auquel une forme, une surface ou un design spécifique a été donné lors de la production : chaque accessoire d'un vêtement — tirette, bouton, label tissé, étiquette pendante, sac polybag — constitue donc normalement un article distinct, évalué séparément. C'est pourquoi on interroge spécifiquement le fournisseur d'accessoires : une fermeture métallique de quelques grammes déclenche l'obligation d'information si un SVHC y dépasse 0,1 %, même si sa part dans le vêtement est infime."
+         data-es="El 0,1 % (p/p) se calcula sobre el peso del propio artículo, no sobre la prenda completa. REACH define artículo como un objeto al que se da una forma, superficie o diseño específicos durante la producción, así que cada accesorio de una prenda —tirador de cremallera, botón, etiqueta tejida, colgante, bolsa— es normalmente un artículo propio y se evalúa por separado. Por eso se pregunta específicamente al proveedor de accesorios: un cierre metálico de pocos gramos activa el deber de información si algún SVHC supera el 0,1 % de su peso, aunque su proporción en la prenda sea mínima.">0.1%（w/w）按「物品」（article）的整體重量計算，不按整件衣服計算。REACH 對物品的定義是生產過程中被賦予特定形狀、表面或設計的物體，因此一件成衣裏的每個輔料——拉鍊頭、紐扣、織嘜、吊牌、膠袋——通常各自構成一個物品，要單獨判斷濃度。這解釋了爲什麼輔料商常被單獨追問：一個只有幾克的金屬扣，只要其中某種 SVHC 超過 0.1%，就會觸發告知義務，哪怕它在整件衣服裏的重量佔比微乎其微。</p>
+      <div class="callout" data-zh="💡 提示：別隻盯佔比最大的材料。輔料通常佔整件衣服不到 1% 的重量，卻承擔了大部分 SVHC 與限制物質風險——重災區是電鍍金屬件、軟 PVC 件和有色油墨。"
+           data-en="💡 Tip: do not focus only on the heaviest material. Trims are usually under 1% of a garment's weight yet carry most of the SVHC and restricted-substance risk — plated metal parts, soft PVC and coloured inks are the usual trouble spots."
+           data-ja="💡 ヒント：重量比率の大きい素材だけを見ないこと。副資材は通常、衣服重量の1%未満でありながら、SVHC と制限物質のリスクの大半を抱えます。特に注意が必要なのはめっき金属部品、軟質 PVC 部品、着色インキです。"
+           data-ko="💡 팁: 무게 비중이 큰 소재만 보지 마세요. 부자재는 보통 의류 무게의 1% 미만이지만 SVHC와 제한 물질 위험의 대부분을 담당합니다. 도금 금속 부품, 연질 PVC 부품, 착색 잉크가 대표적인 취약점입니다."
+           data-fr="💡 Conseil : ne regardez pas seulement la matière la plus lourde. Les accessoires représentent souvent moins de 1 % du poids d'un vêtement mais concentrent l'essentiel du risque SVHC et substances restreintes — pièces métalliques plaquées, PVC souple et encres colorées."
+           data-es="💡 Consejo: no mires solo el material de mayor peso. Los accesorios suponen a menudo menos del 1 % del peso de la prenda, pero concentran la mayor parte del riesgo de SVHC y sustancias restringidas: piezas metálicas con baño, PVC flexible y tintas de color.">💡 提示：別隻盯佔比最大的材料。輔料通常佔整件衣服不到 1% 的重量，卻承擔了大部分 SVHC 與限制物質風險——重災區是電鍍金屬件、軟 PVC 件和有色油墨。</div>
+
+      <h2 data-zh="四、SCIP 數據庫：誰申報、申報什麼"
+          data-en="4. The SCIP Database: Who Files and What Goes In"
+          data-ja="4. SCIP データベース：届出主体と記載内容"
+          data-ko="4. SCIP 데이터베이스: 누가 신고하고 무엇을 담는가"
+          data-fr="4. La base SCIP : qui dépose et quoi déclarer"
+          data-es="4. La base SCIP: quién presenta y qué se declara">四、SCIP 數據庫：誰申報、申報什麼</h2>
+      <p data-zh="SCIP 的申報主體是把物品投放歐盟市場的供應商，通常是歐盟進口商、品牌方或其指定代表；歐盟以外的生產商無法直接申報，需要把材料信息交給歐盟境內的責任人提交。申報不要求披露配方，但要給出物品識別信息（名稱、識別碼）、SVHC 名稱與濃度範圍，以及安全使用和處置說明。SCIP 沒有最低數量門檻——哪怕只有一批貨、一個零件，只要含量超標就要申報。"
+         data-en="SCIP filing falls on the supplier placing the article on the EU market — usually the EU importer, the brand or its authorised representative. A producer outside the EU cannot file directly; it must hand the material information to the responsible party inside the EU. The declaration does not require disclosing the formulation, but it does require article identifiers (name, identification code), the SVHC name and its concentration range, and safe-use and disposal information. There is no minimum quantity: one batch, one component, filing is still due once the threshold is exceeded."
+         data-ja="SCIP の届出義務は、物品を EU 市場に投入する供給者、通常は EU の輸入者・ブランド・指定代理人が負います。EU 域外の製造者は直接届出できないため、材料情報を EU 域内の責任者に渡して提出してもらいます。配合の開示は不要ですが、物品の識別情報（名称・識別コード）、SVHC の名称と濃度範囲、安全な使用と廃棄の情報が必要です。最低数量の閾値はなく、1ロット・1部品でも基準超過なら届出対象です。"
+         data-ko="SCIP 신고 의무는 물품을 EU 시장에 출시하는 공급자, 보통 EU 수입자·브랜드·지정 대리인이 부담합니다. EU 역외 제조사는 직접 신고할 수 없으므로 물질 정보를 EU 역내 책임자에게 전달해 제출하게 합니다. 배합 공개는 필요하지 않지만 물품 식별 정보(명칭, 식별 코드), SVHC 명칭과 농도 범위, 안전 사용 및 폐기 정보가 필요합니다. 최소 수량 기준은 없으며 한 로트, 한 부품이라도 기준을 넘으면 신고 대상입니다."
+         data-fr="La déclaration SCIP incombe au fournisseur qui met l'article sur le marché de l'UE : généralement l'importateur, la marque ou son mandataire. Un fabricant hors UE ne peut pas déposer directement ; il doit transmettre les informations matière au responsable établi dans l'UE. La déclaration n'exige pas la formule, mais l'identification de l'article (nom, code), le nom du SVHC et sa plage de concentration, ainsi que les consignes d'usage sûr et d'élimination. Aucun seuil de quantité : un lot, un composant, le dépôt reste requis au-delà de la limite."
+         data-es="La presentación de SCIP corresponde al proveedor que introduce el artículo en el mercado de la UE: normalmente el importador, la marca o su representante autorizado. Un fabricante fuera de la UE no puede presentarla directamente; debe entregar la información de materiales al responsable establecido en la UE. No se exige revelar la formulación, pero sí identificar el artículo (nombre, código), el nombre del SVHC y su rango de concentración, y las instrucciones de uso seguro y eliminación. No hay cantidad mínima: un lote, un componente, sigue siendo obligatorio superar el límite.">SCIP 的申報主體是把物品投放歐盟市場的供應商，通常是歐盟進口商、品牌方或其指定代表；歐盟以外的生產商無法直接申報，需要把材料信息交給歐盟境內的責任人提交。申報不要求披露配方，但要給出物品識別信息（名稱、識別碼）、SVHC 名稱與濃度範圍，以及安全使用和處置說明。SCIP 沒有最低數量門檻——哪怕只有一批貨、一個零件，只要含量超標就要申報。</p>
+      <p data-zh="實用做法：輔料供應商主動提供「SVHC 材料聲明 + 檢測報告 + 變更通知」，讓歐盟責任人可以直接引用；若確實含有超閾值 SVHC，請提前告知濃度區間，別等客戶上傳 SCIP 時才發現。"
+         data-en="A practical approach: the trim supplier proactively issues an SVHC material declaration, test reports and a change notification so the EU responsible party can cite them directly. If a substance genuinely exceeds the threshold, state the concentration range up front rather than letting the customer discover it while filing SCIP."
+         data-ja="実務的な対応は、副資材サプライヤーが「SVHC 材料宣言＋試験報告書＋変更通知」を先に用意し、EU の責任者がそのまま引用できるようにすることです。実際に閾値を超える SVHC を含む場合は、濃度範囲を早めに伝え、顧客が SCIP 登録時に初めて気づく事態を避けます。"
+         data-ko="실무 대응은 부자재 공급자가 SVHC 물질 선언서 + 시험 성적서 + 변경 통지를 먼저 제공해 EU 책임자가 그대로 인용할 수 있게 하는 것입니다. 실제로 기준을 초과하는 SVHC가 있다면 농도 범위를 미리 알려 고객이 SCIP 등록 시에야 발견하는 상황을 피하세요."
+         data-fr="En pratique, le fournisseur d'accessoires émet d'office une déclaration matière SVHC, les rapports d'essai et une notification de changement, que le responsable européen peut citer directement. Si un SVHC dépasse réellement le seuil, annoncez la plage de concentration en amont plutôt que de laisser le client le découvrir au moment du dépôt SCIP."
+         data-es="En la práctica, el proveedor de accesorios emite de oficio una declaración de materiales SVHC, los informes de ensayo y una notificación de cambios, que el responsable europeo puede citar directamente. Si algún SVHC supera realmente el umbral, comunica el rango de concentración por adelantado en lugar de que el cliente lo descubra al presentar SCIP.">實用做法：輔料供應商主動提供「SVHC 材料聲明 + 檢測報告 + 變更通知」，讓歐盟責任人可以直接引用；若確實含有超閾值 SVHC，請提前告知濃度區間，別等客戶上傳 SCIP 時才發現。</p>
+
+      <h2 data-zh="五、輔料供應商應備齊的文件"
+          data-en="5. Documents a Trim Supplier Should Hold"
+          data-ja="5. 副資材サプライヤーが用意すべき書類"
+          data-ko="5. 부자재 공급자가 갖춰야 할 서류"
+          data-fr="5. Les documents que doit détenir un fournisseur d'accessoires"
+          data-es="5. Documentos que debe tener un proveedor de accesorios">五、輔料供應商應備齊的文件</h2>
+      <ul>
+        <li data-zh="合規聲明信：聲明產品符合 REACH 相關義務，註明型號與日期" data-en="Conformity statement: declares the product meets the relevant REACH obligations, with model and date" data-ja="適合宣言書：製品が REACH の関連義務を満たすことをモデル名と日付入りで宣言" data-ko="적합성 선언서: 제품이 REACH 관련 의무를 충족함을 모델명과 날짜와 함께 선언" data-fr="Attestation de conformité : déclare le respect des obligations REACH applicables, avec référence et date" data-es="Declaración de conformidad: declara el cumplimiento de las obligaciones REACH aplicables, con modelo y fecha">合規聲明信：聲明產品符合 REACH 相關義務，註明型號與日期</li>
+        <li data-zh="SVHC 材料聲明：逐條對應候選清單，寫清「未檢出」或濃度區間" data-en="SVHC material declaration: item by item against the Candidate List, stating &quot;not detected&quot; or the concentration range" data-ja="SVHC 材料宣言：候補リストに項目ごとに対応し、「不検出」または濃度範囲を明記" data-ko="SVHC 물질 선언서: 후보 목록에 항목별로 대응하여 '불검출' 또는 농도 범위를 명시" data-fr="Déclaration matière SVHC : point par point face à la liste candidate, avec « non détecté » ou la plage de concentration" data-es="Declaración de materiales SVHC: punto por punto frente a la lista de candidatas, indicando &quot;no detectado&quot; o el rango de concentración">SVHC 材料聲明：逐條對應候選清單，寫清「未檢出」或濃度區間</li>
+        <li data-zh="第三方檢測報告：針對高風險物質的實測數據，註明測試標準與方法" data-en="Third-party test reports: measured data for the high-risk substances, with the test standard and method" data-ja="第三者試験報告書：高リスク物質の実測データと試験規格・方法" data-ko="제3자 시험 성적서: 고위험 물질의 실측 데이터와 시험 규격·방법" data-fr="Rapports d'essai tiers : données mesurées pour les substances à risque, avec norme et méthode" data-es="Informes de ensayo externos: datos medidos de las sustancias de riesgo, con norma y método">第三方檢測報告：針對高風險物質的實測數據，註明測試標準與方法</li>
+        <li data-zh="RSL 符合性聲明：回應品牌自有清單，往往比法規更嚴" data-en="RSL conformity statement: answers the brand's own list, which is often stricter than the law" data-ja="RSL 適合宣言書：ブランド独自リストへの回答。法規より厳しいことが多い" data-ko="RSL 적합 선언서: 브랜드 자체 목록에 대한 대응으로 법규보다 엄격한 경우가 많음" data-fr="Déclaration de conformité RSL : répond à la liste propre de la marque, souvent plus stricte que la loi" data-es="Declaración de conformidad RSL: responde a la lista propia de la marca, a menudo más estricta que la ley">RSL 符合性聲明：回應品牌自有清單，往往比法規更嚴</li>
+        <li data-zh="變更通知：材料、配方或產地變更時主動通知，避免客戶文件過期" data-en="Change notification: proactive notice when material, formulation or origin changes, so the customer's file stays current" data-ja="変更通知：材料・配合・産地の変更時に事前通知し、顧客の書類が陳腐化するのを防ぐ" data-ko="변경 통지: 소재·배합·산지 변경 시 사전 통지로 고객 서류가 낡는 것을 방지" data-fr="Notification de changement : information proactive en cas de changement de matière, formule ou origine, pour éviter des dossiers périmés" data-es="Notificación de cambios: aviso proactivo cuando cambian material, formulación u origen, para que el expediente del cliente no quede obsoleto">變更通知：材料、配方或產地變更時主動通知，避免客戶文件過期</li>
+        <li data-zh="化學品 SDS：粘合劑、油墨、塗層等化工品隨貨提供" data-en="Chemical SDS: adhesives, inks and coatings ship with a safety data sheet" data-ja="化学品の SDS：接着剤、インキ、コーティングは SDS を添付" data-ko="화학물질 SDS: 접착제, 잉크, 코팅은 SDS를 첨부" data-fr="FDS chimique : adhésifs, encres et enductions livrés avec leur fiche de données de sécurité" data-es="FDS química: adhesivos, tintas y recubrimientos se entregan con su ficha de datos de seguridad">化學品 SDS：粘合劑、油墨、塗層等化工品隨貨提供</li>
+      </ul>
+
+      <h2 data-zh="六、從選材端降低風險"
+          data-en="6. Reducing Risk at the Material-Selection Stage"
+          data-ja="6. 選材段階でリスクを下げる"
+          data-ko="6. 소재 선정 단계에서 위험 줄이기"
+          data-fr="6. Réduire le risque dès le choix des matières"
+          data-es="6. Reducir el riesgo desde la elección de materiales">六、從選材端降低風險</h2>
+      <p data-zh="替換比事後檢測便宜：軟 PVC 換 TPU 或 PE、電鍍件改無鎳電鍍或不鏽鋼、溶劑型油墨改水性、含氟拒水改無氟整理、再生料要求可追溯來源。深色橡膠與炭黑件要留出 PAH 餘量；皮標要確認鞣製工藝與六價鉻風險；金屬件避免來源不明的回收料。選材階段就把候選清單與 Annex XVII 過一遍，比大貨做完再改省得多。"
+         data-en="Substitution is cheaper than testing afterwards: swap soft PVC for TPU or PE, move plated parts to nickel-free plating or stainless steel, replace solvent inks with water-based, change fluorinated DWR to fluorine-free, and require traceable recycled feedstock. Dark rubber and carbon-black parts need PAH headroom; leather patches need the tanning process and hexavalent chromium checked; metal parts should avoid recycled material of unknown origin. Running the Candidate List and Annex XVII at the selection stage costs far less than reworking bulk."
+         data-ja="後から試験するより置き換えるほうが安価です。軟質 PVC は TPU や PE に、めっき部品はニッケルフリーめっきやステンレスに、溶剤インキは水性に、フッ素系撥水はフッ素フリーに、再生原料はトレーサブルなものに。黒色ゴムやカーボンブラック配合は PAH の余裕を確保し、革パッチはなめし工程と六価クロムを確認し、金属部品は由来不明の再生材を避けます。選材時に候補リストと Annex XVII を確認するほうが、量産後の手戻りよりはるかに安く済みます。"
+         data-ko="사후 시험보다 대체가 저렴합니다. 연질 PVC는 TPU나 PE로, 도금 부품은 무니켈 도금이나 스테인리스로, 용제 잉크는 수성으로, 불소 발수는 무불소 가공으로, 재생 원료는 추적 가능한 것으로 바꾸세요. 검정 고무와 카본블랙 부품은 PAH 여유를 확보하고, 가죽 패치는 무두질 공정과 6가 크롬 위험을 확인하며, 금속 부품은 출처 불명 재생 소재를 피합니다. 선정 단계에서 후보 목록과 Annex XVII를 확인하는 편이 양산 후 재작업보다 훨씬 저렴합니다."
+         data-fr="Substituer coûte moins cher que tester après coup : remplacez le PVC souple par du TPU ou du PE, le plaquage par un revêtement sans nickel ou de l'inox, les encres solvant par des encres aqueuses, le déperlant fluoré par un déperlant sans fluor, et exigez une matière recyclée traçable. Les pièces en caoutchouc foncé et au noir de carbone ont besoin d'une marge sur les HAP ; les patches cuir exigent un contrôle du tannage et du chrome VI ; les pièces métalliques doivent éviter les recyclés d'origine inconnue. Vérifier la liste candidate et l'Annexe XVII au stade du choix coûte bien moins qu'une reprise après production."
+         data-es="Sustituir es más barato que ensayar después: cambia el PVC flexible por TPU o PE, los baños metálicos por recubrimiento sin níquel o acero inoxidable, las tintas de disolvente por base agua, el repelente fluorado por uno sin flúor y exige material reciclado trazable. Las piezas de caucho oscuro y negro de carbono necesitan margen de HAP; los parches de cuero requieren revisar el curtido y el cromo hexavalente; las piezas metálicas deben evitar reciclado de origen desconocido. Revisar la lista de candidatas y el Anexo XVII al elegir cuesta mucho menos que rehacer un lote.">替換比事後檢測便宜：軟 PVC 換 TPU 或 PE、電鍍件改無鎳電鍍或不鏽鋼、溶劑型油墨改水性、含氟拒水改無氟整理、再生料要求可追溯來源。深色橡膠與炭黑件要留出 PAH 餘量；皮標要確認鞣製工藝與六價鉻風險；金屬件避免來源不明的回收料。選材階段就把候選清單與 Annex XVII 過一遍，比大貨做完再改省得多。</p>
+
+      <h2 data-zh="七、把 REACH 要求寫進詢價單"
+          data-en="7. Writing REACH Requirements into a Quotation Request"
+          data-ja="7. 見積依頼に REACH 要件を書き込む"
+          data-ko="7. 견적 요청서에 REACH 요건 기재하기"
+          data-fr="7. Intégrer les exigences REACH dans la demande de prix"
+          data-es="7. Incluir los requisitos REACH en la solicitud de precio">七、把 REACH 要求寫進詢價單</h2>
+      <ul>
+        <li data-zh="明確目標市場與法規版本（EU REACH 與 UK REACH 分開寫）" data-en="State the target market and the regulatory version (treat EU REACH and UK REACH separately)" data-ja="対象市場と法規の版を明記（EU REACH と UK REACH は分けて記載）" data-ko="대상 시장과 법규 버전을 명시(EU REACH와 UK REACH는 별도 기재)" data-fr="Précisez le marché cible et la version réglementaire (traitez REACH UE et REACH UK séparément)" data-es="Indica el mercado destino y la versión normativa (trata REACH UE y REACH UK por separado)">明確目標市場與法規版本（EU REACH 與 UK REACH 分開寫）</li>
+        <li data-zh="列明需要聲明的物質範圍：候選清單 SVHC、Annex XVII 相關條目、品牌 RSL" data-en="List the substances to be declared: Candidate List SVHC, the relevant Annex XVII entries, the brand RSL" data-ja="宣言対象の物質範囲を列挙：候補リスト SVHC、該当する Annex XVII 条目、ブランド RSL" data-ko="선언 대상 물질 범위 열거: 후보 목록 SVHC, 해당 Annex XVII 조항, 브랜드 RSL" data-fr="Listez les substances à déclarer : SVHC de la liste candidate, entrées pertinentes de l'Annexe XVII, RSL de la marque" data-es="Enumera las sustancias a declarar: SVHC de la lista de candidatas, entradas pertinentes del Anexo XVII, RSL de la marca">列明需要聲明的物質範圍：候選清單 SVHC、Annex XVII 相關條目、品牌 RSL</li>
+        <li data-zh="說明是否需要 SCIP 所需的物品識別信息與濃度區間" data-en="Say whether you need the article identifiers and concentration ranges required for SCIP" data-ja="SCIP に必要な物品識別情報と濃度範囲の要否を明記" data-ko="SCIP에 필요한 물품 식별 정보와 농도 범위 제공 여부를 명시" data-fr="Indiquez si vous avez besoin des identifiants d'article et des plages de concentration exigés par SCIP" data-es="Indica si necesitas los identificadores de artículo y los rangos de concentración que exige SCIP">說明是否需要 SCIP 所需的物品識別信息與濃度區間</li>
+        <li data-zh="約定報告有效期、複檢與更新規則" data-en="Agree on report validity, retest and update rules" data-ja="報告書の有効期間、再試験と更新のルールを合意" data-ko="성적서 유효 기간, 재시험과 갱신 규칙을 합의" data-fr="Convenez de la validité des rapports, des règles de réessai et de mise à jour" data-es="Acuerda la validez de los informes y las reglas de reensayo y actualización">約定報告有效期、複檢與更新規則</li>
+        <li data-zh="打樣與交期：打樣 3–7 天，大貨 10–25 天；起訂量靈活（吊牌 2000–3000 張試單、織嘜 1000 條起、洗水標 300–500 條起）" data-en="Sampling and lead times: samples in 3–7 days, bulk in 10–25 days; flexible minimums (2,000–3,000 hang tags for a trial run, woven labels from 1,000 pieces, care labels from 300–500)" data-ja="サンプルと納期：サンプル3～7日、量産10～25日。最小ロットは柔軟（タグは試験発注2,000～3,000枚、織ネーム1,000枚〜、洗濯表示300～500枚〜）" data-ko="샘플과 납기: 샘플 3~7일, 양산 10~25일. 최소 주문량 유연(행택 2,000~3,000장 시험 주문, 직조 라벨 1,000장~, 세탁 라벨 300~500장~)" data-fr="Échantillons et délais : échantillons en 3 à 7 jours, production en 10 à 25 jours ; minimums souples (2 000 à 3 000 étiquettes pendantes pour un essai, labels tissés dès 1 000 pièces, étiquettes d'entretien dès 300 à 500)" data-es="Muestras y plazos: muestras en 3–7 días, producción en 10–25 días; mínimos flexibles (2.000–3.000 colgantes para un pedido de prueba, etiquetas tejidas desde 1.000 unidades, etiquetas de cuidado desde 300–500)">打樣與交期：打樣 3–7 天，大貨 10–25 天；起訂量靈活（吊牌 2000–3000 張試單、織嘜 1000 條起、洗水標 300–500 條起）</li>
+      </ul>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 글" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="trim-third-party-testing-guide.html" data-zh="服裝輔料第三方檢測送檢指南：何時必須送檢、送什麼、報告怎麼看" data-en="Third-party Testing for Garment Trims: When, What and How to Read the Report" data-ja="副資材の第三者試験ガイド：いつ必要か、何を依頼するか、報告書の見方" data-ko="부자재 제3자 시험 가이드: 언제 필요한가, 무엇을 맡기나, 성적서 보는 법" data-fr="Essais tiers pour les accessoires : quand, quoi, et comment lire le rapport" data-es="Ensayos externos para accesorios: cuándo, qué y cómo leer el informe">服裝輔料第三方檢測送檢指南：何時必須送檢、送什麼、報告怎麼看</a></li>
+        <li><a href="prop65-apparel-trims-guide.html" data-zh="加州 65 號提案與服裝輔料：警示標籤與風險物質怎麼處理" data-en="California Prop 65 and Apparel Trims: Warnings and Risk Substances" data-ja="カリフォルニア Prop 65 と副資材：警告表示とリスク物質の対応" data-ko="캘리포니아 Prop 65와 부자재: 경고 표시와 유해 물질 대응" data-fr="Proposition 65 et accessoires textiles : avertissements et substances à risque" data-es="Proposición 65 y accesorios de ropa: advertencias y sustancias de riesgo">加州 65 號提案與服裝輔料：警示標籤與風險物質怎麼處理</a></li>
+        <li><a href="certification-claims-label-guide.html" data-zh="吊牌與標籤上的認證標誌與環保聲明指南：誰能印、怎麼寫" data-en="Certification Logos and Green Claims on Hang Tags: Who May Print Them" data-ja="タグの認証ロゴと環境訴求ガイド：誰が印刷できるか" data-ko="행택의 인증 로고와 친환경 문구 가이드: 누가 인쇄할 수 있는가" data-fr="Logos de certification et allégations vertes sur les étiquettes : qui peut les imprimer" data-es="Logos de certificación y declaraciones verdes en etiquetas: quién puede imprimirlos">吊牌與標籤上的認證標誌與環保聲明指南：誰能印、怎麼寫</a></li>
+        <li><a href="garment-trims-certifications.html" data-zh="服裝輔料認證指南：客戶常要的證書與測試報告有哪些" data-en="Garment Trims Certifications: Certificates and Test Reports Buyers Ask For" data-ja="副資材の認証ガイド：客先が求める証明書と試験報告書" data-ko="부자재 인증 가이드: 고객이 요구하는 인증서와 시험 성적서" data-fr="Certifications des accessoires : certificats et rapports d'essai demandés" data-es="Certificaciones de accesorios: certificados e informes que piden los clientes">服裝輔料認證指南：客戶常要的證書與測試報告有哪些</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要爲歐盟訂單把 REACH 文件備齊？把目標市場、輔料清單、材質，以及是否含軟 PVC 或電鍍金屬件發給我們，我們按候選清單與 Annex XVII 逐項過一遍，附上材料聲明與檢測建議，實物樣品 3–7 天寄出。"
+           data-en="Preparing REACH documentation for an EU order? Send us the target market, the trim list, the materials and whether soft PVC or plated metal is involved — we check them item by item against the Candidate List and Annex XVII, supply the material declarations and testing advice, and ship physical samples in 3–7 days."
+           data-ja="EU 向け注文で REACH 書類を整えますか。対象市場、副資材リスト、材質、軟質 PVC やめっき金属部品の有無をお送りください。候補リストと Annex XVII に沿って項目ごとに確認し、材料宣言書と試験のご提案を添えて、3～7日で実物サンプルを発送します。"
+           data-ko="EU 주문용 REACH 서류를 준비하시나요? 대상 시장, 부자재 목록, 소재, 연질 PVC나 도금 금속 부품 포함 여부를 보내주시면 후보 목록과 Annex XVII에 따라 항목별로 검토하고 물질 선언서와 시험 제안을 첨부해 3~7일 내 실물 샘플을 발송합니다."
+           data-fr="Vous préparez les documents REACH pour une commande UE ? Envoyez-nous le marché cible, la liste d'accessoires, les matières et la présence éventuelle de PVC souple ou de métal plaqué : nous vérifions point par point la liste candidate et l'Annexe XVII, fournissons les déclarations matière et les conseils d'essai, et expédions des échantillons en 3 à 7 jours."
+           data-es="¿Preparas la documentación REACH para un pedido de la UE? Envíanos el mercado destino, la lista de accesorios, los materiales y si hay PVC flexible o metal con baño: revisamos punto por punto la lista de candidatas y el Anexo XVII, entregamos las declaraciones de materiales y el consejo de ensayo, y enviamos muestras físicas en 3–7 días.">需要爲歐盟訂單把 REACH 文件備齊？把目標市場、輔料清單、材質，以及是否含軟 PVC 或電鍍金屬件發給我們，我們按候選清單與 Annex XVII 逐項過一遍，附上材料聲明與檢測建議，實物樣品 3–7 天寄出。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取 REACH 合規輔料報價 →" data-en="Request a REACH-compliant trims quote →" data-ja="REACH 対応副資材の見積りを依頼 →" data-ko="REACH 대응 부자재 견적 받기 →" data-fr="Demander un devis accessoires conformes REACH →" data-es="Solicitar presupuesto de accesorios conformes REACH →">獲取 REACH 合規輔料報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
