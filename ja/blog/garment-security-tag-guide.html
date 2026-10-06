@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣料品の万引き防止タグガイド：EAS ハードタグ・ソフトタグ・インクタグの選び方 | TAGE</title>
+<meta name="description" content="衣料品の万引き防止タグ（EAS）ガイド。盗難警報と RFID 棚卸が別系統である理由、音響磁気式ハードタグ・RF ソフトタグ・インクタグの比較、58 kHz と 8.2 MHz のゲート整合、工場でのソースタギングの取付位置、検出距離と適合性の検収基準を解説。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-security-tag-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-security-tag-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝零售防盜標籤指南：EAS 硬標、軟標與墨水標怎麼選",
+     "item": "https://taigetag.com/blog/garment-security-tag-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝零售防盜標籤指南：EAS 硬標、軟標與墨水標怎麼選",
+   "url": "https://taigetag.com/blog/garment-security-tag-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-security-tag-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>防盗タグガイド</span></div>
+      <h1>衣料品の万引き防止タグガイド：EAS ハードタグ・ソフトタグ・インクタグの選び方</h1>
+      <p>泰閣包装 · 2026年10月6日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>衣料用の万引き防止タグ（EAS）は、店舗ロス対策で最も見落とされやすい部分でありながら、ロス率を直接左右します。同じワンピースでも、音響磁気式のハードタグを付けるか、防塵カバーをかけるだけかで盗難率は数倍変わることがあります。ブランドと縫製工場にとって、ハードタグ・ソフトタグ・インクタグのどれを選ぶか、どこに付けるか、工場で誰が取り付けるかは、製品の外観・洗濯性能・店舗オペレーションに影響します。</p>
+
+      <p>本記事は5部構成です。盗難警報と在庫棚卸が別系統である理由、3種類のタグの比較、店舗ゲートの周波数の合わせ方、工場での取付位置と固定方法、そして見積依頼にそのまま書ける発注・検収基準を扱います。</p>
+
+      <h2>1. 盗難警報と在庫棚卸は別の仕組み</h2>
+      <p>EAS の役割はひとつだけです。非活性化されていないタグがゲートを通過すると警報が鳴る。在庫棚卸は RFID やバーコードが担い、コードを読み取って数量を算出します。両者を混同すると、往々にして二重の投資になります。RFID を導入してゲートの代わりになると期待したり、ゲートを設置して在庫が数えられると考えたりするケースです。選定の第一歩はタグではなく、目的（ロス対策・棚卸・その両方）を書き出すことです。</p>
+      <div class="callout">💡 ヒント：EAS タグはレジで消磁するか店員が取り外す必要があります。活性のまま持ち出せばゲートが鳴ります。RFID チップは消磁不要です。運用と研修は分けて行いましょう。そうしないと、警報を鳴らしたまま退店した客を見て、レジ係はシステム故障だと誤解します。</div>
+
+      <h2>2. 3種類のタグ：ハードタグ・ソフトタグ・インクタグ</h2>
+      <table>
+        <tr>
+          <th>種類</th>
+          <th>仕組み</th>
+          <th>向く品種</th>
+          <th>主な制約</th>
+        </tr>
+        <tr>
+          <td>ハードタグ</td>
+          <td>音響磁気式または RF の共振素子を内蔵し、専用の開錠器で外す</td>
+          <td>コート、アウター、革製品など高額・厚地の品種</td>
+          <td>かさばり試着時に気になる。取り外しには店舗の工具と研修が必要</td>
+        </tr>
+        <tr>
+          <td>ソフトタグ</td>
+          <td>タグや包装に貼る薄型の音響磁気・RF 片で、レジで非活性化する</td>
+          <td>タグ、包装箱、薄手・短サイクルの品種</td>
+          <td>剥がせるためハードタグより強度が低い。移し替え防止のため確実に貼る</td>
+        </tr>
+        <tr>
+          <td>インクタグ</td>
+          <td>無理に外すとインクが放出され、衣類を汚して盗む意味を失わせる</td>
+          <td>高級品や盗難多発品種で、ブランド全体の方針として運用</td>
+          <td>誤操作のリスクが高く、供給者と店舗の賠償責任を明記する</td>
+        </tr>
+      </table>
+
+      <h2>3. ゲートの周波数：音響磁気式か RF か</h2>
+      <ul>
+        <li><strong>音響磁気式（AM、一般に 58 kHz）</strong>：検出距離が長く誤報が少なく、衣料店舗の主流です。タグはやや大きく、単価も少し高めです。</li>
+        <li><strong>RF（一般に 8.2 MHz）</strong>：安価で薄型にでき、タグやソフトタグに適します。金属と湿気に敏感で、金属ボタンやアルミ袋の近くでは遮蔽されます。</li>
+        <li><strong>ソースタギング</strong>：工場や副資材メーカーが出荷前に取り付け、店舗に届いた時点で運用できます。店頭での貼付工数が不要になる一方、事前に店舗システムの周波数と取付基準の入手が必要です。</li>
+        <li><strong>金属と湿気の影響</strong>：金属部品は磁界を乱すため、ファスナーの引き手・金属ボタン・ラインストーンを避けて配置します。輸送中の雨や湿った倉庫も読み取り安定性を下げます。</li>
+      </ul>
+
+      <h2>4. 工場での取付：位置・固定方法・製品への影響</h2>
+      <ul>
+        <li><strong>位置の優先順位</strong>：タグと吊りひも、包装袋の外側が最も安全です。衿ぐりの内側は目立ちませんが肌を擦り、試着時に最初に目に入るため、最後の選択肢とします。</li>
+        <li><strong>プレス部とコーティング部を避ける</strong>：タグや粘着層は熱で跡が残り、コーティングやフィルム生地から粘着を剥がすと痕が残ります。避けられない場合は生地の耐性と残糊の清掃方法を確認します。</li>
+        <li><strong>穴あけとピン</strong>：穴を開ける場合は縫い目と荷重部位を避け、タグの穴と位置を合わせると美しく仕上がります。間隔が狭すぎると破れ、広すぎるとタグが揺れて生地を傷めます。</li>
+        <li><strong>子供服と下着はより慎重に</strong>：ソフトタグと肌に当たらない位置を優先し、取り外せる小さな部品は避けます。子供向けの取り外し可能部品には独自の引張強度と安全要件があるため、選定前に確認します。</li>
+        <li><strong>ゲートでの通過試験</strong>：ロットごとにサンプルをゲートに通し、感度と位置の一貫性を確認します。サイズ間で位置を揃えないと、警報時の原因追跡ができません。</li>
+      </ul>
+
+      <h2>5. 発注と検収の基準</h2>
+      <ul>
+        <li>周波数と型番を発注書に記載します。音響磁気か RF か、動作周波数、寸法と形状。到着後に店舗システムと合わないと気づく事態を防ぎます。</li>
+        <li>検出距離は実測値で求めます。店舗のゲート幅と取付高さに基づく再現可能な数値で、high sensitivity という表現では不十分です。</li>
+        <li>耐久性と洗濯の扱い：耐熱・耐湿と家庭洗濯の可否を明記します。多くのハードタグは水洗に耐えないため、扱い方をラベルと包装に記載します。</li>
+        <li>環境・適合性：金属部品はニッケル溶出と鉛含有に注意が必要で、EU 向けは該当する限度値への適合が求められます。子供向けはさらに追加確認が必要です。</li>
+        <li>解除工具と研修を同梱します。開錠器、予備ピン、操作説明を添え、店舗の誤操作で製品が損傷した場合の扱いをあらかじめ合意します。</li>
+        <li>数量確認とサンプル保管：重量ではなく個数で数え、混載は袋ごとに表示します。ロットごとにサンプルを保管すれば、感度のトラブル時に同一ロットで再試験できます。</li>
+      </ul>
+
+      <div class="callout">💡 ヒント：品種、店舗システムの周波数（AM 58 kHz か RF 8.2 MHz）、取付位置、数量、納期の5項目を一度に伝えれば、使える提案が返ってきます。周波数が抜けると、安い見積りでもゲートに反応しないロットになりかねません。</div>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+        <li><a href="rfid-garment-labels.html">RFID 衣料タグガイド：棚卸・真正性・媒体選び</a></li>
+        <li><a href="hang-tag-metal-hardware-guide.html">タグ金具ガイド：ハトメ・ピン・セキュリティ部品</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>店舗や新シーズンの防犯対策をご検討ですか。品種、店舗システムの周波数、取付位置、数量をお送りいただければ、タグ・ネーム・洗濯表示・包装と一式でご提案し、3～7日で実物サンプルをお届けします。</p>
+        <a class="cta-btn" href="../contact.html">防盗タグの見積りを依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
