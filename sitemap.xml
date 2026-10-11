@@ -146,37 +146,37 @@
   </url>
   <url>
     <loc>https://taigetag.com/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://taigetag.com/ko/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://taigetag.com/ja/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://taigetag.com/en/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://taigetag.com/fr/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://taigetag.com/es/blog/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -9035,6 +9035,78 @@
   <url>
     <loc>https://taigetag.com/es/blog/corrugated-carton-strength-guide.html</loc>
     <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/pfas-restrictions-apparel-trims-guide.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/eu-forced-labour-regulation-apparel-trims.html</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
