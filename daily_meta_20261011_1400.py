@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""2026-10-11 下午批次（14:00）每日更新：2 篇新文章元数据（六语：zh-Hant 根 / en / ja / ko / fr / es）
+
+选题说明（主题池 30 项连同既有扩展均已上线；本次沿两个尚未独立成文的方向扩展，
+已核对 blog/、en|ja|ko|fr|es/blog/ 与 sitemap.xml 无重复 slug，并全站扫描确认关键词覆盖情况）：
+
+- zdhc-mrsl-apparel-trims-guide：全站扫描「ZDHC / MRSL / 零排放 / 限用物质清单」仅 4 处顺带提及
+  （trim-third-party-testing-guide、_body_effects、_body_rainwear、_body_testlab），无独立文章；
+  「Higg / 化学品管理 / 废水」仅 1 处（_body_socialaudit 讲 BSCI 时顺带）。
+  本文按「ZDHC 是什么 → MRSL 与 RSL 的区别对照表 → 辅料七个涉化学品工序 → ZDHC 工具箱与工厂动作表 →
+  Higg FEM 与 Cascale → 客户常要的四份文件 → 一年内可落地的六件事」展开。
+  事实依据为公开官方文本：ZDHC MRSL 当前版本 V3.1（2023 年 11 月起 Gateway 仅收录 V3.1 符合产品）、
+  符合等级 1／2／3、符合等级与有效期在 Gateway 可查；Higg 指数由 Cascale（原 SAC）管理，
+  FEM 覆盖能源/水/废水/排放/废弃物/化学品管理，FSLM 与 SLCP 呼应，EFRAG 认可 FEM 对 SME 的价值。
+  正文已加「以官方最新文本为准」免责说明，未使用任何价格数字。
+
+- packaging-tamper-evident-seal-guide：全站扫描「揭开留字 / VOID / 易碎纸 / 一次性封条 / 防拆封」仅 1 处提及
+  （shrink-film-packaging-guide 顺带）；hang-tag-anti-counterfeiting 讲吊牌防伪工艺（全息/一物一码），
+  garment-security-tag-guide 讲 EAS 防盗标签，均未涉及包装封口与揭启留字。
+  本文按「防拆封解决的三个问题 → 六种方案对照表（VOID/易碎纸/塑料封条/线扣编号/热缩膜/防拆箱贴）→
+  VOID 原理与三个选型细节 → 与吊牌洗标二维码的配合 → 设计与印刷要点 → 使用与验收」展开，全部为工艺与经验内容。
+"""
+
+ARTICLES = [
+    dict(
+        slug="zdhc-mrsl-apparel-trims-guide.html",
+        body="blog/_body_zdhc.html",
+        title_zh="ZDHC MRSL 与服装辅料化学物质管理指南：品牌要求、文件与自查 | TAGE",
+        title_en="ZDHC MRSL Guide for Apparel Trims: Chemical Management &amp; Documents | TAGE",
+        title_ja="ZDHC MRSL と衣料副資材の化学物質管理ガイド：要求事項・書類・自主点検 | TAGE",
+        title_ko="ZDHC MRSL과 의류 부자재 화학물질 관리 가이드: 요건·서류·자가 점검 | TAGE",
+        title_fr="Guide ZDHC MRSL pour les accessoires textiles : exigences, dossiers et auto-contrôle | TAGE",
+        title_es="Guía ZDHC MRSL para accesorios textiles: requisitos, documentos y autoevaluación | TAGE",
+        desc_zh="ZDHC MRSL 与服装辅料化学物质管理指南：讲清 MRSL 与品牌 RSL 的区别、辅料哪些工序会碰到受限化学品、ZDHC Gateway 符合等级与 Higg FEM 的关系、化学品清单与废水报告怎么准备，以及客户最常索要的四份文件与一年内能落地的六件事。东莞泰阁包装可提供辅料化学品清单与检测配套。",
+        desc_en="ZDHC MRSL guide for apparel trims: MRSL versus RSL, which trims processes touch restricted chemicals, Gateway conformance levels and the files brands ask for.",
+        desc_ja="衣料副資材の ZDHC MRSL 対応ガイド。MRSL とブランド RSL の違い、制限物質に触れる工程、ZDHC Gateway の適合等級、Higg FEM との関係、顧客が求める 4 つの書類、1 年で実行できる 6 項目を解説。東莞泰閣包装。",
+        desc_ko="의류 부자재 ZDHC MRSL 대응 가이드. MRSL과 브랜드 RSL의 차이, 제한 물질에 닿는 공정, ZDHC Gateway 적합 등급, Higg FEM과의 관계, 고객이 요구하는 네 가지 서류, 1년 내 실행할 여섯 가지를 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Guide ZDHC MRSL des accessoires textiles : MRSL vs RSL, procédés concernés, niveaux de conformité du Gateway, Higg FEM et les dossiers réclamés par les marques.",
+        desc_es="Guía ZDHC MRSL para accesorios textiles: MRSL frente a RSL, procesos implicados, niveles de conformidad del Gateway, Higg FEM y los documentos que piden las marcas.",
+        crumb_zh="ZDHC MRSL 与辅料化学物质管理",
+        crumb_en="ZDHC MRSL &amp; Trims",
+        crumb_ja="ZDHC MRSL と副資材対応",
+        crumb_ko="ZDHC MRSL과 부자재 대응",
+        crumb_fr="ZDHC MRSL et accessoires",
+        crumb_es="ZDHC MRSL y accesorios",
+        h1_zh="ZDHC MRSL 与服装辅料化学物质管理指南：从清单到落地动作",
+        h1_en="ZDHC MRSL and Apparel Trims: From the List to Practical Actions",
+        h1_ja="ZDHC MRSL と衣料副資材の化学物質管理：リストから実行までの道筋",
+        h1_ko="ZDHC MRSL과 의류 부자재 화학물질 관리: 목록에서 실행까지",
+        h1_fr="ZDHC MRSL et accessoires textiles : de la liste aux actions concrètes",
+        h1_es="ZDHC MRSL y accesorios textiles: de la lista a las acciones concretas",
+        tag_zh="合规指南",
+        tag_en="Compliance Guide",
+        tag_ja="コンプライアンスガイド",
+        tag_ko="컴플라이언스 가이드",
+        tag_fr="Guide conformité",
+        tag_es="Guía de cumplimiento",
+        sum_zh="ZDHC MRSL 管的是进厂的化学品，而品牌自己的 RSL 管的是出厂的成品，两者常常在同一份问卷里同时出现，把二者混为一谈就会答错问题。文章先用一张表把 MRSL、RSL 与 ZDHC 的分工讲清：MRSL 由 ZDHC 统一发布、针对染料助剂油墨胶水涂层与清洗剂，靠配方符合等级与化学品清单审核来判定；RSL 由各品牌自行发布、针对成品及部件的残留，靠第三方检测报告判定。接着列出辅料厂最容易碰到受限化学品的七个工序——吊牌印刷与烫金、织唛染色与后整理、洗水标涂层与上浆、包装袋覆膜复合、五金电镀、防水防污防油涂层，以及 PVC 与橡胶配件的增塑剂。第三部分是 ZDHC 工具箱对照表：Gateway 化学品模块、MRSL 符合等级 1／2／3、废水模块报告与工厂注册自评，分别写明谁在使用、辅料厂要做什么。随后解释 Higg 指数由 Cascale 管理，Higg FEM 覆盖能源用水废水排放废弃物与化学品管理、Higg FSLM 与 SLCP 呼应、EFRAG 认可 FEM 对中小企业的价值。最后给出客户最常索要的四份文件与一年内可落地的六件事：集中登记、锁定配方、索要等级证明、管住湿加工、定人定责、做成一份化学物质管理档案。",
+        sum_en="The ZDHC MRSL governs the chemicals entering the plant while a brand's own RSL governs the finished goods, yet both appear in the same questionnaire — conflating them leads to wrong answers. The article opens with a table separating ZDHC, the MRSL and the RSL: the MRSL is published once for the industry, targets dyes, auxiliaries, inks, adhesives, coatings and cleaning agents, and is judged through formulation conformance levels and chemical inventory review; an RSL is issued by each brand against residues in the finished product and its components and is judged by third-party test reports. It then lists the seven trims processes most exposed to restricted chemicals — hang tag printing and foil stamping, woven label dyeing and finishing, care label coating and sizing, bag lamination, metal plating, water and stain repellent finishes, and plasticisers in PVC and rubber parts. A third section tabulates the ZDHC toolbox: the Gateway chemical module, MRSL conformance levels 1, 2 and 3, wastewater module reports, and facility registration and self-assessment, each with who uses it and what the trims plant must do. It then explains that the Higg Index is governed by Cascale, that Higg FEM covers energy, water, wastewater, emissions, waste and chemical management, that Higg FSLM echoes SLCP, and that EFRAG recognises FEM as valuable for SMEs. It closes with the four document sets customers request most and six actions deliverable within a year: one central register, locking the recipes, asking for conformance proofs, controlling wet processes, naming an owner, and building a single chemical management dossier.",
+        sum_ja="ZDHC MRSL は工場に入る化学品を、ブランド自身の RSL は出荷する完成品を対象としますが、両者は同じ質問票に並んで現れるため、混同すると回答を誤ります。本記事はまず表で ZDHC、MRSL、RSL の役割を整理します。MRSL は ZDHC が業界共通で発行し、染料・助剤・インキ・接着剤・コーティング・洗浄剤を対象に、処方の適合等級と化学品リストの審査で判定します。RSL はブランドごとに発行され、完成品と部材の残留物質を第三者試験報告で判定します。続いて制限物質に触れやすい 7 工程（タグ印刷と箔押し、織りラベルの染色と後加工、洗濯表示ラベルのコーティングと糊付け、袋のラミネート、金具めっき、撥水・防汚加工、PVC・ゴム部材の可塑剤）を挙げます。第 3 部は ZDHC ツールの対照表で、Gateway 化学品モジュール、MRSL 適合等級 1／2／3、廃水モジュール報告、工場登録と自己評価について、利用者と副資材工場の対応を示します。さらに Higg 指数は Cascale が管理し、Higg FEM はエネルギー・水・廃水・排出・廃棄物・化学品管理を網羅、Higg FSLM は SLCP と呼応、EFRAG は FEM を中小企業に有用と認めていることを説明します。最後に顧客が最も求める 4 つの書類と、1 年で実行できる 6 項目（一元登録、処方の固定、等級証明の取得、湿式工程の管理、責任者の指名、化学物質管理ファイの作成）を示します。",
+        sum_ko="ZDHC MRSL은 공장에 들어오는 화학물질을, 브랜드 자체 RSL은 출하되는 완제품을 대상으로 하지만 둘은 같은 설문에 함께 등장하므로 혼동하면 답을 틀립니다. 이 글은 먼저 표로 ZDHC, MRSL, RSL의 역할을 구분합니다. MRSL은 ZDHC가 업계 공용으로 발행하며 염료·조제·잉크·접착제·코팅·세정제를 대상으로 하고 배합 적합 등급과 화학물질 목록 심사로 판정합니다. RSL은 브랜드별로 발행되며 완제품과 부품의 잔류물질을 제3자 시험 성적서로 판정합니다. 이어 제한 물질에 닿기 쉬운 일곱 공정(행택 인쇄와 박 가공, 직조 라벨 염색과 후가공, 케어라벨 코팅과 사이징, 봉투 라미네이팅, 금속 도금, 발수·방오 가공, PVC·고무 부품의 가소제)을 제시합니다. 세 번째 부분은 ZDHC 도구 대조표로 Gateway 화학물질 모듈, MRSL 적합 등급 1/2/3, 폐수 모듈 보고서, 공장 등록과 자체 평가의 사용자와 부자재 공장 대응을 정리합니다. 이어 Higg 지수는 Cascale이 관리하고, Higg FEM은 에너지·용수·폐수·배출·폐기물·화학물질 관리를 포함하며, Higg FSLM은 SLCP와 호응하고, EFRAG가 FEM을 중소기업에 유용한 도구로 인정했음을 설명합니다. 마지막으로 고객이 가장 많이 요구하는 네 가지 서류와 1년 내 실행할 여섯 가지(일원 등록, 배합 고정, 등급 증명 확보, 습식 공정 관리, 책임자 지정, 화학물질 관리 문서철 작성)를 제시합니다.",
+        sum_fr="La ZDHC MRSL encadre les produits chimiques entrant dans l'usine, tandis que le RSL propre à la marque encadre le produit fini ; les deux figurent pourtant dans le même questionnaire, et les confondre conduit à de mauvaises réponses. L'article commence par un tableau qui sépare ZDHC, MRSL et RSL : la MRSL est publiée une fois pour la filière, cible teintures, auxiliaires, encres, adhésifs, couchages et détergents, et se juge par les niveaux de conformité des formulations et la revue de l'inventaire chimique ; le RSL est émis par chaque marque contre les résidus du produit fini et de ses composants, jugé sur rapports d'essai tiers. Suivent les sept procédés d'accessoires les plus exposés : impression et dorure, teinture et finition des labels tissés, couchage et encollage des labels d'entretien, complexage des sacs, galvanoplastie, finitions déperlantes, et plastifiants des pièces PVC et caoutchouc. Une troisième partie tabule la boîte à outils ZDHC : module chimique du Gateway, niveaux de conformité 1, 2 et 3, rapports du module eaux usées, enregistrement et auto-évaluation d'usine, avec les utilisateurs et l'action attendue de l'usine. L'article rappelle ensuite que le Higg Index est gouverné par Cascale, que le Higg FEM couvre énergie, eau, eaux usées, émissions, déchets et gestion chimique, que le Higg FSLM fait écho au SLCP et que l'EFRAG reconnaît la valeur du FEM pour les PME. Il termine par les quatre dossiers les plus demandés et six actions réalisables en un an : registre central, recettes figées, preuves de conformité, procédés humides encadrés, un responsable désigné, et un dossier unique de gestion chimique.",
+        sum_es="La ZDHC MRSL regula los productos químicos que entran en la planta y el RSL propio de la marca el producto acabado, pero ambos aparecen en el mismo cuestionario, y confundirlos lleva a respuestas erróneas. El artículo abre con una tabla que separa ZDHC, MRSL y RSL: la MRSL se publica una vez para el sector, se dirige a tintes, auxiliares, tintas, adhesivos, recubrimientos y limpiadores, y se juzga por niveles de conformidad de la formulación y revisión del inventario; el RSL lo emite cada marca contra residuos del producto acabado y sus componentes y se juzga con informes de terceros. Después enumera los siete procesos de accesorios más expuestos: impresión y estampado, tintura y acabado de tejidas, recubrimiento y encolado de etiquetas de cuidado, laminado de bolsas, galvanizado, acabados hidrófugos y plastificantes en piezas de PVC y caucho. Una tercera parte tabula las herramientas ZDHC: módulo químico del Gateway, niveles de conformidad 1, 2 y 3, informes del módulo de aguas residuales, registro y autoevaluación de planta, con quién los usa y la acción esperada de la fábrica. Recuerda que el índice Higg lo gobierna Cascale, que el Higg FEM cubre energía, agua, aguas residuales, emisiones, residuos y gestión química, que el Higg FSLM se alinea con el SLCP y que EFRAG reconoce el valor del FEM para pymes. Cierra con los cuatro documentos más pedidos y seis acciones aplicables en un año: registro central, recetas fijadas, pruebas de conformidad, procesos húmedos controlados, un responsable designado y un único expediente de gestión química.",
+    ),
+    dict(
+        slug="packaging-tamper-evident-seal-guide.html",
+        body="blog/_body_seal.html",
+        title_zh="服装包装防拆封与揭启留字标签指南：VOID 封口贴、易碎纸与一次性封条 | TAGE",
+        title_en="Tamper-Evident Apparel Packaging: VOID Seals, Brittle Labels &amp; One-Time Seals | TAGE",
+        title_ja="衣料包装の開封痕跡ガイド：VOID シール、易砕紙ラベル、使い捨てシール | TAGE",
+        title_ko="의류 포장 개봉 흔적 가이드: VOID 씰, 취성지 라벨, 일회용 씰 | TAGE",
+        title_fr="Emballage inviolable pour vêtements : pastilles VOID, papier fragile et scellés à usage unique | TAGE",
+        title_es="Embalaje inviolable para prendas: precintos VOID, papel frágil y sellos de un solo uso | TAGE",
+        desc_zh="服装包装防拆封指南：封口贴、易碎纸标签与 VOID 揭启留字封条怎么选，六种方案的基材与场景对照、VOID 原理与三个选型细节、与吊牌和二维码的配合，以及贴附时机与验收口径。东莞泰阁包装可提供防拆封包装打样与配套。",
+        desc_en="Tamper-evident apparel packaging guide: VOID reveal-message seals, brittle paper labels and one-time seals compared, plus selection details and acceptance.",
+        desc_ja="衣料包装の開封痕跡ガイド。封かんシール、易砕紙ラベル、VOID 開封痕跡シールの選び方、6 方式の基材と用途の比較、VOID の仕組みと選定 3 ポイント、タグ・QR コードとの組み合わせ、貼るタイミングと検収基準を解説。東莞泰閣包装。",
+        desc_ko="의류 포장 개봉 흔적 가이드. 봉인 스티커, 취성지 라벨, VOID 개봉 흔적 씰 선택법, 여섯 방식의 기재와 용도 비교, VOID 원리와 세 가지 선정 포인트, 행택·QR 코드 조합, 부착 시점과 검수 기준을 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Guide de l'emballage inviolable : pastilles VOID, étiquettes papier fragile et scellés à usage unique comparés, points de choix, moment de pose et critères de réception.",
+        desc_es="Guía de embalaje inviolable: precintos VOID, etiquetas de papel frágil y sellos de un solo uso comparados, detalles de selección, momento de aplicación y criterios de recepción.",
+        crumb_zh="防拆封与揭启留字标签",
+        crumb_en="Tamper-Evident Seals",
+        crumb_ja="開封痕跡と VOID シール",
+        crumb_ko="개봉 흔적과 VOID 씰",
+        crumb_fr="Scellés inviolables",
+        crumb_es="Precintos inviolables",
+        h1_zh="服装包装防拆封与揭启留字标签指南：从选材到验收",
+        h1_en="Tamper-Evident Apparel Packaging: From Material Choice to Acceptance",
+        h1_ja="衣料包装の開封痕跡と VOID シール：素材選定から検収まで",
+        h1_ko="의류 포장 개봉 흔적과 VOID 씰: 소재 선정부터 검수까지",
+        h1_fr="Emballage inviolable et pastilles VOID : du choix matière à la réception",
+        h1_es="Embalaje inviolable y precintos VOID: de la elección del material a la recepción",
+        tag_zh="包装指南",
+        tag_en="Packaging Guide",
+        tag_ja="包装ガイド",
+        tag_ko="포장 가이드",
+        tag_fr="Guide emballage",
+        tag_es="Guía de embalaje",
+        sum_zh="防拆封是最便宜也最容易被忽略的一环：一枚几分钱的封口贴决定顾客开箱时能否确认衣服没被拆过、没被调换过。文章先明确防拆封要解决的三件事——防偷换窜货、防调包退货、品牌保护与开箱仪式；再用一张表对照六种常见方案：VOID 揭启留字封口贴（PET 或纸基＋离型字模层，用于袋口与盒封）、易碎纸标签（揭开即碎不可复原，用于纸盒与外贸外箱）、一次性抽紧式塑料封条（拉链头与挂衣杆）、线扣加编号封条（小批量精品与礼服）、热缩膜封口（整包与托盘）、防拆箱贴加条码（外箱与跨境直发），逐项写明材料、典型位置与适用场景。第三部分解释 VOID 的工作机制（面材与离型层分离，预印的 VOID 或已开启以残留胶留在被贴物上，无法擦除复原），并给出三个选型细节：按基材选胶（PE 与 PP 属低表面能需高初粘，纸袋与覆膜盒面胶太强会撕破纸纤维）、按环境选材（海运高温高湿、冬季低温仓、门店酒精擦拭、PVC 增塑剂迁移）、按识别需求定字（VOID、已开启、品牌 logo，或与二维码结合）。随后讲与吊牌洗标二维码的配合：统一编号体系、开箱动线、退换货取证。最后是设计与印刷要点（尺寸形状、颜色材质、卷装规格与储存、微缩文字与荧光油墨等加分项）以及使用与验收（贴附时机放在最后一次包装检查之后、先做 20 至 50 片试贴、把基材胶系留字效果揭起力写进订单、手工与自动贴标机的匹配）。",
+        sum_en="Tamper evidence is the cheapest and most overlooked layer of apparel packing: a seal costing a few cents decides whether the customer can confirm the garment was never opened or swapped. The article first fixes the three problems worth solving — pilferage and diversion, return fraud, and brand protection with the unboxing ritual — then compares six common options in a table: VOID reveal-message seals (PET or paper face with a release-layer message, for bag mouths and box closures), brittle paper labels that tear on removal (cartons and export boxes), one-time pull-tight plastic seals (zip pullers and rails), cord locks with numbered seals (small-batch premium and bridal), shrink film seals (multipacks and trays) and tamper-evident carton tape with barcodes (outer cartons and cross-border direct despatch), each with material, typical position and best use. A third section explains how VOID works — face stock separating from the release layer so the pre-printed VOID or already opened message remains as adhesive residue that cannot be wiped off or reinstated — and gives three selection details: match the adhesive to the substrate (PE and PP are low surface energy and need high initial tack, while paper bags and laminated boxes tear if the adhesive is too strong), match the material to the environment (hot humid sea freight, cold winter warehouses, alcohol wiping in stores, plasticiser migration on PVC) and define the message (VOID, already opened, a brand logo, or combined with a QR code). It then covers coordination with hang tags, care labels and QR codes through a shared numbering system, the unboxing sequence and return evidence, and closes with design and printing points — size and shape, colour and material, roll specification and storage, optional microtext and fluorescent ink — plus application and acceptance: seal after the final packing check, run 20 to 50 trial applications, write substrate, adhesive, message clarity, peel force and roll spec into the order, and match hand application or an automatic labeller to the line.",
+        sum_ja="開封痕跡は最も安価で最も見落とされやすい層です。数円の封かんシールが、顧客が開封時にすり替えや開封の有無を確認できるかを決めます。本記事はまず解決すべき 3 つの課題（すり替えと横流し、返品すり替え、ブランド保護と開封の儀式性）を整理し、次に 6 方式を表で比較します。VOID 開封痕跡シール（PET または紙基材＋離型文字層、袋口と箱封かん）、易砕紙ラベル（剥がすと砕け復元不可、紙箱と輸出カートン）、使い捨て引き締め式プラスチックシール（ファスナー引き手とハンガーレール）、コードロック＋番号シール（小ロット高級品とブライダル）、シュリンクフィルム封かん（マルチパックとトレー）、開封痕跡テープ＋バーコード（外箱と越境直送）について、材料・位置・用途を明記します。第 3 部では VOID の仕組み（基材と離型層が分離し、予印の VOID や開封済みが残着剤として残り、拭き取りも復元も不可）を説明し、選定の 3 ポイントを示します。基材に合わせた粘着剤（PE・PP は低表面エネルギーで高初粘が必要、紙袋やラミネート箱は強すぎると破れる）、環境に合わせた素材（海上輸送の高温多湿、冬季の低温倉庫、アルコール拭き、PVC の可塑剤移行）、表示文字の設計（VOID、開封済み、ロゴ、QR コード併用）。続いてタグ・洗濯表示・QR コードとの連携（番号体系の統一、開封動線、返品の証拠）、最後に設計と印刷の要点（サイズ形状、色と素材、ロール仕様と保管、マイクロ文字・蛍光インキなどの追加要素）と、使用と検収（最終検査後に貼る、20〜50 枚の試貼、基材・粘着系・文字の見え方・剥離力を発注書に明記、手貼りと自動ラベラーの整合）を扱います。",
+        sum_ko="개봉 흔적은 가장 저렴하면서 가장 간과되는 층입니다. 몇 원짜리 씰 하나가 고객이 개봉 시 바뀌치기나 개봉 여부를 확인할 수 있는지를 결정합니다. 이 글은 먼저 해결할 세 가지(교체와 유통 이탈, 반품 바꿔치기, 브랜드 보호와 언박싱 의식)를 정리하고, 이어 여섯 방식을 표로 비교합니다. VOID 개봉 흔적 씰(PET 또는 종이 기재 + 이형 문자층, 봉투 입구와 박스 봉함), 취성지 라벨(떼면 부서져 복원 불가, 종이박스와 수출 카톤), 일회용 조임식 플라스틱 씰(지퍼 손잡이와 행거 레일), 코드락 + 번호 씰(소량 프리미엄과 브라이덜), 수축 필름 봉함(멀티팩과 트레이), 개봉 흔적 테이프 + 바코드(외박스와 해외 직배송)의 재료, 위치, 용도를 명시합니다. 세 번째 부분은 VOID의 원리(기재와 이형층이 분리되어 미리 인쇄된 VOID나 '개봉됨'이 잔류 접착제로 남고 닦아도 복원할 수 없음)를 설명하고 세 가지 선정 포인트를 제시합니다. 기재에 맞춘 접착제(PE·PP는 저표면에너지로 높은 초기 점착 필요, 종이백과 라미네이트 박스는 너무 강하면 찢어짐), 환경에 맞춘 소재(해상 운송의 고온다습, 겨울 저온 창고, 알코올 세척, PVC 가소제 이동), 표시 문구 설계(VOID, 개봉됨, 로고, QR 코드 결합). 이어 행택·케어라벨·QR 코드와의 연계(번호 체계 통일, 개봉 동선, 반품 증거)와 마지막으로 디자인·인쇄 포인트(크기와 형태, 색상과 소재, 롤 사양과 보관, 마이크로 문자와 형광 잉크 등) 및 사용과 검수(최종 검사 후 부착, 20~50매 시험 부착, 기재·접착 계열·문자 선명도·박리력을 발주서에 명시, 수작업과 자동 라벨러 정합)를 다룹니다.",
+        sum_fr="L'inviolabilité est la couche la moins chère et la plus négligée de l'emballage textile : une pastille de quelques centimes décide si le client peut vérifier que le vêtement n'a pas été ouvert ni échangé. L'article fixe d'abord les trois problèmes à traiter — vol et détournement, retours frauduleux, protection de marque et rituel d'ouverture — puis compare six solutions dans un tableau : pastilles VOID à message révélé (support PET ou papier avec couche anti-adhérente, ouvertures de sacs et fermetures de boîtes), étiquettes papier fragile qui se déchirent au retrait (cartons et caisses d'export), scellés plastique à serrage unique (tirettes et rails), bloqueurs à cordon numérotés (petites séries premium et mariage), scellage par film rétractable (lots et plateaux) et ruban inviolable avec code-barres (cartons et envois directs transfrontaliers), avec matériau, position et usage idéal. Une troisième partie explique le fonctionnement du VOID — le support se sépare de la couche anti-adhérente et le message pré-imprimé reste en résidu adhésif, impossible à effacer ou à remettre en place — puis trois points de choix : adapter l'adhésif au support (PE et PP à faible énergie de surface exigent un fort tack, sacs papier et boîtes complexes se déchirent si l'adhésif est trop fort), adapter la matière à l'environnement (transport maritime chaud et humide, entrepôts froids, nettoyage à l'alcool, migration de plastifiant sur PVC) et définir le message (VOID, déjà ouvert, logo, ou combiné à un QR code). Suivent la coordination avec étiquettes, labels d'entretien et QR via une numérotation partagée, le parcours d'ouverture et la preuve en cas de retour, puis les points de conception et d'impression — dimensions, couleur, rouleaux et stockage, microtexte ou encre fluorescente — et enfin la pose et la réception : sceller après le dernier contrôle, essayer 20 à 50 poses, inscrire support, adhésif, netteté, force de pelage et format de rouleau au bon de commande, et accorder pose manuelle ou étiqueteuse au rythme de ligne.",
+        sum_es="La inviolabilidad es la capa más barata y más desatendida del embalaje textil: un precinto de unos céntimos decide si el cliente puede comprobar que la prenda no se abrió ni se cambió. El artículo fija primero los tres problemas a resolver —hurto y desvío, devoluciones fraudulentas, y protección de marca con el ritual de apertura— y compara después seis soluciones en una tabla: precintos VOID con mensaje revelado (soporte PET o papel con capa antiadherente, bocas de bolsa y cierres de caja), etiquetas de papel frágil que se rompen al retirar (cartones y cajas de exportación), precintos plásticos de apriete único (tiradores y barras), bloqueadores de cordón numerados (series cortas premium y novia), sellado con film retráctil (lotes y bandejas) y cinta inviolable con código de barras (cartones y envío directo transfronterizo), con material, posición y uso ideal. Una tercera parte explica el funcionamiento del VOID —el soporte se separa de la capa antiadherente y el mensaje preimpreso queda como residuo que no se borra ni se repone— y da tres detalles de selección: adaptar el adhesivo al sustrato (PE y PP de baja energía superficial exigen alto tack; bolsas de papel y cajas laminadas se rompen si el adhesivo es excesivo), adaptar el material al entorno (transporte marítimo cálido y húmedo, almacenes fríos, limpieza con alcohol, migración de plastificante en PVC) y definir el mensaje (VOID, ya abierto, logo o combinado con QR). Sigue la coordinación con etiquetas, etiquetas de cuidado y códigos QR mediante numeración compartida, el recorrido de apertura y la prueba en devoluciones, y cierra con diseño e impresión —tamaño, color, rollos y almacenamiento, microtexto o tinta fluorescente— y con el uso y la recepción: precintar tras el último control, hacer 20 a 50 aplicaciones de prueba, escribir sustrato, adhesivo, nitidez, fuerza de pelado y formato de rollo en el pedido, y casar aplicación manual o etiquetadora con el ritmo de línea.",
+    ),
+]
