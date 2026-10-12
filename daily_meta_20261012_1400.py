@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""2026-10-12 下午批次（14:00）每日更新：2 篇新文章元数据（六语：zh-Hant 根 / en / ja / ko / fr / es）
+
+选题说明（主题池 30 项连同既有扩展均已上线；本次沿两个尚未独立成文的服装品类扩展，
+已核对 blog/、en|ja|ko|fr|es/blog/ 与 sitemap.xml 无重复 slug，并做全站关键词扫描确认空白）：
+
+- trousers-pants-trims-guide.html：裤装（西裤 / 休闲裤 / 运动裤 / 工装裤）辅料与标签。
+  全站扫描：「西裤」0 处、「长裤」0 处、「裤头」0 处、「裤袢」0 处、「裤耳」0 处、「拉链门襟」0 处、
+  「腰里」0 处；「裤腰」仅 4 处（_body_drawcord / _body_elastic / _body_loungewear / _body_webbing 的举例）、
+  「裤袋」仅 1 处（_body_loungewear）。既有品类文章里有 suiting-formalwear（西装外套）、
+  denim-garment-trims-guide（牛仔洗水工艺下的辅料耐受）、elastic-trims-selection-guide（弹性辅料选型），
+  但没有把「裤装」作为一个品类单独成文：腰头衬与腰里组合、裤袢数量位置与牢度、门襟拉链长度与开口的关系、
+  后腰唛/尺码标/洗水标/产地标四类标签的位置与缝制顺序、折叠 vs 裤夹挂装 vs 整箱、打样验收五步。
+  牛仔裤与西裤的差异在文中以「同一处辅料、不同处理」的方式对照，不重复牛仔文章的水洗内容。
+  全部为工艺与验收内容，未编造价格与罚款金额。
+
+- tshirt-hoodie-trims-guide.html：T 恤与卫衣（针织服装）辅料与标签。
+  全站扫描：「标签打印机」0 处、「自打印」0 处；「T恤」14 处、「卫衣」6 处均为他文顺带提及
+  （如 _body_piping / _body_ribknit / care-label-*、poly-bag-* 的举例），没有 T 恤/卫衣品类专文。
+  knitwear-sweater-trims-guide 讲针织毛衣的柔软/耐洗/不钩丝，rib-knit-collar-cuff-guide 讲罗纹本体参数，
+  garment-drawcord-guide 讲抽绳本体与儿童安全，print-on-demand-apparel-labels 讲 DTG/DTF 洗护声明；
+  本文的落点是「领标方案四选一（缎面织唛/平纹织唛/印唛/热转印无感）→ 领标位置与尺寸公差 →
+  卫衣专属部件（抽绳、绳头、罗纹、绣标装饰）→ 电商与快反场景下的吊牌/尺码贴/包装组合 → 验收五步」，
+  与之互补而非重叠。EN 14682 仅作为「儿童颈部抽绳受法规限制」的举例，并写明以最新版标准与客户要求为准。
+"""
+
+ARTICLES = [
+    dict(
+        slug="trousers-pants-trims-guide.html",
+        body="blog/_body_trousers.html",
+        title_zh="裤装辅料与标签指南：腰头、裤袢、门襟与标签怎么配 | TAGE",
+        title_en="Trouser and Pants Trims Guide: Waistband, Belt Loops, Fly and Labels | TAGE",
+        title_ja="パンツの副資材とラベルガイド：ウエスト・ベルトループ・前立ての揃え方 | TAGE",
+        title_ko="바지 부자재와 라벨 가이드: 허리 밴드, 벨트 루프, 앞여밈 구성 | TAGE",
+        title_fr="Guide des accessoires de pantalon : ceinture, passants, braguette et étiquettes | TAGE",
+        title_es="Guía de accesorios de pantalón: cinturilla, trabillas, bragueta y etiquetas | TAGE",
+        desc_zh="裤装辅料与标签指南：从腰头衬与腰里、裤袢位置与牢度、门襟拉链与钩扣，到后腰唛、尺码标、洗水标与产地标的位置和缝制顺序，再到折叠、裤夹挂装与整箱出货的包装方式，附打样与验收五步清单。来自东莞泰阁包装。",
+        desc_en="A trousers trims guide: waistband interlining and lining, belt loops, fly zippers and hooks, back-waist and size label positions, packing and a five-step check.",
+        desc_ja="パンツの副資材とラベルガイド。ウエスト芯地と裏地、ベルトループの位置と強度、前立てファスナーとかぎホック、後ろウエスト・サイズ・洗濯・原産地ラベルの位置と縫製順序、折りたたみ・クリップ掛け・カートン出荷、サンプル検収5ステップを解説します。東莞泰閣包装。",
+        desc_ko="바지 부자재와 라벨 가이드. 허리 심지와 안감, 벨트 루프 위치와 강도, 앞여밈 지퍼와 후크, 뒤 허리·사이즈·세탁·원산지 라벨 위치와 봉제 순서, 접힘·클립 걸이·카톤 출하, 샘플 검수 5단계를 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Guide des accessoires de pantalon : thermocollant et doublure de ceinture, passants, braguette, étiquettes de ceinture, taille, entretien et origine, emballage et cinq contrôles.",
+        desc_es="Guía de accesorios de pantalón: entretela y forro de cinturilla, trabillas, bragueta, etiquetas de cinturilla, talla, cuidado y origen, empaque y cinco comprobaciones.",
+        crumb_zh="裤装辅料与标签",
+        crumb_en="Trouser Trims and Labels",
+        crumb_ja="パンツの副資材とラベル",
+        crumb_ko="바지 부자재와 라벨",
+        crumb_fr="Accessoires de pantalon",
+        crumb_es="Accesorios de pantalón",
+        h1_zh="裤装辅料与标签指南：腰头、裤袢、门襟与标签怎么配",
+        h1_en="Trouser and Pants Trims Guide: Waistband, Belt Loops, Fly and Labels",
+        h1_ja="パンツの副資材とラベルガイド：ウエスト・ベルトループ・前立て・ラベルの揃え方",
+        h1_ko="바지 부자재와 라벨 가이드: 허리 밴드, 벨트 루프, 앞여밈, 라벨 구성",
+        h1_fr="Guide des accessoires de pantalon : ceinture, passants, braguette et étiquettes",
+        h1_es="Guía de accesorios de pantalón: cinturilla, trabillas, bragueta y etiquetas",
+        tag_zh="技术指南",
+        tag_en="Technical Guide",
+        tag_ja="技術ガイド",
+        tag_ko="기술 가이드",
+        tag_fr="Guide technique",
+        tag_es="Guía técnica",
+        sum_zh="裤装辅料看起来比上衣简单，实际是全身辅料最集中、也最容易被客户投诉的位置：腰头起泡、裤袢歪斜、门襟拉链卡顿、尺码标位置不一致，任何一项都会在成衣检验或洗后暴露。文章从一条裤子的辅料清单讲起：腰头衬与腰里、裤袢、门襟拉链与钩扣、袋布与加固、后腰唛、尺码标、洗水标与产地标、吊牌与包装。第二部分专讲腰头结构——西裤与休闲裤腰头常见 3.5–4cm、运动裤松紧腰约 3–4cm，腰头衬的热熔温度必须按面料定，深色腰里吸汗掉色是常见客诉，长裤的裤袢通常 5–7 道且必须上下对齐。第三部分讲门襟与加固：金属、尼龙与隐形拉链的取舍，拉链总长要含上下要塞量，门襟上下端、袋口两端与裤袢两端都要打枣。第四部分给出四类标签的位置与缝制顺序表格：后腰唛与腰头车缝线平行、尺码标紧邻其侧、洗水标在侧缝下部、产地标与报关一致，并说明主唛随腰头车入、洗水标缝侧缝两种做法必须在首件确认时定死。第五部分是包装与出货：折叠装（腰头加薄纸卡）、裤夹挂装（夹口匹配腰头厚度）、按折后尺寸放 1–2cm 选袋、按款色码分箱，海运要放干燥剂。最后给出打样验收五步：腰头、裤袢、门襟、标签、洗后留样。",
+        sum_en="Trouser trims look simpler than those of a top, yet they are where trims concentrate most and where buyers complain most: a bubbled waistband, crooked belt loops, a stiff fly zipper, inconsistent size label placement — any one shows up at final inspection or after the first wash. The article starts with the trims list for a pair of pants: waistband interlining and lining, belt loops, fly zipper and hook, pocketing and reinforcement, back-waist label, size label, care and origin labels, hang tag and packaging. Part two covers waistband construction — 3.5–4cm is typical on dress and casual trousers, about 3–4cm on an elastic jogger waistband, pressing temperature must be set by the shell fabric, dark waistband linings bleeding under sweat are a steady complaint, and a full-length pant usually carries five to seven belt loops that must be vertically aligned. Part three deals with the fly: metal, nylon or invisible zippers, order length that includes both seam allowances, and bar tacks at both ends of the fly, every pocket mouth and every belt loop. Part four is a table of the four label types — back-waist label parallel to the waistband seam, size label beside it, care label at the lower side seam, origin label agreeing with customs — with a note that feeding the main label in with the waistband versus sewing care labels into the side seam must be locked at first-sample approval. Part five covers packing: folded with a thin card under the waistband, clip-hung with clip width matching waistband thickness, bags sized 1–2cm above the folded format, cartons sorted by style, colour and size, and desiccant for sea freight. It closes with five sample checks: waistband, belt loops, fly, labels, and wash plus reference.",
+        sum_ja="パンツの副資材は上着より単純に見えますが、実は最も集中し、クレームが最も出やすい箇所です。ウエストの膨らみ、ベルトループの傾き、前立てファスナーの引っかかり、サイズ表示位置のばらつき——どれも検品や洗濯後に表面化します。記事はパンツ1本の副資材リストから始めます。ウエストの芯地と裏地、ベルトループ、前立てのファスナーとかぎホック、袋布と補強、後ろウエストラベル、サイズ表示、洗濯表示と原産地表示、タグと包装です。第2部はウエストの構造で、スラックスとカジュアルは 3.5〜4cm、ジョガーのゴムウエストは約 3〜4cm、芯地のプレス温度は表地で決め、濃色の裏地が汗で色移りするクレームは頻出、長ズボンのベルトループは通常5〜7本で上下を揃える必要があります。第3部は前立てと補強で、金属・ナイロン・コンシールファスナーの使い分け、発注長さに上下の縫い代を含めること、前立ての上下端・袋口の両端・ループの両端にカンヌキを打つことを扱います。第4部は4種類のラベルの位置と縫製順序の表です。後ろウエストは縫い目と平行、サイズ表示はその隣、洗濯表示は脇縫い下部、原産地表示は通関と一致させ、主ラベルをウエストと一緒に縫い込むか洗濯表示を脇縫いに縫うかは初回サンプル承認時に確定します。第5部は包装と出荷で、折りたたみ（ウエストに薄紙）、クリップ掛け（クリップ幅を腰の厚みに合わせる）、折り寸法より 1〜2cm 大きい袋、型番・色・サイズ別の箱分け、海上輸送の乾燥剤を扱います。最後にウエスト・ループ・前立て・ラベル・洗濯と保管サンプルの検収5ステップを示します。",
+        sum_ko="바지 부자재는 상의보다 단순해 보이지만, 실제로는 가장 집중되고 클레임이 가장 많은 부위입니다. 허리 부풀음, 벨트 루프 기울어짐, 앞여밈 지퍼 걸림, 사이즈 라벨 위치 불일치 — 어느 하나라도 검사나 세탁 후 드러납니다. 글은 바지 한 벌의 부자재 목록에서 시작합니다. 허리 심지와 안감, 벨트 루프, 앞여밈 지퍼와 후크, 주머니 천과 보강, 뒤 허리 라벨, 사이즈 라벨, 세탁·원산지 라벨, 행택과 포장입니다. 두 번째 부분은 허리 구조로, 정장과 캐주얼은 3.5~4cm, 조거 고무 허리는 약 3~4cm, 심지 프레스 온도는 겉감에 맞추고, 어두운 안감의 땀 이염은 단골 클레임이며, 긴 바지 벨트 루프는 보통 5~7개로 상하를 맞춰야 합니다. 세 번째는 앞여밈과 보강으로 금속·나일론·콘실 지퍼의 선택, 발주 길이에 위아래 봉제 여유 포함, 앞여밈 상하단·주머니 입구 양끝·루프 양끝의 바택을 다룹니다. 네 번째는 네 가지 라벨의 위치와 봉제 순서 표입니다. 뒤 허리는 봉제선과 평행, 사이즈 라벨은 그 옆, 세탁 라벨은 옆솔기 아래, 원산지 라벨은 통관과 일치시키고, 메인 라벨을 허리와 함께 박는지 세탁 라벨을 옆솔기에 다는지는 첫 샘플 승인 시 확정합니다. 다섯 번째는 포장과 출하로 접힘(허리에 얇은 카드), 클립 걸이(클립 폭을 허리 두께에 맞춤), 접힌 치수보다 1~2cm 큰 봉투, 스타일·색·사이즈별 박스 분류, 해상 운송 건조제를 다룹니다. 마지막으로 허리, 루프, 앞여밈, 라벨, 세탁과 기준 샘플의 검수 5단계를 제시합니다.",
+        sum_fr="Les accessoires de pantalon paraissent plus simples que ceux d'un haut, mais c'est là que tout se concentre et que les réclamations arrivent : ceinture qui cloque, passants de travers, braguette qui accroche, position d'étiquette de taille incohérente — un seul défaut se voit au contrôle final ou au premier lavage. L'article part de la liste des accessoires d'un pantalon : thermocollant et doublure de ceinture, passants, fermeture et crochet de braguette, poche et renfort, étiquette de ceinture arrière, étiquette de taille, entretien et origine, étiquette suspendue et emballage. La deuxième partie traite la construction de la ceinture : 3,5–4 cm en pantalon de ville et casual, environ 3–4 cm sur un jogging élastiqué, température de presse fixée par le tissu, doublures foncées qui dégorgent à la transpiration, et cinq à sept passants sur un pantalon long, alignés verticalement. La troisième partie couvre la braguette : fermetures métal, nylon ou invisible, longueur commandée incluant les deux coutures, et brides aux extrémités de la braguette, de chaque ouverture de poche et de chaque passant. La quatrième est un tableau des quatre types d'étiquettes — ceinture parallèle à la couture, taille à côté, entretien au bas de couture de côté, origine cohérente avec la douane — en précisant que le choix de monter l'étiquette principale dans la ceinture ou de coudre l'entretien dans la couture de côté se fige au premier échantillon. La cinquième partie traite l'emballage : plié avec une carte fine sous la ceinture, suspendu sur cintre à pinces dont la largeur correspond à l'épaisseur, sachets 1–2 cm au-dessus du format plié, cartons triés par référence, coloris et taille, et dessiccant pour le maritime. Elle se termine par cinq contrôles : ceinture, passants, braguette, étiquettes, puis lavage et référence.",
+        sum_es="Los accesorios de un pantalón parecen más sencillos que los de un top, pero es donde más se concentran y donde más se queja el cliente: cinturilla abombada, trabillas torcidas, cremallera de bragueta que se atasca, posición de etiqueta de talla inconsistente; cualquiera aparecerá en el control final o tras el primer lavado. El artículo arranca con la lista de accesorios de un pantalón: entretela y forro de cinturilla, trabillas, cremallera y corchete de bragueta, bolsillos y refuerzo, etiqueta de cinturilla trasera, etiqueta de talla, cuidado y origen, etiqueta colgante y empaque. La segunda parte trata la construcción de la cinturilla: 3,5–4 cm en pantalón de vestir y casual, unos 3–4 cm en jogger elástico, temperatura de prensado fijada por el tejido, forros oscuros que destiñen con el sudor, y de cinco a siete trabillas en un pantalón largo, alineadas en vertical. La tercera cubre la bragueta: cremalleras metálica, de nailon o invisible, longitud pedida incluyendo ambos márgenes, y presillas en los extremos de la bragueta, de cada boca de bolsillo y de cada trabilla. La cuarta es una tabla de los cuatro tipos de etiqueta —cinturilla paralela a la costura, talla al lado, cuidado en la parte baja de la costura lateral, origen coherente con aduanas— señalando que montar la etiqueta principal dentro de la cinturilla o coser el cuidado en la costura lateral se fija en la primera muestra. La quinta trata el empaque: plegado con tarjeta fina bajo la cinturilla, colgado en percha de pinzas cuya anchura case con el grosor, bolsas 1–2 cm por encima del plegado, cartones separados por referencia, color y talla, y desecante para vía marítima. Cierra con cinco comprobaciones: cinturilla, trabillas, bragueta, etiquetas y lavado con muestra de referencia.",
+    ),
+    dict(
+        slug="tshirt-hoodie-trims-guide.html",
+        body="blog/_body_tee.html",
+        title_zh="T恤与卫衣辅料指南：领标、抽绳、罗纹与吊牌怎么选 | TAGE",
+        title_en="T-Shirt and Hoodie Trims Guide: Neck Labels, Drawcords, Rib and Tags | TAGE",
+        title_ja="Tシャツとパーカーの副資材ガイド：衿ラベル・ドローコード・リブ | TAGE",
+        title_ko="티셔츠와 후디 부자재 가이드: 목 라벨, 드로코드, 리브 | TAGE",
+        title_fr="Guide des accessoires de t-shirt et de sweat : encolure, cordons, côtes | TAGE",
+        title_es="Guía de accesorios de camiseta y sudadera: cuello, cordones y canalé | TAGE",
+        desc_zh="T恤与卫衣辅料指南：针织服装的辅料清单、领标四方案（缎面织唛/平纹织唛/印唛/热转印无感）对比、领标位置与尺寸公差、卫衣的抽绳绳头与罗纹要求、电商场景下的吊牌与尺码贴组合，附打样验收五步。来自东莞泰阁包装。",
+        desc_en="A T-shirt and hoodie trims guide: neck label options from satin woven to tagless, position tolerance, drawcord ends, size stickers, rib and a five-step check.",
+        desc_ja="Tシャツとパーカーの副資材ガイド。ニット衣料の副資材リスト、衿ラベル4方式（サテン織り・平織り・印字・熱転写無感）の比較、位置と寸法公差、ドローコードとエンド・リブの要件、EC 向けタグとサイズシール、サンプル検収5ステップを解説します。東莞泰閣包装。",
+        desc_ko="티셔츠와 후디 부자재 가이드. 편직 의류 부자재 목록, 목 라벨 네 가지 방식(새틴 직조·평직·인쇄·열전사 무감) 비교, 위치와 치수 공차, 드로코드 끝 마감과 리브 요건, 이커머스용 행택과 사이즈 스티커, 샘플 검수 5단계를 정리했습니다. 둥관 TAGE 패키징.",
+        desc_fr="Guide des accessoires de t-shirt et de sweat : solutions d'encolure du satin tissé au transfert, position, cordons, côtes, étiquettes e-commerce et cinq contrôles.",
+        desc_es="Guía de accesorios de camiseta y sudadera: opciones de cuello desde satén tejido hasta transfer, posición, cordones, canalé, etiquetas de e-commerce y cinco comprobaciones.",
+        crumb_zh="T恤与卫衣辅料",
+        crumb_en="T-Shirt and Hoodie Trims",
+        crumb_ja="Tシャツ・パーカーの副資材",
+        crumb_ko="티셔츠·후디 부자재",
+        crumb_fr="Accessoires t-shirt et sweat",
+        crumb_es="Accesorios de camiseta y sudadera",
+        h1_zh="T恤与卫衣辅料指南：领标、抽绳、罗纹与吊牌怎么选",
+        h1_en="T-Shirt and Hoodie Trims Guide: Neck Labels, Drawcords, Rib and Tags",
+        h1_ja="Tシャツとパーカーの副資材ガイド：衿ラベル・ドローコード・リブ・タグの選び方",
+        h1_ko="티셔츠와 후디 부자재 가이드: 목 라벨, 드로코드, 리브, 행택 선택법",
+        h1_fr="Guide des accessoires de t-shirt et de sweat : encolure, cordons, côtes et étiquettes",
+        h1_es="Guía de accesorios de camiseta y sudadera: cuello, cordones, canalé y etiquetas",
+        tag_zh="技术指南",
+        tag_en="Technical Guide",
+        tag_ja="技術ガイド",
+        tag_ko="기술 가이드",
+        tag_fr="Guide technique",
+        tag_es="Guía técnica",
+        sum_zh="T恤与卫衣是电商服装里出货量最大、也最容易出问题的一类：领标扎脖子、洗水标位置每批不一样、连帽抽绳长度参差、吊牌信息与平台要求不一致。文章先给出针织服装的辅料清单——领标、侧唛与下摆唛、热转印无感标签、罗纹领口与袖口、连帽抽绳与绳头、绣标与贴布标、吊牌与尺码贴、包装。第二部分用表格对比四种领标方案：缎面织唛（字迹清晰、有丝光，适合品牌质感优先的基础款）、平纹织唛（较软、成本适中）、印唛（最薄最软、贴合颈后曲线，洗后墨层要验证）、热转印无感标签（零摩擦、位置公差更严，适合运动、内衣与童装），并区分手感挺括的硅胶或皮革标只适合胸口袖口装饰位。第三部分讲领标位置与尺寸：标高不宜超过领口深度的三分之一，针织面料拉伸大要按最大拉伸状态复算宽度与车缝位置，侧唛多缝在穿着者左侧缝，无感标签转印前要确认面料无柔顺剂与油污。第四部分是卫衣专属部件：抽绳材质（扁平棉织带、圆形棉绳、罗纹绳）与四种绳头（金属、塑料、打结、热切），金属头要过镍释放与盐雾测试，儿童颈部功能性抽绳受法规严格限制，罗纹要查回弹次数与色差，绣标与贴布标洗后易起翘。第五部分讲电商与快反：吊牌信息与平台要求一致、二维码与 SKU 一一对应、尺码贴位置统一且撕下无胶残留、包装警示语按目标市场配置、退货判定依赖吊牌与包装的固定位置。最后给出打样验收五步：位置对称、手感、洗后表现、卫衣部件、留样标注。",
+        sum_en="T-shirts and hoodies are the highest-volume and most failure-prone category in e-commerce apparel: a neck label that scratches, care labels positioned differently batch to batch, uneven drawcord lengths, tag information that does not match platform requirements. The article opens with the trims list for a knit garment — neck label, side-seam and hem labels, heat-transfer tagless labelling, rib collar and cuffs, hood drawcord and cord ends, embroidery and appliqué patches, hang tag and size sticker, packaging. Part two is a table comparing four neck label options: satin woven (crisp lettering with sheen, for brand-led basics), plain woven (softer, moderate cost), printed label tape (thinnest and softest, follows the nape, but ink adhesion must be verified after washing) and heat transfer tagless (no friction and tighter position tolerance, for sport, underwear and childrenswear) — with firm silicone or leather patches reserved for chest, cuff and hem decoration. Part three covers position and size: keep the label height within roughly a third of the neckline depth, recalculate width and stitch position at maximum stretch because knit gives a lot, sew care labels into the wearer's left seam, and confirm no softener or oil on the fabric before tagless transfer. Part four is hoodie-specific: cord material (flat cotton tape, round cotton cord, rib cord) and four end types (metal, plastic, knotted, heat-cut), with metal ends requiring nickel-release and salt-spray tests, functional neck drawcords on childrenswear tightly regulated, rib checked for recovery and colour match, and embroidery or appliqué prone to lifting after washing. Part five handles e-commerce: tag information matching platform rules, QR or barcode mapping one-to-one to the SKU, size stickers at a constant position that peel without residue, bag warnings set by the destination market, and returns judged on fixed tag and packaging positions. It closes with five checks: position and symmetry, hand feel, after-wash performance, hoodie parts, and reference retention.",
+        sum_ja="Tシャツとパーカーは EC 衣料で出荷量が最も多く、最もトラブルが出やすい分野です。首に当たるラベル、ロットごとに違う洗濯表示の位置、ばらつくドローコードの長さ、プラットフォーム要件と合わないタグ情報。記事はまずニット衣料の副資材リストを示します。衿ラベル、脇ラベルと裾ラベル、熱転写の無感ラベル、リブ衿と袖口、フードのドローコードとエンド、刺繍とアップリケ、タグとサイズシール、包装です。第2部は4つの衿ラベル方式を表で比較します。サテン織り（文字が鮮明で光沢があり、ブランド感を優先するベーシック向け）、平織り（柔らかくコストは中程度）、印字ラベルテープ（最も薄く柔らかく首のカーブに沿うが洗濯後のインキ密着を確認）、熱転写（摩擦ゼロで位置公差は厳しく、スポーツ・インナー・子供服向け）で、硬いシリコンやレザーパッチは胸・袖口・裾の装飾に限定します。第3部は位置と寸法で、ラベルの高さは衿ぐりの深さの約3分の1以内、ニットは大きく伸びるため幅と縫い位置を最大伸長で再計算、洗濯表示は着用者の左脇に縫い、無感タグは転写前に柔軟剤や油分がないことを確認します。第4部はパーカー特有で、コード素材（平織り綿テープ・丸打ち綿コード・リブコード）と4種のエンド（金属・樹脂・結び・熱カット）、金属エンドのニッケル溶出と塩水噴霧試験、子供服の首元の機能的なドローコードの法規制、リブの伸び回復と色合わせ、洗濯後に浮きやすい刺繍とアップリケを扱います。第5部は EC で、タグ情報とプラットフォーム要件の一致、QR やバーコードと SKU の1対1対応、糊残りのないサイズシール、仕向地別の警告文、返品判断がタグと包装の位置に依存することを説明します。最後に位置の対称、風合い、洗濯後、パーカー部材、保管サンプルの5ステップを示します。",
+        sum_ko="티셔츠와 후디는 이커머스 의류에서 출하량이 가장 많고 문제가 가장 잦은 분야입니다. 목을 긁는 라벨, 배치마다 다른 세탁 라벨 위치, 들쭉날쭉한 드로코드 길이, 플랫폼 요건과 어긋나는 행택 정보. 글은 먼저 편직 의류의 부자재 목록을 제시합니다. 목 라벨, 옆솔기·밑단 라벨, 열전사 무감 라벨, 리브 목선과 소매끝, 후드 드로코드와 끝 마감, 자수와 아플리케, 행택과 사이즈 스티커, 포장입니다. 두 번째는 목 라벨 네 방식을 표로 비교합니다. 새틴 직조(글자가 선명하고 광택이 있어 브랜드 질감 우선 베이직), 평직(부드럽고 비용 중간), 인쇄 라벨 테이프(가장 얇고 부드러워 목 곡선을 따르지만 세탁 후 잉크 밀착 확인), 열전사 무감(마찰 없음, 위치 공차 엄격, 스포츠·이너웨어·아동복)이며 단단한 실리콘·가죽 패치는 가슴·소매끝·밑단 장식으로 한정합니다. 세 번째는 위치와 치수로, 라벨 높이는 목선 깊이의 약 3분의 1 이내, 편직은 많이 늘어나므로 폭과 봉제 위치를 최대 신장 기준으로 재계산, 세탁 라벨은 착용자 왼쪽 솔기, 무감 라벨은 전사 전 유연제와 기름이 없음을 확인합니다. 네 번째는 후디 전용으로 코드 소재(평직 면 테이프, 원형 면 코드, 리브 코드)와 네 가지 끝 마감(금속, 플라스틱, 매듭, 열절단), 금속 끝의 니켈 용출과 염수분무 시험, 아동복 목 부분 기능성 드로코드 규제, 리브의 회복성과 색 맞춤, 세탁 후 들뜨기 쉬운 자수와 아플리케를 다룹니다. 다섯 번째는 이커머스로 행택 정보와 플랫폼 요건 일치, QR·바코드와 SKU 1대1 대응, 잔여 접착제 없는 사이즈 스티커, 판매 시장별 경고 문구, 반품 판단이 행택과 포장 위치에 의존함을 설명합니다. 마지막으로 위치 대칭, 촉감, 세탁 후, 후디 부품, 기준 샘플의 5단계를 제시합니다.",
+        sum_fr="Le t-shirt et le sweat sont la catégorie la plus volumineuse et la plus risquée du prêt-à-porter en ligne : étiquette qui gratte, position d'entretien variable, longueurs de cordon inégales, information non conforme aux plateformes. L'article commence par la liste des accessoires d'une pièce en maille : étiquette d'encolure, étiquettes de côté et de bas, marquage sans contact par transfert, côtes d'encolure et poignets, cordon de capuche et embouts, broderie et appliqué, étiquette suspendue et autocollant de taille, emballage. La deuxième partie compare en tableau quatre solutions d'encolure : satin tissé (lettrage net et brillant, pour les basiques à forte identité), tissé uni (plus souple, coût modéré), ruban imprimé (le plus fin et le plus souple, il épouse la nuque, mais l'adhérence de l'encre se vérifie après lavage) et transfert sans contact (aucun frottement, tolérance plus serrée, pour le sport, le sous-vêtement et l'enfant), les patchs silicone ou cuir fermes restant réservés à la poitrine, aux poignets et au bas. La troisième partie traite position et dimensions : hauteur dans un tiers de la profondeur d'encolure, largeur et position de couture recalculées à l'étirement maximal car la maille donne beaucoup, entretien cousu au côté gauche du porteur, et absence d'adoucissant ou d'huile avant un transfert. La quatrième partie est propre au sweat : matière du cordon (ruban plat, cordon rond, cordon côtelé) et quatre embouts (métal, plastique, noué, coupé à chaud), les embouts métalliques exigeant des essais de nickel et de brouillard salin, les cordons fonctionnels à l'encolure enfant strictement encadrés, la côte contrôlée en reprise et en colorimétrie, et la broderie ou l'appliqué sujets au relèvement après lavage. La cinquième partie traite l'e-commerce : information conforme aux plateformes, QR ou code-barres en correspondance univoque, autocollants de taille à position constante et sans résidu, avertissements selon le marché visé, et retours jugés sur des positions fixes. Elle se termine par cinq contrôles.",
+        sum_es="La camiseta y la sudadera son la categoría de mayor volumen y más propensa a fallos del textil online: etiqueta que raspa, posición del cuidado variable, longitudes de cordón desiguales, información que no encaja con la plataforma. El artículo abre con la lista de accesorios de una prenda de punto: etiqueta de cuello, etiquetas de costura lateral y bajo, marcado sin etiqueta por transfer, canalé de cuello y puños, cordón de capucha y remates, bordado y aplique, etiqueta colgante y pegatina de talla, empaque. La segunda parte compara en tabla cuatro soluciones de cuello: satén tejido (rotulación nítida y brillante, para básicos con marca fuerte), tejido liso (más suave y de coste moderado), cinta impresa (la más fina y suave, sigue la nuca, pero hay que verificar la tinta tras lavar) y transfer sin etiqueta (sin roce y con tolerancia más estricta, para deporte, ropa interior e infantil), dejando los parches firmes de silicona o piel para pecho, puños y bajo. La tercera parte trata posición y tamaño: altura dentro de un tercio de la profundidad del escote, anchura y posición de costura recalculadas al máximo estiramiento porque el punto da mucho, cuidado cosido en el lateral izquierdo y ausencia de suavizante o aceite antes del transfer. La cuarta es propia de la sudadera: material del cordón (cinta plana, cordón redondo, cordón de canalé) y cuatro remates (metálico, plástico, anudado, cortado en caliente), con el metálico sujeto a ensayos de níquel y niebla salina, los cordones funcionales de cuello infantil muy regulados, el canalé controlado en recuperación y color, y bordado o aplique propensos a levantarse tras lavar. La quinta parte cubre el e-commerce: información según plataforma, QR o código en correspondencia uno a uno, pegatinas de talla en posición constante y sin residuo, avisos según mercado destino y devoluciones juzgadas sobre posiciones fijas. Cierra con cinco comprobaciones.",
+    ),
+]
