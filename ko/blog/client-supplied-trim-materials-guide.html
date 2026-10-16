@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고객 지급·지정 자재 부자재 관리 가이드: 책임 구분, 로스율, 입고 검사 | TAGE</title>
+<meta name="description" content="고객 지급·지정 자재 관리 가이드. 실물 지급, 지정 브랜드, 지급 금형 세 가지 상황의 책임 구분, 입고 검사 여섯 항목, 로스율과 보충 규칙, 전용 보관과 양방향 추적, 잔여 자재 반환과 청구 요점을 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/client-supplied-trim-materials-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/client-supplied-trim-materials-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料客供料與指定物料管理指南：責任、損耗與驗收",
+     "item": "https://taigetag.com/blog/client-supplied-trim-materials-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料客供料與指定物料管理指南：責任、損耗與驗收",
+   "url": "https://taigetag.com/blog/client-supplied-trim-materials-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/client-supplied-trim-materials-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>지급 자재와 지정 자재</span></div>
+      <h1>고객 지급·지정 자재 부자재 관리 가이드</h1>
+      <p>TAGE 패키징 · 2026년 10월 16일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>의류 부자재 발주에서 가장 분쟁이 잦은 유형은 고객 지급 자재와 지정 자재입니다. 고객이 직조 라벨, 단추, 원단을 제공하거나 특정 브랜드의 벨크로와 지퍼를 지정하면 책임 경계가 복잡해집니다. 문제가 지급 자재 때문인지 가공 때문인지, 로스율은 누가 부담하는지, 잔여 자재는 반품하는지가 계약에 없으면 양산 단계에서 막힙니다. 이 글은 고객 지급 자재 관리 요점을 실행 가능한 절차로 정리했습니다.</p>
+
+      <p>네 부분으로 구성됩니다. 먼저 세 가지 상황을 구분하고, 입고 검사, 로스와 보충, 구분 보관과 추적성, 결제 조건, 마지막으로 샘플과 변경 관리 요점을 다룹니다.</p>
+
+      <h2>1. 먼저 세 가지 상황을 구분하기(책임이 전혀 다름)</h2>
+      <table>
+        <tr><th>상황</th><th>고객이 제공하는 것</th><th>리스크와 요점</th></tr>
+        <tr><td>실물 지급</td><td>완성 부자재, 원단, 종이</td><td>지급 자재 불량은 고객 책임이지만 입고 시 검사하고 기록을 남겨야 합니다. 합의한 로스를 초과한 부분은 추가 지급이 필요합니다</td></tr>
+        <tr><td>지정 자재</td><td>브랜드, 모델, 지정 공급처</td><td>단일 소스라 납기와 가격이 타사에 좌우됩니다. 동등품 허용 여부와 승인 절차를 발주서에 명시합니다</td></tr>
+        <tr><td>고객 지급 금형과 원고</td><td>타발 금형, 박판, 디자인 원고</td><td>번호 관리, 보관, 유지, 반환을 정하고 어느 버전이 기준인지, 개정 비용 부담도 명시합니다</td></tr>
+      </table>
+      <p>세 가지는 한 주문에 섞이기 쉽습니다. 직조 라벨을 지급하고, 지퍼 브랜드를 지정하고, 타발 금형을 보내는 식입니다. 견적 전에 셋을 나눠 적어 두면 나중에 설명하는 것보다 훨씬 유용합니다.</p>
+
+      <h2>2. 입고 검사: 현장에서 끝내는 여섯 가지</h2>
+      <ul>
+        <li><strong>수량 확인:</strong> 개수, 롤, 중량으로 각각 세고 롤에는 미터 또는 야드 수를 표시합니다. 현장에서 다 셀 수 없으면 ‘확인 대기 수량’으로 서명하고 나중에 정리합니다.</li>
+        <li><strong>외관과 파손:</strong> 롤 끝단, 박스 습기, 표시 탈락, 혼입 여부를 확인하고 이상이 있으면 사진을 찍어 당일 검수표에 기재합니다.</li>
+        <li><strong>사양을 항목별로 대조:</strong> 평량, 두께, 폭, 색상, 모델을 사양서와 하나씩 확인합니다. 지난번 기억으로 통과시키지 않습니다.</li>
+        <li><strong>로트와 색차:</strong> 지급 자재 로트 번호를 기록합니다. 같은 자재의 로트별 색차가 크면 소량 샘플로 비교한 뒤 양산 투입을 결정합니다.</li>
+        <li><strong>궁합 소량 샘플:</strong> 본체 원단이나 주요 부품과의 조합(색, 경도, 수축률, 접착)을 먼저 확인합니다. 완성품에서 발견하면 늦습니다.</li>
+        <li><strong>기록과 서명:</strong> 수량, 로트, 불량 내용, 사진을 한 장의 검수표에 정리하고 양측이 서명합니다. 불량품은 격리하고 일정 조정 때가 아니라 당일 고객에게 알립니다.</li>
+      </ul>
+
+      <h2>3. 로스율과 보충: 견적 단계에서 정하기</h2>
+      <ul>
+        <li><strong>로스는 공정에 따라 다르다:</strong> 인쇄, 타발, 박, 직조, 봉제의 적정 로스가 각각 다릅니다. 견적서에 포함 로스를 명시하는 편이 양산 후 논쟁보다 훨씬 저렴합니다.</li>
+        <li><strong>자재 부족은 라인 중단:</strong> 부족으로 인한 중단 책임, 대기 비용, 일정 재조정 규칙을 사전에 합의합니다. 보통 보충 자재 입고일부터 다시 시작합니다.</li>
+        <li><strong>불량 로스와 준비 로스 구분:</strong> 지급 자재 자체 불량으로 인한 폐기와 시운전·조색·정합에 의한 로스는 성질이 다릅니다. 전자는 고객 자재로 계산하고 후자는 보통 가공 측이 부담합니다.</li>
+        <li><strong>지급 수량 제안:</strong> 적정 로스에 안전 여유를 더해 지급하도록 고객에게 알립니다. 특히 양산 후 추가 발주가 예상되는 시리즈는 한 번에 충분히 보내면 운송비와 중단 위험을 한 번 줄일 수 있습니다.</li>
+      </ul>
+
+      <h2>4. 구분 보관과 로트 추적성</h2>
+      <ul>
+        <li><strong>전용 구역 보관:</strong> 고객 지급 자재는 전용 구역에 두고 고객명, 입고 로트, 날짜를 표시합니다. 자사 유사 자재와 섞이면 문제 출처를 알 수 없습니다.</li>
+        <li><strong>선입선출:</strong> 고객 지급 자재는 여러 생산 로트에 걸치는 경우가 많아 입고일이 빠른 것부터 사용합니다. 잔여가 오래 보관되면 변색되거나 굳습니다.</li>
+        <li><strong>양방향 추적:</strong> 완성 로트에서 지급 자재 로트로, 지급 자재 로트에서 사용된 완성 로트로 추적할 수 있어야 합니다. 문제 발생 시 양측이 납득하는 유일한 근거입니다.</li>
+      </ul>
+
+      <h2>5. 결제와 조건: 나중에 다투는 것보다 계약서가 저렴하다</h2>
+      <ul>
+        <li><strong>지급 자재는 별도 표기:</strong> 고객 지급 자재는 가공비 청구 금액에 포함하지 않고 통관과 회계에서 구분해 설명할 수 있어야 합니다. 세무상 불일치를 피합니다.</li>
+        <li><strong>잔여 자재와 불량품 반환:</strong> 수량, 포장, 운임 부담, 기한(보통 양산 완료 후 일정 일수)을 미리 정하고 기한이 지나면 가공 측이 임의 처리할 수 있도록 합니다.</li>
+        <li><strong>지식재산과 비밀유지:</strong> 지급 원고, 브랜드, 디자인의 권리 보증은 고객이 부담하고 가공 측은 도면과 공정 데이터를 비밀로 유지합니다. 둘 다 조항으로 넣습니다.</li>
+      </ul>
+
+      <h2>6. 샘플과 변경 관리: 지급 자재에서는 특히 생략하지 않는다</h2>
+      <ul>
+        <li><strong>먼저 소량 샘플로 시험:</strong> 지급 자재를 양산에 투입하기 전에 인쇄·박의 부착력, 타발 상태, 봉제 특성을 소량 샘플로 확인합니다.</li>
+        <li><strong>공급처나 로트 변경 시 재확인:</strong> 지급 자재 출처가 바뀌면 색, 두께, 수축률이 달라질 수 있어 이전 서명 샘플은 적용되지 않습니다.</li>
+        <li><strong>샘플 보관과 로트 기록:</strong> 지급 자재 실물 샘플에 로트와 날짜를 적고 양측 서명 검수표도 보관합니다. 분쟁 시에는 구두 설명보다 서면이 유효합니다.</li>
+      </ul>
+
+      <div class="callout">💡 실무 팁: 지급 자재 분쟁은 거의 같은 세 가지에서 무너집니다. 검사 없음, 기록 없음, 로스율 미합의. 입고 검수표 한 장과 견적서의 로스·보충 조건만으로 비용은 거의 들지 않으면서 분쟁의 90%를 문 앞에서 막을 수 있습니다.</div>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="trim-order-quantity-tolerance-guide.html">부자재 주문 수량 공차: 초과 납품과 부족</a></li>
+        <li><a href="trim-tooling-ownership-guide.html">부자재 금형·타발 금형 소유권 가이드</a></li>
+        <li><a href="trim-order-contract-terms-guide.html">부자재 주문 계약 조건 가이드</a></li>
+        <li><a href="garment-trims-inventory-management.html">부자재 재고와 보충 가이드</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>고객 지급 자재나 지정 자재가 포함된 부자재 주문인가요? 지급 자재 목록, 수량, 공정 요구 조건, 납기를 보내주시면 입고 기준, 적정 로스, 보충 규칙을 먼저 확인하고 가공 방안과 견적을 드립니다. 샘플 3~7일, 양산 10~25일, 시험 수량은 협의 가능합니다.</p>
+        <a class="cta-btn" href="../contact.html">지급 자재·지정 자재 주문 문의 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
