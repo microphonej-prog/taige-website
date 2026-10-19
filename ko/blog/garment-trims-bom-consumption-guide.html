@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 부자재 소요량 산출 가이드: 낱장 사용량과 원가 반영 | TAGE</title>
+<meta name="description" content="의류 부자재 소요량 산출 가이드. 순사용량·로스율·예비품 구분, 행택·직조 라벨·케어 라벨·비닐봉투·종이백·실의 기준 사용량, 발주량 환산 시 흔한 세 가지 오류, 낱장 원가의 FOB 반영, 보충 책임과 납기를 정리합니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-bom-consumption-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價",
+     "item": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價",
+   "url": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>소요량과 BOM 산출</span></div>
+      <h1>의류 부자재 소요량 산출 가이드: 낱장 사용량과 원가 반영</h1>
+      <p>TAGE 패키징 · 2026년 10월 19일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>셔츠 한 장에 행택 몇 장, 케어 라벨 몇 장, 비닐봉투 몇 장이 들어갈까요? 상식처럼 보이지만 소요량을 정확히 계산하는 브랜드는 많지 않습니다. 양산이 시작된 뒤 부자재가 5% 부족해 공장이 보충을 기다리며 라인을 세우고, 항공 운임이 부자재 값의 열 배가 되는 사고—원인은 거의 항상 자재 명세서(BOM)의 소요량 칸에 있습니다.</p>
+
+      <p>이 글은 다섯 가지를 다룹니다. 소요량을 구성하는 세 요소, 대표적인 여섯 가지 부자재의 계산법, 소요량을 발주량으로 환산할 때의 세 가지 오류, 낱장 부자재 원가를 FOB 가격에 반영하는 방법, 그리고 보충 책임의 구분입니다.</p>
+
+      <h2>1. 소요량은 &#x27;한 장에 하나&#x27;가 아니다: 순사용량, 로스, 예비품</h2>
+      <p>순사용량은 작업지시서상의 실제 사용량입니다. 행택 1장, 메인 라벨 1장, 케어 라벨 1장, 비닐봉투 1장. 로스는 생산 과정의 정상 불량으로, 인쇄 겹침, 재단 밀림, 봉제 비뚤어짐, 과도한 프레스가 있습니다. 예비품은 브랜드가 제품에 동봉하도록 요구하는 것으로 여분 단추, 여분 실, 여분 태그핀, 여분 직조 라벨입니다. 세 가지를 더한 값이 발주서에 적어야 할 숫자입니다.</p>
+
+      <table>
+        <tr><th>부자재</th><th>낱장 기준 소요량</th><th>로스 범위와 예비품</th></tr>
+        <tr><td>행택</td><td>1장(반접지도 1장으로 계산)</td><td>1~3%, 진열·촬영용 샘플 별도</td></tr>
+        <tr><td>메인 라벨(직조)</td><td>1~2장(넥과 사이드 라벨은 따로 계산)</td><td>2~5%, 주로 봉제 재작업에서 소모</td></tr>
+        <tr><td>케어 라벨</td><td>1~2장(혼용률과 원산지가 분리되는 경우가 많음)</td><td>2~4%, 다국어판은 시장별로 구분</td></tr>
+        <tr><td>비닐봉투</td><td>1장(내피와 외박스용 포함)</td><td>1~2%, 정전기·진공 사양은 더 늘어남</td></tr>
+        <tr><td>종이백(판매용)</td><td>1장, 의류 수량이 아닌 매장 출고 비율 기준</td><td>3~5%, 손잡이와 밀봉 스티커는 별도</td></tr>
+        <tr><td>봉제사와 웨빙</td><td>실은 미터 단위, 낱장 약 40~120m</td><td>5~8%, 색 교체 중단과 실 끊김</td></tr>
+      </table>
+
+      <h2>2. 소요량에서 발주량으로: 가장 흔한 세 가지 환산 오류</h2>
+      <p>첫 번째 오류는 수량에 소요량을 곱한 값을 그대로 발주하면서 공급사의 최소 포장 단위를 잊는 것입니다. 직조 라벨은 롤, 실은 콘, 웨빙은 온 롤 단위라 1,280장으로 계산해도 1,500장 롤을 사야 합니다. 두 번째는 색상과 사이즈를 하나로 합쳐 특정 사이즈가 수십 장 부족해지는 경우입니다. 세 번째는 양산 수량만 계산하고 피팅 샘플, 촬영 샘플, 제3자 시험용, 보관 샘플을 빼먹는 것으로 보통 전체의 1~2%입니다.</p>
+      <ul>
+        <li>스타일×색상×사이즈로 나눠 계산한 뒤 합산하세요. 사이즈 커브 양 끝이 가장 먼저 부족해집니다</li>
+        <li>발주량은 롤·박스·콘 단위로 올림하고 잔량은 다음 차수 사용 가능 재고로 기록합니다</li>
+        <li>첫 주문과 소량 시험 생산은 3~5% 완충을 따로 두세요. 공정이 아직 안정되지 않아 로스가 평소보다 높습니다</li>
+      </ul>
+
+      <h2>3. 낱장 부자재 원가를 FOB 가격에 반영하는 방법</h2>
+      <p>계산은 간단합니다. 낱장 원가 = (단가 ÷ 포장 단위 수량) × 소요량. 문제는 단가 기준입니다. 행택은 천 장, 직조 라벨은 천 장, 비닐봉투는 kg 또는 천 장, 종이백은 장 단위로 견적됩니다. 네 기준이 한 표에 섞이면 자릿수를 틀리기 쉽습니다. 모두 &#x27;낱장 원가&#x27;로 환산한 뒤 합산하는 것이 유일하게 안전한 방법입니다.</p>
+      <p>부자재는 보통 의류 FOB의 5~15%를 차지하며 품목별 편차가 큽니다. 기본 티셔츠는 행택, 메인 라벨, 케어 라벨, 비닐봉투만 있어 비중이 낮고, 기프트박스·종이백·다국어 라벨·보안 태그가 있는 품목은 확실히 높습니다. 견적서에 부자재를 별도 행으로 표시하면 고객이 비용 구조를 볼 수 있고, 소재나 공정이 바뀔 때 근거가 됩니다.</p>
+
+      <h2>4. 보충과 공정 로스: 책임 구분</h2>
+      <p>일반적인 합의는 약정 로스율 이내의 불량은 단가에 포함하고, 초과분은 원인에 따라 귀속하는 것입니다. 인쇄 겹침, 경사 끊김, 칼금형 밀림 같은 공정 원인은 부자재 공장이, 봉제 공장에서의 오염·오사용·분실은 봉제 공장이, 디자인 변경·추가 발주·사이즈 변경은 브랜드가 부담합니다. 이 세 문장을 계약서에 넣으면 사후 논쟁이 크게 줄어듭니다.</p>
+      <p>보충의 진짜 비용은 자재비가 아니라 시간입니다. 행택은 보통 3~5일, 직조 라벨은 7~10일, 케어 라벨은 5~7일 걸립니다. 봉제 라인이 이미 돌고 있다면 기다림은 곧 라인 정지이고, 하루 정지 비용이 보충 로트 전체보다 큰 경우가 많습니다. 그래서 보충 조항에는 가격뿐 아니라 최단 보충 납기와 긴급 대응 가능 여부를 명시해야 합니다.</p>
+
+      <h2>5. BOM 자체 점검표</h2>
+      <ul>
+        <li>소요량이 총합 하나가 아니라 스타일·색상·사이즈별로 나뉘어 있는가</li>
+        <li>여분 단추, 실, 태그핀, 직조 라벨이 별도 행으로 있는가</li>
+        <li>피팅·촬영·시험·보관 샘플이 포함되었는가</li>
+        <li>발주 단위가 공급사의 포장 단위(롤, 콘, 박스, 천 장)와 일치하는가</li>
+        <li>로스율이 숫자로 명시되고 브랜드와 공급사가 모두 확인했는가</li>
+        <li>보충 조항에 가격, 최단 납기, 긴급 대응 가능 여부가 있는가</li>
+      </ul>
+
+      <h2>6. 소요량을 반드시 다시 계산해야 하는 시점</h2>
+      <p>다섯 가지 변화가 수량을 바꿉니다. 원단 두께 변경, 포장을 폴딩에서 행거로 변경, 행택을 반접지로 변경, 보안·QR 라벨 추가, 케어 라벨 다국어화입니다. 대개 전체가 비례해 바뀌지 않고 특정 항목만 갑자기 두 배가 됩니다. SKU가 많고 재주문이 잦은 브랜드는 분기마다 재점검하고 소요량을 일회성 표가 아닌 살아 있는 데이터로 다뤄야 합니다.</p>
+
+      <div class="callout">💡 팁: 소요량은 구매 엑셀이 아니라 테크팩의 부자재 페이지에 적으세요. 디자인, 구매, 공장이 같은 숫자를 쓰면 &#x27;자재 부족&#x27; 분쟁의 대부분이 사라집니다.</div>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="hang-tag-moq-cost.html">행택 최소주문량과 원가 분석</a></li>
+        <li><a href="garment-trims-inventory-management.html">의류 부자재 재고 관리와 안전 재고</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">부자재 견적서 비교 방법</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>스타일별 소요량 산출이 필요하시면 스타일, 색상 수, 연간 수량, 포장 형태를 보내주세요. 행택, 직조 라벨, 케어 라벨, 비닐봉투, 종이백에 대해 소요량과 권장 로스율을 항목별로 제시하고 발주량과 납기를 안내합니다. 샘플 3~7일, 양산 10~25일입니다.</p>
+        <a class="cta-btn" href="../contact.html">소요량 산출 문의 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

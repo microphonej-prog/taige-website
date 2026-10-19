@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價 | TAGE" data-en="Trim Consumption and BOM Costing: How Much Each Garment Uses | TAGE" data-ja="衣料副資材の単耗計算ガイド：1着あたりの使用量と原価への入れ方 | TAGE" data-ko="의류 부자재 소요량 산출 가이드: 낱장 사용량과 원가 반영 | TAGE" data-fr="Consommation d'accessoires et calcul BOM : combien par vêtement | TAGE" data-es="Consumo de accesorios y cálculo BOM: cuánto usa cada prenda | TAGE">服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價 | TAGE</title>
+<meta name="description" data-zh="服裝輔料單耗覈算指南：淨用量、損耗率與備用料怎麼拆，吊牌、織嘜、洗水標、膠袋、紙袋、縫線六類輔料的用量基準，從單耗換算採購量的三個常見錯誤，單件輔料成本怎麼進 FOB 報價，以及補料的責任劃分與交期。來自東莞泰閣包裝。"
+      data-en="Trim consumption and BOM costing: net use, loss rates and spares for tags, labels, bags and thread, three conversion errors, and how the cost enters an FOB price." data-ja="衣料副資材の単耗計算ガイド。正味使用量・ロス率・予備の分け方、ハングタグ・織りラベル・洗濯表示・ポリ袋・紙袋・糸の基準使用量、発注量への換算でよくある3つの誤り、1着あたりコストのFOBへの入れ方、補充の責任と納期を整理します。東莞泰閣包装。" data-ko="의류 부자재 소요량 산출 가이드. 순사용량·로스율·예비품 구분, 행택·직조 라벨·케어 라벨·비닐봉투·종이백·실의 기준 사용량, 발주량 환산 시 흔한 세 가지 오류, 낱장 원가의 FOB 반영, 보충 책임과 납기를 정리합니다. 둥관 TAGE 패키징."
+      data-fr="Consommation et calcul BOM : usage net, pertes et rechanges pour étiquettes, labels, sachets et fil, trois erreurs de conversion et intégration au prix FOB."
+      data-es="Consumo y cálculo BOM: uso neto, mermas y repuestos de colgantes, etiquetas, bolsas e hilo, tres errores de conversión y su entrada en el precio FOB."
+      content="服裝輔料單耗覈算指南：淨用量、損耗率與備用料怎麼拆，吊牌、織嘜、洗水標、膠袋、紙袋、縫線六類輔料的用量基準，從單耗換算採購量的三個常見錯誤，單件輔料成本怎麼進 FOB 報價，以及補料的責任劃分與交期。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-bom-consumption-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-bom-consumption-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價",
+     "item": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價",
+   "url": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-bom-consumption-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="單耗與 BOM 覈算" data-en="Trim Consumption and BOM" data-ja="単耗とBOM計算" data-ko="소요량과 BOM 산출" data-fr="Consommation et BOM" data-es="Consumo y BOM">單耗與 BOM 覈算</span></div>
+      <h1 data-zh="服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價" data-en="Garment Trim Consumption and BOM Costing: How Much Each Garment Uses" data-ja="衣料副資材の単耗計算ガイド：1着あたりの使用量と原価への入れ方" data-ko="의류 부자재 소요량 산출 가이드: 낱장 사용량과 원가 반영" data-fr="Consommation d'accessoires et calcul BOM : combien par vêtement, et comment l'intégrer au prix" data-es="Consumo de accesorios y cálculo BOM: cuánto usa cada prenda y cómo entra en el precio">服裝輔料單耗覈算指南：一件衣服用多少，成本怎麼進報價</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月19日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 19, 2026" data-ja="泰閣包装 · 2026年10月19日更新" data-ko="TAGE 패키징 · 2026년 10월 19일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 19 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 19 de octubre de 2026">泰閣包裝 · 更新於 2026年10月19日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="一件襯衫用幾張吊牌、幾枚洗水標、幾個膠袋？看起來是常識，但真把單耗算準的品牌並不多。等到大貨上線才發現輔料少了 5%，工廠停線等補料，空運費比輔料本身貴十倍——這類事故的根源，幾乎都在輔料清單（BOM）的用量一欄。"
+         data-en="How many hang tags, care labels and poly bags go into one shirt? It sounds like common knowledge, yet few brands get the consumption figure right. Then bulk production starts, the trims turn out to be 5% short, the line stops waiting for a replenishment, and the air freight costs ten times the trims themselves. The root cause is almost always one column in the bill of materials."
+         data-ja="シャツ1着にハングタグは何枚、洗濯表示ラベルは何枚、ポリ袋は何枚必要か。常識のように思えますが、1着あたりの使用量（単耗）を正確に押さえているブランドは多くありません。量産が始まってから副資材が5%足りないと気づき、工場が補充を待ってラインを止め、航空運賃が副資材代の10倍になる——こうした事故の原因は、ほとんどが部材表（BOM）の使用量の欄にあります。"
+         data-ko="셔츠 한 장에 행택 몇 장, 케어 라벨 몇 장, 비닐봉투 몇 장이 들어갈까요? 상식처럼 보이지만 소요량을 정확히 계산하는 브랜드는 많지 않습니다. 양산이 시작된 뒤 부자재가 5% 부족해 공장이 보충을 기다리며 라인을 세우고, 항공 운임이 부자재 값의 열 배가 되는 사고—원인은 거의 항상 자재 명세서(BOM)의 소요량 칸에 있습니다."
+         data-fr="Combien d'étiquettes suspendues, d'étiquettes d'entretien et de sachets pour une chemise ? Cela semble évident, et pourtant peu de marques calculent correctement la consommation. Puis la production démarre, il manque 5 % d'accessoires, l'atelier s'arrête en attendant le réassort et le fret aérien coûte dix fois le prix des accessoires. La cause tient presque toujours à une seule colonne de la nomenclature."
+         data-es="¿Cuántos colgantes, etiquetas de cuidado y bolsas lleva una camisa? Parece de sentido común, pero pocas marcas calculan bien el consumo. Luego arranca la producción, faltan un 5 % de accesorios, la línea se detiene esperando el repuesto y el flete aéreo cuesta diez veces el valor de los accesorios. La causa casi siempre está en una sola columna de la lista de materiales.">一件襯衫用幾張吊牌、幾枚洗水標、幾個膠袋？看起來是常識，但真把單耗算準的品牌並不多。等到大貨上線才發現輔料少了 5%，工廠停線等補料，空運費比輔料本身貴十倍——這類事故的根源，幾乎都在輔料清單（BOM）的用量一欄。</p>
+
+      <p data-zh="本文講清五件事：單耗由哪三部分組成、六類常見輔料怎麼算、從單耗換算採購量時的三個錯誤、單件輔料成本怎麼進 FOB 報價，以及補料的責任怎麼劃分。"
+         data-en="This guide covers five things: the three parts of a consumption figure, how to calculate it for six common trims, three conversion errors made when turning consumption into a purchase order, how trim cost enters an FOB price, and who pays for replenishment."
+         data-ja="本稿では5点を整理します。単耗を構成する3つの要素、代表的な6種類の副資材の計算方法、単耗から発注量に換算するときの3つの誤り、1着あたりの副資材コストをFOB価格にどう織り込むか、そして補充の責任分担です。"
+         data-ko="이 글은 다섯 가지를 다룹니다. 소요량을 구성하는 세 요소, 대표적인 여섯 가지 부자재의 계산법, 소요량을 발주량으로 환산할 때의 세 가지 오류, 낱장 부자재 원가를 FOB 가격에 반영하는 방법, 그리고 보충 책임의 구분입니다."
+         data-fr="Ce guide couvre cinq points : les trois composantes d'une consommation, le calcul pour six accessoires courants, trois erreurs de conversion en commande, l'intégration du coût accessoire dans un prix FOB, et la répartition de la responsabilité du réassort."
+         data-es="Esta guía cubre cinco puntos: las tres partes de un consumo, el cálculo para seis accesorios habituales, tres errores al convertir el consumo en pedido, cómo entra el coste de accesorios en un precio FOB y quién paga el repuesto.">本文講清五件事：單耗由哪三部分組成、六類常見輔料怎麼算、從單耗換算採購量時的三個錯誤、單件輔料成本怎麼進 FOB 報價，以及補料的責任怎麼劃分。</p>
+
+      <h2 data-zh="一、單耗不是「一件一個」：淨用量、損耗與備用料"
+          data-en="1. Consumption Is Not One per Garment: Net Use, Loss and Spares"
+          data-ja="1. 単耗は「1着1枚」ではない：正味使用量・ロス・予備"
+          data-ko="1. 소요량은 '한 장에 하나'가 아니다: 순사용량, 로스, 예비품"
+          data-fr="1. La consommation n'est pas « un par article » : usage net, pertes et rechanges"
+          data-es="1. El consumo no es «uno por prenda»: uso neto, mermas y repuestos">一、單耗不是「一件一個」：淨用量、損耗與備用料</h2>
+      <p data-zh="淨用量是設計文件上的真實用量：吊牌一張、主嘜一枚、洗水標一枚、膠袋一個。損耗是生產環節的正常報廢：印刷偏位、裁切走刀、車縫歪斜、燙壓過頭。備用料是品牌要求隨衣附帶的東西：備用紐扣、備用線、備用吊粒、備用織嘜。三者相加，纔是應該下在採購單上的數字。"
+         data-en="Net use is what the tech pack actually calls for: one hang tag, one neck label, one care label, one poly bag. Loss is normal scrap in production: off-register printing, a drifting cut, a crooked seam, an over-pressed fold. Spares are what the brand wants travelling with the garment: a spare button, a spare thread, a spare tag pin, a spare woven label. Add the three and you have the number that belongs on the purchase order."
+         data-ja="正味使用量は仕様書どおりの実数です。ハングタグ1枚、メインラベル1枚、洗濯表示1枚、ポリ袋1枚。ロスは生産工程の正常な不良で、印刷の見当ずれ、裁断のずれ、縫い歪み、プレスのかけすぎなどです。予備はブランドが製品に同梱を求めるもので、予備ボタン、予備糸、予備タグピン、予備の織りラベルがあります。この3つを足した数が、発注書に書くべき数量です。"
+         data-ko="순사용량은 작업지시서상의 실제 사용량입니다. 행택 1장, 메인 라벨 1장, 케어 라벨 1장, 비닐봉투 1장. 로스는 생산 과정의 정상 불량으로, 인쇄 겹침, 재단 밀림, 봉제 비뚤어짐, 과도한 프레스가 있습니다. 예비품은 브랜드가 제품에 동봉하도록 요구하는 것으로 여분 단추, 여분 실, 여분 태그핀, 여분 직조 라벨입니다. 세 가지를 더한 값이 발주서에 적어야 할 숫자입니다."
+         data-fr="L'usage net est ce que la fiche technique prévoit réellement : une étiquette suspendue, un label de col, une étiquette d'entretien, un sachet. Les pertes sont la casse normale en production : impression hors repérage, découpe qui dérive, couture de travers, pliage trop pressé. Les rechanges sont ce que la marque veut joindre au vêtement : bouton, fil, attache, label tissé de rechange. L'addition des trois donne le chiffre à inscrire sur la commande."
+         data-es="El uso neto es lo que pide la ficha técnica: un colgante, una etiqueta de cuello, una etiqueta de cuidado, una bolsa. Las mermas son el scrap normal en producción: impresión fuera de registro, corte que se desvía, costura torcida, planchado excesivo. Los repuestos son lo que la marca quiere enviar con la prenda: botón, hilo, pinza y etiqueta tejida de repuesto. La suma de los tres es la cifra que va en el pedido.">淨用量是設計文件上的真實用量：吊牌一張、主嘜一枚、洗水標一枚、膠袋一個。損耗是生產環節的正常報廢：印刷偏位、裁切走刀、車縫歪斜、燙壓過頭。備用料是品牌要求隨衣附帶的東西：備用紐扣、備用線、備用吊粒、備用織嘜。三者相加，纔是應該下在採購單上的數字。</p>
+
+      <table>
+        <tr><th data-zh="輔料" data-en="Trim" data-ja="副資材" data-ko="부자재" data-fr="Accessoire" data-es="Accesorio">輔料</th><th data-zh="單耗基準（每件）" data-en="Base consumption per garment" data-ja="1着あたりの基準使用量" data-ko="낱장 기준 소요량" data-fr="Consommation de base par article" data-es="Consumo base por prenda">單耗基準（每件）</th><th data-zh="損耗區間與備用料" data-en="Loss range and spares" data-ja="ロス範囲と予備" data-ko="로스 범위와 예비품" data-fr="Plage de pertes et rechanges" data-es="Rango de mermas y repuestos">損耗區間與備用料</th></tr>
+        <tr><td data-zh="吊牌" data-en="Hang tag" data-ja="ハングタグ" data-ko="행택" data-fr="Étiquette suspendue" data-es="Colgante">吊牌</td><td data-zh="1 張（雙面或對摺按 1 張計）" data-en="1 piece (a folded tag still counts as 1)" data-ja="1枚（二つ折りも1枚と数える）" data-ko="1장(반접지도 1장으로 계산)" data-fr="1 pièce (une étiquette pliée compte pour 1)" data-es="1 pieza (un colgante doblado cuenta como 1)">1 張（雙面或對摺按 1 張計）</td><td data-zh="1%–3%；另加陳列與拍照樣" data-en="1%–3%, plus samples for display and photography" data-ja="1〜3%、さらに陳列・撮影用の見本" data-ko="1~3%, 진열·촬영용 샘플 별도" data-fr="1 à 3 %, plus les échantillons pour présentation et photo" data-es="1–3 %, más muestras para exposición y fotografía">1%–3%；另加陳列與拍照樣</td></tr>
+        <tr><td data-zh="主嘜（織嘜）" data-en="Neck label (woven)" data-ja="メインラベル（織り）" data-ko="메인 라벨(직조)" data-fr="Label de col (tissé)" data-es="Etiqueta de cuello (tejida)">主嘜（織嘜）</td><td data-zh="1–2 枚（領標 + 側標要分別計）" data-en="1–2 pieces (neck plus side label counted separately)" data-ja="1〜2枚（ネックとサイドは別々に数える）" data-ko="1~2장(넥과 사이드 라벨은 따로 계산)" data-fr="1 à 2 pièces (col et côté comptés séparément)" data-es="1–2 piezas (cuello y lateral se cuentan aparte)">1–2 枚（領標 + 側標要分別計）</td><td data-zh="2%–5%；車縫返工多用掉" data-en="2%–5%, mostly eaten by sewing rework" data-ja="2〜5%、縫製の手直しで消耗しやすい" data-ko="2~5%, 주로 봉제 재작업에서 소모" data-fr="2 à 5 %, surtout consommés par les reprises de couture" data-es="2–5 %, sobre todo por reprocesos de costura">2%–5%；車縫返工多用掉</td></tr>
+        <tr><td data-zh="洗水標" data-en="Care label" data-ja="洗濯表示ラベル" data-ko="케어 라벨" data-fr="Étiquette d'entretien" data-es="Etiqueta de cuidado">洗水標</td><td data-zh="1–2 枚（成分標與產地標常分開）" data-en="1–2 pieces (composition and origin often split)" data-ja="1〜2枚（組成と原産地が別になることが多い）" data-ko="1~2장(혼용률과 원산지가 분리되는 경우가 많음)" data-fr="1 à 2 pièces (composition et origine souvent séparées)" data-es="1–2 piezas (composición y origen suelen ir aparte)">1–2 枚（成分標與產地標常分開）</td><td data-zh="2%–4%；多語種版本要按市場分" data-en="2%–4%; multilingual versions split by market" data-ja="2〜4%、多言語版は市場ごとに分ける" data-ko="2~4%, 다국어판은 시장별로 구분" data-fr="2 à 4 %, les versions multilingues se répartissent par marché" data-es="2–4 %; las versiones multilingües se separan por mercado">2%–4%；多語種版本要按市場分</td></tr>
+        <tr><td data-zh="膠袋（包裝袋）" data-en="Poly bag" data-ja="ポリ袋" data-ko="비닐봉투" data-fr="Sachet plastique" data-es="Bolsa de plástico">膠袋（包裝袋）</td><td data-zh="1 個，含內襯與外箱內袋" data-en="1 piece, including inner liner and carton liner" data-ja="1枚（内袋と外箱用も含む）" data-ko="1장(내피와 외박스용 포함)" data-fr="1 pièce, doublure et sac de carton compris" data-es="1 pieza, incluida la bolsa interior y la del cartón">1 個，含內襯與外箱內袋</td><td data-zh="1%–2%；靜電、抽真空另有損耗" data-en="1%–2%; static-resistant and vacuum formats lose more" data-ja="1〜2%、帯電防止や真空仕様はさらに増える" data-ko="1~2%, 정전기·진공 사양은 더 늘어남" data-fr="1 à 2 %, davantage pour l'antistatique et le sous-vide" data-es="1–2 %; los formatos antiestático y vacío pierden más">1%–2%；靜電、抽真空另有損耗</td></tr>
+        <tr><td data-zh="紙袋（零售手提袋）" data-en="Paper bag (retail carrier)" data-ja="紙袋（販売用）" data-ko="종이백(판매용)" data-fr="Sac papier (boutique)" data-es="Bolsa de papel (tienda)">紙袋（零售手提袋）</td><td data-zh="1 個，按門店出貨比例而非件數" data-en="1 piece, based on store shipment ratio rather than garments" data-ja="1枚、着数ではなく店舗出荷比率で算出" data-ko="1장, 의류 수량이 아닌 매장 출고 비율 기준" data-fr="1 pièce, selon le ratio d'expédition boutique et non le nombre de vêtements" data-es="1 pieza, según el ratio de envío a tienda y no por prendas">1 個，按門店出貨比例而非件數</td><td data-zh="3%–5%；手提繩與封口貼單獨算" data-en="3%–5%; handles and seal stickers counted separately" data-ja="3〜5%、持ち手と封緘シールは別計算" data-ko="3~5%, 손잡이와 밀봉 스티커는 별도" data-fr="3 à 5 %, anses et stickers de fermeture comptés à part" data-es="3–5 %; asas y precintos se cuentan aparte">3%–5%；手提繩與封口貼單獨算</td></tr>
+        <tr><td data-zh="縫線與織帶" data-en="Thread and webbing" data-ja="縫い糸とテープ" data-ko="봉제사와 웨빙" data-fr="Fil et sangle" data-es="Hilo y cinta">縫線與織帶</td><td data-zh="縫線按米計，約 40–120 米/件" data-en="Thread in metres, roughly 40–120 m per garment" data-ja="糸はメートル単位、1着あたり約40〜120m" data-ko="실은 미터 단위, 낱장 약 40~120m" data-fr="Fil au mètre, environ 40 à 120 m par article" data-es="Hilo en metros, unos 40–120 m por prenda">縫線按米計，約 40–120 米/件</td><td data-zh="5%–8%；換色停機與時斷線" data-en="5%–8%; colour changes and thread breaks" data-ja="5〜8%、色替えの停止と糸切れ" data-ko="5~8%, 색 교체 중단과 실 끊김" data-fr="5 à 8 %, changements de couleur et casse de fil" data-es="5–8 %; cambios de color y roturas de hilo">5%–8%；換色停機與時斷線</td></tr>
+      </table>
+
+      <h2 data-zh="二、從單耗到採購量：三個最常見的換算錯誤"
+          data-en="2. From Consumption to Order Quantity: Three Common Conversion Errors"
+          data-ja="2. 単耗から発注量へ：よくある3つの換算ミス"
+          data-ko="2. 소요량에서 발주량으로: 가장 흔한 세 가지 환산 오류"
+          data-fr="2. De la consommation à la commande : trois erreurs de conversion courantes"
+          data-es="2. Del consumo al pedido: tres errores de conversión habituales">二、從單耗到採購量：三個最常見的換算錯誤</h2>
+      <p data-zh="第一個錯誤是把件數乘單耗之後直接下單，忘了供應商的最小包裝單位：織嘜按卷、縫線按錐、織帶按整卷，算出來 1 280 枚織嘜，實際要買 1 500 枚一卷的整卷。第二個錯誤是把不同顏色、不同尺碼合併成一個數字，結果中間某個尺碼差了幾十枚。第三個錯誤是隻按大貨數量算，忘了樣板、拍照樣、第三方檢測樣與留樣，這部分通常佔總量 1%–2%。"
+         data-en="The first error is multiplying garments by consumption and ordering that figure, forgetting the supplier's packing unit: woven labels come by roll, thread by cone, webbing by full roll, so a calculated 1,280 labels may mean buying a 1,500-piece roll. The second is merging colours and sizes into one number, which leaves one size short by dozens. The third is counting only bulk quantity, forgetting fit samples, photo samples, third-party test samples and retained samples — usually 1%–2% of the total."
+         data-ja="第一の誤りは、着数に単耗を掛けた数をそのまま発注し、サプライヤーの最小包装単位を忘れることです。織りラベルは巻、糸はコーン、テープは反単位なので、計算上1,280枚でも1,500枚巻を買うことになります。第二は色・サイズをまとめて1つの数字にし、特定サイズが数十枚足りなくなること。第三は量産数だけで計算し、フィッティング見本、撮影見本、第三者試験用、保管見本を忘れることです。これは通常全体の1〜2%になります。"
+         data-ko="첫 번째 오류는 수량에 소요량을 곱한 값을 그대로 발주하면서 공급사의 최소 포장 단위를 잊는 것입니다. 직조 라벨은 롤, 실은 콘, 웨빙은 온 롤 단위라 1,280장으로 계산해도 1,500장 롤을 사야 합니다. 두 번째는 색상과 사이즈를 하나로 합쳐 특정 사이즈가 수십 장 부족해지는 경우입니다. 세 번째는 양산 수량만 계산하고 피팅 샘플, 촬영 샘플, 제3자 시험용, 보관 샘플을 빼먹는 것으로 보통 전체의 1~2%입니다."
+         data-fr="Première erreur : multiplier les pièces par la consommation et commander ce chiffre en oubliant l'unité de conditionnement (labels en rouleau, fil en cône, sangle en rouleau) — 1 280 labels calculés peuvent signifier l'achat d'un rouleau de 1 500. Deuxième : fusionner couleurs et tailles en un seul chiffre, ce qui laisse une taille à court de quelques dizaines. Troisième : ne compter que la série, en oubliant les prototypes, les échantillons photo, les tests tiers et les témoins — 1 à 2 % du total."
+         data-es="El primer error es multiplicar prendas por consumo y pedir esa cifra olvidando la unidad de empaque del proveedor: las etiquetas tejidas van por rollo, el hilo por cono, la cinta por rollo completo, así que 1.280 etiquetas calculadas pueden obligar a comprar un rollo de 1.500. El segundo es juntar colores y tallas en una cifra, dejando una talla corta por decenas. El tercero es contar solo la producción y olvidar muestras de fitting, de fotografía, de laboratorio y de archivo: un 1–2 % del total.">第一個錯誤是把件數乘單耗之後直接下單，忘了供應商的最小包裝單位：織嘜按卷、縫線按錐、織帶按整卷，算出來 1 280 枚織嘜，實際要買 1 500 枚一卷的整卷。第二個錯誤是把不同顏色、不同尺碼合併成一個數字，結果中間某個尺碼差了幾十枚。第三個錯誤是隻按大貨數量算，忘了樣板、拍照樣、第三方檢測樣與留樣，這部分通常佔總量 1%–2%。</p>
+      <ul>
+        <li data-zh="按款 × 色 × 碼拆開算，再彙總；尺碼曲線的兩端最容易缺"
+            data-en="Calculate by style × colour × size, then total up; the two ends of the size curve run short first"
+            data-ja="型番×色×サイズで分けて計算し、最後に合計します。サイズカーブの両端が最初に不足します"
+            data-ko="스타일×색상×사이즈로 나눠 계산한 뒤 합산하세요. 사이즈 커브 양 끝이 가장 먼저 부족해집니다"
+            data-fr="Calculez par modèle × couleur × taille, puis totalisez : les extrémités de la courbe de tailles manquent en premier"
+            data-es="Calcula por modelo × color × talla y luego suma: los extremos de la curva de tallas faltan primero">按款 × 色 × 碼拆開算，再彙總；尺碼曲線的兩端最容易缺</li>
+        <li data-zh="採購量向上取整到整卷、整箱或整錐，並把餘料記入下批可用庫存"
+            data-en="Round the order up to a full roll, carton or cone, and log the surplus as usable stock for the next run"
+            data-ja="発注量は巻・箱・コーンの単位で切り上げ、余りは次回使用可能在庫として記録します"
+            data-ko="발주량은 롤·박스·콘 단위로 올림하고 잔량은 다음 차수 사용 가능 재고로 기록합니다"
+            data-fr="Arrondissez à l'unité supérieure (rouleau, carton, cône) et enregistrez le surplus comme stock réutilisable"
+            data-es="Redondea al alza hasta rollo, caja o cono completo y registra el sobrante como stock utilizable">採購量向上取整到整卷、整箱或整錐，並把餘料記入下批可用庫存</li>
+        <li data-zh="首單與小批量試單單獨加 3%–5% 緩衝，因爲工藝尚未穩定，損耗會高於常態"
+            data-en="Add a 3%–5% buffer to first orders and small trial runs, where processes are not yet stable and loss runs higher"
+            data-ja="初回注文や小ロット試作は3〜5%の余裕を別途確保します。工程が安定しておらずロスが通常より高くなるためです"
+            data-ko="첫 주문과 소량 시험 생산은 3~5% 완충을 따로 두세요. 공정이 아직 안정되지 않아 로스가 평소보다 높습니다"
+            data-fr="Ajoutez 3 à 5 % de marge aux premières commandes et petits essais, où les procédés ne sont pas encore stabilisés"
+            data-es="Añade un margen del 3–5 % a primeros pedidos y pruebas pequeñas, donde el proceso aún no está estabilizado">首單與小批量試單單獨加 3%–5% 緩衝，因爲工藝尚未穩定，損耗會高於常態</li>
+      </ul>
+
+      <h2 data-zh="三、單件輔料成本怎麼進 FOB 報價"
+          data-en="3. How Trim Cost Enters an FOB Price"
+          data-ja="3. 1着あたりの副資材コストをFOB価格に織り込む"
+          data-ko="3. 낱장 부자재 원가를 FOB 가격에 반영하는 방법"
+          data-fr="3. Intégrer le coût accessoire dans un prix FOB"
+          data-es="3. Cómo entra el coste de accesorios en un precio FOB">三、單件輔料成本怎麼進 FOB 報價</h2>
+      <p data-zh="算法本身很簡單：單件輔料成本 =（單價 ÷ 每包裝單位數量）× 單耗。麻煩的是單價的口徑——吊牌報價常按千張、織嘜按千枚、膠袋按公斤或按千個、紙袋按個，四種口徑混在一張成本表裏，很容易算錯一位數。統一折算成「每件成本」再相加，是唯一不容易出錯的做法。"
+         data-en="The arithmetic is simple: cost per garment = (unit price ÷ pieces per pack) × consumption. The trouble is the unit basis — tags are quoted per thousand, woven labels per thousand, poly bags per kilo or per thousand, paper bags per piece. Four bases in one cost sheet invite a decimal error. Converting everything to cost per garment before adding up is the only method that holds."
+         data-ja="計算自体は単純です。1着あたりコスト＝（単価÷包装単位の入数）×単耗。厄介なのは単価の基準で、ハングタグは千枚、織りラベルは千枚、ポリ袋はkgまたは千枚、紙袋は1枚単位で見積られます。4つの基準が1枚の表に混在すると桁を間違えやすくなります。すべて「1着あたり」に換算してから合計するのが、唯一間違えにくい方法です。"
+         data-ko="계산은 간단합니다. 낱장 원가 = (단가 ÷ 포장 단위 수량) × 소요량. 문제는 단가 기준입니다. 행택은 천 장, 직조 라벨은 천 장, 비닐봉투는 kg 또는 천 장, 종이백은 장 단위로 견적됩니다. 네 기준이 한 표에 섞이면 자릿수를 틀리기 쉽습니다. 모두 '낱장 원가'로 환산한 뒤 합산하는 것이 유일하게 안전한 방법입니다."
+         data-fr="Le calcul est simple : coût par article = (prix unitaire ÷ pièces par conditionnement) × consommation. La difficulté est la base : étiquettes au millier, labels au millier, sachets au kilo ou au millier, sacs à l'unité. Quatre bases dans un même tableau invitent à l'erreur de virgule. Tout ramener au coût par article avant d'additionner est la seule méthode fiable."
+         data-es="La aritmética es simple: coste por prenda = (precio unitario ÷ piezas por paquete) × consumo. El problema es la base: colgantes por millar, etiquetas tejidas por millar, bolsas por kilo o por millar, bolsas de papel por unidad. Cuatro bases en una hoja invitan al error de un decimal. Convertirlo todo a coste por prenda antes de sumar es el único método seguro.">算法本身很簡單：單件輔料成本 =（單價 ÷ 每包裝單位數量）× 單耗。麻煩的是單價的口徑——吊牌報價常按千張、織嘜按千枚、膠袋按公斤或按千個、紙袋按個，四種口徑混在一張成本表裏，很容易算錯一位數。統一折算成「每件成本」再相加，是唯一不容易出錯的做法。</p>
+      <p data-zh="輔料在成衣 FOB 裏通常佔 5%–15%，品類差異很大：基礎 T 恤只有吊牌、主嘜、洗水標和膠袋，佔比偏低；帶禮盒、紙袋、多語言標籤與防僞吊牌的品類會明顯偏高。報價時建議把輔料單列一行，客戶能看見錢花在哪裏，原料或工藝變化時也有據可依。"
+         data-en="Trims usually account for 5%–15% of a garment FOB, varying widely by category: a basic T-shirt carries a tag, neck label, care label and bag and sits low; categories with gift boxes, paper bags, multilingual labels and security tags sit noticeably higher. It pays to show trim cost as its own line — the customer sees where the money goes, and there is a reference point when material or process changes."
+         data-ja="副資材は通常、衣料品FOBの5〜15%を占め、品目で大きく変わります。ベーシックTシャツはハングタグ、メインラベル、洗濯表示、ポリ袋のみで比率は低め。ギフトボックス、紙袋、多言語ラベル、偽造防止タグがある品目は明らかに高くなります。見積では副資材を独立した行として示すと、どこにお金がかかっているかが伝わり、材料や工程が変わったときの根拠にもなります。"
+         data-ko="부자재는 보통 의류 FOB의 5~15%를 차지하며 품목별 편차가 큽니다. 기본 티셔츠는 행택, 메인 라벨, 케어 라벨, 비닐봉투만 있어 비중이 낮고, 기프트박스·종이백·다국어 라벨·보안 태그가 있는 품목은 확실히 높습니다. 견적서에 부자재를 별도 행으로 표시하면 고객이 비용 구조를 볼 수 있고, 소재나 공정이 바뀔 때 근거가 됩니다."
+         data-fr="Les accessoires représentent en général 5 à 15 % du FOB, avec de forts écarts : un t-shirt basique se limite à une étiquette, un label de col, une étiquette d'entretien et un sachet ; les catégories avec coffret, sac papier, étiquettes multilingues et dispositifs de sécurité montent nettement. Mieux vaut afficher le coût accessoire sur sa propre ligne : le client voit où passe l'argent et dispose d'un repère quand matière ou procédé changent."
+         data-es="Los accesorios suelen representar el 5–15 % del FOB, con grandes diferencias: una camiseta básica lleva colgante, etiqueta de cuello, etiqueta de cuidado y bolsa y se queda baja; las categorías con caja de regalo, bolsa de papel, etiquetas multilingües y elementos de seguridad suben bastante. Conviene mostrar el coste de accesorios en su propia línea: el cliente ve a dónde va el dinero y hay referencia cuando cambian material o proceso.">輔料在成衣 FOB 裏通常佔 5%–15%，品類差異很大：基礎 T 恤只有吊牌、主嘜、洗水標和膠袋，佔比偏低；帶禮盒、紙袋、多語言標籤與防僞吊牌的品類會明顯偏高。報價時建議把輔料單列一行，客戶能看見錢花在哪裏，原料或工藝變化時也有據可依。</p>
+
+      <h2 data-zh="四、補料與車間損耗：責任怎麼分"
+          data-en="4. Replenishment and Floor Loss: Who Pays"
+          data-ja="4. 補充と工程ロス：責任の分け方"
+          data-ko="4. 보충과 공정 로스: 책임 구분"
+          data-fr="4. Réassort et pertes d'atelier : qui paie"
+          data-es="4. Reposición y mermas de taller: quién paga">四、補料與車間損耗：責任怎麼分</h2>
+      <p data-zh="通行做法是：約定損耗率以內的報廢含在單價裏，超出部分按原因歸屬。工藝原因——印刷偏位、織造斷經、模切走位——由輔料廠承擔；成衣廠操作導致的污損、錯用、丟失，由成衣廠承擔；設計變更、臨時加單、改尺碼由品牌承擔。這三句話寫進合同，比事後逐筆爭論省力得多。"
+         data-en="The usual arrangement: scrap within the agreed loss rate is inside the unit price, anything beyond it follows the cause. Process faults — off-register printing, broken warp, a drifting die cut — sit with the trim supplier; soiling, misuse and loss on the garment factory floor sit with the garment factory; design changes, late additions and size changes sit with the brand. Three sentences in the contract save a lot of argument later."
+         data-ja="一般的な取り決めは、合意したロス率内の不良は単価に含め、それを超える分は原因で帰属を決めるというものです。印刷の見当ずれ、織りの経糸切れ、抜きのずれといった工程要因は副資材メーカー、縫製工場での汚損・誤使用・紛失は縫製工場、デザイン変更・追加発注・サイズ変更はブランドの負担となります。この3文を契約に入れておくだけで、後からの議論が大幅に減ります。"
+         data-ko="일반적인 합의는 약정 로스율 이내의 불량은 단가에 포함하고, 초과분은 원인에 따라 귀속하는 것입니다. 인쇄 겹침, 경사 끊김, 칼금형 밀림 같은 공정 원인은 부자재 공장이, 봉제 공장에서의 오염·오사용·분실은 봉제 공장이, 디자인 변경·추가 발주·사이즈 변경은 브랜드가 부담합니다. 이 세 문장을 계약서에 넣으면 사후 논쟁이 크게 줄어듭니다."
+         data-fr="La pratique courante : la casse dans la limite du taux convenu est incluse dans le prix, au-delà l'imputation suit la cause. Les défauts de procédé — impression hors repérage, chaîne cassée, découpe qui dérive — relèvent du fabricant d'accessoires ; la salissure, le mauvais usage et la perte en atelier relèvent de l'atelier ; les changements de design, les ajouts tardifs et les changements de taille relèvent de la marque. Trois phrases au contrat évitent bien des débats."
+         data-es="La práctica habitual: el scrap dentro del porcentaje acordado va incluido en el precio y lo que lo supera se imputa según la causa. Los fallos de proceso —impresión fuera de registro, urdimbre rota, troquel que se desvía— son del fabricante de accesorios; la suciedad, el mal uso y la pérdida en el taller son del taller; los cambios de diseño, los pedidos añadidos y los cambios de talla son de la marca. Tres frases en el contrato ahorran muchas discusiones.">通行做法是：約定損耗率以內的報廢含在單價裏，超出部分按原因歸屬。工藝原因——印刷偏位、織造斷經、模切走位——由輔料廠承擔；成衣廠操作導致的污損、錯用、丟失，由成衣廠承擔；設計變更、臨時加單、改尺碼由品牌承擔。這三句話寫進合同，比事後逐筆爭論省力得多。</p>
+      <p data-zh="補料真正的成本不是物料錢，而是時間。吊牌補料通常 3–5 天，織嘜 7–10 天，洗水標 5–7 天；如果成衣已經上線，等料就是停線，一天的停線成本往往高於整批補料。所以補料條款裏除了價格，必須寫清「最短補料交期」和「加急通道是否可用」。"
+         data-en="The real cost of a replenishment is not the material but the time. Hang tags usually take 3–5 days, woven labels 7–10, care labels 5–7; if the garment line is already running, waiting means a stopped line, and one day of stoppage usually costs more than the whole replenishment. So the clause needs a minimum replenishment lead time and whether an expedited route exists, not just a price."
+         data-ja="補充の本当のコストは資材代ではなく時間です。ハングタグは通常3〜5日、織りラベルは7〜10日、洗濯表示は5〜7日。縫製ラインが既に動いていれば、待つことはライン停止であり、1日の停止コストは補充ロット全体より高いことが多いのです。したがって補充条款には価格だけでなく、最短の補充納期と特急対応の可否を明記します。"
+         data-ko="보충의 진짜 비용은 자재비가 아니라 시간입니다. 행택은 보통 3~5일, 직조 라벨은 7~10일, 케어 라벨은 5~7일 걸립니다. 봉제 라인이 이미 돌고 있다면 기다림은 곧 라인 정지이고, 하루 정지 비용이 보충 로트 전체보다 큰 경우가 많습니다. 그래서 보충 조항에는 가격뿐 아니라 최단 보충 납기와 긴급 대응 가능 여부를 명시해야 합니다."
+         data-fr="Le vrai coût d'un réassort n'est pas la matière mais le temps : 3 à 5 jours pour des étiquettes suspendues, 7 à 10 pour des labels tissés, 5 à 7 pour des étiquettes d'entretien. Si la ligne tourne déjà, attendre signifie l'arrêt, et une journée d'arrêt coûte souvent plus que tout le réassort. La clause doit donc préciser un délai minimum de réassort et l'existence d'une voie express, pas seulement un prix."
+         data-es="El coste real de una reposición no es el material sino el tiempo: 3–5 días para colgantes, 7–10 para etiquetas tejidas, 5–7 para etiquetas de cuidado. Si la línea ya está en marcha, esperar es pararla, y un día de parada suele costar más que toda la reposición. Por eso la cláusula debe indicar el plazo mínimo de reposición y si existe vía urgente, no solo un precio.">補料真正的成本不是物料錢，而是時間。吊牌補料通常 3–5 天，織嘜 7–10 天，洗水標 5–7 天；如果成衣已經上線，等料就是停線，一天的停線成本往往高於整批補料。所以補料條款裏除了價格，必須寫清「最短補料交期」和「加急通道是否可用」。</p>
+
+      <h2 data-zh="五、一張 BOM 自檢表"
+          data-en="5. A One-Page BOM Checklist"
+          data-ja="5. BOMセルフチェック表"
+          data-ko="5. BOM 자체 점검표"
+          data-fr="5. Une liste de contrôle BOM"
+          data-es="5. Una lista de control de la lista de materiales">五、一張 BOM 自檢表</h2>
+      <ul>
+        <li data-zh="用量是否按款、色、碼拆開，而不是一個總數"
+            data-en="Is consumption split by style, colour and size rather than one total"
+            data-ja="使用量は型番・色・サイズ別に分かれているか（合計だけになっていないか）"
+            data-ko="소요량이 총합 하나가 아니라 스타일·색상·사이즈별로 나뉘어 있는가"
+            data-fr="La consommation est-elle ventilée par modèle, couleur et taille, et non en un total"
+            data-es="¿El consumo está desglosado por modelo, color y talla en lugar de un total">用量是否按款、色、碼拆開，而不是一個總數</li>
+        <li data-zh="備用扣、備用線、備用吊粒、備用織嘜是否單獨列行"
+            data-en="Are spare buttons, thread, tag pins and woven labels on their own lines"
+            data-ja="予備ボタン、予備糸、予備タグピン、予備ラベルは独立した行になっているか"
+            data-ko="여분 단추, 실, 태그핀, 직조 라벨이 별도 행으로 있는가"
+            data-fr="Boutons, fil, attaches et labels de rechange figurent-ils sur des lignes distinctes"
+            data-es="¿Los botones, hilos, pizas y etiquetas de repuesto tienen línea propia">備用扣、備用線、備用吊粒、備用織嘜是否單獨列行</li>
+        <li data-zh="樣板、拍照樣、檢測樣與留樣是否已計入"
+            data-en="Are fit, photo, test and retained samples counted in"
+            data-ja="フィッティング・撮影・試験・保管見本は算入されているか"
+            data-ko="피팅·촬영·시험·보관 샘플이 포함되었는가"
+            data-fr="Les prototypes, échantillons photo, tests et témoins sont-ils comptés"
+            data-es="¿Están contadas las muestras de fitting, foto, ensayo y archivo">樣板、拍照樣、檢測樣與留樣是否已計入</li>
+        <li data-zh="採購單位與供應商的包裝單位是否一致（卷、錐、箱、千枚）"
+            data-en="Does the order unit match the supplier's packing unit (roll, cone, carton, thousand)"
+            data-ja="発注単位はサプライヤーの包装単位（巻・コーン・箱・千枚）と一致しているか"
+            data-ko="발주 단위가 공급사의 포장 단위(롤, 콘, 박스, 천 장)와 일치하는가"
+            data-fr="L'unité de commande correspond-elle au conditionnement fournisseur (rouleau, cône, carton, millier)"
+            data-es="¿La unidad de pedido coincide con la de empaque del proveedor (rollo, cono, caja, millar)">採購單位與供應商的包裝單位是否一致（卷、錐、箱、千枚）</li>
+        <li data-zh="損耗率是否寫明數字，並由品牌與供應商雙方確認"
+            data-en="Is the loss rate a written number confirmed by both brand and supplier"
+            data-ja="ロス率は数値で明記され、ブランドとサプライヤーの双方が確認しているか"
+            data-ko="로스율이 숫자로 명시되고 브랜드와 공급사가 모두 확인했는가"
+            data-fr="Le taux de pertes est-il chiffré et confirmé par la marque et le fournisseur"
+            data-es="¿El porcentaje de mermas está cifrado y confirmado por marca y proveedor">損耗率是否寫明數字，並由品牌與供應商雙方確認</li>
+        <li data-zh="補料條款是否包含價格、最短交期與加急可能性"
+            data-en="Does the replenishment clause cover price, minimum lead time and expediting"
+            data-ja="補充条款に価格・最短納期・特急可否が入っているか"
+            data-ko="보충 조항에 가격, 최단 납기, 긴급 대응 가능 여부가 있는가"
+            data-fr="La clause de réassort couvre-t-elle prix, délai minimum et expédition"
+            data-es="¿La cláusula de reposición cubre precio, plazo mínimo y urgencia">補料條款是否包含價格、最短交期與加急可能性</li>
+      </ul>
+
+      <h2 data-zh="六、什麼時候必須重算單耗"
+          data-en="6. When Consumption Must Be Recalculated"
+          data-ja="6. 単耗を必ず計算し直すタイミング"
+          data-ko="6. 소요량을 반드시 다시 계산해야 하는 시점"
+          data-fr="6. Quand la consommation doit être recalculée"
+          data-es="6. Cuándo hay que recalcular el consumo">六、什麼時候必須重算單耗</h2>
+      <p data-zh="換面料厚度、包裝從摺疊改爲掛裝、吊牌從單張改爲對摺、加上防僞或二維碼標籤、洗水標從單語改爲多語，這五種變化都會改變用量，而且往往不是整件按比例變化，而是某一項突然翻倍。SKU 多、返單頻繁的品牌建議每季複覈一次，把單耗當作活數據而不是一次性的表格。"
+         data-en="Five changes move the numbers: a different fabric weight, packaging switching from folded to hanging, a tag becoming folded, a security or QR label being added, a care label going multilingual. They rarely scale everything evenly — usually one item suddenly doubles. Brands with many SKUs and frequent repeats should review quarterly and treat consumption as live data, not a one-off spreadsheet."
+         data-ja="5つの変化が使用量を動かします。生地厚の変更、包装を平置きからハンガーへ変更、ハングタグを二つ折り化、偽造防止やQRラベルの追加、洗濯表示の多言語化です。多くは全体が比例して変わるのではなく、ある1項目だけが急に倍になります。SKUが多く返単の多いブランドは四半期ごとに見直し、単耗を一度きりの表ではなく生きたデータとして扱うべきです。"
+         data-ko="다섯 가지 변화가 수량을 바꿉니다. 원단 두께 변경, 포장을 폴딩에서 행거로 변경, 행택을 반접지로 변경, 보안·QR 라벨 추가, 케어 라벨 다국어화입니다. 대개 전체가 비례해 바뀌지 않고 특정 항목만 갑자기 두 배가 됩니다. SKU가 많고 재주문이 잦은 브랜드는 분기마다 재점검하고 소요량을 일회성 표가 아닌 살아 있는 데이터로 다뤄야 합니다."
+         data-fr="Cinq changements déplacent les chiffres : épaisseur de tissu, passage du pliage au portant, étiquette suspendue pliée, ajout d'un dispositif de sécurité ou d'un QR, étiquette d'entretien multilingue. Tout ne varie pas proportionnellement : souvent une seule ligne double. Les marques à nombreux SKU et réassorts fréquents devraient revoir chaque trimestre et traiter la consommation comme une donnée vivante."
+         data-es="Cinco cambios mueven las cifras: gramaje del tejido, paso de plegado a colgado, colgante doblado, adición de etiqueta de seguridad o QR y etiqueta de cuidado multilingüe. Rara vez escala todo por igual: normalmente una línea se duplica de golpe. Las marcas con muchos SKU y reposiciones frecuentes deberían revisar cada trimestre y tratar el consumo como dato vivo.">換面料厚度、包裝從摺疊改爲掛裝、吊牌從單張改爲對摺、加上防僞或二維碼標籤、洗水標從單語改爲多語，這五種變化都會改變用量，而且往往不是整件按比例變化，而是某一項突然翻倍。SKU 多、返單頻繁的品牌建議每季複覈一次，把單耗當作活數據而不是一次性的表格。</p>
+
+      <div class="callout" data-zh="💡 提示：把單耗寫進 Tech Pack 的輔料頁，而不是隻留在採購的 Excel 裏。設計、採購、工廠三方用同一份數字，能消掉大部分「料不夠」的爭議。"
+           data-en="💡 Tip: put consumption on the trims page of the tech pack, not only in a purchasing spreadsheet. When design, buying and the factory work from one set of numbers, most short-of-material disputes disappear."
+           data-ja="💡 ヒント：単耗は購買のExcelだけでなく、仕様書（Tech Pack）の副資材ページに書きます。デザイン・購買・工場が同じ数字を使えば、「資材が足りない」という争いのほとんどは消えます。"
+           data-ko="💡 팁: 소요량은 구매 엑셀이 아니라 테크팩의 부자재 페이지에 적으세요. 디자인, 구매, 공장이 같은 숫자를 쓰면 '자재 부족' 분쟁의 대부분이 사라집니다."
+           data-fr="💡 Astuce : inscrivez la consommation sur la page accessoires de la fiche technique, pas seulement dans un tableur d'achat. Quand design, achats et usine partagent les mêmes chiffres, la plupart des litiges de manque disparaissent."
+           data-es="💡 Consejo: pon el consumo en la página de accesorios de la ficha técnica, no solo en la hoja de compras. Cuando diseño, compras y fábrica usan los mismos números, desaparecen casi todas las disputas por falta de material.">💡 提示：把單耗寫進 Tech Pack 的輔料頁，而不是隻留在採購的 Excel 裏。設計、採購、工廠三方用同一份數字，能消掉大部分「料不夠」的爭議。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 글" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="hang-tag-moq-cost.html" data-zh="吊牌起訂量與成本解析" data-en="Hang Tag MOQ and Cost Explained" data-ja="ハングタグのMOQとコスト解説" data-ko="행택 최소주문량과 원가 분석" data-fr="MOQ et coût des étiquettes suspendues" data-es="MOQ y coste de los colgantes">吊牌起訂量與成本解析</a></li>
+        <li><a href="garment-trims-inventory-management.html" data-zh="服裝輔料庫存管理與安全庫存" data-en="Managing Trim Inventory and Safety Stock" data-ja="衣料副資材の在庫管理と安全在庫" data-ko="의류 부자재 재고 관리와 안전 재고" data-fr="Gestion des stocks d'accessoires et stock de sécurité" data-es="Gestión de inventario de accesorios y stock de seguridad">服裝輔料庫存管理與安全庫存</a></li>
+        <li><a href="trim-quotation-comparison-guide.html" data-zh="輔料報價單怎麼比對" data-en="How to Compare Trim Quotations" data-ja="副資材見積の比較方法" data-ko="부자재 견적서 비교 방법" data-fr="Comparer des devis d'accessoires" data-es="Cómo comparar presupuestos de accesorios">輔料報價單怎麼比對</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要按款覈算輔料單耗與用量？把款式、顏色數量、年用量與包裝方式發給我們，我們可以按吊牌、織嘜、洗水標、膠袋、紙袋逐項列出單耗與損耗建議，並給出對應的採購量與交期。打樣 3–7 天，大貨 10–25 天。"
+           data-en="Need consumption worked out per style? Send the style, colour count, annual volume and packaging format, and we will list consumption and suggested loss rates item by item for tags, woven labels, care labels, poly bags and paper bags, with matching order quantities and lead times. Sampling 3–7 days, bulk 10–25 days."
+           data-ja="型番ごとの単耗を算出したい場合は、型番、色数、年間数量、包装形態をお知らせください。ハングタグ、織りラベル、洗濯表示、ポリ袋、紙袋について単耗と推奨ロス率を項目別に算出し、発注量と納期をご提案します。試作3〜7日、量産10〜25日です。"
+           data-ko="스타일별 소요량 산출이 필요하시면 스타일, 색상 수, 연간 수량, 포장 형태를 보내주세요. 행택, 직조 라벨, 케어 라벨, 비닐봉투, 종이백에 대해 소요량과 권장 로스율을 항목별로 제시하고 발주량과 납기를 안내합니다. 샘플 3~7일, 양산 10~25일입니다."
+           data-fr="Besoin d'un calcul de consommation par modèle ? Envoyez le modèle, le nombre de coloris, le volume annuel et le conditionnement : nous détaillons consommation et taux de pertes ligne par ligne pour étiquettes suspendues, labels tissés, étiquettes d'entretien, sachets et sacs papier, avec quantités et délais. Échantillons 3 à 7 jours, série 10 à 25 jours."
+           data-es="¿Necesitas calcular el consumo por modelo? Envía el modelo, número de colores, volumen anual y formato de empaque: detallamos consumo y mermas sugeridas línea por línea para colgantes, etiquetas tejidas, etiquetas de cuidado, bolsas y bolsas de papel, con cantidades y plazos. Muestras 3–7 días, producción 10–25 días.">需要按款覈算輔料單耗與用量？把款式、顏色數量、年用量與包裝方式發給我們，我們可以按吊牌、織嘜、洗水標、膠袋、紙袋逐項列出單耗與損耗建議，並給出對應的採購量與交期。打樣 3–7 天，大貨 10–25 天。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="諮詢單耗覈算 →" data-en="Ask about consumption planning →" data-ja="単耗計算を相談 →" data-ko="소요량 산출 문의 →" data-fr="Demander un calcul de consommation →" data-es="Consultar el cálculo de consumo →">諮詢單耗覈算 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
