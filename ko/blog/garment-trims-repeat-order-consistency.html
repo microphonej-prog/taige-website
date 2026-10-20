@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 재주문 일관성 가이드: 종이·색·판·공정 고정법 | TAGE</title>
+<meta name="description" content="재주문에서 색차와 종이 촉감이 달라지는 이유. 편차의 네 원인, 품목별로 남길 다섯 기록, 같은 평량에서 촉감이 달라지는 이유와 종이 표기법, ΔE 색차 허용치, 판과 도금형 재제작 시점, 초도품 검수 항목을 정리합니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-trims-repeat-order-consistency.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-trims-repeat-order-consistency.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料返單一致性：二次下單爲什麼總有色差與紙質差異",
+     "item": "https://taigetag.com/blog/garment-trims-repeat-order-consistency.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料返單一致性：二次下單爲什麼總有色差與紙質差異",
+   "url": "https://taigetag.com/blog/garment-trims-repeat-order-consistency.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-trims-repeat-order-consistency.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>재주문 일관성</span></div>
+      <h1>부자재 재주문 일관성: 두 번째 생산에서 색차와 지질 차이가 나는 이유</h1>
+      <p>TAGE 패키징 · 2026년 10월 20일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>첫 행택은 고객이 만족했습니다. 석 달 뒤 재주문분이 도착하자 색이 다르고 종이가 무르다는 피드백이 옵니다. 공장이 아무리 확인해도 판은 같은 판, 종이도 같은 350g라고 적혀 있습니다. 문제는 첫 생산 조건을 아무도 기록하지 않았다는 점입니다. 부자재 재주문의 편차는 기술적 난제라기보다 기록의 공백인 경우가 대부분입니다.</p>
+
+      <p>이 글은 다섯 가지를 정리합니다. 재주문 편차의 네 가지 원인, 품목별로 남겨야 할 다섯 가지 기록, 같은 평량인데 촉감이 달라지는 이유, 색차 허용치를 어떻게 적을지, 판과 도금형을 언제 다시 만들어야 하는지입니다.</p>
+
+      <h2>1. 재주문 편차를 만드는 네 가지 원인</h2>
+      <p>같은 행택의 두 번째 생산에는 변수가 생각보다 많습니다. 종이가 다른 로트의 제지사에서 오면 백도와 벌키성이 달라집니다. 잉크가 다른 브랜드나 로트면 별색이 반 단계 어긋납니다. 박의 온도와 압력은 작업자 감각에 의존해 광택과 접착이 변합니다. 외주처가 바뀌면 도금형 모서리 곡률도 달라집니다. 개별 차이는 공차 안이지만 겹치면 눈에 띄게 다른 제품이 됩니다.</p>
+      <ul>
+        <li>종이: 같은 평량이라도 펄프 종류와 도공량이 다르면 촉감과 백도가 달라집니다. 재생 펄프는 특히 불안정합니다</li>
+        <li>잉크: 별색 잉크 로트 차이, 4도 망점 확대율 차이. 큰 면적의 실색에서 편차가 가장 먼저 보입니다</li>
+        <li>후가공: 박 온도·압력·시간, 엠보 깊이, 라미네이팅 종류(글로스와 매트 혼용 불가)</li>
+        <li>설비와 외주: 도금형 마모, 다른 기계, 외주처 변경은 완성 치수와 모서리 촉감을 바꿉니다</li>
+      </ul>
+
+      <h2>2. 재주문 파일: 반드시 남겨야 할 다섯 가지 기록</h2>
+      <p>재주문이 일치하는지는 첫 생산에 무엇을 남겼는지로 결정됩니다. 품목별로 전자 파일과 실물 파일을 함께 만드세요. 빠져서는 안 되는 다섯 가지는 고객 승인 샘플, 지료 견본과 평량 기록, 색견본과 색차 기록, 판과 도금형 번호, 공정 파라미터표입니다. 파일 번호는 고객 발주번호와 사내 품번에 대응시켜야 합니다. 그러지 않으면 반년 뒤 아무도 찾지 못합니다.</p>
+      <table>
+        <tr><th>기록 항목</th><th>구체 내용</th><th>보관 형태</th></tr>
+        <tr><td>고객 승인 샘플</td><td>고객 서명 초도품. 날짜와 매뉴얼 버전 기재</td><td>실물 + 스캔</td></tr>
+        <tr><td>지료 견본</td><td>제지사, 평량, 펄프 종류, 도공, 백도</td><td>A4 실물 견본 + 파라미터 기록</td></tr>
+        <tr><td>색견본</td><td>별색 배합, Pantone 번호, 실측 ΔE</td><td>실물 색견본 + 데이터 시트</td></tr>
+        <tr><td>판과 금형</td><td>판 번호, 도금형 번호, 도면</td><td>번호 대장 + 전자 도면</td></tr>
+        <tr><td>공정 파라미터</td><td>박 온도·압력, 라미네이팅, 엠보 깊이</td><td>지시서와 함께 회람</td></tr>
+      </table>
+
+      <h2>3. 종이와 필름: 같은 평량이 같은 촉감은 아니다</h2>
+      <p>350g은 무게일 뿐 사양이 아닙니다. 같은 350g 백판지라도 버진펄프와 재생펄프는 백도가 몇 포인트 차이 나고, 도공량이 2g 다르면 촉감이 빳빳함에서 무름으로 바뀝니다. 벌키성이 다르면 같은 평량에서 두께가 5% 차이 나고, 봉투에 담았을 때 겹친 행택의 인상이 완전히 달라집니다. 재주문에 &#x27;350g 백판지&#x27;만 적으면 공급사는 재고에서 출하하므로 차이는 필연입니다.</p>
+      <ul>
+        <li>구체적으로 적으세요: 평량 + 펄프 종류 또는 브랜드 + 백도 + 도공 + 동일 로트 요구 여부</li>
+        <li>필름도 같습니다. OPP와 PET는 강성이 다르고 매트와 글로스는 마찰계수가 달라 자동 포장기에서 거동이 달라집니다</li>
+        <li>소량 재주문은 동일 로트를 지정할 수 있지만, 대량이면 제지사 생산 일정을 미리 확보해야 합니다. 성수기에는 특히 그렇습니다</li>
+      </ul>
+
+      <h2>4. 색상: 허용치는 숫자로 적는다</h2>
+      <p>재주문 색 검증을 &#x27;지난번과 같다&#x27;로 끝내지 마세요. 색차는 ΔE로 표현해야 의미가 있습니다. 행택의 큰 면적 실색은 ΔE 2 이하가 일반적이고, 직조 라벨은 실과 제직 한계로 3까지 완화하며, 박과 별색은 소재 영향이 커서 양측이 수치를 합의해야 합니다. 분광측색기로 같은 광원에서 같은 지점을 측정하거나 최소한 표준 광박스에서 그레이스케일로 비교하고, 실측값을 기록하세요. &#x27;합격&#x27; 두 글자로는 부족합니다.</p>
+      <ul>
+        <li>광원과 관찰 각도를 지정하고 D65에서 판정하세요. 형광등이나 창가에서의 비색은 피하세요</li>
+        <li>실측 ΔE와 그레이스케일 등급을 기록하세요. 합격·불합격만으로는 부족합니다</li>
+        <li>고객이 브랜드 색견본을 가지고 있으면 그것이 기준입니다. 화면 표시나 잉크젯 교정쇄를 기준으로 삼지 마세요</li>
+      </ul>
+
+      <h2>5. 구판과 구금형: 언제 다시 만들어야 하는가</h2>
+      <p>판과 도금형에도 수명이 있습니다. 오프셋 판은 일정 매수 후 망점이 변형되고, 도금 칼날은 사용할수록 모서리가 무뎌지며, 박형은 고온에서 산화합니다. 소량 재주문은 구판을 써도 되지만 초도품에서 칼선 버와 망점 뭉개짐을 중점 확인하세요. 대량 재주문이거나 마지막 생산에서 1년 이상 지났다면 재제작을 권합니다. 재제작 비용과 귀속은 첫 발주 때 정해야 하며 재주문 때 협의할 일이 아닙니다.</p>
+
+      <div class="callout">💡 팁: 재주문 견적 요청 시 첫 승인 샘플 사진과 색견본 번호를 첨부하세요. 공급사가 기록을 바로 찾아 가격과 납기를 더 정확히 제시할 수 있습니다. &#x27;지난번과 같게&#x27; 한 줄만 보내면 위험을 다음 선적으로 넘기는 셈입니다.</div>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="trim-color-approval-process.html">부자재 색상 승인 절차</a></li>
+        <li><a href="hang-tag-paper-types.html">행택 종이 소재 총정리</a></li>
+        <li><a href="trim-tooling-ownership-guide.html">금형과 판의 귀속</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>재주문 시 앞뒤 배치가 달라질까 걱정되시나요? 지난 배치의 샘플 사진, 평량, 색상 번호를 보내주세요. 동일 조건으로 재생산하고 지료 견본, 색견본, 공정 파라미터를 함께 보관해 다음에는 기록에서 바로 재현합니다. 샘플 3~7일, 양산 10~25일입니다.</p>
+        <a class="cta-btn" href="../contact.html">재주문 재현 문의 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
