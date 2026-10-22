@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="吊牌、織嘜、洗水標、包裝袋信息一致性覈對指南 | TAGE" data-en="Trim Label Consistency Audit: Eight Fields That Often Disagree | TAGE" data-ja="タグ・織りラベル・洗濯表示・袋の情報一致チェックガイド | TAGE" data-ko="행택·직조 라벨·세탁 표시·포장 봉투 정보 일치 점검 가이드 | TAGE" data-fr="Audit de cohérence des étiquettes et emballages : huit champs à vérifier | TAGE" data-es="Auditoría de coherencia de etiquetas y embalaje: ocho campos a revisar | TAGE">吊牌、織嘜、洗水標、包裝袋信息一致性覈對指南 | TAGE</title>
+<meta name="description" data-zh="吊牌、織嘜、洗水標、包裝袋信息一致性覈對指南：爲什麼四件套最容易對不上、八處高頻不一致字段與後果對照、先定母版的核對順序、版本與籤樣管理，以及品牌、成衣廠、輔料商三方責任怎麼劃。來自東莞泰閣包裝。"
+      data-en="Trim label consistency audit: why hang tags, woven labels, care labels and bags drift apart, the eight fields that disagree, and a master-first check order." data-ja="タグ・織りラベル・洗濯表示・袋の情報一致チェックガイド。4点セットが食い違う理由、食い違いやすい8項目とその影響、マスターを先に固める確認順序、版管理とサイン見本、ブランド・縫製工場・副資材メーカーの責任分担を整理します。東莞泰閣包装。" data-ko="행택·직조 라벨·세탁 표시·포장 봉투 정보 일치 점검 가이드. 네 가지 세트가 어긋나는 이유, 자주 틀리는 여덟 항목과 영향, 원본을 먼저 확정하는 확인 순서, 버전과 승인 샘플 관리, 브랜드·봉제 공장·부자재 업체의 역할 분담을 정리합니다. 둥관 TAGE 패키징."
+      data-fr="Audit de cohérence des étiquettes : pourquoi l'étiquette suspendue, le label tissé, l'étiquette d'entretien et le sachet divergent, huit champs à risque et un ordre de contrôle par la référence."
+      data-es="Auditoría de coherencia de etiquetas: por qué el colgante, la etiqueta tejida, la de cuidado y la bolsa se desajustan, ocho campos de riesgo y un orden de comprobación por el maestro."
+      content="吊牌、織嘜、洗水標、包裝袋信息一致性覈對指南：爲什麼四件套最容易對不上、八處高頻不一致字段與後果對照、先定母版的核對順序、版本與籤樣管理，以及品牌、成衣廠、輔料商三方責任怎麼劃。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-label-consistency-audit-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-label-consistency-audit-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌、織嘜、洗水標、包裝袋信息一致性覈對：八處最容易對不上的地方",
+     "item": "https://taigetag.com/blog/trim-label-consistency-audit-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌、織嘜、洗水標、包裝袋信息一致性覈對：八處最容易對不上的地方",
+   "url": "https://taigetag.com/blog/trim-label-consistency-audit-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-label-consistency-audit-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="標籤信息一致性" data-en="Label Consistency" data-ja="ラベル情報の一貫性" data-ko="라벨 정보 일치" data-fr="Cohérence des étiquettes" data-es="Coherencia de etiquetas">標籤信息一致性</span></div>
+      <h1 data-zh="吊牌、織嘜、洗水標、包裝袋信息一致性覈對：八處最容易對不上的地方" data-en="Trim Label Consistency: Eight Places Hang Tags, Woven Labels, Care Labels and Bags Disagree" data-ja="タグ・織りラベル・洗濯表示・袋の情報一致チェック：最も食い違いやすい8つの箇所" data-ko="행택·직조 라벨·세탁 표시·포장 봉투 정보 일치 점검: 가장 자주 어긋나는 여덟 곳" data-fr="Cohérence des étiquettes : huit endroits où suspendue, tissé, entretien et sachet se contredisent" data-es="Coherencia de etiquetas: ocho puntos donde el colgante, la tejida, el cuidado y la bolsa se contradicen">吊牌、織嘜、洗水標、包裝袋信息一致性覈對：八處最容易對不上的地方</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月22日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 22, 2026" data-ja="泰閣包装 · 2026年10月22日更新" data-ko="TAGE 패키징 · 2026년 10월 22일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 22 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 22 de octubre de 2026">泰閣包裝 · 更新於 2026年10月22日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="吊牌上寫 95% 棉，洗水標寫 95% 棉 5% 氨綸；吊牌尺碼是 M，織嘜尺碼是 165/88A；產地一處寫 Made in China，一處寫 Dongguan。這類錯誤單看每件輔料都沒問題，拼到同一件衣服上就成了客訴、退貨甚至下架的理由。信息一致性不是印刷質量問題，而是流程問題。"
+         data-en="The hang tag says 95% cotton while the care label says 95% cotton 5% elastane; the tag reads M while the woven label reads 165/88A; origin appears as Made in China in one place and Dongguan in another. Each trim looks fine on its own, yet together on one garment they become grounds for complaints, returns or delisting. Information consistency is not a printing quality issue, it is a process issue."
+         data-ja="ハングタグは綿95%、洗濯表示ラベルは綿95%・エラスタン5%。タグのサイズは M、織りラベルは 165/88A。原産地は一方が Made in China、他方が Dongguan。単品では問題なくても、同じ衣料に揃うとクレーム・返品・販売停止の理由になります。情報の一貫性は印刷品質の問題ではなく、プロセスの問題です。"
+         data-ko="행택에는 면 95%, 세탁 표시 라벨에는 면 95%·엘라스테인 5%. 행택 사이즈는 M, 직조 라벨은 165/88A. 원산지는 한쪽은 Made in China, 다른 쪽은 Dongguan. 각 부자재만 보면 문제가 없지만 한 옷에 모이면 클레임·반품·판매 중단 사유가 됩니다. 정보 일관성은 인쇄 품질 문제가 아니라 프로세스 문제입니다."
+         data-fr="L'étiquette suspendue indique 95 % coton, l'étiquette d'entretien 95 % coton et 5 % élasthanne ; la taille est M sur l'une et 165/88A sur le label tissé ; l'origine figure en Made in China ici et Dongguan là. Chaque accessoire pris seul est correct, mais réunis sur un même vêtement ils deviennent motif de réclamation, de retour ou de retrait. La cohérence des informations n'est pas un problème d'impression, c'est un problème de processus."
+         data-es="El colgante dice 95% algodón y la etiqueta de cuidado 95% algodón 5% elastano; la talla es M en uno y 165/88A en la etiqueta tejida; el origen aparece como Made in China en un sitio y Dongguan en otro. Cada accesorio está bien por separado, pero juntos en una prenda se convierten en motivo de reclamación, devolución o retirada. La coherencia de la información no es un problema de impresión, es un problema de proceso.">吊牌上寫 95% 棉，洗水標寫 95% 棉 5% 氨綸；吊牌尺碼是 M，織嘜尺碼是 165/88A；產地一處寫 Made in China，一處寫 Dongguan。這類錯誤單看每件輔料都沒問題，拼到同一件衣服上就成了客訴、退貨甚至下架的理由。信息一致性不是印刷質量問題，而是流程問題。</p>
+
+      <p data-zh="下面按「爲什麼會錯、錯在哪八處、按什麼順序覈對、怎麼留痕」四步，給一套可以直接搬進開發流程的核對方法。"
+         data-en="What follows is a checking method you can drop straight into your development process: why mismatches happen, the eight places they occur, the order to check in, and how to leave a trace."
+         data-ja="以下では「なぜ食い違うのか、どこで食い違うのか、どの順で確認するのか、どう記録に残すのか」の4段階で、開発フローにそのまま入れられる確認方法を示します。"
+         data-ko="아래에서는 왜 어긋나는지, 어디서 어긋나는지, 어떤 순서로 확인하는지, 어떻게 기록을 남기는지 네 단계로 개발 프로세스에 바로 넣을 수 있는 점검 방법을 제시합니다."
+         data-fr="Ce qui suit propose une méthode transposable telle quelle dans votre processus de développement : pourquoi les écarts surviennent, où ils se produisent, dans quel ordre vérifier et comment laisser une trace."
+         data-es="A continuación se propone un método que puede trasladarse tal cual al proceso de desarrollo: por qué aparecen los desajustes, en qué puntos ocurren, en qué orden comprobar y cómo dejar rastro.">下面按「爲什麼會錯、錯在哪八處、按什麼順序覈對、怎麼留痕」四步，給一套可以直接搬進開發流程的核對方法。</p>
+
+      <h2 data-zh="一、爲什麼四件套最容易對不上"
+          data-en="1. Why the Four-Piece Set Drifts Apart"
+          data-ja="1. 4点セットが食い違う理由"
+          data-ko="1. 네 가지 세트가 어긋나는 이유"
+          data-fr="1. Pourquoi le jeu de quatre pièces se désaccorde"
+          data-es="1. Por qué el juego de cuatro piezas se desajusta">一、爲什麼四件套最容易對不上</h2>
+      <ul>
+        <li data-zh="<strong>來源不同：</strong>吊牌由品牌市場部定稿，洗水標由合規或品質部門按目的國法規寫，織嘜由工廠按制單做。三個來源、三套版本，最後沒人對照"
+            data-en="<strong>Different owners:</strong> the hang tag is signed off by brand marketing, the care label written by compliance or QA against destination rules, the woven label made by the factory from the work order. Three sources, three versions, and nobody compares them at the end"
+            data-ja="<strong>出所が違う：</strong>ハングタグはブランドのマーケティング、洗濯表示ラベルはコンプライアンスや品質部門が販売先の法規に沿って作成、織りラベルは工場が縫製指示書から作ります。3つの出所、3つの版で、最後に突き合わせる人がいません"
+            data-ko="<strong>출처가 다름:</strong> 행택은 브랜드 마케팅이 확정하고, 세탁 표시 라벨은 컴플라이언스나 품질 부서가 판매국 규정에 맞춰 작성하며, 직조 라벨은 공장이 작업 지시서로 만듭니다. 세 출처, 세 버전이고 마지막에 비교하는 사람이 없습니다"
+            data-fr="<strong>Sources différentes :</strong> l'étiquette suspendue est validée par le marketing, l'étiquette d'entretien rédigée par la conformité ou la qualité selon les règles du pays de vente, le label tissé fabriqué par l'usine d'après l'ordre de fabrication. Trois sources, trois versions, et personne ne compare à la fin"
+            data-es="<strong>Orígenes distintos:</strong> el colgante lo aprueba marketing, la etiqueta de cuidado la redacta cumplimiento o calidad según la norma del país de venta y la etiqueta tejida la hace la fábrica desde la orden. Tres fuentes, tres versiones y nadie compara al final"><strong>來源不同：</strong>吊牌由品牌市場部定稿，洗水標由合規或品質部門按目的國法規寫，織嘜由工廠按制單做。三個來源、三套版本，最後沒人對照</li>
+        <li data-zh="<strong>時點不同：</strong>吊牌在大貨前兩個月就印好，成分與尺碼卻在最後一次試身時才改。改了一處，其餘三處靠郵件追"
+            data-en="<strong>Different timing:</strong> tags are printed two months before bulk, while fibre content and size grading change at the last fitting. One change is made, and the other three pieces are chased by email"
+            data-ja="<strong>時期が違う：</strong>ハングタグは量産の2か月前に印刷され、組成やサイズは最後の試着で変わります。1か所を直し、残り3か所はメールで追いかけることになります"
+            data-ko="<strong>시점이 다름:</strong> 행택은 양산 두 달 전에 인쇄되고, 조성과 사이즈는 마지막 피팅에서 바뀝니다. 한 곳을 고치고 나머지 세 곳은 메일로 쫓아가게 됩니다"
+            data-fr="<strong>Calendriers différents :</strong> les étiquettes sont imprimées deux mois avant la série, alors que composition et gradation changent au dernier essayage. On corrige un endroit et on court après les trois autres par e-mail"
+            data-es="<strong>Momentos distintos:</strong> los colgantes se imprimen dos meses antes de la producción, mientras que la composición y el escalado cambian en la última prueba. Se corrige un punto y se persiguen los otros tres por correo"><strong>時點不同：</strong>吊牌在大貨前兩個月就印好，成分與尺碼卻在最後一次試身時才改。改了一處，其餘三處靠郵件追</li>
+        <li data-zh="<strong>責任不同：</strong>輔料商只對「來稿照印」負責，不判斷內容對錯。客戶以爲對方會覈對，對方以爲客戶已覈對——責任真空就在這裏"
+            data-en="<strong>Split responsibility:</strong> the trims supplier is accountable for printing what was sent, not for whether it is correct. The customer assumes the supplier checks, the supplier assumes the customer did — that gap is where errors live"
+            data-ja="<strong>責任が分かれる：</strong>副資材メーカーは「送られた通りに印刷する」責任を負い、内容の正誤は判断しません。顧客は相手が確認すると思い、相手は顧客が確認済みと思う。責任の空白がここに生まれます"
+            data-ko="<strong>책임이 나뉨:</strong> 부자재 업체는 '받은 대로 인쇄'할 책임만 지고 내용의 정오는 판단하지 않습니다. 고객은 상대가 확인한다고, 상대는 고객이 확인했다고 생각합니다. 책임 공백이 여기서 생깁니다"
+            data-fr="<strong>Responsabilités séparées :</strong> le fournisseur d'accessoires répond de l'impression conforme au fichier reçu, pas de l'exactitude du contenu. Le client suppose que le fournisseur vérifie, le fournisseur suppose que le client l'a fait : c'est là que naissent les erreurs"
+            data-es="<strong>Responsabilidad dividida:</strong> el proveedor de accesorios responde de imprimir lo recibido, no de si el contenido es correcto. El cliente supone que el proveedor comprueba y el proveedor supone que el cliente ya lo hizo: ahí vive el error"><strong>責任不同：</strong>輔料商只對「來稿照印」負責，不判斷內容對錯。客戶以爲對方會覈對，對方以爲客戶已覈對——責任真空就在這裏</li>
+      </ul>
+
+      <h2 data-zh="二、八處最容易對不上的字段"
+          data-en="2. The Eight Fields Most Likely to Disagree"
+          data-ja="2. 最も食い違いやすい8つの項目"
+          data-ko="2. 가장 자주 어긋나는 여덟 항목"
+          data-fr="2. Les huit champs les plus souvent en désaccord"
+          data-es="2. Los ocho campos que más discrepan">二、八處最容易對不上的字段</h2>
+      <table>
+        <tr>
+          <th data-zh="字段" data-en="Field" data-ja="項目" data-ko="항목" data-fr="Champ" data-es="Campo">字段</th>
+          <th data-zh="常見錯法" data-en="Typical mismatch" data-ja="よくある食い違い" data-ko="흔한 불일치" data-fr="Écart typique" data-es="Desajuste típico">常見錯法</th>
+          <th data-zh="後果" data-en="Consequence" data-ja="影響" data-ko="영향" data-fr="Conséquence" data-es="Consecuencia">後果</th>
+        </tr>
+        <tr>
+          <td data-zh="纖維成分與百分比" data-en="Fibre content and percentages" data-ja="組成と混率" data-ko="섬유 조성과 비율" data-fr="Composition et pourcentages" data-es="Composición y porcentajes">纖維成分與百分比</td>
+          <td data-zh="吊牌寫 100% 棉，洗水標按實際寫 95% 棉 5% 氨綸" data-en="Tag says 100% cotton, care label states 95% cotton 5% elastane" data-ja="タグは綿100%、洗濯表示は綿95%・エラスタン5%" data-ko="행택은 면 100%, 세탁 표시는 면 95%·엘라스테인 5%" data-fr="L'étiquette annonce 100 % coton, l'entretien indique 95 % coton 5 % élasthanne" data-es="El colgante pone 100% algodón y el cuidado 95% algodón 5% elastano">纖維成分與百分比</td>
+          <td data-zh="美國與歐盟都屬虛假標註，可能被要求下架並整改" data-en="False labelling in both the US and the EU, with delisting and corrective action possible" data-ja="米国もEUも虚偽表示となり、販売停止と是正を求められる可能性" data-ko="미국과 EU 모두 허위 표시로 판매 중단과 시정 요구 가능" data-fr="Fausse indication aux États-Unis comme dans l'UE : retrait et mise en conformité possibles" data-es="Etiquetado falso tanto en EE. UU. como en la UE: posible retirada y corrección">美國與歐盟都屬虛假標註，可能被要求下架並整改</td>
+        </tr>
+        <tr>
+          <td data-zh="尺碼標註體系" data-en="Size system" data-ja="サイズ表記体系" data-ko="사이즈 표기 체계" data-fr="Système de tailles" data-es="Sistema de tallas">尺碼標註體系</td>
+          <td data-zh="一處用 S/M/L，一處用 165/88A，一處用 38/40" data-en="S/M/L in one place, 165/88A in another, 38/40 in a third" data-ja="S/M/L、165/88A、38/40 が混在" data-ko="S/M/L, 165/88A, 38/40이 혼재" data-fr="S/M/L ici, 165/88A là, 38/40 ailleurs" data-es="S/M/L en un sitio, 165/88A en otro y 38/40 en un tercero">尺碼標註體系</td>
+          <td data-zh="門店配碼與電商退貨率同時上升" data-en="Store size runs and e-commerce return rates both suffer" data-ja="店舗のサイズ展開とEC返品率の両方が悪化" data-ko="매장 사이즈 구성과 이커머스 반품률이 동시에 악화" data-fr="La distribution des tailles en boutique et le taux de retour e-commerce se dégradent" data-es="Empeoran la gradación en tienda y la tasa de devoluciones online">門店配碼與電商退貨率同時上升</td>
+        </tr>
+        <tr>
+          <td data-zh="原產國寫法" data-en="Country of origin wording" data-ja="原産国の表記" data-ko="원산지 표기" data-fr="Formulation de l'origine" data-es="Redacción del origen">原產國寫法</td>
+          <td data-zh="吊牌 Made in China，箱嘜寫具體城市或 province 拼寫不一致" data-en="Tag reads Made in China, carton mark names a city or misspells the province" data-ja="タグは Made in China、箱マークは都市名や州名の綴りが不統一" data-ko="행택은 Made in China, 박스 마크는 도시명이나 성 표기가 불일치" data-fr="L'étiquette indique Made in China, le marquage carton nomme une ville ou écorche la province" data-es="El colgante dice Made in China y el marcado de caja nombra una ciudad o escribe mal la provincia">原產國寫法</td>
+          <td data-zh="清關與平臺審覈都可能被質疑，改箱嘜比改標籤貴得多" data-en="Both customs and platform review can query it, and reprinting cartons costs far more than labels" data-ja="通関とプラットフォーム審査の両方で指摘され、箱の刷り直しはラベルより高くつく" data-ko="통관과 플랫폼 심사 모두에서 문제가 되고, 박스 재인쇄 비용이 라벨보다 훨씬 큽니다" data-fr="Douane et contrôle de plateforme peuvent le relever, et refaire les cartons coûte bien plus que les étiquettes" data-es="Aduana y revisión de la plataforma pueden cuestionarlo, y rehacer las cajas cuesta mucho más que las etiquetas">清關與平臺審覈都可能被質疑，改箱嘜比改標籤貴得多</td>
+        </tr>
+        <tr>
+          <td data-zh="洗滌符號" data-en="Care symbols" data-ja="取扱い絵表示" data-ko="세탁 기호" data-fr="Symboles d'entretien" data-es="Símbolos de cuidado">洗滌符號</td>
+          <td data-zh="符號數量、順序或水溫數字與吊牌上的說明文字不一致" data-en="Symbol count, order or wash temperature disagrees with the wording on the tag" data-ja="記号の数・順序・水温が、タグの説明文と食い違う" data-ko="기호 수·순서·수온이 행택 설명 문구와 불일치" data-fr="Nombre, ordre ou température des symboles en contradiction avec le texte de l'étiquette" data-es="Número, orden o temperatura de los símbolos en contradicción con el texto del colgante">洗滌符號</td>
+          <td data-zh="洗壞索賠時責任難劃，且屬於標籤合規硬傷" data-en="Damage claims become hard to allocate, and it is a hard compliance defect" data-ja="洗濯トラブルの責任分担が困難になり、表示の明確な不備となる" data-ko="세탁 사고 시 책임 배분이 어렵고 표시 규정의 명백한 결함이 됩니다" data-fr="L'imputation des dommages devient floue et le défaut de conformité est caractérisé" data-es="La responsabilidad por daños se vuelve difusa y es un defecto claro de cumplimiento">洗壞索賠時責任難劃，且屬於標籤合規硬傷</td>
+        </tr>
+        <tr>
+          <td data-zh="品牌名與商標形式" data-en="Brand name and trademark form" data-ja="ブランド名と商標表記" data-ko="브랜드명과 상표 표기" data-fr="Nom de marque et forme du signe" data-es="Nombre de marca y forma del signo">品牌名與商標形式</td>
+          <td data-zh="吊牌用 ®，織嘜用 ™，大小寫與字距也不一樣" data-en="® on the tag, ™ on the woven label, with different casing and spacing" data-ja="タグは ®、織りラベルは ™、大文字小文字や字間も異なる" data-ko="행택은 ®, 직조 라벨은 ™, 대소문자와 자간도 다름" data-fr="® sur l'étiquette, ™ sur le label tissé, avec casse et approche différentes" data-es="® en el colgante, ™ en la etiqueta tejida, con mayúsculas y espaciado distintos">品牌名與商標形式</td>
+          <td data-zh="視覺不統一是小事，未註冊商標標 ® 纔是法律風險" data-en="Inconsistent visuals are minor; marking an unregistered mark with ® is the real legal risk" data-ja="見た目の不統一は小さな問題ですが、未登録商標に ® を付けることは法的リスクです" data-ko="시각적 불일치는 작은 문제이고, 미등록 상표에 ®를 붙이는 것이 법적 위험입니다" data-fr="L'incohérence visuelle est mineure ; apposer ® sur une marque non déposée est le vrai risque juridique" data-es="La incoherencia visual es menor; poner ® en una marca no registrada es el riesgo legal real">品牌名與商標形式</td>
+        </tr>
+        <tr>
+          <td data-zh="貨號與條碼" data-en="Style number and barcode" data-ja="品番とバーコード" data-ko="품번과 바코드" data-fr="Référence et code-barres" data-es="Referencia y código de barras">貨號與條碼</td>
+          <td data-zh="吊牌、洗水標、外箱三處貨號後綴不同（顏色碼與尺碼碼分不清）" data-en="Style suffix differs across tag, care label and carton, with colour and size codes confused" data-ja="タグ・洗濯表示・外箱で品番の末尾が異なり、色コードとサイズコードが混同される" data-ko="행택·세탁 표시·외箱의 품번 접미사가 달라 색상 코드와 사이즈 코드가 혼동" data-fr="Le suffixe de référence diffère entre étiquette, entretien et carton, avec confusion des codes couleur et taille" data-es="El sufijo de referencia cambia entre colgante, cuidado y caja, con confusión de códigos de color y talla">貨號與條碼</td>
+          <td data-zh="倉庫串碼、平臺掃不出、盤點對不上，返工成本最高" data-en="Warehouse mix-ups, unscannable codes on platform, failed stock counts — the costliest rework" data-ja="倉庫での取り違え、プラットフォームで読めない、棚卸が合わない。最も高くつく手戻り" data-ko="창고 혼입, 플랫폼 스캔 불가, 재고 실사 불일치로 재작업 비용이 가장 큽니다" data-fr="Mélanges en entrepôt, codes illisibles sur la plateforme, inventaires faux : la reprise la plus coûteuse" data-es="Mezclas en almacén, códigos ilegibles en la plataforma e inventarios que no cuadran: el retrabajo más caro">貨號與條碼</td>
+        </tr>
+        <tr>
+          <td data-zh="語言版本組合" data-en="Language set" data-ja="言語の組み合わせ" data-ko="언어 조합" data-fr="Combinaison de langues" data-es="Combinación de idiomas">語言版本組合</td>
+          <td data-zh="同一款發往三個市場，卻共用一套只含英法的標籤" data-en="One style ships to three markets sharing a single English and French label" data-ja="1型を3市場に送るのに、英仏のみのラベルを共通使用" data-ko="한 스타일을 세 시장에 보내면서 영·불 라벨 하나를 공용" data-fr="Un même modèle part vers trois marchés avec une seule étiquette anglais-français" data-es="Un mismo modelo va a tres mercados con una sola etiqueta en inglés y francés">語言版本組合</td>
+          <td data-zh="目的國強制語言缺失，整批無法上架" data-en="A mandatory language is missing and the batch cannot be listed" data-ja="必須言語が欠け、ロット全体が販売できない" data-ko="필수 언어가 빠져 로트 전체를 판매할 수 없습니다" data-fr="La langue obligatoire manque et le lot ne peut être commercialisé" data-es="Falta un idioma obligatorio y el lote no se puede vender">語言版本組合</td>
+        </tr>
+        <tr>
+          <td data-zh="裝箱與警告語" data-en="Packing data and warnings" data-ja="梱包情報と警告表示" data-ko="포장 정보와 경고 문구" data-fr="Données d'emballage et avertissements" data-es="Datos de embalaje y advertencias">裝箱與警告語</td>
+          <td data-zh="箱嘜每箱數量與實際不符，膠袋窒息警告語漏印或字號過小" data-en="Carton quantity differs from actual, or the suffocation warning is missing or too small" data-ja="箱マークの入数が実数と違う、袋の窒息警告が欠落または小さすぎる" data-ko="박스 입수가 실제와 다르거나 비닐봉투 질식 경고가 누락·너무 작음" data-fr="Quantité par carton erronée, ou avertissement d'étouffement absent ou trop petit" data-es="Cantidad por caja distinta de la real, o advertencia de asfixia ausente o demasiado pequeña">裝箱與警告語</td>
+          <td data-zh="平臺倉拒收、物流商扣件，是最常見的到貨即返工" data-en="Platform warehouse rejection and carrier holds — the most common arrival-day rework" data-ja="プラットフォーム倉庫での受入拒否や運送会社の保留。到着当日の手戻りで最も多いケース" data-ko="플랫폼 창고 입고 거부와 운송사 보류. 도착 당일 재작업의 가장 흔한 사례" data-fr="Refus d'entrepôt plateforme et blocage transporteur : la reprise à l'arrivée la plus fréquente" data-es="Rechazo del almacén de la plataforma y retención del transportista: el retrabajo más común a la llegada">裝箱與警告語</td>
+        </tr>
+      </table>
+      <p data-zh="除了這八處，價格區與促銷信息、二維碼落地頁域名、回收標識（歐盟與美國的畫法不同）也都是高頻出錯點。覈對時按「一件衣服上所有能被讀到的地方」列清單，比按供應商分頭覈對可靠得多。"
+         data-en="Beyond these eight, price panels and promotional text, QR landing domains and recycling marks — drawn differently in the EU and the US — are frequent offenders. Build the checklist around every readable surface on one garment rather than around each supplier; it is far more reliable."
+         data-ja="この8項目以外にも、価格欄や販促文言、QR の遷移先ドメイン、リサイクル表示（EUと米国で図柄が異なる）も頻出します。サプライヤーごとではなく「1着の衣料で読める場所すべて」を軸にチェックリストを作るほうが、はるかに確実です。"
+         data-ko="이 여덟 가지 외에 가격란과 프로모션 문구, QR 연결 도메인, 재활용 마크(EU와 미국의 표기 방식이 다름)도 자주 틀립니다. 공급업체별이 아니라 '한 벌의 옷에서 읽을 수 있는 모든 면'을 기준으로 체크리스트를 만들면 훨씬 안정적입니다."
+         data-fr="Au-delà de ces huit points, les zones de prix et mentions promotionnelles, le domaine de destination des QR et les logos de recyclage — dessinés différemment dans l'UE et aux États-Unis — sont des sources fréquentes d'erreur. Construisez la liste à partir de toutes les surfaces lisibles d'un vêtement, et non par fournisseur : c'est bien plus fiable."
+         data-es="Además de estos ocho, las zonas de precio y textos promocionales, el dominio de destino del QR y los logos de reciclaje —dibujados de forma distinta en la UE y en EE. UU.— fallan a menudo. Confecciona la lista a partir de todas las superficies legibles de una prenda y no por proveedor: es mucho más fiable.">除了這八處，價格區與促銷信息、二維碼落地頁域名、回收標識（歐盟與美國的畫法不同）也都是高頻出錯點。覈對時按「一件衣服上所有能被讀到的地方」列清單，比按供應商分頭覈對可靠得多。</p>
+
+      <h2 data-zh="三、覈對順序：先定母版，再做衍生"
+          data-en="3. Check in Order: Lock the Master First"
+          data-ja="3. 確認の順序：まずマスターを固める"
+          data-ko="3. 확인 순서: 먼저 원본을 확정"
+          data-fr="3. Ordre de vérification : figer la référence d'abord"
+          data-es="3. Orden de comprobación: fijar primero el maestro">三、覈對順序：先定母版，再做衍生</h2>
+      <p data-zh="所有信息必須有一個唯一權威來源，通常是一份帶版本號的 tech pack 或標籤規格表。四件套裏任何一件都不是母版，母版是那份表。順序錯了，覈對就變成四份文件互相妥協。"
+         data-en="All information needs one authoritative source, usually a versioned tech pack or label specification sheet. None of the four trims is the master; that sheet is. Get the order wrong and checking becomes a negotiation between four documents."
+         data-ja="すべての情報には唯一の権威ある出所が必要で、通常は版番号付きの仕様書（tech pack／ラベル仕様表）です。4点のうちどれもマスターではなく、マスターはその表です。順序を誤ると、確認は4つの文書の妥協作業になります。"
+         data-ko="모든 정보에는 단일 권위 출처가 필요하며 보통 버전이 있는 작업 지시서(tech pack)나 라벨 사양표입니다. 네 가지 중 어느 것도 원본이 아니며 그 표가 원본입니다. 순서를 틀리면 확인이 네 문서의 타협 작업이 됩니다."
+         data-fr="Toute information doit avoir une source unique de vérité, en général un tech pack ou une fiche de spécifications versionné. Aucun des quatre accessoires n'est la référence : c'est cette fiche. Avec un ordre erroné, la vérification devient une négociation entre quatre documents."
+         data-es="Toda la información necesita una única fuente autorizada, normalmente un tech pack o ficha de especificaciones con versión. Ninguno de los cuatro accesorios es el maestro: lo es esa ficha. Con el orden equivocado, la comprobación se convierte en una negociación entre cuatro documentos.">所有信息必須有一個唯一權威來源，通常是一份帶版本號的 tech pack 或標籤規格表。四件套裏任何一件都不是母版，母版是那份表。順序錯了，覈對就變成四份文件互相妥協。</p>
+      <ol>
+        <li data-zh="先定母版：把成分、尺碼、產地、洗滌、貨號、語言六組字段寫進一張表，標註版本號與生效日期"
+            data-en="Fix the master: put fibre, size, origin, care, style number and languages into one table with a version number and effective date"
+            data-ja="マスターを固める：組成・サイズ・原産地・取扱い・品番・言語の6項目を1枚の表にまとめ、版番号と発効日を記載します"
+            data-ko="원본 확정: 조성·사이즈·원산지·취급·품번·언어 여섯 항목을 한 표에 적고 버전과 시행일을 표기합니다"
+            data-fr="Figer la référence : réunir composition, taille, origine, entretien, référence et langues dans un tableau avec numéro de version et date d'effet"
+            data-es="Fijar el maestro: reunir composición, talla, origen, cuidado, referencia e idiomas en una tabla con versión y fecha de vigencia">先定母版：把成分、尺碼、產地、洗滌、貨號、語言六組字段寫進一張表，標註版本號與生效日期</li>
+        <li data-zh="再做法規覈對：按目的國查強制語言、強制字段與符號標準，缺什麼補什麼，不改母版"
+            data-en="Then check the law: for each destination, confirm mandatory languages, fields and symbol standards — add what is missing without touching the master"
+            data-ja="次に法規確認：販売先ごとに必須言語・必須項目・記号規格を確認し、足りないものを足します。マスターは変えません"
+            data-ko="다음은 규정 확인: 판매국별 필수 언어, 필수 항목, 기호 표준을 확인해 부족한 것을 보충하고 원본은 바꾸지 않습니다"
+            data-fr="Vérifier ensuite la loi : pour chaque destination, valider langues, champs et symboles obligatoires, et compléter sans modifier la référence"
+            data-es="Comprobar después la ley: para cada destino, validar idiomas, campos y símbolos obligatorios, y completar sin tocar el maestro">再做法規覈對：按目的國查強制語言、強制字段與符號標準，缺什麼補什麼，不改母版</li>
+        <li data-zh="然後逐件套用：吊牌、織嘜、洗水標、包裝袋、箱嘜五份文件，逐一與母版對齊，不允許任何一件自帶版本"
+            data-en="Apply piece by piece: tag, woven label, care label, bag and carton mark each aligned to the master, with no local versions allowed"
+            data-ja="最後に1点ずつ当てはめる：タグ・織りラベル・洗濯表示・袋・箱マークの5点を母版に揃え、独自版を認めません"
+            data-ko="마지막으로 하나씩 적용: 행택·직조 라벨·세탁 표시·포장 봉투·박스 마크 다섯 가지를 원본에 맞추고 개별 버전을 허용하지 않습니다"
+            data-fr="Appliquer pièce par pièce : étiquette, label tissé, entretien, sachet et marquage carton alignés sur la référence, sans version locale tolérée"
+            data-es="Aplicar pieza a pieza: colgante, etiqueta tejida, etiqueta de cuidado, bolsa y marcado de caja alineados con el maestro, sin versiones locales">然後逐件套用：吊牌、織嘜、洗水標、包裝袋、箱嘜五份文件，逐一與母版對齊，不允許任何一件自帶版本</li>
+        <li data-zh="最後實物對照：把五件實物擺在桌上，按同一張表逐項念一遍。紙上對得齊，實物常常對不齊"
+            data-en="Finish with physicals: lay the five pieces on a table and read the same table line by line. Paper matches more often than samples do"
+            data-ja="最後に現物照合：5点の現物を机に並べ、同じ表を項目ごとに読み上げます。紙の上では合っていても、現物は合わないことがよくあります"
+            data-ko="마지막은 실물 대조: 다섯 가지 실물을 탁자에 놓고 같은 표를 항목별로 읽습니다. 서류에서는 맞아도 실물은 자주 어긋납니다"
+            data-fr="Terminer par le physique : disposer les cinq pièces sur une table et relire la même fiche point par point. Sur papier tout concorde plus souvent qu'en main"
+            data-es="Terminar con el físico: colocar las cinco piezas sobre la mesa y leer la misma tabla punto por punto. En papel cuadra más a menudo que en mano">最後實物對照：把五件實物擺在桌上，按同一張表逐項念一遍。紙上對得齊，實物常常對不齊</li>
+      </ol>
+
+      <h2 data-zh="四、版本與籤樣：把口頭確認變成可追溯的記錄"
+          data-en="4. Versions and Sign-Off: Turn Verbal Approval Into a Record"
+          data-ja="4. 版管理とサイン承認：口頭確認を記録に変える"
+          data-ko="4. 버전과 승인: 구두 확인을 기록으로"
+          data-fr="4. Versions et validation : transformer l'accord oral en trace"
+          data-es="4. Versiones y aprobación: convertir el visto bueno oral en registro">四、版本與籤樣：把口頭確認變成可追溯的記錄</h2>
+      <ul>
+        <li data-zh="<strong>版本號寫在文件上：</strong>文件名與頁腳都帶版本與日期，例如 care-label_v3_2026-10-22。靠郵件標題區分版本，三個月後沒人找得回"
+            data-en="<strong>Version on the file:</strong> put version and date in both the filename and the footer, e.g. care-label_v3_2026-10-22. Separating versions by email subject means nobody can find them three months later"
+            data-ja="<strong>版番号をファイルに書く：</strong>ファイル名とフッターの両方に版と日付を入れます（例：care-label_v3_2026-10-22）。メール件名で版を分けると、3か月後には誰も辿れません"
+            data-ko="<strong>버전을 파일에 표기:</strong> 파일명과 꼬리말에 버전과 날짜를 넣습니다(예: care-label_v3_2026-10-22). 메일 제목으로 버전을 구분하면 석 달 뒤에는 아무도 찾지 못합니다"
+            data-fr="<strong>Version dans le fichier :</strong> indiquez version et date dans le nom et le pied de page, par ex. care-label_v3_2026-10-22. Distinguer les versions par objet d'e-mail rend toute recherche impossible trois mois plus tard"
+            data-es="<strong>Versión en el archivo:</strong> pon versión y fecha en el nombre y en el pie, por ejemplo care-label_v3_2026-10-22. Distinguir versiones por el asunto del correo hace imposible encontrarlas tres meses después"><strong>版本號寫在文件上：</strong>文件名與頁腳都帶版本與日期，例如 care-label_v3_2026-10-22。靠郵件標題區分版本，三個月後沒人找得回</li>
+        <li data-zh="<strong>籤樣留兩套：</strong>客戶籤一套、工廠存一套，附母版版本號。籤樣上的手寫改動必須回寫到母版，否則下一批照舊錯"
+            data-en="<strong>Two signed sets:</strong> one for the customer, one for the factory, both noting the master version. Any handwritten change on the signed sample must be written back into the master, or the next batch repeats the error"
+            data-ja="<strong>サイン見本は2部：</strong>顧客用と工場保管用の2セットに、マスター版番号を添えます。サイン見本への手書き修正は必ずマスターに反映させないと、次のロットで同じ誤りが再発します"
+            data-ko="<strong>승인 샘플 두 세트:</strong> 고객용과 공장 보관용으로 나누고 원본 버전을 적습니다. 승인 샘플의 수기 수정은 반드시 원본에 반영해야 다음 로트에서 같은 오류가 반복되지 않습니다"
+            data-fr="<strong>Deux jeux signés :</strong> un pour le client, un pour l'usine, avec la version de la référence. Toute correction manuscrite sur l'échantillon signé doit être reportée dans la référence, sinon le lot suivant répète l'erreur"
+            data-es="<strong>Dos juegos firmados:</strong> uno para el cliente y otro para la fábrica, indicando la versión del maestro. Cualquier cambio manuscrito en la muestra firmada debe volver al maestro, o el siguiente lote repite el error"><strong>籤樣留兩套：</strong>客戶籤一套、工廠存一套，附母版版本號。籤樣上的手寫改動必須回寫到母版，否則下一批照舊錯</li>
+        <li data-zh="<strong>變更要通知到全部四件：</strong>改成分就同時動吊牌與洗水標；改尺碼就同時動織嘜與吊牌；改包裝就同時動袋與外箱。變更單上列全四處，簽收纔算生效"
+            data-en="<strong>Every change notifies all four:</strong> a fibre change moves the tag and the care label; a size change moves the woven label and the tag; a packaging change moves the bag and the carton. List all of them on the change note and require sign-back"
+            data-ja="<strong>変更は4点すべてに通達：</strong>組成変更ならタグと洗濯表示、サイズ変更なら織りラベルとタグ、包装変更なら袋と外箱。変更票に全箇所を列記し、返信サインで発効とします"
+            data-ko="<strong>변경은 네 가지 모두에 통보:</strong> 조성 변경은 행택과 세탁 표시, 사이즈 변경은 직조 라벨과 행택, 포장 변경은 봉투와 외박을 함께 바꿉니다. 변경서에 모든 항목을 적고 회신 서명으로 효력이 발생합니다"
+            data-fr="<strong>Tout changement notifie les quatre :</strong> une modification de composition touche l'étiquette et l'entretien ; de taille, le label tissé et l'étiquette ; d'emballage, le sachet et le carton. Listez-les toutes sur la fiche de modification et exigez un accusé signé"
+            data-es="<strong>Todo cambio avisa a las cuatro:</strong> cambiar la composición mueve colgante y etiqueta de cuidado; la talla, etiqueta tejida y colgante; el embalaje, bolsa y caja. Enumera todo en la nota de cambio y exige firma de vuelta"><strong>變更要通知到全部四件：</strong>改成分就同時動吊牌與洗水標；改尺碼就同時動織嘜與吊牌；改包裝就同時動袋與外箱。變更單上列全四處，簽收纔算生效</li>
+        <li data-zh="<strong>留一份覈對樣：</strong>每批留一套四件套實物，標明批次與母版版本，返單時直接拿它對照，比翻聊天記錄快得多"
+            data-en="<strong>Keep a checked set:</strong> retain one four-piece set per batch marked with batch and master version; on reorder, compare against it rather than scrolling through chat history"
+            data-ja="<strong>照合用の見本を保管：</strong>ロットごとに4点セットを1組残し、ロット番号とマスター版番号を記します。再注文時はチャット履歴を遡るより、これを照合するほうが速い"
+            data-ko="<strong>대조용 샘플 보관:</strong> 로트마다 네 가지 세트를 한 벌 남기고 로트 번호와 원본 버전을 표기합니다. 재주문 시 채팅 기록을 뒤지는 것보다 이것과 비교하는 편이 훨씬 빠릅니다"
+            data-fr="<strong>Conserver un jeu de contrôle :</strong> gardez un jeu des quatre pièces par lot, marqué du numéro de lot et de la version. Au réassort, comparez avec lui plutôt que de fouiller l'historique de discussion"
+            data-es="<strong>Guardar un juego de control:</strong> conserva un juego de las cuatro piezas por lote, marcado con lote y versión del maestro. En la reposición, compara con él en vez de rebuscar en el historial de chat"><strong>留一份覈對樣：</strong>每批留一套四件套實物，標明批次與母版版本，返單時直接拿它對照，比翻聊天記錄快得多</li>
+      </ul>
+
+      <h2 data-zh="五、三方界面：誰管哪一段"
+          data-en="5. The Three-Way Split: Who Owns Which Part"
+          data-ja="5. 三者の分担：どこまでが誰の責任か"
+          data-ko="5. 삼자 역할: 누가 어디까지"
+          data-fr="5. Répartition à trois : qui tient quoi"
+          data-es="5. Reparto a tres: quién cubre qué">五、三方界面：誰管哪一段</h2>
+      <p data-zh="品牌管內容的真實性與法規適配，成衣廠管縫製位置與工序，輔料商管把指定內容準確印在指定材料上，並對可讀性負責（最小字號、條碼靜區、符號清晰度）。把這三段寫在訂單確認書上，比在出問題後再覆盤有用。泰閣承接四件套時，會按客戶母版逐件覈對並在打樣階段出一份差異清單——這份清單本身，往往比省錢更能減少返工。"
+         data-en="The brand owns the truth of the content and its legal fit; the garment factory owns placement and process; the trims supplier owns printing the specified content accurately on the specified material and answering for legibility — minimum type size, barcode quiet zone, symbol clarity. Writing those three scopes into the order confirmation beats a post-mortem later. When TAGE produces a four-piece set, each item is checked against the customer's master and a variance list is issued at sampling — that list usually prevents more rework than any price saving."
+         data-ja="ブランドは内容の真実性と法規適合、縫製工場は縫い付け位置と工程、副資材メーカーは指定内容を指定素材に正確に印刷し、可読性（最小字号、バーコードの静区、記号の明瞭さ）に責任を持ちます。この3つの分担を注文確認書に書くほうが、問題後の振り返りより有効です。泰閣が4点セットをお受けする際は、お客様のマスターに沿って1点ずつ照合し、試作段階で差異リストをお出しします。このリストは、価格交渉以上に手戻りを減らします。"
+         data-ko="브랜드는 내용의 사실성과 규정 적합성을, 봉제 공장은 부착 위치와 공정을, 부자재 업체는 지정된 내용을 지정 소재에 정확히 인쇄하고 가독성(최소 글자 크기, 바코드 여백, 기호 선명도)에 책임을 집니다. 이 세 범위를 주문 확인서에 적는 편이 문제가 생긴 뒤 되짚는 것보다 유효합니다. TAGE가 네 가지 세트를 생산할 때는 고객의 원본에 따라 하나씩 대조하고 샘플 단계에서 차이 목록을 제공합니다. 이 목록이 가격 절감보다 재작업을 더 많이 줄여 줍니다."
+         data-fr="La marque répond de la vérité du contenu et de sa conformité ; l'usine de confection, de la position et du process ; le fournisseur d'accessoires, de l'impression exacte du contenu demandé sur la matière demandée et de la lisibilité — corps minimal, zone de silence du code-barres, netteté des symboles. Inscrire ces trois périmètres dans la confirmation de commande vaut mieux qu'un post-mortem. Quand TAGE réalise un jeu de quatre pièces, chaque élément est contrôlé sur la référence du client et une liste d'écarts est émise au stade de l'échantillon : elle évite souvent plus de reprises qu'une remise."
+         data-es="La marca responde de la veracidad del contenido y su encaje legal; la fábrica de confección, de la posición y del proceso; el proveedor de accesorios, de imprimir exactamente el contenido indicado sobre el material indicado y de la legibilidad: cuerpo mínimo, zona de silencio del código de barras y nitidez de símbolos. Escribir esos tres ámbitos en la confirmación de pedido es mejor que un análisis posterior. Cuando TAGE produce un juego de cuatro piezas, cada elemento se contrasta con el maestro del cliente y en la fase de muestra se emite una lista de diferencias: suele evitar más retrabajo que cualquier descuento.">品牌管內容的真實性與法規適配，成衣廠管縫製位置與工序，輔料商管把指定內容準確印在指定材料上，並對可讀性負責（最小字號、條碼靜區、符號清晰度）。把這三段寫在訂單確認書上，比在出問題後再覆盤有用。泰閣承接四件套時，會按客戶母版逐件覈對並在打樣階段出一份差異清單——這份清單本身，往往比省錢更能減少返工。</p>
+
+      <div class="callout" data-zh="💡 提示：最省事的做法，是把四件套當成一個「套件」下給一家。分開找四家報價，單價可能低一點，但版本對不上的風險、返工與二次運輸的成本，通常遠高於那點差價。"
+           data-en="💡 Tip: the easiest route is to order the four pieces as one kit from a single source. Quoting four suppliers separately may shave the unit price, but version mismatches, rework and second shipments usually cost far more than the difference."
+           data-ja="💡 ヒント：最も楽なのは、4点セットを1つの「キット」として1社に発注することです。4社に分けて見積もると単価は少し下がるかもしれませんが、版の不一致、手戻り、再輸送のコストは通常その差額をはるかに超えます。"
+           data-ko="💡 팁: 가장 간단한 방법은 네 가지를 하나의 '키트'로 한 곳에 발주하는 것입니다. 네 업체에서 따로 견적을 받으면 단가는 조금 낮아질 수 있지만, 버전 불일치와 재작업, 재운송 비용은 보통 그 차액을 훨씬 넘습니다."
+           data-fr="💡 Astuce : le plus simple est de commander les quatre pièces comme un seul kit auprès d'une seule source. Quatre devis séparés font peut-être gagner sur le prix unitaire, mais les écarts de version, les reprises et les réexpéditions coûtent en général bien plus que l'écart."
+           data-es="💡 Consejo: lo más sencillo es pedir las cuatro piezas como un solo kit a un único proveedor. Cotizar con cuatro proveedores puede bajar algo el precio unitario, pero los desajustes de versión, el retrabajo y los reenvíos suelen costar mucho más que esa diferencia.">💡 提示：最省事的做法，是把四件套當成一個「套件」下給一家。分開找四家報價，單價可能低一點，但版本對不上的風險、返工與二次運輸的成本，通常遠高於那點差價。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 글" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="care-label-multilingual-guide.html" data-zh="洗水標多語言指南：語言組合與排版" data-en="Multilingual Care Label Guide" data-ja="洗濯表示ラベルの多言語ガイド：言語の組み合わせとレイアウト" data-ko="세탁 표시 라벨 다국어 가이드: 언어 조합과 배치" data-fr="Guide des étiquettes d'entretien multilingues" data-es="Guía de etiquetas de cuidado multilingües">洗水標多語言指南：語言組合與排版</a></li>
+        <li><a href="vendor-labeling-manual-compliance.html" data-zh="客戶標籤手冊落地指南" data-en="Vendor Labeling Manual Compliance Guide" data-ja="取引先ラベリングマニュアル対応ガイド" data-ko="고객 라벨링 매뉴얼 준수 가이드" data-fr="Guide de conformité au manuel d'étiquetage client" data-es="Guía de cumplimiento del manual de etiquetado del cliente">客戶標籤手冊落地指南</a></li>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="輔料驗貨指南：抽樣、判定與報告" data-en="Trims Quality Inspection Guide" data-ja="副資材検品ガイド：抜取・判定・報告" data-ko="부자재 검사 가이드: 샘플링, 판정, 보고" data-fr="Guide d'inspection qualité des accessoires" data-es="Guía de inspección de calidad de accesorios">輔料驗貨指南：抽樣、判定與報告</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="吊牌、織嘜、洗水標、包裝袋想一次配齊並對齊版本？把 tech pack 或現有標籤照片發給我們，我們先出一份差異清單，再報價。打樣 3–7 天，大貨 10–25 天。"
+           data-en="Want the tag, woven label, care label and bag produced together and kept on the same version? Send the tech pack or photos of your current labels; we issue a variance list first, then quote. Sampling 3–7 days, bulk 10–25 days."
+           data-ja="ハングタグ、織りラベル、洗濯表示、袋をまとめて揃え、版も合わせたいですか。tech pack または現行ラベルの写真をお送りください。まず差異リストを作成し、その後に見積ります。試作3〜7日、量産10〜25日です。"
+           data-ko="행택, 직조 라벨, 세탁 표시, 포장 봉투를 한 번에 맞추고 버전도 통일하고 싶으신가요? tech pack이나 현재 라벨 사진을 보내주세요. 먼저 차이 목록을 만들고 견적을 드립니다. 샘플 3~7일, 양산 10~25일입니다."
+           data-fr="Vous voulez étiquette, label tissé, entretien et sachet produits ensemble, sur la même version ? Envoyez le tech pack ou des photos de vos étiquettes actuelles : nous émettons d'abord une liste d'écarts, puis chiffrons. Échantillons 3 à 7 jours, série 10 à 25 jours."
+           data-es="¿Quieres producir colgante, etiqueta tejida, etiqueta de cuidado y bolsa juntos y en la misma versión? Envía el tech pack o fotos de tus etiquetas actuales: primero emitimos una lista de diferencias y luego cotizamos. Muestras 3–7 días, producción 10–25 días.">吊牌、織嘜、洗水標、包裝袋想一次配齊並對齊版本？把 tech pack 或現有標籤照片發給我們，我們先出一份差異清單，再報價。打樣 3–7 天，大貨 10–25 天。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取四件套報價 →" data-en="Request a four-piece quote →" data-ja="4点セットの見積りを依頼 →" data-ko="네 가지 세트 견적 받기 →" data-fr="Demander un devis quatre pièces →" data-es="Solicitar presupuesto de cuatro piezas →">獲取四件套報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
