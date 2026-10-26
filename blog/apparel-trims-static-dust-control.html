@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料與包裝靜電控制指南：深色成衣吸塵與袋口吸附 | TAGE" data-en="Static Control in Garment Packaging: Dark Garments and Bag Mouths | TAGE" data-ja="衣料品包装の静電気対策：濃色衣料の埃付着と袋口の密着 | TAGE" data-ko="의류 포장 정전기 대책: 어두운 의류 먼지와 비닐 입구 밀착 | TAGE" data-fr="Maîtrise de l'électricité statique : vêtements foncés et sachets | TAGE" data-es="Control de la estática en embalaje textil: prendas oscuras y bolsas | TAGE">服裝輔料與包裝靜電控制指南：深色成衣吸塵與袋口吸附 | TAGE</title>
+<meta name="description" data-zh="服裝包裝靜電控制指南：深色成衣爲什麼會吸塵、OPP 袋爲什麼打不開，母粒型、塗布型與材料替代怎麼選，車間控溼 45% 到 55% 與離子風機怎麼落地，表面電阻與靜電衰減怎麼驗收，抗靜電袋與 ESD 屏蔽袋有何區別。來自東莞泰閣包裝。"
+      data-en="Static in garment packaging: why dark garments pick up lint and OPP bags stay shut, four material routes, humidity and ionising fixes, plus three tests." data-ja="衣料品包装の静電気対策ガイド。濃色衣料が埃を吸う理由、OPP袋が開かない理由、シールが飛ぶ理由、マスターバッチ型・塗布型・材料代替の4つの道、湿度45〜55%とイオンファンの運用、表面抵抗と電荷減衰の検収、帯電防止袋とESD遮蔽袋の違いを解説します。東莞泰閣包装。" data-ko="의류 포장 정전기 대책 가이드. 어두운 의류가 먼지를 끌어당기는 이유, OPP 비닐이 열리지 않는 이유, 스티커가 날리는 이유, 마스터배치형·코팅형·소재 대체 네 가지 경로, 습도 45~55%와 이온 팬 운용, 표면 저항과 전하 감쇠 검수, 대전방지 비닐과 ESD 차폐 비닐의 차이를 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="Maîtrise de la statique en emballage textile : pourquoi les vêtements foncés attirent la poussière et les sachets OPP ne s'ouvrent pas, quatre voies matière, humidité et ionisation, et vérification."
+      data-es="Control de la estática en embalaje textil: por qué las prendas oscuras atraen polvo y las bolsas OPP no se abren, cuatro vías de material, humedad e ionización, y cómo verificarlo."
+      content="服裝包裝靜電控制指南：深色成衣爲什麼會吸塵、OPP 袋爲什麼打不開，母粒型、塗布型與材料替代怎麼選，車間控溼 45% 到 55% 與離子風機怎麼落地，表面電阻與靜電衰減怎麼驗收，抗靜電袋與 ESD 屏蔽袋有何區別。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-static-dust-control.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-static-dust-control.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料與包裝的靜電控制：深色成衣吸塵與袋口吸附怎麼治",
+     "item": "https://taigetag.com/blog/apparel-trims-static-dust-control.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料與包裝的靜電控制：深色成衣吸塵與袋口吸附怎麼治",
+   "url": "https://taigetag.com/blog/apparel-trims-static-dust-control.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-static-dust-control.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="靜電與吸塵控制" data-en="Static & Dust Control" data-ja="静電気と埃の対策" data-ko="정전기와 먼지 관리" data-fr="Statique et poussière" data-es="Estática y polvo">靜電與吸塵控制</span></div>
+      <h1 data-zh="服裝輔料與包裝的靜電控制：深色成衣吸塵與袋口吸附怎麼治" data-en="Static Control in Apparel Packaging: Dust on Dark Garments and Clinging Bags" data-ja="衣料品包装の静電気対策：濃色衣料の埃付着と袋口の密着をどう抑えるか" data-ko="의류 포장 정전기 대책: 어두운 의류 먼지와 비닐 입구 밀착 해결" data-fr="Maîtriser la statique en emballage textile : poussière sur vêtements foncés et sachets collants" data-es="Controlar la estática en el embalaje textil: polvo en prendas oscuras y bolsas pegadas">服裝輔料與包裝的靜電控制：深色成衣吸塵與袋口吸附怎麼治</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月26日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 26, 2026" data-ja="泰閣包装 · 2026年10月26日更新" data-ko="TAGE 패키징 · 2026년 10월 26일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 26 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 26 de octubre de 2026">泰閣包裝 · 更新於 2026年10月26日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="深色成衣在驗貨臺上擦一下就一道白、OPP 袋撕不開、小貼紙粘在導板上不肯落下——這些現場問題通常不是品質缺陷，而是靜電。化纖比例越高、空氣越幹、包裝線速度越快，靜電就越明顯。它不改變衣物的任何物理指標，卻足以把一個本來合格的訂單變成異物投訴、返工挑毛與包裝線停機。"
+         data-en="A dark garment wiped once on the inspection table leaves a white smear, an OPP bag will not open, small stickers cling to the guide rail instead of dropping — on the floor these are rarely quality defects. They are static. The higher the synthetic content, the drier the air and the faster the packing line, the more visible it becomes. Static changes no physical property of the garment, yet it turns a conforming order into foreign-matter complaints, rework for lint picking and a stopped packing line."
+         data-ja="濃色の衣料を検品台で一度拭くと白い筋が残る、OPP袋が開かない、小さなシールがガイドに張り付いて落ちない——現場で起きるこうした現象は品質不良ではなく静電気であることがほとんどです。化繊比率が高く、空気が乾き、包装ラインが速いほど顕著になります。静電気は衣料の物性を何も変えませんが、合格した注文を異物クレーム、毛羽取りの手直し、包装ラインの停止に変える力があります。"
+         data-ko="어두운 의류를 검품대에서 한 번 닦으면 흰 줄이 생기고, OPP 비닐이 열리지 않고, 작은 스티커가 가이드에 붙어 떨어지지 않습니다. 현장에서 이런 문제는 품질 결함이 아니라 정전기인 경우가 대부분입니다. 합성섬유 비율이 높고, 공기가 건조하고, 포장 라인 속도가 빠를수록 두드러집니다. 정전기는 의류의 물성을 바꾸지 않지만, 합격한 주문을 이물 클레임, 보풀 제거 재작업, 포장 라인 정지로 바꿔 놓습니다."
+         data-fr="Un vêtement foncé essuyé une fois sur la table de contrôle laisse une traînée blanche, un sachet OPP refuse de s'ouvrir, de petites étiquettes collent au guide au lieu de tomber : en atelier, ce ne sont presque jamais des défauts qualité. C'est de l'électricité statique. Plus la part de synthétique est élevée, plus l'air est sec et plus la ligne d'emballage est rapide, plus le phénomène est visible. Elle ne modifie aucune propriété du vêtement, mais transforme une commande conforme en réclamations pour corps étranger, en reprise de dépoussiérage et en arrêt de ligne."
+         data-es="Una prenda oscura frotada una vez en la mesa de inspección deja una marca blanca, una bolsa OPP no se abre, las pegatinas pequeñas se pegan a la guía en lugar de caer: en planta esto casi nunca es un defecto de calidad. Es electricidad estática. Cuanto mayor es el contenido sintético, más seco el aire y más rápida la línea de embalaje, más se nota. No cambia ninguna propiedad de la prenda, pero convierte un pedido conforme en quejas por cuerpo extraño, retrabajo de pelusa y una línea parada.">深色成衣在驗貨臺上擦一下就一道白、OPP 袋撕不開、小貼紙粘在導板上不肯落下——這些現場問題通常不是品質缺陷，而是靜電。化纖比例越高、空氣越幹、包裝線速度越快，靜電就越明顯。它不改變衣物的任何物理指標，卻足以把一個本來合格的訂單變成異物投訴、返工挑毛與包裝線停機。</p>
+
+      <p data-zh="下面按四件事講：靜電從哪裏來、在輔料與包裝上有哪幾種具體表現、材料側和車間側分別怎麼治、以及怎麼把要求寫進規格書並驗收。"
+         data-en="What follows covers four things: where the charge comes from, how it actually shows up on trims and packaging, what to do on the material side and on the shop floor, and how to write the requirement into a specification and verify it."
+         data-ja="以下4点を整理します。静電気の発生源、副資材と包装での具体的な現れ方、資材側と現場側の対策、そして仕様書への記載と検収方法です。"
+         data-ko="아래 네 가지를 정리합니다. 정전기가 생기는 원인, 부자재와 포장에서 구체적으로 나타나는 방식, 자재 측과 현장 측 대응, 사양서에 적고 검수하는 방법입니다."
+         data-fr="Ce qui suit couvre quatre points : l'origine de la charge, ses manifestations concrètes sur les accessoires et l'emballage, les actions côté matière et côté atelier, et la rédaction au cahier des charges avec vérification."
+         data-es="A continuación, cuatro puntos: de dónde viene la carga, cómo se manifiesta en accesorios y embalaje, qué hacer en el material y en la planta, y cómo redactarlo en la ficha técnica y verificarlo.">下面按四件事講：靜電從哪裏來、在輔料與包裝上有哪幾種具體表現、材料側和車間側分別怎麼治、以及怎麼把要求寫進規格書並驗收。</p>
+
+      <h2 data-zh="1. 靜電從哪來：三個條件同時滿足" data-en="1. Where the Charge Comes From: Three Conditions at Once" data-ja="1. 静電気の発生源：3条件が揃うとき" data-ko="1. 정전기 발생: 세 조건이 동시에" data-fr="1. D'où vient la charge : trois conditions réunies" data-es="1. De dónde viene la carga: tres condiciones a la vez">1. 靜電從哪來：三個條件同時滿足</h2>
+      <p data-zh="靜電需要摩擦或剝離產生電荷，需要材料本身不容易泄放，需要環境足夠乾燥。三個條件缺一個，問題就不會出現——這也解釋了爲什麼同一個包裝方案在南方梅雨季沒事，到了北方冬季或恆溫恆溼車間就開始出問題。"
+         data-en="Static needs friction or separation to generate charge, a material that will not readily dissipate it, and air dry enough to stop natural leakage. Remove any one condition and the problem disappears — which explains why the same packaging behaves fine in a humid southern summer and starts failing in a northern winter or an air-conditioned plant."
+         data-ja="静電気は、摩擦や剥離による帯電、電荷を逃がしにくい材料、十分に乾燥した環境の3つが揃って生じます。どれか1つが欠ければ問題は起きません。同じ包装仕様が梅雨の南部では問題なく、北方の冬や空調工場で問題になるのはこのためです。"
+         data-ko="정전기는 마찰이나 박리로 전하가 생기고, 전하를 잘 방출하지 못하는 소재, 그리고 충분히 건조한 공기가 있어야 발생합니다. 세 조건 중 하나만 빠져도 문제는 사라집니다. 같은 포장 사양이 남부 장마철에는 괜찮다가 북부 겨울이나 항온항습 공장에서 문제가 되는 이유입니다."
+         data-fr="L'électricité statique exige un frottement ou une séparation pour créer la charge, une matière qui ne l'évacue pas facilement, et un air assez sec pour empêcher la fuite naturelle. Retirez une condition et le problème disparaît : voilà pourquoi la même spécification tient en été humide au sud et lâche en hiver au nord ou en usine climatisée."
+         data-es="La estática necesita fricción o separación para generar carga, un material que no la disipe con facilidad y aire lo bastante seco para impedir la fuga natural. Quite una condición y el problema desaparece: por eso la misma especificación funciona en un verano húmedo del sur y falla en un invierno del norte o en una planta climatizada.">靜電需要摩擦或剝離產生電荷，需要材料本身不容易泄放，需要環境足夠乾燥。三個條件缺一個，問題就不會出現——這也解釋了爲什麼同一個包裝方案在南方梅雨季沒事，到了北方冬季或恆溫恆溼車間就開始出問題。</p>
+      <ul>
+        <li data-zh="<strong>摩擦與剝離：</strong>撕開袋子、把衣服從袋裏抽出、面料在檯面上拖動、標籤從離型紙上剝離，都是瞬時分離，電荷來不及泄放"
+            data-en="<strong>Friction and separation:</strong> tearing a bag open, pulling a garment out, dragging fabric across a table, peeling a label off its liner — all instant separations where charge has no time to leak away"
+            data-ja="<strong>摩擦と剥離：</strong>袋を破る、衣料を引き出す、生地を台の上で滑らせる、ラベルを台紙から剥がす。いずれも瞬間的な分離で、電荷が逃げる時間がありません"
+            data-ko="<strong>마찰과 박리:</strong> 비닐을 찢거나, 의류를 꺼내거나, 원단을 테이블에서 끌거나, 라벨을 이형지에서 떼는 것은 모두 순간적 분리라 전하가 빠져나갈 시간이 없습니다"
+            data-fr="<strong>Frottement et séparation :</strong> déchirer un sachet, sortir un vêtement, faire glisser le tissu sur une table, décoller une étiquette de son support — séparations instantanées où la charge n'a pas le temps de fuir"
+            data-es="<strong>Fricción y separación:</strong> abrir una bolsa, sacar la prenda, arrastrar el tejido por la mesa, despegar una etiqueta del liner: separaciones instantáneas donde la carga no tiene tiempo de fugarse">摩擦與剝離：撕開袋子、把衣服從袋裏抽出、面料在檯面上拖動、標籤從離型紙上剝離，都是瞬時分離，電荷來不及泄放</li>
+        <li data-zh="<strong>材料：</strong>滌綸、尼龍、PP 與 PE 表面電阻高，容易積電；棉、粘膠、紙與無紡布相對容易泄放，這也是紙袋在深色成衣場景更省心的原因"
+            data-en="<strong>Material:</strong> polyester, nylon, PP and PE have high surface resistance and store charge; cotton, viscose, paper and nonwoven dissipate more readily — one reason a paper bag is calmer around dark garments"
+            data-ja="<strong>材料：</strong>ポリエステル、ナイロン、PP、PEは表面抵抗が高く帯電しやすい。綿、レーヨン、紙、不織布は放電しやすく、濃色衣料で紙袋が扱いやすい理由でもあります"
+            data-ko="<strong>소재:</strong> 폴리에스터, 나일론, PP, PE는 표면 저항이 높아 전하가 쌓입니다. 면, 레이온, 종이, 부직포는 상대적으로 잘 방출되어, 어두운 의류에서 종이백이 편한 이유이기도 합니다"
+            data-fr="<strong>Matière :</strong> polyester, nylon, PP et PE ont une résistance de surface élevée et stockent la charge ; coton, viscose, papier et non-tissé l'évacuent mieux — l'une des raisons pour lesquelles un sac papier est plus tranquille autour d'un vêtement foncé"
+            data-es="<strong>Material:</strong> poliéster, nailon, PP y PE tienen alta resistencia superficial y acumulan carga; algodón, viscosa, papel y non-woven la disipan mejor, una razón por la que una bolsa de papel resulta más tranquila junto a prendas oscuras">材料：滌綸、尼龍、PP 與 PE 表面電阻高，容易積電；棉、粘膠、紙與無紡布相對容易泄放，這也是紙袋在深色成衣場景更省心的原因</li>
+        <li data-zh="<strong>環境：</strong>相對溼度低於 40% 時，空氣幾乎不再幫材料泄放電荷；北方冬季與長時間空調的車間常見 25% 到 35%"
+            data-en="<strong>Environment:</strong> below roughly 40% relative humidity the air stops helping charge leak away; northern winters and heavily air-conditioned plants commonly sit at 25 to 35%"
+            data-ja="<strong>環境：</strong>相対湿度が40%を下回ると、空気が電荷の放出を助けなくなります。北方の冬や長時間空調の効いた工場では25〜35%が珍しくありません"
+            data-ko="<strong>환경:</strong> 상대습도가 40% 아래로 내려가면 공기가 전하 방출을 돕지 못합니다. 북부 겨울이나 장시간 냉방하는 공장은 25~35%가 흔합니다"
+            data-fr="<strong>Environnement :</strong> sous 40 % d'humidité relative, l'air n'aide plus la charge à fuir ; l'hiver au nord et les ateliers très climatisés descendent couramment à 25-35 %"
+            data-es="<strong>Entorno:</strong> por debajo del 40% de humedad relativa el aire deja de ayudar a la fuga de carga; los inviernos del norte y las plantas muy climatizadas suelen estar al 25-35%">環境：相對溼度低於 40% 時，空氣幾乎不再幫材料泄放電荷；北方冬季與長時間空調的車間常見 25% 到 35%</li>
+        <li data-zh="<strong>速度：</strong>自動開袋、吸附上料、高速貼標都在毫秒級完成分離，比人手操作更容易積累電荷"
+            data-en="<strong>Speed:</strong> automatic bag opening, vacuum pick-and-place and high-speed labelling separate materials in milliseconds and build charge faster than hands do"
+            data-ja="<strong>速度：</strong>自動開袋、吸着供給、高速ラベリングはミリ秒単位で分離するため、手作業より帯電が蓄積しやすくなります"
+            data-ko="<strong>속도:</strong> 자동 개방, 흡착 공급, 고속 라벨링은 밀리초 단위로 분리되어 손작업보다 전하가 빨리 쌓입니다"
+            data-fr="<strong>Vitesse :</strong> ouverture automatique, préhension par aspiration et étiquetage rapide séparent en millisecondes et accumulent plus vite que la main"
+            data-es="<strong>Velocidad:</strong> apertura automática, alimentación por vacío y etiquetado rápido separan en milisegundos y acumulan carga más rápido que la mano">速度：自動開袋、吸附上料、高速貼標都在毫秒級完成分離，比人手操作更容易積累電荷</li>
+      </ul>
+
+      <h2 data-zh="2. 四種具體表現：爲什麼值得花錢治" data-en="2. Four Ways It Shows Up, and Why It Pays to Fix" data-ja="2. 具体的な4つの症状と、対策に費用をかける理由" data-ko="2. 네 가지 구체적 증상과 비용을 들일 이유" data-fr="2. Quatre manifestations concrètes, et pourquoi cela vaut un investissement" data-es="2. Cuatro manifestaciones y por qué merece la pena">2. 四種具體表現：爲什麼值得花錢治</h2>
+      <p data-zh="靜電麻煩的地方是它不會出現在任何檢驗報告裏：布料檢測合格、色牢度合格、尺寸合格，但客人開箱時看到的是一層白色纖維絨。投訴對象是整件成衣，源頭卻可能是那隻袋子。"
+         data-en="The awkward part is that static never appears in an inspection report: the fabric passes, colour fastness passes, measurements pass, and the buyer still opens the carton to a bloom of white fibre. The complaint targets the garment; the source may be the bag."
+         data-ja="厄介なのは、静電気が検査報告書に現れないことです。生地も染色堅牢度も寸法も合格なのに、バイヤーが箱を開けると白い繊維くずの層がある。苦情の対象は衣料ですが、原因は袋かもしれません。"
+         data-ko="까다로운 점은 정전기가 어떤 검사 성적서에도 나오지 않는다는 것입니다. 원단, 염색 견뢰도, 치수 모두 합격인데 바이어가 상자를 열면 흰 섬유 부스러기 층이 있습니다. 불만의 대상은 의류이지만 원인은 비닐일 수 있습니다."
+         data-fr="Le plus délicat : la statique n'apparaît dans aucun rapport. Le tissu passe, la solidité passe, les mesures passent, et l'acheteur ouvre quand même sur un voile de fibres blanches. La réclamation vise le vêtement ; la source est peut-être le sachet."
+         data-es="Lo incómodo es que la estática no aparece en ningún informe: el tejido pasa, la solidez pasa, las medidas pasan, y el comprador abre el cartón y encuentra una capa de fibra blanca. La reclamación apunta a la prenda; el origen puede ser la bolsa.">靜電麻煩的地方是它不會出現在任何檢驗報告裏：布料檢測合格、色牢度合格、尺寸合格，但客人開箱時看到的是一層白色纖維絨。投訴對象是整件成衣，源頭卻可能是那隻袋子。</p>
+      <table>
+        <tr><th data-zh="表現" data-en="Symptom" data-ja="症状" data-ko="증상" data-fr="Symptôme" data-es="Síntoma">表現</th><th data-zh="現場長什麼樣" data-en="What it looks like" data-ja="現場での見え方" data-ko="현장 모습" data-fr="Aspect sur site" data-es="Aspecto en planta">現場長什麼樣</th><th data-zh="後果" data-en="Consequence" data-ja="結果" data-ko="결과" data-fr="Conséquence" data-es="Consecuencia">後果</th></tr>
+        <tr><td data-zh="深色成衣吸塵" data-en="Dust pickup on dark garments" data-ja="濃色衣料の埃付着" data-ko="어두운 의류 먼지 흡착" data-fr="Poussière sur vêtements foncés" data-es="Polvo en prendas oscuras">深色成衣吸塵</td><td data-zh="燈下一擦一道白，包裝袋內側全是短纖維" data-en="A white smear under the lamp, short fibres lining the inside of the bag" data-ja="ライトの下で白い筋、袋の内側に短繊維" data-ko="조명 아래 흰 줄, 비닐 안쪽에 짧은 섬유" data-fr="Traînée blanche sous la lampe, fibres courtes tapissant le sachet" data-es="Marca blanca bajo la luz, fibras cortas forrando la bolsa">燈下一擦一道白，包裝袋內側全是短纖維</td><td data-zh="異物投訴、整批挑毛返工" data-en="Foreign-matter complaints, lot-wide lint picking" data-ja="異物クレーム、ロット全数の毛羽取り" data-ko="이물 클레임, 로트 전체 보풀 제거" data-fr="Réclamations, reprise de dépoussiérage sur le lot" data-es="Quejas y retrabajo de pelusa en todo el lote">異物投訴、整批挑毛返工</td></tr>
+        <tr><td data-zh="袋口吸附" data-en="Bag mouth clinging" data-ja="袋口の密着" data-ko="비닐 입구 달라붙음" data-fr="Bouche de sachet collée" data-es="Boca de bolsa pegada">袋口吸附</td><td data-zh="自動開袋器吸不住或一次吸出兩張，人工要搓半天" data-en="The opener cannot grip, or pulls two bags at once; operators spend time rubbing them apart" data-ja="自動開袋機が吸着できない、または2枚同時に吸い上がる" data-ko="자동 개방기가 잡지 못하거나 두 장이 함께 올라옵니다" data-fr="L'ouvreur n'accroche pas ou prend deux sachets ; l'opérateur frotte pour les séparer" data-es="El abridor no agarra o saca dos bolsas y el operario tiene que separarlas">自動開袋器吸不住或一次吸出兩張，人工要搓半天</td><td data-zh="包裝線降速、停機與人工成本" data-en="Slower line, stoppages and extra labour" data-ja="ライン速度低下、停止、工数増" data-ko="라인 속도 저하, 정지, 인건비 증가" data-fr="Ligne ralentie, arrêts et main-d'œuvre" data-es="Línea más lenta, paradas y mano de obra">包裝線降速、停機與人工成本</td></tr>
+        <tr><td data-zh="小標籤飛散" data-en="Small labels scattering" data-ja="小さなラベルの飛散" data-ko="작은 라벨 비산" data-fr="Petites étiquettes qui volent" data-es="Etiquetas pequeñas que vuelan">小標籤飛散</td><td data-zh="貼紙吸附在導板、手指與檯面上，不肯落到工位" data-en="Stickers cling to the rail, fingers and bench instead of landing in place" data-ja="シールがガイドや指、台に張り付いて所定位置に落ちない" data-ko="스티커가 가이드, 손가락, 작업대에 붙어 제자리에 떨어지지 않습니다" data-fr="Les autocollants collent au guide, aux doigts et au poste au lieu de se poser" data-es="Las pegatinas se pegan a la guía, a los dedos y a la mesa en vez de colocarse">貼紙吸附在導板、手指與檯面上，不肯落到工位</td><td data-zh="貼歪、漏貼、返工" data-en="Misplaced or missing labels, rework" data-ja="貼りずれ、貼り忘れ、手直し" data-ko="위치 틀어짐, 누락, 재작업" data-fr="Pose de travers, oublis, reprise" data-es="Colocación torcida, omisiones, retrabajo">貼歪、漏貼、返工</td></tr>
+        <tr><td data-zh="燙金與覆膜面吸紙屑" data-en="Foil and laminated surfaces picking up chips" data-ja="箔押し・ラミネート面の紙粉付着" data-ko="박·라미네이트 면의 종이 가루 흡착" data-fr="Foil et pelliculage attirant les copeaux" data-es="Foil y laminado atrayendo restos">燙金與覆膜面吸紙屑</td><td data-zh="成疊吊牌互相吸住，分張時蹭出劃痕" data-en="Stacked tags stick together and scratch when separated" data-ja="重なったタグが密着し、分ける際に傷が入る" data-ko="겹친 행택이 붙어 떼어낼 때 긁힙니다" data-fr="Les étiquettes empilées se collent et se rayent au séparation" data-es="Las etiquetas apiladas se pegan y se rayan al separarlas">成疊吊牌互相吸住，分張時蹭出劃痕</td><td data-zh="表面劃傷、需人工分張" data-en="Surface scratches and manual separation" data-ja="表面傷、手作業での分離" data-ko="표면 긁힘, 수작업 분리" data-fr="Rayures et séparation manuelle" data-es="Rayas y separación manual">表面劃傷、需人工分張</td></tr>
+      </table>
+
+      <h2 data-zh="3. 材料側：四條路徑，從便宜到徹底" data-en="3. Material Side: Four Levers, Cheap to Thorough" data-ja="3. 資材側の4つの打ち手：安価から根本対策まで" data-ko="3. 자재 측 네 가지 수단: 저렴한 것부터 근본 대책까지" data-fr="4 leviers matière, du moins cher au plus radical" data-es="3. Lado material: cuatro palancas, de lo barato a lo definitivo">3. 材料側：四條路徑，從便宜到徹底</h2>
+      <p data-zh="抗靜電不等於噴一層抗靜電劑。按耐久性與成本排序，有四條路可走，實際項目裏通常是組合使用：袋子用母粒型，車間加溼度，深色高敏感品類換成紙或無紡布。"
+         data-en="Anti-static is not just a sprayed additive. Ranked by durability and cost there are four routes, and real projects usually combine them: masterbatch film for bags, humidity on the floor, and paper or nonwoven for dark, high-sensitivity categories."
+         data-ja="帯電防止は薬剤を吹き付けることだけではありません。耐久性とコストで並べると4つの道があり、実際の案件では組み合わせます。袋はマスターバッチ型、現場は加湿、濃色で敏感な品種は紙や不織布へ変更、という具合です。"
+         data-ko="정전기 방지는 약제를 뿌리는 것만이 아닙니다. 내구성과 원가 순으로 네 가지 경로가 있고, 실제 프로젝트에서는 보통 조합합니다. 비닐은 마스터배치형, 현장은 가습, 어둡고 민감한 품목은 종이나 부직포로 전환합니다."
+         data-fr="L'antistatique n'est pas qu'un additif pulvérisé. Par durabilité et par coût, il existe quatre voies, souvent combinées : film masterbatch pour les sachets, humidification en atelier, et papier ou non-tissé pour les catégories foncées sensibles."
+         data-es="Lo antiestático no es solo un aditivo pulverizado. Ordenadas por durabilidad y coste hay cuatro vías, y los proyectos reales suelen combinarlas: film con masterbatch para bolsas, humidificación en planta y papel o non-woven para categorías oscuras sensibles.">抗靜電不等於噴一層抗靜電劑。按耐久性與成本排序，有四條路可走，實際項目裏通常是組合使用：袋子用母粒型，車間加溼度，深色高敏感品類換成紙或無紡布。</p>
+      <ul>
+        <li data-zh="<strong>母粒添加型：</strong>吹膜時把抗靜電母粒混入 PE 或 PP，靠內部遷移在表面形成泄放通路，壽命最長，表面電阻可做到 10⁹ 到 10¹¹ 歐姆區間"
+            data-en="<strong>Masterbatch in the film:</strong> anti-static masterbatch compounded into PE or PP at extrusion; it migrates to the surface and forms a leakage path — the longest-lived option, reaching a surface resistance in the 10⁹ to 10¹¹ ohm range"
+            data-ja="<strong>マスターバッチ添加：</strong>フィルム押出時に帯電防止マスターバッチをPEやPPへ練り込み、表面へ移行して漏洩経路を作ります。寿命が最も長く、表面抵抗は10⁹〜10¹¹Ω域が狙えます"
+            data-ko="<strong>마스터배치 첨가:</strong> 필름 압출 시 대전방지 마스터배치를 PE·PP에 혼입해 표면으로 이행시키고 누설 경로를 만듭니다. 수명이 가장 길고 표면 저항을 10⁹~10¹¹Ω 범위로 맞출 수 있습니다"
+            data-fr="<strong>Masterbatch dans le film :</strong> compoundé dans le PE ou le PP à l'extrusion, il migre en surface et crée un chemin de fuite — le plus durable, avec une résistance de surface de l'ordre de 10⁹ à 10¹¹ ohms"
+            data-es="<strong>Masterbatch en el film:</strong> incorporado al PE o PP en la extrusión, migra a la superficie y crea un camino de fuga: la opción más duradera, con resistencia superficial del orden de 10⁹ a 10¹¹ ohmios">母粒添加型：吹膜時把抗靜電母粒混入 PE 或 PP，靠內部遷移在表面形成泄放通路，壽命最長，表面電阻可做到 10⁹ 到 10¹¹ 歐姆區間</li>
+        <li data-zh="<strong>表面塗布型：</strong>成本最低、見效最快，但會被摩擦與擦拭帶走，適合一次性內袋或短期週轉，不適合要存放幾個月的成品袋"
+            data-en="<strong>Surface coating:</strong> cheapest and fastest to show an effect, but rubbed and wiped away — fine for single-use inner bags, wrong for finished bags stored for months"
+            data-ja="<strong>表面塗布型：</strong>最も安価で即効性がある一方、摩擦や拭き取りで失われます。使い捨て内袋や短期周转には向きますが、数か月保管する完成袋には不向きです"
+            data-ko="<strong>표면 코팅형:</strong> 가장 저렴하고 즉효가 있지만 마찰과 닦임에 사라집니다. 일회용 내포장이나 단기 회전에는 맞지만, 몇 달 보관하는 완성 비닐에는 부적합합니다"
+            data-fr="<strong>Couchage de surface :</strong> le moins cher et le plus rapide, mais il part au frottement et à l'essuyage — adapté aux sachets jetables, pas aux sachets finis stockés des mois"
+            data-es="<strong>Recubrimiento superficial:</strong> lo más barato y rápido en efecto, pero se va con el roce y la limpieza: válido para bolsas de un solo uso, no para bolsas acabadas almacenadas meses">表面塗布型：成本最低、見效最快，但會被摩擦與擦拭帶走，適合一次性內袋或短期週轉，不適合要存放幾個月的成品袋</li>
+        <li data-zh="<strong>材料替代：</strong>紙袋、無紡布袋、棉紙本身泄放快。深色高敏感品類（如西裝、大衣）用紙包裝，往往比在薄膜上加抗靜電更省事"
+            data-en="<strong>Substitute the material:</strong> paper bags, nonwoven and tissue dissipate quickly. For dark, sensitive categories such as suiting and coats, paper packaging is often simpler than engineering an anti-static film"
+            data-ja="<strong>材料の置き換え：</strong>紙袋、不織布袋、薄葉紙は放電が速い。スーツやコートなど濃色で敏感な品種では、フィルムに帯電防止を施すより紙包装のほうが簡便です"
+            data-ko="<strong>소재 대체:</strong> 종이백, 부직포백, 박엽지는 방출이 빠릅니다. 정장·코트처럼 어둡고 민감한 품목은 필름에 대전방지를 넣는 것보다 종이 포장이 간단합니다"
+            data-fr="<strong>Changer de matière :</strong> sacs papier, non-tissé et papier de soie évacuent vite. Pour le tailleur et le manteau foncés, l'emballage papier est souvent plus simple qu'un film technique"
+            data-es="<strong>Cambiar de material:</strong> bolsas de papel, non-woven y papel de seda disipan rápido. En trajes y abrigos oscuros, el papel suele ser más simple que un film técnico">材料替代：紙袋、無紡布袋、棉紙本身泄放快。深色高敏感品類（如西裝、大衣）用紙包裝，往往比在薄膜上加抗靜電更省事</li>
+        <li data-zh="<strong>溼度是最便宜的抗靜電劑：</strong>把相對溼度維持在 45% 到 55%，多數現場問題會自行消失；溼度計幾十元一個，比換材料便宜得多"
+            data-en="<strong>Humidity is the cheapest anti-static:</strong> hold 45 to 55% RH and most floor problems vanish; a hygrometer costs very little compared with changing material"
+            data-ja="<strong>湿度は最も安い帯電防止剤：</strong>相対湿度45〜55%を保てば、現場の多くの問題は自然に消えます。湿度計は安価で、材料変更よりはるかに低コストです"
+            data-ko="<strong>습도가 가장 저렴한 대전방지제:</strong> 상대습도 45~55%를 유지하면 현장 문제 대부분이 사라집니다. 습도계는 저렴하고 소재 변경보다 훨씬 비용이 적습니다"
+            data-fr="<strong>L'humidité, antistatique le moins cher :</strong> maintenir 45 à 55 % HR fait disparaître la plupart des problèmes ; un hygromètre coûte bien moins qu'un changement de matière"
+            data-es="<strong>La humedad es el antiestático más barato:</strong> mantener 45-55% HR hace desaparecer la mayoría de problemas; un higrómetro cuesta mucho menos que cambiar de material">溼度是最便宜的抗靜電劑：把相對溼度維持在 45% 到 55%，多數現場問題會自行消失；溼度計幾十元一個，比換材料便宜得多</li>
+      </ul>
+
+      <h2 data-zh="4. 車間側：四個動作" data-en="4. Shop Floor: Four Actions" data-ja="4. 現場側の4つの動作" data-ko="4. 현장 측 네 가지 조치" data-fr="4. Côté atelier : quatre actions" data-es="4. En planta: cuatro acciones">4. 車間側：四個動作</h2>
+      <p data-zh="材料改對了，車間還得配合。下面四件事按投入從小到大排，多數工廠做完前兩項就能解決八成投訴；離子設備貴，優先放在貼標與分張這些最敏感的工位，而不是全車間鋪開。"
+         data-en="Getting the material right is not enough; the floor has to cooperate. The four actions below run from cheapest to most expensive, and most plants solve around 80% of complaints with the first two. Ionising equipment is costly, so put it at the most sensitive stations — labelling and separation — rather than across the whole plant."
+         data-ja="資材を正しくしても現場の協力が必要です。以下の4つは投資の小さい順で、多くの工場は最初の2つで苦情の8割を解決できます。イオン設備は高価なので、全ラインに広げるより、ラベリングや分離など最も敏感な工程へ優先配置します。"
+         data-ko="자재를 바꿔도 현장이 따라줘야 합니다. 아래 네 가지는 투자 규모 순이며, 대부분 공장은 앞의 두 가지로 불만의 80%를 해결합니다. 이온 장비는 비싸므로 전 라인에 깔기보다 라벨링·분리처럼 가장 민감한 공정에 우선 배치합니다."
+         data-fr="Bien choisir la matière ne suffit pas : l'atelier doit suivre. Les quatre actions ci-dessous vont du moins cher au plus cher, et la plupart des usines règlent environ 80 % des réclamations avec les deux premières. L'ionisation coûte cher : placez-la aux postes sensibles — étiquetage, séparation — plutôt que partout."
+         data-es="Elegir bien el material no basta: la planta debe acompañar. Las cuatro acciones van de menor a mayor inversión, y la mayoría de plantas resuelven cerca del 80% de las quejas con las dos primeras. El equipo ionizador es caro: póngalo en los puestos sensibles (etiquetado y separación), no en toda la nave.">材料改對了，車間還得配合。下面四件事按投入從小到大排，多數工廠做完前兩項就能解決八成投訴；離子設備貴，優先放在貼標與分張這些最敏感的工位，而不是全車間鋪開。</p>
+      <ul>
+        <li data-zh="<strong>控溼並記錄：</strong>目標 45% 到 55%，配溫溼度計並留記錄。只憑體感判斷溼度，等於沒有管理"
+            data-en="<strong>Control and log humidity:</strong> target 45 to 55%, with a meter and a record. Judging humidity by feel is the same as not managing it"
+            data-ja="<strong>湿度管理と記録：</strong>目標45〜55%、温湿度計を置き記録を残す。体感で判断するのは管理していないのと同じです"
+            data-ko="<strong>습도 관리와 기록:</strong> 목표 45~55%, 온습도계를 두고 기록합니다. 감각으로 판단하는 것은 관리하지 않는 것과 같습니다"
+            data-fr="<strong>Maîtriser et enregistrer l'humidité :</strong> cible 45 à 55 %, avec un hygromètre et un relevé. Juger à la sensation revient à ne pas gérer"
+            data-es="<strong>Controlar y registrar la humedad:</strong> objetivo 45-55%, con medidor y registro. Juzgar por sensación equivale a no gestionar">控溼並記錄：目標 45% 到 55%，配溫溼度計並留記錄。只憑體感判斷溼度，等於沒有管理</li>
+        <li data-zh="<strong>粘塵輥加燈檢：</strong>深色成衣裝箱前滾一遍，再在斜射燈下看一眼。這一項成本最低，對異物投訴的抑制最直接"
+            data-en="<strong>Tack roller plus angled light:</strong> roll each dark garment before packing and inspect under raking light — the cheapest action with the most direct effect on foreign-matter complaints"
+            data-ja="<strong>粘着ローラーと斜光検品：</strong>濃色衣料は梱包前にローラーをかけ、斜光で確認。最も安価で異物クレームに直接効きます"
+            data-ko="<strong>점착 롤러와 사광 검사:</strong> 어두운 의류는 포장 전 롤러로 훑고 사광 아래 확인합니다. 가장 저렴하고 이물 클레임에 직접적입니다"
+            data-fr="<strong>Rouleau adhésif et lumière rasante :</strong> passer chaque vêtement foncé avant emballage et contrôler sous lumière rasante — le moins cher, le plus direct sur les réclamations"
+            data-es="<strong>Rodillo adhesivo y luz rasante:</strong> pasar cada prenda oscura antes de embalar y revisar con luz oblicua: lo más barato y lo más directo contra las quejas">粘塵輥加燈檢：深色成衣裝箱前滾一遍，再在斜射燈下看一眼。這一項成本最低，對異物投訴的抑制最直接</li>
+        <li data-zh="<strong>離子風機與靜電棒：</strong>放在開袋、貼標、分張工位前 20 到 40 釐米處，覆蓋實際工作區，不要對着過道吹"
+            data-en="<strong>Ionising fans and static bars:</strong> mount 20 to 40 cm in front of the bag-opening, labelling and separation stations, covering the actual work zone rather than the aisle"
+            data-ja="<strong>イオンファンと静電バー：</strong>開袋・ラベリング・分離工程の20〜40cm手前に設置し、実際の作業域をカバーする。通路に向けないこと"
+            data-ko="<strong>이온 팬과 정전기 바:</strong> 개방·라벨링·분리 공정 20~40cm 앞에 설치해 실제 작업 영역을 덮습니다. 통로 쪽으로 향하게 두지 마십시오"
+            data-fr="<strong>Ventilateurs ionisants et barres :</strong> à 20-40 cm devant les postes d'ouverture, d'étiquetage et de séparation, couvrant la zone de travail et non l'allée"
+            data-es="<strong>Ventiladores ionizantes y barras:</strong> a 20-40 cm delante de los puestos de apertura, etiquetado y separación, cubriendo la zona de trabajo y no el pasillo">離子風機與靜電棒：放在開袋、貼標、分張工位前 20 到 40 釐米處，覆蓋實際工作區，不要對着過道吹</li>
+        <li data-zh="<strong>接地與工裝：</strong>檯面接地、避免化纖手套與化纖工作服、避免在工位使用泡沫與氣泡膜摩擦"
+            data-en="<strong>Grounding and workwear:</strong> ground the bench, avoid synthetic gloves and uniforms, and stop rubbing foam or bubble wrap at the station"
+            data-ja="<strong>接地と作業服：</strong>作業台の接地、化繊手袋と化繊制服の回避、工程での発泡材や気泡緩衝材の摩擦を避ける"
+            data-ko="<strong>접지와 작업복:</strong> 작업대 접지, 합성 장갑과 작업복 회피, 공정에서 발포재·에어캡 마찰 금지"
+            data-fr="<strong>Mise à la terre et vêtements :</strong> mettre le poste à la terre, éviter gants et tenues synthétiques, cesser de frotter mousse ou film à bulles au poste"
+            data-es="<strong>Puesta a tierra y ropa:</strong> poner a tierra el puesto, evitar guantes y uniformes sintéticos y no frotar espuma ni plástico burbuja en el puesto">接地與工裝：檯面接地、避免化纖手套與化纖工作服、避免在工位使用泡沫與氣泡膜摩擦</li>
+      </ul>
+
+      <h2 data-zh="5. 寫進規格書：三種可驗收的測法" data-en="5. Writing It Into the Spec: Three Verifiable Tests" data-ja="5. 仕様書への記載：検収できる3つの試験" data-ko="5. 사양서 기재: 검수 가능한 세 가지 시험" data-fr="5. Inscrire au cahier des charges : trois essais vérifiables" data-es="5. Redactarlo en la ficha: tres ensayos verificables">5. 寫進規格書：三種可驗收的測法</h2>
+      <p data-zh="抗靜電是可量化的指標，只是多數訂單沒寫。不寫的結果是：出問題時供應商說袋子本來就這樣，工廠說車間一直這樣，誰都沒有責任。至少在打樣階段做一次對比測試，把結論固定下來。"
+         data-en="Anti-static is measurable; most orders simply never specify it. The result: when trouble hits, the supplier says the bag has always been like this and the factory says the floor has always been like this, and nobody owns it. Run one comparison test at sampling and fix the conclusion in writing."
+         data-ja="帯電防止は測定できる指標ですが、多くの注文で仕様化されていません。その結果、問題が起きると「袋は元々こうだ」「現場は昔からこうだ」となり、責任の所在が消えます。少なくともサンプル段階で比較試験を1回行い、結論を文書で固定してください。"
+         data-ko="대전방지는 측정 가능한 지표인데 대부분 주문서에 없습니다. 그 결과 문제가 생기면 공급사는 원래 이런 비닐이라 하고, 공장은 원래 이런 현장이라 하며 책임이 사라집니다. 최소한 샘플 단계에서 비교 시험을 한 번 하고 결론을 문서로 고정하십시오."
+         data-fr="L'antistatique se mesure ; la plupart des commandes ne le spécifient pas. Résultat : en cas de problème, le fournisseur dit que le sachet a toujours été ainsi et l'usine que l'atelier a toujours été ainsi, et personne n'assume. Faites un essai comparatif à l'échantillon et fixez la conclusion par écrit."
+         data-es="Lo antiestático se mide; la mayoría de pedidos no lo especifican. Resultado: cuando surge el problema, el proveedor dice que la bolsa siempre fue así y la fábrica que la planta siempre fue así, y nadie responde. Haga un ensayo comparativo en la muestra y fije la conclusión por escrito.">抗靜電是可量化的指標，只是多數訂單沒寫。不寫的結果是：出問題時供應商說袋子本來就這樣，工廠說車間一直這樣，誰都沒有責任。至少在打樣階段做一次對比測試，把結論固定下來。</p>
+      <table>
+        <tr><th data-zh="方法" data-en="Method" data-ja="方法" data-ko="방법" data-fr="Méthode" data-es="Método">方法</th><th data-zh="測什麼" data-en="What it measures" data-ja="測るもの" data-ko="측정 대상" data-fr="Ce que cela mesure" data-es="Qué mide">測什麼</th><th data-zh="適用場景" data-en="Where it fits" data-ja="適用場面" data-ko="적용 상황" data-fr="Usage" data-es="Dónde encaja">適用場景</th></tr>
+        <tr><td data-zh="表面電阻" data-en="Surface resistance" data-ja="表面抵抗" data-ko="표면 저항" data-fr="Résistance de surface" data-es="Resistencia superficial">表面電阻</td><td data-zh="薄膜與袋的表面泄放能力" data-en="How readily film and bag surfaces leak charge" data-ja="フィルムと袋表面の電荷放出性" data-ko="필름·비닐 표면의 전하 방출성" data-fr="Aptitude du film et du sachet à évacuer" data-es="Facilidad del film y la bolsa para evacuar">薄膜與袋的表面泄放能力</td><td data-zh="按 ASTM D257 或 IEC 62631，10⁹ 到 10¹¹ 歐姆爲抗靜電區間" data-en="To ASTM D257 or IEC 62631; 10⁹ to 10¹¹ ohm is the anti-static band" data-ja="ASTM D257またはIEC 62631。10⁹〜10¹¹Ωが帯電防止域" data-ko="ASTM D257 또는 IEC 62631, 10⁹~10¹¹Ω가 대전방지 영역" data-fr="Selon ASTM D257 ou IEC 62631 ; 10⁹ à 10¹¹ ohms correspond à la plage antistatique" data-es="Según ASTM D257 o IEC 62631; 10⁹ a 10¹¹ ohmios es la franja antiestática">按 ASTM D257 或 IEC 62631，10⁹ 到 10¹¹ 歐姆爲抗靜電區間</td></tr>
+        <tr><td data-zh="靜電壓衰減" data-en="Charge decay" data-ja="電荷減衰" data-ko="전하 감쇠" data-fr="Décroissance de charge" data-es="Decaimiento de carga">靜電壓衰減</td><td data-zh="電荷消散速度（半衰期）" data-en="How fast charge dissipates, as a half-life" data-ja="電荷の消散速度（半減期）" data-ko="전하 소산 속도(반감기)" data-fr="Vitesse de dissipation, en demi-vie" data-es="Velocidad de disipación, en semivida">電荷消散速度（半衰期）</td><td data-zh="織物、無紡布與袋；比表面電阻更貼近真實使用" data-en="Fabric, nonwoven and bags; closer to real use than surface resistance" data-ja="生地・不織布・袋。表面抵抗より実使用に近い" data-ko="원단·부직포·비닐. 표면 저항보다 실제 사용에 가깝습니다" data-fr="Tissu, non-tissé et sachets ; plus proche de l'usage réel que la résistance" data-es="Tejido, non-woven y bolsas; más cerca del uso real que la resistencia">織物、無紡布與袋；比表面電阻更貼近真實使用</td></tr>
+        <tr><td data-zh="現場吸附對比" data-en="Bench comparison" data-ja="現場吸着比較" data-ko="현장 흡착 비교" data-fr="Comparaison en atelier" data-es="Comparación en planta">現場吸附對比</td><td data-zh="撕袋手感、吸紙屑與雙張率" data-en="Bag-opening feel, chip attraction and double-pick rate" data-ja="袋の開き具合、紙粉吸着、2枚取り率" data-ko="비닐 개방감, 종이 가루 흡착, 두 장 집힘률" data-fr="Sensation d'ouverture, attirance des copeaux, taux de double prise" data-es="Sensación al abrir, atracción de restos y tasa de doble toma">撕袋手感、吸紙屑與雙張率</td><td data-zh="打樣階段做 A/B 對比；直觀但不能量化，只作輔助" data-en="A/B comparison at sampling; intuitive but not quantifiable, so use it as support only" data-ja="サンプル段階のA/B比較。直感的だが数値化できないため補助的に" data-ko="샘플 단계 A/B 비교. 직관적이지만 수치화되지 않아 보조 자료로만" data-fr="Comparaison A/B à l'échantillon ; parlante mais non chiffrable, à titre d'appui" data-es="Comparación A/B en muestreo; intuitiva pero no cuantificable, solo como apoyo">打樣階段做 A/B 對比；直觀但不能量化，只作輔助</td></tr>
+      </table>
+
+      <h2 data-zh="6. 三個常見坑" data-en="6. Three Traps" data-ja="6. よくある3つの落とし穴" data-ko="6. 흔한 세 가지 함정" data-fr="6. Trois pièges courants" data-es="6. Tres trampas habituales">6. 三個常見坑</h2>
+      <ul>
+        <li data-zh="<strong>抗靜電袋不等於防靜電屏蔽袋：</strong>後者用於電子元件，要求 10⁴ 到 10⁶ 歐姆與金屬化層，價格高得多；服裝包裝用錯規格，錢花了問題也沒解決"
+            data-en="<strong>Anti-static is not ESD shielding:</strong> shielding bags are for electronics, need 10⁴ to 10⁶ ohm and a metallised layer, and cost far more; specifying them for garments spends money without solving anything"
+            data-ja="<strong>帯電防止袋とESD遮蔽袋は別物：</strong>後者は電子部品用で10⁴〜10⁶Ωと金属層が必要、価格も高い。衣料に誤って指定すると費用だけかかります"
+            data-ko="<strong>대전방지 비닐은 ESD 차폐 비닐이 아닙니다:</strong> 차폐는 전자 부품용으로 10⁴~10⁶Ω과 금속층이 필요하고 가격이 훨씬 높습니다. 의류에 잘못 지정하면 비용만 듭니다"
+            data-fr="<strong>Antistatique n'est pas blindage ESD :</strong> le blindage sert à l'électronique, exige 10⁴ à 10⁶ ohms et une couche métallisée, et coûte bien plus cher ; le prescrire pour du textile dépense sans résoudre"
+            data-es="<strong>Antiestático no es blindaje ESD:</strong> el blindaje es para electrónica, exige 10⁴ a 10⁶ ohmios y capa metalizada, y cuesta mucho más; prescribirlo para prendas gasta sin resolver">抗靜電袋不等於防靜電屏蔽袋：後者用於電子元件，要求 10⁴ 到 10⁶ 歐姆與金屬化層，價格高得多；服裝包裝用錯規格，錢花了問題也沒解決</li>
+        <li data-zh="<strong>抗靜電劑會析出：</strong>塗布型抗靜電劑可能與油墨、複合膠起反應，導致印刷發花、剝離強度下降。先做兼容性測試再批量，別等印完才發現"
+            data-en="<strong>Additives migrate:</strong> a coated anti-static can react with inks and laminating adhesive, mottling the print and weakening bond strength. Test compatibility before the run, not after printing"
+            data-ja="<strong>帯電防止剤はブリードする：</strong>塗布型はインキやラミネート接着剤と反応し、印刷のムラや剥離強度低下を招きます。印刷後に気づくのではなく、事前に相性試験を"
+            data-ko="<strong>대전방지제는 이행합니다:</strong> 코팅형은 잉크·라미네이팅 접착제와 반응해 인쇄 얼룩과 박리 강도 저하를 일으킵니다. 인쇄 후가 아니라 사전에 상용성 시험을 하십시오"
+            data-fr="<strong>L'additif migre :</strong> un antistatique couchée peut réagir avec les encres et la colle de complexage, tacher l'impression et affaiblir l'adhérence. Testez la compatibilité avant tirage"
+            data-es="<strong>El aditivo migra:</strong> un antiestático de recubrimiento puede reaccionar con tintas y adhesivo de laminado, moteando la impresión y bajando la adherencia. Pruebe compatibilidad antes de tirar">抗靜電劑會析出：塗布型抗靜電劑可能與油墨、複合膠起反應，導致印刷發花、剝離強度下降。先做兼容性測試再批量，別等印完才發現</li>
+        <li data-zh="<strong>過度加溼會帶來黴變：</strong>把溼度提到 60% 以上，抗靜電是好了，防黴壓力立刻上來。海運訂單尤其要守住 55% 上限，與防潮方案一起算"
+            data-en="<strong>Over-humidifying breeds mould:</strong> push past 60% and static improves while mould pressure jumps. On sea-freight orders keep the ceiling near 55% and budget it together with moisture control"
+            data-ja="<strong>過加湿は霉を招く：</strong>60%を超えると帯電防止は改善しても防霉負荷が急上昇します。海上輸送の注文では55%を上限に、防湿策と併せて設計を"
+            data-ko="<strong>과도한 가습은 곰팡이를 부릅니다:</strong> 60%를 넘기면 대전방지는 좋아지지만 방곰팡이 부담이 급증합니다. 해상 주문은 55%를 상한으로 두고 방습 대책과 함께 계산하십시오"
+            data-fr="<strong>Trop humidifier fait moisir :</strong> au-delà de 60 %, l'antistatique s'améliore mais la pression fongique bondit. Sur les commandes maritimes, tenez 55 % et raisonnez avec le plan anti-humidité"
+            data-es="<strong>Humidificar de más cria moho:</strong> por encima del 60% mejora la estática y sube la presión de moho. En pedidos marítimos mantenga el techo en 55% y cálculelo con el plan antihumedad">過度加溼會帶來黴變：把溼度提到 60% 以上，抗靜電是好了，防黴壓力立刻上來。海運訂單尤其要守住 55% 上限，與防潮方案一起算</li>
+      </ul>
+
+      <div class="callout" data-zh="靜電最容易被忽略的地方是：它不在檢驗報告裏，卻在客人的開箱視頻裏。花在溼度計和粘塵輥上的錢，通常比花在更換整批包裝上的錢少一個數量級。" data-en="The thing about static is that it never shows up in an inspection report — only in the buyer's unboxing video. Money spent on a hygrometer and a tack roller is usually an order of magnitude less than replacing a batch of packaging." data-ja="静電気の厄介さは、検査報告書には出ず、バイヤーの開封動画に出ることです。湿度計と粘着ローラーにかける費用は、包装を丸ごと交換する費用より一桁小さいのが普通です。" data-ko="정전기의 함정은 검사 성적서에는 없고 바이어의 개봉 영상에 나온다는 점입니다. 온습도계와 점착 롤러에 쓰는 비용은 포장을 통째로 교체하는 비용보다 보통 한 자릿수 작습니다." data-fr="Le propre de la statique : absente des rapports de contrôle, présente dans la vidéo d'unboxing du client. Un hygromètre et un rouleau adhésif coûtent généralement dix fois moins que remplacer un lot d'emballage." data-es="Lo propio de la estática: no está en el informe de inspección, está en el vídeo de unboxing del cliente. Un higrómetro y un rodillo adhesivo cuestan normalmente diez veces menos que reponer un lote de embalaje.">靜電最容易被忽略的地方是：它不在檢驗報告裏，卻在客人的開箱視頻裏。花在溼度計和粘塵輥上的錢，通常比花在更換整批包裝上的錢少一個數量級。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="garment-packaging-cleanliness-contamination-control.html" data-zh="服裝包裝潔淨度與異物控制指南" data-en="Packaging Cleanliness and Foreign Matter Control" data-ja="衣料品包装の清浄度と異物管理" data-ko="의류 포장 청결도와 이물 관리" data-fr="Propreté de l'emballage et maîtrise des corps étrangers" data-es="Limpieza del embalaje y control de cuerpos extraños">服裝包裝潔淨度與異物控制指南</a></li>
+        <li><a href="poly-bag-types.html" data-zh="服裝包裝袋種類：OPP、PE、CPE 與自封袋" data-en="Poly Bag Types: OPP, PE, CPE and Zipper Bags" data-ja="包装袋の種類：OPP・PE・CPE・チャック袋" data-ko="포장 비닐 종류: OPP·PE·CPE·지퍼백" data-fr="Types de sachets : OPP, PE, CPE et zip" data-es="Tipos de bolsas: OPP, PE, CPE y zip">服裝包裝袋種類：OPP、PE、CPE 與自封袋</a></li>
+        <li><a href="garment-moisture-proof-packaging.html" data-zh="服裝防潮防黴包裝指南" data-en="Moisture and Mould Control in Garment Packaging" data-ja="衣料品の防湿・防霉包装ガイド" data-ko="의류 방습·방곰팡이 포장 가이드" data-fr="Guide anti-humidité et anti-moisissure" data-es="Guía de embalaje antihumedad y antimoho">服裝防潮防黴包裝指南</a></li>
+        <li><a href="hang-tag-lamination-guide.html" data-zh="吊牌覆膜工藝指南" data-en="Hang Tag Lamination Guide" data-ja="タグのラミネート加工ガイド" data-ko="행택 라미네이팅 가이드" data-fr="Guide du pelliculage des étiquettes" data-es="Guía de laminado de etiquetas">吊牌覆膜工藝指南</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="深色成衣總是吸塵、袋子總打不開？把面料成分、包裝方式、車間溼度與目標市場發給我們，我們按材料、結構與你現有包裝線配一套抗靜電方案，並給出可比對的樣品。" data-en="Dark garments picking up lint, bags that will not open? Send the fibre content, packing method, plant humidity and target markets — we match an anti-static set to the material, structure and your existing packing line, with comparable samples." data-ja="濃色衣料の埃付着や袋が開かない問題でお困りですか。素材構成、包装方法、工場の湿度、対象市場をお送りください。資材・構造・既存ラインに合わせた帯電防止案と比較可能なサンプルをご用意します。" data-ko="어두운 의류에 먼지가 붙거나 비닐이 열리지 않으신가요? 원단 조성, 포장 방식, 공장 습도, 대상 시장을 보내주시면 자재·구조·기존 포장 라인에 맞춘 대전방지 안과 비교 가능한 샘플을 제안합니다." data-fr="Vêtements foncés qui attirent la poussière, sachets impossibles à ouvrir ? Envoyez la composition, le mode de conditionnement, l'humidité de l'atelier et les marchés cibles : nous proposons une solution antistatique adaptée à la matière, à la structure et à votre ligne, avec des échantillons comparables." data-es="¿Prendas oscuras que atraen polvo, bolsas que no se abren? Envíe la composición, el modo de embalaje, la humedad de planta y los mercados destino: proponemos una solución antiestática ajustada al material, la estructura y su línea, con muestras comparables.">深色成衣總是吸塵、袋子總打不開？把面料成分、包裝方式、車間溼度與目標市場發給我們，我們按材料、結構與你現有包裝線配一套抗靜電方案，並給出可比對的樣品。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="諮詢抗靜電包裝方案 →" data-en="Ask about anti-static packaging →" data-ja="帯電防止包装の相談 →" data-ko="대전방지 포장 상담 →" data-fr="Demander un emballage antistatique →" data-es="Consultar embalaje antiestático →">諮詢抗靜電包裝方案 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
