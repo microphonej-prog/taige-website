@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 포장 원가 구조와 예산 배분: 여섯 자재 계산법 | TAGE</title>
+<meta name="description" content="의류 포장 원가 구조: 행택·주라벨과 케어 라벨·내포장 비닐·종이백·부자재·샘플 물류 여섯 항목의 원가 요인, 일회성 판비와 변동비 분리, 소매 가격대별 예산 비율, 견적 기준 다섯 항목, 예산을 행택에서 비닐로 옮기는 판단 기준을 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/garment-packaging-budget-allocation.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/garment-packaging-budget-allocation.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝包裝成本結構與預算分配：六項物料怎麼算",
+     "item": "https://taigetag.com/blog/garment-packaging-budget-allocation.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝包裝成本結構與預算分配：六項物料怎麼算",
+   "url": "https://taigetag.com/blog/garment-packaging-budget-allocation.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/garment-packaging-budget-allocation.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>포장 원가와 예산</span></div>
+      <h1>의류 포장 원가 구조와 예산 배분: 여섯 자재 계산법</h1>
+      <p>TAGE 패키징 · 2026년 10월 26일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>의류 포장 원가 구조를 제대로 계산해 본 브랜드는 드뭅니다. 행택은 A사, 비닐은 B사, 종이백은 C사에서 따로 견적을 받아 각각 몇 프로씩 깎은 뒤 조합하지만, 소매가 대비 포장 총액이 얼마인지, 판비를 몇 개에 나누는지, 어느 항목이 불필요했는지는 계산하지 않습니다. 돈은 쓰였는데 포장은 여전히 따로 놉니다.</p>
+
+      <p>아래는 바로 적용할 수 있는 계산 순서입니다. 원가를 여섯 가지 자재로 나누고, 소매 가격대별 예산 비율을 정하고, 일회성 투자와 변동비를 분리하고, 견적 비교 기준을 통일하고, 어느 단계에서 예산을 행택에서 비닐로 옮겨야 하는지 정리합니다.</p>
+
+      <h2>1. 먼저 여섯 자재로 나눈다</h2>
+      <p>포장은 하나의 품목이 아닙니다. 여섯 자재는 각각 가격 결정 요인이 다르고, 한 장의 견적서에서 비교하면 가장 틀리기 쉽습니다. 특히 판비 포함 단가와 별도 단가를 나란히 놓을 때 위험합니다.</p>
+      <table>
+        <tr><th>자재</th><th>주요 원가 요인</th><th>일회성 투자</th></tr>
+        <tr><td>행택</td><td>종이 평량과 종류, 인쇄 색수, 후가공(박, 엠보, 라미네이팅)</td><td>인쇄 판비와 타발 금형, 이형 치수는 별도</td></tr>
+        <tr><td>주라벨과 케어 라벨</td><td>직조 밀도 또는 인쇄 방식, 치수와 접지, 사이징이나 코팅 여부</td><td>직조 라벨 판비는 색수와 밀도에 비례하며 인쇄 라벨은 대체로 낮습니다</td></tr>
+        <tr><td>내포장 비닐</td><td>소재와 두께, 인쇄 여부, 경고 문구와 통기공</td><td>인쇄 판비, 1색과 다색 차이는 크지 않음</td></tr>
+        <tr><td>종이백</td><td>종이와 평량, 손잡이 종류, 표면 처리와 구조(바닥 보강)</td><td>타발 금형과 판비, 맞춤 직조 손잡이는 별도</td></tr>
+        <tr><td>부자재(스티커, 벨리밴드, 박엽지)</td><td>치수와 수량, 단가는 낮지만 총량을 놓치기 쉽습니다</td><td>소액 판비 또는 없음</td></tr>
+        <tr><td>샘플과 물류</td><td>샘플 수량과 횟수, 운송 방식과 부피 중량</td><td>샘플비는 대량 주문 시 상계되는 경우가 많습니다</td></tr>
+      </table>
+
+      <h2>2. 소매 가격대별 예산 비율 정하기</h2>
+      <p>같은 자재 구성이라도 가격대가 다르면 적정 비율이 크게 달라집니다. 아래는 포장 총액의 내역이며 절대 금액도, 의류 원가도 아닙니다. 고객이 실제로 만지는 부분에 돈이 쓰이고 있는지 점검하는 데 쓰십시오.</p>
+      <ul>
+        <li><strong>대중 시장과 이커머스 속응형:</strong> 내포장 비닐과 골판지 비중이 가장 크고 행택은 단순하게 갑니다. 양산성, 원가 안정, 빠른 보충이 우선입니다</li>
+        <li><strong>중가 브랜드:</strong> 여섯 항목이 대체로 균형을 이룹니다. 행택과 주라벨이 브랜드 식별을 맡기 시작하고, 가공은 새로움보다 안정성을 우선합니다</li>
+        <li><strong>프리미엄과 기프트:</strong> 종이백, 벨리밴드, 스티커 같은 개봉층 비중이 뚜렷이 올라갑니다. 행택은 특수지와 후가공을 쓸 수 있지만 처음 보이는 카드 한 장에 예산을 몰아넣지는 마십시오</li>
+      </ul>
+
+      <h2>3. 일회성 투자와 변동비는 반드시 분리한다</h2>
+      <p>판비, 타발 금형, 샘플비는 일회성 투자이며 단가에 미치는 영향은 퍼센트가 아니라 배수입니다. 같은 판비라도 3,000개와 30,000개에 나누면 개당 열 배 차이가 납니다. 더 싸 보이는 두 번째 공급사는 전제 수량만 다른 경우가 많습니다. 일회성 투자를 별도 항목으로 두면 재주문 시 단가가 얼마까지 내려야 하는지 알 수 있습니다.</p>
+
+      <h2>4. 견적 기준 통일: 반드시 확인할 다섯 항목</h2>
+      <p>세 곳 견적이 30% 차이 나는 것은 싼 것이 아니라 기준이 다르기 때문입니다. 다섯 항목을 맞추면 차이는 보통 합리적인 범위로 줄어듭니다.</p>
+      <ul>
+        <li>세금 포함 여부와 세율, 계산서 유형(수출 주문은 환급에도 영향)</li>
+        <li>운임 포함 여부, 운송 방식, 도착 지점(공장·창고·항구)</li>
+        <li>판비와 금형이 별도인지, 재주문 시 재사용 가능한지, 소유권이 계약에 명시되는지</li>
+        <li>최소 주문량과 과납·부족납 처리(부자재는 5~10% 수량 공차가 일반적)</li>
+        <li>포장과 입수량, SKU별 묶음 여부(입고 공수와 개봉 손실에 직결)</li>
+      </ul>
+
+      <h2>5. 예산을 행택에서 비닐로 옮겨야 할 때</h2>
+      <p>행택은 개봉 전에 보이고, 내포장 비닐과 종이백은 개봉 과정에서 만집니다. 온라인에서는 상세페이지와 택배 봉투가 첫인상이고, 오프라인과 기프트에서는 종이백과 박스가 첫 촉감입니다. 예산을 고객이 실제로 만지는 쪽으로 옮기는 편이 균등 배분보다 합리적입니다. 행택을 400g에서 350g으로 낮춰 아낀 비용이면 일반 OPP 비닐을 브랜드 인쇄 무광 비닐로 바꾸는 경우가 많습니다.</p>
+
+      <h2>6. 샘플 전에 확정할 수 있는 예산표</h2>
+      <p>쓸 만한 예산표는 네 열이면 충분합니다. 자재, 사양, 일회성 투자 상각을 포함한 단가, 개당 비중. 채운 뒤 두 가지를 확인합니다. 총액을 소매가 대비 %로 환산해 같은 가격대의 통상 범위에 드는지, 그리고 수량 30%로 단가를 다시 계산해 첫 주문이 판비 상각으로 부풀지 않았는지 봅니다.</p>
+
+      <div class="callout">포장 예산의 진짜 적은 높은 단가가 아니라 여섯 자재가 따로 노는 것입니다. 각각을 따로 깎으면 싸 보이지만 통일되지 않은 포장이 남습니다.</div>
+
+      <h2>관련 기사</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+        <li><a href="garment-trims-cost-saving-guide.html">부자재 원가 절감: 여섯 방향과 다섯 가지 가짜 절감</a></li>
+        <li><a href="hang-tag-moq-cost.html">행택 최소 주문량과 원가 분석</a></li>
+        <li><a href="paper-bag-cost-guide.html">종이백 원가 구성과 견적 포인트</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>가격대에 맞춘 포장 세트와 설명 가능한 개당 원가가 필요하신가요? 품목, 소매 가격대, 예상 수량, 대상 시장을 보내주시면 여섯 항목 구조표와 세 가지 구성안을 먼저 제시한 뒤 샘플로 진행합니다.</p>
+        <a class="cta-btn" href="../contact.html">포장 세트 견적 상담 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
