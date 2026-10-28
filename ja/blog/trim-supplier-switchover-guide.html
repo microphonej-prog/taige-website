@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>副資材サプライヤーの切替を失敗させない：並行生産と基準サンプルの移管 | TAGE</title>
+<meta name="description" content="副資材サプライヤー切替の進め方。移管すべき6つの基準、初回全数検査と並行供給の組み方、色・風合い・組版・抜き・梱包の5つの失敗点、对外情報の一貫性、8週間のスケジュールを解説します。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-supplier-switchover-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-supplier-switchover-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "換輔料供應商怎麼不翻車：雙軌過渡與封樣移植",
+     "item": "https://taigetag.com/blog/trim-supplier-switchover-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "換輔料供應商怎麼不翻車：雙軌過渡與封樣移植",
+   "url": "https://taigetag.com/blog/trim-supplier-switchover-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-supplier-switchover-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>サプライヤー切替</span></div>
+      <h1>副資材サプライヤーの切替を失敗させない：並行生産と基準サンプルの移管</h1>
+      <p>泰閣包装 · 2026年10月28日更新</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>副資材のサプライヤーを替えるときに難しいのは、2社目の見積りを取ることではなく、2社目が作るタグを1社目と同じロットに見せることです。多くのブランドは価格と生産能力だけで判断し、成否を分ける3点を見落とします。旧サプライヤーの基準がそのまま移管されたか、並行生産期間をどう組むか、切替期間中の对外情報の一貫性をどう守るか。タグ、織りネーム、洗濯表示は単価が低いのに知覚されやすい資材で、わずかな色差や厚みの差で、消費者は『このロットは正規品らしくない』と判断します。</p>
+
+      <h2>1. まず判断する：替えるべきか、話し合うべきか</h2>
+      <p>交代の合理的な引き金は4つあります。工程が変わらないのに価格が構造的に高い、品質問題が偶発ではなく系統的、3回以上連続で納期遅延があり改善計画がない、そして顧客が求めるFSC・OEKO-TEX・GRSなどの資格を出せないこと。逆に交代を勧めないのは3つです。特定の1色だけ不満、返信は遅いが毎回納期を守る、そして工程と材料を変えずに値下げだけを求める場合。この3つは交渉で解決できる範囲です。</p>
+      <div class="callout">見落とされがちな計算があります。切替コストには再サンプリング、新たな基準サンプル、版や抜き型の移管、並行期間の二重在庫、初回ロット全数検査の工数と時間が含まれます。これは通常、初年度の価格差を食い尽くすため、8%安いという条件は初年度には意味を持たないことが多いのです。見るべきは2年目以降の安定性です。</div>
+
+      <h2>2. 移管するのは基準であって、取引先ではない</h2>
+      <p>新しいサプライヤーが『似たもの』を作るのは簡単ですが、『同じもの』を作るには旧サプライヤーの基準品とパラメータが必要です。発注前に最低6点を移管してください。1つ欠けると、後で手直しや追加生産として戻ってきます。</p>
+      <table>
+        <tr><th>移管するもの</th><th>欠けた場合</th><th>誰に求めるか</th></tr>
+        <tr><td>基準サンプルと保管サンプル（署名入り）</td><td>新ロットは図稿としか比較できず、色も風合いも基準がない</td><td>ブランド自身（旧サプライヤーの控え）</td></tr>
+        <tr><td>色見本、紙見本、糸見本</td><td>対色の物理基準がなく、画面頼りになる</td><td>旧サプライヤー（紙工場・糸番手を明記）</td></tr>
+        <tr><td>抜き型、印刷版、箔押し版</td><td>作り直すと穴位置と外形の公差がずれる</td><td>旧サプライヤー（帰属と買い取りを先に確認）</td></tr>
+        <tr><td>原紙、フィルム、糸、部材の仕様</td><td>坪量は同じでも白色度・腰・光沢が違う</td><td>旧サプライヤー。必要なら紙工場の品番を指定</td></tr>
+        <tr><td>工程パラメータ（インキ量・圧力・温度・速度）</td><td>箔の光沢、エンボス深さ、風合いが不安定</td><td>旧サプライヤーの技術記録</td></tr>
+        <tr><td>梱包仕様と書類の雛形</td><td>入数、内装、マーク、送り状の品名が変わる</td><td>ブランドの購買と倉庫</td></tr>
+      </table>
+
+      <h2>3. 並行生産期間：一気に切り替えない</h2>
+      <p>最も安全なのは、新旧2社から1〜2ロット併せて供給させ、リスクを限られた数量に載せることです。初回ロットは旧サンプルに対して全数検査し、色・寸法・穴位置・文字の4点を見ます。2回目は通常より厳しいAQL水準で抜取を強化し、安定してから緩めます。比率は旧多・新少（例：7対3）から半々へ移行し、異常がなければ全面切替です。新ロットが正式に承認されるまで、旧サプライヤーから1〜2ロット分の安全在庫を確保してください。切替期に頼れるのはこれだけです。</p>
+
+      <h2>4. 最も失敗しやすい5点</h2>
+      <p>副資材のトラブルは『作れない』ことより『作れるが同じにならない』ことが大半です。以下の5点で切替時のクレームのほとんどを占め、それぞれに対策があります。</p>
+      <table>
+        <tr><th>リスク点</th><th>典型的な現れ方</th><th>防ぎ方</th></tr>
+        <tr><td>色</td><td>赤み・暗さが出る。白い紙が生成りになる</td><td>旧サンプルで基準を切り、測色値と目視の双方で署名し、紙の白色度を固定</td></tr>
+        <tr><td>風合いと腰</td><td>坪量は同じでも柔らかい・腰がない・光沢加工が過剰</td><td>紙工場と品番を指定し、同一ロットの紙見本を求める</td></tr>
+        <tr><td>文字と組版</td><td>字間が広がる、改行位置が変わる、小さい文字が潰れる</td><td>編集可能な組版データ（サイズ・行間・字間）と逐字の照合表を渡す</td></tr>
+        <tr><td>抜きと穴位置</td><td>穴が1〜2mmずれ、ひもが通らない、抜けやすい</td><td>旧抜き型を使うか複製し、初品で穴位置と径を実測</td></tr>
+        <tr><td>梱包と計数</td><td>千枚と千個の混用、内装の入り数が違う</td><td>計数単位、内装入り数、入箱数を書面で確認し、注文書に明記</td></tr>
+      </table>
+
+      <h2>5. 切替期の对外情報の一貫性</h2>
+      <p>工場を替えても、ラベルの情報は一言も変わってはいけません。タグのブランドストーリー、洗濯表示の繊維組成と原産地、包装のリサイクル表示と警告文。これらは消費者と規制当局が読むもので、工場が読むものではありません。切替時に同時に動かすのは3つです。顧客仕様書のサプライヤー情報とロット番号規則、ECサイトの掲載情報とラベル実写（旧画像のまま新在庫を売らない）、そして契約に重要変更の事前通知条項があれば、出荷時ではなく合意した時期に書面通知すること。旧ラベルの在庫は封印し使用停止の表示をして、新ロットと混ぜないでください。</p>
+
+      <h2>6. 8週間の切替スケジュール</h2>
+      <ul>
+        <li><strong>第1週：</strong>引き金の確認、切替コストの算出、旧資料の移管可否（型の帰属を含む）を確定</li>
+        <li><strong>第2〜3週：</strong>新サプライヤーのサンプルを旧基準と項目ごとに比較。不合格なら妥協せずパラメータを変える</li>
+        <li><strong>第4週：</strong>基準サンプルを3部（ブランド、新サプライヤー、可能なら旧サプライヤー）で署名し、ロットと日付を記載</li>
+        <li><strong>第5週：</strong>少量の初回生産を全数検査。逸脱と処置をすべて記録</li>
+        <li><strong>第6〜7週：</strong>比率を分けて並行供給し抜取を強化。仕様書、EC画像、内部コードも同時に更新</li>
+        <li><strong>第8週：</strong>新ロットを正式承認、旧ライン停止、旧ラベルを封印。今回の逸脱記録を次回の基準として保管</li>
+      </ul>
+      <div class="callout">低コストで効果的な一手。旧サプライヤーの実物見本で『切替キット』を作り、新サプライヤーに渡します。完成品5〜10点、色見本、仕様書、逸脱リストを入れてください。『これと同じに』と10回言うより、1点を手元に置くほうが効きます。</div>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+        <li><a href="trim-supply-continuity-guide.html">副資材の供給継続：断供時の備えと代替サプライヤー</a></li>
+        <li><a href="garment-trims-repeat-order-consistency.html">副資材の追加生産で一貫性を保つ方法</a></li>
+        <li><a href="trim-color-approval-process.html">副資材の色承認プロセス：色見本から放行まで</a></li>
+        <li><a href="garment-trims-supplier-scorecard.html">副資材サプライヤーの評価表</a></li>
+        <li><a href="garment-trims-quality-inspection.html">副資材の品質検査：抜取方案と判定</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>副資材サプライヤーの切替を検討中で、品質の断絶が心配ですか。現行の基準サンプル、色見本、仕様書、想定数量をお送りください。まず同一基準でサンプルを作り、実物比較に合格してから量産を協議します。切替期は分割納入にも対応します。</p>
+        <a class="cta-btn" href="../contact.html">切替サンプルの相談 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩 | TAGE" data-en="Can AI-Generated Hang Tag Artwork Go Straight to Print? Resolution, Vectors and Colour | TAGE" data-ja="AI生成のタグ図稿はそのまま印刷できるか：解像度・ベクター・色 | TAGE" data-ko="AI로 만든 행택 도안을 바로 인쇄할 수 있을까: 해상도, 벡터, 색 | TAGE" data-fr="Un visuel de hangtag généré par IA peut-il partir directement en impression ? Résolution, vecteurs et couleur | TAGE" data-es="¿Se puede imprimir directamente un colgante diseñado con IA? Resolución, vectores y color | TAGE">AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩 | TAGE</title>
+<meta name="description" data-zh="AI 設計稿上機印刷前的必做處理：位圖與矢量之別、成品尺寸下的 300dpi 怎麼算、文字爲什麼必須重排、RGB 與 CMYK 的色域差、燙金凹凸 UV 與織嘜的專版要求，附交付清單與版權風險提示。來自東莞泰閣包裝。"
+      data-en="AI artwork before the press: pixels versus vectors, 300 dpi at final size, why type must be reset, RGB versus CMYK, colour accuracy and a delivery checklist." data-ja="AI図稿を印刷に載せる前の必須処理。ビットマップとベクターの違い、仕上がり寸法での300dpiの計算、文字を組み直す理由、RGBとCMYKの色域差、箔・エンボス・UV・織りの版要件、納品チェックリストを解説します。東莞泰閣包装。" data-ko="AI 도안을 인쇄에 올리기 전 필수 처리. 비트맵과 벡터의 차이, 완성 치수 기준 300dpi 계산, 문자 재조판 이유, RGB와 CMYK 색역 차이, 박·엠보·UV·직조판 요건, 납품 체크리스트를 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="Un visuel IA avant l'impression : pixels contre vecteurs, 300 dpi à la taille finale, recomposition du texte, RVB contre CMJN, plaques de dorure et gaufrage, liste de livraison."
+      data-es="Un artístico de IA antes de imprimir: píxeles frente a vectores, 300 ppp al tamaño final, recomposición del texto, RGB frente a CMYK, planchas de estampado y gofrado, lista de entrega."
+      content="AI 設計稿上機印刷前的必做處理：位圖與矢量之別、成品尺寸下的 300dpi 怎麼算、文字爲什麼必須重排、RGB 與 CMYK 的色域差、燙金凹凸 UV 與織嘜的專版要求，附交付清單與版權風險提示。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩",
+     "item": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩",
+   "url": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="AI 設計稿與印刷" data-en="AI Artwork and Print" data-ja="AI図稿と印刷" data-ko="AI 도안과 인쇄" data-fr="Visuels IA et impression" data-es="Artísticos de IA e impresión">AI 設計稿與印刷</span></div>
+      <h1 data-zh="AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩" data-en="Can AI-Generated Hang Tag Artwork Go Straight to Print? Resolution, Vectors and Colour" data-ja="AI生成のタグ図稿はそのまま印刷できるか：解像度・ベクター・色" data-ko="AI로 만든 행택 도안을 바로 인쇄할 수 있을까: 해상도, 벡터, 색" data-fr="Un visuel de hangtag généré par IA peut-il partir directement en impression ? Résolution, vecteurs et couleur" data-es="¿Se puede imprimir directamente un colgante diseñado con IA? Resolución, vectores y color">AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年10月28日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated October 28, 2026" data-ja="泰閣包装 · 2026年10月28日更新" data-ko="TAGE 패키징 · 2026년 10월 28일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 28 octobre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 28 de octubre de 2026">泰閣包裝 · 更新於 2026年10月28日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="AI 生圖把吊牌設計的出稿時間從幾天壓到幾分鐘，很多小品牌第一次覺得「設計不用求人」。但印刷這一端的規則沒有跟着變：文件決定成品。屏幕上一張很漂亮的圖，可能沒有一處是能直接上機的——它由像素構成而不是矢量、文字是「畫」出來的而不是排出來的、顏色是發光的 RGB 而不是油墨的 CMYK 或專色。本文講清這三件事怎麼影響吊牌、織嘜與包裝袋的實際印刷，以及在把 AI 稿交給工廠之前該做哪些處理。"
+         data-en="AI image generation has cut hang tag design from days to minutes, and many small brands now feel that design no longer requires outside help. The rules at the printing end have not changed: the file decides the product. A beautiful image on screen may contain nothing that can go straight onto a press — it is made of pixels rather than vectors, its text is drawn rather than typeset, and its colours are emissive RGB rather than ink-based CMYK or spot colour. This article explains how those three facts affect real production of hang tags, woven labels and packaging bags, and what to do before handing an AI file to a factory."
+         data-ja="AI画像生成はタグデザインの出稿を数日から数分に短縮し、多くの小規模ブランドが『デザインは外注しなくてよい』と感じるようになりました。しかし印刷側のルールは変わっていません。ファイルが製品を決めます。画面で美しい画像でも、そのまま印刷機に載せられる部分が一つもないことがあります。ピクセルでできていてベクターではなく、文字は『描かれた』もので組版されておらず、色は発光するRGBでインキのCMYKや特色ではないからです。本稿では、この3点がタグ、織りネーム、包装袋の実際の印刷にどう影響するか、そしてAIデータを工場に渡す前に何をすべきかを整理します。"
+         data-ko="AI 이미지 생성은 행택 디자인 출고 시간을 며칠에서 몇 분으로 줄였고, 많은 소규모 브랜드가 '디자인을 외주할 필요가 없다'고 느낍니다. 그러나 인쇄 쪽 규칙은 그대로입니다. 파일이 제품을 결정합니다. 화면에서 아름다운 이미지라도 인쇄기에 바로 올릴 수 있는 부분이 하나도 없을 수 있습니다. 픽셀로 되어 있어 벡터가 아니고, 문자는 '그려진' 것이지 조판된 것이 아니며, 색은 발광하는 RGB이지 잉크의 CMYK나 별색이 아닙니다. 이 글은 이 세 가지가 행택, 직조 라벨, 포장백의 실제 인쇄에 어떻게 영향을 주는지, AI 파일을 공장에 넘기기 전에 무엇을 해야 하는지 정리합니다."
+         data-fr="La génération d'images par IA a fait passer la création d'un hangtag de quelques jours à quelques minutes, et beaucoup de petites marques ont le sentiment que le design ne demande plus d'aide extérieure. Les règles de l'imprimerie, elles, n'ont pas changé : c'est le fichier qui décide du produit. Une image superbe à l'écran peut ne rien contenir de directement imprimable : elle est faite de pixels et non de vecteurs, son texte est dessiné et non composé, et ses couleurs sont du RVB émissif, pas du CMJN ni une teinte directe. Cet article explique l'effet de ces trois points sur la production réelle de hangtags, tissés et sacs, et ce qu'il faut faire avant de remettre un fichier IA à un imprimeur."
+         data-es="La generación de imágenes con IA ha reducido el diseño de un colgante de días a minutos, y muchas marcas pequeñas sienten que el diseño ya no requiere ayuda externa. Las reglas de la imprenta no han cambiado: el archivo decide el producto. Una imagen preciosa en pantalla puede no tener nada que se pueda imprimir directamente: está hecha de píxeles y no de vectores, su texto está dibujado y no compuesto, y sus colores son RGB emisivo, no CMYK ni tinta directa. Este artículo explica cómo afectan esos tres hechos a la producción real de colgantes, tejidos y bolsas, y qué hacer antes de entregar un archivo de IA a una fábrica.">AI 生圖把吊牌設計的出稿時間從幾天壓到幾分鐘，很多小品牌第一次覺得「設計不用求人」。但印刷這一端的規則沒有跟着變：文件決定成品。屏幕上一張很漂亮的圖，可能沒有一處是能直接上機的——它由像素構成而不是矢量、文字是「畫」出來的而不是排出來的、顏色是發光的 RGB 而不是油墨的 CMYK 或專色。本文講清這三件事怎麼影響吊牌、織嘜與包裝袋的實際印刷，以及在把 AI 稿交給工廠之前該做哪些處理。</p>
+
+      <h2 data-zh="1. AI 稿的三個結構性缺陷" data-en="1. Three Structural Limits of an AI File" data-ja="1. AIデータの3つの構造的な弱点" data-ko="1. AI 파일의 세 가지 구조적 한계" data-fr="1. Trois limites structurelles d'un fichier IA" data-es="1. Tres límites estructurales de un archivo de IA">1. AI 稿的三個結構性缺陷</h2>
+      <p data-zh="第一是像素與矢量之別。AI 出的是位圖，放大到成品尺寸後邊緣會虛，越放大越明顯；而吊牌上的 logo、線條、文字必須是矢量，才能在模切與燙金時保持銳利。第二是文字。生成模型畫的字往往「看起來像字」，筆畫連接方式不對、漢字容易多筆少筆、數字 6 與 8、1 與 7 最容易混。第三是顏色。屏幕是加法混色、能顯示很亮的綠色與橙色，油墨是減法混色，那部分顏色根本印不出來，只能換成最接近的印法——如果不提前換算，打樣時會發現「完全不是這個感覺」。"
+         data-en="The first is pixels versus vectors. AI output is a bitmap: scaled up to final size its edges soften, and the more you enlarge it the worse it looks, whereas the logo, rules and type on a hang tag must be vector to stay crisp through die-cutting and foil stamping. The second is text. Generative models draw letterforms that look like characters; strokes connect the wrong way, Chinese characters gain or lose strokes, and the pairs 6 and 8, or 1 and 7, are the easiest to confuse. The third is colour. A screen mixes light and can show very bright greens and oranges; ink mixes pigment and cannot reproduce them, so the colour must be mapped to the nearest achievable build — skip that step and the proof reveals something that feels entirely different."
+         data-ja="第一はピクセルとベクターの違いです。AIの出力はビットマップで、最終寸法まで拡大すると輪郭が甘くなり、拡大するほど目立ちます。一方タグ上のロゴ、罫線、文字はベクターでなければ、抜きや箔押しの工程でシャープさを保てません。第二は文字です。生成モデルは『文字に見える形』を描くため、画のつながりが違ったり、漢字の画数が増減したり、6と8、1と7の混同が最も起きやすいところです。第三は色です。画面は加法混色で明るい緑や橙を表示できますが、インキは減法混色で再現できません。最も近い組み合わせに置き換える必要があり、この工程を飛ばすと、校正で『全然違う印象』になります。"
+         data-ko="첫째는 픽셀과 벡터의 차이입니다. AI 출력은 비트맵이라 최종 크기로 확대하면 윤곽이 뭉개지고 확대할수록 심해집니다. 반면 행택의 로고, 선, 문자는 벡터여야 커팅과 박 공정에서 선명도를 유지합니다. 둘째는 문자입니다. 생성 모델은 '글자처럼 보이는 형태'를 그리기 때문에 획 연결이 틀리고, 한자는 획이 늘거나 줄며, 6과 8, 1과 7의 혼동이 가장 흔합니다. 셋째는 색입니다. 화면은 가산 혼합으로 아주 밝은 초록과 주황을 보여주지만 잉크는 감산 혼합이라 재현할 수 없습니다. 가장 가까운 조합으로 변환해야 하며, 이 단계를 건너뛰면 교정에서 '전혀 다른 느낌'을 만나게 됩니다."
+         data-fr="D'abord le pixel contre le vecteur. Une sortie IA est un bitmap : agrandie à la taille finale, ses contours se ramollissent, et plus on agrandit plus cela se voit, alors que le logo, les filets et les textes d'un hangtag doivent être vectoriels pour rester nets à la découpe et à la dorure. Ensuite le texte. Les modèles génératifs dessinent des formes qui ressemblent à des caractères : les traits se raccordent mal, les caractères chinois gagnent ou perdent des traits, et les couples 6 et 8, ou 1 et 7, sont les plus faciles à confondre. Enfin la couleur. Un écran mélange de la lumière et affiche des verts et oranges très vifs ; l'encre mélange des pigments et ne peut les reproduire : il faut les ramener à la combinaison la plus proche — sans cette étape, l'épreuve révèle tout autre chose."
+         data-es="Primero, píxeles frente a vectores. La salida de IA es un mapa de bits: ampliado al tamaño final, sus bordes se ablandan, y cuanto más se amplía peor se ve, mientras que el logotipo, las líneas y los textos de un colgante deben ser vectoriales para mantenerse nítidos en el troquelado y la estampación. Segundo, el texto. Los modelos generativos dibujan formas que parecen caracteres: los trazos se unen mal, los caracteres chinos ganan o pierden trazos, y los pares 6 y 8, o 1 y 7, son los más fáciles de confundir. Tercero, el color. Una pantalla mezcla luz y muestra verdes y naranjas muy vivos; la tinta mezcla pigmento y no puede reproducirlos: hay que llevarlos a la combinación más cercana; sin ese paso, la prueba revela algo completamente distinto.">第一是像素與矢量之別。AI 出的是位圖，放大到成品尺寸後邊緣會虛，越放大越明顯；而吊牌上的 logo、線條、文字必須是矢量，才能在模切與燙金時保持銳利。第二是文字。生成模型畫的字往往「看起來像字」，筆畫連接方式不對、漢字容易多筆少筆、數字 6 與 8、1 與 7 最容易混。第三是顏色。屏幕是加法混色、能顯示很亮的綠色與橙色，油墨是減法混色，那部分顏色根本印不出來，只能換成最接近的印法——如果不提前換算，打樣時會發現「完全不是這個感覺」。</p>
+
+      <h2 data-zh="2. 分辨率：按成品尺寸算，不按屏幕看" data-en="2. Resolution: Calculated at Final Size" data-ja="2. 解像度は仕上がり寸法で計算する" data-ko="2. 해상도는 완성 치수로 계산한다" data-fr="2. La résolution se calcule à la taille finale" data-es="2. La resolución se calcula al tamaño final">2. 分辨率：按成品尺寸算，不按屏幕看</h2>
+      <p data-zh="「300dpi」這個說法只在一個前提下有效：它指成品尺寸下的 300dpi。同一張 1024 像素的正方形圖，做 35×55 毫米的吊牌夠用，放大到 60×120 毫米，長邊只剩約 217dpi，肉眼能看出虛邊。所以判斷 AI 圖能不能用，先量成品尺寸，再倒算像素。"
+         data-en="The familiar 300 dpi figure only holds under one condition: it means 300 dpi at final size. The same 1024-pixel square is adequate for a 35 by 55 millimetre hang tag, but at 60 by 120 millimetres the long edge drops to roughly 217 dpi and the softening becomes visible. So judge an AI image by measuring the finished size first, then working back to pixels."
+         data-ja="『300dpi』という数字が有効なのは1つの前提のもとだけです。仕上がり寸法での300dpiという意味です。同じ1024ピクセルの正方形画像は35×55mmのタグなら足りますが、60×120mmにすると長辺は約217dpiまで落ち、輪郭の甘さが肉眼で分かります。AI画像が使えるかは、まず仕上がり寸法を測り、そこからピクセルを逆算して判断してください。"
+         data-ko="'300dpi'라는 숫자는 한 가지 전제에서만 유효합니다. 완성 치수에서의 300dpi라는 뜻입니다. 같은 1024픽셀 정사각 이미지는 35×55mm 행택에는 충분하지만 60×120mm로 키우면 긴 변이 약 217dpi로 떨어져 윤곽이 무른 것이 눈에 보입니다. AI 이미지의 사용 가능 여부는 완성 치수를 먼저 재고 픽셀을 역산해 판단하십시오."
+         data-fr="Le fameux 300 dpi n'est valable que sous une condition : 300 dpi à la taille finale. La même image carrée de 1024 pixels suffit pour un hangtag de 35 sur 55 millimètres, mais à 60 sur 120 millimètres le grand côté tombe à environ 217 dpi et le flou devient visible. Pour juger une image IA, mesurez donc d'abord la taille finie, puis remontez aux pixels."
+         data-es="La cifra de 300 ppp solo es válida bajo una condición: 300 ppp al tamaño final. La misma imagen cuadrada de 1024 píxeles basta para un colgante de 35 por 55 milímetros, pero a 60 por 120 milímetros el lado largo cae a unos 217 ppp y el reblandecimiento se nota. Para juzgar una imagen de IA, mida primero el tamaño acabado y luego vuelva a los píxeles.">「300dpi」這個說法只在一個前提下有效：它指成品尺寸下的 300dpi。同一張 1024 像素的正方形圖，做 35×55 毫米的吊牌夠用，放大到 60×120 毫米，長邊只剩約 217dpi，肉眼能看出虛邊。所以判斷 AI 圖能不能用，先量成品尺寸，再倒算像素。</p>
+      <table>
+        <tr><th data-zh="吊牌成品尺寸" data-en="Finished hang tag size" data-ja="タグ仕上がり寸法" data-ko="행택 완성 치수" data-fr="Taille finie du hangtag" data-es="Tamaño final del colgante">吊牌成品尺寸</th><th data-zh="300dpi 最小像素" data-en="Minimum pixels at 300 dpi" data-ja="300dpi の最小ピクセル" data-ko="300dpi 최소 픽셀" data-fr="Pixels minimums à 300 dpi" data-es="Píxeles mínimos a 300 ppp">300dpi 最小像素</th><th data-zh="600dpi（細線、小字、燙金稿）" data-en="600 dpi for fine rules, small type, foil art" data-ja="600dpi（細線・小さい文字・箔押し）" data-ko="600dpi(가는 선, 작은 글씨, 박 도안)" data-fr="600 dpi pour filets fins, petits corps, dorure" data-es="600 ppp para líneas finas, cuerpos pequeños, estampado">600dpi（細線、小字、燙金稿）</th></tr>
+        <tr><td data-zh="35 × 55 毫米" data-en="35 × 55 mm" data-ja="35 × 55 mm" data-ko="35 × 55 mm" data-fr="35 × 55 mm" data-es="35 × 55 mm">35 × 55 毫米</td><td data-zh="413 × 650" data-en="413 × 650" data-ja="413 × 650" data-ko="413 × 650" data-fr="413 × 650" data-es="413 × 650">413 × 650</td><td data-zh="827 × 1299" data-en="827 × 1299" data-ja="827 × 1299" data-ko="827 × 1299" data-fr="827 × 1299" data-es="827 × 1299">827 × 1299</td></tr>
+        <tr><td data-zh="40 × 70 毫米" data-en="40 × 70 mm" data-ja="40 × 70 mm" data-ko="40 × 70 mm" data-fr="40 × 70 mm" data-es="40 × 70 mm">40 × 70 毫米</td><td data-zh="472 × 827" data-en="472 × 827" data-ja="472 × 827" data-ko="472 × 827" data-fr="472 × 827" data-es="472 × 827">472 × 827</td><td data-zh="945 × 1654" data-en="945 × 1654" data-ja="945 × 1654" data-ko="945 × 1654" data-fr="945 × 1654" data-es="945 × 1654">945 × 1654</td></tr>
+        <tr><td data-zh="50 × 90 毫米" data-en="50 × 90 mm" data-ja="50 × 90 mm" data-ko="50 × 90 mm" data-fr="50 × 90 mm" data-es="50 × 90 mm">50 × 90 毫米</td><td data-zh="591 × 1063" data-en="591 × 1063" data-ja="591 × 1063" data-ko="591 × 1063" data-fr="591 × 1063" data-es="591 × 1063">591 × 1063</td><td data-zh="1181 × 2126" data-en="1181 × 2126" data-ja="1181 × 2126" data-ko="1181 × 2126" data-fr="1181 × 2126" data-es="1181 × 2126">1181 × 2126</td></tr>
+        <tr><td data-zh="60 × 120 毫米" data-en="60 × 120 mm" data-ja="60 × 120 mm" data-ko="60 × 120 mm" data-fr="60 × 120 mm" data-es="60 × 120 mm">60 × 120 毫米</td><td data-zh="709 × 1417" data-en="709 × 1417" data-ja="709 × 1417" data-ko="709 × 1417" data-fr="709 × 1417" data-es="709 × 1417">709 × 1417</td><td data-zh="1417 × 2835" data-en="1417 × 2835" data-ja="1417 × 2835" data-ko="1417 × 2835" data-fr="1417 × 2835" data-es="1417 × 2835">1417 × 2835</td></tr>
+      </table>
+      <div class="callout" data-zh="一個實用判斷：把 AI 圖等比放大到成品尺寸，如果放大幅度在 30% 以內、且畫面是虛化背景或抽象紋理，通常還能救；如果放大幅度超過一倍，或者放大後主體是 logo、文字、細線，就不要修，直接重繪。修圖救回來的圖在燙金與壓凹凸時最容易露餡。" data-en="A practical rule: scale the AI image up to final size. Within 30 percent enlargement, with a soft background or abstract texture, it can usually be salvaged. Beyond double size, or when the subject is a logo, type or fine rule, do not repair it — redraw it. Repaired images fail first under foil stamping and embossing." data-ja="実用的な判断基準。AI画像を仕上がり寸法まで等倍拡大し、拡大率が30%以内で、ぼかした背景や抽象的なテクスチャなら救えることが多いです。2倍を超える場合、または拡大後の主体がロゴ・文字・細線なら、補正せず描き直してください。補正で救った画像は箔押しやエンボスで最も破綻します。" data-ko="실용적 판단 기준. AI 이미지를 완성 치수로 확대했을 때 30% 이내이고 흐린 배경이나 추상 텍스처라면 대개 살릴 수 있습니다. 두 배를 넘거나 확대 후 주체가 로고, 문자, 가는 선이라면 보정하지 말고 다시 그리십시오. 보정으로 살린 이미지는 박과 엠보싱에서 가장 먼저 무너집니다." data-fr="Une règle pratique : agrandissez l'image IA à la taille finale. Jusqu'à 30 % d'agrandissement, avec un fond flou ou une texture abstraite, elle est généralement récupérable. Au-delà du double, ou si le sujet est un logo, un texte ou un filet fin, ne la retouchez pas : redessinez-la. Les images retouchées lâchent d'abord à la dorure et au gaufrage." data-es="Una regla práctica: amplíe la imagen de IA al tamaño final. Hasta un 30 % de ampliación, con fondo difuso o textura abstracta, suele ser recuperable. Más allá del doble, o si el motivo es un logotipo, un texto o una línea fina, no la retoque: redibújela. Las imágenes retocadas fallan primero en el estampado y el gofrado.">一個實用判斷：把 AI 圖等比放大到成品尺寸，如果放大幅度在 30% 以內、且畫面是虛化背景或抽象紋理，通常還能救；如果放大幅度超過一倍，或者放大後主體是 logo、文字、細線，就不要修，直接重繪。修圖救回來的圖在燙金與壓凹凸時最容易露餡。</div>
+
+      <h2 data-zh="3. 文字必須重排，不能直接用" data-en="3. Type Must Be Reset, Not Reused" data-ja="3. 文字は組み直す。そのまま使わない" data-ko="3. 문자는 다시 조판해야 한다" data-fr="3. Le texte doit être recomposé" data-es="3. El texto debe recomponerse">3. 文字必須重排，不能直接用</h2>
+      <p data-zh="這是最容易被跳過、也最容易出事的一步。AI 圖裏的文字是圖形，不是文字：設計師在印前軟件裏無法改字、無法調字距、也無法確認有沒有錯字。品牌名拼錯、尺碼寫成 S/M/L 卻混了 XL、洗滌說明少一句話，這類問題在打樣時往往看不出來，量產後才發現，只能整批報廢。處理方式是把 AI 圖當背景或圖形素材，所有文字在排版軟件裏用授權字體重新排一遍，覈對清單逐字過。"
+         data-en="This is the step most often skipped and most often fatal. Text inside an AI image is a picture, not text: no one can edit it in prepress software, adjust its tracking or confirm whether a character is wrong. A misspelt brand name, S/M/L mixed up with XL, a missing line in the wash instructions — problems of this kind hide at proofing and surface after mass production, when the whole lot is scrap. Treat the AI image as a background or graphic element and reset every word in layout software with a licensed font, checked character by character against a list."
+         data-ja="最も飛ばされやすく、最も事故になりやすい工程です。AI画像内の文字は文字ではなく図形で、プリプレスソフトで編集できず、字間も調整できず、誤字の有無も確認できません。ブランド名の綴り誤り、S/M/LにXLが混じる、洗濯表示の一文が欠ける。こうした問題は校正では見えず、量産後に発覚して全数廃棄になります。AI画像は背景や図形素材として扱い、文字はすべて組版ソフトでライセンス済みフォントにより組み直し、照合表で一字ずつ確認してください。"
+         data-ko="가장 자주 생략되고 가장 자주 사고가 나는 단계입니다. AI 이미지 속 문자는 글자가 아니라 그림이라 프리프레스 소프트웨어에서 편집할 수 없고 자간도 조정할 수 없으며 오타 여부도 확인할 수 없습니다. 브랜드명 철자 오류, S/M/L에 XL이 섞이는 문제, 세탁 안내 한 줄 누락 같은 문제는 교정에서 보이지 않고 양산 후에 드러나 전량 폐기로 이어집니다. AI 이미지는 배경이나 그래픽 소재로만 쓰고, 모든 문자는 조판 소프트웨어에서 라이선스 폰트로 다시 조판한 뒤 대조표로 한 글자씩 확인하십시오."
+         data-fr="C'est l'étape la plus souvent sautée et la plus souvent fatale. Le texte dans une image IA est un dessin, pas du texte : impossible de le modifier en PAO, d'ajuster l'approche ou de vérifier une coquille. Un nom de marque mal orthographié, S/M/L mélangés avec XL, une ligne manquante dans les consignes de lavage : ces défauts se cachent à l'épreuve et surgissent après la production de masse, quand tout le lot est bon pour la casse. Traitez l'image IA comme un fond ou un élément graphique et recomposez chaque mot en PAO avec une police sous licence, en vérifiant caractère par caractère sur une liste."
+         data-es="Es el paso que más se omite y el que más falla. El texto dentro de una imagen de IA es un dibujo, no texto: nadie puede editarlo en un programa de preimpresión, ajustar su interletrado ni comprobar si hay una errata. Un nombre de marca mal escrito, S/M/L mezclados con XL, una línea que falta en las instrucciones de lavado: esos defectos se esconden en la prueba y aparecen tras la producción en serie, cuando todo el lote es inservible. Trate la imagen de IA como fondo o elemento gráfico y recomponga cada palabra en maquetación con una tipografía con licencia, comprobando carácter por carácter contra una lista.">這是最容易被跳過、也最容易出事的一步。AI 圖裏的文字是圖形，不是文字：設計師在印前軟件裏無法改字、無法調字距、也無法確認有沒有錯字。品牌名拼錯、尺碼寫成 S/M/L 卻混了 XL、洗滌說明少一句話，這類問題在打樣時往往看不出來，量產後才發現，只能整批報廢。處理方式是把 AI 圖當背景或圖形素材，所有文字在排版軟件裏用授權字體重新排一遍，覈對清單逐字過。</p>
+      <ul>
+        <li data-zh="<strong>刪掉圖裏的文字層：</strong>請生成時把文字留空，或後期用圖形工具抹掉，別讓「像字的東西」留在印面上" data-en="<strong>Remove the type from the image:</strong> generate with the text area empty, or paint it out later, so nothing that merely looks like writing stays on the printed surface" data-ja="<strong>画像内の文字を消す：</strong>生成時に文字部分を空けるか、後処理で消してください。『文字に見えるもの』を印刷面に残さないこと" data-ko="<strong>이미지에서 문자를 지운다:</strong> 생성할 때 문자 영역을 비우거나 후처리로 지우십시오. '글자처럼 보이는 것'을 인쇄면에 남기지 마십시오" data-fr="<strong>Supprimer le texte de l'image :</strong> générez avec la zone de texte vide ou effacez-la ensuite, pour qu'aucune pseudo-écriture ne reste sur la surface imprimée" data-es="<strong>Eliminar el texto de la imagen:</strong> genere con la zona de texto vacía o bórrela después, para que nada que solo parezca escritura quede en la superficie impresa"><strong>刪掉圖裏的文字層：</strong>請生成時把文字留空，或後期用圖形工具抹掉，別讓「像字的東西」留在印面上</li>
+        <li data-zh="<strong>用授權字體重排：</strong>確認字體可商用（個人免費不等於商用免費），並把字體名寫進規格書，下一批才能復現" data-en="<strong>Reset with a licensed font:</strong> confirm commercial use is allowed — free for personal use is not free for business — and put the font name in the spec so the next run can be reproduced" data-ja="<strong>ライセンス済みフォントで組み直す：</strong>商用利用可否を確認（個人無料は商用無料ではありません）。フォント名を仕様書に記載し、次回も再現できるようにします" data-ko="<strong>라이선스 폰트로 재조판:</strong> 상업적 사용 가능 여부를 확인하십시오(개인 무료는 상업 무료가 아닙니다). 폰트명을 사양서에 적어 다음 로트에서도 재현되게 하십시오" data-fr="<strong>Recomposer avec une police sous licence :</strong> vérifiez l'usage commercial — gratuit en personnel ne veut pas dire gratuit en entreprise — et inscrivez le nom de la police dans la spec pour reproduire le tirage suivant" data-es="<strong>Recomponer con tipografía con licencia:</strong> confirme el uso comercial —gratis para uso personal no es gratis para empresa— e incluya el nombre de la tipografía en la ficha para poder repetir la tirada"><strong>用授權字體重排：</strong>確認字體可商用（個人免費不等於商用免費），並把字體名寫進規格書，下一批才能復現</li>
+        <li data-zh="<strong>交付時轉曲：</strong>文字轉成曲線可避免對方缺字體，但要另存一份可編輯源文件，方便日後改價格、改尺碼" data-en="<strong>Outline on delivery:</strong> converting type to curves prevents a missing-font problem, but keep an editable source as well, so prices and sizes can be changed later" data-ja="<strong>納品時にアウトライン化：</strong>フォント欠けを防げますが、編集可能な元データも別途保管し、後から価格やサイズを変更できるようにします" data-ko="<strong>납품 시 외곽선화:</strong> 폰트 누락을 막을 수 있지만 편집 가능한 원본도 따로 보관해 나중에 가격이나 사이즈를 바꿀 수 있게 하십시오" data-fr="<strong>Vectoriser à la livraison :</strong> cela évite un manque de police, mais conservez aussi une source éditable pour modifier prix et tailles plus tard" data-es="<strong>Convertir a curvas al entregar:</strong> evita el problema de fuente ausente, pero guarde también un original editable para cambiar precios y tallas más adelante"><strong>交付時轉曲：</strong>文字轉成曲線可避免對方缺字體，但要另存一份可編輯源文件，方便日後改價格、改尺碼</li>
+      </ul>
+
+      <h2 data-zh="4. 顏色：屏幕的鮮豔，油墨給不了" data-en="4. Colour: The Screen Promises What Ink Cannot" data-ja="4. 色：画面の鮮やかさはインキで出せない" data-ko="4. 색: 화면의 선명함은 잉크로 낼 수 없다" data-fr="4. Couleur : l'écran promet ce que l'encre ne peut pas" data-es="4. Color: la pantalla promete lo que la tinta no puede">4. 顏色：屏幕的鮮豔，油墨給不了</h2>
+      <p data-zh="RGB 色域比 CMYK 大，尤其是高飽和的綠、橙、紫與熒光色，屏幕上很跳，四色印刷只能給出灰一點、悶一點的版本。這不算印壞，是物理限制。要控制結果，有三個做法：品牌主色儘量給 Pantone 號而不是給截圖；大面積深黑用四色疊印或直接上專色黑，避免單黑髮灰；反白小字要留夠筆畫粗細，四色疊印時最容易被墨量喫掉。另外，吊牌常用牛皮紙、棉紙這類有色紙，紙本身有色，印上去的顏色會隨之偏——這類活件一定要在白紙上先打一次色，再上目標紙。"
+         data-en="The RGB gamut is wider than CMYK, especially in saturated greens, oranges, purples and fluorescents: vivid on screen, flatter and duller in four-colour print. That is physics, not a defect. Three ways to control the result: specify brand colours as Pantone references rather than screenshots; build large areas of deep black from all four colours or a spot black, so single black does not read grey; and give reversed-out small type enough stroke weight, since heavy ink coverage eats it first. Hang tags often use kraft or cotton paper, which is itself coloured, so any ink printed on it shifts — for those jobs, proof on white stock first, then on the target paper."
+         data-ja="RGBの色域はCMYKより広く、特に高彩度の緑・橙・紫・蛍光色は画面では映えますが、4色印刷では沈んで見えます。これは不良ではなく物理的な制約です。結果を制御する方法は3つ。ブランドカラーはスクリーンショットではなくPantone番号で指定する。大きな濃い黒は4色重ねか特色の黒を使い、単色黒が灰色に見えるのを避ける。反転した小さい文字は画線の太さを確保する（ベタ墨量に最初に負けます）。またタグはクラフト紙やコットン紙など色のある紙を使うことが多く、紙の色でインキの発色がずれます。その場合は白紙で一度校正し、目標の紙で再度確認してください。"
+         data-ko="RGB 색역은 CMYK보다 넓어, 특히 고채도 녹색·주황·보라·형광색은 화면에서는 선명하지만 4도 인쇄에서는 가라앉습니다. 불량이 아니라 물리적 한계입니다. 결과를 통제하는 세 가지 방법. 브랜드 색은 스크린샷 대신 Pantone 번호로 지정합니다. 넓은 진한 검정은 4도 겹침이나 별색 검정을 쓰고 단일 검정이 회색으로 보이는 것을 피합니다. 반전된 작은 글씨는 획 두께를 충분히 확보하십시오(잉크량에 가장 먼저 먹힙니다). 또한 행택은 크라프트지나 면지처럼 색이 있는 종이를 자주 쓰므로 종이 색에 따라 잉크 발색이 달라집니다. 이런 작업은 흰 종이에서 먼저 교정하고 목표 종이에서 다시 확인하십시오."
+         data-fr="Le gamut RVB est plus large que le CMJN, surtout dans les verts, oranges, violets et fluorescents saturés : éclatants à l'écran, plus ternes en quadrichromie. C'est de la physique, pas un défaut. Trois leviers : désigner les couleurs de marque par des références Pantone plutôt que par des captures d'écran ; construire les grands aplats de noir profond en quadri ou avec un noir direct, pour que le noir seul ne tire pas au gris ; et donner aux petits textes en réserve assez d'épaisseur de trait, car la couche d'encre les mange en premier. Les hangtags utilisent souvent du kraft ou du papier coton, eux-mêmes colorés : l'encre posée dessus se décale, donc tirez d'abord une épreuve sur blanc, puis sur le papier cible."
+         data-es="La gama RGB es más amplia que CMYK, sobre todo en verdes, naranjas, morados y fluorescentes saturados: vivos en pantalla, más apagados en cuatricromía. Es física, no un defecto. Tres palancas: designar los colores de marca con referencias Pantone en lugar de capturas de pantalla; construir los grandes fondos de negro profundo en cuatri o con negro directo, para que el negro solo no tire a gris; y dar a los textos pequeños en reserva suficiente grosor de trazo, porque la carga de tinta se los come primero. Los colgantes suelen usar kraft o papel de algodón, que ya son de color, así que la tinta sobre ellos se desplaza: pruebe primero en blanco y luego en el papel final.">RGB 色域比 CMYK 大，尤其是高飽和的綠、橙、紫與熒光色，屏幕上很跳，四色印刷只能給出灰一點、悶一點的版本。這不算印壞，是物理限制。要控制結果，有三個做法：品牌主色儘量給 Pantone 號而不是給截圖；大面積深黑用四色疊印或直接上專色黑，避免單黑髮灰；反白小字要留夠筆畫粗細，四色疊印時最容易被墨量喫掉。另外，吊牌常用牛皮紙、棉紙這類有色紙，紙本身有色，印上去的顏色會隨之偏——這類活件一定要在白紙上先打一次色，再上目標紙。</p>
+
+      <h2 data-zh="5. 工藝適配：燙金、凹凸、UV 與織嘜" data-en="5. Matching the Process: Foil, Emboss, UV, Woven" data-ja="5. 工程対応：箔押し・エンボス・UV・織りネーム" data-ko="5. 공정 적응: 박, 엠보, UV, 직조" data-fr="5. Adapter au process : dorure, gaufrage, UV, tissé" data-es="5. Adaptar al proceso: estampado, gofrado, UV, tejido">5. 工藝適配：燙金、凹凸、UV 與織嘜</h2>
+      <p data-zh="AI 圖裏的金屬質感、浮雕感、光澤感，都是「畫出來的效果」，不是工藝文件。要真的燙金或壓凹凸，必須另出一份單色實心的矢量版。這一步最常見的誤解是：以爲把 AI 圖的金屬部分截圖給工廠就行——工廠拿到的是漸變像素，燙金版只能做成一片一片的網點，燙出來斑駁。"
+         data-en="The metallic sheen, relief and gloss in an AI image are drawn effects, not process artwork. Real foil stamping or embossing needs a separate solid vector version in one colour. The usual misunderstanding is thinking a screenshot of the metallic area is enough: the factory receives a gradient bitmap and can only burn a dot pattern into the die, which stamps out mottled."
+         data-ja="AI画像の金属感、浮き彫り感、光沢は『描かれた効果』であり、工程用データではありません。実際に箔押しやエンボスをするには、単色ベタのベクター版を別途作成する必要があります。よくある誤解は、AI画像の金属部分を切り取って渡せばよいというもの。工場が受け取るのはグラデーションのビットマップで、版は網点にしかならず、箔がまだらになります。"
+         data-ko="AI 이미지의 금속 질감, 부조, 광택은 '그려진 효과'일 뿐 공정용 데이터가 아닙니다. 실제 박이나 엠보를 하려면 단색 실사 벡터판을 따로 만들어야 합니다. 흔한 오해는 AI 이미지의 금속 부분을 캡처해 주면 된다고 생각하는 것입니다. 공장이 받는 것은 그라데이션 비트맵이라 판을 망점으로만 만들 수 있고, 박이 얼룩덜룩하게 나옵니다."
+         data-fr="Le brillant métallique, le relief et la brillance d'une image IA sont des effets dessinés, pas des fichiers de process. Une vraie dorure ou un gaufrage exige une version vectorielle pleine teinte séparée, en une seule couleur. L'erreur courante est de croire qu'une capture de la zone métallique suffit : l'imprimeur reçoit un bitmap dégradé et ne peut graver qu'une trame, qui dore de façon tachetée."
+         data-es="El brillo metálico, el relieve y la luminosidad de una imagen de IA son efectos dibujados, no archivos de proceso. Un estampado o gofrado real exige una versión vectorial en masa, de un solo color, aparte. El error habitual es creer que basta una captura de la zona metálica: la fábrica recibe un mapa de bits con degradado y solo puede grabar una trama, que estampa de forma moteada.">AI 圖裏的金屬質感、浮雕感、光澤感，都是「畫出來的效果」，不是工藝文件。要真的燙金或壓凹凸，必須另出一份單色實心的矢量版。這一步最常見的誤解是：以爲把 AI 圖的金屬部分截圖給工廠就行——工廠拿到的是漸變像素，燙金版只能做成一片一片的網點，燙出來斑駁。</p>
+      <table>
+        <tr><th data-zh="工藝" data-en="Process" data-ja="工程" data-ko="공정" data-fr="Procédé" data-es="Proceso">工藝</th><th data-zh="文件必須提供什麼" data-en="What the file must contain" data-ja="データに必要なもの" data-ko="파일 필수 요소" data-fr="Ce que le fichier doit contenir" data-es="Qué debe contener el archivo">文件必須提供什麼</th></tr>
+        <tr><td data-zh="燙金 / 燙銀" data-en="Foil stamping" data-ja="箔押し" data-ko="박" data-fr="Dorure à chaud" data-es="Estampado en caliente">燙金 / 燙銀</td><td data-zh="單色實心矢量，細線不低於 0.25 毫米、文字高度不低於 3 毫米，與大墨量區留出間距" data-en="One-colour solid vector; rules no thinner than 0.25 mm, type no smaller than 3 mm high, kept clear of heavy ink areas" data-ja="単色ベタのベクター。線幅0.25mm以上、文字高3mm以上、ベタ部分と距離を取る" data-ko="단색 실사 벡터. 선 0.25mm 이상, 글자 높이 3mm 이상, 큰 잉크 면과 간격 확보" data-fr="Vectoriel plein teinte : filets d'au moins 0,25 mm, corps d'au moins 3 mm de haut, à distance des aplats" data-es="Vectorial en masa de un color: líneas de al menos 0,25 mm, textos de al menos 3 mm de alto, separados de las zonas de mucha tinta">單色實心矢量，細線不低於 0.25 毫米、文字高度不低於 3 毫米，與大墨量區留出間距</td></tr>
+        <tr><td data-zh="壓凹凸" data-en="Emboss / deboss" data-ja="エンボス・デボス" data-ko="엠보·디보스" data-fr="Gaufrage" data-es="Gofrado">壓凹凸</td><td data-zh="同上，另需說明紙張克重：太薄的紙壓深會裂，300 克以下建議淺壓" data-en="As above, plus the paper grammage: thin stock cracks when pressed deep, so keep it shallow under 300 gsm" data-ja="同上に加え、紙の坪量を明示。薄い紙は深く押すと割れるため、300g/㎡以下は浅めにする" data-ko="위와 같고 종이 평량을 명시. 얇은 종이는 깊게 누르면 갈라지므로 300g 이하는 얕게" data-fr="Idem, plus le grammage : un support fin se fissure sous une pression profonde, rester léger sous 300 g/m²" data-es="Igual, más el gramaje: el papel fino se agrieta con presión profunda, sea superficial por debajo de 300 g/m²">同上，另需說明紙張克重：太薄的紙壓深會裂，300 克以下建議淺壓</td></tr>
+        <tr><td data-zh="局部 UV / 光油" data-en="Spot UV / varnish" data-ja="部分UV・ニス" data-ko="부분 UV·바니시" data-fr="Vernis sélectif" data-es="UV selectivo">局部 UV / 光油</td><td data-zh="單獨一塊黑版標出上光區域，邊緣留 0.5 毫米套準餘量" data-en="A separate black plate marking the varnished areas, with 0.5 mm registration allowance at the edges" data-ja="ニス部分を示す専用の黒版。縁に0.5mmの見当余白を残す" data-ko="바니시 영역을 표시한 별도 흑판. 가장자리에 0.5mm 겹침 여유" data-fr="Une plaque noire séparée repérant les zones vernies, avec 0,5 mm de repérage sur les bords" data-es="Una plancha negra aparte que marque las zonas barnizadas, con 0,5 mm de margen de registro en los bordes">單獨一塊黑版標出上光區域，邊緣留 0.5 毫米套準餘量</td></tr>
+        <tr><td data-zh="模切與打孔" data-en="Die-cutting and hole punching" data-ja="抜きと穴あけ" data-ko="커팅과 타발" data-fr="Découpe et perçage" data-es="Troquelado y perforado">模切與打孔</td><td data-zh="刀模線單獨圖層、明確標註不印刷，出血留 2 到 3 毫米" data-en="Die line on its own layer marked non-printing, with 2 to 3 mm bleed" data-ja="抜き線を別レイヤーにし印刷なしと明記、塗り足し2〜3mm" data-ko="커팅선을 별도 레이어로 두고 인쇄 없음 표시, 도련 2~3mm" data-fr="Trait de découpe sur un calque séparé, non imprimable, avec 2 à 3 mm de fond perdu" data-es="Línea de troquel en capa aparte marcada como no imprimible, con 2 a 3 mm de sangrado">刀模線單獨圖層、明確標註不印刷，出血留 2 到 3 毫米</td></tr>
+        <tr><td data-zh="織嘜" data-en="Woven label" data-ja="織りネーム" data-ko="직조 라벨" data-fr="Étiquette tissée" data-es="Etiqueta tejida">織嘜</td><td data-zh="顏色數受織機與紗線限制，細線與小字需按織造精度放大，實際下限以打樣確認" data-en="Colour count is limited by loom and yarn; fine rules and small type must be enlarged to weaving resolution, with the real minimum settled at sampling" data-ja="色数は織機と糸に制約され、細線と小さい文字は織り精度に合わせて拡大が必要。実際の下限はサンプルで確認" data-ko="색 수는 직기와 원사에 제한되며 가는 선과 작은 글씨는 직조 정밀도에 맞춰 키워야 합니다. 실제 하한은 샘플로 확인" data-fr="Le nombre de couleurs dépend du métier et du fil ; filets et petits corps doivent être agrandis à la résolution du tissage, le minimum réel étant fixé à l'échantillon" data-es="El número de colores lo limitan el telar y el hilo; las líneas finas y los cuerpos pequeños deben ampliarse a la resolución del tejido, con el mínimo real fijado en la muestra">顏色數受織機與紗線限制，細線與小字需按織造精度放大，實際下限以打樣確認</td></tr>
+      </table>
+
+      <h2 data-zh="6. 交付清單：把 AI 圖變成可印文件" data-en="6. Delivery Checklist: Turning an AI Image into Print Artwork" data-ja="6. 納品チェックリスト：AI画像を印刷データにする" data-ko="6. 납품 체크리스트: AI 이미지를 인쇄용 파일로" data-fr="6. Liste de contrôle : d'une image IA à un fichier imprimable" data-es="6. Lista de entrega: de una imagen de IA a un archivo imprimible">6. 交付清單：把 AI 圖變成可印文件</h2>
+      <ul>
+        <li data-zh="<strong>圖像：</strong>成品尺寸下不低於 300dpi，已轉 CMYK；純色背景不要用截圖，用色值" data-en="<strong>Image:</strong> at least 300 dpi at final size, converted to CMYK; solid backgrounds as colour values, not screenshots" data-ja="<strong>画像：</strong>仕上がり寸法で300dpi以上、CMYK済み。無地背景はスクリーンショットではなく色値で" data-ko="<strong>이미지:</strong> 완성 치수에서 300dpi 이상, CMYK 변환 완료. 단색 배경은 캡처가 아니라 색상값으로" data-fr="<strong>Image :</strong> au moins 300 dpi à la taille finale, convertie en CMJN ; les fonds unis en valeurs colorimétriques, pas en captures" data-es="<strong>Imagen:</strong> al menos 300 ppp al tamaño final, convertida a CMYK; los fondos lisos como valores de color, no como capturas"><strong>圖像：</strong>成品尺寸下不低於 300dpi，已轉 CMYK；純色背景不要用截圖，用色值</li>
+        <li data-zh="<strong>文字：</strong>全部重排並轉曲，另附一份可編輯源文件與字體授權說明" data-en="<strong>Type:</strong> all reset and outlined, plus an editable source file and a note on font licensing" data-ja="<strong>文字：</strong>すべて組み直してアウトライン化し、編集可能な元データとフォントライセンスの説明を添付" data-ko="<strong>문자:</strong> 모두 재조판 후 외곽선화, 편집 가능한 원본과 폰트 라이선스 설명 첨부" data-fr="<strong>Texte :</strong> tout recomposé et vectorisé, avec un fichier source éditable et une note sur les licences de police" data-es="<strong>Texto:</strong> todo recompuesto y convertido a curvas, más un archivo editable y una nota sobre licencias de tipografía"><strong>文字：</strong>全部重排並轉曲，另附一份可編輯源文件與字體授權說明</li>
+        <li data-zh="<strong>顏色：</strong>專色按 Pantone 編號命名，四色部分給色值，不要只給一張圖" data-en="<strong>Colour:</strong> spot colours named by Pantone number, four-colour areas given as values, not just an image" data-ja="<strong>色：</strong>特色はPantone番号で命名、4色部分は色値で指定。画像だけにしない" data-ko="<strong>색:</strong> 별색은 Pantone 번호로 명명하고 4도 부분은 색상값으로 지정. 이미지만 주지 마십시오" data-fr="<strong>Couleur :</strong> teintes directes nommées par Pantone, zones quadri données en valeurs, pas seulement une image" data-es="<strong>Color:</strong> tintas directas nombradas por Pantone, zonas en cuatri dadas como valores, no solo una imagen"><strong>顏色：</strong>專色按 Pantone 編號命名，四色部分給色值，不要只給一張圖</li>
+        <li data-zh="<strong>工藝版：</strong>燙金、凹凸、UV 各一塊單獨的黑版，命名清楚" data-en="<strong>Process plates:</strong> a separate black plate for foil, emboss and UV each, clearly named" data-ja="<strong>工程版：</strong>箔・エンボス・UVそれぞれ専用の黒版を作り、名前を明確に" data-ko="<strong>공정판:</strong> 박, 엠보, UV 각각 별도 흑판을 만들고 이름을 명확히" data-fr="<strong>Plaques de process :</strong> une plaque noire distincte pour dorure, gaufrage et UV, nommée clairement" data-es="<strong>Planchas de proceso:</strong> una plancha negra aparte para estampado, gofrado y UV, con nombre claro"><strong>工藝版：</strong>燙金、凹凸、UV 各一塊單獨的黑版，命名清楚</li>
+        <li data-zh="<strong>結構：</strong>刀模線單獨圖層、出血 2 到 3 毫米、孔位與孔徑標尺寸" data-en="<strong>Structure:</strong> die line on its own layer, 2 to 3 mm bleed, hole position and diameter dimensioned" data-ja="<strong>構造：</strong>抜き線を別レイヤー、塗り足し2〜3mm、穴位置と径を寸法指定" data-ko="<strong>구조:</strong> 커팅선 별도 레이어, 도련 2~3mm, 구멍 위치와 지름 치수 표기" data-fr="<strong>Structure :</strong> trait de découpe sur calque séparé, 2 à 3 mm de fond perdu, position et diamètre des trous cotés" data-es="<strong>Estructura:</strong> línea de troquel en capa aparte, 2 a 3 mm de sangrado, posición y diámetro de agujeros acotados"><strong>結構：</strong>刀模線單獨圖層、出血 2 到 3 毫米、孔位與孔徑標尺寸</li>
+        <li data-zh="<strong>版本：</strong>文件名帶版本號與日期，一次只改一處，避免三家工廠拿到三個版本" data-en="<strong>Version:</strong> file name with version and date, one change at a time, so three factories do not hold three versions" data-ja="<strong>版管理：</strong>ファイル名に版番号と日付。一度に1か所だけ変更し、3工場が3版を持つ事態を避ける" data-ko="<strong>버전:</strong> 파일명에 버전과 날짜를 넣고 한 번에 한 곳만 수정해 세 공장이 세 버전을 갖는 일을 피하십시오" data-fr="<strong>Version :</strong> nom de fichier avec version et date, une modification à la fois, pour éviter trois versions chez trois usines" data-es="<strong>Versión:</strong> nombre de archivo con versión y fecha, un cambio a la vez, para que tres fábricas no tengan tres versiones"><strong>版本：</strong>文件名帶版本號與日期，一次只改一處，避免三家工廠拿到三個版本</li>
+      </ul>
+
+      <h2 data-zh="7. 版權與品牌風險" data-en="7. Copyright and Brand Risk" data-ja="7. 著作権とブランドリスク" data-ko="7. 저작권과 브랜드 리스크" data-fr="7. Droit d'auteur et risque de marque" data-es="7. Derechos de autor y riesgo de marca">7. 版權與品牌風險</h2>
+      <p data-zh="AI 生成內容的版權歸屬在多數司法轄區仍在明確之中，把純 AI 生成圖直接註冊爲商標、或在吊牌上主張獨佔使用，風險不低。更穩的做法是把 AI 當概念工具：用它出方向、出構圖，最終的品牌標識由設計師重繪爲矢量並保存設計過程記錄。同時要避開兩個雷區：一是生成的圖形與知名品牌標識高度相似，二是用 AI 模仿在世設計師或藝術家的既有風格做商業標識。這兩類問題在平臺審覈與海關抽查時都可能被攔下，處理成本遠高於重畫一張圖。"
+         data-en="Copyright in AI-generated output is still being settled in most jurisdictions, so registering a purely AI-made image as a trademark, or claiming exclusive use on a hang tag, carries real risk. The safer pattern is to treat AI as a concept tool — use it for direction and composition — and have a designer redraw the final brand mark as vector, keeping a record of the process. Two traps to avoid: generated graphics that closely resemble a well-known brand mark, and commercial marks that imitate a living designer's or artist's established style. Either can be stopped at marketplace review or customs inspection, at a cost far above redrawing one image."
+         data-ja="AI生成物の著作権帰属は多くの法域でなお明確化の途中にあり、純粋なAI生成画像をそのまま商標登録したり、タグ上で独占使用を主張したりするのはリスクが高い行為です。より安全なのはAIをコンセプトツールとして使うこと。方向性や構図を得るために使い、最終的なブランドマークはデザイナーがベクターで描き直し、制作過程の記録を残します。避けるべき地雷は2つ。生成図形が著名ブランドの標識に酷似していること、そして存命のデザイナーやアーティストの確立した作風を模倣した商業標識。いずれもモール審査や税関検査で止められ、1枚描き直すよりはるかに高くつきます。"
+         data-ko="AI 생성물의 저작권 귀속은 대부분의 관할에서 여전히 정리 중이며, 순수 AI 생성 이미지를 그대로 상표로 등록하거나 행택에서 독점 사용을 주장하는 것은 위험이 큽니다. 더 안전한 방식은 AI를 콘셉트 도구로 쓰는 것입니다. 방향과 구도를 얻는 데 쓰고, 최종 브랜드 마크는 디자이너가 벡터로 다시 그리며 제작 과정 기록을 남깁니다. 피해야 할 두 가지 지뢰. 생성된 도형이 유명 브랜드 표장과 매우 유사한 경우, 그리고 생존 디자이너나 작가의 확립된 화풍을 모방한 상업 표장입니다. 둘 다 플랫폼 심사나 세관 검사에서 막힐 수 있고, 이미지 한 장을 다시 그리는 것보다 훨씬 비쌉니다."
+         data-fr="Le droit d'auteur sur les productions d'IA reste en cours de fixation dans la plupart des juridictions : déposer une image purement générée comme marque, ou revendiquer un usage exclusif sur un hangtag, comporte un vrai risque. Le schéma plus sûr est de traiter l'IA comme un outil de conception — direction, composition — et de faire redessiner la marque finale en vectoriel par un designer, en conservant la trace du processus. Deux pièges à éviter : des graphismes très proches d'une marque connue, et des marques commerciales imitant le style établi d'un designer ou artiste vivant. Les deux peuvent être bloqués en revue de marketplace ou en contrôle douanier, pour un coût bien supérieur au redessin d'une image."
+         data-es="Los derechos de autor sobre resultados de IA se están fijando aún en la mayoría de jurisdicciones: registrar una imagen puramente generada como marca, o reclamar uso exclusivo en un colgante, conlleva riesgo real. El patrón más seguro es tratar la IA como herramienta de concepto —dirección y composición— y hacer que un diseñador redibuje la marca final en vectorial, conservando el registro del proceso. Dos trampas a evitar: gráficos muy parecidos a una marca conocida, y marcas comerciales que imiten el estilo consolidado de un diseñador o artista vivo. Ambas pueden frenarse en la revisión del marketplace o en la inspección de aduanas, con un coste muy superior al de redibujar una imagen.">AI 生成內容的版權歸屬在多數司法轄區仍在明確之中，把純 AI 生成圖直接註冊爲商標、或在吊牌上主張獨佔使用，風險不低。更穩的做法是把 AI 當概念工具：用它出方向、出構圖，最終的品牌標識由設計師重繪爲矢量並保存設計過程記錄。同時要避開兩個雷區：一是生成的圖形與知名品牌標識高度相似，二是用 AI 模仿在世設計師或藝術家的既有風格做商業標識。這兩類問題在平臺審覈與海關抽查時都可能被攔下，處理成本遠高於重畫一張圖。</p>
+      <div class="callout" data-zh="拿到一份 AI 稿，判斷能不能上機只問三句：有沒有矢量版？文字是不是重排過？顏色給的是 Pantone 號還是 RGB 截圖？三句裏有一個答不上來，就先做印前處理，不要直接送去打樣——打樣費不高，但打完發現要重做，耽誤的是整個上市時間。" data-en="With an AI file in hand, three questions decide whether it can go on press: is there a vector version, was the type reset, and are the colours Pantone references or RGB screenshots? If any answer is no, do the prepress work first instead of sending it to proof — proofs are cheap, but discovering a rebuild afterwards costs the launch date." data-ja="AIデータを受け取ったら、印刷に載せられるかは3つの質問で判断できます。ベクター版はあるか。文字は組み直したか。色はPantone番号かRGBのスクリーンショットか。1つでも答えられなければ、まずプリプレス処理を行い、そのまま校正に出さないこと。校正費は高くありませんが、後から作り直しになると発売時期を落とします。" data-ko="AI 파일을 받았을 때 인쇄 가능 여부는 세 가지 질문으로 판단합니다. 벡터판이 있는가? 문자를 다시 조판했는가? 색이 Pantone 번호인가 RGB 캡처인가? 하나라도 답이 없으면 먼저 프리프레스 작업을 하고 교정으로 바로 보내지 마십시오. 교정비는 크지 않지만 나중에 다시 만들어야 하면 출시 일정을 잃습니다." data-fr="Un fichier IA en main, trois questions décident de sa printabilité : existe-t-il une version vectorielle, le texte a-t-il été recomposé, et les couleurs sont-elles des références Pantone ou des captures RVB ? Si une réponse manque, faites la prépresse d'abord plutôt que d'envoyer une épreuve : l'épreuve coûte peu, mais découvrir qu'il faut refaire coûte la date de lancement." data-es="Con un archivo de IA en la mano, tres preguntas deciden si puede imprimirse: ¿hay versión vectorial?, ¿se recompuso el texto?, ¿los colores son referencias Pantone o capturas RGB? Si alguna respuesta falta, haga la preimpresión primero en lugar de enviar una prueba: la prueba cuesta poco, pero descubrir que hay que rehacerlo cuesta la fecha de lanzamiento.">拿到一份 AI 稿，判斷能不能上機只問三句：有沒有矢量版？文字是不是重排過？顏色給的是 Pantone 號還是 RGB 截圖？三句裏有一個答不上來，就先做印前處理，不要直接送去打樣——打樣費不高，但打完發現要重做，耽誤的是整個上市時間。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-ja="関連記事" data-ko="관련 기사" data-fr="Articles connexes" data-es="Artículos relacionados">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos">輔料 FAQ：全部文章</a></li>
+        <li><a href="hang-tag-artwork-guide.html" data-zh="吊牌設計稿準備：從圖稿到可印刷文件" data-en="Hang Tag Artwork: From Design to Print-Ready" data-ja="タグ図稿の準備：デザインから印刷可能データまで" data-ko="행택 도안 준비: 디자인에서 인쇄 가능 파일까지" data-fr="Le visuel de hangtag : du design au fichier imprimable" data-es="El artístico del colgante: del diseño al archivo imprimible">吊牌設計稿準備：從圖稿到可印刷文件</a></li>
+        <li><a href="trim-artwork-copyright-guide.html" data-zh="輔料設計稿的版權與授權覈對" data-en="Copyright and Licence Checks for Trims Artwork" data-ja="副資材図稿の著作権と許諾確認" data-ko="부자재 도안의 저작권과 허가 확인" data-fr="Droits d'auteur et licences sur les visuels d'accessoires" data-es="Derechos de autor y licencias en artísticos de accesorios">輔料設計稿的版權與授權覈對</a></li>
+        <li><a href="hang-tag-printing-methods.html" data-zh="吊牌印刷工藝詳解：膠印、數碼、燙金與壓凹凸" data-en="Hang Tag Printing Methods: Offset, Digital, Foil, Emboss" data-ja="タグ印刷方式の詳細：オフセット・デジタル・箔押し・エンボス" data-ko="행택 인쇄 방식: 오프셋, 디지털, 박, 엠보" data-fr="Procédés d'impression des hangtags : offset, numérique, dorure, gaufrage" data-es="Métodos de impresión de colgantes: offset, digital, estampado, gofrado">吊牌印刷工藝詳解：膠印、數碼、燙金與壓凹凸</a></li>
+        <li><a href="hang-tag-die-cutting-guide.html" data-zh="吊牌模切與異形加工指南" data-en="Hang Tag Die-Cutting and Shaped Formats" data-ja="タグの抜き加工と変形形状ガイド" data-ko="행택 커팅과 이형 가공 가이드" data-fr="Découpe et formes spéciales de hangtags" data-es="Troquelado y formatos especiales de colgantes">吊牌模切與異形加工指南</a></li>
+        <li><a href="woven-label-artwork-guide.html" data-zh="織嘜圖稿規範：把設計稿變成能織的文件" data-en="Woven Label Artwork: Making a Design Weavable" data-ja="織りネーム図稿の規範：織れるデータにする" data-ko="직조 라벨 도안 규범: 디자인을 직조 가능하게" data-fr="Le visuel d'un tissé : rendre un design tissable" data-es="El artístico de un tejido: hacer el diseño tejible">織嘜圖稿規範：把設計稿變成能織的文件</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="用 AI 出了吊牌或包裝的初稿？把原圖和成品尺寸發給我們，我們先做一次免費的印前體檢：標出哪些部分能直接用、哪些要重繪、小字與細線是否有風險，再給打樣方案。設計可以在你手上，印刷的問題交給我們。" data-en="Drafted a hang tag or packaging with AI? Send the original image and finished size. We will run a free prepress check: what can be used as is, what must be redrawn, and where small type or fine rules are at risk, then propose the proofing route. The design stays with you; the printing problems come to us." data-ja="AIでタグや包装の初稿を作りましたか。元画像と仕上がり寸法をお送りください。無料のプリプレス診断を行い、そのまま使える部分、描き直すべき部分、小さい文字や細線のリスクを洗い出し、校正方案をご提案します。デザインは御社に、印刷の課題は当社に。" data-ko="AI로 행택이나 포장 초안을 만드셨습니까? 원본 이미지와 완성 치수를 보내주십시오. 무료 프리프레스 점검으로 그대로 쓸 수 있는 부분, 다시 그려야 할 부분, 작은 글씨와 가는 선의 위험을 짚고 교정 방안을 제안합니다. 디자인은 귀사에, 인쇄 문제는 저희에게." data-fr="Un hangtag ou un emballage ébauché avec l'IA ? Envoyez l'image d'origine et la taille finie. Nous menons un contrôle prépresse gratuit : ce qui est utilisable tel quel, ce qu'il faut redessiner, et où les petits corps et filets fins présentent un risque, puis nous proposons la voie d'épreuve. Le design reste chez vous, les problèmes d'impression chez nous." data-es="¿Ha esbozado un colgante o un embalaje con IA? Envíe la imagen original y el tamaño final. Hacemos una revisión de preimpresión gratuita: qué sirve tal cual, qué hay que redibujar y dónde los textos pequeños o las líneas finas son un riesgo, y luego proponemos la vía de prueba. El diseño se queda con usted; los problemas de impresión, con nosotros.">用 AI 出了吊牌或包裝的初稿？把原圖和成品尺寸發給我們，我們先做一次免費的印前體檢：標出哪些部分能直接用、哪些要重繪、小字與細線是否有風險，再給打樣方案。設計可以在你手上，印刷的問題交給我們。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="提交稿件做印前檢查 →" data-en="Send artwork for a prepress check →" data-ja="図稿のプリプレス確認を依頼 →" data-ko="도안 프리프레스 점검 요청 →" data-fr="Envoyer un visuel pour contrôle prépresse →" data-es="Enviar artístico para revisión de preimpresión →">提交稿件做印前檢查 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI生成のタグ図稿はそのまま印刷できるか：解像度・ベクター・色 | TAGE</title>
+<meta name="description" content="AI図稿を印刷に載せる前の必須処理。ビットマップとベクターの違い、仕上がり寸法での300dpiの計算、文字を組み直す理由、RGBとCMYKの色域差、箔・エンボス・UV・織りの版要件、納品チェックリストを解説します。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/ai-generated-artwork-trim-printing-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩",
+     "item": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "AI 生成的吊牌設計稿能直接印刷嗎：分辨率、矢量與色彩",
+   "url": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/ai-generated-artwork-trim-printing-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>AI図稿と印刷</span></div>
+      <h1>AI生成のタグ図稿はそのまま印刷できるか：解像度・ベクター・色</h1>
+      <p>泰閣包装 · 2026年10月28日更新</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>AI画像生成はタグデザインの出稿を数日から数分に短縮し、多くの小規模ブランドが『デザインは外注しなくてよい』と感じるようになりました。しかし印刷側のルールは変わっていません。ファイルが製品を決めます。画面で美しい画像でも、そのまま印刷機に載せられる部分が一つもないことがあります。ピクセルでできていてベクターではなく、文字は『描かれた』もので組版されておらず、色は発光するRGBでインキのCMYKや特色ではないからです。本稿では、この3点がタグ、織りネーム、包装袋の実際の印刷にどう影響するか、そしてAIデータを工場に渡す前に何をすべきかを整理します。</p>
+
+      <h2>1. AIデータの3つの構造的な弱点</h2>
+      <p>第一はピクセルとベクターの違いです。AIの出力はビットマップで、最終寸法まで拡大すると輪郭が甘くなり、拡大するほど目立ちます。一方タグ上のロゴ、罫線、文字はベクターでなければ、抜きや箔押しの工程でシャープさを保てません。第二は文字です。生成モデルは『文字に見える形』を描くため、画のつながりが違ったり、漢字の画数が増減したり、6と8、1と7の混同が最も起きやすいところです。第三は色です。画面は加法混色で明るい緑や橙を表示できますが、インキは減法混色で再現できません。最も近い組み合わせに置き換える必要があり、この工程を飛ばすと、校正で『全然違う印象』になります。</p>
+
+      <h2>2. 解像度は仕上がり寸法で計算する</h2>
+      <p>『300dpi』という数字が有効なのは1つの前提のもとだけです。仕上がり寸法での300dpiという意味です。同じ1024ピクセルの正方形画像は35×55mmのタグなら足りますが、60×120mmにすると長辺は約217dpiまで落ち、輪郭の甘さが肉眼で分かります。AI画像が使えるかは、まず仕上がり寸法を測り、そこからピクセルを逆算して判断してください。</p>
+      <table>
+        <tr><th>タグ仕上がり寸法</th><th>300dpi の最小ピクセル</th><th>600dpi（細線・小さい文字・箔押し）</th></tr>
+        <tr><td>35 × 55 mm</td><td>413 × 650</td><td>827 × 1299</td></tr>
+        <tr><td>40 × 70 mm</td><td>472 × 827</td><td>945 × 1654</td></tr>
+        <tr><td>50 × 90 mm</td><td>591 × 1063</td><td>1181 × 2126</td></tr>
+        <tr><td>60 × 120 mm</td><td>709 × 1417</td><td>1417 × 2835</td></tr>
+      </table>
+      <div class="callout">実用的な判断基準。AI画像を仕上がり寸法まで等倍拡大し、拡大率が30%以内で、ぼかした背景や抽象的なテクスチャなら救えることが多いです。2倍を超える場合、または拡大後の主体がロゴ・文字・細線なら、補正せず描き直してください。補正で救った画像は箔押しやエンボスで最も破綻します。</div>
+
+      <h2>3. 文字は組み直す。そのまま使わない</h2>
+      <p>最も飛ばされやすく、最も事故になりやすい工程です。AI画像内の文字は文字ではなく図形で、プリプレスソフトで編集できず、字間も調整できず、誤字の有無も確認できません。ブランド名の綴り誤り、S/M/LにXLが混じる、洗濯表示の一文が欠ける。こうした問題は校正では見えず、量産後に発覚して全数廃棄になります。AI画像は背景や図形素材として扱い、文字はすべて組版ソフトでライセンス済みフォントにより組み直し、照合表で一字ずつ確認してください。</p>
+      <ul>
+        <li><strong>画像内の文字を消す：</strong>生成時に文字部分を空けるか、後処理で消してください。『文字に見えるもの』を印刷面に残さないこと</li>
+        <li><strong>ライセンス済みフォントで組み直す：</strong>商用利用可否を確認（個人無料は商用無料ではありません）。フォント名を仕様書に記載し、次回も再現できるようにします</li>
+        <li><strong>納品時にアウトライン化：</strong>フォント欠けを防げますが、編集可能な元データも別途保管し、後から価格やサイズを変更できるようにします</li>
+      </ul>
+
+      <h2>4. 色：画面の鮮やかさはインキで出せない</h2>
+      <p>RGBの色域はCMYKより広く、特に高彩度の緑・橙・紫・蛍光色は画面では映えますが、4色印刷では沈んで見えます。これは不良ではなく物理的な制約です。結果を制御する方法は3つ。ブランドカラーはスクリーンショットではなくPantone番号で指定する。大きな濃い黒は4色重ねか特色の黒を使い、単色黒が灰色に見えるのを避ける。反転した小さい文字は画線の太さを確保する（ベタ墨量に最初に負けます）。またタグはクラフト紙やコットン紙など色のある紙を使うことが多く、紙の色でインキの発色がずれます。その場合は白紙で一度校正し、目標の紙で再度確認してください。</p>
+
+      <h2>5. 工程対応：箔押し・エンボス・UV・織りネーム</h2>
+      <p>AI画像の金属感、浮き彫り感、光沢は『描かれた効果』であり、工程用データではありません。実際に箔押しやエンボスをするには、単色ベタのベクター版を別途作成する必要があります。よくある誤解は、AI画像の金属部分を切り取って渡せばよいというもの。工場が受け取るのはグラデーションのビットマップで、版は網点にしかならず、箔がまだらになります。</p>
+      <table>
+        <tr><th>工程</th><th>データに必要なもの</th></tr>
+        <tr><td>箔押し</td><td>単色ベタのベクター。線幅0.25mm以上、文字高3mm以上、ベタ部分と距離を取る</td></tr>
+        <tr><td>エンボス・デボス</td><td>同上に加え、紙の坪量を明示。薄い紙は深く押すと割れるため、300g/㎡以下は浅めにする</td></tr>
+        <tr><td>部分UV・ニス</td><td>ニス部分を示す専用の黒版。縁に0.5mmの見当余白を残す</td></tr>
+        <tr><td>抜きと穴あけ</td><td>抜き線を別レイヤーにし印刷なしと明記、塗り足し2〜3mm</td></tr>
+        <tr><td>織りネーム</td><td>色数は織機と糸に制約され、細線と小さい文字は織り精度に合わせて拡大が必要。実際の下限はサンプルで確認</td></tr>
+      </table>
+
+      <h2>6. 納品チェックリスト：AI画像を印刷データにする</h2>
+      <ul>
+        <li><strong>画像：</strong>仕上がり寸法で300dpi以上、CMYK済み。無地背景はスクリーンショットではなく色値で</li>
+        <li><strong>文字：</strong>すべて組み直してアウトライン化し、編集可能な元データとフォントライセンスの説明を添付</li>
+        <li><strong>色：</strong>特色はPantone番号で命名、4色部分は色値で指定。画像だけにしない</li>
+        <li><strong>工程版：</strong>箔・エンボス・UVそれぞれ専用の黒版を作り、名前を明確に</li>
+        <li><strong>構造：</strong>抜き線を別レイヤー、塗り足し2〜3mm、穴位置と径を寸法指定</li>
+        <li><strong>版管理：</strong>ファイル名に版番号と日付。一度に1か所だけ変更し、3工場が3版を持つ事態を避ける</li>
+      </ul>
+
+      <h2>7. 著作権とブランドリスク</h2>
+      <p>AI生成物の著作権帰属は多くの法域でなお明確化の途中にあり、純粋なAI生成画像をそのまま商標登録したり、タグ上で独占使用を主張したりするのはリスクが高い行為です。より安全なのはAIをコンセプトツールとして使うこと。方向性や構図を得るために使い、最終的なブランドマークはデザイナーがベクターで描き直し、制作過程の記録を残します。避けるべき地雷は2つ。生成図形が著名ブランドの標識に酷似していること、そして存命のデザイナーやアーティストの確立した作風を模倣した商業標識。いずれもモール審査や税関検査で止められ、1枚描き直すよりはるかに高くつきます。</p>
+      <div class="callout">AIデータを受け取ったら、印刷に載せられるかは3つの質問で判断できます。ベクター版はあるか。文字は組み直したか。色はPantone番号かRGBのスクリーンショットか。1つでも答えられなければ、まずプリプレス処理を行い、そのまま校正に出さないこと。校正費は高くありませんが、後から作り直しになると発売時期を落とします。</div>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+        <li><a href="hang-tag-artwork-guide.html">タグ図稿の準備：デザインから印刷可能データまで</a></li>
+        <li><a href="trim-artwork-copyright-guide.html">副資材図稿の著作権と許諾確認</a></li>
+        <li><a href="hang-tag-printing-methods.html">タグ印刷方式の詳細：オフセット・デジタル・箔押し・エンボス</a></li>
+        <li><a href="hang-tag-die-cutting-guide.html">タグの抜き加工と変形形状ガイド</a></li>
+        <li><a href="woven-label-artwork-guide.html">織りネーム図稿の規範：織れるデータにする</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>AIでタグや包装の初稿を作りましたか。元画像と仕上がり寸法をお送りください。無料のプリプレス診断を行い、そのまま使える部分、描き直すべき部分、小さい文字や細線のリスクを洗い出し、校正方案をご提案します。デザインは御社に、印刷の課題は当社に。</p>
+        <a class="cta-btn" href="../contact.html">図稿のプリプレス確認を依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
