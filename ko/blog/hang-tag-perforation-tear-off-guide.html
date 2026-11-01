@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 절취선과 2연 행택 설계: 구조, 인열 강도, 금형 | TAGE</title>
+<meta name="description" content="행택 절취선 설계 가이드. 원형 타공·톱니날 하프컷·미세 연결점 세 구조, 인열 강도 설정, 2연·3연 행택의 정보 분담, 종이 두께와 라미네이팅 영향, 샘플 확인 네 가지를 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-perforation-tear-off-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-perforation-tear-off-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌易撕線與雙聯吊牌設計指南：結構、撕裂力與刀模",
+     "item": "https://taigetag.com/blog/hang-tag-perforation-tear-off-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌易撕線與雙聯吊牌設計指南：結構、撕裂力與刀模",
+   "url": "https://taigetag.com/blog/hang-tag-perforation-tear-off-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-perforation-tear-off-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>절취선과 2연</span></div>
+      <h1>행택 절취선과 2연 행택 설계: 구조, 인열 강도, 금형</h1>
+      <p>TAGE 패키징 · 2026년 11월 1일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>행택의 절취선은 작은 구멍 한 줄로 보이지만 실제로 세 가지를 결정합니다. 매장에서 깔끔하게 뜯기는지, 2연 행택의 정보를 분리해 쓸 수 있는지, 그리고 행택을 몰래 바꿔 반품하는 일을 막을 수 있는지. 문제는 디자인이 아니라 구멍 간격, 금형, 종이 두께의 조합에서 생깁니다.</p>
+
+      <p>이 글에서는 세 가지 절취 구조의 차이, 뜯기는 감각을 정하는 방법, 2연·3연 행택의 정보 분담, 종이와 라미네이팅이 절취선에 미치는 영향, 샘플에서 반드시 손으로 확인해야 할 네 가지를 다룹니다.</p>
+
+      <h2>세 가지 절취 구조의 선택</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>구조</th>
+            <th>절단면 외관</th>
+            <th>뜯기는 감각</th>
+            <th>적합한 용도</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>타공선(원형·장공)</td>
+            <td>가지런한 톱니 모양, 구멍이 보임</td>
+            <td>가장 안정적, 힘이 약해도 한 번에 뜯김</td>
+            <td>매장 절취, 2연 분리, 가격 행택</td>
+          </tr>
+          <tr>
+            <td>톱니날 하프컷(숨은 선)</td>
+            <td>뚜렷한 구멍 없이 뜯은 뒤에야 흰 자국이 보임</td>
+            <td>약간 무겁고 절단면이 더 깔끔</td>
+            <td>외관을 중시하는 브랜드 행택, 교체 방지</td>
+          </tr>
+          <tr>
+            <td>미세 연결점(단속 컷)</td>
+            <td>거의 보이지 않아 의식적으로 힘을 줘야 함</td>
+            <td>가장 무겁고 도구 없이는 뜯기 어려움</td>
+            <td>고급 행택, 위조 방지·이력 추적</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>인열 강도 정하기: 감각으로 설명하고 샘플로 확인</h2>
+
+      <p>메일에 &#x27;쉽게 뜯김&#x27;이라고 쓰는 것은 의미가 없습니다. 사람마다 힘이 다르기 때문입니다. 재현 가능한 기준이 낫습니다. 폭 15mm 시료를 성인이 한 손 엄지와 검지로 한 번에 뜯을 수 있고 절단면이 타공선을 따라 곧게 가야 적정입니다. 두 손이나 가위가 필요하면 연결점이 너무 촘촘하고, 살짝만 닿아도 끊어지면 구멍 간격이 넓거나 종이가 얇습니다.</p>
+
+      <p>양산 전에 실제 종이와 두께로 5~10장을 만들어 고객이 직접 뜯어 보게 하십시오. 메일로 길게 설명하는 것보다 훨씬 효과적입니다. 같은 행택을 두 로트로 나눠 생산하면 금형 마모로 구멍 간격이 달라져 2차 로트의 감각이 확연히 달라집니다. 검수 기준에 공차를 두어야 합니다.</p>
+
+      <h2>2연·3연 행택의 정보 분담</h2>
+
+      <p>2연 행택의 일반적인 분담은 본체에 브랜드와 비주얼, 보조 부분에 가격·바코드·사이즈·혼용률입니다. 두 부분을 절취선으로 연결하고 매장은 보조 부분을 뜯어 본체를 남깁니다. 반품 시 본체로 출처를 확인하므로 가장 저렴한 교체 방지 설계입니다.</p>
+
+      <ul>
+        <li>가격 부분은 가장 바깥쪽에. 뜯은 뒤 잔여 접착제가 없어 계산대에서 빠르게 처리됩니다</li>
+        <li>바코드 부분은 본체와 분리. 가격표를 뜯다 바코드가 손상되어 스캔이 실패하는 것을 막습니다</li>
+        <li>사이즈·혼용률 부분은 여러 SKU가 본체를 공유할 수 있어 다품종 인쇄비를 낮춥니다</li>
+      </ul>
+
+      <p>3연 이상은 신중해야 합니다. 한 부분이 늘 때마다 금형과 정합이 추가되어 원가가 눈에 띄게 오르지만, 매장에서 실제로 분리하는 것은 대개 두 부분까지입니다. 세 번째 부분이 사후 안내뿐이라면 본체 뒷면에 인쇄하는 편이 저렴하고 분실 위험도 적습니다.</p>
+
+      <h2>종이와 라미네이팅이 절취선에 미치는 영향</h2>
+
+      <ul>
+        <li>250~300g 백카드나 아트지: 가장 흔한 절취 구간으로 절단면이 깔끔하고 종이 가루가 적음</li>
+        <li>350g 이상: 인열 강도가 크게 올라 구멍 간격을 넓히지 않으면 곧게 뜯기지 않음</li>
+        <li>무광 라미네이팅: 절단면에 흰 필름 섬유가 생겨 원형 구멍보다 톱니날이 적합</li>
+        <li>광택 라미네이팅이나 부분 UV: 절단면이 취성이 생겨 타공선 부근이 들뜨고 층이 분리됨</li>
+        <li>재생지·면지는 섬유가 길고 방향성이 강해 결 방향으로 판을 짜지 않으면 뜯기는 선이 어긋남</li>
+      </ul>
+
+      <h2>샘플에서 반드시 손으로 확인할 네 가지</h2>
+
+      <ol>
+        <li>뜯기는 방향: 타공선을 따라가는지 비스듬히 흐르는지, 분리한 두 부분이 변형되지 않는지</li>
+        <li>절단면 보풀과 종이 가루: 어두운 행택에서 특히 두드러지고 밝은 의류를 오염시킴</li>
+        <li>정합 정밀도: 타공선과 인쇄 요소 사이에 최소 2~3mm 안전 여유를 둠</li>
+        <li>치수 공차: 분리 후 두 부분의 차이를 ±0.5mm 이내로. 초과하면 적재 시 비뚤어짐</li>
+      </ol>
+
+      <h2>자주 빠지는 세 가지 함정</h2>
+
+      <ul>
+        <li>원형 구멍 금형을 톱니날 선으로 전용하면서 간격을 다시 계산하지 않으면 인쇄층까지 뜯깁니다</li>
+        <li>라미네이팅 후 타공하면 구멍이 필름으로 막혀 뜯기지 않아 금형을 다시 만들어야 함</li>
+        <li>두 부분을 따로 인쇄하면 정합이 어긋나 절취선이 제품명 위에 걸림</li>
+      </ul>
+
+      <div class="callout">원칙은 하나입니다. 절취선은 기능 부품이지 장식이 아닙니다. 순서를 뒤집으십시오. 먼저 뜯기는 감각과 절단면 외관을 정하고, 다음 구멍 간격과 금형, 마지막에 판면을 짭니다.</div>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="index.html">부자재 FAQ 전체 글 보기</a></li>
+        <li><a href="hang-tag-die-cutting-guide.html">행택 금형 가공: 이형, 라운드, 금형 배치</a></li>
+        <li><a href="hang-tag-set-combination-guide.html">행택 세트 구성: 본체, 보조 태그, 고정구</a></li>
+        <li><a href="hang-tag-paper-thickness.html">행택 용지 평량 선택: 두께와 감촉 비교</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>2연 행택이나 교체 방지 절취선이 필요하신가요? 사이즈, 종이 평량, 절취 위치를 알려주시면 금형 도면과 감각 샘플을 먼저 만들어 확인 후 금형을 제작합니다.</p>
+        <a class="cta-btn" href="../contact.html">2연 행택·절취선 상담 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
