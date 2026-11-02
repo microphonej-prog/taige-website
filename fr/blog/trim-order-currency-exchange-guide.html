@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devise et clause de change dans les devis d&#x27;export d&#x27;accessoires | TAGE</title>
+<meta name="description" content="Devise et clause de change dans les devis : coût réel d&#x27;une cotation en dollars, euros ou monnaie locale, quatre partages du risque et taux de référence.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/fr/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-order-currency-exchange-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-order-currency-exchange-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料出口報價的幣種與匯率條款指南",
+     "item": "https://taigetag.com/blog/trim-order-currency-exchange-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料出口報價的幣種與匯率條款指南",
+   "url": "https://taigetag.com/blog/trim-order-currency-exchange-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-order-currency-exchange-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Emballages</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Accueil</a>
+      <a href="../products.html">Produits</a>
+      <a href="../about.html">À propos</a>
+      <a href="index.html">FAQ Accessoires</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag active" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Accueil</a> / <a href="index.html">FAQ Accessoires</a> / <span>Devise et clause de change</span></div>
+      <h1>Devise et clause de change dans les devis d&#x27;export d&#x27;accessoires</h1>
+      <p>Par TAGE Packaging  ·  Mis à jour le 2 novembre 2026</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>Le prix de l&#x27;accessoire est validé, mais le règlement ne colle pas : l&#x27;écart vient rarement des quantités, presque toujours de la devise. Papier, résine plastique et certaines fibres synthétiques sont eux-mêmes cotés en dollars ; un coût de revient en yuans est converti en facture en dollars, avec trois taux entre les deux — date de devis, date de production, date de paiement. Qui absorbe l&#x27;écart se décide au contrat ; sans clause, c&#x27;est le vendeur.</p>
+
+      <p>Ce guide traite le choix de la devise de cotation, quatre façons de partager le risque de change, la rédaction de la validité et du taux de référence, le coût de conversion selon le mode de paiement, et une liste de clauses à recopier.</p>
+
+      <h2>Pourquoi la clause de change doit figurer au contrat</h2>
+
+      <p>Une commande d&#x27;accessoires court en général 30 à 90 jours entre devis et paiement. Les marges nettes du secteur sont à un chiffre : un mouvement de change de 3 % efface le bénéfice d&#x27;une commande entière, et 3 % en un trimestre n&#x27;est pas rare. Sans clause, le vendeur absorbe tout en silence. Avec une clause, le litige a au moins une base et un calcul, au lieu d&#x27;une négociation à la bonne volonté.</p>
+
+      <h2>Choisir la devise de cotation</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Devise</th>
+            <th>Cas d&#x27;usage</th>
+            <th>Le coût à connaître</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dollar US</td>
+            <td>Standard pour l&#x27;Europe, les Amériques, le Golfe et l&#x27;Amérique latine</td>
+            <td>Le plus familier aux acheteurs ; conversion et exposition restent au vendeur</td>
+          </tr>
+          <tr>
+            <td>Euro</td>
+            <td>Clients de l&#x27;UE et accords-cadres annuels</td>
+            <td>Comparaison facile ; volatilité supérieure au dollar</td>
+          </tr>
+          <tr>
+            <td>Yuan</td>
+            <td>Clients domestiques et une partie de l&#x27;Asie du Sud-Est</td>
+            <td>Aucun risque pour le vendeur ; l&#x27;acheteur convertit et peut demander une remise</td>
+          </tr>
+          <tr>
+            <td>Devise locale de l&#x27;acheteur</td>
+            <td>Marchés où le dollar manque, Amérique latine ou Turquie</td>
+            <td>Perte de change et risque réglementaire élevés : à intégrer au prix ou à encadrer</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Quatre façons de partager le risque de change</h2>
+
+      <ul>
+        <li>Prix ferme à validité courte : le devis tient 15 à 30 jours puis est reconfirmé. Le plus simple et le plus courant, adapté aux commandes moyennes.</li>
+        <li>Bande de déclenchement : fixer un taux de référence et une bande, souvent plus ou moins deux à trois pour cent, puis ajuster le prix au prorata au-delà. Adapté aux contrats de six mois et plus.</li>
+        <li>Fixation par tranches : un contrat long est chiffré trimestre par trimestre ou mois par mois, chaque tranche confirmée au taux du moment, sans prévision à six mois.</li>
+        <li>Cotation en devise locale avec marge tampon : deux à quatre pour cent intégrés pour la conversion et le rapatriement. Le prix unitaire paraît plus élevé qu&#x27;en dollars, mais l&#x27;encaissement est plus stable.</li>
+      </ul>
+
+      <h2>Taux de référence et date de fixation : là où naissent les litiges</h2>
+
+      <p>Trois éléments doivent être écrits : la source du taux — parité centrale publiée par le centre chinois de change, ou cours d&#x27;achat à terme d&#x27;une banque nommée —, la date de fixation, choisie parmi date de devis, de contrat, d&#x27;expédition ou de paiement et une seule, et le nombre de décimales. Les litiges portent presque toujours sur le jour retenu : la parité du jour d&#x27;expédition est bien plus opérationnelle que la formule taux en temps réel.</p>
+
+      <h2>Les conditions de paiement décident du coût de conversion</h2>
+
+      <p>Un acompte par virement avec le solde contre copie du connaissement est la combinaison la plus courante à l&#x27;export d&#x27;accessoires, et la plus maîtrisable en coût. La lettre de crédit rogne la marge par ses frais bancaires et ses exigences documentaires, et la compensation en dollars dans le pays de la banque émettrice peut tarder : intégrez ce coût de délai. Les encaissements par plateforme, PayPal ou Stripe, portent des frais et une conversion plus lourds — adaptés aux échantillons, pas à un conteneur d&#x27;accessoires. Omettre un à trois pour cent de coût de financement, c&#x27;est offrir la marge.</p>
+
+      <h2>Indexation aux matières : papier et plastique sont ancrés au dollar</h2>
+
+      <p>Papier, résines PE et PP, certaines fibres synthétiques sont cotés en dollars : un coût de revient en yuans bouge donc sur deux fronts, et un change favorable peut coïncider avec une hausse de résine. Plutôt que la formule vague d&#x27;un prix ajustable au marché, joignez au devis une décomposition de coût indiquant la part matière, l&#x27;indice public suivi et la périodicité de révision, pour discuter sur la même feuille.</p>
+
+      <h2>Une liste de clauses à recopier</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Clause</th>
+            <th>Formulation suggérée</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Devise et incoterm</td>
+            <td>USD, FOB Shenzhen</td>
+          </tr>
+          <tr>
+            <td>Validité</td>
+            <td>30 jours à compter du devis</td>
+          </tr>
+          <tr>
+            <td>Taux de référence</td>
+            <td>Parité centrale CFETS du jour d&#x27;expédition</td>
+          </tr>
+          <tr>
+            <td>Déclencheur d&#x27;ajustement</td>
+            <td>Au-delà de plus ou moins trois pour cent, ajustement au prorata</td>
+          </tr>
+          <tr>
+            <td>Paiement</td>
+            <td>Acompte de 30 pour cent par virement, solde contre copie du connaissement</td>
+          </tr>
+          <tr>
+            <td>Indexation matière</td>
+            <td>Papier et PE indexés sur références publiées, revus chaque trimestre</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">Un principe : une clause de change n&#x27;est pas de la méfiance, elle met l&#x27;incertitude sur la table. Celui qui l&#x27;écrit clairement obtient souvent les délais les plus longs.</div>
+
+      <h2>Articles liés</h2>
+
+      <ul>
+        <li><a href="index.html">Retour à tous les articles FAQ accessoires</a></li>
+        <li><a href="trim-quotation-validity-guide.html">Validité des devis et volatilité des matières : bloquer, ajuster, livrer par étapes</a></li>
+        <li><a href="trim-quotation-comparison-guide.html">Comparer des devis d&#x27;accessoires : questions clés et coûts cachés</a></li>
+        <li><a href="apparel-trims-price-adjustment-guide.html">Pourquoi les prix bougent : structure de coût, clauses d&#x27;ajustement, verrouillage</a></li>
+        <li><a href="trim-export-incoterms-guide.html">Incoterms à l&#x27;export d&#x27;accessoires : FOB, CIF, DDP</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Besoin d&#x27;un devis en anglais avec clause de change, prêt à envoyer ? Indiquez catégorie, quantité et incoterm : nous émettons un devis formel dans votre devise et vos conditions.</p>
+        <a class="cta-btn" href="../contact.html">Demander un devis formel avec clause de change →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Emballages</h4>
+        <p>Fabricant professionnel d&#x27;accessoires vestimentaires, d&#x27;emballages et d&#x27;impression, situé à Dongguan, en Chine.</p>
+      </div>
+      <div>
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Étiquettes suspendues</a></li>
+          <li><a href="../products.html#wovenlabels">Labels tissés / Principaux</a></li>
+          <li><a href="../products.html#carelabels">Étiquettes d&#x27;entretien</a></li>
+          <li><a href="../products.html#bags">Sacs d&#x27;emballage</a></li>
+          <li><a href="../products.html#paperbags">Sacs en papier écologiques</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, Chine</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
