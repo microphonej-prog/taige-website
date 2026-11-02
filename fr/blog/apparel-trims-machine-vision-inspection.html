@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contrôle par vision des accessoires : ce qu&#x27;il peut vraiment vérifier | TAGE</title>
+<meta name="description" content="Vision artificielle sur accessoires : défauts détectables, éclairage et seuils pour labels tissés et étiquettes, tolérances ΔE, comparaison homme-machine et seuil de rentabilité.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/fr/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+     "item": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+   "url": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Emballages</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Accueil</a>
+      <a href="../products.html">Produits</a>
+      <a href="../about.html">À propos</a>
+      <a href="index.html">FAQ Accessoires</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag active" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Accueil</a> / <a href="index.html">FAQ Accessoires</a> / <span>Contrôle par vision</span></div>
+      <h1>Contrôle par vision des accessoires : ce qu&#x27;il peut vérifier et comment le déployer</h1>
+      <p>Par TAGE Packaging  ·  Mis à jour le 2 novembre 2026</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>L&#x27;inspection par vision artificielle est évoquée depuis des années dans les accessoires du vêtement, mais peu de lignes fonctionnent vraiment. L&#x27;obstacle n&#x27;est pas la caméra mais la variété des produits : dans le même atelier, un label tissé signifie de petits caractères très denses, une étiquette suspendue de grandes surfaces en couleur d&#x27;accompagnement, et un sac poly un matériau continu et transparent. Éclairage, objectif et logique de décision diffèrent totalement. Acheter un système générique en espérant qu&#x27;il s&#x27;adapte seul échoue presque toujours.</p>
+
+      <p>Ce guide traite ce que la vision peut et ne peut pas contrôler, la fixation des seuils pour les deux cas difficiles — caractères de labels tissés et couleur d&#x27;étiquettes suspendues —, les points de vigilance en inspection en ligne des sacs poly, et le volume de commande qui justifie l&#x27;équipement.</p>
+
+      <h2>Ce que la vision contrôle, et ce qu&#x27;elle ne contrôle pas</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type de défaut</th>
+            <th>Pratique actuelle</th>
+            <th>Faisabilité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Traits manquants, caractères baveux ou duite sautée sur label tissé</td>
+            <td>Loupe et œil, prélèvement de 10 à 20 %</td>
+            <td>Faisable, à condition de figer position et éclairage</td>
+          </tr>
+          <tr>
+            <td>Dérive de repérage et écart de teinte sur étiquettes</td>
+            <td>Bon à tirer comparé au nuancier, puis l&#x27;expérience</td>
+            <td>Faisable, jugé sur un seuil ΔE</td>
+          </tr>
+          <tr>
+            <td>Soudures manquantes, bulles, impression absente sur sacs</td>
+            <td>Essais de déchirure ; des bobines entières sont jetées</td>
+            <td>Faisable, adapté à l&#x27;inspection en ligne</td>
+          </tr>
+          <tr>
+            <td>Dimensions hors tolérance, bords effilochés</td>
+            <td>Contrôle au pied à coulisse, taille garantie au bon à tirer</td>
+            <td>Faisable avec un gabarit de positionnement</td>
+          </tr>
+          <tr>
+            <td>Toucher, souplesse, odeur, résidus de solvant</td>
+            <td>Main et nez, ou un laboratoire externe</td>
+            <td>Non : garder l&#x27;humain ou le laboratoire</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>En une phrase : la vision excelle en géométrie et en couleur visibles, et échoue sur la physique et la chimie que l&#x27;on touche. Mélanger les deux fausse tout projet.</p>
+
+      <h2>Caractères de labels tissés : le cas le plus difficile</h2>
+
+      <p>Un label tissé est tissé, pas imprimé : les bords de caractères sont naturellement flous, les fils de chaîne dérivent légèrement avec la tension, et le contraste s&#x27;effondre quand fond et texte sont proches. Trois points à régler d&#x27;abord : un éclairage latéral rasant pour que le relief chaîne-trame projette une ombre et révèle le contour des traits ; une résolution suffisante, au moins 20 pixels par millimètre sous 1,5 mm de hauteur de caractère ; et une comparaison sur gabarit avec tolérance plutôt qu&#x27;un appariement rigide au pixel, car la tension varie d&#x27;une bobine à l&#x27;autre et le rigide condamne du bon produit.</p>
+
+      <p>Les critères d&#x27;acceptation doivent figurer dans le document de contrôle, pas dans la tête d&#x27;un ingénieur : longueur de fil rompu admise, part de surface de caractère baveuse, nombre de duites sautées, nombre de taches. Sans ces seuils, la vision ne fait que remplacer une discussion humaine par une discussion machine.</p>
+
+      <h2>Repérage et couleur d&#x27;étiquettes : laisser parler le ΔE</h2>
+
+      <p>Les étiquettes suspendues sont imprimées en grandes surfaces de couleur d&#x27;accompagnement ; les deux contrôles les plus utiles y sont la dérive de repérage et l&#x27;écart de teinte. Méthode praticable : prendre le bon à tirer validé par le client comme référence, accepter sous ΔE00 2, traiter 2 à 3 comme une alerte à recontrôler, refuser au-delà de 3. La tolérance doit être convenue avec le client : la fast fashion et le luxe n&#x27;acceptent pas les mêmes plages.</p>
+
+      <p>Deux pièges : les effets métallisés (dorure, film holographique) et les fonds sombres (noir, marine) se déforment à la caméra et exigent leur propre calibration de balance des blancs et d&#x27;exposition, sans partager les réglages du quadri courant. Et les papiers texturés, recyclés ou coton, font sauter les mesures : mesurez une zone moyenne plutôt qu&#x27;un point.</p>
+
+      <h2>Sacs poly : inspection en ligne d&#x27;un matériau continu</h2>
+
+      <p>Les sacs poly défilent en bobine continue : la vision convient donc aux défauts continus — impression manquante, dérive de repérage entre couleurs, corps étranger dans la soudure, rayures, perçages décalés. Ces systèmes se placent en sortie de machine à sacs, tournent à la vitesse de ligne et déclenchent alarme et arrêt après une série de défauts, évitant la mise au rebut d&#x27;une bobine entière — le coût le plus douloureux pour un sacher.</p>
+
+      <p>Un détail souvent oublié : le sac est transparent ou translucide, donc un éclairage frontal n&#x27;offre presque aucun contraste. Le rétro-éclairage, en transmission, révèle bien mieux corps étrangers, bulles et variations d&#x27;épaisseur — la méthode standard de la filmerie.</p>
+
+      <h2>Pourquoi la plupart des usines contrôlent encore à la main</h2>
+
+      <p>Les caméras sont bon marché ; une décision stable coûte cher. Trois seuils concrets : la fréquence de changement, car chaque SKU exige un nouveau gabarit et une nouvelle position d&#x27;éclairage, et cinq changements par jour mangent le bénéfice ; la taille de lot, car sous quelques milliers de pièces par modèle l&#x27;amortissement ne passe pas ; et le refus réel du client, car si les défauts ne provoquent qu&#x27;une reprise interne sans pénalité, le contrôle manuel suffit.</p>
+
+      <p>En pratique, la vision arrive d&#x27;abord dans trois cas : étiquettes suspendues à fort volume et SKU unique, sacs poly en bobine continue, et labels de taille ou de composition où la précision des caractères est critique. Tous trois partagent des normes claires, un volume stable et un échec coûteux.</p>
+
+      <h2>Un déploiement en trois étapes</h2>
+
+      <ol>
+        <li>Prélèvement hors ligne : deux semaines de comparaison homme-machine sur une machine, en notant à la fois les défauts manqués et les faux rejets. Parler de contrôle total sans ces données, c&#x27;est parier.</li>
+        <li>Assistance au poste : installer la vision aux postes critiques — après coupe des labels, au banc de contrôle des étiquettes — en mode alerte seulement, l&#x27;opérateur confirmant la décision. C&#x27;est l&#x27;étape qui gagne l&#x27;adhésion.</li>
+        <li>Contrôle total en ligne : une fois les décisions stables, raccorder à la ligne, définir alarme et arrêt, et inscrire les seuils dans l&#x27;accord technique avec le client pour fonder la réception.</li>
+      </ol>
+
+      <div class="callout">Un principe : la vision n&#x27;améliore pas la qualité, elle transforme une norme en seuils exécutables. Réglez la norme d&#x27;abord, l&#x27;équipement ensuite ; si la norme ne fait pas consensus, l&#x27;équipement ne fait qu&#x27;enrichir le litige.</div>
+
+      <h2>Articles liés</h2>
+
+      <ul>
+        <li><a href="index.html">Retour à tous les articles FAQ accessoires</a></li>
+        <li><a href="garment-trims-quality-inspection.html">Contrôle qualité des accessoires : AQL, plans d&#x27;échantillonnage et réception</a></li>
+        <li><a href="trim-label-consistency-audit-guide.html">Audit de cohérence des labels entre lots et usines</a></li>
+        <li><a href="hang-tag-color-management.html">Gestion couleur des étiquettes, du nuancier à la série</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>On vous demande des données de contrôle ou un bon à tirer ? Envoyez-nous un échantillon défectueux et un échantillon acceptable : nous validons le premier tirage selon les seuils convenus avec votre client et inscrivons les critères dans l&#x27;accord technique.</p>
+        <a class="cta-btn" href="../contact.html">Demander un cadre de contrôle et un bon à tirer →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Emballages</h4>
+        <p>Fabricant professionnel d&#x27;accessoires vestimentaires, d&#x27;emballages et d&#x27;impression, situé à Dongguan, en Chine.</p>
+      </div>
+      <div>
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Étiquettes suspendues</a></li>
+          <li><a href="../products.html#wovenlabels">Labels tissés / Principaux</a></li>
+          <li><a href="../products.html#carelabels">Étiquettes d&#x27;entretien</a></li>
+          <li><a href="../products.html#bags">Sacs d&#x27;emballage</a></li>
+          <li><a href="../products.html#paperbags">Sacs en papier écologiques</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, Chine</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

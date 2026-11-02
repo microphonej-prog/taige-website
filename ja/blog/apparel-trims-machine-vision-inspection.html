@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣料副資材のマシンビジョン検査：検査できる範囲と導入の進め方 | TAGE</title>
+<meta name="description" content="衣料副資材のマシンビジョン検査ガイド。織りネームの文字、下げ札の見当・色差、ポリ袋の封口に必要な光源としきい値、ΔE 公差の取り決め、人と機械の比較方法、設備投資に見合う受注規模を解説します。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+     "item": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+   "url": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>マシンビジョン検査</span></div>
+      <h1>衣料副資材のマシンビジョン検査：検査できる範囲と導入の進め方</h1>
+      <p>泰閣包装 · 2026年11月2日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>衣料副資材の世界でマシンビジョン検査は何年も前から語られてきましたが、実際に安定稼働しているラインは多くありません。障壁はカメラではなく、副資材の品種の多さです。同じ工場内でも、織りネームは高密度の小さな文字、下げ札は大面積の特色、ポリ袋は連続する透明ロール材であり、光源・レンズ・判定ロジックがまったく異なります。汎用システムを一つ買って製品に合わせてくれると期待する方法は、ほぼ確実に失敗します。</p>
+
+      <p>本記事では、マシンビジョンで検査できること・できないこと、難しい2領域（織りネームの文字と下げ札の色差）のしきい値の決め方、ポリ袋のインライン検査の注意点、そして設備投資に見合う受注規模について解説します。</p>
+
+      <h2>マシンビジョンで検査できること・できないこと</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>欠点の種類</th>
+            <th>現状の方法</th>
+            <th>画像検査の可否</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>織りネームの欠け・潰れ・踏み外し</td>
+            <td>ルーペ目視、10〜20% 抜き取り</td>
+            <td>可能だが、まずカメラ位置と光源の固定が前提</td>
+          </tr>
+          <tr>
+            <td>下げ札の見当ずれ・特色の色差</td>
+            <td>初品を色見本と比較、後は経験</td>
+            <td>可能、ΔE しきい値で判定</td>
+          </tr>
+          <tr>
+            <td>ポリ袋のシール不良・気泡・印刷抜け</td>
+            <td>手切り抜き取り、ロール全廃も珍しくない</td>
+            <td>可能、インライン連続検査に適する</td>
+          </tr>
+          <tr>
+            <td>寸法外れ・裁断の毛羽</td>
+            <td>ノギス抜き取り、寸法は初品で担保</td>
+            <td>可能、位置決め治具が必要</td>
+          </tr>
+          <tr>
+            <td>風合い・柔らかさ・におい・残留溶剤</td>
+            <td>手と鼻、または第三者検査機関</td>
+            <td>不可、人手またはラボ検査を残す</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>要するに、画像検査は「見える幾何と色」に強く、「触れる物理と化学」に弱いということです。両者を混ぜて議論すると、必ずおかしな設計になります。</p>
+
+      <h2>織りネームの文字：最も難しい領域</h2>
+
+      <p>織りネームは印刷ではなく織りです。文字の縁は本来的に毛羽立ち、経糸は張力でわずかに流れ、地色と文字色が近いとコントラストが極端に落ちます。まず3点を解決します。低角度の側方光で経糸・緯糸の凹凸に影を作り、画線の境界を出します。解像度を確保し、文字高 1.5mm 以下なら 1mm あたり最低 20 ピクセルが必要です。そして画素単位の厳密比較ではなく、許容差付きのテンプレート比較を使います。ロールごとに張力がわずかに異なるため、厳密比較は良品を不良と判定します。</p>
+
+      <p>判定基準は技術者の頭の中ではなく、検収文書に書きます。許容できる糸切れ長さ、潰れ面積の割合、踏み外し本数、汚れ点の数。このしきい値がなければ、画像検査は人の議論を機械の議論に置き換えるだけです。</p>
+
+      <h2>下げ札の見当と色差：ΔE で語る</h2>
+
+      <p>下げ札は大面積の特色印刷であり、ここで最も価値のある検査は見当ずれと色差です。実務的には、客先承認の初品を基準に、ΔE00 が 2 未満を合格、2〜3 は再検査が必要な警告、3 超を不合格とします。許容差は必ず客先と取り決めます。ファストファッションと高級ブランドでは許容範囲が大きく異なります。</p>
+
+      <p>つまずきやすい点が2つあります。箔やホログラムなどの金属表現と、黒・紺などの濃い地色はカメラ上で色が歪むため、通常の4色とは別にホワイトバランスと露出を校正する必要があります。また再生紙やコットン紙のような地合のある紙は測色値がばらつくため、単点ではなく平均色で測ります。</p>
+
+      <h2>ポリ袋：連続ロール材のインライン検査</h2>
+
+      <p>ポリ袋はロール材の連続生産なので、連続性のある欠点の検査に最も向いています。印刷抜け、色ずれ、シール部への異物噛み込み、袋面の傷、打ち穴位置のずれ。こうした検査は通常、製袋機の出口に設置し、ラインと同じ速度で運転し、不良が連続した時点で警報と停止を行い、ロール全体の廃却を防ぎます。これは袋工場にとって最も痛いコストです。</p>
+
+      <p>見落とされがちな点があります。袋は透明または半透明のため、正面光ではほとんどコントラストが出ません。透過光（バックライト）のほうが異物・気泡・厚みムラをはるかに良く捉えられ、フィルム業界の標準手法でもあります。</p>
+
+      <h2>多くの副資材工場が今も人手で検査する理由</h2>
+
+      <p>カメラは安いですが、安定した判定は高くつきます。現実的な3つの条件があります。切り替え頻度です。SKU が変わるたびにテンプレートと光源位置を作り直す必要があり、1日に5回切り替えると調整時間が利得を食いつぶします。受注ロットです。1型あたり数千枚を下回ると設備償却が回りません。そして客先が本当に拒否するかです。不具合が社内手直しで済み、客先の減点がないなら人手で足ります。</p>
+
+      <p>実際に最初に導入されるのは3つの場面です。大量・単一 SKU の下げ札、連続ロール材のポリ袋、文字精度が極めて重要なサイズネームや組成ネーム。共通点は、基準が明確で、ロットが安定し、失敗コストが高いことです。</p>
+
+      <h2>導入の3ステップ</h2>
+
+      <ol>
+        <li>オフライン抜き取り：まず1台で2週間、人と機械の比較を行い、見逃しと誤判定の両方を記録します。この実データなしに全数検査を語るのは賭けです。</li>
+        <li>工程補助：重要な工程（織りネーム裁断後、下げ札検品台）に設置し、初期は「提示」のみ、最終判定は人が行います。この段階が現場の支持を得やすい方法です。</li>
+        <li>インライン全数検査：判定が安定してからラインに接続し、警報と停止のロジックを定め、しきい値を客先との技術協定に明記して検収の根拠を作ります。</li>
+      </ol>
+
+      <div class="callout">原則は1つ。画像検査は「品質を上げる」ものではなく、「品質基準を実行可能なしきい値に変える」ものです。まず基準、次に設備。基準で合意できなければ、設備は争いを高くするだけです。</div>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="index.html">副資材 FAQ の記事一覧へ</a></li>
+        <li><a href="garment-trims-quality-inspection.html">衣料副資材の品質検査：AQL・抜き取り方式・判定基準</a></li>
+        <li><a href="trim-label-consistency-audit-guide.html">ラベル一貫性監査：ロット・工場をまたぐ確認</a></li>
+        <li><a href="hang-tag-color-management.html">下げ札の色彩管理：色見本から量産までの色合わせ</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>検査データや初品承認を求められていますか。不良サンプルと合格サンプルを併せてお送りください。客先と合意したしきい値で初品を確認し、判定基準を技術協定に明記します。</p>
+        <a class="cta-btn" href="../contact.html">検査基準・初品承認の相談 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

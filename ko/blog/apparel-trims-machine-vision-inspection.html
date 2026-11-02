@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>의류 부자재 머신 비전 검사: 검사 범위와 도입 방법 | TAGE</title>
+<meta name="description" content="의류 부자재 머신 비전 검사 가이드. 직조 라벨 문자, 행택 정합·색차, 폴리백 밀봉에 필요한 광원과 임계값, ΔE 공차 합의, 사람과 기계 비교 방법, 설비 투자에 맞는 주문 규모를 정리했습니다. 둥관 TAGE 패키징.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+     "item": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+   "url": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>머신 비전 검사</span></div>
+      <h1>의류 부자재 머신 비전 검사: 검사 범위와 도입 방법</h1>
+      <p>TAGE 패키징 · 2026년 11월 2일 업데이트</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>머신 비전 검사는 의류 부자재 업계에서 오래 이야기되어 왔지만 실제로 안정적으로 운영되는 라인은 많지 않습니다. 걸림돌은 카메라가 아니라 부자재의 품종이 너무 다양하다는 점입니다. 같은 공장 안에서도 직조 라벨은 고밀도의 작은 문자, 행택은 대면적 별색, 폴리백은 연속되는 투명 롤 소재여서 광원·렌즈·판정 로직이 완전히 다릅니다. 범용 시스템 하나를 사서 제품에 알아서 맞춰주기를 기대하는 방식은 거의 반드시 실패합니다.</p>
+
+      <p>이 글은 머신 비전으로 검사할 수 있는 것과 없는 것, 어려운 두 영역(직조 라벨 문자와 행택 색차)의 임계값 설정법, 폴리백 인라인 검사 시 유의점, 그리고 설비 투자에 맞는 주문 규모를 다룹니다.</p>
+
+      <h2>비전이 검사할 수 있는 것과 없는 것</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>결점 유형</th>
+            <th>현재 방식</th>
+            <th>비전 검사 가능성</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>직조 라벨의 획 누락·번짐·건너뜀</td>
+            <td>확대경 육안 검사, 10~20% 샘플링</td>
+            <td>가능하나 카메라 위치와 광원 고정이 전제</td>
+          </tr>
+          <tr>
+            <td>행택 정합 어긋남·별색 색차</td>
+            <td>초물을 색견본과 대조, 이후 경험</td>
+            <td>가능, ΔE 임계값으로 판정</td>
+          </tr>
+          <tr>
+            <td>폴리백 밀봉 불량·기포·인쇄 누락</td>
+            <td>손으로 뜯는 샘플링, 롤 전체 폐기 빈번</td>
+            <td>가능, 인라인 연속 검사에 적합</td>
+          </tr>
+          <tr>
+            <td>치수 초과·재단 보풀</td>
+            <td>버니어 샘플 측정, 치수는 초물로 보증</td>
+            <td>가능, 위치 결정 지그 필요</td>
+          </tr>
+          <tr>
+            <td>촉감·유연성·냄새·잔류 용제</td>
+            <td>손과 코, 또는 제3자 시험기관</td>
+            <td>불가, 인력 또는 실험실 검사 유지</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>한 줄로 말하면, 비전은 눈에 보이는 기하와 색에 강하고 손으로 느끼는 물리·화학에는 약합니다. 둘을 섞어 논의하면 방향이 반드시 틀어집니다.</p>
+
+      <h2>직조 라벨 문자: 가장 어려운 영역</h2>
+
+      <p>직조 라벨은 인쇄가 아니라 직조입니다. 문자 가장자리는 본래 거칠고, 경사는 장력에 따라 미세하게 흐르며, 바탕색과 글자색이 비슷하면 대비가 극도로 낮아집니다. 먼저 세 가지를 해결해야 합니다. 낮은 각도의 측광으로 경위사의 요철에 그림자를 만들어 획 경계를 드러냅니다. 해상도를 확보해 글자 높이 1.5mm 이하에서는 1mm당 최소 20픽셀이 필요합니다. 그리고 픽셀 단위 고정 비교가 아니라 공차를 둔 템플릿 비교를 씁니다. 롤마다 장력이 조금씩 달라 고정 비교는 양품을 불량으로 판정합니다.</p>
+
+      <p>판정 기준은 엔지니어의 머릿속이 아니라 검수 문서에 적어야 합니다. 허용 실 끊김 길이, 번진 글자 면적 비율, 건너뜀 개수, 오점 개수입니다. 이런 임계값이 없으면 비전 검사는 사람의 논쟁을 기계의 논쟁으로 바꿀 뿐입니다.</p>
+
+      <h2>행택 정합과 색차: ΔE로 말하기</h2>
+
+      <p>행택은 대면적 별색 인쇄이며, 여기서 가장 가치 있는 검사는 정합 어긋남과 색차입니다. 실무적으로는 고객 승인 초물을 기준으로 ΔE00 2 미만은 합격, 2~3은 재검사가 필요한 경고, 3 초과는 불합격으로 합니다. 공차는 반드시 고객과 합의해야 하며, 패스트패션과 럭셔리 브랜드의 허용 범위는 크게 다릅니다.</p>
+
+      <p>실수하기 쉬운 두 지점이 있습니다. 박·홀로그램 같은 금속 표현과 검정·남색 같은 어두운 바탕은 카메라에서 색이 왜곡되어 일반 4도 인쇄와 다른 화이트밸런스·노출 보정이 필요합니다. 또 재생지나 면지처럼 요철이 있는 종이는 측색값이 흔들리므로 단일 지점이 아니라 평균색으로 측정해야 합니다.</p>
+
+      <h2>폴리백: 연속 롤 소재 인라인 검사</h2>
+
+      <p>폴리백은 롤 소재로 연속 생산되므로 연속성 결함 검사에 가장 적합합니다. 인쇄 누락, 색 어긋남, 밀봉부 이물 끼임, 백 표면 긁힘, 타공 위치 이탈입니다. 이런 검사는 보통 제대기 출구에 설치해 라인과 같은 속도로 운전하고, 불량이 연속되면 경보와 정지를 걸어 롤 전체 폐기를 막습니다. 이는 봉투 공장에서 가장 아픈 원가 지점입니다.</p>
+
+      <p>자주 놓치는 부분이 있습니다. 봉투는 투명하거나 반투명해 정면광으로는 대비가 거의 나오지 않습니다. 투과광(백라이트)이 이물·기포·두께 불균일을 훨씬 잘 드러내며, 필름 업계의 표준 방식입니다.</p>
+
+      <h2>대부분의 부자재 공장이 여전히 사람 손으로 검사하는 이유</h2>
+
+      <p>카메라는 싸지만 안정적인 판정은 비쌉니다. 현실적인 세 가지 조건이 있습니다. 첫째, 모델 교체 빈도입니다. SKU가 바뀔 때마다 템플릿과 광원 위치를 다시 만들어야 하고, 하루에 다섯 번 바꾸면 조정 시간이 이익을 잡아먹습니다. 둘째, 주문 로트입니다. 한 스타일당 수천 장 미만이면 설비 감가상각이 돌지 않습니다. 셋째, 고객이 실제로 반품·거절하는지 여부입니다. 결함이 사내 재작업으로 끝나고 고객 청구가 없다면 인력 검사로 충분합니다.</p>
+
+      <p>실제로 비전이 가장 먼저 들어가는 곳은 세 경우입니다. 대량 단일 SKU 행택, 연속 롤 소재 폴리백, 문자 정밀도가 매우 중요한 사이즈·혼용률 라벨입니다. 공통점은 기준이 명확하고 로트가 안정적이며 실패 비용이 크다는 것입니다.</p>
+
+      <h2>도입의 세 단계</h2>
+
+      <ol>
+        <li>오프라인 샘플링: 먼저 한 대에서 2주간 사람과 기계를 비교하며 미검출과 오판을 모두 기록합니다. 이 실제 데이터 없이 전수 검사를 논하는 것은 도박입니다.</li>
+        <li>공정 보조: 핵심 공정(직조 라벨 재단 후, 행택 검품대)에 설치하고 초기에는 알림만 제공하며 최종 판정은 작업자가 합니다. 이 단계가 현장의 지지를 얻기 가장 좋습니다.</li>
+        <li>인라인 전수 검사: 판정이 안정된 뒤 라인에 연결하고 경보와 정지 로직을 정하며, 임계값을 고객과의 기술 협약에 명시해 검수 근거를 만듭니다.</li>
+      </ol>
+
+      <div class="callout">원칙은 하나입니다. 비전 검사는 품질을 높이는 것이 아니라 품질 기준을 실행 가능한 임계값으로 바꾸는 일입니다. 기준을 먼저 정하고 설비는 그다음입니다. 기준에 합의하지 못하면 설비는 분쟁만 비싸게 만듭니다.</div>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="index.html">부자재 FAQ 전체 글 보기</a></li>
+        <li><a href="garment-trims-quality-inspection.html">의류 부자재 품질 검사: AQL, 샘플링 계획, 판정 기준</a></li>
+        <li><a href="trim-label-consistency-audit-guide.html">라벨 일관성 감사: 로트·공장 간 점검</a></li>
+        <li><a href="hang-tag-color-management.html">행택 색상 관리: 색견본에서 양산까지</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>검사 데이터나 초물 승인을 요구받으셨나요? 불량 샘플과 합격 샘플을 함께 보내주시면, 고객과 합의한 임계값으로 초물을 확인하고 판정 기준을 기술 협약에 명시합니다.</p>
+        <a class="cta-btn" href="../contact.html">검사 기준·초물 승인 상담 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>

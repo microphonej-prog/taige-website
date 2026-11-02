@@ -1,0 +1,213 @@
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="机器视觉质检在服装辅料行业被谈了很多年，真正跑通的生产线并不多。原因不在相机，而在于辅料的品种太杂：同一个车间里，织唛是小字符高密度，吊牌是大面积专色，胶袋是连续透明卷材，三者的光源、镜头与判定逻辑完全不同。买一套通用系统指望它自己适应，几乎必然失败。"
+         data-en="Machine vision inspection has been discussed in the garment trim industry for years, yet few lines actually run it well. The obstacle is not the camera but the sheer variety of trims: in one workshop, a woven label means tiny characters at high density, a hang tag means large solid-colour areas, and a poly bag means a continuous transparent web. Lighting, lens and decision logic differ completely between them. Buying one generic system and expecting it to adapt on its own almost always fails."
+         data-ja="衣料副資材の世界でマシンビジョン検査は何年も前から語られてきましたが、実際に安定稼働しているラインは多くありません。障壁はカメラではなく、副資材の品種の多さです。同じ工場内でも、織りネームは高密度の小さな文字、下げ札は大面積の特色、ポリ袋は連続する透明ロール材であり、光源・レンズ・判定ロジックがまったく異なります。汎用システムを一つ買って製品に合わせてくれると期待する方法は、ほぼ確実に失敗します。"
+         data-ko="머신 비전 검사는 의류 부자재 업계에서 오래 이야기되어 왔지만 실제로 안정적으로 운영되는 라인은 많지 않습니다. 걸림돌은 카메라가 아니라 부자재의 품종이 너무 다양하다는 점입니다. 같은 공장 안에서도 직조 라벨은 고밀도의 작은 문자, 행택은 대면적 별색, 폴리백은 연속되는 투명 롤 소재여서 광원·렌즈·판정 로직이 완전히 다릅니다. 범용 시스템 하나를 사서 제품에 알아서 맞춰주기를 기대하는 방식은 거의 반드시 실패합니다."
+         data-fr="L'inspection par vision artificielle est évoquée depuis des années dans les accessoires du vêtement, mais peu de lignes fonctionnent vraiment. L'obstacle n'est pas la caméra mais la variété des produits : dans le même atelier, un label tissé signifie de petits caractères très denses, une étiquette suspendue de grandes surfaces en couleur d'accompagnement, et un sac poly un matériau continu et transparent. Éclairage, objectif et logique de décision diffèrent totalement. Acheter un système générique en espérant qu'il s'adapte seul échoue presque toujours."
+         data-es="La inspección por visión artificial se discute desde hace años en los accesorios de confección, pero pocas líneas funcionan de verdad. El obstáculo no es la cámara sino la variedad de productos: en el mismo taller, una etiqueta tejida implica caracteres pequeños y densos, una etiqueta colgante grandes superficies en color directo y una bolsa de polietileno un material continuo y transparente. Iluminación, óptica y lógica de decisión son completamente distintas. Comprar un sistema genérico esperando que se adapte solo casi siempre fracasa.">机器视觉质检在服装辅料行业被谈了很多年，真正跑通的生产线并不多。原因不在相机，而在于辅料的品种太杂：同一个车间里，织唛是小字符高密度，吊牌是大面积专色，胶袋是连续透明卷材，三者的光源、镜头与判定逻辑完全不同。买一套通用系统指望它自己适应，几乎必然失败。</p>
+
+      <p data-zh="这篇讲视觉检测能查什么、查不了什么，织唛字符与吊牌色差这两类难点怎么设阈值，包装袋在线检测要注意什么，以及什么样的订单规模才值得上设备。"
+         data-en="This guide covers what vision can and cannot check, how to set thresholds for the two hard cases — woven-label characters and hang-tag colour — what to watch in inline poly-bag inspection, and what order volume justifies the equipment."
+         data-ja="本記事では、マシンビジョンで検査できること・できないこと、難しい2領域（織りネームの文字と下げ札の色差）のしきい値の決め方、ポリ袋のインライン検査の注意点、そして設備投資に見合う受注規模について解説します。"
+         data-ko="이 글은 머신 비전으로 검사할 수 있는 것과 없는 것, 어려운 두 영역(직조 라벨 문자와 행택 색차)의 임계값 설정법, 폴리백 인라인 검사 시 유의점, 그리고 설비 투자에 맞는 주문 규모를 다룹니다."
+         data-fr="Ce guide traite ce que la vision peut et ne peut pas contrôler, la fixation des seuils pour les deux cas difficiles — caractères de labels tissés et couleur d'étiquettes suspendues —, les points de vigilance en inspection en ligne des sacs poly, et le volume de commande qui justifie l'équipement."
+         data-es="Esta guía trata qué puede y qué no puede controlar la visión, cómo fijar umbrales en los dos casos difíciles —caracteres de etiquetas tejidas y color de etiquetas colgantes—, qué vigilar en la inspección en línea de bolsas y qué volumen de pedido justifica el equipo.">这篇讲视觉检测能查什么、查不了什么，织唛字符与吊牌色差这两类难点怎么设阈值，包装袋在线检测要注意什么，以及什么样的订单规模才值得上设备。</p>
+
+      <h2 data-zh="视觉能查什么、查不了什么"
+          data-en="What vision can and cannot check"
+          data-ja="マシンビジョンで検査できること・できないこと"
+          data-ko="비전이 검사할 수 있는 것과 없는 것"
+          data-fr="Ce que la vision contrôle, et ce qu'elle ne contrôle pas"
+          data-es="Lo que la visión controla y lo que no">视觉能查什么、查不了什么</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="缺陷类型" data-en="Defect type" data-ja="欠点の種類" data-ko="결점 유형" data-fr="Type de défaut" data-es="Tipo de defecto">缺陷类型</th>
+            <th data-zh="现在的做法" data-en="Current practice" data-ja="現状の方法" data-ko="현재 방식" data-fr="Pratique actuelle" data-es="Práctica actual">现在的做法</th>
+            <th data-zh="视觉检测可行性" data-en="Vision feasibility" data-ja="画像検査の可否" data-ko="비전 검사 가능성" data-fr="Faisabilité" data-es="Viabilidad">视觉检测可行性</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="织唛字符缺笔、糊字、跳线" data-en="Missing strokes, blurred characters or skipped picks on a woven label" data-ja="織りネームの欠け・潰れ・踏み外し" data-ko="직조 라벨의 획 누락·번짐·건너뜀" data-fr="Traits manquants, caractères baveux ou duite sautée sur label tissé" data-es="Trazos faltantes, caracteres borrosos o pasadas saltadas">织唛字符缺笔、糊字、跳线</td>
+            <td data-zh="放大镜目检，抽 10%-20%" data-en="Loupe and eye, 10 to 20 percent sampling" data-ja="ルーペ目視、10〜20% 抜き取り" data-ko="확대경 육안 검사, 10~20% 샘플링" data-fr="Loupe et œil, prélèvement de 10 à 20 %" data-es="Lupa y ojo, muestreo del 10 al 20 %">放大镜目检，抽 10%-20%</td>
+            <td data-zh="可行，但必须先固定机位与光源" data-en="Feasible, but camera position and lighting must be fixed first" data-ja="可能だが、まずカメラ位置と光源の固定が前提" data-ko="가능하나 카메라 위치와 광원 고정이 전제" data-fr="Faisable, à condition de figer position et éclairage" data-es="Viable, pero fijando antes posición y luz">可行，但必须先固定机位与光源</td>
+          </tr>
+          <tr>
+            <td data-zh="吊牌套印偏移、专色色差" data-en="Registration drift and solid-colour deviation on hang tags" data-ja="下げ札の見当ずれ・特色の色差" data-ko="행택 정합 어긋남·별색 색차" data-fr="Dérive de repérage et écart de teinte sur étiquettes" data-es="Desvío de registro y desviación de color directo">吊牌套印偏移、专色色差</td>
+            <td data-zh="首件比对色卡，过程中靠经验" data-en="First-off against a colour book, then experience" data-ja="初品を色見本と比較、後は経験" data-ko="초물을 색견본과 대조, 이후 경험" data-fr="Bon à tirer comparé au nuancier, puis l'expérience" data-es="Primera prueba contra abanico, luego experiencia">首件比对色卡，过程中靠经验</td>
+            <td data-zh="可行，用 ΔE 阈值判定" data-en="Feasible, judged on a ΔE threshold" data-ja="可能、ΔE しきい値で判定" data-ko="가능, ΔE 임계값으로 판정" data-fr="Faisable, jugé sur un seuil ΔE" data-es="Viable, con umbral ΔE">可行，用 ΔE 阈值判定</td>
+          </tr>
+          <tr>
+            <td data-zh="胶袋漏封、气泡、印刷漏印" data-en="Unsealed seams, trapped air, missing print on poly bags" data-ja="ポリ袋のシール不良・気泡・印刷抜け" data-ko="폴리백 밀봉 불량·기포·인쇄 누락" data-fr="Soudures manquantes, bulles, impression absente sur sacs" data-es="Sellado fallido, burbujas, impresión ausente en bolsas">胶袋漏封、气泡、印刷漏印</td>
+            <td data-zh="手撕抽检，整卷报废常见" data-en="Hand tear tests; whole rolls are often scrapped" data-ja="手切り抜き取り、ロール全廃も珍しくない" data-ko="손으로 뜯는 샘플링, 롤 전체 폐기 빈번" data-fr="Essais de déchirure ; des bobines entières sont jetées" data-es="Pruebas de desgarro; se desechan bobinas enteras">手撕抽检，整卷报废常见</td>
+            <td data-zh="可行，适合在线连续检测" data-en="Feasible, well suited to inline inspection" data-ja="可能、インライン連続検査に適する" data-ko="가능, 인라인 연속 검사에 적합" data-fr="Faisable, adapté à l'inspection en ligne" data-es="Viable, apto para inspección en línea">可行，适合在线连续检测</td>
+          </tr>
+          <tr>
+            <td data-zh="尺寸超差、裁切毛边" data-en="Out-of-tolerance dimensions, frayed cut edges" data-ja="寸法外れ・裁断の毛羽" data-ko="치수 초과·재단 보풀" data-fr="Dimensions hors tolérance, bords effilochés" data-es="Medidas fuera de tolerancia, bordes deshilachados">尺寸超差、裁切毛边</td>
+            <td data-zh="卡尺抽量，尺寸靠首件保证" data-en="Caliper sampling; first-off sets the size" data-ja="ノギス抜き取り、寸法は初品で担保" data-ko="버니어 샘플 측정, 치수는 초물로 보증" data-fr="Contrôle au pied à coulisse, taille garantie au bon à tirer" data-es="Muestreo con calibre, medida asegurada en primera pieza">尺寸超差、裁切毛边</td>
+            <td data-zh="可行，需要定位治具" data-en="Feasible with a locating fixture" data-ja="可能、位置決め治具が必要" data-ko="가능, 위치 결정 지그 필요" data-fr="Faisable avec un gabarit de positionnement" data-es="Viable con plantilla de posicionado">可行，需要定位治具</td>
+          </tr>
+          <tr>
+            <td data-zh="手感、柔软度、气味、溶剂残留" data-en="Hand-feel, softness, odour, solvent residue" data-ja="風合い・柔らかさ・におい・残留溶剤" data-ko="촉감·유연성·냄새·잔류 용제" data-fr="Toucher, souplesse, odeur, résidus de solvant" data-es="Tacto, suavidad, olor, residuo de disolvente">手感、柔软度、气味、溶剂残留</td>
+            <td data-zh="手摸鼻闻，或送第三方检测" data-en="Hand and nose, or a third-party lab" data-ja="手と鼻、または第三者検査機関" data-ko="손과 코, 또는 제3자 시험기관" data-fr="Main et nez, ou un laboratoire externe" data-es="Mano y nariz, o un laboratorio externo">手感、柔软度、气味、溶剂残留</td>
+            <td data-zh="不可行，必须留人工或实验室" data-en="Not feasible; keep human or lab checks" data-ja="不可、人手またはラボ検査を残す" data-ko="불가, 인력 또는 실험실 검사 유지" data-fr="Non : garder l'humain ou le laboratoire" data-es="No: mantener control humano o de laboratorio">不可行，必须留人工或实验室</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-zh="一句话概括：视觉擅长看得见的几何与颜色，不擅长摸得到的物理与化学。把两者混在一起谈，方案就一定会做歪。"
+         data-en="In one line: vision is good at geometry and colour you can see, and bad at physics and chemistry you have to touch. Confusing the two guarantees a misdirected project."
+         data-ja="要するに、画像検査は「見える幾何と色」に強く、「触れる物理と化学」に弱いということです。両者を混ぜて議論すると、必ずおかしな設計になります。"
+         data-ko="한 줄로 말하면, 비전은 눈에 보이는 기하와 색에 강하고 손으로 느끼는 물리·화학에는 약합니다. 둘을 섞어 논의하면 방향이 반드시 틀어집니다."
+         data-fr="En une phrase : la vision excelle en géométrie et en couleur visibles, et échoue sur la physique et la chimie que l'on touche. Mélanger les deux fausse tout projet."
+         data-es="En una frase: la visión es buena en geometría y color visibles, y mala en física y química que se tocan. Mezclar ambas cosas desvía cualquier proyecto.">一句话概括：视觉擅长看得见的几何与颜色，不擅长摸得到的物理与化学。把两者混在一起谈，方案就一定会做歪。</p>
+
+      <h2 data-zh="织唛字符：最难的一类"
+          data-en="Woven-label characters: the hardest case"
+          data-ja="織りネームの文字：最も難しい領域"
+          data-ko="직조 라벨 문자: 가장 어려운 영역"
+          data-fr="Caractères de labels tissés : le cas le plus difficile"
+          data-es="Caracteres de etiquetas tejidas: el caso más difícil">织唛字符：最难的一类</h2>
+
+      <p data-zh="织唛是织出来的，不是印出来的：字符边缘天生毛糙，经线随张力轻微漂移，底色与字色接近时对比度极低。做视觉方案要先解决三件事：一是用低角度侧光把经纬的凹凸打出阴影，让笔画的边界显形；二是保证分辨率，字高 1.5mm 以下时每毫米至少要 20 个像素；三是用模板加容差比对，而不是逐像素刚性比对——每卷织唛的张力都略有不同，刚性比对会把好品判成坏品。"
+         data-en="A woven label is woven, not printed: character edges are naturally fuzzy, warp threads drift slightly with tension, and contrast collapses when ground and text colours are close. Three things must be solved first. Use low-angle side lighting so the relief of warp and weft casts shadows and stroke edges appear. Guarantee resolution — below 1.5 mm character height you need at least 20 pixels per millimetre. And compare against a template with tolerance rather than pixel-rigid matching, because tension differs slightly from roll to roll and rigid matching condemns good product."
+         data-ja="織りネームは印刷ではなく織りです。文字の縁は本来的に毛羽立ち、経糸は張力でわずかに流れ、地色と文字色が近いとコントラストが極端に落ちます。まず3点を解決します。低角度の側方光で経糸・緯糸の凹凸に影を作り、画線の境界を出します。解像度を確保し、文字高 1.5mm 以下なら 1mm あたり最低 20 ピクセルが必要です。そして画素単位の厳密比較ではなく、許容差付きのテンプレート比較を使います。ロールごとに張力がわずかに異なるため、厳密比較は良品を不良と判定します。"
+         data-ko="직조 라벨은 인쇄가 아니라 직조입니다. 문자 가장자리는 본래 거칠고, 경사는 장력에 따라 미세하게 흐르며, 바탕색과 글자색이 비슷하면 대비가 극도로 낮아집니다. 먼저 세 가지를 해결해야 합니다. 낮은 각도의 측광으로 경위사의 요철에 그림자를 만들어 획 경계를 드러냅니다. 해상도를 확보해 글자 높이 1.5mm 이하에서는 1mm당 최소 20픽셀이 필요합니다. 그리고 픽셀 단위 고정 비교가 아니라 공차를 둔 템플릿 비교를 씁니다. 롤마다 장력이 조금씩 달라 고정 비교는 양품을 불량으로 판정합니다."
+         data-fr="Un label tissé est tissé, pas imprimé : les bords de caractères sont naturellement flous, les fils de chaîne dérivent légèrement avec la tension, et le contraste s'effondre quand fond et texte sont proches. Trois points à régler d'abord : un éclairage latéral rasant pour que le relief chaîne-trame projette une ombre et révèle le contour des traits ; une résolution suffisante, au moins 20 pixels par millimètre sous 1,5 mm de hauteur de caractère ; et une comparaison sur gabarit avec tolérance plutôt qu'un appariement rigide au pixel, car la tension varie d'une bobine à l'autre et le rigide condamne du bon produit."
+         data-es="Una etiqueta tejida se teje, no se imprime: los bordes de los caracteres son naturalmente difusos, los hilos de urdimbre derivan levemente con la tensión y el contraste se desploma cuando fondo y texto son parecidos. Hay que resolver tres cosas primero: luz lateral rasante para que el relieve de urdimbre y trama proyecte sombra y aparezca el contorno del trazo; resolución suficiente, al menos 20 píxeles por milímetro por debajo de 1,5 mm de altura de carácter; y comparación con plantilla y tolerancia en lugar de coincidencia rígida píxel a píxel, porque la tensión cambia de una bobina a otra y lo rígido condena producto bueno.">织唛是织出来的，不是印出来的：字符边缘天生毛糙，经线随张力轻微漂移，底色与字色接近时对比度极低。做视觉方案要先解决三件事：一是用低角度侧光把经纬的凹凸打出阴影，让笔画的边界显形；二是保证分辨率，字高 1.5mm 以下时每毫米至少要 20 个像素；三是用模板加容差比对，而不是逐像素刚性比对——每卷织唛的张力都略有不同，刚性比对会把好品判成坏品。</p>
+
+      <p data-zh="判定标准必须写进验收文件，而不是留在工程师的脑子里：允许的断线长度、糊字面积占比、跳线根数、脏点数。没有这些阈值，视觉检测只是把人工的争论换成了机器的争论。"
+         data-en="The acceptance criteria must live in the inspection document, not in an engineer's head: permitted broken-thread length, share of blurred character area, number of skipped picks, count of soil spots. Without these thresholds, vision merely replaces a human argument with a machine argument."
+         data-ja="判定基準は技術者の頭の中ではなく、検収文書に書きます。許容できる糸切れ長さ、潰れ面積の割合、踏み外し本数、汚れ点の数。このしきい値がなければ、画像検査は人の議論を機械の議論に置き換えるだけです。"
+         data-ko="판정 기준은 엔지니어의 머릿속이 아니라 검수 문서에 적어야 합니다. 허용 실 끊김 길이, 번진 글자 면적 비율, 건너뜀 개수, 오점 개수입니다. 이런 임계값이 없으면 비전 검사는 사람의 논쟁을 기계의 논쟁으로 바꿀 뿐입니다."
+         data-fr="Les critères d'acceptation doivent figurer dans le document de contrôle, pas dans la tête d'un ingénieur : longueur de fil rompu admise, part de surface de caractère baveuse, nombre de duites sautées, nombre de taches. Sans ces seuils, la vision ne fait que remplacer une discussion humaine par une discussion machine."
+         data-es="Los criterios de aceptación deben estar en el documento de inspección, no en la cabeza de un ingeniero: longitud admitida de hilo roto, proporción de área de carácter borrosa, número de pasadas saltadas, número de manchas. Sin esos umbrales, la visión solo cambia una discusión humana por una discusión de máquina.">判定标准必须写进验收文件，而不是留在工程师的脑子里：允许的断线长度、糊字面积占比、跳线根数、脏点数。没有这些阈值，视觉检测只是把人工的争论换成了机器的争论。</p>
+
+      <h2 data-zh="吊牌套印与色差：用 ΔE 说话"
+          data-en="Hang-tag registration and colour: let ΔE speak"
+          data-ja="下げ札の見当と色差：ΔE で語る"
+          data-ko="행택 정합과 색차: ΔE로 말하기"
+          data-fr="Repérage et couleur d'étiquettes : laisser parler le ΔE"
+          data-es="Registro y color de etiquetas: dejar hablar al ΔE">吊牌套印与色差：用 ΔE 说话</h2>
+
+      <p data-zh="吊牌是大面积专色印刷，视觉检测在这里最有价值的两项是套印偏移与色差。可操作的做法是：以客户签样的首件为基准，ΔE00 小于 2 视为可接受，2 到 3 进入警戒需要复检，大于 3 判不合格。具体公差一定要和客户约定，快时尚品牌与奢侈品牌能接受的范围差得很远。"
+         data-en="Hang tags are large-area solid-colour print, and the two most valuable checks here are registration drift and colour deviation. A workable approach: take the customer-approved first-off as the reference, accept below ΔE00 2, treat 2 to 3 as a warning needing recheck, and reject above 3. The tolerance must be agreed with the customer — fast fashion and luxury brands accept very different ranges."
+         data-ja="下げ札は大面積の特色印刷であり、ここで最も価値のある検査は見当ずれと色差です。実務的には、客先承認の初品を基準に、ΔE00 が 2 未満を合格、2〜3 は再検査が必要な警告、3 超を不合格とします。許容差は必ず客先と取り決めます。ファストファッションと高級ブランドでは許容範囲が大きく異なります。"
+         data-ko="행택은 대면적 별색 인쇄이며, 여기서 가장 가치 있는 검사는 정합 어긋남과 색차입니다. 실무적으로는 고객 승인 초물을 기준으로 ΔE00 2 미만은 합격, 2~3은 재검사가 필요한 경고, 3 초과는 불합격으로 합니다. 공차는 반드시 고객과 합의해야 하며, 패스트패션과 럭셔리 브랜드의 허용 범위는 크게 다릅니다."
+         data-fr="Les étiquettes suspendues sont imprimées en grandes surfaces de couleur d'accompagnement ; les deux contrôles les plus utiles y sont la dérive de repérage et l'écart de teinte. Méthode praticable : prendre le bon à tirer validé par le client comme référence, accepter sous ΔE00 2, traiter 2 à 3 comme une alerte à recontrôler, refuser au-delà de 3. La tolérance doit être convenue avec le client : la fast fashion et le luxe n'acceptent pas les mêmes plages."
+         data-es="Las etiquetas colgantes son impresión en grandes superficies de color directo, y los dos controles más valiosos son el desvío de registro y la desviación de color. Método practicable: tomar la primera prueba aprobada por el cliente como referencia, aceptar por debajo de ΔE00 2, tratar 2 a 3 como alerta que exige recontrol y rechazar por encima de 3. La tolerancia debe pactarse con el cliente: la moda rápida y el lujo aceptan rangos muy distintos.">吊牌是大面积专色印刷，视觉检测在这里最有价值的两项是套印偏移与色差。可操作的做法是：以客户签样的首件为基准，ΔE00 小于 2 视为可接受，2 到 3 进入警戒需要复检，大于 3 判不合格。具体公差一定要和客户约定，快时尚品牌与奢侈品牌能接受的范围差得很远。</p>
+
+      <p data-zh="两个容易翻车的地方：金属色（烫金、镭射膜）和深色底（黑、藏青）在相机里会失真，需要单独标定白平衡与曝光，不能和普通四色共用一套参数；另外纸面有纹理的再生纸、棉纸会让测色值跳动，这时应该改为测平均色而不是单点取色。"
+         data-en="Two traps: metallic effects such as foil and holographic film, and dark grounds such as black or navy, distort in camera and need their own white-balance and exposure calibration rather than sharing parameters with ordinary four-colour work. And textured stocks such as recycled or cotton paper make readings jump, so measure an averaged area rather than a single point."
+         data-ja="つまずきやすい点が2つあります。箔やホログラムなどの金属表現と、黒・紺などの濃い地色はカメラ上で色が歪むため、通常の4色とは別にホワイトバランスと露出を校正する必要があります。また再生紙やコットン紙のような地合のある紙は測色値がばらつくため、単点ではなく平均色で測ります。"
+         data-ko="실수하기 쉬운 두 지점이 있습니다. 박·홀로그램 같은 금속 표현과 검정·남색 같은 어두운 바탕은 카메라에서 색이 왜곡되어 일반 4도 인쇄와 다른 화이트밸런스·노출 보정이 필요합니다. 또 재생지나 면지처럼 요철이 있는 종이는 측색값이 흔들리므로 단일 지점이 아니라 평균색으로 측정해야 합니다."
+         data-fr="Deux pièges : les effets métallisés (dorure, film holographique) et les fonds sombres (noir, marine) se déforment à la caméra et exigent leur propre calibration de balance des blancs et d'exposition, sans partager les réglages du quadri courant. Et les papiers texturés, recyclés ou coton, font sauter les mesures : mesurez une zone moyenne plutôt qu'un point."
+         data-es="Dos trampas: los efectos metalizados (foil, film holográfico) y los fondos oscuros (negro, azul marino) se distorsionan en cámara y exigen su propia calibración de balance de blancos y exposición, sin compartir ajustes con el cuatricromía normal. Y los papeles con textura, reciclados o de algodón, hacen saltar las lecturas: mida un área promediada en lugar de un punto.">两个容易翻车的地方：金属色（烫金、镭射膜）和深色底（黑、藏青）在相机里会失真，需要单独标定白平衡与曝光，不能和普通四色共用一套参数；另外纸面有纹理的再生纸、棉纸会让测色值跳动，这时应该改为测平均色而不是单点取色。</p>
+
+      <h2 data-zh="包装袋：连续卷材的在线检测"
+          data-en="Poly bags: inline inspection of a continuous web"
+          data-ja="ポリ袋：連続ロール材のインライン検査"
+          data-ko="폴리백: 연속 롤 소재 인라인 검사"
+          data-fr="Sacs poly : inspection en ligne d'un matériau continu"
+          data-es="Bolsas: inspección en línea de material continuo">包装袋：连续卷材的在线检测</h2>
+
+      <p data-zh="胶袋是卷材连续生产，视觉最适合查连续性缺陷：印刷漏印、套色偏移、封口夹杂异物、袋身划伤、打孔位置偏移。这类检测一般装在制袋机尾部，与产线同速运行，连续出现若干个不良就报警停机，避免整卷报废——这正是胶袋厂最痛的成本点。"
+         data-en="Poly bags run as a continuous web, so vision suits continuous defects best: missing print, colour-to-colour drift, foreign matter trapped in the seal, scratches on the body, off-position punch holes. Such systems usually sit at the end of the bag-making machine, run at line speed, and trigger an alarm and stop after a run of consecutive defects, avoiding the scrapping of a whole roll — the cost that hurts bag plants most."
+         data-ja="ポリ袋はロール材の連続生産なので、連続性のある欠点の検査に最も向いています。印刷抜け、色ずれ、シール部への異物噛み込み、袋面の傷、打ち穴位置のずれ。こうした検査は通常、製袋機の出口に設置し、ラインと同じ速度で運転し、不良が連続した時点で警報と停止を行い、ロール全体の廃却を防ぎます。これは袋工場にとって最も痛いコストです。"
+         data-ko="폴리백은 롤 소재로 연속 생산되므로 연속성 결함 검사에 가장 적합합니다. 인쇄 누락, 색 어긋남, 밀봉부 이물 끼임, 백 표면 긁힘, 타공 위치 이탈입니다. 이런 검사는 보통 제대기 출구에 설치해 라인과 같은 속도로 운전하고, 불량이 연속되면 경보와 정지를 걸어 롤 전체 폐기를 막습니다. 이는 봉투 공장에서 가장 아픈 원가 지점입니다."
+         data-fr="Les sacs poly défilent en bobine continue : la vision convient donc aux défauts continus — impression manquante, dérive de repérage entre couleurs, corps étranger dans la soudure, rayures, perçages décalés. Ces systèmes se placent en sortie de machine à sacs, tournent à la vitesse de ligne et déclenchent alarme et arrêt après une série de défauts, évitant la mise au rebut d'une bobine entière — le coût le plus douloureux pour un sacher."
+         data-es="Las bolsas se producen en bobina continua, así que la visión encaja en defectos continuos: impresión ausente, desvío entre colores, cuerpo extraño en el sellado, rayaduras, troquelados fuera de posición. Estos sistemas suelen ir al final de la bolseadora, corren a la velocidad de línea y disparan alarma y parada tras una serie de defectos, evitando desechar una bobina completa: el coste que más duele en una fábrica de bolsas.">胶袋是卷材连续生产，视觉最适合查连续性缺陷：印刷漏印、套色偏移、封口夹杂异物、袋身划伤、打孔位置偏移。这类检测一般装在制袋机尾部，与产线同速运行，连续出现若干个不良就报警停机，避免整卷报废——这正是胶袋厂最痛的成本点。</p>
+
+      <p data-zh="一个常被忽略的细节：袋子是透明或半透明的，正光打上去几乎没有对比度。用背光（透射光）比正光更能显出杂质、气泡与厚薄不均，这也是薄膜行业的标准做法。"
+         data-en="One detail often missed: the bag is transparent or translucent, so front lighting gives almost no contrast. Backlighting, in transmission, reveals foreign matter, bubbles and thickness variation far better — the standard approach in film converting."
+         data-ja="見落とされがちな点があります。袋は透明または半透明のため、正面光ではほとんどコントラストが出ません。透過光（バックライト）のほうが異物・気泡・厚みムラをはるかに良く捉えられ、フィルム業界の標準手法でもあります。"
+         data-ko="자주 놓치는 부분이 있습니다. 봉투는 투명하거나 반투명해 정면광으로는 대비가 거의 나오지 않습니다. 투과광(백라이트)이 이물·기포·두께 불균일을 훨씬 잘 드러내며, 필름 업계의 표준 방식입니다."
+         data-fr="Un détail souvent oublié : le sac est transparent ou translucide, donc un éclairage frontal n'offre presque aucun contraste. Le rétro-éclairage, en transmission, révèle bien mieux corps étrangers, bulles et variations d'épaisseur — la méthode standard de la filmerie."
+         data-es="Un detalle que se pasa por alto: la bolsa es transparente o translúcida, así que la luz frontal no da casi contraste. La retroiluminación, en transmisión, revela mucho mejor cuerpos extraños, burbujas y variación de espesor: el método estándar en la industria del film.">一个常被忽略的细节：袋子是透明或半透明的，正光打上去几乎没有对比度。用背光（透射光）比正光更能显出杂质、气泡与厚薄不均，这也是薄膜行业的标准做法。</p>
+
+      <h2 data-zh="为什么多数辅料厂仍然靠人工"
+          data-en="Why most trim plants still inspect by hand"
+          data-ja="多くの副資材工場が今も人手で検査する理由"
+          data-ko="대부분의 부자재 공장이 여전히 사람 손으로 검사하는 이유"
+          data-fr="Pourquoi la plupart des usines contrôlent encore à la main"
+          data-es="Por qué la mayoría sigue inspeccionando a mano">为什么多数辅料厂仍然靠人工</h2>
+
+      <p data-zh="相机不贵，稳定的判定很贵。三个现实门槛：一是换款频率，每换一个 SKU 就要重做模板与光源位置，如果一天换五款，调试时间会把收益吃光；二是订单批量，单款低于几千件时设备折旧摊不下来；三是客户是否真的拒收，如果缺陷只在内部返工、客户并不罚，人工其实够用。"
+         data-en="Cameras are cheap; a stable decision is expensive. Three practical thresholds: changeover frequency, because every new SKU needs a new template and lighting position and five changes a day eats the benefit; order batch, because below a few thousand pieces per style the capital cost will not amortise; and whether the customer actually rejects, because if defects only cause internal rework and no chargeback, manual inspection is enough."
+         data-ja="カメラは安いですが、安定した判定は高くつきます。現実的な3つの条件があります。切り替え頻度です。SKU が変わるたびにテンプレートと光源位置を作り直す必要があり、1日に5回切り替えると調整時間が利得を食いつぶします。受注ロットです。1型あたり数千枚を下回ると設備償却が回りません。そして客先が本当に拒否するかです。不具合が社内手直しで済み、客先の減点がないなら人手で足ります。"
+         data-ko="카메라는 싸지만 안정적인 판정은 비쌉니다. 현실적인 세 가지 조건이 있습니다. 첫째, 모델 교체 빈도입니다. SKU가 바뀔 때마다 템플릿과 광원 위치를 다시 만들어야 하고, 하루에 다섯 번 바꾸면 조정 시간이 이익을 잡아먹습니다. 둘째, 주문 로트입니다. 한 스타일당 수천 장 미만이면 설비 감가상각이 돌지 않습니다. 셋째, 고객이 실제로 반품·거절하는지 여부입니다. 결함이 사내 재작업으로 끝나고 고객 청구가 없다면 인력 검사로 충분합니다."
+         data-fr="Les caméras sont bon marché ; une décision stable coûte cher. Trois seuils concrets : la fréquence de changement, car chaque SKU exige un nouveau gabarit et une nouvelle position d'éclairage, et cinq changements par jour mangent le bénéfice ; la taille de lot, car sous quelques milliers de pièces par modèle l'amortissement ne passe pas ; et le refus réel du client, car si les défauts ne provoquent qu'une reprise interne sans pénalité, le contrôle manuel suffit."
+         data-es="Las cámaras son baratas; una decisión estable es cara. Tres umbrales reales: la frecuencia de cambio, porque cada SKU exige nueva plantilla y posición de luz, y cinco cambios al día se comen el beneficio; el tamaño de lote, porque por debajo de unos miles de piezas por modelo la amortización no pasa; y si el cliente realmente rechaza, porque si los defectos solo generan retrabajo interno sin penalización, la inspección manual basta.">相机不贵，稳定的判定很贵。三个现实门槛：一是换款频率，每换一个 SKU 就要重做模板与光源位置，如果一天换五款，调试时间会把收益吃光；二是订单批量，单款低于几千件时设备折旧摊不下来；三是客户是否真的拒收，如果缺陷只在内部返工、客户并不罚，人工其实够用。</p>
+
+      <p data-zh="现实里最先上视觉的往往是三种场景：大批量单一 SKU 的吊牌、连续卷材的胶袋、字符精度要求极高的尺码唛与成分唛。这三类的共同点是标准明确、批量稳定、错了代价高。"
+         data-en="In practice vision arrives first in three situations: high-volume single-SKU hang tags, continuous-web poly bags, and size or composition labels where character precision is critical. All three share clear standards, stable volume and an expensive failure."
+         data-ja="実際に最初に導入されるのは3つの場面です。大量・単一 SKU の下げ札、連続ロール材のポリ袋、文字精度が極めて重要なサイズネームや組成ネーム。共通点は、基準が明確で、ロットが安定し、失敗コストが高いことです。"
+         data-ko="실제로 비전이 가장 먼저 들어가는 곳은 세 경우입니다. 대량 단일 SKU 행택, 연속 롤 소재 폴리백, 문자 정밀도가 매우 중요한 사이즈·혼용률 라벨입니다. 공통점은 기준이 명확하고 로트가 안정적이며 실패 비용이 크다는 것입니다."
+         data-fr="En pratique, la vision arrive d'abord dans trois cas : étiquettes suspendues à fort volume et SKU unique, sacs poly en bobine continue, et labels de taille ou de composition où la précision des caractères est critique. Tous trois partagent des normes claires, un volume stable et un échec coûteux."
+         data-es="En la práctica la visión llega primero en tres casos: etiquetas colgantes de gran volumen y SKU único, bolsas en bobina continua y etiquetas de talla o composición donde la precisión de caracteres es crítica. Los tres comparten normas claras, volumen estable y un fallo caro.">现实里最先上视觉的往往是三种场景：大批量单一 SKU 的吊牌、连续卷材的胶袋、字符精度要求极高的尺码唛与成分唛。这三类的共同点是标准明确、批量稳定、错了代价高。</p>
+
+      <h2 data-zh="落地的三步顺序"
+          data-en="A three-step rollout"
+          data-ja="導入の3ステップ"
+          data-ko="도입의 세 단계"
+          data-fr="Un déploiement en trois étapes"
+          data-es="Un despliegue en tres pasos">落地的三步顺序</h2>
+
+      <ol>
+        <li data-zh="离线抽检：先在一台设备上做两周人机对比，把视觉的漏检与误判都记录下来。没有这份真实数据就谈全检，是在赌运气。"
+            data-en="Offline sampling: run a two-week human-versus-machine comparison on one machine and log both escapes and false calls. Talking about full inspection without that data is gambling."
+            data-ja="オフライン抜き取り：まず1台で2週間、人と機械の比較を行い、見逃しと誤判定の両方を記録します。この実データなしに全数検査を語るのは賭けです。"
+            data-ko="오프라인 샘플링: 먼저 한 대에서 2주간 사람과 기계를 비교하며 미검출과 오판을 모두 기록합니다. 이 실제 데이터 없이 전수 검사를 논하는 것은 도박입니다."
+            data-fr="Prélèvement hors ligne : deux semaines de comparaison homme-machine sur une machine, en notant à la fois les défauts manqués et les faux rejets. Parler de contrôle total sans ces données, c'est parier."
+            data-es="Muestreo fuera de línea: dos semanas de comparación hombre-máquina en una máquina, registrando tanto los defectos no detectados como los falsos rechazos. Hablar de inspección total sin esos datos es apostar.">离线抽检：先在一台设备上做两周人机对比，把视觉的漏检与误判都记录下来。没有这份真实数据就谈全检，是在赌运气。</li>
+        <li data-zh="工位辅助：把视觉装到关键工位（织唛裁切后、吊牌检品台），初期只做提示，最终判定仍由人确认。这一步最容易拿到员工支持。"
+            data-en="Workstation assist: install vision at the critical stations — after woven-label cutting, at the tag inspection table — and let it only prompt at first, with the operator confirming the final call. This is the step that wins staff support."
+            data-ja="工程補助：重要な工程（織りネーム裁断後、下げ札検品台）に設置し、初期は「提示」のみ、最終判定は人が行います。この段階が現場の支持を得やすい方法です。"
+            data-ko="공정 보조: 핵심 공정(직조 라벨 재단 후, 행택 검품대)에 설치하고 초기에는 알림만 제공하며 최종 판정은 작업자가 합니다. 이 단계가 현장의 지지를 얻기 가장 좋습니다."
+            data-fr="Assistance au poste : installer la vision aux postes critiques — après coupe des labels, au banc de contrôle des étiquettes — en mode alerte seulement, l'opérateur confirmant la décision. C'est l'étape qui gagne l'adhésion."
+            data-es="Asistencia en puesto: instalar visión en los puestos críticos —tras el corte de etiquetas tejidas, en la mesa de inspección— y que solo avise al principio, confirmando el operario la decisión. Es el paso que gana apoyo del personal.">工位辅助：把视觉装到关键工位（织唛裁切后、吊牌检品台），初期只做提示，最终判定仍由人确认。这一步最容易拿到员工支持。</li>
+        <li data-zh="在线全检：判定稳定后接入产线，设好报警与停机逻辑，并把阈值写进与客户的技术协议，让验收有据可依。"
+            data-en="Inline full inspection: once decisions are stable, connect to the line, define alarm and stop logic, and write the thresholds into the technical agreement with the customer so acceptance has a basis."
+            data-ja="インライン全数検査：判定が安定してからラインに接続し、警報と停止のロジックを定め、しきい値を客先との技術協定に明記して検収の根拠を作ります。"
+            data-ko="인라인 전수 검사: 판정이 안정된 뒤 라인에 연결하고 경보와 정지 로직을 정하며, 임계값을 고객과의 기술 협약에 명시해 검수 근거를 만듭니다."
+            data-fr="Contrôle total en ligne : une fois les décisions stables, raccorder à la ligne, définir alarme et arrêt, et inscrire les seuils dans l'accord technique avec le client pour fonder la réception."
+            data-es="Inspección total en línea: cuando las decisiones son estables, conectar a la línea, definir alarma y parada, e inscribir los umbrales en el acuerdo técnico con el cliente para que la recepción tenga base.">在线全检：判定稳定后接入产线，设好报警与停机逻辑，并把阈值写进与客户的技术协议，让验收有据可依。</li>
+      </ol>
+
+      <div class="callout" data-zh="一条原则：视觉检测不是「提高质量」，而是「把质量标准变成可执行的阈值」。先有标准，再谈设备；标准谈不拢，设备只会把争议做得更贵。"
+           data-en="One principle: vision does not improve quality, it turns a quality standard into executable thresholds. Settle the standard first, then the equipment; if the standard cannot be agreed, equipment only makes the dispute more expensive."
+           data-ja="原則は1つ。画像検査は「品質を上げる」ものではなく、「品質基準を実行可能なしきい値に変える」ものです。まず基準、次に設備。基準で合意できなければ、設備は争いを高くするだけです。"
+           data-ko="원칙은 하나입니다. 비전 검사는 품질을 높이는 것이 아니라 품질 기준을 실행 가능한 임계값으로 바꾸는 일입니다. 기준을 먼저 정하고 설비는 그다음입니다. 기준에 합의하지 못하면 설비는 분쟁만 비싸게 만듭니다."
+           data-fr="Un principe : la vision n'améliore pas la qualité, elle transforme une norme en seuils exécutables. Réglez la norme d'abord, l'équipement ensuite ; si la norme ne fait pas consensus, l'équipement ne fait qu'enrichir le litige."
+           data-es="Un principio: la visión no mejora la calidad, convierte una norma en umbrales ejecutables. Primero la norma, después el equipo; si la norma no se acuerda, el equipo solo encarece la disputa.">一条原则：视觉检测不是「提高质量」，而是「把质量标准变成可执行的阈值」。先有标准，再谈设备；标准谈不拢，设备只会把争议做得更贵。</div>
+
+      <h2 data-zh="相关文章"
+          data-en="Related articles"
+          data-ja="関連記事"
+          data-ko="관련 글"
+          data-fr="Articles liés"
+          data-es="Artículos relacionados">相关文章</h2>
+
+      <ul>
+        <li><a href="index.html" data-zh="返回辅料 FAQ 全部文章" data-en="Back to all trims FAQ articles" data-ja="副資材 FAQ の記事一覧へ" data-ko="부자재 FAQ 전체 글 보기" data-fr="Retour à tous les articles FAQ accessoires" data-es="Volver a todos los artículos de FAQ de accesorios">返回辅料 FAQ 全部文章</a></li>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="服装辅料质量检验：AQL、抽检方案与判定标准" data-en="Trim Quality Inspection: AQL, Sampling Plans and Acceptance" data-ja="衣料副資材の品質検査：AQL・抜き取り方式・判定基準" data-ko="의류 부자재 품질 검사: AQL, 샘플링 계획, 판정 기준" data-fr="Contrôle qualité des accessoires : AQL, plans d'échantillonnage et réception" data-es="Control de calidad de accesorios: AQL, planes de muestreo y aceptación">服装辅料质量检验：AQL、抽检方案与判定标准</a></li>
+        <li><a href="trim-label-consistency-audit-guide.html" data-zh="标签一致性审核：跨批次跨工厂怎么查" data-en="Label Consistency Audits Across Batches and Factories" data-ja="ラベル一貫性監査：ロット・工場をまたぐ確認" data-ko="라벨 일관성 감사: 로트·공장 간 점검" data-fr="Audit de cohérence des labels entre lots et usines" data-es="Auditoría de coherencia de etiquetas entre lotes y fábricas">标签一致性审核：跨批次跨工厂怎么查</a></li>
+        <li><a href="hang-tag-color-management.html" data-zh="吊牌色彩管理：从色卡到量产的控色流程" data-en="Hang Tag Colour Management from Colour Book to Production" data-ja="下げ札の色彩管理：色見本から量産までの色合わせ" data-ko="행택 색상 관리: 색견본에서 양산까지" data-fr="Gestion couleur des étiquettes, du nuancier à la série" data-es="Gestión de color de etiquetas: del abanico a la producción">吊牌色彩管理：从色卡到量产的控色流程</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="客户要求提供检测数据或首件签样？把缺陷样与可接受样一起寄给我们，我们按您与客户约定的阈值做首件确认，并把判定标准写进技术协议。"
+           data-en="Under pressure to supply inspection data or an approved first-off? Send us both a defect sample and an acceptable sample; we confirm the first-off against the thresholds agreed with your customer and write the criteria into the technical agreement."
+           data-ja="検査データや初品承認を求められていますか。不良サンプルと合格サンプルを併せてお送りください。客先と合意したしきい値で初品を確認し、判定基準を技術協定に明記します。"
+           data-ko="검사 데이터나 초물 승인을 요구받으셨나요? 불량 샘플과 합격 샘플을 함께 보내주시면, 고객과 합의한 임계값으로 초물을 확인하고 판정 기준을 기술 협약에 명시합니다."
+           data-fr="On vous demande des données de contrôle ou un bon à tirer ? Envoyez-nous un échantillon défectueux et un échantillon acceptable : nous validons le premier tirage selon les seuils convenus avec votre client et inscrivons les critères dans l'accord technique."
+           data-es="¿Le piden datos de inspección o una primera prueba aprobada? Envíenos una muestra defectuosa y una aceptable: confirmamos la primera prueba con los umbrales pactados con su cliente e inscribimos los criterios en el acuerdo técnico.">客户要求提供检测数据或首件签样？把缺陷样与可接受样一起寄给我们，我们按您与客户约定的阈值做首件确认，并把判定标准写进技术协议。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="咨询质检标准与首件签样 →" data-en="Ask about inspection criteria and first-off approval →" data-ja="検査基準・初品承認の相談 →" data-ko="검사 기준·초물 승인 상담 →" data-fr="Demander un cadre de contrôle et un bon à tirer →" data-es="Consultar criterios de inspección y aprobación →">咨询质检标准与首件签样 →</a>
+      </div>
+
+    </div>
+  </section>
