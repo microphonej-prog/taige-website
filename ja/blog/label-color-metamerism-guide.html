@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラベルの色合わせと光源：メタメリズムで色が違って見える理由 | TAGE</title>
+<meta name="description" content="ラベルの色が工場では合うのに店頭で違う——メタメリズムの原因、D65・TL84 など4つの光源と売場の対応、ΔE00 許容差の決め方、承認記録の項目、素材間の色ずれを減らす6つの実務を解説します。東莞泰閣包装。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/label-color-metamerism-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/label-color-metamerism-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "標籤對色的光源與同色異譜：爲什麼客戶說顏色不對",
+     "item": "https://taigetag.com/blog/label-color-metamerism-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "標籤對色的光源與同色異譜：爲什麼客戶說顏色不對",
+   "url": "https://taigetag.com/blog/label-color-metamerism-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/label-color-metamerism-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>ラベルの色とメタメリズム</span></div>
+      <h1>ラベルの色合わせと光源：客先が色違いと言う理由</h1>
+      <p>泰閣包装 · 2026年11月3日更新</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p>サンプルを送り、工場のライトで確認し、客先も色番を承認した。ところが店頭に届いた途端、色が違うと言われる。こうしたトラブルの多くは印刷ミスではなく、見る光源が変わっただけです。同じ色値でも、昼光・店舗のスポット・ショールームの暖色光では三通りに見えます。色を承認する人と検収する人が同じ照明の下にいなければ、議論の土台が揃いません。</p>
+
+      <p>本記事では、メタメリズムの原因、4つの代表的な光源がそれぞれどの販売環境に対応するか、実行可能なΔE許容差の決め方、素材間の色ずれを実際に減らす6つの方法を解説します。</p>
+
+      <h2>メタメリズム：同じ色が二つの光で違って見える</h2>
+
+      <p>私たちが見る色は、光源の分光分布、物体が反射する分光分布、それを受け取る目や測定器という三つの積です。二つの色見本は D65 では色差 0.8 でも、TL84 蛍光灯の下では 2.5 まで開くことがあります。これがメタメリズムで、分光曲線は違うのに、ある一つの光源の下でたまたま等色している状態です。</p>
+
+      <p>副資材は生地以上にこの問題に当たります。タグ、メインラベル、洗濯表示ラベルは、紙とインキ、ポリエステル糸、コーティング布という三つの異なる基材で作られるのが普通だからです。反射曲線が生まれつき違うため、同じに見せることは、ある一つの光源下での妥協であって、本当の同色ではありません。</p>
+
+      <h2>4つの光源と、それぞれが想定する販売空間</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>光源</th>
+            <th>色温度と特性</th>
+            <th>対応する場面</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>D65 昼光</td>
+            <td>6500K。紫外線を含み、蛍光増白剤を励起します</td>
+            <td>基本判定とラボ測定。多くのブランドの既定光源</td>
+          </tr>
+          <tr>
+            <td>TL84 三波長蛍光</td>
+            <td>4000K。中性寄りで赤成分が弱め</td>
+            <td>欧州の小売店舗で一般的な照明</td>
+          </tr>
+          <tr>
+            <td>CWF クールホワイト蛍光</td>
+            <td>約4150K。青緑成分が多め</td>
+            <td>北米の売り場やオフィス</td>
+          </tr>
+          <tr>
+            <td>暖白 LED（約3000K）</td>
+            <td>赤黄が強く青が少ない。メタメリズムが最も出やすい</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>実務では4灯すべては不要です。市場に合わせて2灯で足ります。欧州向けは D65 と TL84、北米向けは D65 と CWF または暖白 LED、中国国内向けは D65 と 3000K スポットです。順番を固定し、双方が毎回同じ手順で見れば、トラブルの半分は消えます。</p>
+
+      <h2>生地よりラベルのほうが崩れやすい理由</h2>
+
+      <ul>
+        <li>蛍光増白剤：紙は白く見せるために OBA を添加するので、紫外線を含む D65 では明るく、TL84 では灰色がかります。糸のロットでも増白剤量が変動し、白ラベルの二つのロットを並べると差が見えます。</li>
+        <li>染料と顔料：染めた糸と印刷インキは着色の仕組みが違い、一方は繊維に染み込み、他方は皮膜を作ります。分光曲線がそもそも一致しません。</li>
+        <li>表面加工：マットフィルム、グロスフィルム、UV ニスは色だけでなく反射の仕方を変えます。同じ紙でもフィルムが違えば、斜めからの光で明度が一段変わります。</li>
+        <li>織りラベルの方向性：サテン織りは経と緯で反射が異なり、90度回すと色が変わります。同じラベルでも服の上で向きが変わると違って見えます。</li>
+        <li>中性色が最も敏感：ネイビー、カーキ、キャメル、グレージュ、フォレストグリーンはΔE 1.5でも目視で分かります。純赤や純黒はずっと寛容です。</li>
+      </ul>
+
+      <h2>仕様書に書けて初めて許容差になる</h2>
+
+      <p>「色は正確に」は仕様ではありません。「D65 下でΔE00 1.5以下、目視できる方向性の差がないこと」が仕様です。三档に分けると運用しやすくなります。メインラベルや洗濯表示ラベルのような小面積・肌に接する副資材は1.5以下、タグや紙袋のような大面積印刷は2.0まで許容、そして絶対値より重要なのが同一出荷内の個体差を1.0以内に抑えることです。客先が比べるのは「今回と前回」だからです。</p>
+
+      <p>数値だけでなく、承認記録の追跡性も必要です。サンプル番号、判定光源、測定器の型番または目視条件、判定者、日付。半年後にクレームが来たとき、当時何を合意したかを示せるのはこの記録だけです。</p>
+
+      <h2>メタメリズムを減らす6つの実務</h2>
+
+      <ol>
+        <li>一色につき基準を一つ。タグ、メインラベル、洗濯表示ラベルを同色にするなら、どれを基準にするかを決め、他をそれに寄せます。三つ同時の完全一致を求めないことです。</li>
+        <li>色番には素材を添えます。Pantone は塗工紙上のインキを定義するもので、糸の色ではありません。織りラベルに色番を出すときは、基材・番手・近似可否を併記します。</li>
+        <li>美しい一枚ではなく、3光源の写真を求めます。同じサンプルを D65、TL84、暖白 LED で撮れば、自店で問題が出るかどうかを客先は一目で判断できます。</li>
+        <li>一つの注文は同じロットで固めます。紙、糸、インキを同じロット番号で投入し、追加注文では前回の保存サンプルと比べてから調色の要否を決めます。</li>
+        <li>濃色で素材間の完全一致を約束しないことです。「同一光源下で目視一致」と言い換え、濃色にはやや広い許容差を設定します。後の手戻りが大きく減ります。</li>
+        <li>完成品を実際の売り場で一度見ることです。オフィスの灯箱がどれほど整っていても、店舗のスポットやショーウィンドウの昼光の代わりにはなりません。旗艦店やポップアップでは特に重要です。</li>
+      </ol>
+
+      <div class="callout">原則は一つ。色は物体の絶対属性ではなく「素材＋光源＋観察者」の組み合わせです。素材・光源・許容差・記録を仕様書に書くほうが、後から誰が見間違えたかを争うよりはるかに安く済みます。</div>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="index.html">副資材 FAQ の記事一覧へ</a></li>
+        <li><a href="trim-color-approval-process.html">副資材の色承認プロセス：サンプル・色差判定・ロット管理</a></li>
+        <li><a href="woven-label-color-matching.html">織りラベルの色合わせが難しい理由：糸・染料・色差管理</a></li>
+        <li><a href="hang-tag-color-management.html">タグの色管理：特色・校正・紙が色に与える影響</a></li>
+        <li><a href="trim-light-fastness-fading-guide.html">副資材の耐光堅牢度：退色・黄変・店舗照明の影響</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>D65 と店舗照明の両方で確認したいサンプルはありませんか。セットをお送りいただければ、対象市場の光源に合わせた3光源写真とΔE記録付きの色レポートを作成し、タグ・メインラベル・洗濯表示ラベルと合わせて見積ります。</p>
+        <a class="cta-btn" href="../contact.html">色レポートと見積の依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=64"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
