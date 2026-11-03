@@ -5,7 +5,8 @@
 import socket, threading, sys
 
 LISTEN = ("127.0.0.1", 8899)
-TARGET = ("140.82.112.3", 443)
+TARGETS = [("140.82.112.3", 443), ("140.82.113.3", 443), ("140.82.114.3", 443),
+           ("140.82.121.4", 443), ("20.205.243.166", 443)]
 
 
 def pump(a, b):
@@ -39,7 +40,16 @@ def handle(c):
         if not line.upper().startswith("CONNECT"):
             c.sendall(b"HTTP/1.1 405 Method Not Allowed\r\n\r\n")
             return
-        up = socket.create_connection(TARGET, timeout=30)
+        up = None
+        for tgt in TARGETS:
+            try:
+                up = socket.create_connection(tgt, timeout=12)
+                break
+            except Exception:
+                up = None
+        if up is None:
+            c.sendall(b"HTTP/1.1 502 Bad Gateway\r\n\r\n")
+            return
         c.sendall(b"HTTP/1.1 200 Connection Established\r\n\r\n")
         t = threading.Thread(target=pump, args=(c, up), daemon=True)
         t.start()
@@ -57,7 +67,7 @@ srv = socket.socket()
 srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 srv.bind(LISTEN)
 srv.listen(50)
-print("listening on %s:%d -> %s:%d" % (LISTEN + TARGET), flush=True)
+print("listening on %s:%d -> %s" % (LISTEN + (str(TARGETS),)), flush=True)
 while True:
     conn, _ = srv.accept()
     threading.Thread(target=handle, args=(conn,), daemon=True).start()
