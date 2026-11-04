@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料近岸採購：產能外移後如何穩住輔料供應 | TAGE" data-en="Nearshoring Apparel Trims: Keeping Supply Stable | TAGE" data-ja="衣料副資材のニアショア調達：生産移管後も供給を安定させる | TAGE" data-ko="의류 부자재 니어쇼어링: 생산 이전 후 공급 안정화 | TAGE" data-fr="Accessoires et nearshoring : sécuriser l'approvisionnement | TAGE" data-es="Accesorios de moda y nearshoring: asegurar el suministro | TAGE">服裝輔料近岸採購：產能外移後如何穩住輔料供應 | TAGE</title>
+<meta name="description" data-zh="服裝輔料近岸採購指南：成衣產能外移後，輔料仍集中在珠三角與長三角。講清時間、規格、模具、顏色四個斷點，集中採購加前置集拼、關鍵件雙源、輔料包前置三種組織方式，交期緩衝的算法，原產地與關稅要點，附六項落地清單。來自東莞泰閣包裝。"
+      data-en="Nearshoring moved the garment, not the trim. Four break points, three supply models, a lead-time buffer formula, duty and origin, and a six-point checklist." data-ja="ニアショア化で服は動いても副資材は動かない。時間・仕様・型・色の4つの断絶点、集中購買＋事前混載・重要品のデュアルソース・キット化の3方式、緩衝日数の計算式、原産地と関税、6項目のチェックリスト。東莞泰閣包装。" data-ko="니어쇼어링으로 의류는 옮겨졌지만 부자재는 그대로입니다. 시간·사양·금형·색상 네 가지 단절 지점, 세 가지 공급 방식, 리드타임 버퍼 계산식, 원산지와 관세, 여섯 항목 체크리스트. 둥관 TAGE 패키징."
+      data-fr="Le nearshoring a déplacé le vêtement, pas l'accessoire. Quatre points de rupture, trois modèles d'approvisionnement, une formule de tampon, codes SH et origine, six points de contrôle."
+      data-es="El nearshoring movió la prenda, no el accesorio. Cuatro puntos de fallo, tres modelos de suministro, una fórmula de colchón, códigos HS y origen, y seis puntos de control."
+      content="服裝輔料近岸採購指南：成衣產能外移後，輔料仍集中在珠三角與長三角。講清時間、規格、模具、顏色四個斷點，集中採購加前置集拼、關鍵件雙源、輔料包前置三種組織方式，交期緩衝的算法，原產地與關稅要點，附六項落地清單。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料近岸採購：產能外移後如何穩住輔料供應",
+     "item": "https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料近岸採購：產能外移後如何穩住輔料供應",
+   "url": "https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-nearshoring-sourcing-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="近岸採購與輔料供應" data-en="Nearshoring and Trim Supply" data-ja="ニアショア調達と副資材供給" data-ko="니어쇼어링과 부자재 공급" data-fr="Nearshoring et accessoires" data-es="Nearshoring y accesorios">近岸採購與輔料供應</span></div>
+      <h1 data-zh="服裝輔料近岸採購：產能外移後如何穩住輔料供應" data-en="Nearshoring Apparel Trims: Keeping Trim Supply Stable After the Move" data-ja="衣料副資材のニアショア調達：生産移管後も供給を安定させる方法" data-ko="의류 부자재 니어쇼어링: 생산 이전 후 공급을 안정시키는 방법" data-fr="Accessoires et nearshoring : sécuriser l'approvisionnement après le transfert" data-es="Accesorios de moda y nearshoring: asegurar el suministro tras el traslado">服裝輔料近岸採購：產能外移後如何穩住輔料供應</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月4日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 4, 2026" data-ja="泰閣包装 · 2026年11月4日更新" data-ko="TAGE 패키징 · 2026년 11월 4일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 4 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 4 de noviembre de 2026">泰閣包裝 · 更新於 2026年11月4日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="過去幾年，成衣產能持續向越南、柬埔寨、土耳其、墨西哥和葡萄牙分散，很多品牌的採購地圖上出現了兩三種產地。但打開輔料清單會發現：吊牌紙、織嘜機、燙金版、膠袋膜、五金扣，仍然高度集中在中國珠三角和長三角。成衣挪了地方，輔料沒挪——近岸採購真正的難題不是「要不要在中國買輔料」，而是怎麼讓輔料與成衣在時間、規格和法規上對齊。"
+         data-en="Over the past few years garment capacity has spread to Vietnam, Cambodia, Turkey, Mexico and Portugal, and many brands now source from two or three origins. Open the trim list, though, and the picture barely changes: tag board, label looms, foil dies, bag film and metal hardware are still concentrated in the Pearl River and Yangtze deltas. The garment moved; the trims did not. The real nearshoring problem is not whether to buy trims in China, but how to keep trims and garments aligned on time, specification and regulation."
+         data-ja="ここ数年、縫製工場はベトナム、カンボジア、トルコ、メキシコ、ポルトガルへ分散し、多くのブランドの調達地図には2〜3の生産国が並びます。ところが副資材のリストを開くと光景はほとんど変わりません。タグ用紙、織機、箔押し版、袋のフィルム、金属金具は依然として珠江デルタと長江デルタに集中しています。服は動いたのに、副資材は動いていません。ニアショア化の本当の難題は「中国で副資材を買うかどうか」ではなく、時間・仕様・法規の三点で副資材と製品を揃えることです。"
+         data-ko="지난 몇 년간 봉제 생산은 베트남, 캄보디아, 터키, 멕시코, 포르투갈로 분산되었고 많은 브랜드의 조달 지도에는 두세 개 생산국이 표시됩니다. 그러나 부자재 목록을 열어 보면 상황은 거의 그대로입니다. 행택 용지, 직조기, 박판, 비닐 필름, 금속 부자재는 여전히 주강 델타와 양쯔강 델타에 집중되어 있습니다. 의류는 옮겨졌지만 부자재는 옮겨지지 않았습니다. 니어쇼어링의 진짜 과제는 '중국에서 부자재를 살지'가 아니라 시간·사양·규정 세 가지를 의류와 맞추는 일입니다."
+         data-fr="Depuis quelques années, la production de vêtements s'est dispersée vers le Vietnam, le Cambodge, la Turquie, le Mexique et le Portugal, et beaucoup de marques achètent désormais sur deux ou trois origines. Ouvrez pourtant la liste des accessoires : carton d'étiquette, métiers à tisser, formes de dorure, film de sachet et quincaillerie restent concentrés dans les deltas de la rivière des Perles et du Yangtsé. Le vêtement a bougé, pas l'accessoire. Le vrai problème du nearshoring n'est pas de savoir s'il faut acheter ses accessoires en Chine, mais d'aligner accessoires et vêtements sur le temps, la spécification et la réglementation."
+         data-es="En los últimos años la producción de confección se ha repartido entre Vietnam, Camboya, Turquía, México y Portugal, y muchas marcas compran ya en dos o tres orígenes. Pero al abrir la lista de accesorios la imagen apenas cambia: cartón para etiquetas, telares, clichés de estampado en caliente, film para bolsas y herrajes siguen concentrados en el delta del río de las Perlas y del Yangtsé. La prenda se movió; el accesorio no. El verdadero problema del nearshoring no es si comprar accesorios en China, sino alinear accesorios y prendas en tiempo, especificación y normativa.">過去幾年，成衣產能持續向越南、柬埔寨、土耳其、墨西哥和葡萄牙分散，很多品牌的採購地圖上出現了兩三種產地。但打開輔料清單會發現：吊牌紙、織嘜機、燙金版、膠袋膜、五金扣，仍然高度集中在中國珠三角和長三角。成衣挪了地方，輔料沒挪——近岸採購真正的難題不是「要不要在中國買輔料」，而是怎麼讓輔料與成衣在時間、規格和法規上對齊。</p>
+
+      <p data-zh="這篇按四個斷點、三種組織方式、交期緩衝怎麼算、原產地與關稅要點四部分講清楚，最後給一張可以直接放進採購手冊的六項清單。"
+         data-en="This guide works through four break points, three ways to organise the supply, how to size the lead-time buffer, and the origin and duty points that decide cost — then closes with a six-point checklist you can paste into your purchasing manual."
+         data-ja="本記事では4つの断絶点、3つの供給オーガナイズ方法、リードタイムの緩衝の取り方、原産地と関税の要点を整理し、最後に購買マニュアルへそのまま貼れる6項目のチェックリストを掲載します。"
+         data-ko="이 글은 네 가지 단절 지점, 세 가지 공급 운영 방식, 리드타임 버퍼 계산, 원산지와 관세 요점을 정리하고 마지막에 구매 매뉴얼에 그대로 넣을 수 있는 여섯 항목 체크리스트를 제공합니다."
+         data-fr="Ce guide traite quatre points de rupture, trois façons d'organiser l'approvisionnement, le dimensionnement du tampon de délai, puis les points d'origine et de douane qui décident du coût — et se termine par une liste de six points à recopier dans votre manuel achats."
+         data-es="Esta guía repasa cuatro puntos de fallo, tres formas de organizar el suministro, cómo dimensionar el colchón de plazo y los puntos de origen y arancel que deciden el coste; termina con una lista de seis puntos para copiar en el manual de compras.">這篇按四個斷點、三種組織方式、交期緩衝怎麼算、原產地與關稅要點四部分講清楚，最後給一張可以直接放進採購手冊的六項清單。</p>
+
+      <h2 data-zh="一、成衣外移後最常見的四個斷點"
+          data-en="1. The Four Break Points That Follow a Move"
+          data-ja="1. 生産移管後に最も多い4つの断絶点"
+          data-ko="1. 생산 이전 후 가장 흔한 네 가지 단절 지점"
+          data-fr="1. Les quatre points de rupture après un transfert"
+          data-es="1. Los cuatro puntos de fallo tras un traslado">一、成衣外移後最常見的四個斷點</h2>
+
+      <ul>
+        <li data-zh="<strong>時間錯位：</strong>輔料到廠晚於成衣上線，產線等料。輔料體積小、貨值低，拼櫃時最容易被「順延到下一水」，而成衣的排產不等人。"
+            data-en="<strong>Time mismatch:</strong> trims land after the sewing line starts and the line waits. Trims are small and low-value, so they are the first thing pushed to the next sailing — and the production plan does not wait."
+            data-ja="<strong>時間のズレ：</strong>副資材の入荷が縫製ラインの稼働開始より遅れ、ラインが待ちます。副資材は小さく低価値なため、混載時に真っ先に「次の便へ」回されがちですが、生産計画は待ってくれません。"
+            data-ko="<strong>시간 불일치:</strong> 부자재가 봉제 라인 가동 후에 도착해 라인이 대기합니다. 부자재는 부피가 작고 단가가 낮아 혼재 선적에서 가장 먼저 다음 배로 밀리지만 생산 계획은 기다려 주지 않습니다."
+            data-fr="<strong>Décalage temporel :</strong> les accessoires arrivent après le démarrage de la ligne, qui attend. Petits et de faible valeur, ils sont les premiers reportés au départ suivant — et le planning de production n'attend pas."
+            data-es="<strong>Desfase temporal:</strong> los accesorios llegan después de arrancar la línea y la línea espera. Son pequeños y de bajo valor, así que son lo primero que se pasa al siguiente embarque, y el plan de producción no espera."><strong>時間錯位：</strong>輔料到廠晚於成衣上線，產線等料。輔料體積小、貨值低，拼櫃時最容易被「順延到下一水」，而成衣的排產不等人。</li>
+        <li data-zh="<strong>規格錯位：</strong>標籤法規跟着銷售市場走，不跟着生產地走。工廠按舊模板做，到了目的港才發現語言、成分或責任方信息不對。"
+            data-en="<strong>Specification mismatch:</strong> labelling law follows the market of sale, not the country of sewing. The factory runs the old template and the error only surfaces at the destination port — language, fibre content or responsible-party details."
+            data-ja="<strong>仕様のズレ：</strong>ラベル法規は販売市場に従い、生産地には従いません。工場は古いテンプレートで作り、仕向港に着いてから言語・組成・責任者情報の誤りが分かります。"
+            data-ko="<strong>사양 불일치:</strong> 라벨 규정은 판매 시장을 따르고 생산지를 따르지 않습니다. 공장은 예전 템플릿으로 만들고 도착항에서야 언어·혼용률·책임자 정보의 오류가 드러납니다."
+            data-fr="<strong>Décalage de spécification :</strong> la réglementation d'étiquetage suit le marché de vente, pas le pays de confection. L'usine reconduit l'ancien gabarit et l'erreur n'apparaît qu'au port d'arrivée : langue, composition ou coordonnées du responsable."
+            data-es="<strong>Desajuste de especificación:</strong> la normativa de etiquetado sigue al mercado de venta, no al país de confección. La fábrica repite la plantilla antigua y el error aparece en el puerto de destino: idioma, composición o datos del responsable."><strong>規格錯位：</strong>標籤法規跟着銷售市場走，不跟着生產地走。工廠按舊模板做，到了目的港才發現語言、成分或責任方信息不對。</li>
+        <li data-zh="<strong>模具錯位：</strong>燙金版、模切刀、織嘜版都留在國內。海外補單要麼空運版材，要麼重開一套，交期從十天變成六週。"
+            data-en="<strong>Tooling mismatch:</strong> foil dies, cutting formes and label artwork plates stay in China. A reorder abroad means air-freighting the tooling or cutting a new set, turning ten days into six weeks."
+            data-ja="<strong>型のズレ：</strong>箔押し版、抜き型、織りラベルの版は国内に残ります。海外での追加発注は版の空輸か再作成になり、10日が6週間に変わります。"
+            data-ko="<strong>금형 불일치:</strong> 박판, 도칼, 직조 라벨 판은 중국에 남습니다. 해외 재주문은 금형을 항공 운송하거나 새로 제작해야 해 10일이 6주가 됩니다."
+            data-fr="<strong>Décalage d'outillage :</strong> formes de dorure, formes de découpe et plaques de tissage restent en Chine. Une réassort à l'étranger impose d'expédier l'outillage par avion ou d'en refaire un jeu : dix jours deviennent six semaines."
+            data-es="<strong>Desajuste de utillaje:</strong> clichés de estampado, cuchillas de troquel y planchas de tejido se quedan en China. Un repedido en el extranjero obliga a enviar el utillaje por avión o a rehacerlo: diez días se convierten en seis semanas."><strong>模具錯位：</strong>燙金版、模切刀、織嘜版都留在國內。海外補單要麼空運版材，要麼重開一套，交期從十天變成六週。</li>
+        <li data-zh="<strong>顏色錯位：</strong>主供與應急供兩家做同一款織嘜，紗線批次不同，「同一色號」在燈下就能差出一檔。"
+            data-en="<strong>Colour mismatch:</strong> a main and a backup supplier run the same woven label from different yarn lots, and the same colour reference drifts a step under the lamp."
+            data-ja="<strong>色のズレ：</strong>主供給と緊急供給の2社が同じ織りラベルを作ると、糸ロットの違いで「同じ色番」が照明下で一段ずれます。"
+            data-ko="<strong>색상 불일치:</strong> 주 공급사와 비상 공급사가 같은 직조 라벨을 만들면 사 로트가 달라 '같은 색번호'가 조명 아래에서 한 단계 어긋납니다."
+            data-fr="<strong>Décalage de couleur :</strong> un fournisseur principal et un fournisseur de secours produisent le même label tissé avec des lots de fil différents : la même référence dérive d'un cran sous la lampe."
+            data-es="<strong>Desajuste de color:</strong> un proveedor principal y otro de respaldo fabrican la misma etiqueta tejida con lotes de hilo distintos y la misma referencia se desvía un escalón bajo la lámpara."><strong>顏色錯位：</strong>主供與應急供兩家做同一款織嘜，紗線批次不同，「同一色號」在燈下就能差出一檔。</li>
+      </ul>
+
+      <h2 data-zh="二、三種可執行的組織方式"
+          data-en="2. Three Workable Ways to Organise It"
+          data-ja="2. 実行可能な3つのオーガナイズ方法"
+          data-ko="2. 실행 가능한 세 가지 운영 방식"
+          data-fr="2. Trois organisations qui fonctionnent"
+          data-es="2. Tres formas viables de organizarlo">二、三種可執行的組織方式</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="方式" data-en="Model" data-ja="方式" data-ko="방식" data-fr="Modèle" data-es="Modelo">方式</th>
+            <th data-zh="適用場景" data-en="Where it fits" data-ja="向くケース" data-ko="적합한 경우" data-fr="Quand l'utiliser" data-es="Cuándo encaja">適用場景</th>
+            <th data-zh="關鍵控制點" data-en="Control point" data-ja="管理の要点" data-ko="관리 포인트" data-fr="Point de contrôle" data-es="Punto de control">關鍵控制點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="集中採購 + 前置集拼" data-en="Central buying plus consolidated pre-positioning" data-ja="集中購買＋事前混載" data-ko="중앙 구매 + 사전 혼재" data-fr="Achat centralisé et groupage avancé" data-es="Compra centralizada y consolidación previa">集中採購 + 前置集拼</td>
+            <td data-zh="多產地成衣、輔料品類多的品牌" data-en="Brands sewing in several countries with a wide trim range" data-ja="複数国で縫製し、副資材の品目が多いブランド" data-ko="여러 국가에서 봉제하고 부자재 품목이 많은 브랜드" data-fr="Marques qui confectionnent dans plusieurs pays avec une gamme large" data-es="Marcas que confeccionan en varios países con una gama amplia">多產地成衣、輔料品類多的品牌</td>
+            <td data-zh="按成衣廠分箱，箱嘜與生產批次綁定，到港後不拆包直接送廠" data-en="Box by garment factory, bind the carton mark to the production lot, and deliver without breaking the pallet" data-ja="縫製工場別に箱詰めし、箱マークと生産ロットを紐付け、開梱せず工場へ直送" data-ko="봉제 공장별로 분箱하고 박스 마크를 생산 로트와 연결해 개봉 없이 공장으로 직송" data-fr="Carton par usine, marquage lié au lot de production, livraison sans dégroupage" data-es="Caja por fábrica, marcado ligado al lote y entrega sin desconsolidar">按成衣廠分箱，箱嘜與生產批次綁定，到港後不拆包直接送廠</td>
+          </tr>
+          <tr>
+            <td data-zh="關鍵件雙源" data-en="Dual source on critical items" data-ja="重要品目のデュアルソース" data-ko="핵심 품목 이중 공급" data-fr="Double source sur les articles critiques" data-es="Doble fuente en artículos críticos">關鍵件雙源</td>
+            <td data-zh="吊牌、主嘜、洗水標這類停料即停線的件" data-en="Hang tags, neck labels and care labels — the items that stop the line" data-ja="タグ、メインラベル、洗濯表示ラベルなど、欠品すればラインが止まる品目" data-ko="행택·메인 라벨·세탁 표시 라벨처럼 결품 시 라인이 멈추는 품목" data-fr="Étiquettes suspendues, label de col, étiquette d'entretien : les articles qui arrêtent la ligne" data-es="Etiquetas colgantes, de cuello y de cuidado: los artículos que paran la línea">吊牌、主嘜、洗水標這類停料即停線的件</td>
+            <td data-zh="兩家共用同一份色標與版輥數據，每批各留封樣" data-en="Both suppliers run the same colour reference and plate data, each keeping a sealed approval sample per lot" data-ja="両社が同一の色基準と版データを共有し、ロットごとに封緘見本を保管" data-ko="두 공급사가 같은 색 기준과 판 데이터를 공유하고 로트마다 봉인 승인 샘플을 보관" data-fr="Même référence couleur et mêmes données de plaque chez les deux, avec un échantillon scellé par lot" data-es="Misma referencia de color y datos de plancha en ambos, con muestra sellada por lote">兩家共用同一份色標與版輥數據，每批各留封樣</td>
+          </tr>
+          <tr>
+            <td data-zh="輔料包前置（kitting）" data-en="Pre-kitted trim packs" data-ja="副資材キットの事前準備" data-ko="부자재 키트 사전 구성" data-fr="Kits d'accessoires préparés à l'avance" data-es="Kits de accesorios preparados">輔料包前置（kitting）</td>
+            <td data-zh="小批量快反、直播或預售備貨" data-en="Small-batch replenishment, live-selling or pre-order drops" data-ja="小ロットの追加生産、ライブ販売・予約販売の仕込み" data-ko="소량 보충, 라이브 판매·예약 판매 준비" data-fr="Réassort en petits lots, vente en direct ou précommandes" data-es="Reposición en lotes pequeños, venta en directo o preventa">小批量快反、直播或預售備貨</td>
+            <td data-zh="按 SKU 配套打包，成衣廠只拆一箱，減少錯配與清點工時" data-en="Pack by SKU so the factory opens one box, cutting mis-picks and counting hours" data-ja="SKU 別にセット化し、工場は1箱開けるだけ。取り違えと検数工数を減らす" data-ko="SKU별로 세트 구성해 공장은 한 상자만 열면 되고 오배송과 검수 시간이 줄어듭니다" data-fr="Conditionner par SKU pour que l'usine n'ouvre qu'un carton : moins d'erreurs et moins d'heures de comptage" data-es="Empaquetar por SKU para que la fábrica abra una sola caja: menos errores y menos horas de conteo">按 SKU 配套打包，成衣廠只拆一箱，減少錯配與清點工時</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="三、交期緩衝怎麼算"
+          data-en="3. Sizing the Lead-Time Buffer"
+          data-ja="3. リードタイムの緩衝の取り方"
+          data-ko="3. 리드타임 버퍼 계산법"
+          data-fr="3. Dimensionner le tampon de délai"
+          data-es="3. Cómo dimensionar el colchón de plazo">三、交期緩衝怎麼算</h2>
+
+      <p data-zh="一個可以直接用的算法：成衣廠日產量 ×（輔料生產天數 + 內陸運輸 + 海運在途 + 目的港清關 + 安全庫存天數）。輔料單價低、體積小，多備一個月的錢通常遠低於停線一天的錢——所以輔料的緩衝天數應當比面料更長，而不是更短。很多品牌恰好反着做，把輔料當成「最後再訂的小東西」。"
+         data-en="One formula you can use as it stands: daily output of the garment factory × (trim production days + inland haulage + ocean transit + destination clearance + safety days). Trims are cheap and compact, so a month of extra stock usually costs far less than one day of a stopped line — which is why the trim buffer should be longer than the fabric buffer, not shorter. Many brands do the opposite and treat trims as the small thing you order last."
+         data-ja="そのまま使える計算式があります。縫製工場の日産量 ×（副資材の生産日数＋内陸輸送＋海上輸送＋仕向港通関＋安全在庫日数）。副資材は単価が低く嵩張らないため、1か月分を余分に持つコストは、ラインが1日止まるコストよりはるかに小さいのが普通です。だから副資材の緩衝日数は生地より長く取るべきで、短くしてはいけません。多くのブランドは逆をやり、「最後に発注する小さなもの」として扱っています。"
+         data-ko="그대로 쓸 수 있는 계산식이 있습니다. 봉제 공장 일 생산량 × (부자재 생산일수 + 내륙 운송 + 해상 운송 + 도착항 통관 + 안전 재고일수). 부자재는 단가가 낮고 부피가 작아 한 달치를 더 보관하는 비용이 라인이 하루 멈추는 비용보다 훨씬 작습니다. 그래서 부자재 버퍼는 원단보다 길어야 하며 짧아서는 안 됩니다. 많은 브랜드가 반대로 해서 부자재를 '마지막에 주문하는 작은 물건'으로 취급합니다."
+         data-fr="Une formule utilisable telle quelle : production journalière de l'usine × (jours de fabrication des accessoires + acheminement intérieur + transit maritime + dédouanement à destination + jours de sécurité). Les accessoires sont peu chers et peu volumineux : un mois de stock supplémentaire coûte presque toujours moins qu'une journée de ligne arrêtée. Le tampon des accessoires doit donc être plus long que celui du tissu, pas plus court. Beaucoup de marques font l'inverse et traitent les accessoires comme la petite commande de dernière minute."
+         data-es="Una fórmula que se puede usar tal cual: producción diaria de la fábrica × (días de fabricación del accesorio + transporte interior + tránsito marítimo + despacho en destino + días de seguridad). Los accesorios son baratos y poco voluminosos, así que un mes extra de stock suele costar mucho menos que un día de línea parada. Por eso el colchón de accesorios debe ser más largo que el de tejido, no más corto. Muchas marcas hacen lo contrario y tratan los accesorios como el pedido pequeño de última hora.">一個可以直接用的算法：成衣廠日產量 ×（輔料生產天數 + 內陸運輸 + 海運在途 + 目的港清關 + 安全庫存天數）。輔料單價低、體積小，多備一個月的錢通常遠低於停線一天的錢——所以輔料的緩衝天數應當比面料更長，而不是更短。很多品牌恰好反着做，把輔料當成「最後再訂的小東西」。</p>
+
+      <div class="callout">
+        <p data-zh="一個常被忽略的事實：吊牌與織嘜的打樣是 3–7 天、大貨是 10–25 天，一旦版材要重開，兩頭都會翻倍。輔料是整條供應鏈上最該早動手、也最容易被拖到最晚的一環——它便宜，所以沒人替它排優先級。"
+           data-en="An easily missed fact: hang tags and woven labels take 3–7 days to sample and 10–25 days in bulk, and if the tooling has to be re-cut, both ends double. Trims are the earliest thing to start and the easiest to leave until last — they are cheap, so nobody fights for their slot in the plan."
+           data-ja="見落とされがちな事実。タグと織りラベルのサンプルは3〜7日、量産は10〜25日、版を作り直す場合は両方が倍になります。副資材は最も早く動くべきで、最も後回しにされやすい工程です。安いから誰も優先順位を争わないのです。"
+           data-ko="놓치기 쉬운 사실이 있습니다. 행택과 직조 라벨은 샘플 3~7일, 양산 10~25일이며, 판을 다시 만들어야 하면 양쪽 모두 두 배가 됩니다. 부자재는 가장 먼저 시작해야 하고 가장 늦게까지 밀리는 공정입니다. 값이 싸서 아무도 우선순위를 다투지 않기 때문입니다."
+           data-fr="Un fait souvent oublié : 3 à 7 jours d'échantillon et 10 à 25 jours de série pour une étiquette ou un label tissé, et le double aux deux bouts si l'outillage doit être refait. L'accessoire est ce qu'il faut lancer le plus tôt et ce qu'on repousse le plus tard : comme il ne coûte pas cher, personne ne se bat pour sa place dans le planning."
+           data-es="Un dato que se pasa por alto: una etiqueta colgante o tejida tarda 3-7 días en muestra y 10-25 días en serie, y ambas cifras se duplican si hay que rehacer el utillaje. El accesorio es lo que antes hay que lanzar y lo que más se retrasa: como es barato, nadie pelea por su hueco en el plan.">一個常被忽略的事實：吊牌與織嘜的打樣是 3–7 天、大貨是 10–25 天，一旦版材要重開，兩頭都會翻倍。輔料是整條供應鏈上最該早動手、也最容易被拖到最晚的一環——它便宜，所以沒人替它排優先級。</p>
+      </div>
+
+      <h2 data-zh="四、原產地與關稅要點"
+          data-en="4. Origin and Duty Points"
+          data-ja="4. 原産地と関税の要点"
+          data-ko="4. 원산지와 관세 요점"
+          data-fr="4. Origine et droits de douane"
+          data-es="4. Origen y aranceles">四、原產地與關稅要點</h2>
+
+      <ul>
+        <li data-zh="輔料隨成衣一起出口時通常併入成衣報關；但單獨發往海外成衣廠時，要按各自的 HS 編碼申報——吊牌、織嘜、膠袋、紙袋分屬不同編碼，不能籠統報成「包裝材料」。"
+            data-en="Trims shipped with the finished garment are usually declared with it; trims sent separately to an overseas factory need their own HS codes — hang tags, woven labels, poly bags and paper bags sit in different headings and cannot be lumped under packaging material."
+            data-ja="完成品と一緒に輸出する副資材は通常まとめて申告しますが、海外の縫製工場へ単独で送る場合は個別の HS コードが必要です。タグ、織りラベル、ビニール袋、紙袋はそれぞれ別の分類で、「包装材料」として一括申告はできません。"
+            data-ko="완제품과 함께 수출하는 부자재는 보통 함께 신고하지만, 해외 봉제 공장으로 따로 보낼 때는 각자의 HS 코드로 신고해야 합니다. 행택, 직조 라벨, 비닐 봉투, 종이 봉투는 서로 다른 분류라 '포장재'로 묶어 신고할 수 없습니다."
+            data-fr="Les accessoires expédiés avec le vêtement fini sont généralement déclarés avec lui ; envoyés séparément à une usine étrangère, ils exigent leurs propres codes SH — étiquettes, labels tissés, sachets et sacs papier relèvent de positions différentes et ne se déclarent pas en vrac comme emballage."
+            data-es="Los accesorios que viajan con la prenda terminada suelen declararse con ella; si se envían por separado a una fábrica en el extranjero necesitan su propio código HS: etiquetas colgantes, tejidas, bolsas plásticas y de papel están en partidas distintas y no se declaran en bloque como material de embalaje.">輔料隨成衣一起出口時通常併入成衣報關；但單獨發往海外成衣廠時，要按各自的 HS 編碼申報——吊牌、織嘜、膠袋、紙袋分屬不同編碼，不能籠統報成「包裝材料」。</li>
+        <li data-zh="自貿協定（如 USMCA、歐盟與越南或土耳其的協定）對原產地有具體規則，輔料是否計入區域價值成分要看協定條文，不能假設「輔料金額小就不影響」。"
+            data-en="Free trade agreements — USMCA, the EU agreements with Vietnam or Turkey — set specific origin rules, and whether trims count towards regional value content depends on the text. Do not assume that a small trim value has no effect."
+            data-ja="FTA（USMCA、EU・ベトナム、EU・トルコなど）には具体的な原産地規則があり、副資材が域内付加価値に算入されるかは条文次第です。「金額が小さいから影響しない」と決めつけてはいけません。"
+            data-ko="자유무역협정(USMCA, EU-베트남·터키 협정 등)에는 구체적 원산지 규정이 있고, 부자재가 역내 부가가치에 포함되는지는 협정 문언에 따릅니다. '금액이 작으니 영향 없다'고 가정하면 안 됩니다."
+            data-fr="Les accords de libre-échange — USMCA, accords UE-Vietnam ou UE-Turquie — fixent des règles d'origine précises, et l'inclusion des accessoires dans la valeur régionale dépend du texte. Ne supposez pas qu'un montant faible est sans effet."
+            data-es="Los acuerdos de libre comercio —USMCA, acuerdos UE-Vietnam o UE-Turquía— fijan reglas de origen concretas, y si los accesorios cuentan para el valor regional depende del texto. No suponga que un importe pequeño no influye.">自貿協定（如 USMCA、歐盟與越南或土耳其的協定）對原產地有具體規則，輔料是否計入區域價值成分要看協定條文，不能假設「輔料金額小就不影響」。</li>
+        <li data-zh="「Made in」標的是成衣的實質性改變地，不是輔料產地；但個別市場要求標明標籤或包裝的生產國，需要在下單前確認，而不是等清關時補。"
+            data-en="The Made in statement refers to where the garment underwent substantial transformation, not where the trims came from. Some markets do require the country of manufacture of the label or packaging itself — confirm before ordering, not at clearance."
+            data-ja="「Made in」は製品が実質的変更を受けた国を示すもので、副資材の原産国ではありません。ただしラベルや包装自体の製造国表示を求める市場もあるため、通関時ではなく発注前に確認します。"
+            data-ko="'Made in' 표시는 완제품이 실질적 변형을 거친 국가를 뜻하며 부자재 원산지가 아닙니다. 다만 일부 시장은 라벨이나 포장 자체의 제조국 표시를 요구하므로 통관 때가 아니라 발주 전에 확인해야 합니다."
+            data-fr="La mention Made in désigne le pays de transformation substantielle du vêtement, pas l'origine des accessoires. Certains marchés exigent le pays de fabrication de l'étiquette ou de l'emballage lui-même : à vérifier avant commande, pas au dédouanement."
+            data-es="El Made in indica el país de transformación sustancial de la prenda, no el origen de los accesorios. Algunos mercados exigen el país de fabricación de la etiqueta o del embalaje: confírmelo antes de pedir, no en la aduana.">「Made in」標的是成衣的實質性改變地，不是輔料產地；但個別市場要求標明標籤或包裝的生產國，需要在下單前確認，而不是等清關時補。</li>
+        <li data-zh="在 DDP 或雙清條款下，輔料的申報價值與樣品價值要分列清楚，否則容易被併入成衣完稅價格，多繳的稅沒人認賬。"
+            data-en="Under DDP or delivered-duty terms, declare trim value and sample value separately, or they get folded into the garment's customs value and the overpaid duty belongs to nobody."
+            data-ja="DDP や関税込条件では、副資材の申告価額とサンプル価額を分けて記載します。そうしないと完成品の課税価格に吸収され、払い過ぎた税の負担者が曖昧になります。"
+            data-ko="DDP나 관세 포함 조건에서는 부자재 신고 가액과 샘플 가액을 분리해 기재해야 합니다. 그렇지 않으면 완제품 과세 가격에 합산되어 초과 납부한 세금의 책임자가 불분명해집니다."
+            data-fr="En DDP ou en conditions tous frais payés, déclarez séparément la valeur des accessoires et celle des échantillons, sinon elles sont absorbées dans la valeur en douane du vêtement et le trop-perçu n'a plus de responsable."
+            data-es="En DDP o condiciones con derechos incluidos, declare por separado el valor de los accesorios y el de las muestras; si no, se absorben en el valor en aduana de la prenda y el exceso pagado no tiene responsable.">在 DDP 或雙清條款下，輔料的申報價值與樣品價值要分列清楚，否則容易被併入成衣完稅價格，多繳的稅沒人認賬。</li>
+      </ul>
+
+      <h2 data-zh="五、落地清單：六項先做起來"
+          data-en="5. A Six-Point Checklist to Start With"
+          data-ja="5. まず実行する6項目のチェックリスト"
+          data-ko="5. 먼저 실행할 여섯 항목 체크리스트"
+          data-fr="5. Liste de six points pour démarrer"
+          data-es="5. Lista de seis puntos para empezar">五、落地清單：六項先做起來</h2>
+
+      <ol>
+        <li data-zh="按停線風險給輔料 BOM 分級：紅（吊牌、主嘜、洗水標）、黃（袋、卡、繩）、綠（通用五金）。紅色件按關鍵物料管理。"
+            data-en="Grade the trim BOM by line-stop risk: red (hang tag, neck label, care label), amber (bags, cards, cord), green (generic hardware). Manage red items as critical material."
+            data-ja="副資材 BOM をライン停止リスクで分類します。赤（タグ、メインラベル、洗濯表示ラベル）、黄（袋、カード、紐）、緑（汎用金具）。赤は重要資材として管理します。"
+            data-ko="부자재 BOM을 라인 중단 위험으로 등급화합니다. 적색(행택·메인 라벨·세탁 표시 라벨), 황색(봉투·카드·끈), 녹색(범용 금속 부품). 적색은 핵심 자재로 관리합니다."
+            data-fr="Classez la nomenclature des accessoires par risque d'arrêt : rouge (étiquette suspendue, label de col, étiquette d'entretien), orange (sachets, cartes, cordon), vert (quincaillerie générique). Les articles rouges se gèrent comme matière critique."
+            data-es="Clasifique la lista de accesorios por riesgo de parada: rojo (etiqueta colgante, de cuello, de cuidado), ámbar (bolsas, tarjetas, cordón), verde (herrajes genéricos). Los rojos se gestionan como material crítico.">按停線風險給輔料 BOM 分級：紅（吊牌、主嘜、洗水標）、黃（袋、卡、繩）、綠（通用五金）。紅色件按關鍵物料管理。</li>
+        <li data-zh="每個紅色件寫清版材歸屬、存放地與取用方式，寫進合同——模具歸屬條款比價格條款更影響三年後的補單速度。"
+            data-en="For every red item, state who owns the tooling, where it is stored and how it is retrieved, in the contract. The tooling-ownership clause affects your reorder speed three years out more than the price clause does."
+            data-ja="赤の各品目について、型の所有権・保管場所・取り出し方法を契約に明記します。3年後の追加発注速度に効くのは、価格条項よりも型の所有権条項です。"
+            data-ko="적색 품목마다 금형 소유권, 보관 위치, 인출 방법을 계약서에 명시합니다. 3년 뒤 재주문 속도에 영향을 주는 것은 가격 조항보다 금형 소유권 조항입니다."
+            data-fr="Pour chaque article rouge, précisez au contrat qui possède l'outillage, où il est stocké et comment il est récupéré : à trois ans, la clause de propriété de l'outillage pèse plus que le prix sur votre vitesse de réassort."
+            data-es="Para cada artículo rojo, indique en el contrato quién posee el utillaje, dónde se guarda y cómo se retira: a tres años, la cláusula de propiedad del utillaje pesa más que el precio en la velocidad de repedido.">每個紅色件寫清版材歸屬、存放地與取用方式，寫進合同——模具歸屬條款比價格條款更影響三年後的補單速度。</li>
+        <li data-zh="目的國法規由銷售市場確認，不要讓成衣廠代填。成衣廠最熟悉的是縫製，不是目的國的標籤法。"
+            data-en="Let the market of sale confirm the destination rules; do not let the garment factory fill them in. A sewing plant knows sewing, not another country's labelling law."
+            data-ja="仕向国の法規は販売市場側が確認し、縫製工場に任せないこと。工場が詳しいのは縫製であり、他国のラベル法規ではありません。"
+            data-ko="목적국 규정은 판매 시장이 확인하고 봉제 공장에 맡기지 않습니다. 공장이 잘 아는 것은 봉제이지 다른 나라의 라벨 규정이 아닙니다."
+            data-fr="Faites confirmer les règles de destination par le marché de vente, pas par l'usine : une usine connaît la couture, pas la loi d'étiquetage d'un autre pays."
+            data-es="Que el mercado de venta confirme la normativa de destino; no deje que la fábrica la rellene. Una planta conoce la costura, no la ley de etiquetado de otro país.">目的國法規由銷售市場確認，不要讓成衣廠代填。成衣廠最熟悉的是縫製，不是目的國的標籤法。</li>
+        <li data-zh="雙源必須共用同一份色標與版輥數據，並且各自留封樣；否則「兩家都合格」會在同一件衣服上顯形。"
+            data-en="Dual sources must share one colour reference and one set of plate data, and each must keep a sealed sample; otherwise two compliant suppliers show up side by side on the same garment."
+            data-ja="デュアルソースは同一の色基準と版データを共有し、それぞれが封緘見本を保管します。そうしないと「両社とも合格」が同じ一着の上で露見します。"
+            data-ko="이중 공급은 같은 색 기준과 판 데이터를 공유하고 각자 봉인 샘플을 보관해야 합니다. 그렇지 않으면 '두 곳 모두 합격'이 한 벌의 옷 위에서 드러납니다."
+            data-fr="Les deux sources doivent partager une seule référence couleur et un seul jeu de données de plaque, chacune conservant un échantillon scellé ; sinon deux fournisseurs conformes se voient sur le même vêtement."
+            data-es="Las dos fuentes deben compartir una referencia de color y unos datos de plancha, y cada una guardar muestra sellada; si no, dos proveedores conformes se ven en la misma prenda.">雙源必須共用同一份色標與版輥數據，並且各自留封樣；否則「兩家都合格」會在同一件衣服上顯形。</li>
+        <li data-zh="前置集拼按成衣廠分箱，箱嘜與生產批次綁定，到港直送工位，不在倉庫二次分貨。"
+            data-en="In consolidated pre-positioning, carton by garment factory, bind the mark to the lot, and ship straight to the line instead of re-sorting in a warehouse."
+            data-ja="事前混載は縫製工場別に箱詰めし、箱マークを生産ロットに紐付け、倉庫で再仕分けせず現場へ直送します。"
+            data-ko="사전 혼재는 봉제 공장별로 분箱하고 박스 마크를 생산 로트에 연결해 창고 재분류 없이 현장으로 직송합니다."
+            data-fr="En groupage avancé, carton par usine, marquage lié au lot et livraison directe à la ligne, sans re-tri en entrepôt."
+            data-es="En consolidación previa, caja por fábrica, marcado ligado al lote y entrega directa a la línea, sin re-clasificar en almacén.">前置集拼按成衣廠分箱，箱嘜與生產批次綁定，到港直送工位，不在倉庫二次分貨。</li>
+        <li data-zh="每季度複覈一次在途天數，旺季（海運漲價、港口擁堵、春節前）單獨加緩衝，不要用淡季的經驗跑旺季。"
+            data-en="Re-check transit days every quarter, and add a separate buffer for peak season — rate spikes, port congestion, the run-up to Chinese New Year. Do not run peak season on low-season numbers."
+            data-ja="四半期ごとに輸送日数を見直し、繁忙期（運賃高騰、港混雑、春節前）は別枠で緩衝を足します。閑散期の実績で繁忙期を回してはいけません。"
+            data-ko="분기마다 운송 일수를 재확인하고 성수기(운임 급등, 항만 적체, 춘절 전)에는 별도 버퍼를 더합니다. 비수기 실적으로 성수기를 운영하면 안 됩니다."
+            data-fr="Revoyez les jours de transit chaque trimestre et ajoutez un tampon distinct en haute saison — flambée des frets, congestion portuaire, avant le Nouvel An chinois. Ne pilotez pas la haute saison avec des chiffres de basse saison."
+            data-es="Revise los días de tránsito cada trimestre y añada un colchón aparte en temporada alta: subidas de flete, congestión portuaria, antes del Año Nuevo chino. No gestione la temporada alta con cifras de temporada baja.">每季度複覈一次在途天數，旺季（海運漲價、港口擁堵、春節前）單獨加緩衝，不要用淡季的經驗跑旺季。</li>
+      </ol>
+
+      <h2 data-zh="相關文章"
+          data-en="Related reading"
+          data-ja="関連記事"
+          data-ko="관련 글"
+          data-fr="À lire également"
+          data-es="Artículos relacionados">相關文章</h2>
+
+      <ul>
+        <li><a href="garment-trims-lead-time-guide.html" data-zh="輔料交期指南：從打樣到大貨的時間表" data-en="Trim Lead Times: From Sample to Bulk" data-ja="副資材の納期：サンプルから量産までの日程" data-ko="부자재 리드타임: 샘플에서 양산까지" data-fr="Délais des accessoires : de l'échantillon à la série" data-es="Plazos de accesorios: de la muestra a la serie">輔料交期指南：從打樣到大貨的時間表</a></li>
+        <li><a href="trim-supply-continuity-guide.html" data-zh="輔料供應連續性：斷供預案與備用方案" data-en="Trim Supply Continuity: Contingency and Backup" data-ja="副資材の供給継続：断供時の備えと代替案" data-ko="부자재 공급 연속성: 공급 중단 대비와 대안" data-fr="Continuité d'approvisionnement : plan de secours" data-es="Continuidad de suministro: plan de contingencia">輔料供應連續性：斷供預案與備用方案</a></li>
+        <li><a href="trims-kitting-guide.html" data-zh="輔料配套（kitting）：按 SKU 打包的做法" data-en="Trims Kitting: Packing by SKU" data-ja="副資材キット：SKU 別にまとめる方法" data-ko="부자재 키팅: SKU별 포장 방식" data-fr="Kitting des accessoires : conditionner par SKU" data-es="Kitting de accesorios: empaquetar por SKU">輔料配套（kitting）：按 SKU 打包的做法</a></li>
+        <li><a href="apparel-trims-hs-code-customs.html" data-zh="輔料 HS 編碼與報關：常見歸類與踩坑" data-en="Trim HS Codes and Customs: Classification Traps" data-ja="副資材の HS コードと通関：分類の落とし穴" data-ko="부자재 HS 코드와 통관: 분류 함정" data-fr="Codes SH des accessoires : pièges de classement" data-es="Códigos HS de accesorios: trampas de clasificación">輔料 HS 編碼與報關：常見歸類與踩坑</a></li>
+        <li><a href="index.html" data-zh="返回輔料 FAQ 全部文章" data-en="Back to all trims FAQ articles" data-ja="副資材FAQの記事一覧へ" data-ko="부자재 FAQ 전체 글 보기" data-fr="Retour à tous les articles FAQ accessoires" data-es="Volver a todos los artículos de FAQ de accesorios">返回輔料 FAQ 全部文章</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="把成衣產地、目的市場與現有輔料清單發來，我們按「停線風險」幫你排一版供應節奏，並給出吊牌、織嘜、洗水標與包裝的組合報價。"
+           data-en="Send us the garment origins, the destination markets and your current trim list. We will map a supply rhythm by line-stop risk and quote hang tags, woven labels, care labels and packaging as one set."
+           data-ja="縫製地、仕向市場、現在の副資材リストをお送りください。ライン停止リスクで供給リズムを整理し、タグ・織りラベル・洗濯表示ラベル・包装をまとめて見積ります。"
+           data-ko="봉제 국가, 목적 시장, 현재 부자재 목록을 보내주시면 라인 중단 위험 기준으로 공급 리듬을 정리하고 행택·직조 라벨·세탁 표시 라벨·포장을 함께 견적해 드립니다."
+           data-fr="Envoyez-nous les pays de confection, les marchés de destination et votre liste d'accessoires : nous établissons un rythme d'approvisionnement par risque d'arrêt et chiffrons étiquettes, labels tissés, étiquettes d'entretien et emballage en un seul lot."
+           data-es="Envíenos los países de confección, los mercados de destino y su lista de accesorios: trazamos un ritmo de suministro por riesgo de parada y presupuestamos etiquetas, tejidas, de cuidado y embalaje como un conjunto.">把成衣產地、目的市場與現有輔料清單發來，我們按「停線風險」幫你排一版供應節奏，並給出吊牌、織嘜、洗水標與包裝的組合報價。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取輔料供應方案與報價 →" data-en="Request a trim supply plan and quote →" data-ja="副資材の供給案と見積を依頼 →" data-ko="부자재 공급안과 견적 요청 →" data-fr="Demander un plan d'approvisionnement et un devis →" data-es="Solicitar un plan de suministro y presupuesto →">索取輔料供應方案與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=64"></script>
+<script src="../js/assist.js?v=49"></script>
+</body>
+</html>
