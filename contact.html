@@ -272,7 +272,7 @@
     /* 语言子目录（/en/ /ja/ /ko/ /fr/ /es/）下，瓦片相对路径要回退一级：
        否则浏览器会请求 /<lang>/images/tiles/... → 404 → 地图空白（只有中文根目录正常）。
        用运行时前缀而不是绝对路径，这样带子路径部署（*.github.io/repo/）也不会坏。 */
-    var _lang = (location.pathname.match(/\/(en|ja|ko|fr|es)\/[^\/]*$/) || [])[1] || "zh";
+    var _lang = (location.pathname.match(/\/(en|de|ja|ko|fr|es|pt)\/[^\/]*$/) || [])[1] || "zh";
     var _base = _lang === "zh" ? "" : "../";
     var _addr = {
       zh: "客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
@@ -280,7 +280,9 @@
       ja: "広東省東莞市虎門鎮 客天下布輔料城 2棟南門2通路 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
       ko: "광둥성 둥관시 후먼진 커톈샤 부자재시장 2동 남문 2통로 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
       fr: "Unité C3-021, marché de fournitures Ketianxia, Humen",
-      es: "Unidad C3-021, mercado de suministros Ketianxia, Humen"
+      es: "Unidad C3-021, mercado de suministros Ketianxia, Humen",
+      de: "Einheit C3-021, Ketianxia Stoffmarkt, Humen, Dongguan",
+      pt: "Unidade C3-021, mercado Ketianxia, Humen, Dongguan"
     };
     var map = L.map("map", {
       center: [22.816245, 113.668423],
