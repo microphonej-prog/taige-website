@@ -44,6 +44,39 @@ def strip_cjk(s):
     """去掉字符串里的中文字符（用于 alt）"""
     return re.sub(r'[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]+', '', s).strip()
 
+def normalize_cluster(rel_clean):
+    """把同一页面的所有语言版本 hreflang 重新对齐（只声明存在且可索引的目标），幂等。"""
+    try:
+        import fix_hreflang as F
+    except Exception:
+        return
+    for _l in ['zh', 'en', 'de', 'ja', 'ko', 'fr', 'es', 'pt']:
+        _p = F.file_for(_l, rel_clean)
+        if not os.path.isfile(_p):
+            continue
+        try:
+            _s = open(_p, encoding='utf-8', errors='ignore').read()
+        except OSError:
+            continue
+        if 'noindex' in _s.lower():
+            continue
+        if not F.ALT_RE.search(_s):
+            continue
+        _block = F.build_block(_l, rel_clean)
+        _first = [True]
+
+        def _rep(mm):
+            if _first[0]:
+                _first[0] = False
+                return _block + "\n"
+            return ""
+
+        _new = F.ALT_RE.sub(_rep, _s)
+        if _new != _s:
+            open(_p, 'w', encoding='utf-8', newline='').write(_new)
+            print('  hreflang 同步: %s' % _p.replace(F.ROOT + '/', ''))
+
+
 def convert(lang, src_path, out_path, page_abs_url):
     take, drop_zh, drop_other = LANG_ATTRS[lang]
     with open(src_path, encoding='utf-8') as f:
@@ -164,6 +197,7 @@ def convert(lang, src_path, out_path, page_abs_url):
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(s)
     print('OK  %s -> %s' % (src_path, out_path))
+    normalize_cluster(rel_path.replace(lang + '/', '', 1) or 'index.html')
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:

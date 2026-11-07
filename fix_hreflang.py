@@ -19,8 +19,8 @@ import sys
 
 ROOT = "C:/Users/micro/taige-website"
 BASE = "https://taigetag.com/"
-LANGS = ["en", "de", "ja", "ko", "fr", "es", "pt"]
-HL_TAG = {"en": "en", "de": "de", "ja": "ja", "ko": "ko", "fr": "fr", "es": "es", "pt": "pt-BR"}
+LANGS = ["en", "fr", "es", "ja", "ko", "de", "pt"]  # 顺序对齐站内既有写法，避免无谓 diff
+HL_TAG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko", "de": "de", "pt": "pt-BR"}
 
 ALT_RE = re.compile(r'[ \t]*<link rel="alternate" hreflang="[^"]*"[^>]*>\n?')
 
