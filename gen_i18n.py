@@ -93,9 +93,23 @@ def convert(lang, src_path, out_path, page_abs_url):
         _h = 'https://taigetag.com/' + _l + '/' + rel_path.replace(lang + '/', '', 1)
         _h = _h.replace('https://taigetag.com/%s/index.html' % _l, 'https://taigetag.com/%s/' % _l)
         hl_hrefs[_l] = _h
+    # 只声明“目标页真实存在且可索引”的语言，避免单向 hreflang / 指向 noindex 或 404
+    _rel_clean = rel_path.replace(lang + '/', '', 1)
+
+    def _usable(_l):
+        _f = os.path.join(_l, _rel_clean or 'index.html')
+        if not os.path.isfile(_f):
+            return False
+        try:
+            _t = open(_f, encoding="utf-8", errors="ignore").read()
+        except OSError:
+            return False
+        return "noindex" not in _t.lower()
+
     hreflang_lines = ['<link rel="alternate" hreflang="zh-Hant" href="%s">' % zh_href]
     for _l in ["en", "de", "ja", "ko", "fr", "es", "pt"]:
-        hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
+        if _l == lang or _usable(_l):
+            hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
     hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)
     hreflang = '\n'.join(hreflang_lines)
     s = s.replace('<link rel="canonical" href="%s">' % page_abs_url,
