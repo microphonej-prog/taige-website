@@ -19,7 +19,7 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "201";
+  var BUST_VERSION = "202";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -260,7 +260,8 @@
     fr: { text: "Ce site est disponible en français", btn: "Voir en français" },
     es: { text: "Este sitio está disponible en español", btn: "Ver en español" }
   };
-  var HINT_OFF_KEY = "taige_lang_hint_off";
+  var HINT_OFF_KEY = "taige_lang_hint_off_v2";
+  var HINT_SNOOZE_DAYS = 30;   /* 訪客關掉後靜默天數，期滿重新提示 */
 
   function sysLang() {
     var s = "";
@@ -276,13 +277,30 @@
     return (lang === "zh" ? "/" : "/" + lang + "/") + rel;
   }
 
+  /* 讀取該語言上次被關掉的時間戳（0 = 從未關過） */
+  function hintOffAt(lang) {
+    try {
+      var o = JSON.parse(localStorage.getItem(HINT_OFF_KEY) || "{}");
+      return (o && typeof o[lang] === "number") ? o[lang] : 0;
+    } catch (e) { return 0; }
+  }
+  /* 記錄本次關閉時間 */
+  function setHintOff(lang) {
+    try {
+      var o = {};
+      try { o = JSON.parse(localStorage.getItem(HINT_OFF_KEY) || "{}") || {}; } catch (e) { o = {}; }
+      o[lang] = Date.now();
+      localStorage.setItem(HINT_OFF_KEY, JSON.stringify(o));
+    } catch (e) {}
+  }
+
   function maybeShowHint() {
     if (IS_BOT) return;
     var target = sysLang();
     if (target === current) return;                       /* 已是訪客語言，不提示 */
-    var off = "";
-    try { off = localStorage.getItem(HINT_OFF_KEY) || ""; } catch (e) {}
-    if (off.split(",").indexOf(target) >= 0) return;      /* 已被訪客關掉過 */
+    /* 靜默期內關掉過 → 不再提示；超過 HINT_SNOOZE_DAYS 天則重新提示 */
+    var offAt = hintOffAt(target);
+    if (offAt && (Date.now() - offAt) < HINT_SNOOZE_DAYS * 86400000) return;
     var t = HINT[target] || HINT.en;
     var bar = document.createElement("div");
     bar.className = "lang-hint";
@@ -297,10 +315,7 @@
       try { localStorage.setItem(LANG_KEY, target); } catch (e) {}   /* 記住選擇，回訪直接進該語言 */
     });
     bar.querySelector(".lh-close").addEventListener("click", function () {
-      try {
-        var d = (localStorage.getItem(HINT_OFF_KEY) || "").split(",").filter(Boolean);
-        if (d.indexOf(target) < 0) { d.push(target); localStorage.setItem(HINT_OFF_KEY, d.join(",")); }
-      } catch (e) {}
+      setHintOff(target);                                 /* 記錄時間，30 天後重新提示 */
       if (bar.parentNode) bar.parentNode.removeChild(bar);
     });
   }
