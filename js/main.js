@@ -21,7 +21,7 @@
     else if (_p.indexOf("/pt/") >= 0) DIR_LANG = "pt";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "206";
+  var BUST_VERSION = "207";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -129,7 +129,7 @@
       if (!t) return;
       var lang = t.getAttribute("data-lang");
       if (!lang || lang === current) return;
-      var rel = location.pathname.replace(/^\/(en|ja|ko|fr|es)\//, "").replace(/^\/+|\/+$/g, "");
+      var rel = location.pathname.replace(/^\/(en|de|ja|ko|fr|es|pt)\//, "").replace(/^\/+|\/+$/g, "");
       if (!rel || rel === "index.html") {
         /* 首頁：根目錄 zh 用 /，語言目錄用 /xx/ */
         location.href = (lang === "zh" ? "/" : "/" + lang + "/") + "?v=" + BUST_VERSION;
@@ -274,7 +274,7 @@
   }
 
   function samePathIn(lang) {
-    var rel = location.pathname.replace(/^\/(en|ja|ko|fr|es)\//, "").replace(/^\/+/, "");
+    var rel = location.pathname.replace(/^\/(en|de|ja|ko|fr|es|pt)\//, "").replace(/^\/+/, "");
     if (rel === "index.html") rel = "";
     return (lang === "zh" ? "/" : "/" + lang + "/") + rel;
   }
