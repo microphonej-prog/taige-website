@@ -94,7 +94,7 @@ def convert(lang, src_path, out_path, page_abs_url):
         _h = _h.replace('https://taigetag.com/%s/index.html' % _l, 'https://taigetag.com/%s/' % _l)
         hl_hrefs[_l] = _h
     hreflang_lines = ['<link rel="alternate" hreflang="zh-Hant" href="%s">' % zh_href]
-    for _l in ["en", "ja", "ko", "fr", "es", "de", "pt"]:
+    for _l in ["en", "de", "ja", "ko", "fr", "es", "pt"]:
         hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
     hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)
     hreflang = '\n'.join(hreflang_lines)
