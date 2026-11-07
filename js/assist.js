@@ -36,6 +36,12 @@
   }
   /* ================= 四語知識庫 ================= */
   function T() {}
+  /* AI 按钮无障碍标签（多语言） */
+  var FAB_LABEL = {
+    zh: "提問", en: "Ask a question", de: "Frage stellen", ja: "質問する",
+    ko: "질문하기", fr: "Poser une question", es: "Hacer una pregunta", pt: "Fazer uma pergunta"
+  };
+  try { FAB.setAttribute("aria-label", FAB_LABEL[LANG] || FAB_LABEL.zh); } catch (e) {}
   T.zh = {
     online: "在線", hello: "您好！我是泰閣智能客服 🐓 關於吊牌、織嘜、洗水標、包裝袋的任何問題都可以問我，也可以直接告訴我您的需求～",
     ph: "輸入您的問題…", send: "發送",
