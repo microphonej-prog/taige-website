@@ -6,12 +6,14 @@
 """
 import re, html, os, sys
 
-LANGS = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}          # data 属性后缀
+LANGS = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko", "de": "de", "pt": "pt"}          # data 属性后缀
 LANG_ATTRS = {"en": ("data-en", "data-fr", "data-es"), # 取此语言 / 删这些
               "fr": ("data-fr", "data-zh", "data-es"),
               "es": ("data-es", "data-zh", "data-fr"),
               "ja": ("data-ja", "data-zh", "data-en"),
-              "ko": ("data-ko", "data-zh", "data-en")}
+              "ko": ("data-ko", "data-zh", "data-en"),
+              "de": ("data-de", "data-zh", "data-en"),
+              "pt": ("data-pt", "data-zh", "data-en")}
 # 主语言之间的互链（hreflang 中除自身外的两个）
 ALT_PAIRS = {"en": [("fr", "fr/"), ("es", "es/")],
              "fr": [("en", "en/"), ("es", "es/")],
@@ -49,7 +51,7 @@ def convert(lang, src_path, out_path, page_abs_url):
     s = protect(s)  # 保护引号内 >
 
     # ---------- 1. html lang ----------
-    HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}
+    HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko", "de": "de", "pt": "pt"}
     html_lang = HTML_LANG.get(lang, "en")
     s = re.sub(r'<html lang="(?:zh-CN|zh-Hant)"', '<html lang="%s"' % html_lang, s)
 
@@ -85,14 +87,14 @@ def convert(lang, src_path, out_path, page_abs_url):
     if lang != 'zh':
         zh_href = zh_href.replace('https://taigetag.com/index.html', 'https://taigetag.com/')
     # 逐语言生成 hreflang（语言根首页去 index.html，与 canonical 规则一致）
-    HL_TAG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko"}
+    HL_TAG = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko", "de": "de", "pt": "pt-BR"}
     hl_hrefs = {}
     for _l in LANGS:
         _h = 'https://taigetag.com/' + _l + '/' + rel_path.replace(lang + '/', '', 1)
         _h = _h.replace('https://taigetag.com/%s/index.html' % _l, 'https://taigetag.com/%s/' % _l)
         hl_hrefs[_l] = _h
     hreflang_lines = ['<link rel="alternate" hreflang="zh-Hant" href="%s">' % zh_href]
-    for _l in ["en", "ja", "ko", "fr", "es"]:
+    for _l in ["en", "ja", "ko", "fr", "es", "de", "pt"]:
         hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
     hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)
     hreflang = '\n'.join(hreflang_lines)
@@ -109,7 +111,7 @@ def convert(lang, src_path, out_path, page_abs_url):
                 return m.group(0)
             v = html.unescape(de.group(1))
             # 删除其它语言 data 属性（保留 data-lang 等）
-            attrs2 = re.sub(r'\s*data-(?:zh|en|fr|es|ja|ko)="[^"]*"', '', attrs)
+            attrs2 = re.sub(r'\s*data-(?:zh|en|fr|es|ja|ko|de|pt)="[^"]*"', '', attrs)
             if re.search(r'<[a-zA-Z]', v):
                 content_new = v  # 含 HTML 标签（如 <em>）→ 原样
             else:

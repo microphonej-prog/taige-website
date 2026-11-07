@@ -6,7 +6,7 @@
 
   /* ---------- 語言檢測（?lang= 參數 > localStorage > 默認zh） ---------- */
   var LANG_KEY = "taige_lang";
-  var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
+  var LANGS = ["zh", "en", "ja", "ko", "fr", "es", "de", "pt"];
   /* 獨立語言目錄 /en/ /fr/ /es/：固定對應語言，忽略 ?lang/localStorage/瀏覽器語言，
      語言切換按鈕跳回根目錄對應語言版本 */
   var DIR_LANG = null;
@@ -17,9 +17,11 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
     else if (_p.indexOf("/ja/") >= 0) DIR_LANG = "ja";
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
+    else if (_p.indexOf("/de/") >= 0) DIR_LANG = "de";
+    else if (_p.indexOf("/pt/") >= 0) DIR_LANG = "pt";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "204";
+  var BUST_VERSION = "205";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -63,7 +65,7 @@
   }
   if (LANGS.indexOf(current) < 0) current = "zh";
 
-  var LANG_HTML = { zh: "zh-Hant", en: "en", ja: "ja", ko: "ko", fr: "fr", es: "es" };
+  var LANG_HTML = { zh: "zh-Hant", en: "en", ja: "ja", ko: "ko", fr: "fr", es: "es", de: "de", pt: "pt" };
 
   /* 只處理內容元素：跳過 void 元素與頭部元素 */
   var SKIP_TAGS = { TITLE: 1, META: 1, LINK: 1, SCRIPT: 1, STYLE: 1, BR: 1, HR: 1, IMG: 1, INPUT: 1, SOURCE: 1, TRACK: 1, WBR: 1, AREA: 1, BASE: 1, COL: 1, EMBED: 1, PARAM: 1 };
