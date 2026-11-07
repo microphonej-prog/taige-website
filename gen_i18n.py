@@ -130,6 +130,9 @@ def convert(lang, src_path, out_path, page_abs_url):
     # data-bg 随机背景路径同样处理（逗号分隔多图，全部替换）
     s = re.sub(r'data-bg="([^"]*)"',
                lambda m: 'data-bg="%s"' % m.group(1).replace('../images/', '../../images/'), s)
+    # 内联 style 里的 url("../images/...") 同样要回退两级（源仅 blog/index.html 使用）
+    s = s.replace('url("../images/', 'url("../../images/')
+    s = s.replace("url('../images/", "url('../../images/")
     # 再处理不带前缀的（根目录页面在 /<lang>/ 下：css/ -> ../css/）
     s = re.sub(r'(href|src)="(css|js|images)/', r'\1="../\2/', s)
     # videos/ assets/ 同理
