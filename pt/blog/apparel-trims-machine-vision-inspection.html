@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="服裝輔料機器視覺質檢指南：能查什麼、怎麼落地 | TAGE" data-en="Machine Vision Inspection for Apparel Trims: What It Can Check | TAGE" data-ja="衣料副資材のマシンビジョン検査：検査できる範囲と導入の進め方 | TAGE" data-ko="의류 부자재 머신 비전 검사: 검사 범위와 도입 방법 | TAGE" data-fr="Contrôle par vision des accessoires : ce qu'il peut vraiment vérifier | TAGE" data-es="Inspección por visión de accesorios: qué puede controlar y qué no | TAGE">服裝輔料機器視覺質檢指南：能查什麼、怎麼落地 | TAGE</title>
+<meta name="description" data-zh="服裝輔料機器視覺質檢的落地指南：織嘜字符、吊牌套印色差與膠袋封口分別用什麼光源與閾值，ΔE 公差怎麼和客戶約定，人機對比怎麼做，多大的訂單規模才值得上設備。來自東莞泰閣包裝。"
+      data-en="Machine vision for apparel trims: which defects are detectable, the lighting and thresholds for woven-label characters and hang-tag ΔE, and when the ROI works." data-ja="衣料副資材のマシンビジョン検査ガイド。織りネームの文字、下げ札の見当・色差、ポリ袋の封口に必要な光源としきい値、ΔE 公差の取り決め、人と機械の比較方法、設備投資に見合う受注規模を解説します。東莞泰閣包装。" data-ko="의류 부자재 머신 비전 검사 가이드. 직조 라벨 문자, 행택 정합·색차, 폴리백 밀봉에 필요한 광원과 임계값, ΔE 공차 합의, 사람과 기계 비교 방법, 설비 투자에 맞는 주문 규모를 정리했습니다. 둥관 TAGE 패키징."
+      data-fr="Vision artificielle sur accessoires : défauts détectables, éclairage et seuils pour labels tissés et étiquettes, tolérances ΔE, comparaison homme-machine et seuil de rentabilité."
+      data-es="Visión artificial en accesorios: defectos detectables, iluminación y umbrales para etiquetas tejidas y colgantes, tolerancias ΔE, comparación hombre-máquina y cuándo es rentable."
+      content="服裝輔料機器視覺質檢的落地指南：織嘜字符、吊牌套印色差與膠袋封口分別用什麼光源與閾值，ΔE 公差怎麼和客戶約定，人機對比怎麼做，多大的訂單規模才值得上設備。來自東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/pt/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/apparel-trims-machine-vision-inspection.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+     "item": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝輔料機器視覺質檢指南：能查什麼、怎麼落地",
+   "url": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/apparel-trims-machine-vision-inspection.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag active" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="機器視覺質檢" data-en="Machine Vision Inspection" data-ja="マシンビジョン検査" data-ko="머신 비전 검사" data-fr="Contrôle par vision" data-es="Inspección por visión">機器視覺質檢</span></div>
+      <h1 data-zh="服裝輔料機器視覺質檢指南：能查什麼、怎麼落地" data-en="Machine Vision Inspection for Apparel Trims: What It Can Check and How to Roll It Out" data-ja="衣料副資材のマシンビジョン検査：検査できる範囲と導入の進め方" data-ko="의류 부자재 머신 비전 검사: 검사 범위와 도입 방법" data-fr="Contrôle par vision des accessoires : ce qu'il peut vérifier et comment le déployer" data-es="Inspección por visión de accesorios: qué puede controlar y cómo implantarla">服裝輔料機器視覺質檢指南：能查什麼、怎麼落地</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月2日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 2, 2026" data-ja="泰閣包装 · 2026年11月2日" data-ko="TAGE 패키징 · 2026년 11월 2일 업데이트" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 2 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 2 de noviembre de 2026">泰閣包裝 · 更新於 2026年11月2日</p>
+    </div>
+  </section>
+
+<section class="article-body">
+    <div class="container">
+
+      <p data-zh="機器視覺質檢在服裝輔料行業被談了很多年，真正跑通的生產線並不多。原因不在相機，而在於輔料的品種太雜：同一個車間裏，織嘜是小字符高密度，吊牌是大面積專色，膠袋是連續透明卷材，三者的光源、鏡頭與判定邏輯完全不同。買一套通用系統指望它自己適應，幾乎必然失敗。"
+         data-en="Machine vision inspection has been discussed in the garment trim industry for years, yet few lines actually run it well. The obstacle is not the camera but the sheer variety of trims: in one workshop, a woven label means tiny characters at high density, a hang tag means large solid-colour areas, and a poly bag means a continuous transparent web. Lighting, lens and decision logic differ completely between them. Buying one generic system and expecting it to adapt on its own almost always fails."
+         data-ja="衣料副資材の世界でマシンビジョン検査は何年も前から語られてきましたが、実際に安定稼働しているラインは多くありません。障壁はカメラではなく、副資材の品種の多さです。同じ工場内でも、織りネームは高密度の小さな文字、下げ札は大面積の特色、ポリ袋は連続する透明ロール材であり、光源・レンズ・判定ロジックがまったく異なります。汎用システムを一つ買って製品に合わせてくれると期待する方法は、ほぼ確実に失敗します。"
+         data-ko="머신 비전 검사는 의류 부자재 업계에서 오래 이야기되어 왔지만 실제로 안정적으로 운영되는 라인은 많지 않습니다. 걸림돌은 카메라가 아니라 부자재의 품종이 너무 다양하다는 점입니다. 같은 공장 안에서도 직조 라벨은 고밀도의 작은 문자, 행택은 대면적 별색, 폴리백은 연속되는 투명 롤 소재여서 광원·렌즈·판정 로직이 완전히 다릅니다. 범용 시스템 하나를 사서 제품에 알아서 맞춰주기를 기대하는 방식은 거의 반드시 실패합니다."
+         data-fr="L'inspection par vision artificielle est évoquée depuis des années dans les accessoires du vêtement, mais peu de lignes fonctionnent vraiment. L'obstacle n'est pas la caméra mais la variété des produits : dans le même atelier, un label tissé signifie de petits caractères très denses, une étiquette suspendue de grandes surfaces en couleur d'accompagnement, et un sac poly un matériau continu et transparent. Éclairage, objectif et logique de décision diffèrent totalement. Acheter un système générique en espérant qu'il s'adapte seul échoue presque toujours."
+         data-es="La inspección por visión artificial se discute desde hace años en los accesorios de confección, pero pocas líneas funcionan de verdad. El obstáculo no es la cámara sino la variedad de productos: en el mismo taller, una etiqueta tejida implica caracteres pequeños y densos, una etiqueta colgante grandes superficies en color directo y una bolsa de polietileno un material continuo y transparente. Iluminación, óptica y lógica de decisión son completamente distintas. Comprar un sistema genérico esperando que se adapte solo casi siempre fracasa.">機器視覺質檢在服裝輔料行業被談了很多年，真正跑通的生產線並不多。原因不在相機，而在於輔料的品種太雜：同一個車間裏，織嘜是小字符高密度，吊牌是大面積專色，膠袋是連續透明卷材，三者的光源、鏡頭與判定邏輯完全不同。買一套通用系統指望它自己適應，幾乎必然失敗。</p>
+
+      <p data-zh="這篇講視覺檢測能查什麼、查不了什麼，織嘜字符與吊牌色差這兩類難點怎麼設閾值，包裝袋在線檢測要注意什麼，以及什麼樣的訂單規模才值得上設備。"
+         data-en="This guide covers what vision can and cannot check, how to set thresholds for the two hard cases — woven-label characters and hang-tag colour — what to watch in inline poly-bag inspection, and what order volume justifies the equipment."
+         data-ja="本記事では、マシンビジョンで検査できること・できないこと、難しい2領域（織りネームの文字と下げ札の色差）のしきい値の決め方、ポリ袋のインライン検査の注意点、そして設備投資に見合う受注規模について解説します。"
+         data-ko="이 글은 머신 비전으로 검사할 수 있는 것과 없는 것, 어려운 두 영역(직조 라벨 문자와 행택 색차)의 임계값 설정법, 폴리백 인라인 검사 시 유의점, 그리고 설비 투자에 맞는 주문 규모를 다룹니다."
+         data-fr="Ce guide traite ce que la vision peut et ne peut pas contrôler, la fixation des seuils pour les deux cas difficiles — caractères de labels tissés et couleur d'étiquettes suspendues —, les points de vigilance en inspection en ligne des sacs poly, et le volume de commande qui justifie l'équipement."
+         data-es="Esta guía trata qué puede y qué no puede controlar la visión, cómo fijar umbrales en los dos casos difíciles —caracteres de etiquetas tejidas y color de etiquetas colgantes—, qué vigilar en la inspección en línea de bolsas y qué volumen de pedido justifica el equipo.">這篇講視覺檢測能查什麼、查不了什麼，織嘜字符與吊牌色差這兩類難點怎麼設閾值，包裝袋在線檢測要注意什麼，以及什麼樣的訂單規模才值得上設備。</p>
+
+      <h2 data-zh="視覺能查什麼、查不了什麼"
+          data-en="What vision can and cannot check"
+          data-ja="マシンビジョンで検査できること・できないこと"
+          data-ko="비전이 검사할 수 있는 것과 없는 것"
+          data-fr="Ce que la vision contrôle, et ce qu'elle ne contrôle pas"
+          data-es="Lo que la visión controla y lo que no">視覺能查什麼、查不了什麼</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="缺陷類型" data-en="Defect type" data-ja="欠点の種類" data-ko="결점 유형" data-fr="Type de défaut" data-es="Tipo de defecto">缺陷類型</th>
+            <th data-zh="現在的做法" data-en="Current practice" data-ja="現状の方法" data-ko="현재 방식" data-fr="Pratique actuelle" data-es="Práctica actual">現在的做法</th>
+            <th data-zh="視覺檢測可行性" data-en="Vision feasibility" data-ja="画像検査の可否" data-ko="비전 검사 가능성" data-fr="Faisabilité" data-es="Viabilidad">視覺檢測可行性</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="織嘜字符缺筆、糊字、跳線" data-en="Missing strokes, blurred characters or skipped picks on a woven label" data-ja="織りネームの欠け・潰れ・踏み外し" data-ko="직조 라벨의 획 누락·번짐·건너뜀" data-fr="Traits manquants, caractères baveux ou duite sautée sur label tissé" data-es="Trazos faltantes, caracteres borrosos o pasadas saltadas">織嘜字符缺筆、糊字、跳線</td>
+            <td data-zh="放大鏡目檢，抽 10%-20%" data-en="Loupe and eye, 10 to 20 percent sampling" data-ja="ルーペ目視、10〜20% 抜き取り" data-ko="확대경 육안 검사, 10~20% 샘플링" data-fr="Loupe et œil, prélèvement de 10 à 20 %" data-es="Lupa y ojo, muestreo del 10 al 20 %">放大鏡目檢，抽 10%-20%</td>
+            <td data-zh="可行，但必須先固定機位與光源" data-en="Feasible, but camera position and lighting must be fixed first" data-ja="可能だが、まずカメラ位置と光源の固定が前提" data-ko="가능하나 카메라 위치와 광원 고정이 전제" data-fr="Faisable, à condition de figer position et éclairage" data-es="Viable, pero fijando antes posición y luz">可行，但必須先固定機位與光源</td>
+          </tr>
+          <tr>
+            <td data-zh="吊牌套印偏移、專色色差" data-en="Registration drift and solid-colour deviation on hang tags" data-ja="下げ札の見当ずれ・特色の色差" data-ko="행택 정합 어긋남·별색 색차" data-fr="Dérive de repérage et écart de teinte sur étiquettes" data-es="Desvío de registro y desviación de color directo">吊牌套印偏移、專色色差</td>
+            <td data-zh="首件比對色卡，過程中靠經驗" data-en="First-off against a colour book, then experience" data-ja="初品を色見本と比較、後は経験" data-ko="초물을 색견본과 대조, 이후 경험" data-fr="Bon à tirer comparé au nuancier, puis l'expérience" data-es="Primera prueba contra abanico, luego experiencia">首件比對色卡，過程中靠經驗</td>
+            <td data-zh="可行，用 ΔE 閾值判定" data-en="Feasible, judged on a ΔE threshold" data-ja="可能、ΔE しきい値で判定" data-ko="가능, ΔE 임계값으로 판정" data-fr="Faisable, jugé sur un seuil ΔE" data-es="Viable, con umbral ΔE">可行，用 ΔE 閾值判定</td>
+          </tr>
+          <tr>
+            <td data-zh="膠袋漏封、氣泡、印刷漏印" data-en="Unsealed seams, trapped air, missing print on poly bags" data-ja="ポリ袋のシール不良・気泡・印刷抜け" data-ko="폴리백 밀봉 불량·기포·인쇄 누락" data-fr="Soudures manquantes, bulles, impression absente sur sacs" data-es="Sellado fallido, burbujas, impresión ausente en bolsas">膠袋漏封、氣泡、印刷漏印</td>
+            <td data-zh="手撕抽檢，整卷報廢常見" data-en="Hand tear tests; whole rolls are often scrapped" data-ja="手切り抜き取り、ロール全廃も珍しくない" data-ko="손으로 뜯는 샘플링, 롤 전체 폐기 빈번" data-fr="Essais de déchirure ; des bobines entières sont jetées" data-es="Pruebas de desgarro; se desechan bobinas enteras">手撕抽檢，整卷報廢常見</td>
+            <td data-zh="可行，適合在線連續檢測" data-en="Feasible, well suited to inline inspection" data-ja="可能、インライン連続検査に適する" data-ko="가능, 인라인 연속 검사에 적합" data-fr="Faisable, adapté à l'inspection en ligne" data-es="Viable, apto para inspección en línea">可行，適合在線連續檢測</td>
+          </tr>
+          <tr>
+            <td data-zh="尺寸超差、裁切毛邊" data-en="Out-of-tolerance dimensions, frayed cut edges" data-ja="寸法外れ・裁断の毛羽" data-ko="치수 초과·재단 보풀" data-fr="Dimensions hors tolérance, bords effilochés" data-es="Medidas fuera de tolerancia, bordes deshilachados">尺寸超差、裁切毛邊</td>
+            <td data-zh="卡尺抽量，尺寸靠首件保證" data-en="Caliper sampling; first-off sets the size" data-ja="ノギス抜き取り、寸法は初品で担保" data-ko="버니어 샘플 측정, 치수는 초물로 보증" data-fr="Contrôle au pied à coulisse, taille garantie au bon à tirer" data-es="Muestreo con calibre, medida asegurada en primera pieza">尺寸超差、裁切毛邊</td>
+            <td data-zh="可行，需要定位治具" data-en="Feasible with a locating fixture" data-ja="可能、位置決め治具が必要" data-ko="가능, 위치 결정 지그 필요" data-fr="Faisable avec un gabarit de positionnement" data-es="Viable con plantilla de posicionado">可行，需要定位治具</td>
+          </tr>
+          <tr>
+            <td data-zh="手感、柔軟度、氣味、溶劑殘留" data-en="Hand-feel, softness, odour, solvent residue" data-ja="風合い・柔らかさ・におい・残留溶剤" data-ko="촉감·유연성·냄새·잔류 용제" data-fr="Toucher, souplesse, odeur, résidus de solvant" data-es="Tacto, suavidad, olor, residuo de disolvente">手感、柔軟度、氣味、溶劑殘留</td>
+            <td data-zh="手摸鼻聞，或送第三方檢測" data-en="Hand and nose, or a third-party lab" data-ja="手と鼻、または第三者検査機関" data-ko="손과 코, 또는 제3자 시험기관" data-fr="Main et nez, ou un laboratoire externe" data-es="Mano y nariz, o un laboratorio externo">手感、柔軟度、氣味、溶劑殘留</td>
+            <td data-zh="不可行，必須留人工或實驗室" data-en="Not feasible; keep human or lab checks" data-ja="不可、人手またはラボ検査を残す" data-ko="불가, 인력 또는 실험실 검사 유지" data-fr="Non : garder l'humain ou le laboratoire" data-es="No: mantener control humano o de laboratorio">不可行，必須留人工或實驗室</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-zh="一句話概括：視覺擅長看得見的幾何與顏色，不擅長摸得到的物理與化學。把兩者混在一起談，方案就一定會做歪。"
+         data-en="In one line: vision is good at geometry and colour you can see, and bad at physics and chemistry you have to touch. Confusing the two guarantees a misdirected project."
+         data-ja="要するに、画像検査は「見える幾何と色」に強く、「触れる物理と化学」に弱いということです。両者を混ぜて議論すると、必ずおかしな設計になります。"
+         data-ko="한 줄로 말하면, 비전은 눈에 보이는 기하와 색에 강하고 손으로 느끼는 물리·화학에는 약합니다. 둘을 섞어 논의하면 방향이 반드시 틀어집니다."
+         data-fr="En une phrase : la vision excelle en géométrie et en couleur visibles, et échoue sur la physique et la chimie que l'on touche. Mélanger les deux fausse tout projet."
+         data-es="En una frase: la visión es buena en geometría y color visibles, y mala en física y química que se tocan. Mezclar ambas cosas desvía cualquier proyecto.">一句話概括：視覺擅長看得見的幾何與顏色，不擅長摸得到的物理與化學。把兩者混在一起談，方案就一定會做歪。</p>
+
+      <h2 data-zh="織嘜字符：最難的一類"
+          data-en="Woven-label characters: the hardest case"
+          data-ja="織りネームの文字：最も難しい領域"
+          data-ko="직조 라벨 문자: 가장 어려운 영역"
+          data-fr="Caractères de labels tissés : le cas le plus difficile"
+          data-es="Caracteres de etiquetas tejidas: el caso más difícil">織嘜字符：最難的一類</h2>
+
+      <p data-zh="織嘜是織出來的，不是印出來的：字符邊緣天生毛糙，經線隨張力輕微漂移，底色與字色接近時對比度極低。做視覺方案要先解決三件事：一是用低角度側光把經緯的凹凸打出陰影，讓筆畫的邊界顯形；二是保證分辨率，字高 1.5mm 以下時每毫米至少要 20 個像素；三是用模板加容差比對，而不是逐像素剛性比對——每卷織嘜的張力都略有不同，剛性比對會把好品判成壞品。"
+         data-en="A woven label is woven, not printed: character edges are naturally fuzzy, warp threads drift slightly with tension, and contrast collapses when ground and text colours are close. Three things must be solved first. Use low-angle side lighting so the relief of warp and weft casts shadows and stroke edges appear. Guarantee resolution — below 1.5 mm character height you need at least 20 pixels per millimetre. And compare against a template with tolerance rather than pixel-rigid matching, because tension differs slightly from roll to roll and rigid matching condemns good product."
+         data-ja="織りネームは印刷ではなく織りです。文字の縁は本来的に毛羽立ち、経糸は張力でわずかに流れ、地色と文字色が近いとコントラストが極端に落ちます。まず3点を解決します。低角度の側方光で経糸・緯糸の凹凸に影を作り、画線の境界を出します。解像度を確保し、文字高 1.5mm 以下なら 1mm あたり最低 20 ピクセルが必要です。そして画素単位の厳密比較ではなく、許容差付きのテンプレート比較を使います。ロールごとに張力がわずかに異なるため、厳密比較は良品を不良と判定します。"
+         data-ko="직조 라벨은 인쇄가 아니라 직조입니다. 문자 가장자리는 본래 거칠고, 경사는 장력에 따라 미세하게 흐르며, 바탕색과 글자색이 비슷하면 대비가 극도로 낮아집니다. 먼저 세 가지를 해결해야 합니다. 낮은 각도의 측광으로 경위사의 요철에 그림자를 만들어 획 경계를 드러냅니다. 해상도를 확보해 글자 높이 1.5mm 이하에서는 1mm당 최소 20픽셀이 필요합니다. 그리고 픽셀 단위 고정 비교가 아니라 공차를 둔 템플릿 비교를 씁니다. 롤마다 장력이 조금씩 달라 고정 비교는 양품을 불량으로 판정합니다."
+         data-fr="Un label tissé est tissé, pas imprimé : les bords de caractères sont naturellement flous, les fils de chaîne dérivent légèrement avec la tension, et le contraste s'effondre quand fond et texte sont proches. Trois points à régler d'abord : un éclairage latéral rasant pour que le relief chaîne-trame projette une ombre et révèle le contour des traits ; une résolution suffisante, au moins 20 pixels par millimètre sous 1,5 mm de hauteur de caractère ; et une comparaison sur gabarit avec tolérance plutôt qu'un appariement rigide au pixel, car la tension varie d'une bobine à l'autre et le rigide condamne du bon produit."
+         data-es="Una etiqueta tejida se teje, no se imprime: los bordes de los caracteres son naturalmente difusos, los hilos de urdimbre derivan levemente con la tensión y el contraste se desploma cuando fondo y texto son parecidos. Hay que resolver tres cosas primero: luz lateral rasante para que el relieve de urdimbre y trama proyecte sombra y aparezca el contorno del trazo; resolución suficiente, al menos 20 píxeles por milímetro por debajo de 1,5 mm de altura de carácter; y comparación con plantilla y tolerancia en lugar de coincidencia rígida píxel a píxel, porque la tensión cambia de una bobina a otra y lo rígido condena producto bueno.">織嘜是織出來的，不是印出來的：字符邊緣天生毛糙，經線隨張力輕微漂移，底色與字色接近時對比度極低。做視覺方案要先解決三件事：一是用低角度側光把經緯的凹凸打出陰影，讓筆畫的邊界顯形；二是保證分辨率，字高 1.5mm 以下時每毫米至少要 20 個像素；三是用模板加容差比對，而不是逐像素剛性比對——每卷織嘜的張力都略有不同，剛性比對會把好品判成壞品。</p>
+
+      <p data-zh="判定標準必須寫進驗收文件，而不是留在工程師的腦子裏：允許的斷線長度、糊字面積佔比、跳線根數、髒點數。沒有這些閾值，視覺檢測只是把人工的爭論換成了機器的爭論。"
+         data-en="The acceptance criteria must live in the inspection document, not in an engineer's head: permitted broken-thread length, share of blurred character area, number of skipped picks, count of soil spots. Without these thresholds, vision merely replaces a human argument with a machine argument."
+         data-ja="判定基準は技術者の頭の中ではなく、検収文書に書きます。許容できる糸切れ長さ、潰れ面積の割合、踏み外し本数、汚れ点の数。このしきい値がなければ、画像検査は人の議論を機械の議論に置き換えるだけです。"
+         data-ko="판정 기준은 엔지니어의 머릿속이 아니라 검수 문서에 적어야 합니다. 허용 실 끊김 길이, 번진 글자 면적 비율, 건너뜀 개수, 오점 개수입니다. 이런 임계값이 없으면 비전 검사는 사람의 논쟁을 기계의 논쟁으로 바꿀 뿐입니다."
+         data-fr="Les critères d'acceptation doivent figurer dans le document de contrôle, pas dans la tête d'un ingénieur : longueur de fil rompu admise, part de surface de caractère baveuse, nombre de duites sautées, nombre de taches. Sans ces seuils, la vision ne fait que remplacer une discussion humaine par une discussion machine."
+         data-es="Los criterios de aceptación deben estar en el documento de inspección, no en la cabeza de un ingeniero: longitud admitida de hilo roto, proporción de área de carácter borrosa, número de pasadas saltadas, número de manchas. Sin esos umbrales, la visión solo cambia una discusión humana por una discusión de máquina.">判定標準必須寫進驗收文件，而不是留在工程師的腦子裏：允許的斷線長度、糊字面積佔比、跳線根數、髒點數。沒有這些閾值，視覺檢測只是把人工的爭論換成了機器的爭論。</p>
+
+      <h2 data-zh="吊牌套印與色差：用 ΔE 說話"
+          data-en="Hang-tag registration and colour: let ΔE speak"
+          data-ja="下げ札の見当と色差：ΔE で語る"
+          data-ko="행택 정합과 색차: ΔE로 말하기"
+          data-fr="Repérage et couleur d'étiquettes : laisser parler le ΔE"
+          data-es="Registro y color de etiquetas: dejar hablar al ΔE">吊牌套印與色差：用 ΔE 說話</h2>
+
+      <p data-zh="吊牌是大面積專色印刷，視覺檢測在這裏最有價值的兩項是套印偏移與色差。可操作的做法是：以客戶籤樣的首件爲基準，ΔE00 小於 2 視爲可接受，2 到 3 進入警戒需要複檢，大於 3 判不合格。具體公差一定要和客戶約定，快時尚品牌與奢侈品牌能接受的範圍差得很遠。"
+         data-en="Hang tags are large-area solid-colour print, and the two most valuable checks here are registration drift and colour deviation. A workable approach: take the customer-approved first-off as the reference, accept below ΔE00 2, treat 2 to 3 as a warning needing recheck, and reject above 3. The tolerance must be agreed with the customer — fast fashion and luxury brands accept very different ranges."
+         data-ja="下げ札は大面積の特色印刷であり、ここで最も価値のある検査は見当ずれと色差です。実務的には、客先承認の初品を基準に、ΔE00 が 2 未満を合格、2〜3 は再検査が必要な警告、3 超を不合格とします。許容差は必ず客先と取り決めます。ファストファッションと高級ブランドでは許容範囲が大きく異なります。"
+         data-ko="행택은 대면적 별색 인쇄이며, 여기서 가장 가치 있는 검사는 정합 어긋남과 색차입니다. 실무적으로는 고객 승인 초물을 기준으로 ΔE00 2 미만은 합격, 2~3은 재검사가 필요한 경고, 3 초과는 불합격으로 합니다. 공차는 반드시 고객과 합의해야 하며, 패스트패션과 럭셔리 브랜드의 허용 범위는 크게 다릅니다."
+         data-fr="Les étiquettes suspendues sont imprimées en grandes surfaces de couleur d'accompagnement ; les deux contrôles les plus utiles y sont la dérive de repérage et l'écart de teinte. Méthode praticable : prendre le bon à tirer validé par le client comme référence, accepter sous ΔE00 2, traiter 2 à 3 comme une alerte à recontrôler, refuser au-delà de 3. La tolérance doit être convenue avec le client : la fast fashion et le luxe n'acceptent pas les mêmes plages."
+         data-es="Las etiquetas colgantes son impresión en grandes superficies de color directo, y los dos controles más valiosos son el desvío de registro y la desviación de color. Método practicable: tomar la primera prueba aprobada por el cliente como referencia, aceptar por debajo de ΔE00 2, tratar 2 a 3 como alerta que exige recontrol y rechazar por encima de 3. La tolerancia debe pactarse con el cliente: la moda rápida y el lujo aceptan rangos muy distintos.">吊牌是大面積專色印刷，視覺檢測在這裏最有價值的兩項是套印偏移與色差。可操作的做法是：以客戶籤樣的首件爲基準，ΔE00 小於 2 視爲可接受，2 到 3 進入警戒需要複檢，大於 3 判不合格。具體公差一定要和客戶約定，快時尚品牌與奢侈品牌能接受的範圍差得很遠。</p>
+
+      <p data-zh="兩個容易翻車的地方：金屬色（燙金、鐳射膜）和深色底（黑、藏青）在相機裏會失真，需要單獨標定白平衡與曝光，不能和普通四色共用一套參數；另外紙面有紋理的再生紙、棉紙會讓測色值跳動，這時應該改爲測平均色而不是單點取色。"
+         data-en="Two traps: metallic effects such as foil and holographic film, and dark grounds such as black or navy, distort in camera and need their own white-balance and exposure calibration rather than sharing parameters with ordinary four-colour work. And textured stocks such as recycled or cotton paper make readings jump, so measure an averaged area rather than a single point."
+         data-ja="つまずきやすい点が2つあります。箔やホログラムなどの金属表現と、黒・紺などの濃い地色はカメラ上で色が歪むため、通常の4色とは別にホワイトバランスと露出を校正する必要があります。また再生紙やコットン紙のような地合のある紙は測色値がばらつくため、単点ではなく平均色で測ります。"
+         data-ko="실수하기 쉬운 두 지점이 있습니다. 박·홀로그램 같은 금속 표현과 검정·남색 같은 어두운 바탕은 카메라에서 색이 왜곡되어 일반 4도 인쇄와 다른 화이트밸런스·노출 보정이 필요합니다. 또 재생지나 면지처럼 요철이 있는 종이는 측색값이 흔들리므로 단일 지점이 아니라 평균색으로 측정해야 합니다."
+         data-fr="Deux pièges : les effets métallisés (dorure, film holographique) et les fonds sombres (noir, marine) se déforment à la caméra et exigent leur propre calibration de balance des blancs et d'exposition, sans partager les réglages du quadri courant. Et les papiers texturés, recyclés ou coton, font sauter les mesures : mesurez une zone moyenne plutôt qu'un point."
+         data-es="Dos trampas: los efectos metalizados (foil, film holográfico) y los fondos oscuros (negro, azul marino) se distorsionan en cámara y exigen su propia calibración de balance de blancos y exposición, sin compartir ajustes con el cuatricromía normal. Y los papeles con textura, reciclados o de algodón, hacen saltar las lecturas: mida un área promediada en lugar de un punto.">兩個容易翻車的地方：金屬色（燙金、鐳射膜）和深色底（黑、藏青）在相機裏會失真，需要單獨標定白平衡與曝光，不能和普通四色共用一套參數；另外紙面有紋理的再生紙、棉紙會讓測色值跳動，這時應該改爲測平均色而不是單點取色。</p>
+
+      <h2 data-zh="包裝袋：連續卷材的在線檢測"
+          data-en="Poly bags: inline inspection of a continuous web"
+          data-ja="ポリ袋：連続ロール材のインライン検査"
+          data-ko="폴리백: 연속 롤 소재 인라인 검사"
+          data-fr="Sacs poly : inspection en ligne d'un matériau continu"
+          data-es="Bolsas: inspección en línea de material continuo">包裝袋：連續卷材的在線檢測</h2>
+
+      <p data-zh="膠袋是卷材連續生產，視覺最適合查連續性缺陷：印刷漏印、套色偏移、封口夾雜異物、袋身劃傷、打孔位置偏移。這類檢測一般裝在制袋機尾部，與產線同速運行，連續出現若干個不良就報警停機，避免整卷報廢——這正是膠袋廠最痛的成本點。"
+         data-en="Poly bags run as a continuous web, so vision suits continuous defects best: missing print, colour-to-colour drift, foreign matter trapped in the seal, scratches on the body, off-position punch holes. Such systems usually sit at the end of the bag-making machine, run at line speed, and trigger an alarm and stop after a run of consecutive defects, avoiding the scrapping of a whole roll — the cost that hurts bag plants most."
+         data-ja="ポリ袋はロール材の連続生産なので、連続性のある欠点の検査に最も向いています。印刷抜け、色ずれ、シール部への異物噛み込み、袋面の傷、打ち穴位置のずれ。こうした検査は通常、製袋機の出口に設置し、ラインと同じ速度で運転し、不良が連続した時点で警報と停止を行い、ロール全体の廃却を防ぎます。これは袋工場にとって最も痛いコストです。"
+         data-ko="폴리백은 롤 소재로 연속 생산되므로 연속성 결함 검사에 가장 적합합니다. 인쇄 누락, 색 어긋남, 밀봉부 이물 끼임, 백 표면 긁힘, 타공 위치 이탈입니다. 이런 검사는 보통 제대기 출구에 설치해 라인과 같은 속도로 운전하고, 불량이 연속되면 경보와 정지를 걸어 롤 전체 폐기를 막습니다. 이는 봉투 공장에서 가장 아픈 원가 지점입니다."
+         data-fr="Les sacs poly défilent en bobine continue : la vision convient donc aux défauts continus — impression manquante, dérive de repérage entre couleurs, corps étranger dans la soudure, rayures, perçages décalés. Ces systèmes se placent en sortie de machine à sacs, tournent à la vitesse de ligne et déclenchent alarme et arrêt après une série de défauts, évitant la mise au rebut d'une bobine entière — le coût le plus douloureux pour un sacher."
+         data-es="Las bolsas se producen en bobina continua, así que la visión encaja en defectos continuos: impresión ausente, desvío entre colores, cuerpo extraño en el sellado, rayaduras, troquelados fuera de posición. Estos sistemas suelen ir al final de la bolseadora, corren a la velocidad de línea y disparan alarma y parada tras una serie de defectos, evitando desechar una bobina completa: el coste que más duele en una fábrica de bolsas.">膠袋是卷材連續生產，視覺最適合查連續性缺陷：印刷漏印、套色偏移、封口夾雜異物、袋身劃傷、打孔位置偏移。這類檢測一般裝在制袋機尾部，與產線同速運行，連續出現若干個不良就報警停機，避免整卷報廢——這正是膠袋廠最痛的成本點。</p>
+
+      <p data-zh="一個常被忽略的細節：袋子是透明或半透明的，正光打上去幾乎沒有對比度。用背光（透射光）比正光更能顯出雜質、氣泡與厚薄不均，這也是薄膜行業的標準做法。"
+         data-en="One detail often missed: the bag is transparent or translucent, so front lighting gives almost no contrast. Backlighting, in transmission, reveals foreign matter, bubbles and thickness variation far better — the standard approach in film converting."
+         data-ja="見落とされがちな点があります。袋は透明または半透明のため、正面光ではほとんどコントラストが出ません。透過光（バックライト）のほうが異物・気泡・厚みムラをはるかに良く捉えられ、フィルム業界の標準手法でもあります。"
+         data-ko="자주 놓치는 부분이 있습니다. 봉투는 투명하거나 반투명해 정면광으로는 대비가 거의 나오지 않습니다. 투과광(백라이트)이 이물·기포·두께 불균일을 훨씬 잘 드러내며, 필름 업계의 표준 방식입니다."
+         data-fr="Un détail souvent oublié : le sac est transparent ou translucide, donc un éclairage frontal n'offre presque aucun contraste. Le rétro-éclairage, en transmission, révèle bien mieux corps étrangers, bulles et variations d'épaisseur — la méthode standard de la filmerie."
+         data-es="Un detalle que se pasa por alto: la bolsa es transparente o translúcida, así que la luz frontal no da casi contraste. La retroiluminación, en transmisión, revela mucho mejor cuerpos extraños, burbujas y variación de espesor: el método estándar en la industria del film.">一個常被忽略的細節：袋子是透明或半透明的，正光打上去幾乎沒有對比度。用背光（透射光）比正光更能顯出雜質、氣泡與厚薄不均，這也是薄膜行業的標準做法。</p>
+
+      <h2 data-zh="爲什麼多數輔料廠仍然靠人工"
+          data-en="Why most trim plants still inspect by hand"
+          data-ja="多くの副資材工場が今も人手で検査する理由"
+          data-ko="대부분의 부자재 공장이 여전히 사람 손으로 검사하는 이유"
+          data-fr="Pourquoi la plupart des usines contrôlent encore à la main"
+          data-es="Por qué la mayoría sigue inspeccionando a mano">爲什麼多數輔料廠仍然靠人工</h2>
+
+      <p data-zh="相機不貴，穩定的判定很貴。三個現實門檻：一是換款頻率，每換一個 SKU 就要重做模板與光源位置，如果一天換五款，調試時間會把收益喫光；二是訂單批量，單款低於幾千件時設備折舊攤不下來；三是客戶是否真的拒收，如果缺陷只在內部返工、客戶並不罰，人工其實夠用。"
+         data-en="Cameras are cheap; a stable decision is expensive. Three practical thresholds: changeover frequency, because every new SKU needs a new template and lighting position and five changes a day eats the benefit; order batch, because below a few thousand pieces per style the capital cost will not amortise; and whether the customer actually rejects, because if defects only cause internal rework and no chargeback, manual inspection is enough."
+         data-ja="カメラは安いですが、安定した判定は高くつきます。現実的な3つの条件があります。切り替え頻度です。SKU が変わるたびにテンプレートと光源位置を作り直す必要があり、1日に5回切り替えると調整時間が利得を食いつぶします。受注ロットです。1型あたり数千枚を下回ると設備償却が回りません。そして客先が本当に拒否するかです。不具合が社内手直しで済み、客先の減点がないなら人手で足ります。"
+         data-ko="카메라는 싸지만 안정적인 판정은 비쌉니다. 현실적인 세 가지 조건이 있습니다. 첫째, 모델 교체 빈도입니다. SKU가 바뀔 때마다 템플릿과 광원 위치를 다시 만들어야 하고, 하루에 다섯 번 바꾸면 조정 시간이 이익을 잡아먹습니다. 둘째, 주문 로트입니다. 한 스타일당 수천 장 미만이면 설비 감가상각이 돌지 않습니다. 셋째, 고객이 실제로 반품·거절하는지 여부입니다. 결함이 사내 재작업으로 끝나고 고객 청구가 없다면 인력 검사로 충분합니다."
+         data-fr="Les caméras sont bon marché ; une décision stable coûte cher. Trois seuils concrets : la fréquence de changement, car chaque SKU exige un nouveau gabarit et une nouvelle position d'éclairage, et cinq changements par jour mangent le bénéfice ; la taille de lot, car sous quelques milliers de pièces par modèle l'amortissement ne passe pas ; et le refus réel du client, car si les défauts ne provoquent qu'une reprise interne sans pénalité, le contrôle manuel suffit."
+         data-es="Las cámaras son baratas; una decisión estable es cara. Tres umbrales reales: la frecuencia de cambio, porque cada SKU exige nueva plantilla y posición de luz, y cinco cambios al día se comen el beneficio; el tamaño de lote, porque por debajo de unos miles de piezas por modelo la amortización no pasa; y si el cliente realmente rechaza, porque si los defectos solo generan retrabajo interno sin penalización, la inspección manual basta.">相機不貴，穩定的判定很貴。三個現實門檻：一是換款頻率，每換一個 SKU 就要重做模板與光源位置，如果一天換五款，調試時間會把收益喫光；二是訂單批量，單款低於幾千件時設備折舊攤不下來；三是客戶是否真的拒收，如果缺陷只在內部返工、客戶並不罰，人工其實夠用。</p>
+
+      <p data-zh="現實裏最先上視覺的往往是三種場景：大批量單一 SKU 的吊牌、連續卷材的膠袋、字符精度要求極高的尺碼嘜與成分嘜。這三類的共同點是標準明確、批量穩定、錯了代價高。"
+         data-en="In practice vision arrives first in three situations: high-volume single-SKU hang tags, continuous-web poly bags, and size or composition labels where character precision is critical. All three share clear standards, stable volume and an expensive failure."
+         data-ja="実際に最初に導入されるのは3つの場面です。大量・単一 SKU の下げ札、連続ロール材のポリ袋、文字精度が極めて重要なサイズネームや組成ネーム。共通点は、基準が明確で、ロットが安定し、失敗コストが高いことです。"
+         data-ko="실제로 비전이 가장 먼저 들어가는 곳은 세 경우입니다. 대량 단일 SKU 행택, 연속 롤 소재 폴리백, 문자 정밀도가 매우 중요한 사이즈·혼용률 라벨입니다. 공통점은 기준이 명확하고 로트가 안정적이며 실패 비용이 크다는 것입니다."
+         data-fr="En pratique, la vision arrive d'abord dans trois cas : étiquettes suspendues à fort volume et SKU unique, sacs poly en bobine continue, et labels de taille ou de composition où la précision des caractères est critique. Tous trois partagent des normes claires, un volume stable et un échec coûteux."
+         data-es="En la práctica la visión llega primero en tres casos: etiquetas colgantes de gran volumen y SKU único, bolsas en bobina continua y etiquetas de talla o composición donde la precisión de caracteres es crítica. Los tres comparten normas claras, volumen estable y un fallo caro.">現實裏最先上視覺的往往是三種場景：大批量單一 SKU 的吊牌、連續卷材的膠袋、字符精度要求極高的尺碼嘜與成分嘜。這三類的共同點是標準明確、批量穩定、錯了代價高。</p>
+
+      <h2 data-zh="落地的三步順序"
+          data-en="A three-step rollout"
+          data-ja="導入の3ステップ"
+          data-ko="도입의 세 단계"
+          data-fr="Un déploiement en trois étapes"
+          data-es="Un despliegue en tres pasos">落地的三步順序</h2>
+
+      <ol>
+        <li data-zh="離線抽檢：先在一臺設備上做兩週人機對比，把視覺的漏檢與誤判都記錄下來。沒有這份真實數據就談全檢，是在賭運氣。"
+            data-en="Offline sampling: run a two-week human-versus-machine comparison on one machine and log both escapes and false calls. Talking about full inspection without that data is gambling."
+            data-ja="オフライン抜き取り：まず1台で2週間、人と機械の比較を行い、見逃しと誤判定の両方を記録します。この実データなしに全数検査を語るのは賭けです。"
+            data-ko="오프라인 샘플링: 먼저 한 대에서 2주간 사람과 기계를 비교하며 미검출과 오판을 모두 기록합니다. 이 실제 데이터 없이 전수 검사를 논하는 것은 도박입니다."
+            data-fr="Prélèvement hors ligne : deux semaines de comparaison homme-machine sur une machine, en notant à la fois les défauts manqués et les faux rejets. Parler de contrôle total sans ces données, c'est parier."
+            data-es="Muestreo fuera de línea: dos semanas de comparación hombre-máquina en una máquina, registrando tanto los defectos no detectados como los falsos rechazos. Hablar de inspección total sin esos datos es apostar.">離線抽檢：先在一臺設備上做兩週人機對比，把視覺的漏檢與誤判都記錄下來。沒有這份真實數據就談全檢，是在賭運氣。</li>
+        <li data-zh="工位輔助：把視覺裝到關鍵工位（織嘜裁切後、吊牌檢品臺），初期只做提示，最終判定仍由人確認。這一步最容易拿到員工支持。"
+            data-en="Workstation assist: install vision at the critical stations — after woven-label cutting, at the tag inspection table — and let it only prompt at first, with the operator confirming the final call. This is the step that wins staff support."
+            data-ja="工程補助：重要な工程（織りネーム裁断後、下げ札検品台）に設置し、初期は「提示」のみ、最終判定は人が行います。この段階が現場の支持を得やすい方法です。"
+            data-ko="공정 보조: 핵심 공정(직조 라벨 재단 후, 행택 검품대)에 설치하고 초기에는 알림만 제공하며 최종 판정은 작업자가 합니다. 이 단계가 현장의 지지를 얻기 가장 좋습니다."
+            data-fr="Assistance au poste : installer la vision aux postes critiques — après coupe des labels, au banc de contrôle des étiquettes — en mode alerte seulement, l'opérateur confirmant la décision. C'est l'étape qui gagne l'adhésion."
+            data-es="Asistencia en puesto: instalar visión en los puestos críticos —tras el corte de etiquetas tejidas, en la mesa de inspección— y que solo avise al principio, confirmando el operario la decisión. Es el paso que gana apoyo del personal.">工位輔助：把視覺裝到關鍵工位（織嘜裁切後、吊牌檢品臺），初期只做提示，最終判定仍由人確認。這一步最容易拿到員工支持。</li>
+        <li data-zh="在線全檢：判定穩定後接入產線，設好報警與停機邏輯，並把閾值寫進與客戶的技術協議，讓驗收有據可依。"
+            data-en="Inline full inspection: once decisions are stable, connect to the line, define alarm and stop logic, and write the thresholds into the technical agreement with the customer so acceptance has a basis."
+            data-ja="インライン全数検査：判定が安定してからラインに接続し、警報と停止のロジックを定め、しきい値を客先との技術協定に明記して検収の根拠を作ります。"
+            data-ko="인라인 전수 검사: 판정이 안정된 뒤 라인에 연결하고 경보와 정지 로직을 정하며, 임계값을 고객과의 기술 협약에 명시해 검수 근거를 만듭니다."
+            data-fr="Contrôle total en ligne : une fois les décisions stables, raccorder à la ligne, définir alarme et arrêt, et inscrire les seuils dans l'accord technique avec le client pour fonder la réception."
+            data-es="Inspección total en línea: cuando las decisiones son estables, conectar a la línea, definir alarma y parada, e inscribir los umbrales en el acuerdo técnico con el cliente para que la recepción tenga base.">在線全檢：判定穩定後接入產線，設好報警與停機邏輯，並把閾值寫進與客戶的技術協議，讓驗收有據可依。</li>
+      </ol>
+
+      <div class="callout" data-zh="一條原則：視覺檢測不是「提高質量」，而是「把質量標準變成可執行的閾值」。先有標準，再談設備；標準談不攏，設備只會把爭議做得更貴。"
+           data-en="One principle: vision does not improve quality, it turns a quality standard into executable thresholds. Settle the standard first, then the equipment; if the standard cannot be agreed, equipment only makes the dispute more expensive."
+           data-ja="原則は1つ。画像検査は「品質を上げる」ものではなく、「品質基準を実行可能なしきい値に変える」ものです。まず基準、次に設備。基準で合意できなければ、設備は争いを高くするだけです。"
+           data-ko="원칙은 하나입니다. 비전 검사는 품질을 높이는 것이 아니라 품질 기준을 실행 가능한 임계값으로 바꾸는 일입니다. 기준을 먼저 정하고 설비는 그다음입니다. 기준에 합의하지 못하면 설비는 분쟁만 비싸게 만듭니다."
+           data-fr="Un principe : la vision n'améliore pas la qualité, elle transforme une norme en seuils exécutables. Réglez la norme d'abord, l'équipement ensuite ; si la norme ne fait pas consensus, l'équipement ne fait qu'enrichir le litige."
+           data-es="Un principio: la visión no mejora la calidad, convierte una norma en umbrales ejecutables. Primero la norma, después el equipo; si la norma no se acuerda, el equipo solo encarece la disputa.">一條原則：視覺檢測不是「提高質量」，而是「把質量標準變成可執行的閾值」。先有標準，再談設備；標準談不攏，設備只會把爭議做得更貴。</div>
+
+      <h2 data-zh="相關文章"
+          data-en="Related articles"
+          data-ja="関連記事"
+          data-ko="관련 글"
+          data-fr="Articles liés"
+          data-es="Artículos relacionados">相關文章</h2>
+
+      <ul>
+        <li><a href="index.html" data-zh="返回輔料 FAQ 全部文章" data-en="Back to all trims FAQ articles" data-ja="副資材 FAQ の記事一覧へ" data-ko="부자재 FAQ 전체 글 보기" data-fr="Retour à tous les articles FAQ accessoires" data-es="Volver a todos los artículos de FAQ de accesorios">返回輔料 FAQ 全部文章</a></li>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="服裝輔料質量檢驗：AQL、抽檢方案與判定標準" data-en="Trim Quality Inspection: AQL, Sampling Plans and Acceptance" data-ja="衣料副資材の品質検査：AQL・抜き取り方式・判定基準" data-ko="의류 부자재 품질 검사: AQL, 샘플링 계획, 판정 기준" data-fr="Contrôle qualité des accessoires : AQL, plans d'échantillonnage et réception" data-es="Control de calidad de accesorios: AQL, planes de muestreo y aceptación">服裝輔料質量檢驗：AQL、抽檢方案與判定標準</a></li>
+        <li><a href="trim-label-consistency-audit-guide.html" data-zh="標籤一致性審覈：跨批次跨工廠怎麼查" data-en="Label Consistency Audits Across Batches and Factories" data-ja="ラベル一貫性監査：ロット・工場をまたぐ確認" data-ko="라벨 일관성 감사: 로트·공장 간 점검" data-fr="Audit de cohérence des labels entre lots et usines" data-es="Auditoría de coherencia de etiquetas entre lotes y fábricas">標籤一致性審覈：跨批次跨工廠怎麼查</a></li>
+        <li><a href="hang-tag-color-management.html" data-zh="吊牌色彩管理：從色卡到量產的控色流程" data-en="Hang Tag Colour Management from Colour Book to Production" data-ja="下げ札の色彩管理：色見本から量産までの色合わせ" data-ko="행택 색상 관리: 색견본에서 양산까지" data-fr="Gestion couleur des étiquettes, du nuancier à la série" data-es="Gestión de color de etiquetas: del abanico a la producción">吊牌色彩管理：從色卡到量產的控色流程</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="客戶要求提供檢測數據或首件籤樣？把缺陷樣與可接受樣一起寄給我們，我們按您與客戶約定的閾值做首件確認，並把判定標準寫進技術協議。"
+           data-en="Under pressure to supply inspection data or an approved first-off? Send us both a defect sample and an acceptable sample; we confirm the first-off against the thresholds agreed with your customer and write the criteria into the technical agreement."
+           data-ja="検査データや初品承認を求められていますか。不良サンプルと合格サンプルを併せてお送りください。客先と合意したしきい値で初品を確認し、判定基準を技術協定に明記します。"
+           data-ko="검사 데이터나 초물 승인을 요구받으셨나요? 불량 샘플과 합격 샘플을 함께 보내주시면, 고객과 합의한 임계값으로 초물을 확인하고 판정 기준을 기술 협약에 명시합니다."
+           data-fr="On vous demande des données de contrôle ou un bon à tirer ? Envoyez-nous un échantillon défectueux et un échantillon acceptable : nous validons le premier tirage selon les seuils convenus avec votre client et inscrivons les critères dans l'accord technique."
+           data-es="¿Le piden datos de inspección o una primera prueba aprobada? Envíenos una muestra defectuosa y una aceptable: confirmamos la primera prueba con los umbrales pactados con su cliente e inscribimos los criterios en el acuerdo técnico.">客戶要求提供檢測數據或首件籤樣？把缺陷樣與可接受樣一起寄給我們，我們按您與客戶約定的閾值做首件確認，並把判定標準寫進技術協議。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="諮詢質檢標準與首件籤樣 →" data-en="Ask about inspection criteria and first-off approval →" data-ja="検査基準・初品承認の相談 →" data-ko="검사 기준·초물 승인 상담 →" data-fr="Demander un cadre de contrôle et un bon à tirer →" data-es="Consultar criterios de inspección y aprobación →">諮詢質檢標準與首件籤樣 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=65"></script>
+<script src="../../js/assist.js?v=49"></script>
+</body>
+</html>
