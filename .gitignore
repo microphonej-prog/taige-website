@@ -2,3 +2,5 @@
 __pycache__/
 _live_sitemap.xml
 _indexnow_*.json
+blog/_body_*.html
+blog/_*.html
