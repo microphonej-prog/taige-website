@@ -13,7 +13,7 @@
   if (!FAB || !PANEL || !BODY || !QUICK || !INPUT || !SEND) return;
 
   /* ---------- 語言檢測：?lang > localStorage > html lang ---------- */
-  var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
+  var LANGS = ["zh", "en", "de", "ja", "ko", "fr", "es", "pt"];
   /* 獨立語言目錄 /en/ /ja/ /ko/ /fr/ /es/：固定對應語言（該目錄頁面已靜態渲染） */
   var DIR_LANG = null;
   try {
@@ -23,6 +23,8 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
     else if (_p.indexOf("/fr/") >= 0) DIR_LANG = "fr";
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
+    else if (_p.indexOf("/de/") >= 0) DIR_LANG = "de";
+    else if (_p.indexOf("/pt/") >= 0) DIR_LANG = "pt";
   } catch (e) {}
   var LANG = "zh", fromUrl = null, fromStore = null;
   if (DIR_LANG) {
@@ -294,6 +296,66 @@
       { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "process", "how to buy", "commande", "pedido", "주문", "발주", "구매", "거래", "절차", "진행"], reply: "거래 절차는 간단합니다. ① 요구사항/디자인 파일 전송 → ② 24시간 이내 견적 → ③ 샘플 제작 → ④ 샘플 확인 후 양산 → ⑤ 검품 및 출하. 어느 단계에서든 시작하실 수 있습니다!" },
       { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "question", "자주 묻는 질문", "질문", "도움말", "문의 사항"], reply: "자주 묻는 질문 답변입니다.\n📦 최소 주문량: 행택 2,000+, 직조 라벨 1,000+, 세탁 표시 라벨 300+ \n🧪 샘플: 3–7일 발송\n💰 견적: 24시간 이내\n🚚 납기: 10–25일\n더 자세한 내용은 언제든 물어보세요." }
     ]
+  };
+
+  T.de = {
+    online: "Online", hello: "Hallo! Ich bin der TAGE KI-Assistent 🐓 Fragen Sie mich alles zu Anhängern, Webetiketten, Pflegeetiketten und Verpackungsbeuteln — oder beschreiben Sie einfach Ihren Bedarf.",
+    ph: "Ihre Frage eingeben…", send: "Senden",
+    quick: ["Welche Produkte bieten Sie an?", "Wie hoch ist die Mindestbestellmenge?", "Sind Muster möglich?", "Wie erhalte ich ein Angebot?"],
+    followupQuote: "💡 Tipp: Senden Sie Druckdaten oder Stückzahl an sales@taigetag.com — präzises Angebot innerhalb von 24 Stunden; per WeChat 13128118931 geht es schneller.",
+    fallback: "Das muss ich kurz prüfen 🤔 Senden Sie Ihren konkreten Bedarf an sales@taigetag.com oder per WeChat 13128118931 — unsere Fachkollegen antworten innerhalb von 24 Stunden. Sie können auch unten auf «Kontakt» klicken und direkt schreiben.",
+    intents: [
+      { id: "hello", kws: ["hallo", "hi", "guten tag", "olá", "ola", "bom dia", "hello"], reply: "Hallo! Wie kann ich helfen? 😊 Sie können nach Produkten, MOQ, Mustern oder Preisen fragen — oder direkt Ihren Bedarf schildern." },
+      { id: "thanks", kws: ["danke", "vielen dank", "obrigado", "obrigada", "thanks"], reply: "Gern geschehen! Melden Sie sich jederzeit 😄 Bei Muster- oder Angebotswünschen einfach schreiben." },
+      { id: "bye", kws: ["tschüss", "auf wiedersehen", "tchau", "até logo", "bye"], reply: "Auf Wiedersehen! Viel Erfolg im Geschäft 🚀 Bei Bedarf jederzeit fragen." },
+      { id: "product", kws: ["produkt", "produkte", "produto", "produtos", "product"], reply: "Wir haben sechs Produktlinien:\n① Bekleidungsanhänger (Kunstdruckpapier/Kraftpapier/PVC, Heißfolie, UV, Mattfolie)\n② Webetiketten/Markenetiketten (Satin/Jacquard/doppellagige Webkante)\n③ Pflegeetiketten (gewebt/beschichtet/bedruckt)\n④ Verpackungsbeutel (PE-Beutel/Selbstklebebeutel/antistatisch)\n⑤ Umweltfreundliche Papierbeutel (Kraftpapier/Weißkarton)\n⑥ Broschüren (Kataloge/Faltblätter)\nAlle individuell und als OEM. Welche Kategorie interessiert Sie?" },
+      { id: "hangtag", kws: ["anhänger", "hangtag", "etiqueta pendurada", "etiqueta"], reply: "Anhänger sind unser Kernprodukt 👍 Materialien: Kunstdruckpapier (300–400 g), Kraftpapier, Baumwollpapier, wasserfestes PVC; Veredelung: Heißfolie, Prägung, partielle UV-Lackierung, Kaschierung; Standardgrößen 35×70 / 40×90 / 50×90 mm, auch Sonderstanzen. Soll ich bei der Materialwahl helfen?" },
+      { id: "woven", kws: ["webetikett", "webetiketten", "etiqueta tecida", "etiquetas tecidas", "woven"], reply: "Webetiketten gibt es in Satin, Taft, Jacquard und doppellagiger Webkante — feine Motive, waschfest und farbecht. Empfehlung: Markenetiketten in Satin/Jacquard für edle Optik, Größenetiketten in Taft. Brauchen Sie Marken- oder Größenetiketten?" },
+      { id: "carelabel", kws: ["pflegeetikett", "pflegeetiketten", "etiqueta de cuidado", "etiquetas de cuidado", "care label"], reply: "Pflegeetiketten gibt es in drei Varianten: gewebtes Pflegeband, beschichtetes Etikett, bedrucktes Etikett — normkonform und dauerhaft lesbar. Übliche Kombination: «gewebte Markenetiketten + bedruckte Pflegeetiketten» — Optik und Kosten im Gleichgewicht. Soll ich nach Ihren Waschanforderungen empfehlen?" },
+      { id: "bags", kws: ["verpackungsbeutel", "beutel", "sacola", "sacolas", "bolsa", "poly bag"], reply: "Verpackungsbeutel: PE-/CPE-Beutel, Reißverschlussbeutel, Selbstklebebeutel, antistatische Beutel — mit Markenlogo bedruckt, Größe und Stärke nach Maß. Transparente OPP-Beutel sind bei Bekleidungsexporten sehr preiswert 👍" },
+      { id: "paperbag", kws: ["papierbeutel", "papierbeutel", "sacola de papel", "sacolas de papel", "paper bag"], reply: "Umweltfreundliche Papierbeutel aus Kraftpapier oder Weißkarton, biologisch abbaubar, mit Markendruck und individuellen Griffen — bei EU-Kunden sehr gefragt 🌱 Möchten Sie die Umweltoptionen sehen?" },
+      { id: "brochure", kws: ["broschüre", "broschüren", "folheto", "folhetos", "brochure"], reply: "Broschüren, Kataloge und Produktverzeichnisse fertigen wir komplett — von der Papierwahl bis zur Bindung. Senden Sie uns Ihr Marken-CI, unsere Designabteilung erstellt kostenlos einen Layoutvorschlag." },
+      { id: "moq", kws: ["mindestbestellmenge", "moq", "quantidade mínima", "pedido mínimo", "moq"], reply: "Muster sind möglich! Physische Muster versenden wir meist in 3–7 Tagen, inklusive kostenloser Musterempfehlung. Vor der Serienbestellung Druckqualität und Materialhaptik zu prüfen, empfehlen wir allen Kunden 😊 Können Sie Druckdaten oder ein Referenzbild senden?" },
+      { id: "quote", kws: ["angebot", "preis", "orçamento", "preço", "quote"], reply: "Muster dauern meist 3–7 Tage; die Serienlieferzeit hängt von Menge und Veredelung ab, üblich 10–25 Tage. Vor der Bestellung erhalten Sie eine schriftlich bestätigte Lieferzeit — kein Grund zur Sorge 😊" },
+      { id: "payment", kws: ["zahlung", "zahlungsbedingungen", "pagamento", "payment"], reply: "Übliche Konditionen: 30 % Anzahlung + 70 % vor Versand; T/T-Überweisung möglich, bei großen Aufträgen auch Akkreditiv. Neukunden erhalten detaillierte Zahlungsbedingungen." },
+      { id: "shipping", kws: ["versand", "lieferung", "fob", "exw", "envio", "frete"], reply: "Mehrere Versandwege: FOB Shenzhen/Guangzhou, EXW Werk, oder wir organisieren See-/Luftfracht und Express (DHL, FedEx, UPS). Für kleine Mustersendungen ist Express am günstigsten 📦" },
+      { id: "oem", kws: ["oem", "odm", "individuell", "personalizado", "custom"], reply: "OEM/ODM und Fertigung nach Muster sind möglich! Unsere Designabteilung optimiert Ihre Daten, Farbe, Material und Veredelung lassen sich flexibel kombinieren — von Muster bis Serie alles aus einer Hand. Haben Sie eigene Daten oder sollen wir gestalten?" },
+      { id: "quality", kws: ["qualität", "prüfung", "qualidade", "inspeção", "quality"], reply: "Wir führen einen vollständigen Qualitätsprozess durch: Rohstoffprüfung → Zwischenprüfung im Druck → Endkontrolle → Nachprüfung vor Versand. Das Unternehmen verfügt über Gewerbeschein und Qualifikationen; Prüfberichte sind erhältlich 📋" },
+      { id: "company", kws: ["unternehmen", "firma", "empresa", "companhia", "about"], reply: "Dongguan Tage Packaging Products Co., Ltd. sitzt in Humen, Dongguan, Guangdong, und ist seit 20 Jahren auf Bekleidungszutaten spezialisiert: Anhänger, Webetiketten, Pflegeetiketten und Verpackungsbeutel aus einer Hand — Export in über 40 Länder 🌍" },
+      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Jederzeit erreichbar! 📧 sales@taigetag.com | 📱 Telefon/WhatsApp/WeChat: +86 131 2811 8931 | 📍 Humen, Dongguan, Guangdong, China. Antwort meist innerhalb von 24 Stunden (während der Arbeitszeit schneller) 😊" },
+      { id: "order", kws: ["bestellung", "ablauf", "pedido", "processo", "order"], reply: "Der Ablauf ist einfach: ① Bedarf/Druckdaten senden → ② Angebot innerhalb von 24 Stunden → ③ Musterung bestätigen → ④ Serie nach Musterfreigabe → ⑤ Prüfung und Versand. Sie können an jedem Schritt einsteigen!" },
+      { id: "faq", kws: ["faq", "häufige fragen", "perguntas", "dúvidas", "faq"], reply: "Kurzantworten zu häufigen Fragen:\n📦 MOQ: Anhänger 2.000+, Webetiketten 1.000+, Pflegeetiketten 300+\n🧪 Muster: Versand in 3–7 Tagen\n💰 Angebot: innerhalb von 24 Stunden\n🚚 Lieferzeit: 10–25 Tage\nFragen Sie mich einfach nach Details." },
+    ],
+  };
+
+  T.pt = {
+    online: "Online", hello: "Olá! Sou o assistente virtual da TAGE 🐓 Pergunte sobre etiquetas, etiquetas tecidas, etiquetas de cuidado e sacolas — ou descreva sua necessidade.",
+    ph: "Digite sua pergunta…", send: "Enviar",
+    quick: ["Quais produtos vocês oferecem?", "Qual é o pedido mínimo?", "Vocês fazem amostras?", "Como recebo um orçamento?"],
+    followupQuote: "💡 Dica: envie o arquivo ou a quantidade para sales@taigetag.com — orçamento preciso em 24 horas; pelo WeChat 13128118931 é mais rápido.",
+    fallback: "Preciso confirmar essa informação 🤔 Envie sua necessidade para sales@taigetag.com ou pelo WeChat 13128118931 — nossos especialistas respondem em 24 horas. Você também pode clicar em «Contato» no rodapé e escrever direto.",
+    intents: [
+      { id: "hello", kws: ["hallo", "hi", "guten tag", "olá", "ola", "bom dia", "hello"], reply: "Olá! Como posso ajudar? 😊 Pode perguntar sobre produtos, pedido mínimo, amostras ou preços — ou falar direto da sua necessidade." },
+      { id: "thanks", kws: ["danke", "vielen dank", "obrigado", "obrigada", "thanks"], reply: "De nada! Estou à disposição 😄 Para amostras ou orçamento, é só chamar." },
+      { id: "bye", kws: ["tschüss", "auf wiedersehen", "tchau", "até logo", "bye"], reply: "Até logo! Sucesso nos negócios 🚀 Volte quando precisar." },
+      { id: "product", kws: ["produkt", "produkte", "produto", "produtos", "product"], reply: "Temos seis linhas de produtos:\n① Etiquetas penduradas (papel couché/kraft/PVC, hot stamping, verniz UV, laminação fosca)\n② Etiquetas tecidas/de marca (cetim/jacquard/orla dupla)\n③ Etiquetas de cuidado (tecida/revestida/impressa)\n④ Sacolas de embalagem (PE/autovedante/antiestática)\n⑤ Sacolas de papel ecológicas (kraft/cartão branco)\n⑥ Folhetos (catálogos/dobrados)\nTodas personalizáveis e com OEM. Qual categoria interessa?" },
+      { id: "hangtag", kws: ["anhänger", "hangtag", "etiqueta pendurada", "etiqueta"], reply: "As etiquetas penduradas são nosso carro-chefe 👍 Materiais: papel couché (300–400 g), kraft, papel algodão, PVC impermeável; acabamento: hot stamping, relevo, verniz UV localizado, laminação; tamanhos padrão 35×70 / 40×90 / 50×90 mm, com corte especial sob medida. Quer ajuda para escolher o material?" },
+      { id: "woven", kws: ["webetikett", "webetiketten", "etiqueta tecida", "etiquetas tecidas", "woven"], reply: "As etiquetas tecidas vêm em cetim, tafetá, jacquard e orla dupla — desenhos nítidos, resistentes à lavagem e sem desbotar. Sugestão: etiqueta de marca em cetim/jacquard para sofisticação, etiqueta de tamanho em tafetá. Precisa de etiqueta de marca ou de tamanho?" },
+      { id: "carelabel", kws: ["pflegeetikett", "pflegeetiketten", "etiqueta de cuidado", "etiquetas de cuidado", "care label"], reply: "As etiquetas de cuidado existem em três tipos: fita tecida, revestida e impressa — conforme normas internacionais e com informação durável. A combinação usual é «etiqueta de marca tecida + etiqueta de cuidado impressa», unindo requinte e custo. Quer uma recomendação conforme sua lavagem?" },
+      { id: "bags", kws: ["verpackungsbeutel", "beutel", "sacola", "sacolas", "bolsa", "poly bag"], reply: "Sacolas de embalagem: PE/CPE, com zíper, autovedantes e antiestáticas — com logo impresso, tamanho e espessura sob medida. As sacolas OPP transparentes têm ótimo custo-benefício para exportação de roupas 👍" },
+      { id: "paperbag", kws: ["papierbeutel", "papierbeutel", "sacola de papel", "sacolas de papel", "paper bag"], reply: "Sacolas de papel ecológicas em kraft ou cartão branco, biodegradáveis, com impressão de marca e alças personalizadas — muito valorizadas por clientes da União Europeia 🌱 Quer ver as opções ecológicas?" },
+      { id: "brochure", kws: ["broschüre", "broschüren", "folheto", "folhetos", "brochure"], reply: "Fazemos folhetos, catálogos e portfólios completos — do papel à encadernação. Envie a identidade visual da sua marca e nosso departamento de design sugere o layout gratuitamente." },
+      { id: "moq", kws: ["mindestbestellmenge", "moq", "quantidade mínima", "pedido mínimo", "moq"], reply: "Fazemos amostras! Normalmente enviamos amostras físicas em 3–7 dias, com sugestão gratuita de amostragem. Antes do pedido em série, recomendamos a todos conferir a qualidade de impressão e o toque do material 😊 Pode enviar um arquivo ou imagem de referência?" },
+      { id: "quote", kws: ["angebot", "preis", "orçamento", "preço", "quote"], reply: "A amostragem leva 3–7 dias; o prazo de produção depende da quantidade e do acabamento, geralmente 10–25 dias. Antes do pedido você recebe o prazo confirmado por escrito — sem preocupação 😊" },
+      { id: "payment", kws: ["zahlung", "zahlungsbedingungen", "pagamento", "payment"], reply: "Condições usuais: 30 % de entrada + 70 % antes do envio; aceitamos T/T, e para pedidos maiores carta de crédito. Novos clientes recebem condições de pagamento detalhadas." },
+      { id: "shipping", kws: ["versand", "lieferung", "fob", "exw", "envio", "frete"], reply: "Várias formas de envio: FOB Shenzhen/Guangzhou, EXW fábrica, ou organizamos marítimo, aéreo e expresso (DHL, FedEx, UPS). Para amostras pequenas o expresso é o mais econômico 📦" },
+      { id: "oem", kws: ["oem", "odm", "individuell", "personalizado", "custom"], reply: "Fazemos OEM/ODM e produção conforme amostra! Nosso design otimiza o seu arquivo, com cor, material e acabamento combinados com flexibilidade — da amostra à produção em série. Você tem arquivo próprio ou quer que a gente crie?" },
+      { id: "quality", kws: ["qualität", "prüfung", "qualidade", "inspeção", "quality"], reply: "Seguimos um processo completo de qualidade: inspeção da matéria-prima → inspeção no processo de impressão → inspeção final → revisão antes do envio. A empresa possui licença comercial e certificações; laudos de ensaio podem ser fornecidos 📋" },
+      { id: "company", kws: ["unternehmen", "firma", "empresa", "companhia", "about"], reply: "A Dongguan Tage Packaging Products Co., Ltd. fica em Humen, Dongguan, Guangdong, e há 20 anos é especializada em aviamentos para vestuário: etiquetas, etiquetas tecidas, etiquetas de cuidado e sacolas em um só fornecedor — exportando para mais de 40 países 🌍" },
+      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Fale conosco! 📧 sales@taigetag.com | 📱 Telefone/WhatsApp/WeChat: +86 131 2811 8931 | 📍 Humen, Dongguan, Guangdong, China. Resposta em geral em 24 horas (mais rápido no horário comercial) 😊" },
+      { id: "order", kws: ["bestellung", "ablauf", "pedido", "processo", "order"], reply: "O processo é simples: ① envie a necessidade/arquivo → ② orçamento em 24 horas → ③ confirmar amostra → ④ produção após aprovar amostra → ⑤ inspeção e envio. Você pode começar em qualquer etapa!" },
+      { id: "faq", kws: ["faq", "häufige fragen", "perguntas", "dúvidas", "faq"], reply: "Respostas rápidas às dúvidas frequentes:\n📦 Pedido mínimo: etiquetas 2.000+, tecidas 1.000+, cuidado 300+\n🧪 Amostras: envio em 3–7 dias\n💰 Orçamento: em 24 horas\n🚚 Prazo: 10–25 dias\nPergunte o que precisar." },
+    ],
   };
 
   var t = T[LANG];
