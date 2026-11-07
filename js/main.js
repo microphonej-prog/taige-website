@@ -342,3 +342,14 @@
   h.style.backgroundSize = "cover";
   h.style.backgroundPosition = "center";
 })();
+
+/* Cloudflare Web Analytics — 由 main.js 统一注入，避免逐个改 HTML（2148 个页面自动生效） */
+(function () {
+  if (window.__cfBeaconLoaded) return;
+  window.__cfBeaconLoaded = true;
+  var s = document.createElement("script");
+  s.defer = true;
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.setAttribute("data-cf-beacon", '{"token": "f4550ccb9a67465aaef54c76fdcbed71"}');
+  document.head.appendChild(s);
+})();
