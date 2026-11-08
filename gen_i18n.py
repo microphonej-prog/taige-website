@@ -73,6 +73,10 @@ def normalize_cluster(rel_clean):
 
         _new = F.ALT_RE.sub(_rep, _s)
         if _new != _s:
+            # 只是顺序不同（hreflang/href 集合一致）就不写盘，避免无谓改动刷脏工作区
+            _pairs = lambda t: set(re.findall(r'hreflang="([^"]+)"[^>]*href="([^"]+)"', t))
+            if _pairs(_new) == _pairs(_s):
+                continue
             open(_p, 'w', encoding='utf-8', newline='').write(_new)
             print('  hreflang 同步: %s' % _p.replace(F.ROOT + '/', ''))
 
