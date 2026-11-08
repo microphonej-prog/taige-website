@@ -77,8 +77,15 @@ def normalize_cluster(rel_clean):
             print('  hreflang 同步: %s' % _p.replace(F.ROOT + '/', ''))
 
 
+FALLBACK = {"de": "data-en", "pt": "data-en"}   # 缺译文时优先英文，绝不回退中文
+
+
 def convert(lang, src_path, out_path, page_abs_url):
     take, drop_zh, drop_other = LANG_ATTRS[lang]
+    fb = FALLBACK.get(lang)
+    _src = open(src_path, encoding='utf-8').read()
+    has_lang = ('%s="' % take) in _src
+    take_any = take if not fb else '(?:%s|%s)' % (take, fb)
     with open(src_path, encoding='utf-8') as f:
         s = f.read()
     s = protect(s)  # 保护引号内 >
@@ -90,12 +97,16 @@ def convert(lang, src_path, out_path, page_abs_url):
 
     # ---------- 2. title ----------
     m = re.search(r'<title[^>]*%s="([^"]*)"[^>]*>.*?</title>' % take, s, re.S)
+    if not m and fb:
+        m = re.search(r'<title[^>]*%s="([^"]*)"[^>]*>.*?</title>' % fb, s, re.S)
     if m:
         new_title = html.escape(html.unescape(m.group(1)))
         s = re.sub(r'<title[^>]*>.*?</title>', '<title>%s</title>' % new_title, s, count=1, flags=re.S)
 
     # ---------- 3. meta description ----------
     m = re.search(r'<meta name="description"[^>]*%s="([^"]*)"[^>]*>' % take, s)
+    if not m and fb:
+        m = re.search(r'<meta name="description"[^>]*%s="([^"]*)"[^>]*>' % fb, s)
     if m:
         new_desc = html.escape(html.unescape(m.group(1)))
         s = re.sub(r'<meta name="description"[^>]*>',
@@ -154,6 +165,8 @@ def convert(lang, src_path, out_path, page_abs_url):
         def repl(m):
             attrs, content = m.group(2), m.group(3)
             de = re.search(r'%s="([^"]*)"' % take, attrs)
+            if not de and fb:
+                de = re.search(r'%s="([^"]*)"' % fb, attrs)
             if not de:
                 return m.group(0)
             v = html.unescape(de.group(1))
@@ -164,7 +177,7 @@ def convert(lang, src_path, out_path, page_abs_url):
             else:
                 content_new = html.escape(v)
             return '<%s%s>%s</%s>' % (tag, attrs2, content_new, tag)
-        pat = r'<(%s)([^>]*?%s="[^"]*"[^>]*)>(.*?)</%s>' % (tag, take, tag)
+        pat = r'<(%s)([^>]*?%s="[^"]*"[^>]*)>(.*?)</%s>' % (tag, take_any, tag)
         s = re.sub(pat, repl, s, flags=re.S)
 
     # ---------- 6b. 所有 img alt 去中文 ----------
@@ -192,6 +205,22 @@ def convert(lang, src_path, out_path, page_abs_url):
                '<button class="lang-flag active" data-lang="%s"' % lang, s)
 
     s = s.replace('__GTH__', '>').replace('__GLT__', '<')  # 还原
+
+    # ---------- 10. de/pt：清掉最后一处中文（微信标签 / 客服浮窗） ----------
+    if lang in ('de', 'pt'):
+        for a, b in (('微信 13128118931', 'WeChat 13128118931'),
+                     ('>在線<', '>Online<'),
+                     ('>發送<', '>Send<'),
+                     ('微信', 'WeChat')):
+            s = s.replace(a, b)
+
+    if fb and not has_lang:          # 该语种尚无译文：保持 noindex
+        if 'name="robots"' in s:
+            s = re.sub(r'<meta name="robots"[^>]*>',
+                       '<meta name="robots" content="noindex,follow">', s)
+        else:
+            s = re.sub(r'</head>',
+                       '<meta name="robots" content="noindex,follow"></head>', s, count=1)
 
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'w', encoding='utf-8') as f:
