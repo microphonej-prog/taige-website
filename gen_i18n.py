@@ -214,7 +214,7 @@ def convert(lang, src_path, out_path, page_abs_url):
                      ('微信', 'WeChat')):
             s = s.replace(a, b)
 
-    if fb and not has_lang:          # 该语种尚无译文：保持 noindex
+    if fb and (not has_lang or src_path.endswith('blog/index.html')):   # 缺译文页 / de·pt 文章列表：保持 noindex
         if 'name="robots"' in s:
             s = re.sub(r'<meta name="robots"[^>]*>',
                        '<meta name="robots" content="noindex,follow">', s)
