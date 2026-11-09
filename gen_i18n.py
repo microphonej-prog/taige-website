@@ -129,6 +129,10 @@ def convert(lang, src_path, out_path, page_abs_url):
     s = re.sub(r'\n?\s*<link rel="alternate" hreflang="[^"]*"[^>]*>\n?', '\n', s)
 
     # ---------- 5. hreflang（插在 canonical 后，各语言精确到本页面） ----------
+    # 【关键】若本页最终会写 noindex（de/pt 缺译文回退 / de·pt 文章列表页），
+    # 则完全不生成 hreflang —— noindex 页面不参与 hreflang 集群，
+    # 否则会出现「页面内容其实是英文副本，却声明自己是 de/pt 语言版本」的虚假本地化信号。
+    WILL_NOINDEX = bool(fb and (not has_lang or src_path.endswith('blog/index.html')))
     # page_abs_url 形如 https://taigetag.com/fr/blog/xxx.html
     rel_path = page_abs_url.replace('https://taigetag.com/', '')  # fr/blog/xxx.html
     zh_href = page_abs_url.replace('/' + lang + '/', '/')  # https://taigetag.com/blog/xxx.html
@@ -160,8 +164,11 @@ def convert(lang, src_path, out_path, page_abs_url):
             hreflang_lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (HL_TAG[_l], hl_hrefs[_l]))
     hreflang_lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % zh_href)
     hreflang = '\n'.join(hreflang_lines)
+    if WILL_NOINDEX:
+        hreflang = ''   # noindex 页不声明任何 hreflang（含自身语言）
     s = s.replace('<link rel="canonical" href="%s">' % page_abs_url,
-                  '<link rel="canonical" href="%s">\n%s' % (page_abs_url, hreflang), 1)
+                  ('<link rel="canonical" href="%s">\n%s' % (page_abs_url, hreflang)) if hreflang
+                  else ('<link rel="canonical" href="%s">' % page_abs_url), 1)
 
     # ---------- 6. 带 data-* 的普通元素：文本替换 + 删除多余 data-* ----------
     for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'small', 'a', 'span', 'div', 'button', 'li', 'th', 'td',
