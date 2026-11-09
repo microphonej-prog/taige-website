@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 MOQ 협상: 단계 가격, 재고 원사, 통합 생산 | TAGE</title>
+<meta name="description" content="부자재 MOQ는 비용 수치이지 벽이 아닙니다. 숫자의 근거, 낮추는 네 가지 레버, 요청할 대체안, 소량 생산의 실제 원가를 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/trim-moq-negotiation-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-moq-negotiation-guide.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料起訂量談判：階梯價、通用紗線與拼單",
+     "item": "https://taigetag.com/blog/trim-moq-negotiation-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料起訂量談判：階梯價、通用紗線與拼單",
+   "url": "https://taigetag.com/blog/trim-moq-negotiation-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-moq-negotiation-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>MOQ 협상</span></div>
+      <h1>부자재 MOQ 협상: 단계 가격, 재고 원사, 통합 생산</h1>
+      <p>TAGE 패키징 · 2026년 11월 9일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 발주는 가격이 아닌 숫자에서 시작합니다. MOQ입니다. 바이어는 벽으로 보고 공장도 벽처럼 견적을 냅니다. 실제로 MOQ는 비용 회수 수치로, 세팅 시간과 소재 업체가 받아들이는 최소 구매량, 기계가 손해 없이 돌릴 수 있는 최단 생산량의 합입니다. 그래서 발주 구조를 바꾸면 움직이고, 같은 질문을 반복해도 움직이지 않습니다.</p>
+
+      <p>이 글은 네 가지를 다룹니다. 숫자의 근거, 실제로 낮출 수 있는 레버, 협상 전에 준비할 자료, 그리고 수량을 줄였을 때 실제로 치르는 비용입니다. 직조 라벨, 인쇄 세탁 표시, 행택, 폴리백 모두 비용 구조가 같아 그대로 적용됩니다.</p>
+
+      <h2>1. MOQ 숫자의 실제 근거</h2>
+
+      <p>직조 라벨 MOQ는 직기만으로 정해지지 않습니다. 네 가지 비용을 단가로 나눈 값입니다. 자카드나 판 세팅, 특수 원사나 염색 기재의 최소 구매량, 롤 앞뒤 손실, 그리고 해당 오더에 배정되는 기계 시간입니다. 행택도 같은 논리로 인쇄판, 도무송 칼, 평량별 최소 지류량으로 바뀔 뿐입니다.</p>
+
+      <ul>
+        <li>세팅: 자카드 파일, 판, 스크린, 칼. 디자인당 한 번이며 수량당이 아닙니다.</li>
+        <li>소재 최소량: 팬톤 기준으로 염색한 원사나 특수 평량 지류는 소재 업체의 최소 로트가 있어 그 이하로는 생산되지 않습니다.</li>
+        <li>손실: 롤 첫 구간은 장력과 색차가 불안정해 500장 로트가 5,000장보다 비율상 훨씬 많이 버립니다.</li>
+        <li>기계 시간: 소량은 큰 작업 사이에 배정되며, 납기가 2주 늘어나는 이유가 여기에 있습니다.</li>
+      </ul>
+
+      <h2>2. 실제로 MOQ를 낮추는 네 가지 레버</h2>
+
+      <p>실무에서 통하는 네 가지이며 바이어가 쓰는 순서도 대체로 이 순서입니다. 어느 것도 할인 요령이 아니라 공장이 무엇을 사고 무엇을 계획하는지를 바꾸는 조건입니다.</p>
+
+      <ul>
+        <li>단계 가격: 3,000 / 5,000 / 10,000장처럼 세 구간을 각각 견적받으십시오. 구간표는 실제 원가 곡선을 보여 주고 가격과 소요량이 만나는 지점을 고를 수 있게 합니다.</li>
+        <li>재고 원사·재고 기재: 흑, 백, 생지, 표준 적색처럼 이미 재고가 있는 색은 색상별 최소량을 크게 낮춥니다. MOQ를 올리는 것은 특수 염색 로트이므로 새 색을 정하기 전에 재고 색상표를 요청하십시오.</li>
+        <li>통합 생산: 같은 디자인의 여러 색상이나 동일 원단 라벨을 쓰는 여러 스타일을 한 판에 인쇄하거나 한 경사로 직조합니다. 기계가 보는 것은 총수량이며 SKU별 수량이 아닙니다. 보통 가장 큰 절감 폭입니다.</li>
+        <li>한 번 발주·분할 납품: 발주서는 한 장, 출하는 두세 번으로 나눕니다. 공장은 소재를 한 번만 사고 귀사는 재고를 덜 안습니다. 시즌 확정 전에 특히 유효합니다.</li>
+      </ul>
+
+      <p>여기서 중요한 단위는 소재가 미터나 g/m²로 거래된다는 점입니다. 폭 30 mm 소형 라벨을 쓰는 400장 스타일이면 테이프 소요는 약 12미터입니다. 수량을 미터로 환산한 뒤 이야기해야 모호한 요청이 견적으로 바뀝니다.</p>
+
+      <h2>3. 협상 전에 준비할 네 가지</h2>
+
+      <p>요청이 구체적일 때만 공장이 MOQ를 낮출 수 있습니다. 소재, mm 치수, 표면 가공, 색상 번호를 적은 사양서와 장당 소요량(수량을 미터로 환산하기 위해), 생산 일정과 맞는 납품 캘린더, 그리고 목적지 시장을 준비하십시오. 마지막 항목은 서류 작업이 아니라, 표시 의무가 어떤 버전의 라벨을 만들어야 하는지를 결정하기 때문입니다. EU에서 판매하는 의류는 GPSR(EU) 2023/988에 따른 역내 책임자와 (EU) No 1007/2011에 따른 섬유 조성이 필요하고, 독일의 Pflegeetikett은 섬유표시법에 따른 Faserzusammensetzung을 표기해야 합니다. 목적지별 라벨을 한 번의 생산으로 요청하십시오. 한국행이라면 전기용품 및 생활용품 안전관리법의 품질 표시 규정에 따라 취급 표시와 혼용률, 원산지를 넣어야 하므로 라벨 버전이 하나 더 늘어납니다. 재고 원사를 쓸 수 있는 수량은 대개 거기서 나옵니다.</p>
+
+      <ul>
+        <li>첫 주문 수량보다 연간 예측이 효과적입니다. 연 30,000장을 보는 공장은 3,000장 첫 주문을 위해 소재를 확보합니다.</li>
+        <li>허용 가능한 대체안을 먼저 제시하십시오. 재고 색상 원사, 약간 두꺼운 지류, 표준 접기 방식 등입니다. 대체가 가장 저렴한 MOQ 절감책입니다.</li>
+        <li>목적지별 라벨 구성을 처음에 밝히십시오. EU·일본·브라질이면 세 가지 버전이 필요하고, 한 번에 인쇄해야 작은 수량이 성립합니다.</li>
+      </ul>
+
+      <h2>4. MOQ를 낮출 때 실제로 치르는 비용</h2>
+
+      <p>모든 감량에는 대가가 있고, 청구서에서 발견하기보다 미리 계산하는 편이 낫습니다. 단가는 최소 구간에서 중간 구간으로 10~35퍼센트 오르고 특수 색상에서 가장 가파릅니다. 소량 특수 염색이 소진된 뒤 다음 로트를 따로 염색하면 색 연속성이 끊깁니다. 짧은 로트는 기계 시간을 기다리므로 납기가 길어집니다. 재고 위험도 귀사로 넘어옵니다. 단종 스타일의 남은 라벨은 재고가 아니라 폐기물입니다.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>방법</th>
+            <th>단가 영향</th>
+            <th>주의할 점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>단계 가격</td>
+            <td>상위 구간에서 낮음</td>
+            <td>소진할 수 없는 구간을 주문하지 말 것</td>
+          </tr>
+          <tr>
+            <td>재고 원사·기재</td>
+            <td>5~15퍼센트 낮음</td>
+            <td>색상이 재고 팔레트로 제한</td>
+          </tr>
+          <tr>
+            <td>통합 생산</td>
+            <td>10~20퍼센트 낮음</td>
+            <td>모든 SKU가 같은 날 출고</td>
+          </tr>
+          <tr>
+            <td>한 번 발주·분할 납품</td>
+            <td>단가 동일</td>
+            <td>보관과 하역은 귀사 부담</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>5. 바로 쓸 수 있는 짧은 협상 순서</h2>
+
+      <p>이 순서로 물으십시오. 이 사양의 MOQ는 얼마인지, 무엇이 그것을 결정하는지, 어떤 대체안이 그것을 바꾸는지, 어느 수량이 다음 가격 구간에 들어가는지. 구조를 묻는 질문에는 구조적인 답이 오고, 500장 가능한지 묻으면 불가라는 답만 옵니다. 답은 수량 공차까지 견적서에 적게 하십시오. 직조 라벨과 인쇄는 ±5퍼센트가 일반적이며, 차이는 청구서 이후가 아니라 발주 전에 확정해야 합니다.</p>
+
+      <div class="callout">원칙은 하나입니다. 숫자가 아니라 구조를 협상하십시오. 재고 원사를 쓰고 세 색을 묶은 3,000장이 특수 염색을 쓰는 1,000장보다 장당 저렴한 경우가 많습니다.</div>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="hang-tag-moq-cost.html">행택 MOQ와 원가 구조</a></li>
+        <li><a href="woven-label-moq-cost-guide.html">직조 라벨 MOQ와 단가: 원가 구성</a></li>
+        <li><a href="garment-trims-cost-saving-guide.html">부자재 원가 절감: 품질을 지키는 여섯 가지 방법</a></li>
+        <li><a href="index.html">부자재 FAQ: 전체 글</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>사양서와 연간 예측을 보내주십시오. 세 구간 수량 견적과 실제 적용 가능한 대체안을 회신합니다.</p>
+        <a class="cta-btn" href="../contact.html">MOQ와 단계 가격 상담 →</a>
+      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사 모든 권리 보유</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
