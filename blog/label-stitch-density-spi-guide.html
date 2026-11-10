@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="標籤縫紉密度（SPI）怎麼定：每英吋針數與耐洗實測 | TAIGE" data-en="Stitch Density (SPI) for Labels and Trims: What to Specify | TAIGE" data-fr="Densité de piqûre (SPI) des étiquettes : que spécifier | TAIGE" data-es="Densidad de puntada (SPI) en etiquetas: qué especificar | TAIGE" data-ja="ラベルの縫い目密度（SPI）の決め方：耐洗性の実測と指定 | TAIGE" data-ko="라벨 봉제 밀도(SPI) 정하기: 내세탁성 실측과 사양 | TAIGE" data-de="Stichdichte (SPI) für Etiketten: Was in die Spezifikation gehört | TAIGE" data-pt="Densidade de costura (SPI) em etiquetas: o que especificar | TAIGE">標籤縫紉密度（SPI）怎麼定：每英吋針數與耐洗實測 | TAIGE</title>
+<meta name="description" data-zh="同樣的洗水標，8 SPI 與 12 SPI 的差別是十次洗滌後還在不在。講清按固定位置的針數區間、三種失效模式、歐盟與中國的標示依據，以及打樣室能做完的四項驗收。東莞泰閣包裝。"
+      data-en="Stitch density (SPI) decides whether a garment label survives 30 washes. Typical SPI by attachment point, stitch types and fold clearance to specify in the PO."
+      data-fr="La densité de piqûre décide si une étiquette tient 30 lavages. Densités par point de fixation, types de point et dégagement de pli à spécifier."
+      data-es="La densidad de puntada decide si una etiqueta aguanta 30 lavados. Densidades por punto de fijación, tipos de puntada y margen de doblez."
+      data-ja="縫い目密度（SPI）は、30回の洗濯にラベルが耐えるかを決めます。取付位置ごとの針数、縫い方、折り余裕の指定方法を整理します。"
+      data-ko="봉제 밀도(SPI)는 30회 세탁 후 라벨이 남는지를 결정합니다. 고정 위치별 바늘 수, 박음 방식, 접힘 여유 지정법을 정리했습니다."
+      data-de="Die Stichdichte (SPI) entscheidet, ob ein Etikett 30 Wäschen übersteht: übliche Werte je Befestigungspunkt, Sticharten und Bruchabstand."
+      data-pt="A densidade de costura (SPI) decide se a etiqueta resiste a 30 lavagens: valores por ponto de fixação, tipos de ponto e folga da dobra."
+      content="同樣的洗水標，8 SPI 與 12 SPI 的差別是十次洗滌後還在不在。講清按固定位置的針數區間、三種失效模式、歐盟與中國的標示依據，以及打樣室能做完的四項驗收。東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/label-stitch-density-spi-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/label-stitch-density-spi-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "標籤與輔料的縫紉密度：SPI 決定它能不能撐過洗滌",
+     "item": "https://taigetag.com/blog/label-stitch-density-spi-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "標籤與輔料的縫紉密度：SPI 決定它能不能撐過洗滌",
+   "url": "https://taigetag.com/blog/label-stitch-density-spi-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/label-stitch-density-spi-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAIGE PACKAGING" data-en="DONGGUAN TAIGE PACKAGING" data-fr="DONGGUAN TAIGE PACKAGING" data-es="DONGGUAN TAIGE PACKAGING" data-ja="DONGGUAN TAIGE PACKAGING" data-ko="DONGGUAN TAIGE PACKAGING">DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈" data-de="Startseite" data-pt="Início">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ" data-de="Accessoires-FAQ" data-pt="FAQ de aviamentos">輔料 FAQ</a> / <span data-zh="縫紉密度" data-en="Stitch Density" data-fr="Densité de piqûre" data-es="Densidad de puntada" data-ja="縫い目密度" data-ko="봉제 밀도" data-de="Stichdichte" data-pt="Densidade de costura">縫紉密度</span></div>
+      <h1 data-zh="標籤與輔料的縫紉密度：SPI 決定它能不能撐過洗滌" data-en="Label and Trim Stitch Density: How SPI Decides If It Survives the Wash" data-fr="Densité de piqûre des étiquettes et accessoires : comment le SPI décide de la tenue au lavage" data-es="Densidad de puntada en etiquetas y aviamentos: cómo el SPI decide si resiste el lavado" data-ja="ラベルと副資材の縫い目密度：SPI が洗濯耐性を決める" data-ko="라벨과 부자재의 봉제 밀도: SPI가 세탁 내구성을 결정한다" data-de="Stichdichte bei Etiketten und Zutaten: Wie SPI über die Wäsche entscheidet" data-pt="Densidade de costura em etiquetas e aviamentos: como o SPI decide a resistência à lavagem">標籤與輔料的縫紉密度：SPI 決定它能不能撐過洗滌</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月10日" data-en="By TAIGE Packaging &nbsp;·&nbsp; Updated November 10, 2026" data-fr="Par TAIGE Packaging &nbsp;·&nbsp; Mis à jour le 10 novembre 2026" data-es="Por TAIGE Packaging &nbsp;·&nbsp; Actualizado el 10 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月10日更新" data-ko="TAIGE 패키징 · 2026년 11월 10일 업데이트" data-de="Von TAIGE Packaging &nbsp;·&nbsp; Aktualisiert am 10. November 2026" data-pt="Por TAIGE Packaging &nbsp;·&nbsp; Atualizado em 10 de novembro de 2026">泰閣包裝 · 更新於 2026年11月10日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="縫紉密度是每英吋針數（SPI，也叫針距密度），在服裝輔料上它決定的事比外觀更實際：洗三十次之後標籤還在不在。織嘜主標、折進側縫的洗水標、腰頭鬆緊帶都用同一台車縫機，但需要的 SPI 不同。針數太少，標籤四角會翹起；針數太多，針孔會在織帶上連成一線，受力時沿著孔線撕裂。" data-en="Stitch density is the number of stitches per inch (SPI) along a seam, and on garment trims it decides something more concrete than appearance: whether the label is still attached after thirty washes. A woven main label, a care label folded into a side seam and an elastic waistband run through the same machine, but they do not need the same SPI. Too few stitches and the label lifts at the corners; too many and the needle perforates the tape until the seam tears along a line of holes." data-fr="La densité de piqûre — le nombre de points par pouce (SPI) — détermine sur les accessoires une chose plus concrète que l’aspect : l’étiquette est-elle encore là après trente lavages ? Une étiquette tissée principale, une étiquette d’entretien repliée dans une couture de côté et un élastique de ceinture passent sur la même machine, mais n’appellent pas la même densité. Trop faible, l’étiquette se soulève aux angles ; trop élevée, l’aiguille perfore le ruban jusqu’à ce que la couture se déchire le long d’une ligne de trous." data-es="La densidad de puntada — puntos por pulgada (SPI) — decide en los aviamentos algo más concreto que la estética: si la etiqueta sigue cosida después de treinta lavados. Una etiqueta tejida principal, una etiqueta de cuidado doblada en una costura lateral y un elástico de cintura pasan por la misma máquina, pero no piden la misma densidad. Con muy pocos puntos, la etiqueta se levanta en las esquinas; con demasiados, la aguja perfora la cinta hasta que la costura rompe por una línea de agujeros." data-ja="縫い目密度（SPI：1インチあたりの針数）は、副資材において見た目以上に具体的なことを左右します。30回洗濯した後もラベルが付いているかどうかです。織り主ラベル、脇縫いに折り込む洗濯表示ラベル、ウエストのゴムテープは同じミシンで縫いますが、必要な SPI は異なります。針数が少なすぎれば四隅が浮き、多すぎれば針穴が一直線につながり、縫い目に沿って破れます。" data-ko="봉제 밀도(SPI, 인치당 바늘 수)는 부자재에서 겉모양보다 더 구체적인 것을 좌우합니다. 30번 세탁 후에도 라벨이 붙어 있는지입니다. 직조 메인 라벨, 옆솔기에 접어 넣는 취급 표시 라벨, 허리 고무테이프는 같은 미싱으로 박지만 필요한 SPI는 다릅니다. 바늘 수가 너무 적으면 네 모서리가 들뜨고, 너무 많으면 바늘 구멍이 일직선으로 이어져 박음선을 따라 찢어집니다." data-de="Die Stichdichte — Stiche pro Zoll (SPI) — entscheidet bei Zutaten über etwas Konkreteres als die Optik: ob das Etikett nach dreißig Wäschen noch sitzt. Ein gewebtes Hauptetikett, ein in die Seitennaht gefalztes Pflegeetikett und ein Elastikbund laufen über dieselbe Maschine, brauchen aber unterschiedliche Dichten. Zu wenige Stiche, und die Ecken lösen sich; zu viele, und die Nadel perforiert das Band, bis die Naht entlang einer Lochreihe reißt." data-pt="A densidade de costura — pontos por polegada (SPI) — decide nos aviamentos algo mais concreto que a aparência: se a etiqueta continua presa depois de trinta lavagens. Etiqueta tecida principal, etiqueta de conservação dobrada na costura lateral e elástico de cós passam pela mesma máquina, mas não pedem a mesma densidade. Com poucos pontos, a etiqueta levanta nos cantos; com muitos, a agulha perfura a fita até a costura rasgar numa linha de furos.">縫紉密度是每英吋針數（SPI，也叫針距密度），在服裝輔料上它決定的事比外觀更實際：洗三十次之後標籤還在不在。織嘜主標、折進側縫的洗水標、腰頭鬆緊帶都用同一台車縫機，但需要的 SPI 不同。針數太少，標籤四角會翹起；針數太多，針孔會在織帶上連成一線，受力時沿著孔線撕裂。</p>
+
+      <h2 data-zh="一、為什麼 SPI 比線的品牌更重要" data-en="1. Why SPI matters more than the thread brand" data-fr="1. Pourquoi la densité compte plus que la marque de fil" data-es="1. Por qué la densidad importa más que la marca del hilo" data-ja="1. SPI が糸のブランドより重要な理由" data-ko="1. SPI가 실 브랜드보다 중요한 이유" data-de="1. Warum die Dichte mehr zählt als die Garnmarke" data-pt="1. Por que a densidade importa mais que a marca da linha">一、為什麼 SPI 比線的品牌更重要</h2>
+
+      <p data-zh="大家討論線材，但真正分配受力的是 SPI。1 cm 的縫份在 8 SPI 下只有約 3 個針點壓住標籤，14 SPI 有 5.5 個，每針分擔的拉力下降。代價是穿刺：每一次落針都會削弱織帶，20 mm 聚酯洗水標超過約 14 SPI，針孔在張力下就開始連片。多數輔料的實用區間是 10–12 SPI。" data-en="Thread gets the discussion, but SPI is what distributes the load. On 1 cm of seam at 8 SPI you have roughly three stitch points holding the label; at 14 SPI you have five and a half, and the load per stitch falls. The price is perforation: every needle penetration weakens the woven tape a little, and above about 14 SPI on a 20 mm polyester care label the holes start to merge under tension. The practical band for most trims is 10–12 SPI." data-fr="On débat du fil, mais c’est la densité qui répartit la charge. Sur 1 cm de couture à 8 SPI, trois points seulement retiennent l’étiquette ; à 14 SPI, cinq et demi, et la charge par point baisse. Le prix à payer est la perforation : chaque pénétration d’aiguille affaiblit le ruban, et au-delà d’environ 14 SPI sur une étiquette d’entretien polyester de 20 mm, les trous fusionnent sous tension. La plage utile est de 10 à 12 SPI." data-es="Se discute el hilo, pero la densidad es lo que reparte la carga. En 1 cm de costura a 8 SPI solo hay unos tres puntos sujetando la etiqueta; a 14 SPI hay cinco y medio y la carga por punto baja. El precio es la perforación: cada penetración de aguja debilita la cinta y por encima de unos 14 SPI en una etiqueta de cuidado de poliéster de 20 mm los agujeros se unen bajo tensión. La banda práctica va de 10 a 12 SPI." data-ja="糸の議論が先行しますが、荷重を分散するのは SPI です。縫い代 1 cm で 8 SPI ならラベルを押さえる点は約3点、14 SPI なら約5.5点になり、1針あたりの負担が下がります。代償は穿刺です。針が刺さるたびに織テープは弱くなり、20 mm のポリエステル洗濯表示ラベルでは約14 SPI を超えると張力で針穴がつながります。実用的な範囲は 10〜12 SPI です。" data-ko="실 이야기가 먼저 나오지만 하중을 나누는 것은 SPI입니다. 시접 1 cm에서 8 SPI면 라벨을 누르는 점이 약 3개, 14 SPI면 약 5.5개로 바늘당 부담이 줄어듭니다. 대가는 천공입니다. 바늘이 들어갈 때마다 직조 테이프는 약해지고, 20 mm 폴리에스터 취급 표시 라벨에서 약 14 SPI를 넘으면 장력 아래에서 구멍이 이어집니다. 실용 구간은 10~12 SPI입니다." data-de="Diskutiert wird das Garn, verteilt wird die Last von der Dichte. Auf 1 cm Naht halten bei 8 SPI nur etwa drei Stichpunkte das Etikett, bei 14 SPI sind es fünfeinhalb, und die Last pro Stich sinkt. Der Preis ist die Perforation: Jeder Nadeleinstich schwächt das Gewebeband, und oberhalb von etwa 14 SPI auf einem 20 mm breiten Polyester-Pflegeetikett verbinden sich die Löcher unter Zug. Der praktische Bereich liegt bei 10–12 SPI." data-pt="Discute-se a linha, mas é a densidade que distribui a carga. Em 1 cm de costura a 8 SPI há cerca de três pontos segurando a etiqueta; a 14 SPI são cinco e meio, e a carga por ponto cai. O preço é a perfuração: cada penetração da agulha enfraquece a fita, e acima de cerca de 14 SPI numa etiqueta de conservação de poliéster de 20 mm os furos se juntam sob tensão. A faixa prática é de 10 a 12 SPI.">大家討論線材，但真正分配受力的是 SPI。1 cm 的縫份在 8 SPI 下只有約 3 個針點壓住標籤，14 SPI 有 5.5 個，每針分擔的拉力下降。代價是穿刺：每一次落針都會削弱織帶，20 mm 聚酯洗水標超過約 14 SPI，針孔在張力下就開始連片。多數輔料的實用區間是 10–12 SPI。</p>
+
+      <h2 data-zh="二、按固定位置定的針數區間" data-en="2. Typical stitch density by attachment point" data-fr="2. Densité typique selon le point de fixation" data-es="2. Densidad típica según el punto de fijación" data-ja="2. 取付位置ごとの標準的な針数" data-ko="2. 고정 위치별 표준 바늘 수" data-de="2. Übliche Stichdichte je Befestigungspunkt" data-pt="2. Densidade típica por ponto de fixação">二、按固定位置定的針數區間</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="固定位置" data-en="Attachment point" data-fr="Point de fixation" data-es="Punto de fijación" data-ja="取付位置" data-ko="고정 위치" data-de="Befestigungspunkt" data-pt="Ponto de fixação">固定位置</th>
+            <th data-zh="SPI（每英吋針數）" data-en="SPI" data-fr="SPI" data-es="SPI" data-ja="SPI" data-ko="SPI" data-de="SPI" data-pt="SPI">SPI（每英吋針數）</th>
+            <th data-zh="線跡類型" data-en="Stitch type" data-fr="Type de point" data-es="Tipo de puntada" data-ja="縫い方" data-ko="박음 방식" data-de="Stichart" data-pt="Tipo de ponto">線跡類型</th>
+            <th data-zh="要寫進規格的細節" data-en="What to write in the spec" data-fr="À inscrire dans la spécification" data-es="Qué escribir en la especificación" data-ja="仕様に書くべき点" data-ko="사양서에 적을 내용" data-de="Was in die Spezifikation gehört" data-pt="O que escrever na especificação">要寫進規格的細節</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="織嘜主標，領縫" data-en="Woven main label, neck seam" data-fr="Étiquette tissée, couture d’encolure" data-es="Etiqueta tejida, costura de cuello" data-ja="織り主ラベル・衿ぐり" data-ko="직조 메인 라벨·목선" data-de="Gewebtes Hauptetikett, Halsnaht" data-pt="Etiqueta tecida, costura do decote">織嘜主標，領縫</td>
+            <td data-zh="10–12" data-en="10–12" data-fr="10–12" data-es="10–12" data-ja="10〜12" data-ko="10~12" data-de="10–12" data-pt="10–12">10–12</td>
+            <td data-zh="平縫 301" data-en="Lockstitch 301" data-fr="Point noué 301" data-es="Puntada recta 301" data-ja="本縫い 301" data-ko="본봉 301" data-de="Steppstich 301" data-pt="Ponto reto 301">平縫 301</td>
+            <td data-zh="距標邊 1 mm，兩端回針" data-en="1 mm from the edge, backstitch at both ends" data-fr="à 1 mm du bord, arrêt aux deux extrémités" data-es="a 1 mm del borde, remate en ambos extremos" data-ja="端から 1 mm、両端は返し縫い" data-ko="가장자리에서 1 mm, 양끝 되박기" data-de="1 mm von der Kante, an beiden Enden verriegeln" data-pt="a 1 mm da borda, arremate nas duas pontas">距標邊 1 mm，兩端回針</td>
+          </tr>
+          <tr>
+            <td data-zh="洗水標，側縫" data-en="Care label, side seam" data-fr="Étiquette d’entretien, couture de côté" data-es="Etiqueta de cuidado, costura lateral" data-ja="洗濯表示ラベル・脇縫い" data-ko="취급 표시 라벨·옆솔기" data-de="Pflegeetikett, Seitennaht" data-pt="Etiqueta de conservação, costura lateral">洗水標，側縫</td>
+            <td data-zh="10–12" data-en="10–12" data-fr="10–12" data-es="10–12" data-ja="10〜12" data-ko="10~12" data-de="10–12" data-pt="10–12">10–12</td>
+            <td data-zh="平縫或三線包縫" data-en="Lockstitch or 3-thread overlock" data-fr="Point noué ou surjet 3 fils" data-es="Recta o remallado de 3 hilos" data-ja="本縫いまたは3本糸オーバーロック" data-ko="본봉 또는 3선 오버록" data-de="Steppstich oder 3-Faden-Overlock" data-pt="Reto ou overloque de 3 fios">平縫或三線包縫</td>
+            <td data-zh="折邊不外露，折線留 2–3 mm" data-en="Fold tucked in, 2–3 mm fold clearance" data-fr="pli rentré, 2 à 3 mm de dégagement" data-es="doblez hacia dentro, 2–3 mm de margen" data-ja="折り端を出さず、折り線に 2〜3 mm の余裕" data-ko="접힌 단 노출 없이 접힘 여유 2~3 mm" data-de="Bruch innenliegend, 2–3 mm Bruchabstand" data-pt="dobra para dentro, folga de 2–3 mm">折邊不外露，折線留 2–3 mm</td>
+          </tr>
+          <tr>
+            <td data-zh="針織下擺" data-en="Hem on jersey" data-fr="Ourlet en jersey" data-es="Dobladillo de punto" data-ja="ニットの裾" data-ko="니트 밑단" data-de="Saum an Jersey" data-pt="Barra em malha">針織下擺</td>
+            <td data-zh="12–14" data-en="12–14" data-fr="12–14" data-es="12–14" data-ja="12〜14" data-ko="12~14" data-de="12–14" data-pt="12–14">12–14</td>
+            <td data-zh="雙針繃縫（coverstitch）" data-en="Twin-needle coverstitch" data-fr="Surjet double (recouvrement)" data-es="Recubierto de doble aguja" data-ja="ダブルカバーステッチ" data-ko="더블 커버스티치" data-de="Doppelter Coverstich" data-pt="Coverstitch de agulha dupla">雙針繃縫（coverstitch）</td>
+            <td data-zh="需保留拉伸回復，勿用平縫" data-en="Must recover stretch, never lockstitch" data-fr="doit reprendre l’élasticité, jamais de point noué" data-es="debe recuperar elasticidad, nunca puntada recta" data-ja="伸びの回復が必要、本縫いは不可" data-ko="신축 회복 필요, 본봉 금지" data-de="muss mitdehnen, kein Steppstich" data-pt="precisa recuperar elasticidade, nunca ponto reto">需保留拉伸回復，勿用平縫</td>
+          </tr>
+          <tr>
+            <td data-zh="腰頭鬆緊帶" data-en="Elastic waistband" data-fr="Élastique de ceinture" data-es="Elástico de cintura" data-ja="ウエストゴム" data-ko="허리 고무" data-de="Elastikbund" data-pt="Elástico do cós">腰頭鬆緊帶</td>
+            <td data-zh="10–12" data-en="10–12" data-fr="10–12" data-es="10–12" data-ja="10〜12" data-ko="10~12" data-de="10–12" data-pt="10–12">10–12</td>
+            <td data-zh="曲折縫或繃縫" data-en="Zigzag or coverstitch" data-fr="Zigzag ou recouvrement" data-es="Zigzag o recubierto" data-ja="ジグザグまたはカバーステッチ" data-ko="지그재그 또는 커버스티치" data-de="Zickzack oder Coverstich" data-pt="Zigue-zague ou coverstitch">曲折縫或繃縫</td>
+            <td data-zh="線跡須隨鬆緊帶拉伸，勿綳死" data-en="Stitch must stretch with the elastic" data-fr="le point doit suivre l’élastique" data-es="la puntada debe estirar con el elástico" data-ja="ゴムと一緒に伸びること" data-ko="고무와 함께 늘어날 것" data-de="Stich muss mitdehnen" data-pt="o ponto deve esticar com o elástico">線跡須隨鬆緊帶拉伸，勿綳死</td>
+          </tr>
+          <tr>
+            <td data-zh="鈕扣、織帶環" data-en="Button, loop tape" data-fr="Bouton, passant" data-es="Botón, presilla" data-ja="ボタン・ループ" data-ko="단추·고리" data-de="Knopf, Schlaufe" data-pt="Botão, alça">鈕扣、織帶環</td>
+            <td data-zh="8–10" data-en="8–10" data-fr="8–10" data-es="8–10" data-ja="8〜10" data-ko="8~10" data-de="8–10" data-pt="8–10">8–10</td>
+            <td data-zh="平縫加打結（bar tack）" data-en="Lockstitch plus bar tack" data-fr="Point noué + arrêt" data-es="Recta con remate" data-ja="本縫い＋カンヌキ" data-ko="본봉+바택" data-de="Steppstich plus Riegel" data-pt="Reto com remate">平縫加打結（bar tack）</td>
+            <td data-zh="打結 8–10 mm，受力方向對齊" data-en="Bar tack 8–10 mm, aligned to load direction" data-fr="arrêt de 8 à 10 mm, aligné sur la traction" data-es="remate de 8–10 mm, alineado con la tracción" data-ja="カンヌキ 8〜10 mm、引き方向に合わせる" data-ko="바택 8~10 mm, 인장 방향 정렬" data-de="Riegel 8–10 mm, in Zugrichtung" data-pt="remate de 8–10 mm, alinhado à tração">打結 8–10 mm，受力方向對齊</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-zh="下單時把 SPI、縫份（mm）與線號一起寫清。歐洲買家常寫成「10–12 針/英吋（約 4–4.7 針/cm）」，因為採購單會傳到用公制的工廠：1 英吋等於 25.4 mm，10 SPI 是每 cm 3.94 針，不是整 4 針。中國工廠按 GB/T 1335 號型與公制縫份報價，換算寫清楚能省一輪來回。" data-en="Put SPI, seam allowance in mm and thread ticket on the same line. European buyers usually write “10–12 stitches per inch (about 4–4.7 per cm)” because the purchase order travels to a factory working in centimetres: one inch is 25.4 mm, so 10 SPI is 3.94 stitches per cm, not exactly 4. Say which unit you mean and the factory does not have to guess." data-fr="Indiquez la densité, la valeur de couture en mm et le numéro de fil sur la même ligne. Les acheteurs européens écrivent souvent « 10–12 points par pouce (environ 4 à 4,7 points/cm) » : le bon de commande part vers une usine qui travaille en centimètres, et un pouce vaut 25,4 mm — 10 SPI font 3,94 points par cm, pas 4. Les tailles 34 à 48 et les grammages en g/m² suivent la même logique métrique, avec la virgule décimale (1,5 mm et non 1.5 mm)." data-es="Escriba la densidad, el margen de costura en mm y el número de hilo en la misma línea. Los compradores europeos suelen escribir «10–12 puntadas por pulgada (unas 4 a 4,7 por cm)»: el pedido viaja a una fábrica que trabaja en centímetros y una pulgada son 25,4 mm, así que 10 SPI son 3,94 puntadas por cm, no 4 exactas. Las tallas 34 a 48 y la gramatura en g/m² siguen la misma lógica métrica, con coma decimal (1,5 mm, no 1.5 mm)." data-ja="発注書には SPI、縫い代（mm）、糸番手を同じ行に書きます。欧州のバイヤーは「1インチあたり 10〜12 針（約 4〜4.7 針/cm）」と表記します。1インチは 25.4 mm なので、10 SPI は 1 cm あたり 3.94 針であり 4 針ちょうどではありません。日本サイズの号数や g/m² 表示と同じく、単位を明示すれば工場側の解釈違いを防げます。" data-ko="발주서에는 SPI, 시접(mm), 실 번수를 같은 줄에 적습니다. 유럽 바이어는 ‘인치당 10~12바늘(약 4~4.7바늘/cm)’로 표기합니다. 1인치는 25.4 mm이므로 10 SPI는 1 cm당 3.94바늘이며 4바늘과 정확히 같지 않습니다. 한국 사이즈 호수와 g/m² 표기처럼 단위를 명시하면 공장의 해석 차이를 막을 수 있습니다." data-de="Geben Sie Dichte, Nahtzugabe in mm und Garnnummer in einer Zeile an. Europäische Einkäufer schreiben oft „10–12 Stiche/Zoll (ca. 4–4,7 Stiche/cm)“, weil die Bestellung in einer Fabrik landet, die in Zentimetern rechnet: Ein Zoll sind 25,4 mm, 10 SPI entsprechen also 3,94 Stichen pro cm und nicht genau 4. Größen 34–48 und Flächengewichte in g/m² folgen derselben metrischen Logik, mit Komma als Dezimalzeichen (1,5 mm statt 1.5 mm)." data-pt="Escreva a densidade, a margem de costura em mm e o número da linha na mesma linha. Compradores europeus costumam escrever “10–12 pontos por polegada (cerca de 4 a 4,7 por cm)”: o pedido vai para uma fábrica que trabalha em centímetros e uma polegada são 25,4 mm — 10 SPI dão 3,94 pontos por cm, não 4 exatos. Tamanhos 34 a 48 e gramatura em g/m² seguem a mesma lógica métrica, com vírgula decimal (1,5 mm, não 1.5 mm).">下單時把 SPI、縫份（mm）與線號一起寫清。歐洲買家常寫成「10–12 針/英吋（約 4–4.7 針/cm）」，因為採購單會傳到用公制的工廠：1 英吋等於 25.4 mm，10 SPI 是每 cm 3.94 針，不是整 4 針。中國工廠按 GB/T 1335 號型與公制縫份報價，換算寫清楚能省一輪來回。</p>
+
+      <h2 data-zh="三、實際會遇到的三種失效" data-en="3. The three failure modes you will actually see" data-fr="3. Les trois défauts que vous verrez vraiment" data-es="3. Los tres fallos que realmente verá" data-ja="3. 実際に起きる3つの不具合" data-ko="3. 실제로 나타나는 세 가지 불량" data-de="3. Die drei Fehlerbilder, die tatsächlich auftreten" data-pt="3. Os três defeitos que você realmente verá">三、實際會遇到的三種失效</h2>
+
+      <ul>
+        <li data-zh="翹角：8 SPI 以下，標籤角在十次洗滌內就會翻起，看起來像廉價品，即使面料沒問題。" data-en="Corner lift: at 8 SPI or below, the corner peels up within ten washes. It reads as poor quality even when the fabric is fine." data-fr="Angle qui se soulève : à 8 SPI ou moins, le coin se relève en dix lavages. Cela se lit comme un défaut de qualité même si le tissu est bon." data-es="Esquina levantada: a 8 SPI o menos, la esquina se despega en diez lavados y se lee como mala calidad aunque el tejido sea bueno." data-ja="角浮き：8 SPI 以下では10回の洗濯で角が浮きます。生地が良くても品質が低く見えます。" data-ko="모서리 들뜸: 8 SPI 이하에서는 열 번 세탁 안에 모서리가 들립니다. 원단이 좋아도 품질이 낮아 보입니다." data-de="Eckenlösung: Bei 8 SPI oder weniger hebt sich die Ecke innerhalb von zehn Wäschen. Das wirkt wie schlechte Qualität, auch wenn der Stoff gut ist." data-pt="Canto levantado: a 8 SPI ou menos, o canto descola em dez lavagens e parece falta de qualidade mesmo com tecido bom.">翹角：8 SPI 以下，標籤角在十次洗滌內就會翻起，看起來像廉價品，即使面料沒問題。</li>
+        <li data-zh="針切：緊織聚酯織帶超過 14 SPI，針會切斷經紗，標籤沿縫線撕裂。" data-en="Needle cutting: above 14 SPI on tight-woven polyester tape, the needle severs warp yarns and the label tears along the stitch line." data-fr="Coupe d’aiguille : au-delà de 14 SPI sur un ruban polyester serré, l’aiguille sectionne les fils de chaîne et l’étiquette se déchire le long de la piqûre." data-es="Corte de aguja: por encima de 14 SPI en cinta de poliéster tupida, la aguja corta urdimbres y la etiqueta rompe por la línea de puntada." data-ja="針切れ：織りの詰まったポリエステルテープで14 SPI を超えると、針が経糸を切断し縫い目に沿って破れます。" data-ko="바늘 절단: 촘촘한 폴리에스터 테이프에서 14 SPI를 넘으면 바늘이 경사를 끊고 박음선을 따라 찢어집니다." data-de="Nadelschnitt: Oberhalb von 14 SPI auf dicht gewebtem Polyesterband durchtrennt die Nadel Kettfäden, und das Etikett reißt entlang der Stichlinie." data-pt="Corte de agulha: acima de 14 SPI em fita de poliéster compacta, a agulha corta os fios de urdume e a etiqueta rasga pela linha de costura.">針切：緊織聚酯織帶超過 14 SPI，針會切斷經紗，標籤沿縫線撕裂。</li>
+        <li data-zh="起皺：SPI 相對張力過高會拉扯縫線，標籤在縫份上捲起。" data-en="Puckering: too high an SPI for the thread tension pulls the seam and the label curls over the seam allowance." data-fr="Fronces : une densité trop élevée par rapport à la tension du fil tire la couture et l’étiquette se replie sur la valeur de couture." data-es="Arrugas: una densidad demasiado alta frente a la tensión del hilo tira de la costura y la etiqueta se enrolla sobre el margen." data-ja="縫い縮み：張力に対して SPI が高すぎると縫い目が引きつれ、ラベルが縫い代の上で丸まります。" data-ko="당김: 장력에 비해 SPI가 너무 높으면 솔기가 당겨지고 라벨이 시접 위에서 말립니다." data-de="Kräuseln: Eine zu hohe Dichte gegenüber der Fadenspannung zieht die Naht zusammen, das Etikett rollt sich über die Nahtzugabe." data-pt="Franzido: densidade alta demais para a tensão da linha repuxa a costura e a etiqueta enrola sobre a margem.">起皺：SPI 相對張力過高會拉扯縫線，標籤在縫份上捲起。</li>
+        <li data-zh="折邊磨斷：洗水標折兩次時，折線到縫線要留 2–3 mm，否則先磨斷的是折邊。" data-en="Abrasion at the fold: a care label folded twice needs 2–3 mm between the fold and the stitch line, or the fold wears through first." data-fr="Usure au pli : une étiquette d’entretien pliée deux fois exige 2 à 3 mm entre le pli et la piqûre, sinon c’est le pli qui cède en premier." data-es="Desgaste en el doblez: una etiqueta de cuidado doblada dos veces necesita 2–3 mm entre doblez y puntada, o primero se rompe el doblez." data-ja="折り端の摩耗：二度折りの洗濯表示ラベルは折り線と縫い目の間に 2〜3 mm の余裕が必要です。余裕がないと折り端から破れます。" data-ko="접힘 마모: 두 번 접는 취급 표시 라벨은 접힌 선과 박음선 사이에 2~3 mm 여유가 필요합니다. 없으면 접힌 곳부터 터집니다." data-de="Abrieb am Bruch: Ein zweifach gefalztes Pflegeetikett braucht 2–3 mm Abstand zwischen Bruch und Stichlinie, sonst verschleißt der Bruch zuerst." data-pt="Desgaste na dobra: etiqueta de conservação dobrada duas vezes precisa de 2 a 3 mm entre dobra e costura, senão a dobra rompe primeiro.">折邊磨斷：洗水標折兩次時，折線到縫線要留 2–3 mm，否則先磨斷的是折邊。</li>
+      </ul>
+
+      <h2 data-zh="四、耐用度是合規問題，不是偏好問題" data-en="4. Durability is a compliance question, not a preference" data-fr="4. La durabilité est une question de conformité, pas de préférence" data-es="4. La durabilidad es una cuestión de cumplimiento, no de gusto" data-ja="4. 耐久性は好みではなく表示義務の問題" data-ko="4. 내구성은 취향이 아니라 표시 의무의 문제" data-de="4. Haltbarkeit ist eine Kennzeichnungsfrage, keine Geschmacksfrage" data-pt="4. Durabilidade é questão de conformidade, não de preferência">四、耐用度是合規問題，不是偏好問題</h2>
+
+      <p data-zh="在歐盟，(EU) No 1007/2011 要求纖維成分標示在永久附著於成衣的標籤上，且洗護說明必須在產品整個使用壽命內可讀。只通過五次洗滌的洗水標，第一天合格，一個月後就不合格。GPSR (EU) 2023/988 還要求歐盟責任主體與可追溯資訊始終存在，所以壓住成分的那一針，同時壓住你的合規證據。中國市場對應的是 GB 5296.4《消費品使用說明 第 4 部分：紡織品和服裝》與 GB/T 8685 洗護符號，要求同樣落在永久標上，吊牌不算。" data-en="In the EU, Regulation (EU) No 1007/2011 requires fibre composition on a label permanently attached to the garment, and care instructions that stay readable for the life of the product. A care label that survives five washes meets the rule on day one and fails it a month later. The General Product Safety Regulation (GPSR, (EU) 2023/988) also requires a responsible person in the EU and traceability information that remains present, so the stitch holding the composition holds your compliance evidence too. In the US, the FTC care labelling rule (16 CFR Part 423) asks for instructions that stay legible for the life of the garment, and AATCC test methods are the usual way to prove it." data-fr="Dans l’UE, le règlement (UE) n° 1007/2011 impose que la composition figure sur une étiquette attachée à demeure au vêtement et que les instructions d’entretien restent lisibles pendant toute la durée de vie du produit. Une étiquette qui tient cinq lavages est conforme le premier jour et ne l’est plus un mois après. Le règlement sur la sécurité générale des produits 2023/988 (GPSR) exige en outre un responsable établi dans l’UE et des informations traçables qui demeurent : le point qui tient la composition tient aussi votre preuve de conformité. En France, le Code de la consommation impose une information claire en français, et le logo Triman complète le même support." data-es="En la UE, el Reglamento (UE) n.º 1007/2011 exige la composición en una etiqueta unida de forma permanente a la prenda y que las instrucciones de cuidado sigan legibles durante toda la vida del producto. Una etiqueta que aguanta cinco lavados cumple el primer día y deja de cumplir al mes. El Reglamento de seguridad general de los productos 2023/988 (GPSR) añade un responsable en la UE e información trazable que permanezca: la puntada que sujeta la composición sujeta también tu prueba de cumplimiento. En España el etiquetado debe ir en castellano y la información de recogida selectiva se suma al mismo soporte." data-ja="EU では (EU) No 1007/2011 が繊維組成を製品に恒久的に取り付けた表示に義務づけ、取扱表示は製品の寿命を通じて判読できなければなりません。5回の洗濯で消える洗濯表示ラベルは、販売初日は適合でも1か月後には不適合です。GPSR (EU) 2023/988 は域内責任者とトレーサビリティ情報の維持も求めます。組成を押さえる1針は、表示義務を押さえる1針でもあります。日本では家庭用品品質表示法により組成（混用率）と取扱表示を製品に恒久的に付す義務があり、取扱記号は JIS L 0001 に従います。下げ札だけでは足りません。" data-ko="EU에서는 (EU) No 1007/2011이 섬유 조성을 제품에 영구 부착된 라벨에 표시하도록 요구하고, 취급 표시는 제품 수명 동안 읽을 수 있어야 합니다. 다섯 번 세탁에 지워지는 취급 표시 라벨은 판매 첫날은 적합이지만 한 달 뒤에는 부적합입니다. GPSR (EU) 2023/988은 역내 책임자와 추적 정보의 유지도 요구합니다. 조성을 고정하는 한 땀이 곧 표시 의무를 고정하는 한 땀입니다. 한국에서는 전기용품 및 생활용품 안전관리법에 따라 품질 표시와 취급 표시를 제품에 부착하며, 취급 기호는 KS K 0021을 따르고 혼용률과 원산지를 함께 표시합니다." data-de="In der EU verlangt die Verordnung (EU) Nr. 1007/2011 die Faserzusammensetzung auf einem dauerhaft befestigten Etikett sowie Pflegehinweise, die über die gesamte Lebensdauer lesbar bleiben. Ein Pflegeetikett, das fünf Wäschen übersteht, erfüllt die Pflicht am ersten Tag und einen Monat später nicht mehr. Die GPSR (EU) 2023/988 verlangt zusätzlich eine verantwortliche Person in der EU und rückverfolgbare Angaben, die bestehen bleiben: Der Stich, der die Zusammensetzung hält, hält auch Ihren Konformitätsnachweis. Das TKG verlangt die Faserzusammensetzung in deutscher Sprache, die Pflegesymbole folgen EN ISO 3758, und die Kennzeichnungspflicht endet nicht mit dem Verkauf." data-pt="Na UE, o Regulamento (UE) 1007/2011 exige a composição em etiqueta presa permanentemente à peça e instruções de conservação legíveis durante toda a vida do produto. Etiqueta que resiste a cinco lavagens está conforme no primeiro dia e deixa de estar em um mês. O GPSR (EU) 2023/988 exige ainda responsável na UE e informações de rastreabilidade que permaneçam: o ponto que segura a composição segura também a sua prova de conformidade. No Brasil, o CDC (Lei nº 8.078/1990) exige informação clara em português, e as normas ABNT NBR de etiquetagem têxtil definem composição, cuidados e responsável.">在歐盟，(EU) No 1007/2011 要求纖維成分標示在永久附著於成衣的標籤上，且洗護說明必須在產品整個使用壽命內可讀。只通過五次洗滌的洗水標，第一天合格，一個月後就不合格。GPSR (EU) 2023/988 還要求歐盟責任主體與可追溯資訊始終存在，所以壓住成分的那一針，同時壓住你的合規證據。中國市場對應的是 GB 5296.4《消費品使用說明 第 4 部分：紡織品和服裝》與 GB/T 8685 洗護符號，要求同樣落在永久標上，吊牌不算。</p>
+
+      <h2 data-zh="五、打樣室怎麼驗" data-en="5. How to verify it in the sample room" data-fr="5. Comment le vérifier en atelier d’échantillons" data-es="5. Cómo verificarlo en la sala de muestras" data-ja="5. サンプル室での確認方法" data-ko="5. 샘플실에서 확인하는 방법" data-de="5. So prüfen Sie es im Musterzimmer" data-pt="5. Como verificar na sala de amostras">五、打樣室怎麼驗</h2>
+
+      <ul>
+        <li data-zh="用放大鏡在每條縫上取三個 25 mm 區段數針，記平均值，不記最好的一段。" data-en="Count stitches over 25 mm at three points per seam with a pick glass; record the average, not the best section." data-fr="Comptez les points sur 25 mm à trois endroits par couture, à la loupe compte-fils ; notez la moyenne, pas la meilleure section." data-es="Cuente puntadas sobre 25 mm en tres puntos por costura con cuenta-hilos; anote la media, no el mejor tramo." data-ja="拡大鏡で縫い目ごとに 25 mm を3か所数え、平均値を記録します（最良の箇所ではなく）。" data-ko="확대경으로 솔기마다 25 mm를 세 곳에서 세고 평균을 기록합니다(가장 좋은 구간이 아니라)." data-de="Zählen Sie die Stiche über 25 mm an drei Stellen je Naht mit dem Fadenzähler; notieren Sie den Mittelwert, nicht die beste Stelle." data-pt="Conte pontos em 25 mm em três trechos por costura, com conta-fios; registre a média, não o melhor trecho.">用放大鏡在每條縫上取三個 25 mm 區段數針，記平均值，不記最好的一段。</li>
+        <li data-zh="拉力測試：標籤承受 5 kg 靜載 30 秒，縫線不斷、縫口張開不超過 2 mm。" data-en="Pull test: 5 kg static load for 30 seconds on the label; no stitch rupture and no more than 2 mm seam opening." data-fr="Essai de traction : 5 kg en statique pendant 30 secondes sur l’étiquette ; aucune rupture de fil, ouverture de couture inférieure à 2 mm." data-es="Ensayo de tracción: 5 kg estáticos 30 segundos sobre la etiqueta; sin rotura de puntada y con apertura de costura inferior a 2 mm." data-ja="引張試験：ラベルに 5 kg の静的荷重を30秒。縫い糸の切断がなく、縫い目の開きが 2 mm 未満であること。" data-ko="인장 시험: 라벨에 5 kg 정하중을 30초. 박음실 절단이 없고 솔기 벌어짐이 2 mm 미만이어야 합니다." data-de="Zugversuch: 5 kg statisch für 30 Sekunden am Etikett; kein Fadenbruch, Nahtöffnung unter 2 mm." data-pt="Ensaio de tração: 5 kg estáticos por 30 segundos na etiqueta; sem rompimento do ponto e abertura de costura inferior a 2 mm.">拉力測試：標籤承受 5 kg 靜載 30 秒，縫線不斷、縫口張開不超過 2 mm。</li>
+        <li data-zh="洗滌測試：依 EN ISO 6330（中國 GB/T 8629）做五次 40 °C 洗滌，再數一次 SPI 並比對字跡。" data-en="Wash test: five cycles at 40 °C following EN ISO 6330 or AATCC 135, then re-count SPI and compare legibility with the original." data-fr="Essai de lavage : cinq cycles à 40 °C selon EN ISO 6330, puis recomptez et comparez la lisibilité à l’original." data-es="Ensayo de lavado: cinco ciclos a 40 °C según EN ISO 6330 y vuelva a contar comparando la legibilidad con el original." data-ja="洗濯試験：40 °C で5回（EN ISO 6330 または JIS L 0217 を参考）、再度 SPI を数え、印字の判読性を比較します。" data-ko="세탁 시험: 40 °C에서 5회(EN ISO 6330 또는 관련 KS 규격), 다시 SPI를 세고 인쇄 판독성을 비교합니다." data-de="Waschversuch: fünf Zyklen bei 40 °C nach EN ISO 6330, danach erneut zählen und die Lesbarkeit mit dem Original vergleichen." data-pt="Ensaio de lavagem: cinco ciclos a 40 °C conforme EN ISO 6330, depois reconte e compare a legibilidade.">洗滌測試：依 EN ISO 6330（中國 GB/T 8629）做五次 40 °C 洗滌，再數一次 SPI 並比對字跡。</li>
+        <li data-zh="折邊間隙：雙折洗水標的折線到縫線留 2–3 mm。" data-en="Fold clearance: 2–3 mm between fold and stitch line on double-folded care labels." data-fr="Dégagement du pli : 2 à 3 mm entre pli et piqûre sur les étiquettes pliées en deux." data-es="Margen del doblez: 2–3 mm entre doblez y puntada en etiquetas dobladas." data-ja="折り余裕：二度折りの洗濯表示ラベルで折り線と縫い目の間が 2〜3 mm あるか確認します。" data-ko="접힘 여유: 두 번 접는 라벨에서 접힌 선과 박음선 사이 2~3 mm를 확인합니다." data-de="Bruchabstand: 2–3 mm zwischen Bruch und Stichlinie bei zweifach gefalzten Etiketten." data-pt="Folga da dobra: 2 a 3 mm entre dobra e costura nas etiquetas dobradas.">折邊間隙：雙折洗水標的折線到縫線留 2–3 mm。</li>
+      </ul>
+
+      <h2 data-zh="六、採購單上的一行話" data-en="6. One line on the purchase order" data-fr="6. Une ligne sur le bon de commande" data-es="6. Una línea en el pedido" data-ja="6. 発注書に書く1行" data-ko="6. 발주서에 쓰는 한 줄" data-de="6. Eine Zeile auf der Bestellung" data-pt="6. Uma linha no pedido de compra">六、採購單上的一行話</h2>
+
+      <p data-zh="能撐過工廠交接的寫法是：「主標 10–12 SPI、平縫 301、120 號聚酯線、距邊 1 mm、折邊間隙 2–3 mm、5 kg 拉力測試。」再加上洗滌依據（40 °C、五次循環）與驗收規則（縫口張開 ≤2 mm）。SPI 不貴：8 針與 12 針的差別是每百件幾秒鐘，但這是最便宜的止損手段。" data-en="A specification that survives the factory handover reads like this: “Main label: 10–12 SPI, lockstitch 301, ticket 120 polyester thread, 1 mm from the edge, 2–3 mm fold clearance, 5 kg pull test.” Add the wash reference (EN ISO 6330, 40 °C) and the acceptance rule (no more than 2 mm seam opening). Nothing about SPI is expensive — the difference between 8 and 12 stitches per inch is seconds per hundred pieces — but it is the cheapest way to stop label complaints." data-fr="Une spécification qui survit au transfert en usine s’écrit ainsi : « Étiquette principale : 10–12 SPI, point noué 301, fil polyester 120, à 1 mm du bord, dégagement de pli 2–3 mm, essai de traction 5 kg. » Ajoutez la référence de lavage (EN ISO 6330, 40 °C) et la règle d’acceptation (ouverture ≤ 2 mm). La densité ne coûte presque rien : quelques secondes par centaine de pièces, pour le gain le plus sûr contre les réclamations d’étiquette." data-es="Una especificación que sobrevive al traspaso a fábrica se escribe así: «Etiqueta principal: 10–12 SPI, puntada recta 301, hilo de poliéster 120, a 1 mm del borde, margen de doblez 2–3 mm, tracción 5 kg». Añada la referencia de lavado (EN ISO 6330, 40 °C) y la regla de aceptación (apertura ≤ 2 mm). La densidad no cuesta casi nada: unos segundos por cada cien piezas y es la forma más barata de cortar las reclamaciones de etiqueta." data-ja="工場への引き継ぎに耐える書き方はこうです。「主ラベル：10〜12 SPI、本縫い 301、ポリエステル糸 120 番、端から 1 mm、折り余裕 2〜3 mm、引張 5 kg」。洗濯の根拠（40 °C・5回）と合格基準（縫い目の開き 2 mm 以下）も添えます。SPI はコストがほとんど変わりません。100枚あたり数秒の差で、ラベル苦情を止める最も安い方法です。" data-ko="공장 이관을 견디는 사양은 이렇게 씁니다. ‘메인 라벨: 10~12 SPI, 본봉 301, 폴리에스터사 120번, 가장자리에서 1 mm, 접힘 여유 2~3 mm, 인장 5 kg.’ 세탁 근거(40 °C·5회)와 합격 기준(솔기 벌어짐 2 mm 이하)도 함께 적습니다. SPI는 비용이 거의 늘지 않습니다. 100장당 몇 초 차이로 라벨 클레임을 막는 가장 저렴한 방법입니다." data-de="Eine Spezifikation, die die Übergabe an die Fabrik übersteht, liest sich so: „Hauptetikett: 10–12 SPI, Steppstich 301, Polyestergarn 120, 1 mm von der Kante, Bruchabstand 2–3 mm, Zugversuch 5 kg.“ Dazu die Waschgrundlage (EN ISO 6330, 40 °C) und die Annahmeregel (Nahtöffnung maximal 2 mm). Die Dichte kostet fast nichts – Sekunden pro hundert Teile – und ist der billigste Schutz gegen Etikettenreklamationen." data-pt="Uma especificação que sobrevive à passagem para a fábrica fica assim: “Etiqueta principal: 10–12 SPI, ponto reto 301, linha de poliéster 120, a 1 mm da borda, folga de dobra 2–3 mm, tração 5 kg”. Acrescente a referência de lavagem (EN ISO 6330, 40 °C) e a regra de aceitação (abertura ≤ 2 mm). A densidade quase não custa: segundos por centena de peças, e é a forma mais barata de cortar reclamações de etiqueta.">能撐過工廠交接的寫法是：「主標 10–12 SPI、平縫 301、120 號聚酯線、距邊 1 mm、折邊間隙 2–3 mm、5 kg 拉力測試。」再加上洗滌依據（40 °C、五次循環）與驗收規則（縫口張開 ≤2 mm）。SPI 不貴：8 針與 12 針的差別是每百件幾秒鐘，但這是最便宜的止損手段。</p>
+
+      <div class="callout" data-zh="經驗值：客戶退回「標籤掉了」的衣服，原因幾乎都是 SPI 或折邊間隙，不是線。換線材供應商之前，先向車縫車間要 SPI 數據。" data-en="Rule of thumb: when a customer returns a garment because the label came off, the cause is nearly always SPI or fold clearance, not thread. Ask the sewing room for the SPI count before you change thread supplier." data-fr="Ordre de grandeur : quand un client retourne un vêtement parce que « l’étiquette s’est détachée », la cause est presque toujours la densité ou le dégagement du pli, pas le fil. Demandez la densité à l’atelier avant de changer de fournisseur de fil." data-es="Regla práctica: cuando un cliente devuelve una prenda porque «se despegó la etiqueta», la causa casi siempre es la densidad o el margen del doblez, no el hilo. Pida la densidad a la sala de costura antes de cambiar de proveedor de hilo." data-ja="目安：「ラベルが取れた」という返品の原因は、ほとんどの場合 SPI か折り余裕で、糸ではありません。糸の仕入先を変える前に、縫製現場から SPI の実測値を取ってください。" data-ko="경험상 ‘라벨이 떨어졌다’는 반품의 원인은 대부분 SPI나 접힘 여유이며 실이 아닙니다. 실 공급사를 바꾸기 전에 봉제 현장에서 SPI 실측치를 받으세요." data-de="Faustregel: Wenn ein Kunde zurückschickt, weil „das Etikett abgefallen ist“, liegt die Ursache fast immer an der Dichte oder am Bruchabstand, nicht am Garn. Fragen Sie vor einem Garnwechsel die Nähabteilung nach der tatsächlichen Dichte." data-pt="Regra prática: quando o cliente devolve porque “a etiqueta caiu”, a causa é quase sempre a densidade ou a folga da dobra, não a linha. Peça a densidade real à costura antes de trocar de fornecedor de linha.">經驗值：客戶退回「標籤掉了」的衣服，原因幾乎都是 SPI 或折邊間隙，不是線。換線材供應商之前，先向車縫車間要 SPI 數據。</div>
+
+      <h2 data-zh="常見問題" data-en="FAQ" data-fr="Questions fréquentes" data-es="Preguntas frecuentes" data-ja="よくある質問" data-ko="자주 묻는 질문" data-de="Häufige Fragen" data-pt="Perguntas frequentes">常見問題</h2>
+
+      <p data-zh="<strong>SPI 越高越牢嗎？</strong>不是。聚酯織帶超過 14 SPI，針切的削弱速度快過多縫幾針帶來的增益，10–12 SPI 是多數輔料的最佳區間。" data-en="<strong>Is a higher SPI always stronger?</strong> No. Above 14 SPI on woven polyester tape, needle cutting reduces strength faster than extra stitches add it. 10–12 SPI is the sweet spot for most trims." data-fr="<strong>Une densité plus élevée est-elle toujours plus solide ?</strong> Non. Au-delà de 14 SPI sur ruban polyester, la coupe d’aiguille réduit la résistance plus vite que les points ajoutés ne l’augmentent. 10 à 12 SPI est l’optimum." data-es="<strong>¿Más densidad es siempre más resistente?</strong> No. Por encima de 14 SPI en cinta de poliéster, el corte de aguja reduce la resistencia más rápido de lo que suman los puntos extra. 10–12 SPI es el punto óptimo." data-ja="<strong>SPI は高いほど丈夫ですか？</strong>いいえ。ポリエステルテープで14 SPI を超えると、針切れによる強度低下が追加の針数による効果を上回ります。10〜12 SPI が適正です。" data-ko="<strong>SPI가 높을수록 튼튼한가요?</strong> 아닙니다. 폴리에스터 테이프에서 14 SPI를 넘으면 바늘 절단에 의한 강도 저하가 추가 바늘의 효과를 앞지릅니다. 10~12 SPI가 적정합니다." data-de="<strong>Ist eine höhere Dichte immer fester?</strong> Nein. Oberhalb von 14 SPI auf Polyesterband senkt Nadelschnitt die Festigkeit schneller, als zusätzliche Stiche sie erhöhen. 10–12 SPI ist der optimale Bereich." data-pt="<strong>Densidade maior é sempre mais resistente?</strong> Não. Acima de 14 SPI em fita de poliéster, o corte de agulha reduz a resistência mais rápido do que os pontos extras somam. De 10 a 12 SPI é o ideal."><strong>SPI 越高越牢嗎？</strong>不是。聚酯織帶超過 14 SPI，針切的削弱速度快過多縫幾針帶來的增益，10–12 SPI 是多數輔料的最佳區間。</p>
+
+      <p data-zh="<strong>SPI 會影響價格嗎？</strong>影響很小，增加的是每件幾秒工時，不是材料。真正的成本在於工廠是否需要重新調機，所以同一款要統一 SPI。" data-en="<strong>Does SPI change the price?</strong> Marginally. It adds seconds per garment, not material. The real cost driver is whether the factory has to re-set the machine, so keep SPI consistent across a style." data-fr="<strong>La densité change-t-elle le prix ?</strong> Marginalement : quelques secondes par pièce, pas de matière. Le vrai coût est le réglage machine, donc gardez la même densité sur un modèle." data-es="<strong>¿Cambia el precio?</strong> Marginalmente: segundos por prenda, no material. El coste real es el reajuste de máquina, así que mantén la misma densidad en un modelo." data-ja="<strong>SPI で価格は変わりますか？</strong>ほぼ変わりません。1着あたり数秒の工数で、材料は増えません。実際のコストはミシンの再調整なので、同一型番では SPI を統一してください。" data-ko="<strong>SPI가 가격에 영향을 주나요?</strong> 거의 없습니다. 한 벌당 몇 초의 공수이며 재료는 늘지 않습니다. 실제 비용은 미싱 재조정이므로 같은 품번에서는 SPI를 통일하세요." data-de="<strong>Ändert die Dichte den Preis?</strong> Kaum: Sekunden pro Stück, kein Material. Der eigentliche Aufwand ist das Umstellen der Maschine, also Dichte je Modell konstant halten." data-pt="<strong>A densidade muda o preço?</strong> Pouco: segundos por peça, sem material. O custo real é o ajuste da máquina, então mantenha a densidade no mesmo modelo."><strong>SPI 會影響價格嗎？</strong>影響很小，增加的是每件幾秒工時，不是材料。真正的成本在於工廠是否需要重新調機，所以同一款要統一 SPI。</p>
+
+      <p data-zh="<strong>彈性面料怎麼辦？</strong>用 12–14 SPI 配可拉伸的線跡（繃縫或窄曲折縫），否則先壞的是縫線而不是標籤。" data-en="<strong>What about stretch fabrics?</strong> Use 12–14 SPI with a stitch that stretches — coverstitch or a narrow zigzag — otherwise the seam fails before the label does." data-fr="<strong>Et les tissus extensibles ?</strong> 12 à 14 SPI avec un point qui s’allonge (recouvrement ou zigzag étroit), sinon la couture cède avant l’étiquette." data-es="<strong>¿Y en tejidos elásticos?</strong> 12–14 SPI con una puntada que estire (recubierto o zigzag estrecho), o la costura falla antes que la etiqueta." data-ja="<strong>伸縮素材はどうしますか？</strong>12〜14 SPI で伸びる縫い方（カバーステッチや細いジグザグ）を使います。そうしないとラベルより先に縫い目が切れます。" data-ko="<strong>신축 소재는 어떻게 하나요?</strong> 12~14 SPI에 늘어나는 박음 방식(커버스티치나 좁은 지그재그)을 씁니다. 그러지 않으면 라벨보다 솔기가 먼저 터집니다." data-de="<strong>Und bei elastischen Stoffen?</strong> 12–14 SPI mit dehnbarer Stichart (Coverstich oder schmaler Zickzack), sonst reißt die Naht vor dem Etikett." data-pt="<strong>E em tecidos elásticos?</strong> 12 a 14 SPI com ponto que estica (coverstitch ou zigue-zague estreito), senão a costura falha antes da etiqueta."><strong>彈性面料怎麼辦？</strong>用 12–14 SPI 配可拉伸的線跡（繃縫或窄曲折縫），否則先壞的是縫線而不是標籤。</p>
+
+      <h2 data-zh="相關文章" data-en="Related reading" data-fr="À lire aussi" data-es="Lecturas relacionadas" data-ja="関連記事" data-ko="관련 글" data-de="Weiterlesen" data-pt="Leia também">相關文章</h2>
+
+      <ul>
+        <li><a href="garment-label-sewing-thread-guide.html" data-zh="標籤縫線怎麼選：材質、線號與耐洗匹配" data-en="Sewing thread for garment labels: fibre, ticket and wash matching" data-fr="Fil à coudre pour étiquettes : fibre, numéro et tenue au lavage" data-es="Hilo de coser para etiquetas: fibra, número y resistencia al lavado" data-ja="ラベル縫製糸の選び方：素材・番手・耐洗性の組み合わせ" data-ko="라벨 봉제사 선택: 소재·번수·내세탁성 조합" data-de="Nähgarn für Etiketten: Faser, Garnnummer, Waschbeständigkeit" data-pt="Linha de costura para etiquetas: fibra, número e resistência à lavagem">標籤縫線怎麼選：材質、線號與耐洗匹配</a></li>
+        <li><a href="care-label-attachment-guide.html" data-zh="洗水標固定方式：車縫、熱轉印與超音波的取捨" data-en="Care label attachment: sewing, heat transfer or ultrasonic welding" data-fr="Fixation de l’étiquette d’entretien : couture, transfert ou ultrason" data-es="Fijación de la etiqueta de cuidado: costura, transferencia o ultrasonido" data-ja="洗濯表示ラベルの取付方法：縫製・熱転写・超音波" data-ko="취급 표시 라벨 부착 방식: 봉제·열전사·초음파" data-de="Pflegeetikett befestigen: nähen, thermotransfer oder ultraschall" data-pt="Fixação da etiqueta de conservação: costura, transferência ou ultrassom">洗水標固定方式：車縫、熱轉印與超音波的取捨</a></li>
+        <li><a href="woven-label-stitching-methods.html" data-zh="織嘜車縫方式：單邊、雙邊與對折的差別" data-en="Woven label stitching: single edge, both edges or folded" data-fr="Couture du label tissé : un bord, deux bords ou plié" data-es="Costura de la etiqueta tejida: un borde, dos bordes o doblada" data-ja="織りラベルの縫い付け：片側・両側・折り返し" data-ko="직조 라벨 봉제: 한쪽·양쪽·접어 박기" data-de="Gewebtes Label annähen: eine Kante, zwei Kanten, gefalzt" data-pt="Costura da etiqueta tecida: uma borda, duas bordas ou dobrada">織嘜車縫方式：單邊、雙邊與對折的差別</a></li>
+        <li><a href="index.html" data-zh="更多服裝輔料 FAQ" data-en="More garment trims FAQ" data-fr="Plus de FAQ accessoires" data-es="Más preguntas sobre aviamentos" data-ja="副資材 FAQ 一覧" data-ko="부자재 FAQ 더 보기" data-de="Weitere Zutaten-FAQ" data-pt="Mais perguntas sobre aviamentos">更多服裝輔料 FAQ</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="寄一枚標籤和它將要縫入的縫位給我們，一個工作日內回一份車縫規格表：SPI、線跡類型、線號與折邊間隙。" data-en="Send us a label and the seam it goes into; we return a sewing spec sheet with SPI, stitch type, thread ticket and fold clearance within one working day." data-fr="Envoyez une étiquette et la couture qui l’accueille : nous renvoyons une fiche de piqûre (densité, type de point, numéro de fil, dégagement de pli) sous un jour ouvré." data-es="Envíenos una etiqueta y la costura donde irá; devolvemos una ficha de costura con SPI, tipo de puntada, número de hilo y margen de doblez en un día laborable." data-ja="ラベルと縫い付ける箇所をお送りください。SPI・縫い方・糸番手・折り余裕をまとめた縫製仕様書を1営業日でご返信します。" data-ko="라벨과 박음 위치를 보내주시면 SPI·박음 방식·실 번수·접힘 여유를 정리한 봉제 사양서를 영업일 1일 내에 보내드립니다." data-de="Senden Sie ein Etikett und die Naht, in die es kommt — wir liefern binnen eines Werktags ein Nähdatenblatt mit Dichte, Stichart, Garnnummer und Bruchabstand." data-pt="Envie uma etiqueta e a costura onde ela vai; devolvemos uma ficha de costura com SPI, tipo de ponto, número da linha e folga da dobra em um dia útil.">寄一枚標籤和它將要縫入的縫位給我們，一個工作日內回一份車縫規格表：SPI、線跡類型、線號與折邊間隙。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取車縫規格建議 →" data-en="Request a sewing spec →" data-fr="Demander une fiche de piqûre →" data-es="Pedir una ficha de costura →" data-ja="縫製仕様の相談をする →" data-ko="봉제 사양 상담 받기 →" data-de="Nähspezifikation anfragen →" data-pt="Pedir especificação de costura →">索取車縫規格建議 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE Packaging" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-es="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-en="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAIGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>
