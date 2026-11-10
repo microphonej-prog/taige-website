@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="輔料 AQL 抽樣怎麼定？檢驗水平、缺陷分級與批量對照 | TAIGE" data-en="AQL for Apparel Trims: Levels, Defects, Lot Sizes | TAIGE" data-fr="AQL pour accessoires : niveaux, défauts, tailles de lot | TAIGE" data-es="AQL para accesorios: niveles, defectos y lotes | TAIGE" data-ja="副資材の AQL 抜取検査：水準・欠点区分・ロット対応 | TAIGE" data-ko="부자재 AQL 샘플링: 검사 수준·결점 구분·로트 기준 | TAIGE" data-de="AQL für Accessoires: Prüfniveau, Fehlerklassen, Lose | TAIGE" data-pt="AQL para aviamentos: níveis, defeitos e lotes | TAIGE">輔料 AQL 抽樣怎麼定？檢驗水平、缺陷分級與批量對照 | TAIGE</title>
+<meta name="description" data-zh="AQL 2.5 到底是什麼意思？檢驗水平 I/II/III 怎麼選、致命與主要缺陷怎麼分、5,000 枚織嘜該抽幾枚（附驗收判定表），以及三種最常見的誤用。東莞泰閣包裝。" data-en="What AQL 2.5 really means for trims: inspection levels, critical and major defects, and how many labels to pull from a 5,000-piece lot." data-fr="Ce que signifie vraiment AQL 2,5 : niveaux de contrôle, défauts critiques et majeurs, et combien d&#x27;étiquettes prélever sur un lot de 5 000 pièces." data-es="Qué significa realmente AQL 2,5: niveles de inspección, defectos críticos y mayores, y cuántas etiquetas muestrear de un lote de 5.000 piezas." data-ja="AQL 2.5 の本当の意味、検査水準 I／II／III の選び方、致命・主要欠点の区分、5,000 枚ロットからの抜取数と合格判定表を整理します。" data-ko="AQL 2.5의 실제 의미, 검사 수준 I/II/III 선택, 치명·주요 결점 구분, 5,000장 로트에서의 샘플 수와 합격 판정표를 정리했습니다." data-de="Was AQL 2,5 bei Accessoires wirklich bedeutet: Prüfniveaus, kritische und Hauptfehler, Stichprobenumfang bei 5.000 Stück samt Annahmetabelle." data-pt="O que AQL 2,5 significa de fato: níveis de inspeção, defeitos críticos e maiores, e quantas etiquetas amostrar de um lote de 5.000 peças." content="AQL 2.5 到底是什麼意思？檢驗水平 I/II/III 怎麼選、致命與主要缺陷怎麼分、5,000 枚織嘜該抽幾枚（附驗收判定表），以及三種最常見的誤用。東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+     "item": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+   "url": "https://taigetag.com/blog/trim-material-substitution-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAIGE PACKAGING" data-en="DONGGUAN TAIGE PACKAGING" data-fr="DONGGUAN TAIGE PACKAGING" data-es="DONGGUAN TAIGE PACKAGING" data-ja="DONGGUAN TAIGE PACKAGING" data-ko="DONGGUAN TAIGE PACKAGING">DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈" data-de="Startseite" data-pt="Início">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ" data-de="Accessoires-FAQ" data-pt="FAQ de aviamentos">輔料 FAQ</a> / <span data-zh="輔料 AQL 抽樣" data-en="AQL for trims" data-fr="AQL accessoires" data-es="AQL accesorios" data-ja="副資材の AQL" data-ko="부자재 AQL" data-de="AQL für Accessoires" data-pt="AQL para aviamentos">輔料 AQL 抽樣</span></div>
+      <h1 data-zh="輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽" data-en="AQL for Apparel Trims: Levels, Defect Classes and How Many to Pull" data-fr="AQL pour accessoires : niveaux, classes de défauts et taille d&#x27;échantillon" data-es="AQL para accesorios: niveles, clases de defecto y tamaño de muestra" data-ja="副資材の AQL 抜取検査：水準・欠点区分・抜取数の決め方" data-ko="부자재 AQL 샘플링: 수준·결점 구분·샘플 수 결정" data-de="AQL für Accessoires: Prüfniveau, Fehlerklassen und Stichprobenumfang" data-pt="AQL para aviamentos: níveis, classes de defeito e tamanho da amostra">輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月10日" data-en="By TAIGE Packaging &nbsp;·&nbsp; Updated November 10, 2026" data-ja="泰閣包装 · 2026年11月10日更新" data-ko="TAIGE 패키징 · 2026년 11월 10일 업데이트" data-fr="Par TAIGE Packaging &nbsp;·&nbsp; Mis à jour le 10 novembre 2026" data-es="Por TAIGE Packaging &nbsp;·&nbsp; Actualizado el 10 de noviembre de 2026" data-de="Von TAIGE Packaging &nbsp;·&nbsp; Aktualisiert am 10. November 2026" data-pt="Por TAIGE Packaging &nbsp;·&nbsp; Atualizado em 10 de novembro de 2026">泰閣包裝 · 更新於 2026年11月10日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="幾乎每份輔料檢驗報告的右上角都寫著 AQL 2.5。但這個數字常被雙方理解成兩種意思：買方以為「允許 2.5 % 不良」，供應商以為「抽到 10 個以內就算過」。兩種理解都不完整。這篇把 AQL 的風險分配講清楚，給出 5,000 枚織嘜的實際抽樣與判定，並列出三種最常見的誤用。" data-en="Almost every trim inspection report carries AQL 2.5 in the corner, and both sides usually read it as something it is not: the buyer hears a permitted defect rate of 2.5%, the supplier hears that up to ten defects still passes. Neither is the whole story. This guide explains what AQL allocates, works through a 5,000-piece woven label lot, and lists the three mistakes that cause most disputes." data-fr="Presque chaque rapport de contrôle d&#x27;accessoires affiche AQL 2,5, et les deux parties l&#x27;interprètent souvent de travers : l&#x27;acheteur y voit un taux de défauts autorisé de 2,5 %, le fournisseur un seuil de dix défauts. Aucune lecture n&#x27;est complète. Ce guide explique ce que l&#x27;AQL répartit, déroule un lot de 5 000 étiquettes tissées et liste les trois erreurs les plus fréquentes." data-es="Casi todos los informes de inspección de accesorios llevan AQL 2,5 en una esquina, y cada parte lo lee a su manera: el comprador entiende un 2,5 % de defectos permitido, el proveedor entiende que hasta diez defectos pasan. Ninguna lectura es completa. Esta guía explica qué reparte el AQL, resuelve un lote de 5.000 etiquetas tejidas y enumera los tres errores más habituales." data-ja="副資材の検査報告書には必ず AQL 2.5 と書かれていますが、買い手は「2.5 % の不良が許容」、供給側は「10 個までなら合格」と読み違えがちです。どちらも不十分です。本稿では AQL が何を配分するのかを説明し、5,000 枚の織りネームロットで抜取と判定を実例化し、よくある 3 つの誤用を挙げます。" data-ko="부자재 검사 성적서에는 거의 항상 AQL 2.5가 적혀 있지만, 바이어는 &#x27;2.5% 불량 허용&#x27;, 공급사는 &#x27;10개까지 합격&#x27;으로 서로 다르게 읽습니다. 둘 다 불완전합니다. 이 글은 AQL이 무엇을 배분하는지 설명하고, 5,000장 직조 라벨 로트로 샘플링과 판정을 계산하며, 흔한 오용 세 가지를 정리합니다." data-de="Fast jeder Prüfbericht für Accessoires trägt AQL 2,5 in der Ecke, und beide Seiten lesen es falsch: Der Einkauf hört eine erlaubte Fehlerquote von 2,5 %, der Lieferant hört, dass bis zu zehn Fehler noch durchgehen. Beides greift zu kurz. Dieser Leitfaden erklärt, was AQL verteilt, rechnet ein Los von 5.000 gewebten Etiketten durch und nennt die drei häufigsten Fehlanwendungen." data-pt="Quase todo relatório de inspeção de aviamentos traz AQL 2,5 no canto, e cada lado lê de um jeito: o comprador entende 2,5% de defeitos permitidos, o fornecedor entende que até dez defeitos passam. Nenhuma leitura está completa. Este guia explica o que o AQL distribui, resolve um lote de 5.000 etiquetas tecidas e lista os três erros mais comuns.">幾乎每份輔料檢驗報告的右上角都寫著 AQL 2.5。但這個數字常被雙方理解成兩種意思：買方以為「允許 2.5 % 不良」，供應商以為「抽到 10 個以內就算過」。兩種理解都不完整。這篇把 AQL 的風險分配講清楚，給出 5,000 枚織嘜的實際抽樣與判定，並列出三種最常見的誤用。</p>
+
+      <h2 data-zh="AQL 不是允許不良率，是風險分配" data-en="AQL is not a permitted defect rate, it is risk allocation" data-fr="L&#x27;AQL n&#x27;est pas un taux autorisé, c&#x27;est un partage du risque" data-es="El AQL no es un porcentaje permitido, es reparto de riesgo" data-ja="AQL は許容不良率ではなくリスク配分" data-ko="AQL은 허용 불량률이 아니라 위험 배분" data-de="AQL ist keine erlaubte Fehlerquote, sondern Risikoverteilung" data-pt="AQL não é percentual permitido, é divisão de risco">AQL 不是允許不良率，是風險分配</h2>
+
+      <p data-zh="AQL 的定義是：在既定抽樣方案下，一件不良率恰好等於 AQL 的批，被判定合格的概率約為 95 %。反過來說，一個真實不良率 2.5 % 的批，每 20 批大約還有 1 批會被退。所以 AQL 是「供方過程能力的目標值」，不是「買方拿到的品質保證」。真正決定風險的兩件事是抽樣數與判定數，而這兩個數字由批量與檢驗水平決定。" data-en="AQL is defined so that a lot whose true defect rate equals the AQL has about a 95% chance of being accepted. Flip it around: a lot running at 2.5% defects will still be rejected roughly one time in twenty. AQL is therefore a target for the supplier&#x27;s process capability, not a guarantee handed to the buyer. Two numbers decide the actual risk — sample size and acceptance number — and both come from lot size and inspection level." data-fr="L&#x27;AQL est défini pour qu&#x27;un lot dont le taux réel égale l&#x27;AQL ait environ 95 % de chances d&#x27;être accepté. À l&#x27;inverse, un lot à 2,5 % de défauts sera refusé environ une fois sur vingt. L&#x27;AQL est donc une cible de capabilité process, pas une garantie pour l&#x27;acheteur. Deux chiffres décident du risque réel : la taille d&#x27;échantillon et le seuil d&#x27;acceptation, tous deux issus du lot et du niveau de contrôle." data-es="El AQL se define para que un lote cuyo porcentaje real iguala el AQL tenga alrededor del 95 % de probabilidad de ser aceptado. Al revés: un lote al 2,5 % de defectos se rechazará aproximadamente una vez de cada veinte. El AQL es una meta de capacidad del proceso, no una garantía para el comprador. Dos números deciden el riesgo real: tamaño de muestra y criterio de aceptación." data-ja="AQL の定義は、真の不良率が AQL に等しいロットが合格する確率を約 95 % に置くものです。裏返せば、実際に 2.5 % の不良があるロットでも 20 回に 1 回程度は不合格になります。つまり AQL は供給側の工程能力の目標値であり、買い手への品質保証ではありません。実際のリスクを決めるのは抜取数と合格判定個数の 2 つで、いずれもロットの大きさと検査水準から決まります。" data-ko="AQL은 실제 불량률이 AQL과 같은 로트가 합격할 확률을 약 95%로 두는 정의입니다. 뒤집으면 실제 불량률 2.5%인 로트도 20번에 한 번 정도는 불합격됩니다. 즉 AQL은 공급사 공정 능력의 목표치이며 바이어에게 주어지는 품질 보증이 아닙니다. 실제 위험을 결정하는 것은 샘플 수와 합격 판정 개수이고, 둘 다 로트 크기와 검사 수준에서 나옵니다." data-de="AQL ist so definiert, dass ein Los, dessen tatsächliche Fehlerquote dem AQL entspricht, mit etwa 95 % Wahrscheinlichkeit angenommen wird. Umgekehrt: Ein Los mit 2,5 % Fehlern wird etwa einmal in zwanzig Fällen zurückgewiesen. AQL ist damit ein Zielwert für die Prozessfähigkeit des Lieferanten, keine Qualitätsgarantie für den Einkauf. Entscheidend sind zwei Zahlen — Stichprobenumfang und Annahmezahl — und beide ergeben sich aus Losgröße und Prüfniveau." data-pt="O AQL é definido para que um lote cuja taxa real de defeitos iguala o AQL tenha cerca de 95% de chance de ser aceito. Invertendo: um lote com 2,5% de defeitos ainda será rejeitado aproximadamente uma vez em vinte. O AQL é meta de capacidade do processo, não garantia ao comprador. O risco real é decidido por dois números — tamanho da amostra e critério de aceitação — ambos vindos do tamanho do lote e do nível de inspeção.">AQL 的定義是：在既定抽樣方案下，一件不良率恰好等於 AQL 的批，被判定合格的概率約為 95 %。反過來說，一個真實不良率 2.5 % 的批，每 20 批大約還有 1 批會被退。所以 AQL 是「供方過程能力的目標值」，不是「買方拿到的品質保證」。真正決定風險的兩件事是抽樣數與判定數，而這兩個數字由批量與檢驗水平決定。</p>
+
+      <h2 data-zh="檢驗水平：I、II、III 與特殊水平" data-en="Inspection levels: I, II, III and the special levels" data-fr="Niveaux de contrôle : I, II, III et niveaux spéciaux" data-es="Niveles de inspección: I, II, III y especiales" data-ja="検査水準：I・II・III と特殊水準" data-ko="검사 수준: I·II·III과 특별 수준" data-de="Prüfniveaus: I, II, III und die Sonderstufen" data-pt="Níveis de inspeção: I, II, III e especiais">檢驗水平：I、II、III 與特殊水平</h2>
+
+      <p data-zh="水平 II 是預設值，同一批量下抽樣數是水平 I 的 1.6 倍左右、水平 III 的一半左右。選法很簡單：這項輔料出問題會不會停線或導致召回？會，用 III；連續三批以上穩定、單價低、可目視全檢，用 I。特殊水平 S-1 至 S-4 只用在破壞性測試——例如織嘜耐洗、吊牌紙張拉力、金屬件鹽霧——樣品測完就報廢，所以抽樣數必須小。" data-en="Level II is the default; at the same lot size it samples roughly 1.6 times as much as level I and about half of level III. The choice is practical: would a defect in this trim stop the sewing line or trigger a recall? Then use III. Three consecutive stable lots, low unit value, easy visual 100% check? Use I. The special levels S-1 to S-4 exist for destructive tests — wash durability on a woven label, tear strength on tag board, salt spray on metal hardware — where the sample is consumed, so the sample must stay small." data-fr="Le niveau II est la référence : à lot égal, il échantillonne environ 1,6 fois plus que le niveau I et environ la moitié du niveau III. Le critère est concret : un défaut sur cet accessoire arrête-t-il la ligne ou provoque-t-il un rappel ? Prenez III. Trois lots stables d&#x27;affilée, faible valeur unitaire, contrôle visuel à 100 % possible ? Prenez I. Les niveaux spéciaux S-1 à S-4 servent aux essais destructifs — tenue au lavage, résistance au déchirement, brouillard salin — où l&#x27;échantillon est consommé." data-es="El nivel II es el de referencia: con el mismo lote muestrea unas 1,6 veces más que el nivel I y cerca de la mitad que el III. El criterio es práctico: ¿un defecto en este accesorio detiene la línea o provoca una retirada? Usa III. ¿Tres lotes estables seguidos, valor unitario bajo y control visual al 100 %? Usa I. Los niveles especiales S-1 a S-4 sirven para ensayos destructivos —lavado, resistencia al desgarro, niebla salina— donde la muestra se consume." data-ja="水準 II が既定値で、同じロットサイズなら水準 I の約 1.6 倍、水準 III の約半分を抜き取ります。選び方は実務的です。この副資材の不良が縫製ラインを止めるか、リコールにつながるか。そうなら III。3 ロット連続で安定し、単価が低く、全数目視が可能なら I。特殊水準 S-1〜S-4 は破壊検査用で、洗濯耐久、引張強さ、塩水噴霧など、検体を消費する試験に使います。" data-ko="수준 II가 기본값이며 같은 로트 크기에서 수준 I의 약 1.6배, 수준 III의 약 절반을 샘플링합니다. 선택 기준은 실무적입니다. 이 부자재의 결점이 봉제 라인을 멈추거나 리콜로 이어지는가? 그렇다면 III. 3개 로트 연속 안정, 단가가 낮고 전수 육안 검사가 가능한가? 그렇다면 I. 특별 수준 S-1~S-4는 세탁 내구, 인장 강도, 염수 분무처럼 시료를 소모하는 파괴 시험에 씁니다." data-de="Niveau II ist der Standard: Bei gleicher Losgröße prüft es rund 1,6-mal so viel wie Niveau I und etwa halb so viel wie Niveau III. Die Wahl ist praktisch: Stoppt ein Fehler an diesem Teil die Nählinie oder führt zu einem Rückruf? Dann III. Drei stabile Lose in Folge, geringer Stückwert, visuelle 100-%-Prüfung möglich? Dann I. Die Sonderstufen S-1 bis S-4 gelten für zerstörende Prüfungen — Waschbeständigkeit, Weiterreißfestigkeit, Salzsprühnebel — bei denen die Probe verbraucht wird." data-pt="O nível II é o padrão: no mesmo lote, amostra cerca de 1,6 vez o nível I e aproximadamente metade do nível III. O critério é prático: um defeito neste aviamento para a costura ou gera recall? Use III. Três lotes estáveis seguidos, baixo valor unitário, inspeção visual 100% possível? Use I. Os níveis especiais S-1 a S-4 servem a ensaios destrutivos — resistência à lavagem, resistência ao rasgo, névoa salina — em que o corpo de prova é consumido.">水平 II 是預設值，同一批量下抽樣數是水平 I 的 1.6 倍左右、水平 III 的一半左右。選法很簡單：這項輔料出問題會不會停線或導致召回？會，用 III；連續三批以上穩定、單價低、可目視全檢，用 I。特殊水平 S-1 至 S-4 只用在破壞性測試——例如織嘜耐洗、吊牌紙張拉力、金屬件鹽霧——樣品測完就報廢，所以抽樣數必須小。</p>
+
+      <h2 data-zh="致命、主要、次要：輔料怎麼分" data-en="Critical, major, minor: how to classify trims" data-fr="Critique, majeur, mineur : comment classer" data-es="Crítico, mayor, menor: cómo clasificar" data-ja="致命・主要・軽微：副資材での区分" data-ko="치명·주요·경미: 부자재 분류" data-de="Kritisch, Haupt-, Nebenfehler: so wird eingeteilt" data-pt="Crítico, maior, menor: como classificar">致命、主要、次要：輔料怎麼分</h2>
+
+      <ul>
+        <li data-zh="致命（AQL 0，出現 1 個即退）：金屬件鎳釋放超標、標籤包內混入斷針、洗水標成分標錯、兒童服裝繩帶長度不合規。" data-en="Critical (AQL 0, one occurrence rejects the lot): nickel release above the limit on metal hardware, a broken needle inside a label pack, wrong fibre content printed on a care label, cord length non-compliant on childrenswear." data-fr="Critique (AQL 0, un seul cas rejette le lot) : libération de nickel hors limite, aiguille cassée dans un sachet d&#x27;étiquettes, composition erronée, cordon non conforme sur vêtement enfant." data-es="Crítico (AQL 0, un solo caso rechaza el lote): liberación de níquel fuera de límite, aguja rota en un paquete de etiquetas, composición errónea, cordón no conforme en infantil." data-ja="致命（AQL 0、1 個で不合格）：金属部品のニッケル溶出超過、ラベル袋への折れ針混入、混用率の誤表示、子供服の紐の長さ不適合。" data-ko="치명(AQL 0, 1개라도 불합격): 금속 부품 니켈 용출 초과, 라벨 포장 내 부러진 바늘 혼입, 혼용률 오표기, 아동복 끈 길이 부적합." data-de="Kritisch (AQL 0, ein Fall weist das Los zurück): Nickelabgabe über dem Grenzwert, abgebrochene Nadel im Etikettensäckchen, falsche Faserzusammensetzung, nicht konforme Kordellänge bei Kinderware." data-pt="Crítico (AQL 0, um caso rejeita o lote): liberação de níquel acima do limite, agulha quebrada no pacote de etiquetas, composição errada, cordão não conforme em infantil.">致命（AQL 0，出現 1 個即退）：金屬件鎳釋放超標、標籤包內混入斷針、洗水標成分標錯、兒童服裝繩帶長度不合規。</li>
+        <li data-zh="主要（通常 AQL 1.0–2.5）：顏色與簽樣不符、尺碼標印錯號、洗護符號缺漏、字跡糊到不可讀、織嘜寬度超差 2 mm 以上。" data-en="Major (usually AQL 1.0–2.5): colour off the approved swatch, wrong size printed, missing care symbols, print too smeared to read, woven label width off by more than 2 mm." data-fr="Majeur (souvent AQL 1,0–2,5) : couleur hors du bon signé, taille erronée, symboles manquants, impression illisible, largeur de tissé hors tolérance de 2 mm." data-es="Mayor (normalmente AQL 1,0–2,5): color fuera del prototipo, talla errónea, símbolos ausentes, impresión ilegible, ancho del tejido fuera de 2 mm." data-ja="主要（通常 AQL 1.0〜2.5）：承認色との色差、サイズ表示の誤り、洗濯記号の欠落、判読不能な印字、織りネーム幅の 2 mm 超の誤差。" data-ko="주요(보통 AQL 1.0~2.5): 승인 색상과 불일치, 사이즈 오표기, 세탁 기호 누락, 판독 불가한 인쇄, 직조 라벨 폭 2 mm 초과 편차." data-de="Hauptfehler (meist AQL 1,0–2,5): Farbe außerhalb des freigegebenen Musters, falsche Größe, fehlende Pflegesymbole, unlesbarer Druck, Webetikettenbreite über 2 mm abweichend." data-pt="Maior (normalmente AQL 1,0–2,5): cor fora do padrão aprovado, tamanho errado, símbolos ausentes, impressão ilegível, largura da etiqueta tecida fora de 2 mm.">主要（通常 AQL 1.0–2.5）：顏色與簽樣不符、尺碼標印錯號、洗護符號缺漏、字跡糊到不可讀、織嘜寬度超差 2 mm 以上。</li>
+        <li data-zh="次要（通常 AQL 4.0）：邊緣輕微起毛、尺寸在 ±1 mm 內浮動、外箱嘜頭位置偏移、內包裝袋摺邊不齊。" data-en="Minor (usually AQL 4.0): slight edge fray, dimensions drifting within ±1 mm, carton mark off position, inner bag fold uneven." data-fr="Mineur (souvent AQL 4,0) : bords légèrement effilochés, dimensions à ±1 mm, marquage de carton décalé, pli de sachet irrégulier." data-es="Menor (normalmente AQL 4,0): borde algo deshilachado, dimensiones dentro de ±1 mm, marcado de caja desplazado, pliegue de bolsa irregular." data-ja="軽微（通常 AQL 4.0）：端のわずかな毛羽立ち、寸法が ±1 mm 内のばらつき、外箱マークの位置ずれ、内袋の折り目の不揃い。" data-ko="경미(보통 AQL 4.0): 가장자리 약간의 풀림, ±1 mm 내 치수 편차, 외박스 표시 위치 이탈, 내포장 비닐 접힘 불균일." data-de="Nebenfehler (meist AQL 4,0): leicht ausfransende Kanten, Maße innerhalb ±1 mm, versetzter Kartonaufdruck, ungleich gefalzte Innentüte." data-pt="Menor (normalmente AQL 4,0): borda levemente desfiada, dimensões dentro de ±1 mm, marcação de caixa deslocada, dobra do saco irregular.">次要（通常 AQL 4.0）：邊緣輕微起毛、尺寸在 ±1 mm 內浮動、外箱嘜頭位置偏移、內包裝袋摺邊不齊。</li>
+      </ul>
+
+      <h2 data-zh="5,000 枚織嘜怎麼抽：批量、樣本與判定值" data-en="A 5,000-piece lot: how many to pull and when to reject" data-fr="Un lot de 5 000 pièces : combien prélever et quand refuser" data-es="Un lote de 5.000 piezas: cuántas muestrear y cuándo rechazar" data-ja="5,000 枚ロット：抜取数と判定値" data-ko="5,000장 로트: 샘플 수와 판정값" data-de="Ein Los mit 5.000 Stück: Umfang und Annahmezahl" data-pt="Um lote de 5.000 peças: quanto amostrar e quando rejeitar">5,000 枚織嘜怎麼抽：批量、樣本與判定值</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="批量" data-en="Lot size" data-fr="Taille du lot" data-es="Tamaño del lote" data-ja="ロットサイズ" data-ko="로트 크기" data-de="Losgröße" data-pt="Tamanho do lote">批量</th>
+            <th data-zh="水平 II 代碼" data-en="Level II code" data-fr="Code niveau II" data-es="Código nivel II" data-ja="水準 II の記号" data-ko="수준 II 기호" data-de="Code Niveau II" data-pt="Código nível II">水平 II 代碼</th>
+            <th data-zh="抽樣數" data-en="Sample" data-fr="Échantillon" data-es="Muestra" data-ja="抜取数" data-ko="샘플 수" data-de="Stichprobe" data-pt="Amostra">抽樣數</th>
+            <th data-zh="AQL 2.5 判定" data-en="AQL 2.5 accept/reject" data-fr="AQL 2,5 accepté/refusé" data-es="AQL 2,5 acepta/rechaza" data-ja="AQL 2.5 合格/不合格" data-ko="AQL 2.5 합격/불합격" data-de="AQL 2,5 Annahme/Rückweisung" data-pt="AQL 2,5 aceita/rejeita">AQL 2.5 判定</th>
+            <th data-zh="AQL 1.0 判定" data-en="AQL 1.0 accept/reject" data-fr="AQL 1,0 accepté/refusé" data-es="AQL 1,0 acepta/rechaza" data-ja="AQL 1.0 合格/不合格" data-ko="AQL 1.0 합격/불합격" data-de="AQL 1,0 Annahme/Rückweisung" data-pt="AQL 1,0 aceita/rejeita">AQL 1.0 判定</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="501–1,200" data-en="501–1,200" data-fr="501–1 200" data-es="501–1.200" data-ja="501〜1,200" data-ko="501~1,200" data-de="501–1.200" data-pt="501–1.200">501–1,200</td>
+            <td data-zh="J" data-en="J" data-fr="J" data-es="J" data-ja="J" data-ko="J" data-de="J" data-pt="J">J</td>
+            <td data-zh="80" data-en="80" data-fr="80" data-es="80" data-ja="80" data-ko="80" data-de="80" data-pt="80">80</td>
+            <td data-zh="5 / 6" data-en="5 / 6" data-fr="5 / 6" data-es="5 / 6" data-ja="5 / 6" data-ko="5 / 6" data-de="5 / 6" data-pt="5 / 6">5 / 6</td>
+            <td data-zh="2 / 3" data-en="2 / 3" data-fr="2 / 3" data-es="2 / 3" data-ja="2 / 3" data-ko="2 / 3" data-de="2 / 3" data-pt="2 / 3">2 / 3</td>
+          </tr>
+          <tr>
+            <td data-zh="1,201–3,200" data-en="1,201–3,200" data-fr="1 201–3 200" data-es="1.201–3.200" data-ja="1,201〜3,200" data-ko="1,201~3,200" data-de="1.201–3.200" data-pt="1.201–3.200">1,201–3,200</td>
+            <td data-zh="K" data-en="K" data-fr="K" data-es="K" data-ja="K" data-ko="K" data-de="K" data-pt="K">K</td>
+            <td data-zh="125" data-en="125" data-fr="125" data-es="125" data-ja="125" data-ko="125" data-de="125" data-pt="125">125</td>
+            <td data-zh="7 / 8" data-en="7 / 8" data-fr="7 / 8" data-es="7 / 8" data-ja="7 / 8" data-ko="7 / 8" data-de="7 / 8" data-pt="7 / 8">7 / 8</td>
+            <td data-zh="3 / 4" data-en="3 / 4" data-fr="3 / 4" data-es="3 / 4" data-ja="3 / 4" data-ko="3 / 4" data-de="3 / 4" data-pt="3 / 4">3 / 4</td>
+          </tr>
+          <tr>
+            <td data-zh="3,201–10,000" data-en="3,201–10,000" data-fr="3 201–10 000" data-es="3.201–10.000" data-ja="3,201〜10,000" data-ko="3,201~10,000" data-de="3.201–10.000" data-pt="3.201–10.000">3,201–10,000</td>
+            <td data-zh="L" data-en="L" data-fr="L" data-es="L" data-ja="L" data-ko="L" data-de="L" data-pt="L">L</td>
+            <td data-zh="200" data-en="200" data-fr="200" data-es="200" data-ja="200" data-ko="200" data-de="200" data-pt="200">200</td>
+            <td data-zh="10 / 11" data-en="10 / 11" data-fr="10 / 11" data-es="10 / 11" data-ja="10 / 11" data-ko="10 / 11" data-de="10 / 11" data-pt="10 / 11">10 / 11</td>
+            <td data-zh="5 / 6" data-en="5 / 6" data-fr="5 / 6" data-es="5 / 6" data-ja="5 / 6" data-ko="5 / 6" data-de="5 / 6" data-pt="5 / 6">5 / 6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-zh="以 5,000 枚 30 mm 寬織嘜為例：批量落在 3,201–10,000，水平 II 對應代碼 L，抽 200 枚。主要缺陷按 AQL 2.5 判定，Ac = 10、Re = 11——抽到 10 個以內合格，第 11 個出現即整批退。致命缺陷不進這張表：抽到 1 個就退，不看 AQL。次要缺陷按 AQL 4.0（此樣本數下 Ac = 14），但次要缺陷不能拿來抵主要缺陷。" data-en="Take 5,000 woven labels at 30 mm width: the lot falls in 3,201–10,000, level II gives code L, so 200 pieces are pulled. Major defects are judged at AQL 2.5, where Ac = 10 and Re = 11 — ten or fewer passes, the eleventh rejects the lot. Critical defects never enter that table: one finding rejects the lot regardless of AQL. Minor defects run at AQL 4.0 (Ac = 14 at this sample size) but can never be traded against majors." data-fr="Prenons 5 000 étiquettes tissées de 30 mm de large : le lot tombe dans 3 201–10 000, le niveau II donne le code L, donc 200 pièces. Les défauts majeurs se jugent à AQL 2,5 avec Ac = 10 et Re = 11 : dix ou moins, le lot passe ; le onzième le fait refuser. Les défauts critiques ne figurent jamais dans ce tableau : un seul cas rejette le lot. Les mineurs suivent AQL 4,0 (Ac = 14 ici) et ne compensent jamais les majeurs." data-es="Con 5.000 etiquetas tejidas de 30 mm de ancho: el lote cae en 3.201–10.000, el nivel II da el código L y se muestrean 200 piezas. Los defectos mayores se juzgan con AQL 2,5: Ac = 10 y Re = 11 — diez o menos aprueba, el undécimo rechaza el lote. Los críticos no entran en la tabla: un solo hallazgo rechaza. Los menores van con AQL 4,0 (Ac = 14 con esta muestra) y nunca compensan a los mayores." data-ja="幅 30 mm の織りネーム 5,000 枚を例にします。ロットは 3,201〜10,000 に入り、水準 II では記号 L、抜取数は 200 枚です。主要欠点は AQL 2.5 で判定し、Ac = 10、Re = 11。10 個以下なら合格、11 個目が出た時点で不合格です。致命欠点はこの表を使わず、1 個で不合格となります。軽微欠点は AQL 4.0（この抜取数で Ac = 14）ですが、主要欠点の代替にはできません。" data-ko="폭 30 mm 직조 라벨 5,000장을 예로 듭니다. 로트는 3,201~10,000에 속하고 수준 II는 기호 L, 샘플 수는 200장입니다. 주요 결점은 AQL 2.5로 판정해 Ac = 10, Re = 11입니다. 10개 이하면 합격, 11번째가 나오면 불합격입니다. 치명 결점은 이 표를 쓰지 않고 1개라도 있으면 불합격입니다. 경미 결점은 AQL 4.0(이 샘플 수에서 Ac = 14)이지만 주요 결점과 상계할 수 없습니다." data-de="Beispiel 5.000 gewebte Etiketten mit 30 mm Breite: Das Los liegt in 3.201–10.000, Niveau II ergibt Code L, also 200 Stück. Hauptfehler werden nach AQL 2,5 beurteilt, Ac = 10 und Re = 11 — zehn oder weniger werden angenommen, der elfte weist das Los zurück. Kritische Fehler stehen nie in dieser Tabelle: ein Fund weist zurück. Nebenfehler laufen nach AQL 4,0 (Ac = 14 bei diesem Umfang), dürfen Hauptfehler aber nie ausgleichen." data-pt="Com 5.000 etiquetas tecidas de 30 mm de largura: o lote cai em 3.201–10.000, o nível II dá o código L e a amostra é de 200 peças. Defeitos maiores são julgados por AQL 2,5, com Ac = 10 e Re = 11 — dez ou menos aprova, o décimo primeiro rejeita. Defeitos críticos não entram nessa tabela: um achado rejeita o lote. Menores seguem AQL 4,0 (Ac = 14 nesta amostra), mas nunca compensam maiores.">以 5,000 枚 30 mm 寬織嘜為例：批量落在 3,201–10,000，水平 II 對應代碼 L，抽 200 枚。主要缺陷按 AQL 2.5 判定，Ac = 10、Re = 11——抽到 10 個以內合格，第 11 個出現即整批退。致命缺陷不進這張表：抽到 1 個就退，不看 AQL。次要缺陷按 AQL 4.0（此樣本數下 Ac = 14），但次要缺陷不能拿來抵主要缺陷。</p>
+
+      <h2 data-zh="各國取樣標準與標示依據" data-en="Which sampling standard applies where" data-fr="Quelles normes de contrôle selon le pays" data-es="Qué norma de muestreo aplica en cada país" data-ja="各国の抜取規格と表示根拠" data-ko="국가별 샘플링 규격과 표시 근거" data-de="Welche Prüfnorm wo gilt" data-pt="Qual norma de amostragem vale onde">各國取樣標準與標示依據</h2>
+
+      <p data-zh="各國抽樣標準其實同源。中國用 GB/T 2828.1，美國與國際通行 ISO 2859-1（美系另有 ANSI/ASQ Z1.4），德國採 DIN ISO 2859-1，日本是 JIS Z 9015-1，韓國為 KS Q ISO 2859-1，巴西為 ABNT NBR 5426（用 NQA 表述），法國直接沿用 ISO 2859-1 的法文版，西班牙對應 UNE 66020。同一份判定表可以在各國互認，前提是把「水平、AQL、缺陷分級」三項寫進合約。若涉及標示內容的合規判定（成分、洗護符號），依據不在抽樣標準裡，而在 GB 5296.4、(EU) 1007/2011、JIS L 0001、KS K 0021 或 CDC 這類法規。" data-en="The sampling standards share one origin. China uses GB/T 2828.1, the US and most of the world use ISO 2859-1 (ANSI/ASQ Z1.4 in US practice), Germany DIN ISO 2859-1, Japan JIS Z 9015-1, Korea KS Q ISO 2859-1, Brazil ABNT NBR 5426 (expressed as NQA), France the French version of ISO 2859-1, Spain UNE 66020. One acceptance table can be recognised across all of them, provided the contract states the three variables: level, AQL and defect classes. Compliance of the content itself — fibre percentages, care symbols — is not a sampling question at all; it sits in GB 5296.4, Regulation (EU) 1007/2011, JIS L 0001, KS K 0021 or the consumer code." data-fr="Les normes de contrôle partagent une même origine : GB/T 2828.1 en Chine, ISO 2859-1 ailleurs (ANSI/ASQ Z1.4 aux États-Unis), reprise en DIN ISO 2859-1 en Allemagne, JIS Z 9015-1 au Japon, KS Q ISO 2859-1 en Corée, ABNT NBR 5426 au Brésil (exprimée en NQA), version française de l&#x27;ISO 2859-1 en France, UNE 66020 en Espagne. Une même table est reconnue partout si le contrat fixe trois variables : niveau, AQL et classes de défauts. La conformité du contenu — pourcentages de fibres, symboles d&#x27;entretien — relève du Code de la consommation et du règlement (UE) 1007/2011, pas du plan d&#x27;échantillonnage." data-es="Las normas de muestreo comparten origen: GB/T 2828.1 en China, ISO 2859-1 (ANSI/ASQ Z1.4 en EE. UU.), DIN ISO 2859-1 en Alemania, JIS Z 9015-1 en Japón, KS Q ISO 2859-1 en Corea, ABNT NBR 5426 en Brasil (expresada en NQA), la versión francesa de ISO 2859-1 y UNE 66020 en España. Una misma tabla se reconoce en todos si el contrato fija tres variables: nivel, AQL y clases de defecto. La conformidad del contenido —porcentajes de fibra, símbolos de cuidado— depende del Reglamento (UE) 1007/2011 y del Real Decreto 928/1987, no del plan de muestreo." data-ja="抜取規格は同源です。中国は GB/T 2828.1、米国と国際は ISO 2859-1（米国では ANSI/ASQ Z1.4）、ドイツは DIN ISO 2859-1、日本は JIS Z 9015-1、韓国は KS Q ISO 2859-1、ブラジルは ABNT NBR 5426（NQA 表記）、フランスは ISO 2859-1 の仏語版、スペインは UNE 66020 を用います。契約で水準・AQL・欠点区分の 3 つを定めれば同じ判定表が国際的に通用します。一方、表示内容の適合（混用率・洗濯記号）は抜取規格ではなく、家庭用品品質表示法や JIS L 0001 の領域です。" data-ko="샘플링 규격은 뿌리가 같습니다. 중국은 GB/T 2828.1, 미국과 국제는 ISO 2859-1(미국 관행 ANSI/ASQ Z1.4), 독일은 DIN ISO 2859-1, 일본은 JIS Z 9015-1, 한국은 KS Q ISO 2859-1, 브라질은 ABNT NBR 5426(NQA 표기), 프랑스는 ISO 2859-1 불어판, 스페인은 UNE 66020을 씁니다. 계약서에 수준·AQL·결점 구분 세 가지를 명시하면 같은 판정표를 국제적으로 쓸 수 있습니다. 반면 표시 내용의 적합성(혼용률·세탁 기호)은 샘플링 규격이 아니라 품질경영 및 공산품 안전관리법과 KS K 0021의 영역입니다." data-de="Die Prüfnormen haben eine Wurzel: GB/T 2828.1 in China, ISO 2859-1 international und in den USA (ANSI/ASQ Z1.4), DIN ISO 2859-1 in Deutschland, JIS Z 9015-1 in Japan, KS Q ISO 2859-1 in Korea, ABNT NBR 5426 in Brasilien (als NQA), die französische Fassung der ISO 2859-1 in Frankreich, UNE 66020 in Spanien. Eine Annahmetabelle gilt überall, sofern der Vertrag drei Größen festlegt: Prüfniveau, AQL, Fehlerklassen. Die Konformität des Inhalts — Faseranteile, Pflegesymbole — regelt dagegen die Textilkennzeichnung nach Verordnung (EU) 1007/2011 und TKG, nicht der Stichprobenplan." data-pt="As normas de amostragem têm a mesma origem: GB/T 2828.1 na China, ISO 2859-1 no resto (ANSI/ASQ Z1.4 nos EUA), DIN ISO 2859-1 na Alemanha, JIS Z 9015-1 no Japão, KS Q ISO 2859-1 na Coreia, ABNT NBR 5426 no Brasil (expressa em NQA), a versão francesa da ISO 2859-1 e a UNE 66020 na Espanha. A mesma tabela vale em todos se o contrato fixar três variáveis: nível, AQL e classes de defeito. Já a conformidade do conteúdo — composição e símbolos de conservação — está no CDC (Lei 8.078/1990) e nas normas ABNT NBR, não no plano de amostragem.">各國抽樣標準其實同源。中國用 GB/T 2828.1，美國與國際通行 ISO 2859-1（美系另有 ANSI/ASQ Z1.4），德國採 DIN ISO 2859-1，日本是 JIS Z 9015-1，韓國為 KS Q ISO 2859-1，巴西為 ABNT NBR 5426（用 NQA 表述），法國直接沿用 ISO 2859-1 的法文版，西班牙對應 UNE 66020。同一份判定表可以在各國互認，前提是把「水平、AQL、缺陷分級」三項寫進合約。若涉及標示內容的合規判定（成分、洗護符號），依據不在抽樣標準裡，而在 GB 5296.4、(EU) 1007/2011、JIS L 0001、KS K 0021 或 CDC 這類法規。</p>
+
+      <h2 data-zh="記錄、追溯與供應商評分" data-en="Recording, traceability and the supplier score" data-fr="Enregistrement, traçabilité et note fournisseur" data-es="Registro, trazabilidad y nota del proveedor" data-ja="記録・トレーサビリティ・供給者評価" data-ko="기록·추적성·공급사 평가" data-de="Dokumentation, Rückverfolgbarkeit und Lieferantenbewertung" data-pt="Registro, rastreabilidade e nota do fornecedor">記錄、追溯與供應商評分</h2>
+
+      <p data-zh="檢驗表要能回答三個問題：哪一批、哪個缺陷、佔多少。所以每份記錄至少要有批號與生產日期、抽樣數與 AQL 值、按缺陷類別分開的實際計數、以及不合格項的照片。把「每萬件缺陷數」按季度累積，就是供應商評分卡最硬的一欄；連續兩季上升的供應商，比一次退貨更值得提前介入。若同一缺陷連續三批出現，走 8D 報告，不要靠加嚴抽樣解決——加嚴只會把問題推到下一批。" data-en="An inspection record has to answer three questions: which lot, which defect, how many. So it needs the lot and production date, the sample size and AQL applied, counts kept separate by defect class, and photographs of every nonconformity. Accumulating defects per 10,000 pieces by quarter gives the hardest column in a supplier scorecard; a supplier trending up for two quarters is worth intervening on earlier than a single rejected lot. If the same defect appears in three consecutive lots, ask for an 8D rather than tightening the sampling — tightening only pushes the problem into the next lot." data-fr="Un enregistrement doit répondre à trois questions : quel lot, quel défaut, combien. Il lui faut donc le numéro de lot et la date, la taille d&#x27;échantillon et l&#x27;AQL appliqué, des comptages séparés par classe de défaut et des photos de chaque non-conformité. Cumuler les défauts pour 10 000 pièces par trimestre donne la colonne la plus solide d&#x27;un tableau fournisseur : une dérive sur deux trimestres justifie une action plus tôt qu&#x27;un seul lot refusé. Si le même défaut revient sur trois lots consécutifs, demandez un 8D plutôt que de resserrer le contrôle — cela ne fait que déplacer le problème." data-es="Un registro debe responder tres preguntas: qué lote, qué defecto, cuántos. Por eso necesita lote y fecha, tamaño de muestra y AQL aplicado, conteos separados por clase y fotos de cada no conformidad. Acumular defectos por 10.000 piezas cada trimestre da la columna más sólida del cuadro de proveedor: una tendencia al alza durante dos trimestres merece intervención antes que un lote rechazado. Si el mismo defecto aparece en tres lotes seguidos, pide un 8D en lugar de endurecer el muestreo: endurecer solo traslada el problema." data-ja="検査記録は「どのロットか、どの欠点か、何個か」に答えられる必要があります。ロット番号と生産日、抜取数と適用 AQL、欠点区分ごとの計数、不適合の写真が最低限です。1 万枚あたりの欠点数を四半期ごとに累積すると、サプライヤー評価表で最も説得力のある欄になります。2 四半期連続で悪化している供給者は、1 回の返品より早く介入する価値があります。同一欠点が 3 ロット続く場合は、抜取を厳しくするのではなく 8D を要求してください。" data-ko="검사 기록은 &#x27;어느 로트, 어떤 결점, 몇 개&#x27;에 답할 수 있어야 합니다. 로트 번호와 생산일, 샘플 수와 적용 AQL, 결점 구분별 계수, 부적합 사진이 기본입니다. 1만 장당 결점 수를 분기별로 누적하면 공급사 스코어카드에서 가장 강한 항목이 됩니다. 두 분기 연속 악화되는 공급사는 한 번의 반품보다 먼저 개입할 가치가 있습니다. 같은 결점이 3개 로트 연속 나오면 샘플링을 강화하는 대신 8D를 요구하세요. 강화는 문제를 다음 로트로 미룰 뿐입니다." data-de="Ein Prüfprotokoll muss drei Fragen beantworten: welches Los, welcher Fehler, wie viele. Also Losnummer und Produktionsdatum, Stichprobenumfang und angewandter AQL, getrennte Zählungen je Fehlerklasse und Fotos jeder Abweichung. Fehler je 10.000 Stück quartalsweise summiert ergeben die belastbarste Spalte einer Lieferantenbewertung; ein Aufwärtstrend über zwei Quartale verdient frühere Intervention als ein einzelnes zurückgewiesenes Los. Tritt derselbe Fehler in drei Losen hintereinander auf, fordern Sie einen 8D-Bericht statt schärferer Prüfung — Schärfen verschiebt das Problem nur ins nächste Los." data-pt="Um registro precisa responder três perguntas: qual lote, qual defeito, quantos. Por isso exige lote e data de produção, tamanho da amostra e AQL aplicado, contagens separadas por classe de defeito e fotos de cada não conformidade. Acumular defeitos por 10.000 peças a cada trimestre dá a coluna mais sólida do scorecard de fornecedor: tendência de alta por dois trimestres merece ação antes de um lote rejeitado. Se o mesmo defeito aparece em três lotes seguidos, peça um 8D em vez de apertar a amostragem — apertar apenas empurra o problema.">檢驗表要能回答三個問題：哪一批、哪個缺陷、佔多少。所以每份記錄至少要有批號與生產日期、抽樣數與 AQL 值、按缺陷類別分開的實際計數、以及不合格項的照片。把「每萬件缺陷數」按季度累積，就是供應商評分卡最硬的一欄；連續兩季上升的供應商，比一次退貨更值得提前介入。若同一缺陷連續三批出現，走 8D 報告，不要靠加嚴抽樣解決——加嚴只會把問題推到下一批。</p>
+
+      <h2 data-zh="三種最常見的誤用" data-en="The three most common misuses" data-fr="Les trois erreurs les plus fréquentes" data-es="Los tres errores más frecuentes" data-ja="よくある 3 つの誤用" data-ko="가장 흔한 세 가지 오용" data-de="Die drei häufigsten Fehlanwendungen" data-pt="Os três erros mais comuns">三種最常見的誤用</h2>
+
+      <ul>
+        <li data-zh="用同一個 AQL 管所有缺陷。金屬件的鎳釋放、包內斷針、兒童繩帶這類致命項必須 AQL 0。" data-en="Using one AQL for every defect class. Nickel release, stray needles and childrenswear cords are critical and must be AQL 0." data-fr="Appliquer un seul AQL à toutes les classes. Nickel, aiguilles errantes et cordons enfant sont critiques : AQL 0." data-es="Usar un solo AQL para todas las clases. Níquel, agujas sueltas y cordones infantiles son críticos: AQL 0." data-ja="すべての欠点に同じ AQL を使うこと。ニッケル溶出、針の混入、子供服の紐は致命で AQL 0 です。" data-ko="모든 결점에 같은 AQL을 적용하는 것. 니켈 용출, 바늘 혼입, 아동복 끈은 치명으로 AQL 0입니다." data-de="Ein AQL für alle Fehlerklassen. Nickelabgabe, lose Nadeln und Kordeln an Kinderware sind kritisch: AQL 0." data-pt="Usar um único AQL para todas as classes. Níquel, agulhas soltas e cordões infantis são críticos: AQL 0.">用同一個 AQL 管所有缺陷。金屬件的鎳釋放、包內斷針、兒童繩帶這類致命項必須 AQL 0。</li>
+        <li data-zh="只從一個外箱抽樣。分層抽樣要覆蓋不同內袋與不同生產日期，否則批次差異被平均掉。" data-en="Sampling from a single carton. Stratify across inner bags and production dates, or batch-to-batch variation disappears into the average." data-fr="Prélever dans un seul carton. Stratifiez par sachets et par dates de production, sinon la variation entre lots disparaît dans la moyenne." data-es="Muestrear de una sola caja. Estratifica por bolsas y fechas: si no, la variación entre lotes se diluye en el promedio." data-ja="1 つの外箱だけから抜き取ること。内袋や生産日ごとに層別しないと、ロット間のばらつきが平均に埋もれます。" data-ko="외박스 하나에서만 샘플링하는 것. 내포장과 생산일별로 층화하지 않으면 로트 간 편차가 평균에 묻힙니다." data-de="Stichprobe aus einem einzigen Karton. Schichten Sie über Innentüten und Produktionsdaten, sonst verschwindet die Streuung im Mittelwert." data-pt="Amostrar de uma única caixa. Estratifique por sacos e datas de produção, senão a variação entre lotes some na média.">只從一個外箱抽樣。分層抽樣要覆蓋不同內袋與不同生產日期，否則批次差異被平均掉。</li>
+        <li data-zh="把「合格」當成「零缺陷」。通過的批仍可能含 Ac 個缺陷，縫製線要按這個數字預留返工與補片。" data-en="Reading pass as zero defects. A passed lot can still hold up to Ac defects; plan rework and spare pieces on the sewing line accordingly." data-fr="Lire « accepté » comme « zéro défaut ». Un lot accepté peut contenir jusqu&#x27;à Ac défauts : prévoyez retouches et pièces de rechange." data-es="Leer «aprobado» como «cero defectos». Un lote aprobado puede contener hasta Ac defectos: prevé retrabajo y piezas de repuesto." data-ja="「合格」を「不良ゼロ」と読むこと。合格ロットにも Ac 個の欠点が残り得るので、手直しと補充分を想定してください。" data-ko="&#x27;합격&#x27;을 &#x27;불량 0&#x27;으로 읽는 것. 합격 로트에도 Ac개 결점이 남을 수 있으니 재작업과 여분을 계획해야 합니다." data-de="„Bestanden“ als „null Fehler“ lesen. Ein angenommenes Los kann bis zu Ac Fehler enthalten; planen Sie Nacharbeit und Ersatzteile ein." data-pt="Ler &#x27;aprovado&#x27; como &#x27;zero defeito&#x27;. Um lote aprovado pode conter até Ac defeitos: planeje retrabalho e peças de reposição.">把「合格」當成「零缺陷」。通過的批仍可能含 Ac 個缺陷，縫製線要按這個數字預留返工與補片。</li>
+      </ul>
+
+      <div class="callout" data-zh="把 AQL、檢驗水平與缺陷分級三行寫進採購合約。爭議八成不是判定錯，而是當初沒寫清楚用哪一套。" data-en="Put three lines in the purchase contract: AQL, inspection level, defect classes. Most disputes are not about the count, but about which rules were agreed." data-fr="Inscrivez trois lignes au contrat : AQL, niveau de contrôle, classes de défauts. La plupart des litiges portent sur les règles, pas sur le comptage." data-es="Incluye tres líneas en el contrato: AQL, nivel de inspección y clases de defecto. Casi todos los conflictos son sobre las reglas, no sobre el conteo." data-ja="契約書に AQL、検査水準、欠点区分の 3 行を明記してください。紛争の多くは判定ミスではなく、どのルールかを決めていなかったことです。" data-ko="계약서에 AQL, 검사 수준, 결점 구분 세 줄을 명시하세요. 분쟁 대부분은 판정 오류가 아니라 어떤 규칙인지 정하지 않은 데서 생깁니다." data-de="Schreiben Sie drei Zeilen in den Kaufvertrag: AQL, Prüfniveau, Fehlerklassen. Die meisten Streitfälle betreffen die Regeln, nicht die Zählung." data-pt="Coloque três linhas no contrato: AQL, nível de inspeção e classes de defeito. A maioria dos conflitos é sobre as regras, não sobre a contagem.">把 AQL、檢驗水平與缺陷分級三行寫進採購合約。爭議八成不是判定錯，而是當初沒寫清楚用哪一套。</div>
+
+      <h2 data-zh="相關文章" data-en="Related reading" data-fr="À lire aussi" data-es="Lecturas relacionadas" data-ja="関連記事" data-ko="관련 글" data-de="Weiterlesen" data-pt="Leia também">相關文章</h2>
+
+      <ul>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="輔料品質檢驗流程" data-en="Trims quality inspection" data-fr="Contrôle qualité des accessoires" data-es="Inspección de calidad" data-ja="副資材の品質検査" data-ko="부자재 품질 검사" data-de="Qualitätsprüfung" data-pt="Inspeção de qualidade">輔料品質檢驗流程</a></li>
+        <li><a href="trim-limit-sample-inspection-guide.html" data-zh="極限樣品與檢驗" data-en="Limit samples" data-fr="Échantillons limites" data-es="Muestras límite" data-ja="限界見本" data-ko="한계 견본" data-de="Grenzmuster" data-pt="Amostras limite">極限樣品與檢驗</a></li>
+        <li><a href="trim-supplier-scorecard-guide.html" data-zh="供應商評分卡" data-en="Supplier scorecard" data-fr="Tableau de bord fournisseur" data-es="Cuadro de mando de proveedor" data-ja="サプライヤー評価表" data-ko="공급사 스코어카드" data-de="Lieferanten-Scorecard" data-pt="Scorecard de fornecedor">供應商評分卡</a></li>
+        <li><a href="index.html" data-zh="輔料 FAQ 全部文章" data-en="All trims FAQ articles" data-fr="Tous les articles FAQ" data-es="Todos los artículos" data-ja="副資材 FAQ 一覧" data-ko="부자재 FAQ 전체" data-de="Alle FAQ-Beiträge" data-pt="Todos os artigos">輔料 FAQ 全部文章</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="把你們現行的檢驗標準或上一批的檢驗報告發給我們，我們按同一套 AQL 給你一份帶抽樣數與判定值的檢驗表。" data-en="Send your current inspection standard or your last inspection report. We return an inspection sheet with sample sizes and accept/reject numbers on the same AQL basis." data-fr="Envoyez votre standard de contrôle ou votre dernier rapport : nous renvoyons une fiche avec tailles d&#x27;échantillon et seuils d&#x27;acceptation sur la même base AQL." data-es="Envíanos tu norma de inspección o el último informe: devolvemos una ficha con tamaños de muestra y criterios de aceptación sobre la misma base AQL." data-ja="現在の検査基準、または直近の検査報告書をお送りください。同じ AQL 基準で、抜取数と合格判定値を記載した検査表をお返しします。" data-ko="현재 검사 기준이나 최근 검사 성적서를 보내주시면 같은 AQL 기준으로 샘플 수와 합격 판정값을 담은 검사표를 보내드립니다." data-de="Senden Sie Ihre aktuelle Prüfnorm oder den letzten Prüfbericht: Sie erhalten ein Prüfblatt mit Stichprobenumfang und Annahme-/Rückweisezahlen auf derselben AQL-Basis." data-pt="Envie sua norma de inspeção atual ou o último relatório: devolvemos uma ficha com tamanho de amostra e critérios de aceitação na mesma base AQL.">把你們現行的檢驗標準或上一批的檢驗報告發給我們，我們按同一套 AQL 給你一份帶抽樣數與判定值的檢驗表。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取輔料檢驗表" data-en="Request a trims inspection sheet" data-fr="Demander une fiche de contrôle" data-es="Solicitar una ficha de inspección" data-ja="検査表を依頼" data-ko="검사표 요청" data-de="Prüfblatt anfordern" data-pt="Solicitar ficha de inspeção">索取輔料檢驗表</a>
+      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE Packaging" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-es="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-en="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAIGE 패키징제품 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQL for Apparel Trims: Levels, Defects, Lot Sizes | TAIGE</title>
+<meta name="description" content="What AQL 2.5 really means for trims: inspection levels, critical and major defects, and how many labels to pull from a 5,000-piece lot.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/en/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+
+
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+     "item": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+   "url": "https://taigetag.com/blog/trim-material-substitution-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAIGE</strong>
+        <small>DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../products.html">Products</a>
+      <a href="../about.html">About Us</a>
+      <a href="index.html">Trims FAQ</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag active" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Home</a> / <a href="index.html">Trims FAQ</a> / <span>AQL for trims</span></div>
+      <h1>AQL for Apparel Trims: Levels, Defect Classes and How Many to Pull</h1>
+      <p>By TAIGE Packaging  ·  Updated November 10, 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Almost every trim inspection report carries AQL 2.5 in the corner, and both sides usually read it as something it is not: the buyer hears a permitted defect rate of 2.5%, the supplier hears that up to ten defects still passes. Neither is the whole story. This guide explains what AQL allocates, works through a 5,000-piece woven label lot, and lists the three mistakes that cause most disputes.</p>
+
+      <h2>AQL is not a permitted defect rate, it is risk allocation</h2>
+
+      <p>AQL is defined so that a lot whose true defect rate equals the AQL has about a 95% chance of being accepted. Flip it around: a lot running at 2.5% defects will still be rejected roughly one time in twenty. AQL is therefore a target for the supplier&#x27;s process capability, not a guarantee handed to the buyer. Two numbers decide the actual risk — sample size and acceptance number — and both come from lot size and inspection level.</p>
+
+      <h2>Inspection levels: I, II, III and the special levels</h2>
+
+      <p>Level II is the default; at the same lot size it samples roughly 1.6 times as much as level I and about half of level III. The choice is practical: would a defect in this trim stop the sewing line or trigger a recall? Then use III. Three consecutive stable lots, low unit value, easy visual 100% check? Use I. The special levels S-1 to S-4 exist for destructive tests — wash durability on a woven label, tear strength on tag board, salt spray on metal hardware — where the sample is consumed, so the sample must stay small.</p>
+
+      <h2>Critical, major, minor: how to classify trims</h2>
+
+      <ul>
+        <li>Critical (AQL 0, one occurrence rejects the lot): nickel release above the limit on metal hardware, a broken needle inside a label pack, wrong fibre content printed on a care label, cord length non-compliant on childrenswear.</li>
+        <li>Major (usually AQL 1.0–2.5): colour off the approved swatch, wrong size printed, missing care symbols, print too smeared to read, woven label width off by more than 2 mm.</li>
+        <li>Minor (usually AQL 4.0): slight edge fray, dimensions drifting within ±1 mm, carton mark off position, inner bag fold uneven.</li>
+      </ul>
+
+      <h2>A 5,000-piece lot: how many to pull and when to reject</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Lot size</th>
+            <th>Level II code</th>
+            <th>Sample</th>
+            <th>AQL 2.5 accept/reject</th>
+            <th>AQL 1.0 accept/reject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>501–1,200</td>
+            <td>J</td>
+            <td>80</td>
+            <td>5 / 6</td>
+            <td>2 / 3</td>
+          </tr>
+          <tr>
+            <td>1,201–3,200</td>
+            <td>K</td>
+            <td>125</td>
+            <td>7 / 8</td>
+            <td>3 / 4</td>
+          </tr>
+          <tr>
+            <td>3,201–10,000</td>
+            <td>L</td>
+            <td>200</td>
+            <td>10 / 11</td>
+            <td>5 / 6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Take 5,000 woven labels at 30 mm width: the lot falls in 3,201–10,000, level II gives code L, so 200 pieces are pulled. Major defects are judged at AQL 2.5, where Ac = 10 and Re = 11 — ten or fewer passes, the eleventh rejects the lot. Critical defects never enter that table: one finding rejects the lot regardless of AQL. Minor defects run at AQL 4.0 (Ac = 14 at this sample size) but can never be traded against majors.</p>
+
+      <h2>Which sampling standard applies where</h2>
+
+      <p>The sampling standards share one origin. China uses GB/T 2828.1, the US and most of the world use ISO 2859-1 (ANSI/ASQ Z1.4 in US practice), Germany DIN ISO 2859-1, Japan JIS Z 9015-1, Korea KS Q ISO 2859-1, Brazil ABNT NBR 5426 (expressed as NQA), France the French version of ISO 2859-1, Spain UNE 66020. One acceptance table can be recognised across all of them, provided the contract states the three variables: level, AQL and defect classes. Compliance of the content itself — fibre percentages, care symbols — is not a sampling question at all; it sits in GB 5296.4, Regulation (EU) 1007/2011, JIS L 0001, KS K 0021 or the consumer code.</p>
+
+      <h2>Recording, traceability and the supplier score</h2>
+
+      <p>An inspection record has to answer three questions: which lot, which defect, how many. So it needs the lot and production date, the sample size and AQL applied, counts kept separate by defect class, and photographs of every nonconformity. Accumulating defects per 10,000 pieces by quarter gives the hardest column in a supplier scorecard; a supplier trending up for two quarters is worth intervening on earlier than a single rejected lot. If the same defect appears in three consecutive lots, ask for an 8D rather than tightening the sampling — tightening only pushes the problem into the next lot.</p>
+
+      <h2>The three most common misuses</h2>
+
+      <ul>
+        <li>Using one AQL for every defect class. Nickel release, stray needles and childrenswear cords are critical and must be AQL 0.</li>
+        <li>Sampling from a single carton. Stratify across inner bags and production dates, or batch-to-batch variation disappears into the average.</li>
+        <li>Reading pass as zero defects. A passed lot can still hold up to Ac defects; plan rework and spare pieces on the sewing line accordingly.</li>
+      </ul>
+
+      <div class="callout">Put three lines in the purchase contract: AQL, inspection level, defect classes. Most disputes are not about the count, but about which rules were agreed.</div>
+
+      <h2>Related reading</h2>
+
+      <ul>
+        <li><a href="garment-trims-quality-inspection.html">Trims quality inspection</a></li>
+        <li><a href="trim-limit-sample-inspection-guide.html">Limit samples</a></li>
+        <li><a href="trim-supplier-scorecard-guide.html">Supplier scorecard</a></li>
+        <li><a href="index.html">All trims FAQ articles</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Send your current inspection standard or your last inspection report. We return an inspection sheet with sample sizes and accept/reject numbers on the same AQL basis.</p>
+        <a class="cta-btn" href="../contact.html">Request a trims inspection sheet</a>
+      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAIGE Packaging</h4>
+        <p>Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Hang Tags</a></li>
+          <li><a href="../products.html#wovenlabels">Woven Labels</a></li>
+          <li><a href="../products.html#carelabels">Care Labels</a></li>
+          <li><a href="../products.html#bags">Packaging Bags</a></li>
+          <li><a href="../products.html#paperbags">Eco Paper Bags</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen Town, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Taige Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

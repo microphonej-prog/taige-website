@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부자재 AQL 샘플링: 검사 수준·결점 구분·로트 기준 | TAIGE</title>
+<meta name="description" content="AQL 2.5의 실제 의미, 검사 수준 I/II/III 선택, 치명·주요 결점 구분, 5,000장 로트에서의 샘플 수와 합격 판정표를 정리했습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/apparel-trims-aql-inspection-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/apparel-trims-aql-inspection-guide.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+     "item": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料 AQL 抽樣：檢驗水平、缺陷分級與 5,000 枚怎麼抽",
+   "url": "https://taigetag.com/blog/trim-material-substitution-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAIGE 패키징</strong>
+        <small>DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>부자재 AQL</span></div>
+      <h1>부자재 AQL 샘플링: 수준·결점 구분·샘플 수 결정</h1>
+      <p>TAIGE 패키징 · 2026년 11월 10일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>부자재 검사 성적서에는 거의 항상 AQL 2.5가 적혀 있지만, 바이어는 &#x27;2.5% 불량 허용&#x27;, 공급사는 &#x27;10개까지 합격&#x27;으로 서로 다르게 읽습니다. 둘 다 불완전합니다. 이 글은 AQL이 무엇을 배분하는지 설명하고, 5,000장 직조 라벨 로트로 샘플링과 판정을 계산하며, 흔한 오용 세 가지를 정리합니다.</p>
+
+      <h2>AQL은 허용 불량률이 아니라 위험 배분</h2>
+
+      <p>AQL은 실제 불량률이 AQL과 같은 로트가 합격할 확률을 약 95%로 두는 정의입니다. 뒤집으면 실제 불량률 2.5%인 로트도 20번에 한 번 정도는 불합격됩니다. 즉 AQL은 공급사 공정 능력의 목표치이며 바이어에게 주어지는 품질 보증이 아닙니다. 실제 위험을 결정하는 것은 샘플 수와 합격 판정 개수이고, 둘 다 로트 크기와 검사 수준에서 나옵니다.</p>
+
+      <h2>검사 수준: I·II·III과 특별 수준</h2>
+
+      <p>수준 II가 기본값이며 같은 로트 크기에서 수준 I의 약 1.6배, 수준 III의 약 절반을 샘플링합니다. 선택 기준은 실무적입니다. 이 부자재의 결점이 봉제 라인을 멈추거나 리콜로 이어지는가? 그렇다면 III. 3개 로트 연속 안정, 단가가 낮고 전수 육안 검사가 가능한가? 그렇다면 I. 특별 수준 S-1~S-4는 세탁 내구, 인장 강도, 염수 분무처럼 시료를 소모하는 파괴 시험에 씁니다.</p>
+
+      <h2>치명·주요·경미: 부자재 분류</h2>
+
+      <ul>
+        <li>치명(AQL 0, 1개라도 불합격): 금속 부품 니켈 용출 초과, 라벨 포장 내 부러진 바늘 혼입, 혼용률 오표기, 아동복 끈 길이 부적합.</li>
+        <li>주요(보통 AQL 1.0~2.5): 승인 색상과 불일치, 사이즈 오표기, 세탁 기호 누락, 판독 불가한 인쇄, 직조 라벨 폭 2 mm 초과 편차.</li>
+        <li>경미(보통 AQL 4.0): 가장자리 약간의 풀림, ±1 mm 내 치수 편차, 외박스 표시 위치 이탈, 내포장 비닐 접힘 불균일.</li>
+      </ul>
+
+      <h2>5,000장 로트: 샘플 수와 판정값</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>로트 크기</th>
+            <th>수준 II 기호</th>
+            <th>샘플 수</th>
+            <th>AQL 2.5 합격/불합격</th>
+            <th>AQL 1.0 합격/불합격</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>501~1,200</td>
+            <td>J</td>
+            <td>80</td>
+            <td>5 / 6</td>
+            <td>2 / 3</td>
+          </tr>
+          <tr>
+            <td>1,201~3,200</td>
+            <td>K</td>
+            <td>125</td>
+            <td>7 / 8</td>
+            <td>3 / 4</td>
+          </tr>
+          <tr>
+            <td>3,201~10,000</td>
+            <td>L</td>
+            <td>200</td>
+            <td>10 / 11</td>
+            <td>5 / 6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>폭 30 mm 직조 라벨 5,000장을 예로 듭니다. 로트는 3,201~10,000에 속하고 수준 II는 기호 L, 샘플 수는 200장입니다. 주요 결점은 AQL 2.5로 판정해 Ac = 10, Re = 11입니다. 10개 이하면 합격, 11번째가 나오면 불합격입니다. 치명 결점은 이 표를 쓰지 않고 1개라도 있으면 불합격입니다. 경미 결점은 AQL 4.0(이 샘플 수에서 Ac = 14)이지만 주요 결점과 상계할 수 없습니다.</p>
+
+      <h2>국가별 샘플링 규격과 표시 근거</h2>
+
+      <p>샘플링 규격은 뿌리가 같습니다. 중국은 GB/T 2828.1, 미국과 국제는 ISO 2859-1(미국 관행 ANSI/ASQ Z1.4), 독일은 DIN ISO 2859-1, 일본은 JIS Z 9015-1, 한국은 KS Q ISO 2859-1, 브라질은 ABNT NBR 5426(NQA 표기), 프랑스는 ISO 2859-1 불어판, 스페인은 UNE 66020을 씁니다. 계약서에 수준·AQL·결점 구분 세 가지를 명시하면 같은 판정표를 국제적으로 쓸 수 있습니다. 반면 표시 내용의 적합성(혼용률·세탁 기호)은 샘플링 규격이 아니라 품질경영 및 공산품 안전관리법과 KS K 0021의 영역입니다.</p>
+
+      <h2>기록·추적성·공급사 평가</h2>
+
+      <p>검사 기록은 &#x27;어느 로트, 어떤 결점, 몇 개&#x27;에 답할 수 있어야 합니다. 로트 번호와 생산일, 샘플 수와 적용 AQL, 결점 구분별 계수, 부적합 사진이 기본입니다. 1만 장당 결점 수를 분기별로 누적하면 공급사 스코어카드에서 가장 강한 항목이 됩니다. 두 분기 연속 악화되는 공급사는 한 번의 반품보다 먼저 개입할 가치가 있습니다. 같은 결점이 3개 로트 연속 나오면 샘플링을 강화하는 대신 8D를 요구하세요. 강화는 문제를 다음 로트로 미룰 뿐입니다.</p>
+
+      <h2>가장 흔한 세 가지 오용</h2>
+
+      <ul>
+        <li>모든 결점에 같은 AQL을 적용하는 것. 니켈 용출, 바늘 혼입, 아동복 끈은 치명으로 AQL 0입니다.</li>
+        <li>외박스 하나에서만 샘플링하는 것. 내포장과 생산일별로 층화하지 않으면 로트 간 편차가 평균에 묻힙니다.</li>
+        <li>&#x27;합격&#x27;을 &#x27;불량 0&#x27;으로 읽는 것. 합격 로트에도 Ac개 결점이 남을 수 있으니 재작업과 여분을 계획해야 합니다.</li>
+      </ul>
+
+      <div class="callout">계약서에 AQL, 검사 수준, 결점 구분 세 줄을 명시하세요. 분쟁 대부분은 판정 오류가 아니라 어떤 규칙인지 정하지 않은 데서 생깁니다.</div>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="garment-trims-quality-inspection.html">부자재 품질 검사</a></li>
+        <li><a href="trim-limit-sample-inspection-guide.html">한계 견본</a></li>
+        <li><a href="trim-supplier-scorecard-guide.html">공급사 스코어카드</a></li>
+        <li><a href="index.html">부자재 FAQ 전체</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>현재 검사 기준이나 최근 검사 성적서를 보내주시면 같은 AQL 기준으로 샘플 수와 합격 판정값을 담은 검사표를 보내드립니다.</p>
+        <a class="cta-btn" href="../contact.html">검사표 요청</a>
+      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAIGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAIGE 패키징제품 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
