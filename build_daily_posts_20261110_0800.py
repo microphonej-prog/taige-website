@@ -131,6 +131,7 @@ def build(c, skel, idx_html):
     body += ('      <div class="cta-box">\n        <p %s>%s</p>\n        <a class="cta-btn" href="../contact.html" %s>%s</a>\n      </div>'
              % (A(c["cta"]["p"]), html.escape(c["cta"]["p"]["zh"]),
                 A(c["cta"]["a"]), html.escape(c["cta"]["a"]["zh"])))
+    body += "\n\n    </div>\n  </section>\n"  # 骨架的 </div></section> 被 i0..i1 切掉，必须补回，否则文章结构破损
     s = s[:i0] + body + s[i1:]
 
     out = "blog/%s" % slug
