@@ -6,6 +6,15 @@
 """
 import re, html, os, sys
 
+# —— 2026-11-11：/de/ 与 /pt/ 已下线，禁止再生成（防止 cron 重新写回）——
+RETIRED_LANGS = {"de", "pt"}
+import sys as _sys
+_cli = [a for a in _sys.argv[1:] if not a.startswith("-")]
+if any(a in RETIRED_LANGS for a in _cli):
+    print("de/pt 已下线，跳过生成：", [a for a in _cli if a in RETIRED_LANGS])
+    raise SystemExit(0)
+
+
 LANGS = {"en": "en", "fr": "fr", "es": "es", "ja": "ja", "ko": "ko", "de": "de", "pt": "pt"}          # data 属性后缀
 LANG_ATTRS = {"en": ("data-en", "data-fr", "data-es"), # 取此语言 / 删这些
               "fr": ("data-fr", "data-zh", "data-es"),
