@@ -6,7 +6,7 @@
 
   /* ---------- 語言檢測（?lang= 參數 > localStorage > 默認zh） ---------- */
   var LANG_KEY = "taige_lang";
-  var LANGS = ["zh", "en", "de", "ja", "ko", "fr", "es", "pt"];
+  var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
   /* 獨立語言目錄 /en/ /fr/ /es/：固定對應語言，忽略 ?lang/localStorage/瀏覽器語言，
      語言切換按鈕跳回根目錄對應語言版本 */
   var DIR_LANG = null;
@@ -17,8 +17,6 @@
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
     else if (_p.indexOf("/ja/") >= 0) DIR_LANG = "ja";
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
-    else if (_p.indexOf("/de/") >= 0) DIR_LANG = "de";
-    else if (_p.indexOf("/pt/") >= 0) DIR_LANG = "pt";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
   var BUST_VERSION = "211";

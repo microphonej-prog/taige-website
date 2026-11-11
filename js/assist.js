@@ -13,7 +13,7 @@
   if (!FAB || !PANEL || !BODY || !QUICK || !INPUT || !SEND) return;
 
   /* ---------- 語言檢測：?lang > localStorage > html lang ---------- */
-  var LANGS = ["zh", "en", "de", "ja", "ko", "fr", "es", "pt"];
+  var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
   /* 獨立語言目錄 /en/ /ja/ /ko/ /fr/ /es/：固定對應語言（該目錄頁面已靜態渲染） */
   var DIR_LANG = null;
   try {
@@ -23,8 +23,6 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
     else if (_p.indexOf("/fr/") >= 0) DIR_LANG = "fr";
     else if (_p.indexOf("/es/") >= 0) DIR_LANG = "es";
-    else if (_p.indexOf("/de/") >= 0) DIR_LANG = "de";
-    else if (_p.indexOf("/pt/") >= 0) DIR_LANG = "pt";
   } catch (e) {}
   var LANG = "zh", fromUrl = null, fromStore = null;
   if (DIR_LANG) {
