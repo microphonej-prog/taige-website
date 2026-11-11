@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="吊牌該用 QR、NFC 還是 RFID？三種資料載體怎麼選 | TAIGE" data-en="QR vs NFC vs RFID for Apparel Tags: Which One | TAIGE" data-fr="QR, NFC ou RFID sur un hangtag : que choisir | TAIGE" data-es="QR, NFC o RFID en el colgante: cuál elegir | TAIGE" data-ja="下げ札は QR・NFC・RFID のどれか：選び方 | TAIGE" data-ko="행택에 QR·NFC·RFID 중 무엇을 쓸까 | TAIGE" data-de="QR, NFC oder RFID am Anhänger: Was passt | TAIGE" data-pt="QR, NFC ou RFID na etiqueta: qual escolher | TAIGE">吊牌該用 QR、NFC 還是 RFID？三種資料載體怎麼選 | TAIGE</title>
+<meta name="description" data-zh="QR、NFC、RFID 不是替代關係：一個靠印、一個靠貼近感應、一個靠三公尺外讀取。誰讀、多遠讀、每件增量成本差幾倍，以及歐盟數位產品護照上線前該預留什麼。東莞泰閣包裝。" data-en="QR, NFC or RFID on an apparel tag: who reads it, from how far, what each adds to unit cost, plus how the EU Digital Product Passport changes the choice." data-fr="QR, NFC ou RFID sur un hangtag : qui lit, à quelle distance, ce que chacun ajoute au prix unitaire, et comment préparer le passeport numérique européen." data-es="QR, NFC o RFID en un colgante: quién lee, a qué distancia, qué añade cada uno al coste unitario y cómo prepararse para el pasaporte digital europeo." data-ja="QR・NFC・RFID の違いを「誰が・どれくらいの距離で読むか」から整理。1枚あたりのコスト差、使い分け、EU デジタル製品パスポートへの備えまで。" data-ko="QR·NFC·RFID를 &#x27;누가, 얼마나 멀리서 읽는가&#x27;로 정리했습니다. 장당 비용 차이, 용도 구분, EU 디지털 제품 여권 대비까지 다룹니다." data-de="QR, NFC oder RFID am Anhänger: Wer liest, aus welcher Entfernung, was kostet jede Variante pro Stück und wie bereitet man sich auf den EU-Produktpass vor." data-pt="QR, NFC ou RFID na etiqueta: quem lê, a que distância, quanto cada um acrescenta por peça e como se preparar para o passaporte digital europeu." content="QR、NFC、RFID 不是替代關係：一個靠印、一個靠貼近感應、一個靠三公尺外讀取。誰讀、多遠讀、每件增量成本差幾倍，以及歐盟數位產品護照上線前該預留什麼。東莞泰閣包裝。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/qr-vs-nfc-vs-rfid-apparel-tags.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "QR、NFC 還是 RFID：吊牌的資料載體怎麼選",
+     "item": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "QR、NFC 還是 RFID：吊牌的資料載體怎麼選",
+   "url": "https://taigetag.com/blog/trim-material-substitution-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE" data-ja="泰閣包装" data-ko="TAIGE 패키징" data-de="TAIGE Verpackung" data-pt="TAIGE Embalagens">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAIGE PACKAGING" data-en="DONGGUAN TAIGE PACKAGING" data-fr="DONGGUAN TAIGE PACKAGING" data-es="DONGGUAN TAIGE PACKAGING" data-ja="DONGGUAN TAIGE PACKAGING" data-ko="DONGGUAN TAIGE PACKAGING" data-de="DONGGUAN TAIGE PACKAGING" data-pt="DONGGUAN TAIGE PACKAGING">DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈" data-de="Startseite" data-pt="Início">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개" data-de="Produkte" data-pt="Produtos">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개" data-de="Über uns" data-pt="Sobre nós">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ" data-de="Zutaten FAQ" data-pt="FAQ de Aviamentos">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기" data-de="Kontakt" data-pt="Contato">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈" data-de="Startseite" data-pt="Início">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ" data-de="Accessoires-FAQ" data-pt="FAQ de aviamentos">輔料 FAQ</a> / <span data-zh="QR vs NFC vs RFID" data-en="QR vs NFC vs RFID" data-fr="QR vs NFC vs RFID" data-es="QR vs NFC vs RFID" data-ja="QR・NFC・RFID 比較" data-ko="QR·NFC·RFID 비교" data-de="QR vs. NFC vs. RFID" data-pt="QR vs NFC vs RFID">QR vs NFC vs RFID</span></div>
+      <h1 data-zh="QR、NFC 還是 RFID：吊牌的資料載體怎麼選" data-en="QR, NFC or RFID: Choosing the Data Carrier for an Apparel Tag" data-fr="QR, NFC ou RFID : choisir le support de données d&#x27;un hangtag" data-es="QR, NFC o RFID: cómo elegir el soporte de datos de un colgante" data-ja="QR・NFC・RFID：下げ札のデータ媒体をどう選ぶか" data-ko="QR·NFC·RFID: 행택의 데이터 매체를 고르는 기준" data-de="QR, NFC oder RFID: Der Datenträger am Anhänger" data-pt="QR, NFC ou RFID: como escolher o suporte de dados da etiqueta">QR、NFC 還是 RFID：吊牌的資料載體怎麼選</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月11日" data-en="By TAIGE Packaging &nbsp;·&nbsp; Updated November 11, 2026" data-ja="泰閣包装 · 2026年11月11日更新" data-ko="TAIGE 패키징 · 2026년 11월 11일 업데이트" data-fr="Par TAIGE Packaging &nbsp;·&nbsp; Mis à jour le 11 novembre 2026" data-es="Por TAIGE Packaging &nbsp;·&nbsp; Actualizado el 11 de noviembre de 2026" data-de="Von TAIGE Packaging &nbsp;·&nbsp; Aktualisiert am 11. November 2026" data-pt="Por TAIGE Packaging &nbsp;·&nbsp; Atualizado em 11 de novembro de 2026">泰閣包裝 · 更新於 2026年11月11日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="QR、NFC、RFID 常被當成一條升級路線，其實是三種不同用途的工具：QR 靠印刷，成本幾乎不增加，但要有人主動掃；NFC 貼近四公分內才有反應；RFID 能在一到八公尺外一次讀整箱。選錯的代價不小——印了 QR 卻想用它在倉庫盤點，或買了 RFID 標籤卻希望顧客用手機掃，都會在量產後才發現，而標籤已經縫進衣服裡。" data-en="QR, NFC and RFID are usually presented as steps on one upgrade path. They are three different tools. A QR code is printed, costs almost nothing extra, and needs someone to deliberately scan it. NFC responds only within about four centimetres. RFID reads a whole carton from one to eight metres. Choosing wrong is expensive: printing QR codes and expecting warehouse counting, or buying RFID inlays and expecting customers to scan them with a phone, are both mistakes discovered after mass production — when the labels are already sewn into the garments." data-fr="On présente souvent QR, NFC et RFID comme les étapes d&#x27;une même montée en gamme. Ce sont trois outils différents. Le QR code s&#x27;imprime, ne coûte presque rien de plus, mais exige un scan volontaire. Le NFC ne répond qu&#x27;à environ quatre centimètres. Le RFID lit un carton entier à un à huit mètres. Se tromper coûte cher : imprimer des QR en espérant compter un stock, ou acheter des inlays RFID en espérant que le client les scanne au téléphone, se découvre après la production de masse, quand les étiquettes sont déjà cousues." data-es="Suele presentarse el QR, el NFC y el RFID como peldaños de una misma escalera. Son tres herramientas distintas. El QR se imprime, casi no cuesta más, pero exige un escaneo voluntario. El NFC solo responde a unos cuatro centímetros. El RFID lee una caja completa de uno a ocho metros. Equivocarse sale caro: imprimir QR esperando contar inventario, o comprar inlays RFID esperando que el cliente los escanee con el móvil, se descubre tras la producción en masa, con las etiquetas ya cosidas." data-ja="QR・NFC・RFID は同じ進化の段階のように語られますが、用途の違う3つの道具です。QR は印刷でほぼ追加コストがかからない代わりに、誰かが意識して読み取る必要があります。NFC は約4 cm まで近づけないと反応しません。RFID は1〜8 m 先から箱ごと読めます。選び間違えると高くつきます——QR を印刷して倉庫の棚卸しに使おうとする、RFID を買って顧客のスマホで読めると思い込む。どちらも量産後に気づき、その時点でラベルはすでに縫い込まれています。" data-ko="QR·NFC·RFID는 흔히 같은 업그레이드 경로의 단계처럼 소개되지만, 용도가 다른 세 가지 도구입니다. QR은 인쇄라 추가 비용이 거의 없지만 누군가 의식적으로 스캔해야 합니다. NFC는 약 4 cm 이내에서만 반응합니다. RFID는 1~8 m 밖에서 박스 단위로 읽습니다. 잘못 고르면 비쌉니다. QR을 인쇄해 창고 재고조사에 쓰려 하거나, RFID 인레이를 사서 고객이 스마트폰으로 읽기를 기대하는 실수는 양산 후에야 드러나고, 그때 라벨은 이미 봉제되어 있습니다." data-de="QR, NFC und RFID werden gern als Stufen eines Upgrades verkauft. Es sind drei verschiedene Werkzeuge. Der QR-Code wird gedruckt, kostet fast nichts extra und verlangt einen bewussten Scan. NFC reagiert nur auf etwa vier Zentimeter. RFID liest einen ganzen Karton aus ein bis acht Metern. Falsch gewählt wird es teuer: QR drucken und Lagern zählen wollen oder RFID-Inlays kaufen und hoffen, Kunden scannen sie mit dem Telefon – beides fällt nach der Serienproduktion auf, wenn die Etiketten schon eingenäht sind." data-pt="QR, NFC e RFID costumam ser apresentados como degraus de uma mesma evolução. São três ferramentas diferentes. O QR é impresso, quase não acrescenta custo e exige leitura deliberada. O NFC só responde a cerca de quatro centímetros. O RFID lê uma caixa inteira de um a oito metros. Errar sai caro: imprimir QR esperando contar estoque, ou comprar inlays RFID esperando que o cliente leia com o celular, descobrem-se depois da produção em massa — com as etiquetas já costuradas nas peças.">QR、NFC、RFID 常被當成一條升級路線，其實是三種不同用途的工具：QR 靠印刷，成本幾乎不增加，但要有人主動掃；NFC 貼近四公分內才有反應；RFID 能在一到八公尺外一次讀整箱。選錯的代價不小——印了 QR 卻想用它在倉庫盤點，或買了 RFID 標籤卻希望顧客用手機掃，都會在量產後才發現，而標籤已經縫進衣服裡。</p>
+
+      <h2 data-zh="先看誰讀、多遠讀，再談技術" data-en="Start with the reader, not the technology" data-fr="Partir du lecteur, pas de la technologie" data-es="Empieza por el lector, no por la tecnología" data-ja="技術ではなく「読む人」から決める" data-ko="기술이 아니라 &#x27;읽는 사람&#x27;에서 시작합니다" data-de="Erst der Leser, dann die Technik" data-pt="Comece por quem lê, não pela tecnologia">先看誰讀、多遠讀，再談技術</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="載體" data-en="Carrier" data-fr="Support" data-es="Soporte" data-ja="媒体" data-ko="매체" data-de="Träger" data-pt="Suporte">載體</th>
+            <th data-zh="讀取距離" data-en="Read distance" data-fr="Distance de lecture" data-es="Distancia de lectura" data-ja="読取距離" data-ko="판독 거리" data-de="Lesereichweite" data-pt="Distância de leitura">讀取距離</th>
+            <th data-zh="誰能讀" data-en="Who can read" data-fr="Qui peut lire" data-es="Quién puede leer" data-ja="読める人" data-ko="읽을 수 있는 주체" data-de="Wer lesen kann" data-pt="Quem lê">誰能讀</th>
+            <th data-zh="典型用途" data-en="Typical use" data-fr="Usage courant" data-es="Uso habitual" data-ja="主な用途" data-ko="주 용도" data-de="Typischer Einsatz" data-pt="Uso típico">典型用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="QR 碼" data-en="QR code" data-fr="QR code" data-es="Código QR" data-ja="QR コード" data-ko="QR 코드" data-de="QR-Code" data-pt="QR code">QR 碼</td>
+            <td data-zh="10–50 cm，需對焦" data-en="10–50 cm, needs framing" data-fr="10 à 50 cm, cadrage requis" data-es="10–50 cm, hay que encuadrar" data-ja="10〜50 cm、画面に収める必要あり" data-ko="10~50 cm, 화면에 맞춰야 함" data-de="10–50 cm, muss erfasst werden" data-pt="10–50 cm, precisa enquadrar">10–50 cm，需對焦</td>
+            <td data-zh="任何智慧手機，免裝 App" data-en="Any smartphone, no app" data-fr="Tout smartphone, sans application" data-es="Cualquier móvil, sin app" data-ja="どのスマホでも、アプリ不要" data-ko="모든 스마트폰, 앱 불필요" data-de="Jedes Smartphone, ohne App" data-pt="Qualquer celular, sem app">任何智慧手機，免裝 App</td>
+            <td data-zh="商品頁、洗護資訊、護照連結" data-en="Product page, care info, passport link" data-fr="Page produit, entretien, lien passeport" data-es="Página de producto, cuidado, enlace al pasaporte" data-ja="商品ページ、ケア情報、パスポート連携" data-ko="상품 페이지, 관리 정보, 여권 링크" data-de="Produktseite, Pflegehinweis, Passlink" data-pt="Página do produto, cuidados, link do passaporte">商品頁、洗護資訊、護照連結</td>
+          </tr>
+          <tr>
+            <td data-zh="NFC" data-en="NFC" data-fr="NFC" data-es="NFC" data-ja="NFC" data-ko="NFC" data-de="NFC" data-pt="NFC">NFC</td>
+            <td data-zh="0–4 cm，貼近感應" data-en="0–4 cm, tap to read" data-fr="0 à 4 cm, par contact" data-es="0–4 cm, por contacto" data-ja="0〜4 cm、かざして読取" data-ko="0~4 cm, 접촉 판독" data-de="0–4 cm, zum Antippen" data-pt="0–4 cm, por aproximação">0–4 cm，貼近感應</td>
+            <td data-zh="支援 NFC 的手機" data-en="Phones with NFC" data-fr="Téléphones compatibles NFC" data-es="Móviles con NFC" data-ja="NFC 対応スマホ" data-ko="NFC 지원 스마트폰" data-de="NFC-fähige Telefone" data-pt="Celulares com NFC">支援 NFC 的手機</td>
+            <td data-zh="防偽、會員、回購一鍵" data-en="Authentication, membership, one-tap reorder" data-fr="Authentification, fidélité, réassort en un geste" data-es="Autenticidad, fidelización, recomprar en un toque" data-ja="真贋判定、会員登録、再購入" data-ko="정품 인증, 멤버십, 원클릭 재구매" data-de="Echtheit, Kundenbindung, Nachbestellung per Tipp" data-pt="Autenticidade, fidelidade, recompra em um toque">防偽、會員、回購一鍵</td>
+          </tr>
+          <tr>
+            <td data-zh="UHF RFID" data-en="UHF RFID" data-fr="RFID UHF" data-es="RFID UHF" data-ja="UHF RFID" data-ko="UHF RFID" data-de="UHF-RFID" data-pt="RFID UHF">UHF RFID</td>
+            <td data-zh="1–8 m，可整箱讀" data-en="1–8 m, whole carton" data-fr="1 à 8 m, carton entier" data-es="1–8 m, caja completa" data-ja="1〜8 m、箱ごと読取" data-ko="1~8 m, 박스 단위 판독" data-de="1–8 m, ganzer Karton" data-pt="1–8 m, caixa inteira">1–8 m，可整箱讀</td>
+            <td data-zh="手持讀取器、門市閘門" data-en="Handheld readers, store gates" data-fr="Lecteurs portables, portiques" data-es="Lectores de mano, pórticos" data-ja="ハンディリーダー、店舗ゲート" data-ko="핸디 리더, 매장 게이트" data-de="Handleser, Filialtore" data-pt="Leitores manuais, pórticos">手持讀取器、門市閘門</td>
+            <td data-zh="收發貨盤點、門市庫存、防盜" data-en="Receiving, stock counts, anti-theft" data-fr="Réception, inventaires, antivol" data-es="Recepción, inventarios, antirrobo" data-ja="入出荷検品、店頭在庫、万引き対策" data-ko="입출고 검수, 매장 재고, 도난 방지" data-de="Wareneingang, Inventur, Diebstahlschutz" data-pt="Recebimento, inventário, antifurto">收發貨盤點、門市庫存、防盜</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="每件增加多少成本" data-en="What each carrier adds to the unit cost" data-fr="Ce que chaque support ajoute au prix unitaire" data-es="Qué añade cada soporte al coste unitario" data-ja="1枚あたりいくら増えるか" data-ko="장당 비용이 얼마나 늘어나는가" data-de="Was jeder Träger pro Stück kostet" data-pt="Quanto cada suporte acrescenta por peça">每件增加多少成本</h2>
+
+      <ul>
+        <li data-zh="QR 碼：只有油墨與版面成本，同一張吊牌上多印一個 15 × 15 mm 的碼，單價基本不變；真正的成本在後端網頁與維護。" data-en="QR code: ink and space only. Adding one 15 × 15 mm code to a tag you already print barely moves the unit price; the real cost sits in the landing page and its upkeep." data-fr="QR code : encre et place uniquement. Ajouter un code de 15 × 15 mm sur un hangtag déjà imprimé ne change presque pas le prix unitaire ; le coût réel est la page d&#x27;arrivée et sa maintenance." data-es="Código QR: solo tinta y espacio. Añadir un código de 15 × 15 mm a un colgante que ya imprimes apenas mueve el precio unitario; el coste real está en la página de destino y su mantenimiento." data-ja="QR コード：インキと版面のみ。既に印刷している下げ札に 15 × 15 mm のコードを1つ足しても単価はほぼ変わりません。実際のコストは遷移先ページとその運用です。" data-ko="QR 코드: 잉크와 지면뿐입니다. 이미 인쇄하는 행택에 15 × 15 mm 코드를 하나 더해도 단가는 거의 변하지 않습니다. 실제 비용은 연결 페이지와 운영입니다." data-de="QR-Code: nur Farbe und Fläche. Ein zusätzlicher Code von 15 × 15 mm auf einem ohnehin gedruckten Anhänger bewegt den Stückpreis kaum; die realen Kosten liegen in der Zielseite und ihrer Pflege." data-pt="QR code: só tinta e espaço. Acrescentar um código de 15 × 15 mm numa etiqueta já impressa quase não altera o preço unitário; o custo real está na página de destino e na manutenção.">QR 碼：只有油墨與版面成本，同一張吊牌上多印一個 15 × 15 mm 的碼，單價基本不變；真正的成本在後端網頁與維護。</li>
+        <li data-zh="NFC：一枚嵌片（inlay）加上貼合或縫入工序，起訂量 3,000–5,000 件時，通常是同尺寸印刷 QR 的 10–25 倍；小批量倍數更高。" data-en="NFC: an inlay plus a laminating or sewing step. At 3,000–5,000 pieces it typically runs 10–25× a printed QR of the same area; below that the multiple grows fast." data-fr="NFC : un inlay plus une étape de contrecollage ou de couture. À 3 000–5 000 pièces, comptez 10 à 25 fois un QR imprimé de même surface ; en dessous, le multiple grimpe vite." data-es="NFC: un inlay más un paso de laminado o costura. Entre 3.000 y 5.000 piezas suele costar 10–25 veces un QR impreso del mismo tamaño; por debajo, el múltiplo sube rápido." data-ja="NFC：インレーと貼合または縫い込み工程が必要です。3,000〜5,000 枚では同面積の印刷 QR の概ね 10〜25 倍。それ以下の数量では倍率がさらに上がります。" data-ko="NFC: 인레이와 합지 또는 봉제 공정이 필요합니다. 3,000~5,000장에서는 같은 면적의 인쇄 QR의 대략 10~25배이며, 수량이 적으면 배수가 더 커집니다." data-de="NFC: ein Inlay plus Kaschier- oder Nähschritt. Bei 3.000–5.000 Stück liegt der Preis meist beim 10- bis 25-Fachen eines gedruckten QR-Codes gleicher Fläche; darunter steigt der Faktor schnell." data-pt="NFC: um inlay mais uma etapa de laminação ou costura. Entre 3.000 e 5.000 peças costuma ficar de 10 a 25 vezes um QR impresso de mesma área; abaixo disso o múltiplo sobe rápido.">NFC：一枚嵌片（inlay）加上貼合或縫入工序，起訂量 3,000–5,000 件時，通常是同尺寸印刷 QR 的 10–25 倍；小批量倍數更高。</li>
+        <li data-zh="UHF RFID：嵌片加天線，同樣量級下約為印刷 QR 的 5–15 倍，另加寫碼與逐件驗讀的人工。" data-en="UHF RFID: an inlay with an antenna, roughly 5–15× a printed QR at the same volume, plus encoding and per-piece read verification labour." data-fr="RFID UHF : un inlay avec antenne, environ 5 à 15 fois un QR imprimé au même volume, plus l&#x27;encodage et la vérification unitaire." data-es="RFID UHF: un inlay con antena, unas 5–15 veces un QR impreso al mismo volumen, más la codificación y la verificación pieza a pieza." data-ja="UHF RFID：アンテナ付きインレーで、同数量なら印刷 QR の概ね 5〜15 倍。さらに書き込みと1枚ずつの読取検証の工数が加わります。" data-ko="UHF RFID: 안테나가 있는 인레이로 같은 수량에서 인쇄 QR의 대략 5~15배이며, 여기에 인코딩과 개별 판독 검증 인건비가 붙습니다." data-de="UHF-RFID: ein Inlay mit Antenne, bei gleicher Menge etwa das 5- bis 15-Fache eines gedruckten QR-Codes, dazu Kodierung und Prüfung jeder Einheit." data-pt="RFID UHF: um inlay com antena, cerca de 5 a 15 vezes um QR impresso no mesmo volume, mais a gravação e a verificação individual de leitura.">UHF RFID：嵌片加天線，同樣量級下約為印刷 QR 的 5–15 倍，另加寫碼與逐件驗讀的人工。</li>
+        <li data-zh="別忘了隱形成本：寫碼錯誤、讀取率不達標要重做整批；吊牌與洗標數量不一致時的對帳工時。這些通常比載體本身貴。" data-en="Do not forget the hidden cost: a bad encoding batch or a read rate below target means rework on the whole lot, and reconciling hang tag quantities against care label quantities costs labour. These usually exceed the carrier price itself." data-fr="N&#x27;oubliez pas les coûts cachés : un lot mal encodé ou un taux de lecture insuffisant impose de refaire la série, et le rapprochement des quantités entre hangtags et étiquettes d&#x27;entretien coûte du temps. Cela dépasse souvent le prix du support." data-es="No olvides los costes ocultos: un lote mal codificado o una tasa de lectura baja obliga a rehacer la serie, y cuadrar cantidades entre colgantes y etiquetas de cuidado cuesta horas. Suele superar el precio del soporte." data-ja="見えにくいコストも忘れずに。書き込み不良や読取率不足は全数やり直しになり、下げ札と洗濯表示の数量照合にも工数がかかります。多くは媒体そのものの価格を上回ります。" data-ko="숨은 비용도 있습니다. 인코딩 불량이나 판독률 미달은 로트 전체 재작업으로 이어지고, 행택과 취급 라벨의 수량 대사에도 인건비가 듭니다. 대개 매체 가격보다 큽니다." data-de="Versteckte Kosten nicht vergessen: Ein fehlerhaft kodierter Posten oder eine zu niedrige Leserate bedeutet Nacharbeit für die ganze Serie, und der Abgleich der Mengen von Anhängern und Pflegeetiketten kostet Zeit. Das übersteigt meist den Preis des Trägers." data-pt="Não esqueça o custo oculto: lote mal gravado ou taxa de leitura abaixo do alvo significa refazer a série, e conciliar quantidades entre etiquetas penduradas e etiquetas de conservação custa mão de obra. Em geral supera o preço do suporte.">別忘了隱形成本：寫碼錯誤、讀取率不達標要重做整批；吊牌與洗標數量不一致時的對帳工時。這些通常比載體本身貴。</li>
+      </ul>
+
+      <h2 data-zh="各自真正能解決什麼" data-en="What each one actually enables" data-fr="Ce que chacun permet réellement" data-es="Qué permite realmente cada uno" data-ja="それぞれが実際に解決できること" data-ko="각 매체가 실제로 해결하는 것" data-de="Was jeder Träger wirklich leistet" data-pt="O que cada um realmente resolve">各自真正能解決什麼</h2>
+
+      <ul>
+        <li data-zh="QR：一碼通用——商品頁、纖維成分、洗護影片、回饋表單、護照資料。缺點是需要顧客主動對焦，實務掃描率通常在個位數到兩成之間。" data-en="QR: one code, many destinations — product page, fibre content, a care video, a feedback form, passport data. The weakness is that it needs a deliberate scan; in practice scan rates land in the single digits to around twenty percent." data-fr="QR : un code, plusieurs destinations — page produit, composition, vidéo d&#x27;entretien, formulaire, données du passeport. La faiblesse reste le scan volontaire ; en pratique, les taux vont de quelques pour cent à environ vingt." data-es="QR: un código, muchos destinos — página de producto, composición, vídeo de cuidado, formulario, datos del pasaporte. La debilidad es que exige escaneo voluntario; en la práctica las tasas van de un dígito a cerca del veinte por ciento." data-ja="QR：1つのコードで多用途——商品ページ、混用率、ケア動画、アンケート、パスポート情報。弱みは能動的スキャンが必要な点で、実際の読取率は数％〜20％程度です。" data-ko="QR: 하나의 코드로 여러 목적 — 상품 페이지, 혼용률, 관리 영상, 설문, 여권 정보. 약점은 능동적 스캔이 필요하다는 점이며, 실제 스캔율은 한 자릿수에서 20% 안팎입니다." data-de="QR: ein Code, viele Ziele – Produktseite, Faserzusammensetzung, Pflegevideo, Feedbackformular, Passdaten. Schwachpunkt ist der bewusste Scan; real liegen die Raten im einstelligen bis rund zwanzigprozentigen Bereich." data-pt="QR: um código, vários destinos — página do produto, composição, vídeo de cuidados, formulário, dados do passaporte. A fraqueza é exigir leitura deliberada; na prática as taxas ficam de um dígito a cerca de vinte por cento.">QR：一碼通用——商品頁、纖維成分、洗護影片、回饋表單、護照資料。缺點是需要顧客主動對焦，實務掃描率通常在個位數到兩成之間。</li>
+        <li data-zh="NFC：貼近即開，不用對焦也不用裝 App；可做防拆與一次性寫入，適合高端線、限量款與會員回購。限制是四公分與機型覆蓋。" data-en="NFC: tap and open, no framing, no app; tamper evidence and one-time write are possible. Good for premium and limited lines, membership and reorder. Limits: four centimetres and device coverage." data-fr="NFC : approcher et ouvrir, sans cadrage ni application ; l&#x27;inviolabilité et l&#x27;écriture unique sont possibles. Adapté au premium, aux séries limitées, à la fidélité. Limites : quatre centimètres et parc de téléphones." data-es="NFC: acercar y abrir, sin encuadrar ni instalar app; permite precinto y escritura única. Adecuado para premium, series limitadas, fidelización. Límites: cuatro centímetros y cobertura de modelos." data-ja="NFC：かざすだけで開き、画面に収める必要もアプリも不要。開封検知や一回書き込みも可能で、プレミアム・限定品・会員施策に向きます。制約は4 cm と対応機種です。" data-ko="NFC: 대면 바로 열리고 화면 맞춤도 앱도 필요 없습니다. 개봉 감지와 1회 쓰기도 가능해 프리미엄·한정판·멤버십에 적합합니다. 제약은 4 cm와 기종 커버리지입니다." data-de="NFC: antippen und öffnen, kein Erfassen, keine App; Manipulationsschutz und Einmalbeschreibung sind möglich. Gut für Premium, Limited Editions, Kundenbindung. Grenzen: vier Zentimeter und Geräteabdeckung." data-pt="NFC: aproximar e abrir, sem enquadrar e sem app; permite lacre e gravação única. Indicado para premium, séries limitadas e fidelidade. Limites: quatro centímetros e cobertura de aparelhos.">NFC：貼近即開，不用對焦也不用裝 App；可做防拆與一次性寫入，適合高端線、限量款與會員回購。限制是四公分與機型覆蓋。</li>
+        <li data-zh="RFID：整箱一次讀完，盤點準確率可到 95–99%，適合多門市、全渠道、需要高頻盤點的規模。單件零售的顧客端體驗幫助有限。" data-en="RFID: a whole carton in one pass, with stock accuracy of 95–99 %. Fits multi-store, omnichannel operations that count often. It adds little to the individual customer&#x27;s experience." data-fr="RFID : un carton entier en une passe, avec une précision de stock de 95 à 99 %. Adapté au multi-boutiques et à l&#x27;omnicanal qui compte souvent. L&#x27;apport pour le client final reste faible." data-es="RFID: una caja completa de una pasada, con exactitud de stock del 95–99 %. Encaja en operaciones multimarca y omnicanal que cuentan a menudo. Aporta poco a la experiencia del cliente final." data-ja="RFID：箱ごと一括読取で在庫精度 95〜99％。多店舗・オムニチャネルで高頻度の棚卸しに向きます。一方、個々の顧客体験への寄与は限定的です。" data-ko="RFID: 박스 단위 일괄 판독으로 재고 정확도 95~99%. 다점포·옴니채널의 고빈도 재고조사에 맞습니다. 개별 고객 경험에는 기여가 적습니다." data-de="RFID: ein Karton in einem Durchgang, Bestandsgenauigkeit 95–99 %. Passt zu Filialnetzen und Omnichannel mit häufiger Inventur. Für den einzelnen Kunden bringt es wenig." data-pt="RFID: uma caixa inteira em uma passada, com acurácia de estoque de 95 a 99 %. Serve para redes e omnicanal que contam com frequência. Para o cliente final acrescenta pouco.">RFID：整箱一次讀完，盤點準確率可到 95–99%，適合多門市、全渠道、需要高頻盤點的規模。單件零售的顧客端體驗幫助有限。</li>
+      </ul>
+
+      <h2 data-zh="歐盟數位產品護照讓 QR 變成預設選項" data-en="The Digital Product Passport pushes QR toward the default" data-fr="Le passeport numérique pousse le QR par défaut" data-es="El pasaporte digital empuja el QR por defecto" data-ja="デジタル製品パスポートが QR を既定解にする" data-ko="디지털 제품 여권이 QR을 기본값으로 만듭니다" data-de="Der digitale Produktpass macht QR zum Standard" data-pt="O passaporte digital empurra o QR para o padrão">歐盟數位產品護照讓 QR 變成預設選項</h2>
+
+      <p data-zh="歐盟《永續產品生態設計條例》(ESPR, EU 2024/1781) 建立了數位產品護照架構，要求每件產品有一個可透過資料載體存取的唯一識別碼；紡織品的授權法案與適用時間仍在推進中，所以現在談的不是「要不要做」，而是「先預留哪一種載體」。對跨境服裝來說，QR 是唯一不需要專用讀取器、海關與顧客都能讀的方案；NFC 在消費者端體驗更好但要貼近；RFID 的成本與讀取器門檻決定了它只適合有規模的營運端。實務做法是同一張吊牌上並存：QR 對外，RFID 或 NFC 對內。" data-en="The EU Ecodesign for Sustainable Products Regulation (ESPR, EU 2024/1781) sets up the Digital Product Passport framework: every product carries a unique identifier reachable through a data carrier. The textiles delegated act and its application dates are still moving, so the question is not whether to prepare but which carrier to reserve first. For cross-border apparel, QR is the only option that needs no dedicated reader and works for customs and customers alike. NFC gives a better consumer moment but requires contact. RFID&#x27;s cost and reader investment make it an operations tool. In practice, the calm answer is to put both on one tag: QR outward, RFID or NFC inward." data-fr="Le règlement (UE) 2024/1781 sur l&#x27;écoconception (ESPR) instaure le cadre du passeport numérique : chaque produit porte un identifiant unique accessible via un support de données. L&#x27;acte délégué textile et ses dates d&#x27;application évoluent encore : la question n&#x27;est donc pas de savoir s&#x27;il faut se préparer, mais quel support réserver d&#x27;abord. Pour l&#x27;habillement transfrontalier, le QR est la seule option sans lecteur dédié, lisible par la douane comme par le client. Le NFC offre un meilleur moment client mais exige le contact. Le coût du RFID et l&#x27;investissement en lecteurs en font un outil d&#x27;exploitation. La réponse posée : les deux sur un même hangtag, QR vers l&#x27;extérieur, RFID ou NFC vers l&#x27;intérieur." data-es="El Reglamento (UE) 2024/1781 de diseño ecológico (ESPR) crea el marco del pasaporte digital: cada producto lleva un identificador único accesible mediante un soporte de datos. El acto delegado de textil y sus fechas aún se mueven, así que la pregunta no es si prepararse, sino qué soporte reservar primero. Para prenda transfronteriza, el QR es la única opción sin lector dedicado, legible por aduana y cliente. El NFC da mejor momento de cliente pero exige contacto. El coste del RFID y la inversión en lectores lo convierten en herramienta de operación. La respuesta serena: ambos en el mismo colgante, QR hacia fuera y RFID o NFC hacia dentro." data-ja="EU の持続可能な製品のエコデザイン規則（ESPR、EU 2024/1781）はデジタル製品パスポートの枠組みを定め、各製品にデータ媒体経由で到達できる一意の識別子を求めます。繊維品の委任法令と適用時期は流動的なため、問いは「やるかどうか」ではなく「どの媒体を先に確保するか」です。越境衣料では、専用リーダー不要で税関も顧客も読める QR が唯一の選択肢です。NFC は顧客体験に優れますが接触が必要。RFID はコストとリーダー投資の面で運用側の道具です。実務的には1枚の下げ札に併存させ、QR は外向け、RFID か NFC は内向けに使います。" data-ko="EU 지속가능 제품 에코디자인 규정(ESPR, EU 2024/1781)은 디지털 제품 여권 체계를 만들고, 모든 제품에 데이터 매체로 접근 가능한 고유 식별자를 요구합니다. 섬유 위임법과 적용 시점은 아직 유동적이므로 질문은 &#x27;할지 말지&#x27;가 아니라 &#x27;어떤 매체를 먼저 확보할지&#x27;입니다. 해외 의류에서는 전용 리더 없이 세관과 고객 모두 읽을 수 있는 QR이 유일한 선택입니다. NFC는 고객 경험이 좋지만 접촉이 필요합니다. RFID는 비용과 리더 투자 때문에 운영용 도구입니다. 실무적인 답은 한 장의 행택에 둘을 병존시키는 것입니다. QR은 외부용, RFID나 NFC는 내부용입니다." data-de="Die EU-Ökodesign-Verordnung (ESPR, EU 2024/1781) schafft den Rahmen für den digitalen Produktpass: Jedes Produkt trägt eine eindeutige Kennung, die über einen Datenträger erreichbar ist. Der delegierte Rechtsakt für Textilien und seine Termine sind noch in Bewegung – die Frage ist also nicht, ob man sich vorbereitet, sondern welchen Träger man zuerst reserviert. Für Bekleidung im Export ist QR die einzige Option ohne eigenes Lesegerät, lesbar für Zoll und Kunden. NFC bietet den schöneren Kundenmoment, verlangt aber Kontakt. RFID bleibt wegen Kosten und Lesergeräten ein Operativwerkzeug. Die ruhige Antwort: beides auf einem Anhänger, QR nach außen, RFID oder NFC nach innen." data-pt="O Regulamento (UE) 2024/1781 de conceção ecológica (ESPR) cria o quadro do passaporte digital: cada produto leva um identificador único acessível por um suporte de dados. O ato delegado têxtil e suas datas ainda se movem, então a pergunta não é se preparar, mas qual suporte reservar primeiro. Para vestuário transfronteiriço, o QR é a única opção sem leitor dedicado, legível pela alfândega e pelo cliente. O NFC dá um momento de cliente melhor, mas exige contacto. O custo do RFID e o investimento em leitores fazem dele ferramenta de operação. A resposta serena é colocar os dois na mesma etiqueta: QR para fora, RFID ou NFC para dentro.">歐盟《永續產品生態設計條例》(ESPR, EU 2024/1781) 建立了數位產品護照架構，要求每件產品有一個可透過資料載體存取的唯一識別碼；紡織品的授權法案與適用時間仍在推進中，所以現在談的不是「要不要做」，而是「先預留哪一種載體」。對跨境服裝來說，QR 是唯一不需要專用讀取器、海關與顧客都能讀的方案；NFC 在消費者端體驗更好但要貼近；RFID 的成本與讀取器門檻決定了它只適合有規模的營運端。實務做法是同一張吊牌上並存：QR 對外，RFID 或 NFC 對內。</p>
+
+      <h2 data-zh="各市場對載體與標示的具體要求" data-en="What each market actually requires of the carrier" data-fr="Ce que chaque marché exige du support" data-es="Qué exige cada mercado del soporte" data-ja="市場ごとに求められる表示と媒体" data-ko="시장별로 요구되는 표시와 매체" data-de="Was die einzelnen Märkte verlangen" data-pt="O que cada mercado exige do suporte">各市場對載體與標示的具體要求</h2>
+
+      <p data-zh="台灣依《商品標示法》與服飾標示基準，須以中文標示纖維成分、洗滌方式、產地與進口商；數位連結可以是輔助，不能取代實體中文標示。歐盟在 GPSR (EU 2023/988) 下要求製造商與歐盟責任方的可追溯資訊，加上 (EU) No 1007/2011 的纖維成分與 EN ISO 3758 洗護符號；比利時、法國等地還要求以當地語言呈現。日本依家庭用品品質表示法，混用率、洗濯表示與原産国須以日語標示；韓國依《品質經營及工產品安全管理法》須以韓語標示洗護與品質資訊；巴西 CDC (Lei nº 8.078/1990) 要求葡萄牙語標示與責任方。結論一致：資料載體是加分項，法定標示必須實體、可讀、可留存。" data-en="In every market the legal marking has to stay physical, readable and durable; a digital carrier is an addition, not a substitute. The EU asks for manufacturer and EU responsible-person traceability under GPSR (EU 2023/988), fibre composition under (EU) No 1007/2011 and care symbols per EN ISO 3758, with several member states requiring the local language. Japan requires composition, care and country of origin in Japanese under the Household Goods Quality Labelling Act. Korea requires care marking in Korean under its quality and safety management act. Brazil&#x27;s CDC (Lei nº 8.078/1990) requires Portuguese wording and an identified responsible party. Plan the carrier around the printed block, not instead of it." data-fr="Partout, le marquage légal doit rester physique, lisible et durable : un support numérique s&#x27;ajoute, il ne remplace pas. L&#x27;Union demande la traçabilité du fabricant et de la personne responsable (GPSR, UE 2023/988), la composition fibreuse (UE) n° 1007/2011 et les symboles d&#x27;entretien EN ISO 3758, plusieurs États membres exigeant leur langue. Le Japon impose composition, entretien et origine en japonais ; la Corée, le marquage d&#x27;entretien en coréen. Le CDC brésilien (Lei n° 8.078/1990) exige le portugais et un responsable identifié. Concevez le support autour du bloc imprimé, pas à sa place." data-es="En todos los mercados el marcado legal debe seguir siendo físico, legible y duradero: el soporte digital se suma, no sustituye. La Unión exige trazabilidad del fabricante y del responsable (GPSR, UE 2023/988), composición de fibras (UE) n.º 1007/2011 y símbolos de cuidado EN ISO 3758, con varios Estados miembros exigiendo su idioma. Japón impone composición, cuidado y origen en japonés; Corea, el marcado de cuidado en coreano. El CDC brasileño (Lei n.º 8.078/1990) exige portugués y responsable identificado. Diseña el soporte en torno al bloque impreso, no en su lugar." data-ja="どの市場でも法定表示は物理的で読みやすく耐久性がある必要があり、デジタル媒体は追加であって代替ではありません。EU は GPSR（EU 2023/988）による製造者・EU 責任者の追跡情報、(EU) No 1007/2011 の混用率、EN ISO 3758 の洗濯表示を求め、加盟国によっては現地語表記が必要です。日本は家庭用品品質表示法により混用率・洗濯表示・原産国の日本語表記が必須。韓国は品質表示と取扱表示を韓国語で。ブラジルは CDC（Lei nº 8.078/1990）でポルトガル語表記と責任者の明示が必要です。媒体は印刷ブロックの代替ではなく追加として設計してください。" data-ko="어느 시장이든 법정 표시는 물리적이고 읽기 쉬우며 내구성이 있어야 합니다. 디지털 매체는 추가 수단이며 대체가 아닙니다. EU는 GPSR(EU 2023/988)에 따른 제조사·EU 책임자 추적 정보, (EU) No 1007/2011의 혼용률, EN ISO 3758 관리 기호를 요구하며 일부 회원국은 자국어 표기를 요구합니다. 일본은 家庭用品品質表示法에 따라 혼용률·洗濯表示·原産国을 일본어로, 한국은 품질경영 및 공산품 안전관리법에 따라 취급 표시와 품질 표시를 한국어로 표기해야 합니다. 브라질은 CDC(Lei nº 8.078/1990)에 따라 포르투갈어 표기와 책임자 명시가 필요합니다. 매체는 인쇄 블록을 대체하지 않고 보완하도록 설계하세요." data-de="In jedem Markt muss die gesetzliche Kennzeichnung physisch, lesbar und haltbar bleiben; ein digitaler Träger kommt hinzu, er ersetzt sie nicht. Die EU verlangt Rückverfolgbarkeit von Hersteller und verantwortlicher Person (GPSR, EU 2023/988), die Faserzusammensetzung nach (EU) Nr. 1007/2011 und Pflegesymbole nach EN ISO 3758, in mehreren Mitgliedstaaten in der Landessprache. Japan verlangt Zusammensetzung, Pflege und Herkunft auf Japanisch, Korea die Pflegekennzeichnung auf Koreanisch. Brasiliens CDC (Lei nº 8.078/1990) fordert portugiesische Angaben und einen benannten Verantwortlichen. Den Träger um den gedruckten Block herum planen, nicht an seiner Stelle." data-pt="Em qualquer mercado a marcação legal precisa continuar física, legível e durável; o suporte digital soma, não substitui. A União Europeia exige rastreabilidade do fabricante e do responsável (GPSR, UE 2023/988), composição têxtil pelo Regulamento (UE) n.º 1007/2011 e símbolos de conservação da EN ISO 3758, com vários Estados-membros exigindo a língua local. O Japão exige composição, cuidados e origem em japonês; a Coreia, a marcação de cuidados em coreano. No Brasil, o CDC (Lei nº 8.078/1990) exige informações em português e responsável identificado, com apoio das normas ABNT NBR. Projete o suporte em torno do bloco impresso, não no lugar dele.">台灣依《商品標示法》與服飾標示基準，須以中文標示纖維成分、洗滌方式、產地與進口商；數位連結可以是輔助，不能取代實體中文標示。歐盟在 GPSR (EU 2023/988) 下要求製造商與歐盟責任方的可追溯資訊，加上 (EU) No 1007/2011 的纖維成分與 EN ISO 3758 洗護符號；比利時、法國等地還要求以當地語言呈現。日本依家庭用品品質表示法，混用率、洗濯表示與原産国須以日語標示；韓國依《品質經營及工產品安全管理法》須以韓語標示洗護與品質資訊；巴西 CDC (Lei nº 8.078/1990) 要求葡萄牙語標示與責任方。結論一致：資料載體是加分項，法定標示必須實體、可讀、可留存。</p>
+
+      <h2 data-zh="洗滌、金屬與染料對讀取率的影響" data-en="Washing, metal and dye: what survives" data-fr="Lavage, métal et teinture : ce qui survit" data-es="Lavado, metal y tinte: qué sobrevive" data-ja="洗濯・金属・染料が読取率に与える影響" data-ko="세탁·금속·염료가 판독률에 미치는 영향" data-de="Wäsche, Metall und Farbstoff: was überlebt" data-pt="Lavagem, metal e corante: o que sobrevive">洗滌、金屬與染料對讀取率的影響</h2>
+
+      <ul>
+        <li data-zh="縫進洗標的 RFID 必須過洗滌測試：依 EN ISO 3758 的洗護符號設定條件，量測 25 次與 50 次洗後讀取率，而不是只看外觀有沒有壞。" data-en="An RFID inlay sewn into a care label must be wash-tested: run the conditions behind the EN ISO 3758 care symbols and measure read rate after 25 and 50 cycles, not just whether it looks intact." data-fr="Un inlay RFID cousu dans une étiquette d&#x27;entretien doit subir un test de lavage : appliquez les conditions des symboles EN ISO 3758 et mesurez le taux de lecture après 25 et 50 cycles, pas seulement l&#x27;aspect." data-es="Un inlay RFID cosido en la etiqueta de cuidado debe someterse a lavado: aplica las condiciones de los símbolos EN ISO 3758 y mide la tasa de lectura a 25 y 50 ciclos, no solo el aspecto." data-ja="洗濯表示に縫い込む RFID は洗濯試験が必須です。EN ISO 3758 の洗濯記号が示す条件で 25 回・50 回後の読取率を測定します。見た目の劣化だけでは不十分です。" data-ko="취급 라벨에 봉제되는 RFID는 세탁 시험이 필수입니다. EN ISO 3758 관리 기호가 뜻하는 조건으로 25회·50회 세탁 후 판독률을 측정해야 하며, 외관만 보면 안 됩니다." data-de="Ein in ein Pflegeetikett eingenähtes RFID-Inlay muss waschgetestet werden: Bedingungen der EN ISO 3758 Pflegesymbole ansetzen und die Leserate nach 25 und 50 Zyklen messen, nicht nur die Optik prüfen." data-pt="Um inlay RFID costurado na etiqueta de conservação precisa de ensaio de lavagem: aplique as condições dos símbolos da EN ISO 3758 e meça a taxa de leitura após 25 e 50 ciclos, não apenas o aspeto.">縫進洗標的 RFID 必須過洗滌測試：依 EN ISO 3758 的洗護符號設定條件，量測 25 次與 50 次洗後讀取率，而不是只看外觀有沒有壞。</li>
+        <li data-zh="金屬扣、拉鍊與亮片會讓天線失諧：天線與金屬件至少留 5 mm，否則讀取距離會掉一半以上。" data-en="Metal buttons, zips and sequins detune the antenna: keep at least 5 mm between antenna and metal, or read range can halve." data-fr="Boutons métalliques, fermetures et sequins désaccordent l&#x27;antenne : laissez au moins 5 mm entre antenne et métal, sinon la portée peut chuter de moitié." data-es="Botones metálicos, cremalleras y lentejuelas desintonizan la antena: deja al menos 5 mm entre antena y metal, o el alcance puede caer a la mitad." data-ja="金属ボタン・ファスナー・スパンコールはアンテナを同調ずれさせます。アンテナと金属は最低 5 mm 離してください。離さないと読取距離が半分以下になります。" data-ko="금속 단추, 지퍼, 스팽글은 안테나 공진을 흐트러뜨립니다. 안테나와 금속 사이를 최소 5 mm 띄우세요. 그렇지 않으면 판독 거리가 절반 이하로 줄 수 있습니다." data-de="Metallknöpfe, Reißverschlüsse und Pailletten verstimmen die Antenne: mindestens 5 mm Abstand halten, sonst halbiert sich die Reichweite." data-pt="Botões metálicos, zíperes e lantejoulas desafinam a antena: mantenha pelo menos 5 mm entre antena e metal, ou o alcance cai pela metade.">金屬扣、拉鍊與亮片會讓天線失諧：天線與金屬件至少留 5 mm，否則讀取距離會掉一半以上。</li>
+        <li data-zh="深色染整與柔軟劑殘留會影響貼合牢度，NFC 嵌片在深色厚重布料上容易在洗後起翹，打樣階段就要洗一次再看。" data-en="Dark dye lots and softener residue affect bond strength; an NFC inlay on heavy dark fabric tends to lift after washing, so wash a prototype before approving." data-fr="Les bains foncés et les résidus d&#x27;adoucissant nuisent à l&#x27;adhérence ; un inlay NFC sur tissu épais foncé se décolle souvent après lavage. Lavez un prototype avant validation." data-es="Los baños oscuros y los restos de suavizante afectan la adherencia; un inlay NFC sobre tejido grueso y oscuro suele despegarse tras el lavado. Lava un prototipo antes de aprobar." data-ja="濃色の染色や柔軟剤の残留は接着強度に影響します。厚手の濃色素材では NFC インレーが洗濯後に浮きやすいため、承認前に試作を1回洗って確認してください。" data-ko="진한 염색과 유연제 잔류물은 접착 강도에 영향을 줍니다. 두꺼운 진색 원단의 NFC 인레이는 세탁 후 들뜨기 쉬우므로 승인 전에 시제품을 한 번 세탁해 확인하세요." data-de="Dunkle Färbungen und Weichmacherreste beeinträchtigen die Haftung; ein NFC-Inlay auf schwerem dunklem Stoff löst sich nach der Wäsche gern. Vor der Freigabe ein Muster waschen." data-pt="Banhos escuros e resíduos de amaciante afetam a aderência; um inlay NFC em tecido grosso e escuro costuma descolar após a lavagem. Lave um protótipo antes de aprovar.">深色染整與柔軟劑殘留會影響貼合牢度，NFC 嵌片在深色厚重布料上容易在洗後起翹，打樣階段就要洗一次再看。</li>
+        <li data-zh="QR 的要求最低：對比度夠、模組不小於 0.4 mm、四周留 3 mm 空白區，印在霧面或消光膜上比亮面好掃。" data-en="QR asks least: enough contrast, modules no smaller than 0.4 mm, a 3 mm quiet zone, and a matte or soft-touch surface scans better than gloss." data-fr="Le QR est le moins exigeant : contraste suffisant, modules d&#x27;au moins 0,4 mm, zone de silence de 3 mm ; un support mat ou soft touch se scanne mieux qu&#x27;un brillant." data-es="El QR es el menos exigente: contraste suficiente, módulos de al menos 0,4 mm, zona de silencio de 3 mm; un acabado mate se escanea mejor que uno brillante." data-ja="QR の条件は最も緩やかです。十分なコントラスト、モジュール 0.4 mm 以上、周囲に 3 mm の余白。光沢よりマット／ソフトタッチの方が読み取りやすいです。" data-ko="QR은 조건이 가장 관대합니다. 충분한 대비, 모듈 0.4 mm 이상, 주변 3 mm 여백이 필요하며, 광택보다 무광·소프트터치가 잘 읽힙니다." data-de="QR verlangt am wenigsten: ausreichender Kontrast, Module nicht unter 0,4 mm, 3 mm Ruhezone; matt oder Soft-Touch lässt sich besser scannen als Glanz." data-pt="O QR exige menos: contraste suficiente, módulos de no mínimo 0,4 mm, zona de silêncio de 3 mm, e acabamento fosco lê melhor que brilhante.">QR 的要求最低：對比度夠、模組不小於 0.4 mm、四周留 3 mm 空白區，印在霧面或消光膜上比亮面好掃。</li>
+      </ul>
+
+      <h2 data-zh="選型對照表" data-en="A decision table" data-fr="Tableau de décision" data-es="Tabla de decisión" data-ja="選定早見表" data-ko="선정 대조표" data-de="Entscheidungstabelle" data-pt="Tabela de decisão">選型對照表</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="你的需求" data-en="If you need" data-fr="Si vous avez besoin" data-es="Si necesitas" data-ja="必要なこと" data-ko="필요한 것" data-de="Wenn Sie brauchen" data-pt="Se você precisa">你的需求</th>
+            <th data-zh="選哪個" data-en="Choose" data-fr="Choisir" data-es="Elige" data-ja="選ぶもの" data-ko="선택" data-de="Wählen" data-pt="Escolha">選哪個</th>
+            <th data-zh="理由" data-en="Why" data-fr="Pourquoi" data-es="Por qué" data-ja="理由" data-ko="이유" data-de="Warum" data-pt="Por quê">理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="合規資訊、護照連結、內容行銷" data-en="Compliance info, passport link, content marketing" data-fr="Informations réglementaires, lien passeport, contenu" data-es="Información normativa, enlace al pasaporte, contenido" data-ja="法令情報、パスポート連携、コンテンツ訴求" data-ko="규정 정보, 여권 링크, 콘텐츠 마케팅" data-de="Pflichtangaben, Passlink, Content-Marketing" data-pt="Informação regulatória, link do passaporte, conteúdo">合規資訊、護照連結、內容行銷</td>
+            <td data-zh="QR" data-en="QR" data-fr="QR" data-es="QR" data-ja="QR" data-ko="QR" data-de="QR" data-pt="QR">QR</td>
+            <td data-zh="零增量成本，任何手機可讀" data-en="No real added cost, readable by any phone" data-fr="Coût quasi nul, lisible par tout téléphone" data-es="Coste casi nulo, legible por cualquier móvil" data-ja="実質追加コストなし、どのスマホでも読める" data-ko="실질 추가 비용 없음, 모든 스마트폰 판독" data-de="Kaum Zusatzkosten, von jedem Telefon lesbar" data-pt="Custo quase nulo, legível por qualquer celular">零增量成本，任何手機可讀</td>
+          </tr>
+          <tr>
+            <td data-zh="高端感、防偽、會員回購" data-en="Premium feel, authentication, membership" data-fr="Sensation premium, authenticité, fidélité" data-es="Sensación premium, autenticidad, fidelización" data-ja="高級感、真贋判定、会員施策" data-ko="프리미엄 감성, 정품 인증, 멤버십" data-de="Premium-Anmutung, Echtheit, Kundenbindung" data-pt="Percepção premium, autenticidade, fidelidade">高端感、防偽、會員回購</td>
+            <td data-zh="NFC（可與 QR 並存）" data-en="NFC, ideally with QR" data-fr="NFC, idéalement avec QR" data-es="NFC, mejor con QR" data-ja="NFC（QR 併用が望ましい）" data-ko="NFC(QR 병행 권장)" data-de="NFC, am besten mit QR" data-pt="NFC, de preferência com QR">NFC（可與 QR 並存）</td>
+            <td data-zh="貼近即開，能做防拆" data-en="Opens on contact and can be tamper-evident" data-fr="Ouverture au contact, inviolabilité possible" data-es="Abre al contacto y permite precinto" data-ja="かざすだけで開き、開封検知も可能" data-ko="대면 열리고 개봉 감지 가능" data-de="Öffnet bei Berührung, manipulationssicher möglich" data-pt="Abre ao toque e permite lacre">貼近即開，能做防拆</td>
+          </tr>
+          <tr>
+            <td data-zh="多門市盤點、全渠道、收發貨" data-en="Multi-store counts, omnichannel, receiving" data-fr="Inventaires multi-boutiques, omnicanal, réception" data-es="Inventarios multi tienda, omnicanal, recepción" data-ja="多店舗棚卸し、オムニチャネル、入出荷" data-ko="다점포 재고조사, 옴니채널, 입출고" data-de="Inventur in Filialen, Omnichannel, Wareneingang" data-pt="Inventário multi loja, omnicanal, recebimento">多門市盤點、全渠道、收發貨</td>
+            <td data-zh="UHF RFID" data-en="UHF RFID" data-fr="RFID UHF" data-es="RFID UHF" data-ja="UHF RFID" data-ko="UHF RFID" data-de="UHF-RFID" data-pt="RFID UHF">UHF RFID</td>
+            <td data-zh="箱級讀取，95–99% 準確率" data-en="Carton-level reads at 95–99 % accuracy" data-fr="Lecture au carton, 95 à 99 % de précision" data-es="Lectura por caja con 95–99 % de exactitud" data-ja="箱単位で読め、精度 95〜99％" data-ko="박스 단위 판독, 정확도 95~99%" data-de="Lesen auf Karton-Ebene, 95–99 % Genauigkeit" data-pt="Leitura por caixa com 95–99 % de acurácia">箱級讀取，95–99% 準確率</td>
+          </tr>
+          <tr>
+            <td data-zh="預算最緊、只要顧客能查" data-en="Tight budget, customer lookup only" data-fr="Budget serré, simple consultation client" data-es="Presupuesto ajustado, solo consulta del cliente" data-ja="予算優先で、顧客が調べられれば十分" data-ko="예산이 빠듯하고 고객 조회만 필요" data-de="Knappes Budget, nur Kundenabfrage" data-pt="Orçamento apertado, só consulta do cliente">預算最緊、只要顧客能查</td>
+            <td data-zh="QR，先不要碰晶片" data-en="QR, skip the chip" data-fr="QR, sans puce" data-es="QR, sin chip" data-ja="QR のみ（チップは見送り）" data-ko="QR만(칩 제외)" data-de="QR, ohne Chip" data-pt="QR, sem chip">QR，先不要碰晶片</td>
+            <td data-zh="上千件重印的風險遠高於晶片價差" data-en="The risk of reprinting thousands outweighs the chip premium" data-fr="Le risque de réimprimer des milliers de pièces dépasse l&#x27;écart de prix" data-es="El riesgo de reimprimir miles supera la diferencia de precio" data-ja="数千枚の再刷リスクはチップ代差を上回ります" data-ko="수천 장 재인쇄 위험이 칩 가격 차이보다 큽니다" data-de="Das Risiko eines Nachdrucks von Tausenden wiegt schwerer als der Chip-Aufpreis" data-pt="O risco de reimprimir milhares pesa mais que o custo do chip">上千件重印的風險遠高於晶片價差</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout" data-zh="實務建議：先把數據後端決定好，再選載體。很多項目買了 NFC 或 RFID，最後卻卡在「掃到哪一頁、誰維護」——掃進去是首頁，比沒有碼更傷體驗。" data-en="Practical advice: decide the data destination before the carrier. Plenty of projects buy NFC or RFID and then stall on where the tap should land and who maintains that page. A scan that opens a homepage is worse than no code at all." data-fr="Conseil pratique : décidez de la destination des données avant le support. Beaucoup de projets achètent du NFC ou du RFID puis bloquent sur la page d&#x27;arrivée et son maintien. Un scan qui ouvre la page d&#x27;accueil est pire que pas de code du tout." data-es="Consejo práctico: decide el destino de los datos antes que el soporte. Muchos proyectos compran NFC o RFID y se atascan en a qué página debe llevar y quién la mantiene. Un escaneo que abre la portada es peor que no tener código." data-ja="実務的な助言：媒体より先にデータの行き先を決めてください。NFC や RFID を導入したのに「どこに飛ばすか、誰が運用するか」で止まる案件は少なくありません。トップページが開くだけのコードは、コードがないより体験を損ないます。" data-ko="실무 조언: 매체보다 데이터 목적지를 먼저 정하세요. NFC나 RFID를 도입하고도 &#x27;어디로 연결할지, 누가 운영할지&#x27;에서 멈추는 프로젝트가 많습니다. 홈페이지가 열리는 코드는 코드가 없는 것보다 나쁩니다." data-de="Praxistipp: Erst das Datenziel festlegen, dann den Träger. Viele Projekte kaufen NFC oder RFID und hängen dann bei der Frage, wohin der Scan führt und wer die Seite pflegt. Ein Scan, der auf der Startseite landet, ist schlechter als kein Code." data-pt="Conselho prático: defina o destino dos dados antes do suporte. Muitos projetos compram NFC ou RFID e travam em para onde o toque deve levar e quem mantém a página. Um scan que abre a home é pior do que não ter código.">實務建議：先把數據後端決定好，再選載體。很多項目買了 NFC 或 RFID，最後卻卡在「掃到哪一頁、誰維護」——掃進去是首頁，比沒有碼更傷體驗。</div>
+
+      <h2 data-zh="相關文章" data-en="Related reading" data-fr="À lire aussi" data-es="Lecturas relacionadas" data-ja="関連記事" data-ko="관련 글" data-de="Weiterlesen" data-pt="Leia também">相關文章</h2>
+
+      <ul>
+        <li><a href="nfc-hang-tag-guide.html" data-zh="NFC 吊牌怎麼做" data-en="NFC hang tags" data-fr="Hangtags NFC" data-es="Colgantes NFC" data-ja="NFC 下げ札" data-ko="NFC 행택" data-de="NFC-Anhänger" data-pt="Etiquetas NFC">NFC 吊牌怎麼做</a></li>
+        <li><a href="rfid-garment-labels.html" data-zh="RFID 服裝標籤" data-en="RFID garment labels" data-fr="Étiquettes RFID" data-es="Etiquetas RFID" data-ja="RFID 衣料ラベル" data-ko="RFID 의류 라벨" data-de="RFID-Bekleidungsetiketten" data-pt="Etiquetas RFID">RFID 服裝標籤</a></li>
+        <li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌 QR 碼實務" data-en="QR codes on hang tags" data-fr="QR codes sur hangtag" data-es="Códigos QR en colgantes" data-ja="下げ札の QR コード" data-ko="행택 QR 코드" data-de="QR-Codes am Anhänger" data-pt="QR codes na etiqueta">吊牌 QR 碼實務</a></li>
+        <li><a href="eu-digital-product-passport-trims.html" data-zh="歐盟數位產品護照與輔料" data-en="EU Digital Product Passport and trims" data-fr="Passeport numérique européen" data-es="Pasaporte digital europeo" data-ja="EU デジタル製品パスポート" data-ko="EU 디지털 제품 여권" data-de="EU-Produktpass und Accessoires" data-pt="Passaporte digital europeu">歐盟數位產品護照與輔料</a></li>
+        <li><a href="index.html" data-zh="輔料 FAQ 全部文章" data-en="All trims FAQ articles" data-fr="Tous les articles FAQ" data-es="Todos los artículos" data-ja="副資材 FAQ 一覧" data-ko="부자재 FAQ 전체" data-de="Alle FAQ-Beiträge" data-pt="Todos os artigos">輔料 FAQ 全部文章</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="告訴我們你希望誰在什麼場景讀這張吊牌（門市、倉庫、顧客手機、海關），我們給你一份載體選型表，含增量成本倍數、編碼測試與洗後讀取率的實測項目。" data-en="Tell us who should read the tag and where — shop floor, warehouse, customer phone, customs. We return a carrier selection sheet with cost multiples, encoding tests and wash-retention checks." data-fr="Dites-nous qui doit lire le hangtag et où : boutique, entrepôt, téléphone du client, douane. Nous renvoyons une fiche de choix de support avec multiples de coût, tests d&#x27;encodage et tenue au lavage." data-es="Cuéntanos quién debe leer el colgante y dónde: tienda, almacén, móvil del cliente, aduana. Devolvemos una ficha de selección con múltiplos de coste, pruebas de codificación y retención tras lavado." data-ja="誰がどこで読む想定か（店頭・倉庫・顧客のスマホ・税関）をお知らせください。コスト倍率、エンコード試験、洗濯後の読取率の検証項目をまとめた選定シートをお返しします。" data-ko="누가 어디서 읽어야 하는지(매장, 창고, 고객 스마트폰, 세관) 알려주시면 비용 배수, 인코딩 시험, 세탁 후 판독률 검증 항목을 담은 선정표를 보내드립니다." data-de="Sagen Sie uns, wer den Anhänger wo lesen soll – Filiale, Lager, Kundentelefon, Zoll. Wir liefern ein Auswahlblatt mit Kostenfaktoren, Kodiertests und Prüfung der Lesbarkeit nach der Wäsche." data-pt="Diga quem deve ler a etiqueta e onde — loja, centro de distribuição, celular do cliente, alfândega. Devolvemos uma ficha de seleção com múltiplos de custo, testes de gravação e retenção após lavagem.">告訴我們你希望誰在什麼場景讀這張吊牌（門市、倉庫、顧客手機、海關），我們給你一份載體選型表，含增量成本倍數、編碼測試與洗後讀取率的實測項目。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取選型表" data-en="Request the selection sheet" data-fr="Demander la fiche de choix" data-es="Pedir la ficha" data-ja="選定シートを依頼" data-ko="선정표 요청" data-de="Auswahlblatt anfordern" data-pt="Solicitar a ficha">索取選型表</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE Packaging" data-ja="泰閣包装" data-ko="TAIGE 패키징" data-de="TAIGE Verpackung" data-pt="TAIGE Embalagens">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재·포장·인쇄 전문 제조사입니다." data-de="Hersteller von Bekleidungsaccessoires und Verpackungsdruck in Dongguan, China." data-pt="Fabricante de aviamentos de vestuário e impressão de embalagens em Dongguan, China.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품" data-de="Produkte" data-pt="Produtos">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택" data-de="Bekleidungsanhänger" data-pt="Etiquetas penduradas">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨" data-de="Webetiketten / Markenetiketten" data-pt="Etiquetas tecidas / Etiquetas de marca">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨" data-de="Pflegeetiketten" data-pt="Etiquetas de cuidado">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백" data-de="Verpackungsbeutel" data-pt="Sacolas de embalagem">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백" data-de="Umweltfreundliche Papierbeutel" data-pt="Sacolas de papel ecológicas">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어" data-de="Broschüren" data-pt="Folhetos">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기" data-de="Schnellzugriff" data-pt="Links rápidos">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개" data-de="Über uns" data-pt="Sobre nós">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기" data-de="Kontakt" data-pt="Contato">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청" data-de="Angebot anfordern" data-pt="Solicitar orçamento">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기" data-de="Kontakt" data-pt="Contato">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진" data-de="Humen, Dongguan, Guangdong, China" data-pt="Humen, Dongguan, Guangdong, China">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-es="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-en="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAIGE 패키징제품 유한공사" data-de="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-pt="© 2026 Dongguan Taige Packaging Products Co., Ltd.">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

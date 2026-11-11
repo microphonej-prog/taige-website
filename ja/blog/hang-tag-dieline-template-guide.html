@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吊り下げタグの抜き型図：塗り足し・安全領域・型線 | TAIGE</title>
+<meta name="description" content="吊り下げタグの抜き型図に必ず入れる5つの寸法——仕上がり寸法、3 mm の塗り足し、安全領域、折り位置、穴位置と、再刷を防ぐデータ作成の要点を整理します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="de" href="https://taigetag.com/de/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://taigetag.com/pt/blog/hang-tag-dieline-template-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-dieline-template-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌刀模圖：一次就切準的模板怎麼做",
+     "item": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌刀模圖：一次就切準的模板怎麼做",
+   "url": "https://taigetag.com/blog/trim-material-substitution-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko",
+    "de",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-material-substitution-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="de" title="Deutsch" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="6.67" fill="#000000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button><button class="lang-flag" data-lang="pt" title="Português" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2.5 27,10 15,17.5 3,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.5" fill="#002776"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>抜き型図</span></div>
+      <h1>吊り下げタグの抜き型図：一度で正確に抜ける型データの作り方</h1>
+      <p>泰閣包装 · 2026年11月11日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>縁が毛羽立った下げ札、穴が 2 mm ずれた下げ札——原因はどれも同じで、抜き型図が描かれていないことです。抜き型図は「どこを切り、どこに折り筋を入れ、どこに穴を開けるか」を 1:1 で示す図面で、この一枚に後工程すべてが依存します。本記事では、当社が下げ札テンプレートに必ず入れる5つの寸法、再利用すべき標準サイズ、そして7日の仕事を14日の再刷に変えてしまうデータの誤りを整理します。</p>
+
+      <h2>型線のない「テンプレート」は抜き型図ではありません</h2>
+
+      <p>ダウンロードできる下げ札テンプレートの多くは、寸法を書いた色付きの四角形です。それは寸法であって抜き型図ではありません。使える抜き型図には少なくとも3種類の線があり、それぞれ別レイヤー・別色で管理します。切線（実線、通常はマゼンタのスポット色）、折り筋線（破線）、穴位置（直径を記入した円）です。データはレイヤーを残したまま受け取ってください。統合された JPG は、型屋が必要とする情報だけを失います。</p>
+
+      <h2>下げ札テンプレートに必ず入れる5つの寸法</h2>
+
+      <ul>
+        <li>仕上がり寸法——抜いた後の実寸（例：50 × 90 mm）。抜く前の寸法ではありません。</li>
+        <li>塗り足し——切り落とす四辺すべてに 3 mm。地色や画像を必ず伸ばします。伸ばさないと断裁後に 0.5 mm の白い縁が出ます。</li>
+        <li>安全領域——文字とロゴは切線から内側に 3 mm。紙肌が粗い場合や型の切れ味が甘い場合は 4 mm が安全です。</li>
+        <li>折り筋線——二つ折りの下げ札では折り位置がちょうど中央。折り筋をまたぐベタ印刷は 350 g/m² の板紙で割れます。</li>
+        <li>穴位置——下げ札の中心線上、上端から通常 6 mm、標準的な紐なら直径 4〜5 mm。座標で指示してください。「上のほう」は寸法ではありません。</li>
+      </ul>
+
+      <h2>再利用したい標準サイズ</h2>
+
+      <p>既存の型で足りるサイズを選べば、型代と確認の一往復を省けます。次の4サイズで大半のアパレル案件は足ります。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>サイズ（mm）</th>
+            <th>主な用途</th>
+            <th>穴径と位置</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>50 × 90 mm</td>
+            <td>レディース、ミドル価格帯</td>
+            <td>4 mm、上端から 6 mm</td>
+            <td>最も汎用。ブランド表記3行＋バーコード1本</td>
+          </tr>
+          <tr>
+            <td>55 × 90 mm</td>
+            <td>デニム、アウター</td>
+            <td>5 mm、上端から 6 mm</td>
+            <td>幅を足してサイズ展開を1回で印字</td>
+          </tr>
+          <tr>
+            <td>60 × 120 mm</td>
+            <td>プレミアム、ギフトセット</td>
+            <td>5 mm、上端から 8 mm</td>
+            <td>GPSR の責任者住所を入れてもロゴを縮めずに済む</td>
+          </tr>
+          <tr>
+            <td>40 × 70 mm</td>
+            <td>キッズ、小物</td>
+            <td>3.5 mm、上端から 5 mm</td>
+            <td>これより小さいと穴の上が欠けて割れやすい</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>抜き型図の上にデザインデータを載せる</h2>
+
+      <ul>
+        <li>ベクター（AI または PDF）を 1:1・CMYK で支給。ラスター画像は 300 dpi 相当に。</li>
+        <li>フォントはアウトライン化または埋め込みを。代替フォントは改行位置を変え、文字が安全領域の外へ出ます。</li>
+        <li>箔押し・エンボス・部分ニスはそれぞれ 100% のスポット色レイヤーを独立させ、仕上げ名で命名します。</li>
+        <li>切線はデザイン内に置かず、専用の型レイヤーに分離し、オーバープリントを切ります。</li>
+        <li>両面下げ札は、断裁で切り落とす位置に表裏のトンボを付けて指定します。</li>
+      </ul>
+
+      <h2>下げ札データが失敗する5つのポイント</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>問題</th>
+            <th>印刷側から見える症状</th>
+            <th>対処</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>塗り足しなし</td>
+            <td>四辺に白い細線が出る</td>
+            <td>地色を切線の外へ 3 mm 伸ばす</td>
+          </tr>
+          <tr>
+            <td>文字が安全領域の外</td>
+            <td>最初と最後の文字が欠ける</td>
+            <td>内側へ 3 mm（紙肌が粗い場合は 4 mm）</td>
+          </tr>
+          <tr>
+            <td>折り筋をまたぐベタ</td>
+            <td>折り部でひび割れ・白抜け</td>
+            <td>折り筋から 1.5 mm はベタを置かない、または先に筋入れ</td>
+          </tr>
+          <tr>
+            <td>穴径の指定なし</td>
+            <td>型屋が推測し、紐が通らない</td>
+            <td>直径と座標を明記</td>
+          </tr>
+          <tr>
+            <td>カラーモードの誤り</td>
+            <td>ブランド色が暗く色ズレする</td>
+            <td>CMYK に変換し、実物校正で確認</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>義務表示のために確保すべき領域</h2>
+
+      <p>表示内容も抜き型図の設計要素になりました。EU 一般製品安全規則（GPSR、EU 2023/988）では、EU 域内に上市する製品に製造者名、該当する場合は EU 域内の責任者と郵便住所の表示が求められます。副資材は小さいため、この情報は下げ札に載せることが多く、6 pt でおよそ 35 × 15 mm 必要です。同じ下げ札にデジタル製品パスポート用の QR コードを載せる場合は、15 × 15 mm と 3 mm の余白（クワイエットゾーン）を追加してください。デザイン確定後に気づくと「小さな修正」が新しい型の製作になります。</p>
+
+      <h2>市場ごとに変わる表示要件</h2>
+
+      <p>同じ抜き型図でも、売る市場によって載せる情報は変わります。EU では GPSR の製造者・責任者情報に加え、規則 (EU) No 1007/2011 の混用率表示が必要です。米国は FTC の繊維表示規則、日本は家庭用品品質表示法により混用率・洗濯表示・原産国の日本語表示が求められます。韓国は品質表示と原産地の韓国語表記が必須です。販売国を先に決め、安全領域を 15 mm にするか 25 mm にするかを決めてください。</p>
+
+      <h2>型抜き校正の確認手順</h2>
+
+      <ul>
+        <li>定規で仕上がり寸法を実測します。目視で判断しないこと。</li>
+        <li>実際に穴を開けたサンプルで位置を確認し、紐を通してみます。</li>
+        <li>折り部を光にかざすと、割れていれば白っぽい筋が見えます。</li>
+        <li>納品書の坪量が承認見本と一致するか確認します（350 g/m² であって 300 ではない）。</li>
+        <li>署名した見本を1枚保管してください。以後の追加発注はすべてこれと照合します。</li>
+      </ul>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="hang-tag-die-cutting-guide.html">下げ札の型抜き：型・抜きカス・公差</a></li>
+        <li><a href="hang-tag-size-guide.html">下げ札サイズの選び方</a></li>
+        <li><a href="hang-tag-paper-thickness.html">下げ札の坪量と厚み</a></li>
+        <li><a href="hang-tag-artwork-guide.html">下げ札データの作り方</a></li>
+        <li><a href="index.html">副資材 FAQ 一覧</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>現在の下げ札データ、または再現したい現物の写真をお送りください。塗り足し・安全領域・穴位置の座標を記入した 1:1 の抜き型図をお返しします。</p>
+        <a class="cta-btn" href="../contact.html">抜き型図を依頼</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
