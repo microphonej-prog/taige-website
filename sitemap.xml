@@ -122,32 +122,32 @@
     <priority>0.9</priority>
   </url><url>
     <loc>https://taigetag.com/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/ko/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
     <loc>https://taigetag.com/ja/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
     <loc>https://taigetag.com/en/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/fr/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/es/blog/index.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
@@ -11488,6 +11488,78 @@
   </url><url>
     <loc>https://taigetag.com/ko/blog/industrial-laundry-care-label-guide.html</loc>
     <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/care-label-placement-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/barcode-verification-grade-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

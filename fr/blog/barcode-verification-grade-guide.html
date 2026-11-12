@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes de qualité d&#x27;impression des codes-barres : pourquoi un tag scanne au bureau et échoue au centre de distribution | TAIGE</title>
+<meta name="description" content="Codes-barres : ce que mesure l&#x27;ISO/IEC 15416, les seuils exigés par la distribution, pourquoi les labels tissés échouent et comment atteindre la note A.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/fr/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收", "item": "https://taigetag.com/blog/barcode-verification-grade-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收",
+   "url": "https://taigetag.com/blog/barcode-verification-grade-guide.html",
+   "inLanguage": ["zh-Hant", "en", "fr", "es", "ja", "ko"],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/barcode-verification-grade-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAIGE Emballages</strong>
+        <small>DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Accueil</a>
+      <a href="../products.html">Produits</a>
+      <a href="../about.html">À propos</a>
+      <a href="index.html">FAQ Accessoires</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag active" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Accueil</a> / <a href="index.html">FAQ Accessoires</a> / <span>Qualité des codes-barres</span></div>
+      <h1>Notes de qualité d&#x27;impression des codes-barres : pourquoi un tag scanne au bureau et échoue au centre de distribution</h1>
+      <p>Par TAIGE Packaging &amp;nbsp;·&amp;nbsp; Mis à jour le 12 novembre 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Le code-barres scanne sur le bureau, puis un carton est refusé au centre de distribution du client. Ce n&#x27;est pas le scanner qui a échoué, mais la qualité d&#x27;impression. Les systèmes de caisse notent chaque symbole selon l&#x27;ISO/IEC 15416, et la plupart des enseignes refusent en dessous de la note C (1,5), beaucoup de centres de distribution exigeant B (2,5) ou mieux. Un symbole lisible par une application mobile peut parfaitement être noté D par un vérificateur.</p>
+
+      <p>Ce guide explique ce que la note mesure réellement, les seuils appliqués par les acheteurs, les cinq points où les labels tissés et les étiquettes pelliculées perdent des points, et les réglages qui font passer un symbole de C à A.</p>
+
+      <h2>1. Ce que la note mesure réellement</h2>
+
+      <p>Un vérificateur ne demande pas si le symbole scanne : il note cinq paramètres de 0 à 4 et retient le plus faible comme note finale — un seul paramètre effondré annule les quatre autres.</p>
+
+      <table>
+        <tr><th>Paramètre</th><th>Ce que cela mesure</th><th>Ce qui le dégrade sur les accessoires</th></tr>
+        <tr><td>Contraste du symbole (SC)</td><td>Écart de réflectance entre barres sombres et espaces clairs</td><td>Barres sombres sur kraft, barres couleur sur carton gris</td></tr>
+        <tr><td>Modulation (MOD)</td><td>Uniformité de la largeur des barres dans le symbole</td><td>Étalement d&#x27;encre sur la trame tissée ; ruban insuffisant à grande vitesse</td></tr>
+        <tr><td>Détermination des bords et contraste minimal</td><td>Netteté des bords suffisante pour décoder</td><td>Pelliculage mat posé sur le symbole ; vernis sur encre brillante</td></tr>
+        <tr><td>Défauts (DEF)</td><td>Manques et taches dans les barres et espaces</td><td>Poussière et électricité statique, tête d&#x27;impression sale, trame visible</td></tr>
+        <tr><td>Décodabilité (DEC)</td><td>Proximité du motif mesuré par rapport à l&#x27;idéal</td><td>Mauvais grossissement, fichier déformé, pose sur surface courbe</td></tr>
+      </table>
+
+      <h2>2. Les seuils réellement appliqués</h2>
+
+      <ul>
+        <li>Seuil : C (1,5) est le minimum courant en caisse ; la préparation de commandes e-commerce et certains centres exigent B (2,5) ou mieux, quelques-uns A (3,5).</li>
+        <li>Module (x-dimension) : 0,330 mm est la valeur GS1 par défaut ; les petits tags descendent souvent à 80 %, soit 0,264 mm — là où les défauts prennent le dessus.</li>
+        <li>Zone de silence : 10 fois le module de chaque côté, soit environ 3,3 mm à 0,330 mm. C&#x27;est précisément ce que l&#x27;on rogne sur un label tissé étroit.</li>
+        <li>Hauteur des barres : les petits tags sont tronqués, mais gardez au moins 15 mm et jamais moins de 50 % de la longueur du symbole, sinon le taux de lecture chute.</li>
+        <li>Contraste d&#x27;impression (PCS) : au moins 0,75. Un code en réserve sur fond sombre n&#x27;atteint presque jamais la cible : imprimez des barres sombres sur blanc.</li>
+      </ul>
+
+      <h2>3. Les cinq défauts récurrents sur les accessoires</h2>
+
+      <ul>
+        <li>Trame tissée : les reliefs de trame brouillent la détermination des bords, et plus le module est petit plus c&#x27;est marqué — à 0,264 mm, la perte de note est quasi certaine.</li>
+        <li>Pelliculage et vernis : poser film ou vernis sur le symbole détruit le contraste de bord. Laissez une fenêtre dans le pelliculage et n&#x27;imprimez le vernis qu&#x27;autour.</li>
+        <li>Supports sombres ou métallisés : sur carton or, argent ou noir, SC et PCS s&#x27;effondrent ensemble — imprimez sur une plage blanche ou posez une étiquette blanche.</li>
+        <li>Étalement d&#x27;encre : à 0,264 mm de module, 0,02 mm d&#x27;étalement en plus représente 7 % d&#x27;erreur de largeur et la modulation chute aussitôt.</li>
+        <li>Zone de silence rognée : le graphiste place un logo ou un filet à côté du code, le scanner ne trouve plus le caractère de départ et le vérificateur le déclare indécodable.</li>
+      </ul>
+
+      <div class="callout">La caméra d&#x27;un téléphone n&#x27;est pas un vérificateur. Elle dit si elle a lu celui-ci ; le vérificateur dit si tout le lot sera lu sur la ligne du client. La différence, ce sont des retours ou une acceptation.</div>
+
+      <h2>4. Les réglages qui font passer de C à A</h2>
+
+      <ul>
+        <li>Résolution : 300 dpi est le minimum pour les accessoires, 600 dpi s&#x27;imposent à 0,264 mm de module ; ne forcez pas une thermique 203 dpi sur petit module.</li>
+        <li>Réduction de largeur : retirez 0,02 à 0,04 mm de largeur imprimée pour compenser l&#x27;étalement, et remesurez à chaque changement de papier ou de ruban.</li>
+        <li>Choix du ruban : résine pour supports synthétiques et tissés, cire-résine pour papier couché ; la cire pure bave après pelliculage.</li>
+        <li>Vérifiez sur le support réel : ne validez jamais sur une épreuve papier ou un PDF — le même fichier noté A sur couché peut être C sur tissé.</li>
+      </ul>
+
+      <h2>5. Intégrer la vérification au contrôle qualité</h2>
+
+      <p>Vérifiez 10 symboles par lot avec un vérificateur et consignez la note, le module et le PCS. Refaites le test après tout changement de support, de ruban ou de forme. Les étiquettes d&#x27;entretien exigent deux contrôles de plus — après pelliculage et après trois lavages à 40 °C — car ces étapes font le plus souvent chuter de C à D.</p>
+
+      <p>Écrire que cela scanne dans les critères d&#x27;acceptation est une erreur fréquente. Le contrat doit dire : aucun lot sous la note B (2,5), 10 symboles échantillonnés, et tout symbole sous le seuil rejette le lot.</p>
+
+      <h2>6. Systèmes de codes régionaux et mentions associées</h2>
+
+      <p>Union européenne : le contenu du symbole suit les Spécifications générales GS1 avec le GTIN comme charge utile, tandis que le GPSR (UE) 2023/988 exige des informations de traçabilité, souvent un numéro de lot ou un code 2D à côté du code-barres. En France, la pratique suit les recommandations de GS1 France ; en Espagne, elle est largement portée par AECOC.</p>
+
+      <p>Japon et Corée : le Japon utilise le symbole JAN de GS1 Japan et, selon la loi sur l&#x27;étiquetage de qualité, imprime l&#x27;origine et la composition près du code. La Corée utilise le symbole KAN de GS1 Korea, l&#x27;étiquetage relevant de la loi sur le contrôle de sécurité des appareils électriques et produits de consommation. Les deux exigent que code et mentions locales restent lisibles.</p>
+
+      <h2>Articles connexes</h2>
+
+      <ul>
+        <li><a href="index.html">FAQ Accessoires : tous les articles</a></li>
+        <li><a href="hang-tag-barcode-guide.html">Guide du code-barres sur étiquette suspendue : pose, taille et impression</a></li>
+        <li><a href="apparel-label-barcode-printing-guide.html">Impression de codes-barres sur étiquettes : équipements et procédés</a></li>
+        <li><a href="care-label-thermal-transfer-ribbon-guide.html">Choix du ruban transfert thermique pour étiquettes d&#x27;entretien</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Envoyez-nous le contenu du code, l&#x27;exigence de module et le seuil de lecture du marché visé. Nous imprimons sur le support réel, joignons les mesures de vérification à l&#x27;échantillon, puis chiffrons avec les étiquettes et les labels.</p>
+        <a class="cta-btn" href="../contact.html">Demander un devis étiquettes et codes-barres →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAIGE Emballages</h4>
+        <p>Fabricant professionnel d&#x27;accessoires vestimentaires, d&#x27;emballages et d&#x27;impression, situé à Dongguan, en Chine.</p>
+      </div>
+      <div>
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Étiquettes suspendues</a></li>
+          <li><a href="../products.html#wovenlabels">Labels tissés / Principaux</a></li>
+          <li><a href="../products.html#carelabels">Étiquettes d&#x27;entretien</a></li>
+          <li><a href="../products.html#bags">Sacs d&#x27;emballage</a></li>
+          <li><a href="../products.html#paperbags">Sacs en papier écologiques</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, Chine</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Taige Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

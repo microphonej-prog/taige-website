@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收 | TAIGE" data-en="Barcode Print Quality Grades: Why a Tag Scans in the Office and Fails at the DC | TAIGE" data-fr="Notes de qualité d&#x27;impression des codes-barres : pourquoi un tag scanne au bureau et échoue au centre de distribution | TAIGE" data-es="Notas de calidad de impresión de códigos de barras: por qué una etiqueta escanea en la oficina y falla en el centro logístico | TAIGE" data-ja="バーコード印刷品質のグレード：事務所では読めるのに物流センターで拒否される理由 | TAIGE" data-ko="바코드 인쇄 품질 등급: 사무실에서는 읽히는데 물류센터에서 거부되는 이유 | TAIGE">條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收 | TAIGE</title>
+<meta name="description"
+      data-zh="條碼印刷品質完整指南：ISO/IEC 15416 量測什麼、零售端要求的等級門檻、織嘜與覆膜吊牌為何經常不合格，以及把 C 級做到 A 級的產線調整。"
+      data-en="Barcode verification guide: what ISO/IEC 15416 measures, the grade thresholds retailers enforce, why woven and laminated tags fail, and how to reach grade A."
+      data-fr="Codes-barres : ce que mesure l&#x27;ISO/IEC 15416, les seuils exigés par la distribution, pourquoi les labels tissés échouent et comment atteindre la note A."
+      data-es="Códigos de barras: qué mide la ISO/IEC 15416, umbrales que exige el comercio minorista, por qué fallan las etiquetas tejidas y cómo llegar a la nota A."
+      data-ja="バーコード検証ガイド：ISO/IEC 15416 が測る項目、小売が求めるグレード基準、織りラベルやラミネートタグが不合格になる理由、C から A へ引き上げる生産調整を解説します。"
+      data-ko="바코드 검증 가이드: ISO/IEC 15416이 측정하는 항목, 유통이 요구하는 등급 기준, 직조 라벨과 라미네이트 행택이 불합격하는 이유, C등급을 A등급으로 올리는 생산 조정을 정리합니다."
+      content="條碼印刷品質完整指南：ISO/IEC 15416 量測什麼、零售端要求的等級門檻、織嘜與覆膜吊牌為何經常不合格，以及把 C 級做到 A 級的產線調整。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收", "item": "https://taigetag.com/blog/barcode-verification-grade-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收",
+   "url": "https://taigetag.com/blog/barcode-verification-grade-guide.html",
+   "inLanguage": ["zh-Hant", "en", "fr", "es", "ja", "ko"],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/barcode-verification-grade-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAIGE PACKAGING" data-en="DONGGUAN TAIGE PACKAGING" data-fr="DONGGUAN TAIGE PACKAGING" data-es="DONGGUAN TAIGE PACKAGING" data-ja="DONGGUAN TAIGE PACKAGING" data-ko="DONGGUAN TAIGE PACKAGING">DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="條碼品質等級" data-en="Barcode Quality Grades" data-fr="Qualité des codes-barres" data-es="Calidad de códigos de barras" data-ja="バーコード品質グレード" data-ko="바코드 품질 등급">條碼品質等級</span></div>
+      <h1 data-zh="條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收" data-en="Barcode Print Quality Grades: Why a Tag Scans in the Office and Fails at the DC" data-fr="Notes de qualité d&#x27;impression des codes-barres : pourquoi un tag scanne au bureau et échoue au centre de distribution" data-es="Notas de calidad de impresión de códigos de barras: por qué una etiqueta escanea en la oficina y falla en el centro logístico" data-ja="バーコード印刷品質のグレード：事務所では読めるのに物流センターで拒否される理由" data-ko="바코드 인쇄 품질 등급: 사무실에서는 읽히는데 물류센터에서 거부되는 이유">條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月12日" data-en="By TAIGE Packaging &amp;nbsp;·&amp;nbsp; Updated November 12, 2026" data-fr="Par TAIGE Packaging &amp;nbsp;·&amp;nbsp; Mis à jour le 12 novembre 2026" data-es="Por TAIGE Packaging &amp;nbsp;·&amp;nbsp; Actualizado el 12 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月12日更新" data-ko="TAIGE 패키징 · 2026년 11월 12일 업데이트">泰閣包裝 · 更新於 2026年11月12日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="條碼在辦公桌上掃得過，貨櫃到了客戶的配送中心卻被整批退回——出問題的不是掃描槍，而是印刷品質。零售端的掃描系統會依 ISO/IEC 15416 為每個條碼符號評級，多數零售商拒收 C 級（1.5）以下的符號，不少配送中心要求 B 級（2.5）以上。手機 App 掃得出來，不代表驗證儀讀得過。" data-en="Your barcode scans on the office desk, then a carton is rejected at the retailer distribution centre. The scanner did not fail — the print quality did. Retail scanning systems grade every symbol to ISO/IEC 15416, and most retailers refuse anything below grade C (1.5), with many distribution centres asking for B (2.5) or better. A symbol that a phone app reads can still grade D under a verifier." data-fr="Le code-barres scanne sur le bureau, puis un carton est refusé au centre de distribution du client. Ce n&#x27;est pas le scanner qui a échoué, mais la qualité d&#x27;impression. Les systèmes de caisse notent chaque symbole selon l&#x27;ISO/IEC 15416, et la plupart des enseignes refusent en dessous de la note C (1,5), beaucoup de centres de distribution exigeant B (2,5) ou mieux. Un symbole lisible par une application mobile peut parfaitement être noté D par un vérificateur." data-es="El código de barras escanea en el escritorio y, después, un cartón se rechaza en el centro de distribución del cliente. No falló el escáner, falló la calidad de impresión. Los sistemas de caja clasifican cada símbolo según la ISO/IEC 15416 y la mayoría de las cadenas rechazan por debajo de la nota C (1,5), con muchos centros logísticos exigiendo B (2,5) o mejor. Un símbolo que una app móvil lee puede obtener D en un verificador." data-ja="事務所の机では読めるバーコードが、顧客の物流センターで箱ごと返品される。壊れたのはスキャナではなく、印刷品質です。小売のスキャンシステムは ISO/IEC 15416 に基づいて記号ごとにグレードを付け、多くの小売は C（1.5）未満を受け入れません。物流センターによっては B（2.5）以上を要求します。スマートフォンのアプリで読めても、検証機では D になることがあります。" data-ko="사무실 책상에서는 잘 읽히는 바코드가 고객 물류센터에서 박스째 반품됩니다. 고장 난 것은 스캐너가 아니라 인쇄 품질입니다. 유통 스캔 시스템은 ISO/IEC 15416에 따라 기호마다 등급을 매기며, 대부분의 유통업체는 C(1.5) 미만을 받지 않고 물류센터는 B(2.5) 이상을 요구하기도 합니다. 스마트폰 앱에서 읽혀도 검증기에서는 D가 나올 수 있습니다.">條碼在辦公桌上掃得過，貨櫃到了客戶的配送中心卻被整批退回——出問題的不是掃描槍，而是印刷品質。零售端的掃描系統會依 ISO/IEC 15416 為每個條碼符號評級，多數零售商拒收 C 級（1.5）以下的符號，不少配送中心要求 B 級（2.5）以上。手機 App 掃得出來，不代表驗證儀讀得過。</p>
+
+      <p data-zh="本文說明這個等級到底量了什麼、買家實際執行的門檻在哪裡、織嘜與覆膜吊牌最常失分的五個環節，以及把符號從 C 級推到 A 級要調哪些生產參數。" data-en="This guide explains what the grade actually measures, the thresholds buyers enforce in practice, the five places where woven labels and laminated hang tags lose points, and the production settings that move a symbol from C to A." data-fr="Ce guide explique ce que la note mesure réellement, les seuils appliqués par les acheteurs, les cinq points où les labels tissés et les étiquettes pelliculées perdent des points, et les réglages qui font passer un symbole de C à A." data-es="Esta guía explica qué mide realmente la nota, los umbrales que aplican los compradores, los cinco puntos donde las etiquetas tejidas y laminadas pierden puntos y los ajustes que llevan un símbolo de C a A." data-ja="本記事では、このグレードが実際に何を測っているのか、買い手が運用している基準値、織りラベルやラミネートタグが点を落とす5つの箇所、そして記号を C から A へ引き上げる生産設定を整理します。" data-ko="이 글에서는 이 등급이 실제로 무엇을 측정하는지, 바이어가 운용하는 기준값, 직조 라벨과 라미네이트 행택이 점수를 잃는 다섯 지점, 기호를 C에서 A로 끌어올리는 생산 설정을 정리합니다.">本文說明這個等級到底量了什麼、買家實際執行的門檻在哪裡、織嘜與覆膜吊牌最常失分的五個環節，以及把符號從 C 級推到 A 級要調哪些生產參數。</p>
+
+      <h2 data-zh="1. 這個等級到底量什麼" data-en="1. What the Grade Actually Measures" data-fr="1. Ce que la note mesure réellement" data-es="1. Qué mide realmente la nota" data-ja="1. グレードが実際に測っているもの" data-ko="1. 등급이 실제로 측정하는 항목">1. 這個等級到底量什麼</h2>
+
+      <p data-zh="驗證儀不是「能不能掃」，而是把符號拆成五個參數各給 0–4 分，最終等級取最低的一項——所以只要一個參數崩掉，其他四項再好也沒用。" data-en="A verifier does not ask whether the symbol scans. It scores five parameters from 0 to 4 and takes the lowest as the final grade — one collapsed parameter cancels four good ones." data-fr="Un vérificateur ne demande pas si le symbole scanne : il note cinq paramètres de 0 à 4 et retient le plus faible comme note finale — un seul paramètre effondré annule les quatre autres." data-es="Un verificador no pregunta si el símbolo escanea: puntúa cinco parámetros de 0 a 4 y toma el más bajo como nota final; un parámetro hundido anula los otros cuatro." data-ja="検証機は「読めるかどうか」ではなく、5つのパラメータを 0〜4 で採点し、最も低い値を最終グレードとします。1つが崩れれば、他の4つが良くても救われません。" data-ko="검증기는 읽히는지 여부를 묻지 않고 다섯 항목을 0~4로 채점해 가장 낮은 값을 최종 등급으로 삼습니다. 하나가 무너지면 나머지 넷이 좋아도 소용없습니다.">驗證儀不是「能不能掃」，而是把符號拆成五個參數各給 0–4 分，最終等級取最低的一項——所以只要一個參數崩掉，其他四項再好也沒用。</p>
+
+      <table>
+        <tr><th data-zh="參數" data-en="Parameter" data-fr="Paramètre" data-es="Parámetro" data-ja="項目" data-ko="항목">參數</th><th data-zh="量什麼" data-en="What it measures" data-fr="Ce que cela mesure" data-es="Qué mide" data-ja="測定内容" data-ko="측정 내용">量什麼</th><th data-zh="輔料上最常壞在哪" data-en="What breaks it on trims" data-fr="Ce qui le dégrade sur les accessoires" data-es="Qué lo rompe en accesorios" data-ja="副資材で壊れる原因" data-ko="부자재에서 망가지는 원인">輔料上最常壞在哪</th></tr>
+        <tr><td data-zh="符號對比度 SC" data-en="Symbol contrast (SC)" data-fr="Contraste du symbole (SC)" data-es="Contraste del símbolo (SC)" data-ja="シンボルコントラスト SC" data-ko="기호 대비 SC">符號對比度 SC</td><td data-zh="深色條與淺色空的反射率差" data-en="Reflectance difference between dark bars and light spaces" data-fr="Écart de réflectance entre barres sombres et espaces clairs" data-es="Diferencia de reflectancia entre barras oscuras y espacios claros" data-ja="濃いバーと明るいスペースの反射率差" data-ko="진한 바와 밝은 스페이스의 반사율 차">深色條與淺色空的反射率差</td><td data-zh="牛皮紙上印深色條、灰卡紙上印彩色條" data-en="Dark bars on kraft paper, coloured bars on grey board" data-fr="Barres sombres sur kraft, barres couleur sur carton gris" data-es="Barras oscuras sobre kraft, barras de color sobre cartón gris" data-ja="クラフト紙に濃色バー、灰色ボール紙に色付きバー" data-ko="크라프트지에 진한 바, 회색 판지에 컬러 바">牛皮紙上印深色條、灰卡紙上印彩色條</td></tr>
+        <tr><td data-zh="調變度 MOD" data-en="Modulation (MOD)" data-fr="Modulation (MOD)" data-es="Modulación (MOD)" data-ja="モジュレーション MOD" data-ko="변조도 MOD">調變度 MOD</td><td data-zh="同一符號內條寬是否一致" data-en="Whether bar widths stay uniform across the symbol" data-fr="Uniformité de la largeur des barres dans le symbole" data-es="Si el ancho de barras se mantiene uniforme en el símbolo" data-ja="記号内でバー幅が揃っているか" data-ko="기호 안에서 바 폭이 균일한가">同一符號內條寬是否一致</td><td data-zh="織帶紋理造成墨跡擴散不均；高速下碳帶供墨不足" data-en="Ink spread on woven tape texture; ribbon starvation at high speed" data-fr="Étalement d&#x27;encre sur la trame tissée ; ruban insuffisant à grande vitesse" data-es="Tinta que se expande en la trama tejida; cinta insuficiente a alta velocidad" data-ja="織りテープの凹凸によるインクの広がり、高速時のリボン不足" data-ko="직조 테이프 요철로 인한 잉크 번짐, 고속에서 리본 부족">織帶紋理造成墨跡擴散不均；高速下碳帶供墨不足</td></tr>
+        <tr><td data-zh="邊緣判定與最小邊緣對比" data-en="Edge determination and minimum edge contrast" data-fr="Détermination des bords et contraste minimal" data-es="Determinación de bordes y contraste mínimo" data-ja="エッジ判定と最小エッジコントラスト" data-ko="에지 판정과 최소 에지 대비">邊緣判定與最小邊緣對比</td><td data-zh="邊緣是否銳利到能解碼" data-en="Whether edges are sharp enough to decode" data-fr="Netteté des bords suffisante pour décoder" data-es="Si los bordes son lo bastante nítidos para decodificar" data-ja="デコードできるほどエッジが鋭いか" data-ko="디코딩할 만큼 에지가 선명한가">邊緣是否銳利到能解碼</td><td data-zh="亞膜直接壓在符號上；亮墨上再上光" data-en="Matte lamination pressed straight over the symbol; varnish over glossy ink" data-fr="Pelliculage mat posé sur le symbole ; vernis sur encre brillante" data-es="Laminado mate directo sobre el símbolo; barniz sobre tinta brillante" data-ja="記号の上に直接マットラミネート、光沢インクの上にニス" data-ko="기호 위에 무광 라미네이트, 광택 잉크 위 바니시">亞膜直接壓在符號上；亮墨上再上光</td></tr>
+        <tr><td data-zh="缺陷 DEF" data-en="Defects (DEF)" data-fr="Défauts (DEF)" data-es="Defectos (DEF)" data-ja="欠陥 DEF" data-ko="결함 DEF">缺陷 DEF</td><td data-zh="條與空裡的漏白、汙點" data-en="Voids and spots inside bars and spaces" data-fr="Manques et taches dans les barres et espaces" data-es="Huecos y manchas dentro de barras y espacios" data-ja="バーとスペース内の白抜け・汚れ" data-ko="바와 스페이스 안의 흰 점, 오염">條與空裡的漏白、汙點</td><td data-zh="粉塵與靜電、印字頭髒、織紋穿透" data-en="Dust and static, dirty print head, weave texture showing through" data-fr="Poussière et électricité statique, tête d&#x27;impression sale, trame visible" data-es="Polvo y estática, cabezal sucio, trama visible" data-ja="粉塵と静電気、印字ヘッドの汚れ、織り目が透ける" data-ko="분진과 정전기, 인쇄 헤드 오염, 직조 무늬 비침">粉塵與靜電、印字頭髒、織紋穿透</td></tr>
+        <tr><td data-zh="解碼度 DEC" data-en="Decodability (DEC)" data-fr="Décodabilité (DEC)" data-es="Decodificabilidad (DEC)" data-ja="デコード性 DEC" data-ko="디코딩성 DEC">解碼度 DEC</td><td data-zh="實測圖樣與理想圖樣的接近程度" data-en="How close the measured pattern is to the ideal" data-fr="Proximité du motif mesuré par rapport à l&#x27;idéal" data-es="Cuán cerca está el patrón medido del ideal" data-ja="実測パターンが理想にどれだけ近いか" data-ko="측정 패턴이 이상값에 얼마나 가까운가">實測圖樣與理想圖樣的接近程度</td><td data-zh="倍率算錯、稿件變形、貼在弧面上" data-en="Wrong magnification, distorted artwork, applied to a curved surface" data-fr="Mauvais grossissement, fichier déformé, pose sur surface courbe" data-es="Ampliación errónea, arte distorsionado, sobre superficie curva" data-ja="倍率の誤り、版データの変形、曲面への貼付" data-ko="배율 오류, 아트워크 변형, 곡면 부착">倍率算錯、稿件變形、貼在弧面上</td></tr>
+      </table>
+
+      <h2 data-zh="2. 買家實際執行的門檻" data-en="2. The Thresholds Buyers Enforce" data-fr="2. Les seuils réellement appliqués" data-es="2. Los umbrales que aplican los compradores" data-ja="2. 買い手が実際に運用する基準値" data-ko="2. 바이어가 실제로 적용하는 기준값">2. 買家實際執行的門檻</h2>
+
+      <ul>
+        <li data-zh="等級門檻：零售 POS 常見底線是 C 級（1.5）；電商履約中心與部分配送中心要 B 級（2.5）以上，少數要求 A 級（3.5）。" data-en="Grade floor: C (1.5) is the common retail POS minimum; e-commerce fulfilment and some DCs require B (2.5) or better, and a few ask for A (3.5)." data-fr="Seuil : C (1,5) est le minimum courant en caisse ; la préparation de commandes e-commerce et certains centres exigent B (2,5) ou mieux, quelques-uns A (3,5)." data-es="Umbral: C (1,5) es el mínimo habitual en caja; la preparación de pedidos de e-commerce y algunos centros exigen B (2,5) o mejor, y unos pocos A (3,5)." data-ja="グレード基準：小売 POS の下限は C（1.5）が一般的。EC フルフィルメントや一部の物流センターは B（2.5）以上、まれに A（3.5）を求めます。" data-ko="등급 기준: 소매 POS의 하한은 C(1.5)가 일반적이며, 이커머스 풀필먼트와 일부 물류센터는 B(2.5) 이상, 일부는 A(3.5)를 요구합니다.">等級門檻：零售 POS 常見底線是 C 級（1.5）；電商履約中心與部分配送中心要 B 級（2.5）以上，少數要求 A 級（3.5）。</li>
+        <li data-zh="模組寬度（x-dimension）：零售 EAN-13 標準是 0.330 毫米；小吊牌常降到 80% 倍率、即 0.264 毫米，這正是缺陷開始放大的地方。" data-en="X-dimension: 0.330 mm is the GS1 default for retail; small hang tags often drop to 80% magnification, which is 0.264 mm — exactly where defects start to dominate." data-fr="Module (x-dimension) : 0,330 mm est la valeur GS1 par défaut ; les petits tags descendent souvent à 80 %, soit 0,264 mm — là où les défauts prennent le dessus." data-es="Módulo (x-dimension): 0,330 mm es el valor GS1 por defecto; las etiquetas pequeñas bajan a menudo al 80 %, es decir 0,264 mm, justo donde dominan los defectos." data-ja="モジュール幅（x-dimension）：小売の EAN-13 は 0.330 mm が標準。小さなタグは 80% 倍率の 0.264 mm まで落とすことが多く、ここで欠陥の影響が支配的になります。" data-ko="모듈 폭(x-dimension): 소매 EAN-13의 표준은 0.330 mm이며, 작은 행택은 80% 배율인 0.264 mm까지 낮추는 경우가 많은데 바로 이 지점에서 결함 영향이 커집니다.">模組寬度（x-dimension）：零售 EAN-13 標準是 0.330 毫米；小吊牌常降到 80% 倍率、即 0.264 毫米，這正是缺陷開始放大的地方。</li>
+        <li data-zh="靜區（quiet zone）：左右各留 10 倍模組寬，0.330 毫米時約 3.3 毫米；窄織嘜最常被裁掉的就是這一塊。" data-en="Quiet zone: keep 10 times the x-dimension on each side — about 3.3 mm at 0.330 mm. Narrow woven labels are usually cropped exactly here." data-fr="Zone de silence : 10 fois le module de chaque côté, soit environ 3,3 mm à 0,330 mm. C&#x27;est précisément ce que l&#x27;on rogne sur un label tissé étroit." data-es="Zona de silencio: 10 veces el módulo a cada lado, unos 3,3 mm con 0,330 mm. Es justo lo que se recorta en una etiqueta tejida estrecha." data-ja="クワイエットゾーン：左右にモジュール幅の 10 倍、0.330 mm なら約 3.3 mm。細い織りラベルで削られやすいのがこの部分です。" data-ko="콰이어트 존: 좌우로 모듈 폭의 10배, 0.330 mm 기준 약 3.3 mm입니다. 좁은 직조 라벨에서 잘려나가는 부분이 바로 여기입니다.">靜區（quiet zone）：左右各留 10 倍模組寬，0.330 毫米時約 3.3 毫米；窄織嘜最常被裁掉的就是這一塊。</li>
+        <li data-zh="條高：小吊牌常被截短，但建議至少 15 毫米，且不低於符號長度的 50%，否則手持掃描器讀取率明顯下降。" data-en="Bar height: small tags get truncated, but keep at least 15 mm and never below 50% of the symbol length, or handheld scanner read rates drop." data-fr="Hauteur des barres : les petits tags sont tronqués, mais gardez au moins 15 mm et jamais moins de 50 % de la longueur du symbole, sinon le taux de lecture chute." data-es="Altura de barras: las etiquetas pequeñas se truncan, pero mantenga al menos 15 mm y nunca menos del 50 % de la longitud del símbolo, o la lectura cae." data-ja="バー高さ：小さなタグでは切り詰められますが、最低 15 mm、記号長の 50% 以上を確保しないとハンディスキャナの読取率が落ちます。" data-ko="바 높이: 작은 행택은 잘리는 경우가 많지만 최소 15 mm, 기호 길이의 50% 이상을 유지해야 핸디 스캐너 판독률이 떨어지지 않습니다.">條高：小吊牌常被截短，但建議至少 15 毫米，且不低於符號長度的 50%，否則手持掃描器讀取率明顯下降。</li>
+        <li data-zh="印刷對比 PCS：至少 0.75。深色底反白條碼在輔料上幾乎不可能達標，直接改用白底黑條。" data-en="Print contrast signal (PCS): at least 0.75. Reverse-printed codes on dark substrates almost never qualify — print dark bars on white instead." data-fr="Contraste d&#x27;impression (PCS) : au moins 0,75. Un code en réserve sur fond sombre n&#x27;atteint presque jamais la cible : imprimez des barres sombres sur blanc." data-es="Contraste de impresión (PCS): al menos 0,75. Un código en negativo sobre fondo oscuro casi nunca cumple: imprima barras oscuras sobre blanco." data-ja="印刷コントラスト PCS：0.75 以上。濃色地の反転バーコードは副資材ではほぼ達成できないため、白地に濃色バーで刷ります。" data-ko="인쇄 대비 PCS: 0.75 이상. 어두운 바탕의 반전 바코드는 부자재에서 거의 기준을 못 맞추므로 흰 바탕에 진한 바로 인쇄합니다.">印刷對比 PCS：至少 0.75。深色底反白條碼在輔料上幾乎不可能達標，直接改用白底黑條。</li>
+      </ul>
+
+      <h2 data-zh="3. 輔料上最常見的五個失分點" data-en="3. Where Apparel Tags Lose Points: Five Repeat Offenders" data-fr="3. Les cinq défauts récurrents sur les accessoires" data-es="3. Los cinco fallos recurrentes en accesorios" data-ja="3. 副資材で点を落とす5つの常連" data-ko="3. 부자재에서 점수를 잃는 다섯 가지 단골 원인">3. 輔料上最常見的五個失分點</h2>
+
+      <ul>
+        <li data-zh="織帶紋理：緯紗高低差讓邊緣判定失準，模組寬度越小越明顯——0.264 毫米時幾乎必然掉級。" data-en="Woven tape texture: weft ridges blur the edge determination, and the smaller the module the worse it gets — at 0.264 mm a grade drop is nearly certain." data-fr="Trame tissée : les reliefs de trame brouillent la détermination des bords, et plus le module est petit plus c&#x27;est marqué — à 0,264 mm, la perte de note est quasi certaine." data-es="Trama tejida: los relieves de trama emborronan la determinación de bordes, y cuanto menor es el módulo peor resulta: con 0,264 mm la pérdida de nota es casi segura." data-ja="織りテープの凹凸：横糸の起伏がエッジ判定を狂わせ、モジュールが小さいほど顕著になります。0.264 mm ではほぼ確実にグレードが落ちます。" data-ko="직조 테이프 요철: 위사 기복이 에지 판정을 흐리게 하며 모듈이 작을수록 심합니다. 0.264 mm에서는 등급 하락이 거의 확실합니다.">織帶紋理：緯紗高低差讓邊緣判定失準，模組寬度越小越明顯——0.264 毫米時幾乎必然掉級。</li>
+        <li data-zh="覆膜與上光：把膜或光油壓在符號上會直接吃掉邊緣對比；正確做法是符號區開窗，膜只包在四周。" data-en="Lamination and varnish: pressing film or varnish over the symbol eats the edge contrast. Leave a window in the laminate and coat only around the code." data-fr="Pelliculage et vernis : poser film ou vernis sur le symbole détruit le contraste de bord. Laissez une fenêtre dans le pelliculage et n&#x27;imprimez le vernis qu&#x27;autour." data-es="Laminado y barniz: poner film o barniz sobre el símbolo destruye el contraste de borde. Deje una ventana en el laminado y aplique el barniz solo alrededor." data-ja="ラミネートとニス：記号の上にフィルムやニスをかけるとエッジコントラストが落ちます。記号部分は窓抜きにし、周囲だけをコーティングします。" data-ko="라미네이트와 바니시: 기호 위에 필름이나 바니시를 입히면 에지 대비가 무너집니다. 기호 부분은 창을 비우고 주변만 코팅합니다.">覆膜與上光：把膜或光油壓在符號上會直接吃掉邊緣對比；正確做法是符號區開窗，膜只包在四周。</li>
+        <li data-zh="深色或金屬基材：金色、銀色、黑色卡紙上印條碼，SC 與 PCS 兩項一起崩，只能改白底黑條或貼白色標籤。" data-en="Dark or metallic substrates: on gold, silver or black board both SC and PCS collapse — print on a white patch or apply a white label instead." data-fr="Supports sombres ou métallisés : sur carton or, argent ou noir, SC et PCS s&#x27;effondrent ensemble — imprimez sur une plage blanche ou posez une étiquette blanche." data-es="Sustratos oscuros o metalizados: sobre cartón oro, plata o negro, SC y PCS se hunden a la vez; imprima sobre una zona blanca o aplique una etiqueta blanca." data-ja="濃色・金属系基材：金・銀・黒の台紙にバーコードを刷ると SC と PCS が同時に崩れます。白地に刷るか白ラベルを貼ります。" data-ko="어둡거나 금속성 소재: 금색, 은색, 검정 판지에 바코드를 인쇄하면 SC와 PCS가 함께 무너집니다. 흰 여백에 인쇄하거나 흰 라벨을 붙입니다.">深色或金屬基材：金色、銀色、黑色卡紙上印條碼，SC 與 PCS 兩項一起崩，只能改白底黑條或貼白色標籤。</li>
+        <li data-zh="墨跡擴散：0.264 毫米模組下，油墨只要多擴 0.02 毫米，條寬誤差就超過 7%，MOD 立刻掉級。" data-en="Ink spread: at a 0.264 mm module, 0.02 mm of extra spread is a 7% bar-width error, and modulation drops immediately." data-fr="Étalement d&#x27;encre : à 0,264 mm de module, 0,02 mm d&#x27;étalement en plus représente 7 % d&#x27;erreur de largeur et la modulation chute aussitôt." data-es="Expansión de tinta: con un módulo de 0,264 mm, 0,02 mm de más supone un 7 % de error de ancho y la modulación cae de inmediato." data-ja="インクの広がり：0.264 mm モジュールでは 0.02 mm 広がるだけでバー幅誤差 7% となり、MOD が即座に落ちます。" data-ko="잉크 번짐: 0.264 mm 모듈에서 0.02 mm만 더 번져도 바 폭 오차가 7%가 되어 MOD가 곧바로 떨어집니다.">墨跡擴散：0.264 毫米模組下，油墨只要多擴 0.02 毫米，條寬誤差就超過 7%，MOD 立刻掉級。</li>
+        <li data-zh="靜區被裁：設計師為了讓版面飽滿把 LOGO 或邊框排到條碼旁邊，掃描器找不到起始符，驗證儀直接判無法解碼。" data-en="Cropped quiet zone: designers fill the space next to the code with a logo or border, the scanner cannot find the start character, and the verifier marks it undecodable." data-fr="Zone de silence rognée : le graphiste place un logo ou un filet à côté du code, le scanner ne trouve plus le caractère de départ et le vérificateur le déclare indécodable." data-es="Zona de silencio recortada: el diseñador coloca un logo o un filete junto al código, el escáner no encuentra el carácter de inicio y el verificador lo marca como no decodificable." data-ja="クワイエットゾーンの削減：デザイナーがコードの隣にロゴや罫線を入れると、スキャナが開始キャラクタを見つけられず、検証機はデコード不能と判定します。" data-ko="콰이어트 존 절단: 디자이너가 바코드 옆에 로고나 테두리를 넣으면 스캐너가 시작 문자를 찾지 못해 검증기가 디코딩 불가로 판정합니다.">靜區被裁：設計師為了讓版面飽滿把 LOGO 或邊框排到條碼旁邊，掃描器找不到起始符，驗證儀直接判無法解碼。</li>
+      </ul>
+
+      <div class="callout" data-zh="一支手機相機不是驗證儀。相機只回答「這次讀到了嗎」，驗證儀回答「整批在客戶的掃描線上都會讀到嗎」。兩者的差別，就是退貨與罰款的差別。" data-en="A phone camera is not a verifier. The camera answers whether it read this one; the verifier answers whether the whole batch will read on the customer scanning line. The difference is returns versus acceptance." data-fr="La caméra d&#x27;un téléphone n&#x27;est pas un vérificateur. Elle dit si elle a lu celui-ci ; le vérificateur dit si tout le lot sera lu sur la ligne du client. La différence, ce sont des retours ou une acceptation." data-es="La cámara de un móvil no es un verificador. La cámara dice si leyó este; el verificador dice si todo el lote se leerá en la línea del cliente. La diferencia es devoluciones o aceptación." data-ja="スマートフォンのカメラは検証機ではありません。カメラは「今回読めたか」に答え、検証機は「ロット全体が顧客のラインで読めるか」に答えます。その差が返品か受入かになります。" data-ko="스마트폰 카메라는 검증기가 아닙니다. 카메라는 이번에 읽혔는지를 답하고, 검증기는 로트 전체가 고객 라인에서 읽히는지를 답합니다. 그 차이가 반품과 합격을 가릅니다.">一支手機相機不是驗證儀。相機只回答「這次讀到了嗎」，驗證儀回答「整批在客戶的掃描線上都會讀到嗎」。兩者的差別，就是退貨與罰款的差別。</div>
+
+      <h2 data-zh="4. 從 C 級推到 A 級的產線調整" data-en="4. Production Changes That Move C to A" data-fr="4. Les réglages qui font passer de C à A" data-es="4. Los ajustes que llevan de C a A" data-ja="4. C から A へ引き上げる生産調整" data-ko="4. C를 A로 끌어올리는 생산 조정">4. 從 C 級推到 A 級的產線調整</h2>
+
+      <ul>
+        <li data-zh="解析度：一般輔料 300 dpi 起，模組 0.264 毫米時用 600 dpi，別用 203 dpi 熱轉印機硬撐小模組。" data-en="Resolution: 300 dpi is the floor for trims, and 600 dpi is required at a 0.264 mm module — do not push a 203 dpi thermal printer into small modules." data-fr="Résolution : 300 dpi est le minimum pour les accessoires, 600 dpi s&#x27;imposent à 0,264 mm de module ; ne forcez pas une thermique 203 dpi sur petit module." data-es="Resolución: 300 ppp es el mínimo en accesorios y se requieren 600 ppp con módulo de 0,264 mm; no fuerce una térmica de 203 ppp en módulos pequeños." data-ja="解像度：副資材は 300 dpi 以上、モジュール 0.264 mm では 600 dpi が必要です。203 dpi のサーマルで小モジュールを無理に刷らないこと。" data-ko="해상도: 부자재는 300 dpi가 하한이며 0.264 mm 모듈에서는 600 dpi가 필요합니다. 203 dpi 열전사로 작은 모듈을 억지로 인쇄하지 마십시오.">解析度：一般輔料 300 dpi 起，模組 0.264 毫米時用 600 dpi，別用 203 dpi 熱轉印機硬撐小模組。</li>
+        <li data-zh="條寬補償：依實測把條寬縮 0.02–0.04 毫米（bar width reduction），抵掉油墨擴散；每換一批紙或碳帶就重新量一次。" data-en="Bar width reduction: trim 0.02–0.04 mm from the printed bar width to offset ink spread, and re-measure after every paper or ribbon lot change." data-fr="Réduction de largeur : retirez 0,02 à 0,04 mm de largeur imprimée pour compenser l&#x27;étalement, et remesurez à chaque changement de papier ou de ruban." data-es="Reducción de ancho: recorte de 0,02 a 0,04 mm el ancho impreso para compensar la expansión y vuelva a medir con cada lote de papel o cinta." data-ja="バー幅補正：インクの広がり分として 0.02〜0.04 mm を差し引いて製版し、用紙やリボンのロットが変わるたびに再測定します。" data-ko="바 폭 보정: 잉크 번짐을 상쇄하도록 인쇄 바 폭을 0.02~0.04 mm 줄이고, 용지나 리본 로트가 바뀔 때마다 다시 측정합니다.">條寬補償：依實測把條寬縮 0.02–0.04 毫米（bar width reduction），抵掉油墨擴散；每換一批紙或碳帶就重新量一次。</li>
+        <li data-zh="碳帶選型：合成紙與織帶用樹脂碳帶，一般銅版紙用混合型；純蠟碳帶在覆膜後容易整片轉移脫落。" data-en="Ribbon choice: resin for synthetic substrates and woven tape, wax-resin for coated paper; pure wax smears once the tag is laminated." data-fr="Choix du ruban : résine pour supports synthétiques et tissés, cire-résine pour papier couché ; la cire pure bave après pelliculage." data-es="Elección de cinta: resina para sustratos sintéticos y tejidos, cera-resina para papel estucado; la cera pura se corre tras el laminado." data-ja="リボン選定：合成紙や織りテープはレジン、コート紙はワックスレジン。純ワックスはラミネート後に転写汚れが出ます。" data-ko="리본 선택: 합성지와 직조 테이프는 레진, 코팅지는 왁스-레진. 순수 왁스는 라미네이트 후 번짐과 탈락이 생깁니다.">碳帶選型：合成紙與織帶用樹脂碳帶，一般銅版紙用混合型；純蠟碳帶在覆膜後容易整片轉移脫落。</li>
+        <li data-zh="實物驗證：一定要在實際基材上驗，不能只看紙樣或 PDF 列印稿——同一組資料在銅版紙上是 A，在織帶上可能是 C。" data-en="Verify on the real substrate: never sign off on a paper proof or PDF — the same artwork that grades A on coated paper can grade C on woven tape." data-fr="Vérifiez sur le support réel : ne validez jamais sur une épreuve papier ou un PDF — le même fichier noté A sur couché peut être C sur tissé." data-es="Verifique sobre el sustrato real: nunca apruebe con una prueba en papel o un PDF; el mismo arte que da A en estucado puede dar C en tejido." data-ja="実基材で検証する：紙の校正や PDF で承認しないこと。同じデータがコート紙で A、織りテープで C になることがあります。" data-ko="실제 소재에서 검증하십시오. 종이 교정지나 PDF로 승인하지 마십시오. 같은 데이터가 코팅지에서 A, 직조 테이프에서 C가 될 수 있습니다.">實物驗證：一定要在實際基材上驗，不能只看紙樣或 PDF 列印稿——同一組資料在銅版紙上是 A，在織帶上可能是 C。</li>
+      </ul>
+
+      <h2 data-zh="5. 把驗證做進品管流程" data-en="5. Build Verification Into QC" data-fr="5. Intégrer la vérification au contrôle qualité" data-es="5. Integrar la verificación en el control de calidad" data-ja="5. 検証を品質管理工程に入れる" data-ko="5. 검증을 품질관리 공정에 넣기">5. 把驗證做進品管流程</h2>
+
+      <p data-zh="每批抽 10 個符號用驗證儀量，記錄等級、模組寬度與 PCS；換基材、換碳帶、換版之後必須重測。洗水標還要在覆膜後與 40 °C 洗三次之後各測一次，因為這兩步最常把 C 級打成 D 級。" data-en="Verify 10 symbols per batch with a verifier and log the grade, x-dimension and PCS. Retest after any substrate, ribbon or plate change. Care labels need two extra checks — after lamination and after three washes at 40 °C — because those two steps most often turn a C into a D." data-fr="Vérifiez 10 symboles par lot avec un vérificateur et consignez la note, le module et le PCS. Refaites le test après tout changement de support, de ruban ou de forme. Les étiquettes d&#x27;entretien exigent deux contrôles de plus — après pelliculage et après trois lavages à 40 °C — car ces étapes font le plus souvent chuter de C à D." data-es="Verifique 10 símbolos por lote con un verificador y registre la nota, el módulo y el PCS. Repita la prueba tras cualquier cambio de sustrato, cinta o plancha. Las etiquetas de cuidado requieren dos controles extra: tras el laminado y tras tres lavados a 40 °C, porque esos pasos suelen convertir una C en D." data-ja="ロットごとに 10 記号を検証機で測り、グレード・モジュール幅・PCS を記録します。基材、リボン、版を変えたら必ず再測定します。洗濯表示ラベルはラミネート後と 40 °C で 3 回洗濯した後の2回を追加し、この2工程で C が D に落ちることが最も多いからです。" data-ko="로트마다 기호 10개를 검증기로 측정해 등급, 모듈 폭, PCS를 기록합니다. 소재, 리본, 판이 바뀌면 반드시 재측정합니다. 세탁 표시 라벨은 라미네이트 후와 40 °C에서 3회 세탁 후 두 번을 추가로 측정해야 하며, 이 두 공정에서 C가 D로 떨어지는 경우가 가장 많습니다.">每批抽 10 個符號用驗證儀量，記錄等級、模組寬度與 PCS；換基材、換碳帶、換版之後必須重測。洗水標還要在覆膜後與 40 °C 洗三次之後各測一次，因為這兩步最常把 C 級打成 D 級。</p>
+
+      <p data-zh="把「掃得過」寫進驗收標準是常見錯誤。合約裡應該寫「每批不低於 B 級（2.5），抽 10 個符號，任一個低於門檻即整批不合格」，這樣責任才清楚。" data-en="Writing it scans into the acceptance criteria is a common mistake. The contract should say: no batch below grade B (2.5), 10 symbols sampled, and any symbol below the floor rejects the batch." data-fr="Écrire que cela scanne dans les critères d&#x27;acceptation est une erreur fréquente. Le contrat doit dire : aucun lot sous la note B (2,5), 10 symboles échantillonnés, et tout symbole sous le seuil rejette le lot." data-es="Escribir que escanea en los criterios de aceptación es un error frecuente. El contrato debe decir: ningún lote por debajo de B (2,5), 10 símbolos muestreados y cualquier símbolo bajo el umbral rechaza el lote." data-ja="「読めれば良い」と受入基準に書くのはよくある誤りです。契約には「B（2.5）未満のロットは不可、10 記号を抜き取り、基準未満が1つでもあればロット不合格」と明記します。" data-ko="읽히면 된다를 검수 기준에 쓰는 것은 흔한 실수입니다. 계약서에는 B(2.5) 미만 로트 불가, 기호 10개 샘플링, 기준 미달 1개라도 있으면 로트 불합격으로 명시해야 합니다.">把「掃得過」寫進驗收標準是常見錯誤。合約裡應該寫「每批不低於 B 級（2.5），抽 10 個符號，任一個低於門檻即整批不合格」，這樣責任才清楚。</p>
+
+      <h2 data-zh="6. 各市場的代碼體系與標示搭配" data-en="6. Regional Code Systems and What Sits Beside the Barcode" data-fr="6. Systèmes de codes régionaux et mentions associées" data-es="6. Sistemas de códigos regionales y menciones asociadas" data-ja="6. 地域別コード体系と併記表示" data-ko="6. 지역별 코드 체계와 함께 표기할 항목">6. 各市場的代碼體系與標示搭配</h2>
+
+      <p data-zh="歐盟：條碼內容依 GS1 通用規範，GTIN 是主要載體；同時《通用產品安全條例》GPSR (EU) 2023/988 要求可追溯資訊，通常以批號或二維碼與條碼並排呈現。法國市場的零售實務依 GS1 France 建議，西班牙則多由 AECOC 規範推動。" data-en="European Union: symbol content follows the GS1 General Specifications with the GTIN as the payload, while GPSR (EU) 2023/988 requires traceability information, usually printed as a batch code or a 2D code next to the barcode. French retail practice follows GS1 France recommendations and the Spanish market is largely driven by AECOC." data-fr="Union européenne : le contenu du symbole suit les Spécifications générales GS1 avec le GTIN comme charge utile, tandis que le GPSR (UE) 2023/988 exige des informations de traçabilité, souvent un numéro de lot ou un code 2D à côté du code-barres. En France, la pratique suit les recommandations de GS1 France ; en Espagne, elle est largement portée par AECOC." data-es="Unión Europea: el contenido del símbolo sigue las Especificaciones Generales GS1 con el GTIN como carga útil, mientras que el GPSR (UE) 2023/988 exige información de trazabilidad, normalmente un lote o un código 2D junto al código de barras. En Francia la práctica sigue las recomendaciones de GS1 France y en España la impulsa sobre todo AECOC." data-ja="EU：記号の内容は GS1 一般仕様に従い GTIN を格納します。同時に GPSR (EU) 2023/988 がトレーサビリティ情報を求めるため、ロット番号や二次元コードをバーコードの隣に印字するのが実務です。フランスは GS1 France の推奨、スペインは AECOC の運用が主流です。" data-ko="EU: 기호 내용은 GS1 일반 사양을 따르며 GTIN을 담습니다. 동시에 GPSR (EU) 2023/988은 추적 정보를 요구하므로 로트 번호나 2D 코드를 바코드 옆에 인쇄하는 것이 실무입니다. 프랑스는 GS1 France 권고, 스페인은 AECOC 운영이 주류입니다.">歐盟：條碼內容依 GS1 通用規範，GTIN 是主要載體；同時《通用產品安全條例》GPSR (EU) 2023/988 要求可追溯資訊，通常以批號或二維碼與條碼並排呈現。法國市場的零售實務依 GS1 France 建議，西班牙則多由 AECOC 規範推動。</p>
+
+      <p data-zh="日本與韓國：日本使用 GS1 Japan 的 JAN 符號，並依《家庭用品品質表示法》在條碼附近標示原產國與纖維組成；韓國使用 GS1 Korea 的 KAN 符號，品質標示依《電氣用品及生活用品安全管理法》的纖維製品品質標示基準，兩者都要求條碼與日文／韓文標示同時可讀，不能互相遮擋。" data-en="Japan and Korea: Japan uses the JAN symbol issued through GS1 Japan and, under the Household Goods Quality Labelling Act, prints origin and fibre composition near the barcode. Korea uses the KAN symbol through GS1 Korea, with quality labelling under the Electrical Appliances and Consumer Products Safety Control Act. Both require the barcode and the local-language labelling to stay legible and unblocked." data-fr="Japon et Corée : le Japon utilise le symbole JAN de GS1 Japan et, selon la loi sur l&#x27;étiquetage de qualité, imprime l&#x27;origine et la composition près du code. La Corée utilise le symbole KAN de GS1 Korea, l&#x27;étiquetage relevant de la loi sur le contrôle de sécurité des appareils électriques et produits de consommation. Les deux exigent que code et mentions locales restent lisibles." data-es="Japón y Corea: Japón usa el símbolo JAN de GS1 Japan y, según la ley de etiquetado de calidad, imprime origen y composición junto al código. Corea usa el símbolo KAN de GS1 Korea, con etiquetado conforme a la ley de control de seguridad de aparatos eléctricos y productos de consumo. Ambos exigen que código y menciones locales sigan legibles." data-ja="日本と韓国：日本は GS1 Japan の JAN シンボルを用い、家庭用品品質表示法に基づき原産国と繊維組成をバーコードの近くに表示します。韓国は GS1 Korea の KAN シンボルを用い、品質表示は電器用品及び生活用品安全管理法に基づきます。どちらもバーコードと現地語表示の両方が読めることを求めます。" data-ko="일본과 한국: 일본은 GS1 Japan의 JAN 기호를 사용하고 가정용품품질표시법에 따라 원산지와 섬유 조성을 바코드 근처에 표시합니다. 한국은 GS1 Korea의 KAN 기호를 사용하며 품질 표시는 전기용품 및 생활용품 안전관리법을 따릅니다. 두 시장 모두 바코드와 현지어 표시가 함께 읽혀야 합니다.">日本與韓國：日本使用 GS1 Japan 的 JAN 符號，並依《家庭用品品質表示法》在條碼附近標示原產國與纖維組成；韓國使用 GS1 Korea 的 KAN 符號，品質標示依《電氣用品及生活用品安全管理法》的纖維製品品質標示基準，兩者都要求條碼與日文／韓文標示同時可讀，不能互相遮擋。</p>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ：全部文章" data-en="Trims FAQ: all articles" data-fr="FAQ Accessoires : tous les articles" data-es="FAQ Accesorios: todos los artículos" data-ja="副資材 FAQ：すべての記事" data-ko="부자재 FAQ: 전체 글">輔料 FAQ：全部文章</a></li>
+        <li><a href="hang-tag-barcode-guide.html" data-zh="吊牌條碼指南：位置、尺寸與印刷方式" data-en="Hang Tag Barcode Guide: Placement, Size and Printing" data-fr="Guide du code-barres sur étiquette suspendue : pose, taille et impression" data-es="Guía del código de barras en etiquetas colgantes: posición, tamaño e impresión" data-ja="タグのバーコードガイド：位置・サイズ・印刷方式" data-ko="행택 바코드 가이드: 위치, 크기, 인쇄 방식">吊牌條碼指南：位置、尺寸與印刷方式</a></li>
+        <li><a href="apparel-label-barcode-printing-guide.html" data-zh="服裝標籤條碼印刷：設備與工藝選擇" data-en="Apparel Label Barcode Printing: Equipment and Process Choice" data-fr="Impression de codes-barres sur étiquettes : équipements et procédés" data-es="Impresión de códigos de barras en etiquetas: equipos y procesos" data-ja="衣料ラベルのバーコード印刷：設備と方式の選択" data-ko="의류 라벨 바코드 인쇄: 장비와 공정 선택">服裝標籤條碼印刷：設備與工藝選擇</a></li>
+        <li><a href="care-label-thermal-transfer-ribbon-guide.html" data-zh="洗水標熱轉印碳帶選型指南" data-en="Care Label Thermal Transfer Ribbon Selection" data-fr="Choix du ruban transfert thermique pour étiquettes d&#x27;entretien" data-es="Selección de cinta de transferencia térmica para etiquetas de cuidado" data-ja="洗濯表示ラベルの熱転写リボン選定" data-ko="세탁 표시 라벨 열전사 리본 선택">洗水標熱轉印碳帶選型指南</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="把條碼內容、模組寬度要求與目的市場的掃描門檻發給我們，我們先在實際基材上打樣並附驗證數據，再連同吊牌、織嘜與洗水標一起報價。" data-en="Send us the barcode content, x-dimension requirement and the scanning floor of the destination market. We print on the real substrate, send the verification data with the sample, and quote together with hang tags, woven labels and care labels." data-fr="Envoyez-nous le contenu du code, l&#x27;exigence de module et le seuil de lecture du marché visé. Nous imprimons sur le support réel, joignons les mesures de vérification à l&#x27;échantillon, puis chiffrons avec les étiquettes et les labels." data-es="Envíenos el contenido del código, el requisito de módulo y el umbral de lectura del mercado destino. Imprimimos sobre el sustrato real, adjuntamos la medición del verificador a la muestra y cotizamos con etiquetas colgantes, tejidas y de cuidado." data-ja="バーコード内容、モジュール幅の要件、仕向市場の読取基準をお知らせください。実基材に印刷し、検証データをサンプルに添えて、タグ・織りラベル・洗濯表示ラベルと合わせてお見積りします。" data-ko="바코드 내용, 모듈 폭 요건, 도착 시장의 판독 기준을 보내주십시오. 실제 소재에 인쇄해 검증 데이터를 샘플과 함께 보내고, 행택·직조 라벨·세탁 표시 라벨과 함께 견적합니다.">把條碼內容、模組寬度要求與目的市場的掃描門檻發給我們，我們先在實際基材上打樣並附驗證數據，再連同吊牌、織嘜與洗水標一起報價。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="獲取吊牌與條碼印刷報價 →" data-en="Request a hang tag and barcode quote →" data-fr="Demander un devis étiquettes et codes-barres →" data-es="Solicitar presupuesto de etiquetas y códigos →" data-ja="タグとバーコード印刷のお見積りを依頼 →" data-ko="행택과 바코드 인쇄 견적 요청 →">獲取吊牌與條碼印刷報價 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAIGE Emballages" data-es="TAIGE Embalajes" data-en="TAIGE Packaging" data-ja="泰閣包装" data-ko="TAIGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-es="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-en="© 2026 Dongguan Taige Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAIGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

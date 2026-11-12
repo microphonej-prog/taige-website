@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バーコード印刷品質のグレード：事務所では読めるのに物流センターで拒否される理由 | TAIGE</title>
+<meta name="description" content="バーコード検証ガイド：ISO/IEC 15416 が測る項目、小売が求めるグレード基準、織りラベルやラミネートタグが不合格になる理由、C から A へ引き上げる生産調整を解説します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/barcode-verification-grade-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/barcode-verification-grade-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Taige Packaging Products Co., Ltd.)",
+   "alternateName": "TAIGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收", "item": "https://taigetag.com/blog/barcode-verification-grade-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "條碼印刷品質等級：為什麼辦公室掃得過、到了客戶倉庫卻被拒收",
+   "url": "https://taigetag.com/blog/barcode-verification-grade-guide.html",
+   "inLanguage": ["zh-Hant", "en", "fr", "es", "ja", "ko"],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/barcode-verification-grade-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAIGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>バーコード品質グレード</span></div>
+      <h1>バーコード印刷品質のグレード：事務所では読めるのに物流センターで拒否される理由</h1>
+      <p>泰閣包装 · 2026年11月12日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>事務所の机では読めるバーコードが、顧客の物流センターで箱ごと返品される。壊れたのはスキャナではなく、印刷品質です。小売のスキャンシステムは ISO/IEC 15416 に基づいて記号ごとにグレードを付け、多くの小売は C（1.5）未満を受け入れません。物流センターによっては B（2.5）以上を要求します。スマートフォンのアプリで読めても、検証機では D になることがあります。</p>
+
+      <p>本記事では、このグレードが実際に何を測っているのか、買い手が運用している基準値、織りラベルやラミネートタグが点を落とす5つの箇所、そして記号を C から A へ引き上げる生産設定を整理します。</p>
+
+      <h2>1. グレードが実際に測っているもの</h2>
+
+      <p>検証機は「読めるかどうか」ではなく、5つのパラメータを 0〜4 で採点し、最も低い値を最終グレードとします。1つが崩れれば、他の4つが良くても救われません。</p>
+
+      <table>
+        <tr><th>項目</th><th>測定内容</th><th>副資材で壊れる原因</th></tr>
+        <tr><td>シンボルコントラスト SC</td><td>濃いバーと明るいスペースの反射率差</td><td>クラフト紙に濃色バー、灰色ボール紙に色付きバー</td></tr>
+        <tr><td>モジュレーション MOD</td><td>記号内でバー幅が揃っているか</td><td>織りテープの凹凸によるインクの広がり、高速時のリボン不足</td></tr>
+        <tr><td>エッジ判定と最小エッジコントラスト</td><td>デコードできるほどエッジが鋭いか</td><td>記号の上に直接マットラミネート、光沢インクの上にニス</td></tr>
+        <tr><td>欠陥 DEF</td><td>バーとスペース内の白抜け・汚れ</td><td>粉塵と静電気、印字ヘッドの汚れ、織り目が透ける</td></tr>
+        <tr><td>デコード性 DEC</td><td>実測パターンが理想にどれだけ近いか</td><td>倍率の誤り、版データの変形、曲面への貼付</td></tr>
+      </table>
+
+      <h2>2. 買い手が実際に運用する基準値</h2>
+
+      <ul>
+        <li>グレード基準：小売 POS の下限は C（1.5）が一般的。EC フルフィルメントや一部の物流センターは B（2.5）以上、まれに A（3.5）を求めます。</li>
+        <li>モジュール幅（x-dimension）：小売の EAN-13 は 0.330 mm が標準。小さなタグは 80% 倍率の 0.264 mm まで落とすことが多く、ここで欠陥の影響が支配的になります。</li>
+        <li>クワイエットゾーン：左右にモジュール幅の 10 倍、0.330 mm なら約 3.3 mm。細い織りラベルで削られやすいのがこの部分です。</li>
+        <li>バー高さ：小さなタグでは切り詰められますが、最低 15 mm、記号長の 50% 以上を確保しないとハンディスキャナの読取率が落ちます。</li>
+        <li>印刷コントラスト PCS：0.75 以上。濃色地の反転バーコードは副資材ではほぼ達成できないため、白地に濃色バーで刷ります。</li>
+      </ul>
+
+      <h2>3. 副資材で点を落とす5つの常連</h2>
+
+      <ul>
+        <li>織りテープの凹凸：横糸の起伏がエッジ判定を狂わせ、モジュールが小さいほど顕著になります。0.264 mm ではほぼ確実にグレードが落ちます。</li>
+        <li>ラミネートとニス：記号の上にフィルムやニスをかけるとエッジコントラストが落ちます。記号部分は窓抜きにし、周囲だけをコーティングします。</li>
+        <li>濃色・金属系基材：金・銀・黒の台紙にバーコードを刷ると SC と PCS が同時に崩れます。白地に刷るか白ラベルを貼ります。</li>
+        <li>インクの広がり：0.264 mm モジュールでは 0.02 mm 広がるだけでバー幅誤差 7% となり、MOD が即座に落ちます。</li>
+        <li>クワイエットゾーンの削減：デザイナーがコードの隣にロゴや罫線を入れると、スキャナが開始キャラクタを見つけられず、検証機はデコード不能と判定します。</li>
+      </ul>
+
+      <div class="callout">スマートフォンのカメラは検証機ではありません。カメラは「今回読めたか」に答え、検証機は「ロット全体が顧客のラインで読めるか」に答えます。その差が返品か受入かになります。</div>
+
+      <h2>4. C から A へ引き上げる生産調整</h2>
+
+      <ul>
+        <li>解像度：副資材は 300 dpi 以上、モジュール 0.264 mm では 600 dpi が必要です。203 dpi のサーマルで小モジュールを無理に刷らないこと。</li>
+        <li>バー幅補正：インクの広がり分として 0.02〜0.04 mm を差し引いて製版し、用紙やリボンのロットが変わるたびに再測定します。</li>
+        <li>リボン選定：合成紙や織りテープはレジン、コート紙はワックスレジン。純ワックスはラミネート後に転写汚れが出ます。</li>
+        <li>実基材で検証する：紙の校正や PDF で承認しないこと。同じデータがコート紙で A、織りテープで C になることがあります。</li>
+      </ul>
+
+      <h2>5. 検証を品質管理工程に入れる</h2>
+
+      <p>ロットごとに 10 記号を検証機で測り、グレード・モジュール幅・PCS を記録します。基材、リボン、版を変えたら必ず再測定します。洗濯表示ラベルはラミネート後と 40 °C で 3 回洗濯した後の2回を追加し、この2工程で C が D に落ちることが最も多いからです。</p>
+
+      <p>「読めれば良い」と受入基準に書くのはよくある誤りです。契約には「B（2.5）未満のロットは不可、10 記号を抜き取り、基準未満が1つでもあればロット不合格」と明記します。</p>
+
+      <h2>6. 地域別コード体系と併記表示</h2>
+
+      <p>EU：記号の内容は GS1 一般仕様に従い GTIN を格納します。同時に GPSR (EU) 2023/988 がトレーサビリティ情報を求めるため、ロット番号や二次元コードをバーコードの隣に印字するのが実務です。フランスは GS1 France の推奨、スペインは AECOC の運用が主流です。</p>
+
+      <p>日本と韓国：日本は GS1 Japan の JAN シンボルを用い、家庭用品品質表示法に基づき原産国と繊維組成をバーコードの近くに表示します。韓国は GS1 Korea の KAN シンボルを用い、品質表示は電器用品及び生活用品安全管理法に基づきます。どちらもバーコードと現地語表示の両方が読めることを求めます。</p>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="index.html">副資材 FAQ：すべての記事</a></li>
+        <li><a href="hang-tag-barcode-guide.html">タグのバーコードガイド：位置・サイズ・印刷方式</a></li>
+        <li><a href="apparel-label-barcode-printing-guide.html">衣料ラベルのバーコード印刷：設備と方式の選択</a></li>
+        <li><a href="care-label-thermal-transfer-ribbon-guide.html">洗濯表示ラベルの熱転写リボン選定</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>バーコード内容、モジュール幅の要件、仕向市場の読取基準をお知らせください。実基材に印刷し、検証データをサンプルに添えて、タグ・織りラベル・洗濯表示ラベルと合わせてお見積りします。</p>
+        <a class="cta-btn" href="../contact.html">タグとバーコード印刷のお見積りを依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAIGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAIGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
