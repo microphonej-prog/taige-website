@@ -5,7 +5,7 @@
   "use strict";
 
   /* ---------- 語言檢測（?lang= 參數 > localStorage > 默認zh） ---------- */
-  var LANG_KEY = "taige_lang";
+  var LANG_KEY = "tage_lang";
   var LANGS = ["zh", "en", "ja", "ko", "fr", "es"];
   /* 獨立語言目錄 /en/ /fr/ /es/：固定對應語言，忽略 ?lang/localStorage/瀏覽器語言，
      語言切換按鈕跳回根目錄對應語言版本 */
@@ -260,7 +260,7 @@
     fr: { text: "Ce site est disponible en français", btn: "Voir en français" },
     es: { text: "Este sitio está disponible en español", btn: "Ver en español" }
   };
-  var HINT_OFF_KEY = "taige_lang_hint_off_v2";
+  var HINT_OFF_KEY = "tage_lang_hint_off_v2";
   var HINT_SNOOZE_DAYS = 30;   /* 訪客關掉後靜默天數，期滿重新提示 */
 
   function sysLang() {
