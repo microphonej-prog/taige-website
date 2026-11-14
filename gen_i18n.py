@@ -196,6 +196,10 @@ def convert(lang, src_path, out_path, page_abs_url):
                 content_new = v  # 含 HTML 标签（如 <em>）→ 原样
             else:
                 content_new = html.escape(v)
+                # 内链 href 用单引号写在 data-* 里时，html.escape 会把它转成 &#x27;，
+                # 浏览器不把实体当引号 → 生成页链接变成 'x.html' 这种带引号路径而 404。
+                # 这里把 href=&#x27;x&#x27; 还原成双引号写法（正文文字里的撇号仍保持转义，无副作用）。
+                content_new = re.sub(r"href=&#x27;([^&<>\s]+)&#x27;", r'href="\1"', content_new)
             return '<%s%s>%s</%s>' % (tag, attrs2, content_new, tag)
         pat = r'<(%s)([^>]*?%s="[^"]*"[^>]*)>(.*?)</%s>' % (tag, take_any, tag)
         s = re.sub(pat, repl, s, flags=re.S)
