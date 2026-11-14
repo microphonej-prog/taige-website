@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS1 Digital Link: 케어 라벨과 행택의 2차원 코드 | TAGE</title>
+<meta name="description" content="케어 라벨과 행택을 GS1 Digital Link 2차원 코드로 전환. 모듈 0.4~0.5 mm, 여백 설계, 매체별 한계, ISO/IEC 15415 검증, 2027년까지의 절차.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼", "item": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼",
+   "url": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>바코드와 추적성</span></div>
+      <h1>GS1 Digital Link: 케어 라벨과 행택의 2차원 코드 사양과 검증</h1>
+      <p>TAGE 패키징 · 2026년 11월 14일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>소매 현장은 1차원 바코드에서 2차원 코드로 이동하고 있고, 그 매체는 부자재입니다. 케어 라벨, 행택, 비닐봉투 스티커가 해당합니다. GS1의 Sunrise 2027과 미국·유럽 유통사의 공개된 일정은 이번 시즌 승인한 라벨이 다음 시즌에는 GS1 Digital Link를 담은 QR 코드를 요구받을 수 있음을 뜻합니다. 이 글은 라벨에서 무엇이 바뀌는지, 어떤 인쇄 방식이 코드를 견디는지, 지금 구매팀과 확정해야 할 숫자를 정리합니다.</p>
+
+      <h2>1. 실제로 바뀌는 것: 13자리 숫자에서 링크로</h2>
+
+      <p>한 문장으로 정리됩니다. 1차원 EAN-13은 GTIN만 담고, 2차원 코드는 같은 GTIN에 로트, 시리얼, 해석 가능한 URL(https://id.gs1.org/01/{GTIN}/10/{로트}/21/{시리얼})을 더합니다. 계산대에서는 가격과 상품 정보로, 판매 후에는 세탁에서 이염된 로트까지 되짚는 유일한 실무 경로가 됩니다. 부자재 업체에는 코드의 매체·크기·합격 기준이 사양서의 일부가 된다는 뜻입니다.</p>
+
+      <h2>2. 레이아웃을 정하는 세 숫자: 모듈, 여백(콰이어트 존), 라벨 폭</h2>
+
+      <p>GS1은 X 치수(모듈 하나의 폭)를 기준으로 합니다. 매장 POS 판독은 보통 모듈당 0.4~0.5 mm로 지정되고, 물류용만이면 0.25 mm 정도까지 좁힐 수 있습니다. 로트와 시리얼을 담는 Digital Link는 보통 29~33개 모듈이 필요해, 0.5 mm 기준 기호 자체가 15~17 mm 정사각형이고, QR은 사방 4개 모듈(DataMatrix는 1개)의 여백이 필요해 옆에 문자를 넣기 전에 19~21 mm를 차지합니다. 접이식 케어 라벨에서는 이것이 20 mm와 30 mm의 차이입니다.</p>
+
+      <h2>3. 어떤 매체와 인쇄 방식이 코드를 견디는가</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>매체·인쇄</th>
+            <th>실무 최소 모듈</th>
+            <th>판단</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>열전사 케어 라벨 300 dpi</td>
+            <td>0.25 mm</td>
+            <td>우선 선택. 온도와 장력을 안정시키면 재현됩니다</td>
+          </tr>
+          <tr>
+            <td>오프셋 행택 + 매트 라미네이팅</td>
+            <td>0.30 mm</td>
+            <td>가능. 매트는 반사를 줄입니다. 광택은 피하십시오</td>
+          </tr>
+          <tr>
+            <td>직조 라벨</td>
+            <td>0.60 mm 이상</td>
+            <td>대부분 불안정. 보풀로 모듈이 뭉개져 인쇄 라벨이나 확대 적용</td>
+          </tr>
+          <tr>
+            <td>비닐봉투 열전사 스티커</td>
+            <td>0.30 mm</td>
+            <td>가능. 감열지는 퇴색하므로 사용 금지</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. 대비와 검증: 불합격은 여기서 나옵니다</h2>
+
+      <p>코드는 검정 잉크에 흰 바탕, 위에 아무것도 겹치지 않아야 합니다. 포일, 박, 광택 라미네이팅이 코드를 덮으면 판독성은 운에 맡기는 셈입니다. 검증은 ISO/IEC 15415로 A~F 등급을 매기며, 유통은 보통 C(1.5) 이상을 요구하고 B(2.5) 이상을 선호합니다. 중요한 것은 로트마다 5~10개를 실측하고 성적서를 남기는 일입니다. 시험 인쇄 합격이 양산 합격을 뜻하지는 않습니다. 열전사는 헤드 온도와 리본 로트 차이로 3,000 m를 넘긴 뒤 무너지기도 합니다.</p>
+
+      <ul>
+        <li>광택 라미네이팅이나 박이 코드를 덮으면 판독되지 않습니다</li>
+        <li>여백이 재단되어 사라졌거나 옆에 문자와 접힘이 있습니다</li>
+        <li>직조 보풀이나 전사 온도 부족으로 모듈 경계가 뭉개집니다</li>
+      </ul>
+
+      <h2>5. 법규가 요구하는 것은 추적 가능성이며, 그럴듯한 문구가 아닙니다</h2>
+
+      <p>EU에서는 제품안전 규정 (EU) 2023/988이 2024년 12월 13일부터 적용되어 제품 식별·추적과 책임 있는 사업자 표시를 요구합니다. 부자재에서는 이미 봉제된 라벨에 로트 정보로 연결되는 2차원 코드를 얹는 것이 가장 저렴한 방법입니다. 한국에서는 섬유제품의 품질 표시와 취급 표시가 품질경영 및 공산품 안전관리법의 적용을 받고, 인쇄된 정보 자체가 보여야 합니다. QR 코드는 이를 보완할 뿐 대체하지 않습니다. 이 경계를 사양서에 적어 두면 구매팀과의 논의를 한 차례 줄일 수 있습니다.</p>
+
+      <div class="callout">구매팀의 질문은 하나입니다. 이 코드가 로트와 시리얼까지 연결되는가. 아니라면 아직 준비되지 않은 것입니다.</div>
+
+      <h2>6. 2027년 전 파일럿 체크리스트</h2>
+
+      <ol>
+        <li>기존 라벨을 구매팀 스캐너로 실측합니다(휴대폰 카메라로 대체 금지)</li>
+        <li>모듈 크기와 여백을 사양서에 확정하고 GTIN 프리픽스도 전달합니다</li>
+        <li>시험 단계에서 ISO/IEC 15415 검증, B(2.5) 이상 요구</li>
+        <li>양산 로트마다 5~10개 검증 기록을 보관합니다. 문제 시 유일한 증거입니다</li>
+      </ol>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="hang-tag-barcode-guide.html">행택 바코드: 위치, 여백, 인쇄 공차</a></li>
+        <li><a href="barcode-verification-grade-guide.html">바코드 검증 등급: A~F 읽는 법</a></li>
+        <li><a href="care-label-printing-requirements.html">케어 라벨 인쇄 요건: 해상도, 리본, 대비</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>시료, 코드 검증, 원산지 서류 지원이 필요하신가요?</p>
+        <a class="cta-btn" href="../contact.html">시료와 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

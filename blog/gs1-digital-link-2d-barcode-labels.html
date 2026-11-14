@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼 | TAGE" data-en="GS1 Digital Link: 2D Barcodes on Apparel Labels and Hang Tags | TAGE" data-fr="GS1 Digital Link : le code 2D sur les étiquettes et hangtags | TAGE" data-es="GS1 Digital Link: el código 2D en etiquetas y colgantes | TAGE" data-ja="GS1 Digital Link：洗濯表示と下げ札の2次元コード | TAGE" data-ko="GS1 Digital Link: 케어 라벨과 행택의 2차원 코드 | TAGE">GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼 | TAGE</title>
+<meta name="description" data-zh="洗水標與吊牌轉用 GS1 Digital Link 二維碼的實務指南：模組 0,4–0,5 mm 與靜區算法、四種承載方式的模組下限、ISO/IEC 15415 驗碼門檻，以及 2027 年前的試點清單。" data-en="Moving care labels and hang tags to GS1 Digital Link 2D codes: module and quiet zone numbers, print method limits, ISO/IEC 15415 grading, 2027 pilot steps." data-fr="Passer les étiquettes et hangtags au code 2D GS1 Digital Link : modules de 0,4 à 0,5 mm, zone de silence, limites par support, vérification ISO/IEC 15415." data-es="Pasar etiquetas y colgantes al código 2D GS1 Digital Link: módulos de 0,4 a 0,5 mm, zona de silencio, límites por soporte, verificación ISO/IEC 15415." data-ja="洗濯表示ラベルと下げ札を GS1 Digital Link の2次元コードへ。モジュール 0.4〜0.5 mm、余白の設計、媒体ごとの限界、ISO/IEC 15415 検証、2027 年までの進め方。" data-ko="케어 라벨과 행택을 GS1 Digital Link 2차원 코드로 전환. 모듈 0.4~0.5 mm, 여백 설계, 매체별 한계, ISO/IEC 15415 검증, 2027년까지의 절차."
+      content="洗水標與吊牌轉用 GS1 Digital Link 二維碼的實務指南：模組 0,4–0,5 mm 與靜區算法、四種承載方式的模組下限、ISO/IEC 15415 驗碼門檻，以及 2027 年前的試點清單。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/gs1-digital-link-2d-barcode-labels.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼", "item": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼",
+   "url": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/gs1-digital-link-2d-barcode-labels.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="條碼與追溯" data-en="Barcode &amp; Traceability" data-fr="Codes-barres et traçabilité" data-es="Códigos y trazabilidad" data-ja="バーコードとトレーサビリティ" data-ko="바코드와 추적성">條碼與追溯</span></div>
+      <h1 data-zh="GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼" data-en="GS1 Digital Link: 2D Barcode Specs for Care Labels and Hang Tags" data-fr="GS1 Digital Link : spécifications du code 2D sur étiquettes et hangtags" data-es="GS1 Digital Link: especificaciones del código 2D en etiquetas y colgantes" data-ja="GS1 Digital Link：洗濯表示と下げ札における2次元コードの仕様と検証" data-ko="GS1 Digital Link: 케어 라벨과 행택의 2차원 코드 사양과 검증">GS1 Digital Link：洗水標與吊牌的二維碼規格與驗碼</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月14日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 14, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 14 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 14 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月14日更新" data-ko="TAGE 패키징 · 2026년 11월 14일 업데이트">泰閣包裝 · 更新於 2026年11月14日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="零售端正從一維條碼轉向二維碼，而承載它的正是輔料：洗水標、吊牌與膠袋貼紙。GS1 的 Sunrise 2027 計畫，加上美歐零售商已公布的時程，意味著這一季核可的標籤，下一季就可能必須印上內含 GS1 Digital Link 的二維碼。本文說明標籤上到底改了什麼、哪些印刷方式撐得住這個碼，以及現在就該與買家敲定的幾個數字。" data-en="Retail is moving from the 1D barcode to 2D codes, and the carrier is a trim: the care label, the hang tag and the poly bag sticker. GS1&#x27;s Sunrise 2027 initiative, together with deadlines already published by retailers in the US and Europe, means a label approved this season may have to carry a QR code containing a GS1 Digital Link by the next. This guide covers what changes on the label, which print methods can hold the code, and the numbers to settle with the buying team now." data-fr="Le commerce de détail passe du code-barres 1D aux codes 2D, et le support, c&#x27;est l&#x27;accessoire : étiquette d&#x27;entretien, hangtag, sticker de sachet. L&#x27;initiative Sunrise 2027 de GS1, comme les échéances déjà publiées par des distributeurs américains et européens, signifie que l&#x27;étiquette validée cette saison devra peut-être porter un QR code contenant un GS1 Digital Link dès la suivante. Ce guide couvre ce qui change sur l&#x27;étiquetage, quels procédés d&#x27;impression tiennent le code, et les chiffres à arrêter avec l&#x27;acheteur dès maintenant." data-es="El comercio minorista pasa del código de barras 1D a los códigos 2D, y el soporte es un accesorio: la etiqueta de cuidado, el colgante y el sticker de la bolsa. La iniciativa Sunrise 2027 de GS1, junto con los plazos ya publicados por minoristas de EE. UU. y Europa, implica que la etiqueta aprobada esta temporada quizá deba llevar un QR con GS1 Digital Link en la siguiente. Esta guía cubre qué cambia en el etiquetado, qué métodos de impresión sostienen el código y los números que conviene cerrar ya con el comprador." data-ja="小売の現場は1次元バーコードから2次元コードへ移り、その担い手は副資材です。洗濯表示ラベル、下げ札、ポリ袋のシールが該当します。GS1 の Sunrise 2027 と、米欧の小売が既に公表した期限により、今季承認したラベルが来季には GS1 Digital Link を格納した QR コードを必要とするかもしれません。本記事では表示の何が変わるのか、どの印刷方式ならコードを保持できるのか、今のうちに買い手と決めておく数値を整理します。" data-ko="소매 현장은 1차원 바코드에서 2차원 코드로 이동하고 있고, 그 매체는 부자재입니다. 케어 라벨, 행택, 비닐봉투 스티커가 해당합니다. GS1의 Sunrise 2027과 미국·유럽 유통사의 공개된 일정은 이번 시즌 승인한 라벨이 다음 시즌에는 GS1 Digital Link를 담은 QR 코드를 요구받을 수 있음을 뜻합니다. 이 글은 라벨에서 무엇이 바뀌는지, 어떤 인쇄 방식이 코드를 견디는지, 지금 구매팀과 확정해야 할 숫자를 정리합니다.">零售端正從一維條碼轉向二維碼，而承載它的正是輔料：洗水標、吊牌與膠袋貼紙。GS1 的 Sunrise 2027 計畫，加上美歐零售商已公布的時程，意味著這一季核可的標籤，下一季就可能必須印上內含 GS1 Digital Link 的二維碼。本文說明標籤上到底改了什麼、哪些印刷方式撐得住這個碼，以及現在就該與買家敲定的幾個數字。</p>
+
+      <h2 data-zh="1. 到底改了什麼：從 13 位數字到一條鏈接" data-en="1. What actually changes: from a 13-digit line to a link" data-fr="1. Ce qui change réellement : d&#x27;un code à 13 chiffres à un lien" data-es="1. Qué cambia realmente: de un código de 13 dígitos a un enlace" data-ja="1. 実際に変わること：13桁の数字からリンクへ" data-ko="1. 실제로 바뀌는 것: 13자리 숫자에서 링크로">1. 到底改了什麼：從 13 位數字到一條鏈接</h2>
+
+      <p data-zh="一句話講完差別：一維 EAN-13 只帶 GTIN，二維碼除了同一個 GTIN，還能帶批號、序號與一條可解析的網址（https://id.gs1.org/01/{GTIN}/10/{批號}/21/{序號}）。結帳時它解析出價格與商品資料；售後，它是唯一能追回「哪一批洗水標洗後掉色」的實務路徑。對輔料廠的意義很直接：碼的載體、尺寸與驗收標準，從此屬於規格書的一部分，不再只是圖稿上的一塊黑白方塊。" data-en="One sentence covers the difference: a 1D EAN-13 carries the GTIN and nothing else, while a 2D code carries the same GTIN plus lot, serial and a resolvable URL of the form https://id.gs1.org/01/{GTIN}/10/{lot}/21/{serial}. At the till that URL resolves to price and product data; after the sale it is the only practical route back to the batch whose care labels bled in the wash. For a trims supplier this is concrete: the carrier, the size and the acceptance grade of the code now belong in the specification, not just as a black square on the artwork." data-fr="Une phrase suffit : un EAN-13 1D ne porte que le GTIN, alors qu&#x27;un code 2D porte le même GTIN plus le lot, le numéro de série et une URL résoluble de la forme https://id.gs1.org/01/{GTIN}/10/{lot}/21/{serie}. En caisse, cette URL donne le prix et la fiche produit ; après la vente, c&#x27;est le seul chemin concret pour remonter au lot d&#x27;étiquettes qui a déteint au lavage. Pour un fournisseur d&#x27;accessoires, la conséquence est directe : le support, la taille et la note d&#x27;acceptation du code entrent dans le cahier des charges." data-es="Una frase resume la diferencia: un EAN-13 1D solo lleva el GTIN, mientras que un código 2D lleva el mismo GTIN más el lote, el número de serie y una URL resoluble del tipo https://id.gs1.org/01/{GTIN}/10/{lote}/21/{serie}. En caja esa URL devuelve precio y ficha de producto; tras la venta es la única vía práctica para volver al lote cuyas etiquetas destiñeron en el lavado. Para un proveedor de accesorios es concreto: el soporte, el tamaño y la nota de aceptación del código pasan a la ficha técnica." data-ja="要点は一行で足ります。1次元 EAN-13 は GTIN だけを持ち、2次元コードは同じ GTIN にロット、シリアル、解決可能な URL（https://id.gs1.org/01/{GTIN}/10/{ロット}/21/{シリアル}）を加えられます。レジでは価格と商品情報に、販売後は洗濯で色移りしたロットまで戻る唯一の実務的な経路になります。副資材メーカーにとっては、コードの媒体・寸法・合格基準が仕様書の一部になる、という意味です。" data-ko="한 문장으로 정리됩니다. 1차원 EAN-13은 GTIN만 담고, 2차원 코드는 같은 GTIN에 로트, 시리얼, 해석 가능한 URL(https://id.gs1.org/01/{GTIN}/10/{로트}/21/{시리얼})을 더합니다. 계산대에서는 가격과 상품 정보로, 판매 후에는 세탁에서 이염된 로트까지 되짚는 유일한 실무 경로가 됩니다. 부자재 업체에는 코드의 매체·크기·합격 기준이 사양서의 일부가 된다는 뜻입니다.">一句話講完差別：一維 EAN-13 只帶 GTIN，二維碼除了同一個 GTIN，還能帶批號、序號與一條可解析的網址（https://id.gs1.org/01/{GTIN}/10/{批號}/21/{序號}）。結帳時它解析出價格與商品資料；售後，它是唯一能追回「哪一批洗水標洗後掉色」的實務路徑。對輔料廠的意義很直接：碼的載體、尺寸與驗收標準，從此屬於規格書的一部分，不再只是圖稿上的一塊黑白方塊。</p>
+
+      <h2 data-zh="2. 決定版面的是三個數字：模組、靜區、標籤寬度" data-en="2. Three numbers decide the layout: module, quiet zone, label width" data-fr="2. Trois chiffres décident de la mise en page : module, zone de silence, largeur d&#x27;étiquette" data-es="2. Tres cifras deciden la maqueta: módulo, zona de silencio, ancho de etiqueta" data-ja="2. レイアウトを決める三つの数値：モジュール、余白（クワイエットゾーン）、ラベル幅" data-ko="2. 레이아웃을 정하는 세 숫자: 모듈, 여백(콰이어트 존), 라벨 폭">2. 決定版面的是三個數字：模組、靜區、標籤寬度</h2>
+
+      <p data-zh="GS1 以 X 尺寸（單一模組寬度）為基準。零售 POS 掃描一般規範在每模組 0,4 至 0,5 mm；只做物流追溯的碼可以細到約 0,25 mm。含批號與序號的 Digital Link 通常需要 29 至 33 個模組，以 0,5 mm 計，符號本身約 15 至 17 mm 見方，加上四周各 4 個模組的靜區（DataMatrix 只需 1 個模組），實際要佔 19 至 21 mm，才輪得到旁邊排文字。對折疊洗水標來說，這就是 20 mm 與 30 mm 的差別。" data-en="GS1 works from the X-dimension, the width of one module. Retail POS scanning is normally specified at 0,4 to 0,5 mm per module; a logistics-only code can go thinner, around 0,25 mm. A Digital Link carrying lot and serial typically needs 29 to 33 modules, so at 0,5 mm the symbol alone is roughly 15 to 17 mm square, and a QR code needs a four-module quiet zone on all sides (a DataMatrix needs one) — about 19 to 21 mm before any text fits beside it. On a folded care label that is the difference between a 20 mm and a 30 mm label." data-fr="GS1 raisonne en dimension X, la largeur d&#x27;un module. Le scan en caisse est généralement spécifié entre 0,4 et 0,5 mm par module ; un code destiné à la seule logistique descend vers 0,25 mm. Un Digital Link portant lot et série demande en pratique 29 à 33 modules : à 0,5 mm, le symbole fait 15 à 17 mm de côté, et un QR exige une zone de silence de quatre modules sur chaque côté (un seul pour un DataMatrix), soit 19 à 21 mm avant de loger du texte à côté. Sur une étiquette pliée, c&#x27;est la différence entre 20 mm et 30 mm." data-es="GS1 trabaja con la dimensión X, el ancho de un módulo. El escaneo en caja se especifica normalmente entre 0,4 y 0,5 mm por módulo; un código solo para logística baja a unos 0,25 mm. Un Digital Link con lote y serie suele necesitar 29 a 33 módulos: a 0,5 mm el símbolo mide 15 a 17 mm de lado, y un QR exige zona de silencio de cuatro módulos por lado (uno solo en DataMatrix), es decir 19 a 21 mm antes de colocar texto al lado. En una etiqueta doblada, esa es la diferencia entre 20 mm y 30 mm." data-ja="GS1 は X 寸法（モジュール1個の幅）を基準にします。店頭 POS の読み取りは通常 0.4〜0.5 mm/モジュールで指定され、物流用途だけなら 0.25 mm 程度まで細くできます。ロットとシリアルを含む Digital Link は通常 29〜33 モジュールを要し、0.5 mm なら記号自体が 15〜17 mm 角、QR は四周に 4 モジュールの余白（DataMatrix は 1 モジュール）が必要なので、横に文字を置く前に 19〜21 mm を占めます。折り返しの洗濯表示ラベルでは、これが 20 mm と 30 mm の差になります。" data-ko="GS1은 X 치수(모듈 하나의 폭)를 기준으로 합니다. 매장 POS 판독은 보통 모듈당 0.4~0.5 mm로 지정되고, 물류용만이면 0.25 mm 정도까지 좁힐 수 있습니다. 로트와 시리얼을 담는 Digital Link는 보통 29~33개 모듈이 필요해, 0.5 mm 기준 기호 자체가 15~17 mm 정사각형이고, QR은 사방 4개 모듈(DataMatrix는 1개)의 여백이 필요해 옆에 문자를 넣기 전에 19~21 mm를 차지합니다. 접이식 케어 라벨에서는 이것이 20 mm와 30 mm의 차이입니다.">GS1 以 X 尺寸（單一模組寬度）為基準。零售 POS 掃描一般規範在每模組 0,4 至 0,5 mm；只做物流追溯的碼可以細到約 0,25 mm。含批號與序號的 Digital Link 通常需要 29 至 33 個模組，以 0,5 mm 計，符號本身約 15 至 17 mm 見方，加上四周各 4 個模組的靜區（DataMatrix 只需 1 個模組），實際要佔 19 至 21 mm，才輪得到旁邊排文字。對折疊洗水標來說，這就是 20 mm 與 30 mm 的差別。</p>
+
+      <h2 data-zh="3. 哪種承載方式撐得住這個碼" data-en="3. Which carrier and print method can hold it" data-fr="3. Quel support et quel procédé tiennent le code" data-es="3. Qué soporte y qué método de impresión sostienen el código" data-ja="3. どの媒体・印刷方式ならコードを保持できるか" data-ko="3. 어떤 매체와 인쇄 방식이 코드를 견디는가">3. 哪種承載方式撐得住這個碼</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="承載方式／印刷" data-en="Carrier and print" data-fr="Support et impression" data-es="Soporte e impresión" data-ja="媒体・印刷" data-ko="매체·인쇄">承載方式／印刷</th>
+            <th data-zh="實務模組下限" data-en="Practical minimum module" data-fr="Module minimal réel" data-es="Módulo mínimo real" data-ja="実務上の最小モジュール" data-ko="실무 최소 모듈">實務模組下限</th>
+            <th data-zh="判斷" data-en="Verdict" data-fr="Verdict" data-es="Veredicto" data-ja="判断" data-ko="판단">判斷</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="熱轉印洗水標 300 dpi" data-en="Thermal transfer care label, 300 dpi" data-fr="Étiquette d&#x27;entretien transfert thermique 300 dpi" data-es="Etiqueta de cuidado por transferencia térmica 300 dpi" data-ja="サーマル転写の洗濯表示 300 dpi" data-ko="열전사 케어 라벨 300 dpi">熱轉印洗水標 300 dpi</td>
+            <td data-zh="0,25 mm" data-en="0,25 mm" data-fr="0,25 mm" data-es="0,25 mm" data-ja="0.25 mm" data-ko="0.25 mm">0,25 mm</td>
+            <td data-zh="首選：溫度與張力穩就能穩定出碼" data-en="Default: stable heat and tension gives repeatable codes" data-fr="Choix par défaut : température et tension stables donnent des codes réguliers" data-es="Opción por defecto: temperatura y tensión estables dan códigos repetibles" data-ja="第一候補。温度と張力を安定させれば安定して出せます" data-ko="우선 선택. 온도와 장력을 안정시키면 재현됩니다">首選：溫度與張力穩就能穩定出碼</td>
+          </tr>
+          <tr>
+            <td data-zh="膠印吊牌＋霧膜" data-en="Offset hang tag with matte lamination" data-fr="Hangtag offset avec pelliculage mat" data-es="Colgante offset con laminado mate" data-ja="オフセット下げ札＋マットラミ" data-ko="오프셋 행택 + 매트 라미네이팅">膠印吊牌＋霧膜</td>
+            <td data-zh="0,30 mm" data-en="0,30 mm" data-fr="0,30 mm" data-es="0,30 mm" data-ja="0.30 mm" data-ko="0.30 mm">0,30 mm</td>
+            <td data-zh="可用：霧膜防反光，別壓亮膜" data-en="Workable: matte kills glare, avoid gloss" data-fr="Utilisable : le mat tue le reflet, éviter le brillant" data-es="Viable: el mate elimina el brillo, evite el brillante" data-ja="可。マットは反射を抑えます。グロスは避けます" data-ko="가능. 매트는 반사를 줄입니다. 광택은 피하십시오">可用：霧膜防反光，別壓亮膜</td>
+          </tr>
+          <tr>
+            <td data-zh="織嘜" data-en="Woven label" data-fr="Étiquette tissée" data-es="Etiqueta tejida" data-ja="織りラベル" data-ko="직조 라벨">織嘜</td>
+            <td data-zh="0,60 mm 以上" data-en="0,60 mm or more" data-fr="0,60 mm ou plus" data-es="0,60 mm o más" data-ja="0.60 mm 以上" data-ko="0.60 mm 이상">0,60 mm 以上</td>
+            <td data-zh="多數不可靠：起毛糊邊，改印刷標或放大" data-en="Often unreliable: fuzz blurs modules; print instead" data-fr="Souvent peu fiable : le duvet brouille les modules ; imprimer plutôt" data-es="A menudo poco fiable: la pelusa emborrona módulos; mejor imprimir" data-ja="多くは不安定。毛羽でモジュールが崩れるため印刷ラベルか大型化で対応" data-ko="대부분 불안정. 보풀로 모듈이 뭉개져 인쇄 라벨이나 확대 적용">多數不可靠：起毛糊邊，改印刷標或放大</td>
+          </tr>
+          <tr>
+            <td data-zh="膠袋熱轉貼紙" data-en="Thermal transfer sticker on poly bag" data-fr="Sticker transfert thermique sur sachet" data-es="Sticker por transferencia térmica en bolsa" data-ja="ポリ袋のサーマル転写シール" data-ko="비닐봉투 열전사 스티커">膠袋熱轉貼紙</td>
+            <td data-zh="0,30 mm" data-en="0,30 mm" data-fr="0,30 mm" data-es="0,30 mm" data-ja="0.30 mm" data-ko="0.30 mm">0,30 mm</td>
+            <td data-zh="可用：別用熱感紙，會褪色" data-en="Workable: skip direct thermal, it fades" data-fr="Utilisable : éviter le thermique direct, il pâlit" data-es="Viable: evite el térmico directo, se desvanece" data-ja="可。感熱紙は退色するので不可" data-ko="가능. 감열지는 퇴색하므로 사용 금지">可用：別用熱感紙，會褪色</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="4. 對比度與驗碼：退貨幾乎都在這裡" data-en="4. Contrast and verification: where lots fail" data-fr="4. Contraste et vérification : c&#x27;est là que les lots échouent" data-es="4. Contraste y verificación: aquí fallan los lotes" data-ja="4. コントラストと検証：不合格はここで起きます" data-ko="4. 대비와 검증: 불합격은 여기서 나옵니다">4. 對比度與驗碼：退貨幾乎都在這裡</h2>
+
+      <p data-zh="碼要黑墨白底、安靜無干擾。銀箔、燙金與亮膜壓在碼上，等於直接把可讀性交給了運氣。驗碼依 ISO/IEC 15415 評 A 至 F，零售端一般要求 C（1,5）以上，B（2,5）以上更穩；重要的是每批抽 5 至 10 個碼上機實測並留檔，因為打樣通過從來不等於大貨通過——熱轉印的溫度漂移與碳帶批次差異，往往在第三千米才出現。" data-en="The code needs black on white and nothing touching it. Foil, hot stamping and gloss lamination over the code hand readability to luck. Verification follows ISO/IEC 15415, graded A to F; retail usually accepts C (1,5) and prefers B (2,5) or better. What matters is testing five to ten codes per lot and keeping the reports, because a passing proof never proves a passing production run — thermal transfer drifts with head temperature and ribbon batch, often three thousand metres in." data-fr="Le code exige du noir sur blanc et rien qui le touche. Feuille métallisée, dorure à chaud et pelliculage brillant sur le code confient la lisibilité au hasard. La vérification suit ISO/IEC 15415, notée de A à F ; le commerce de détail accepte en général C (1,5) et préfère B (2,5). L&#x27;essentiel : tester cinq à dix codes par lot et conserver les rapports, car une épreuve réussie ne prouve jamais un tirage réussi — la dérive de température et les lots de ruban apparaissent souvent après trois mille mètres." data-es="El código necesita negro sobre blanco y nada encima. Foil, estampado en caliente y laminado brillante sobre el código dejan la legibilidad al azar. La verificación sigue ISO/IEC 15415, de A a F; el retail suele aceptar C (1,5) y prefiere B (2,5). Lo importante es medir cinco a diez códigos por lote y guardar los informes, porque una prueba aprobada nunca demuestra una producción aprobada: la deriva de temperatura y los lotes de cinta aparecen a los tres mil metros." data-ja="コードは黒白で、上に何も重ねないことが前提です。箔、烫金、グロスラミネートをコードに重ねると読取性は運任せになります。検証は ISO/IEC 15415 で A〜F 評価、小売は通常 C（1.5）以上、B（2.5）以上が望ましい水準です。重要なのはロットごとに 5〜10 個を実測し記録を残すこと。試作の合格は量産の合格を証明しません。サーマル転写はヘッド温度とリボンのロット差で、3,000 m を過ぎてから崩れることがあります。" data-ko="코드는 검정 잉크에 흰 바탕, 위에 아무것도 겹치지 않아야 합니다. 포일, 박, 광택 라미네이팅이 코드를 덮으면 판독성은 운에 맡기는 셈입니다. 검증은 ISO/IEC 15415로 A~F 등급을 매기며, 유통은 보통 C(1.5) 이상을 요구하고 B(2.5) 이상을 선호합니다. 중요한 것은 로트마다 5~10개를 실측하고 성적서를 남기는 일입니다. 시험 인쇄 합격이 양산 합격을 뜻하지는 않습니다. 열전사는 헤드 온도와 리본 로트 차이로 3,000 m를 넘긴 뒤 무너지기도 합니다.">碼要黑墨白底、安靜無干擾。銀箔、燙金與亮膜壓在碼上，等於直接把可讀性交給了運氣。驗碼依 ISO/IEC 15415 評 A 至 F，零售端一般要求 C（1,5）以上，B（2,5）以上更穩；重要的是每批抽 5 至 10 個碼上機實測並留檔，因為打樣通過從來不等於大貨通過——熱轉印的溫度漂移與碳帶批次差異，往往在第三千米才出現。</p>
+
+      <ul>
+        <li data-zh="亮膜或燙金壓在碼上，掃描器直接讀不到" data-en="Gloss lamination or foil over the code: the scanner simply cannot read it" data-fr="Pelliculage brillant ou dorure sur le code : le scanner ne lit pas" data-es="Laminado brillante o foil sobre el código: el escáner no lee" data-ja="グロスや箔がコードに重なると読み取れません" data-ko="광택 라미네이팅이나 박이 코드를 덮으면 판독되지 않습니다">亮膜或燙金壓在碼上，掃描器直接讀不到</li>
+        <li data-zh="靜區被裁切，或旁邊壓了文字與壓痕" data-en="Quiet zone trimmed away, or text and creasing pressed beside it" data-fr="Zone de silence rognée, ou texte et pliure à côté" data-es="Zona de silencio recortada, o texto y pliegue al lado" data-ja="余白が断裁で削られ、隣に文字や折り目が来ている" data-ko="여백이 재단되어 사라졌거나 옆에 문자와 접힘이 있습니다">靜區被裁切，或旁邊壓了文字與壓痕</li>
+        <li data-zh="織嘜起毛、熱轉印溫度不足，模組邊緣糊在一起" data-en="Woven fuzz or under-heated transfer blurs the module edges together" data-fr="Duvet de tissage ou transfert sous-chauffé : les bords de module se fondent" data-es="Pelusa del tejido o transferencia fría: los bordes de módulo se funden" data-ja="織り毛羽や転写温度不足でモジュールの縁が溶けてつながる" data-ko="직조 보풀이나 전사 온도 부족으로 모듈 경계가 뭉개집니다">織嘜起毛、熱轉印溫度不足，模組邊緣糊在一起</li>
+      </ul>
+
+      <h2 data-zh="5. 法規要的是可查，不是好聽" data-en="5. What the law asks for: traceability, not a slogan" data-fr="5. Ce que la loi demande : la traçabilité, pas un slogan" data-es="5. Lo que exige la ley: trazabilidad, no un eslogan" data-ja="5. 法規が求めるのは「追えること」であり、聞こえの良さではありません" data-ko="5. 법규가 요구하는 것은 추적 가능성이며, 그럴듯한 문구가 아닙니다">5. 法規要的是可查，不是好聽</h2>
+
+      <p data-zh="歐盟《通用產品安全條例》(EU) 2023/988 自 2024 年 12 月 13 日起適用，要求產品可識別、可追溯，並具名負責的經濟營運者。對輔料而言，一個能解析到批次資料的二維碼是最便宜的解法，因為標籤本來就縫在成衣上。日本《家庭用品品質表示法》規定的成分與洗護標示、韓國《品質管理及工業品安全管理法》下的品質標示，都要求「印在標籤上的資訊本身看得見」——二維碼是補充，不是替代。把這點寫進規格書，能省掉日後與買家爭執的一整輪。" data-en="In the EU, Regulation (EU) 2023/988 on general product safety has applied since 13 December 2024 and expects a product to be identifiable and traceable, with a named responsible economic operator. For a trim, a 2D code that resolves to batch data is the cheapest way to satisfy that, because the label is already on the garment. Japan&#x27;s Household Goods Quality Labelling Act governs composition and care marking, and Korea&#x27;s Quality Management and Industrial Products Safety Control Act governs quality labelling; both require the printed information itself to be visible — a QR code supplements it, never replaces it. Writing that into the specification saves a whole round of argument later." data-fr="Dans l&#x27;Union, le règlement (UE) 2023/988 sur la sécurité générale des produits s&#x27;applique depuis le 13 décembre 2024 : le produit doit être identifiable et traçable, avec un opérateur économique responsable désigné. Pour un accessoire, un code 2D qui résout vers les données de lot est la solution la moins chère, puisque l&#x27;étiquette est déjà cousue au vêtement. En France, la composition et l&#x27;entretien relèvent des mentions obligatoires du code de la consommation : le QR code complète le marquage imprimé, il ne le remplace pas. Écrire cette règle dans le cahier des charges évite un cycle complet de discussion avec l&#x27;acheteur." data-es="En la Unión, el Reglamento (UE) 2023/988 de seguridad general de los productos se aplica desde el 13 de diciembre de 2024: el producto debe ser identificable y trazable, con un operador económico responsable designado. Para un accesorio, un código 2D que resuelve a los datos de lote es la vía más barata, porque la etiqueta ya está cosida a la prenda. En España, la composición y el cuidado siguen sujetos a la información obligatoria de la normativa de consumo: el QR complementa el marcado impreso, no lo sustituye. Dejarlo escrito en la ficha técnica ahorra una ronda entera de discusión con el comprador." data-ja="EU では製品安全に関する規則 (EU) 2023/988 が 2024年12月13日から適用され、製品の識別・追跡と、責任を負う事業者の明示が求められます。副資材では、既に縫い付けられたラベルにロット情報へ解決する2次元コードを載せるのが最も安価な方法です。日本では組成と取扱いの表示が家庭用品品質表示法にもとづく品質表示として義務づけられ、印刷された情報そのものが見えている必要があります。QR コードはそれを補うもので、置き換えにはなりません。この線引きを仕様書に書いておけば、買い手との議論を一巡節約できます。" data-ko="EU에서는 제품안전 규정 (EU) 2023/988이 2024년 12월 13일부터 적용되어 제품 식별·추적과 책임 있는 사업자 표시를 요구합니다. 부자재에서는 이미 봉제된 라벨에 로트 정보로 연결되는 2차원 코드를 얹는 것이 가장 저렴한 방법입니다. 한국에서는 섬유제품의 품질 표시와 취급 표시가 품질경영 및 공산품 안전관리법의 적용을 받고, 인쇄된 정보 자체가 보여야 합니다. QR 코드는 이를 보완할 뿐 대체하지 않습니다. 이 경계를 사양서에 적어 두면 구매팀과의 논의를 한 차례 줄일 수 있습니다.">歐盟《通用產品安全條例》(EU) 2023/988 自 2024 年 12 月 13 日起適用，要求產品可識別、可追溯，並具名負責的經濟營運者。對輔料而言，一個能解析到批次資料的二維碼是最便宜的解法，因為標籤本來就縫在成衣上。日本《家庭用品品質表示法》規定的成分與洗護標示、韓國《品質管理及工業品安全管理法》下的品質標示，都要求「印在標籤上的資訊本身看得見」——二維碼是補充，不是替代。把這點寫進規格書，能省掉日後與買家爭執的一整輪。</p>
+
+      <div class="callout" data-zh="買手只問一句話：掃這個碼，能不能分辨到批次與序號？答不出來，就還沒準備好。" data-en="The buying team asks one question: does this code resolve to a batch and a serial? If the answer is no, the label is not ready." data-fr="L&#x27;acheteur ne pose qu&#x27;une question : ce code résout-il un lot et un numéro de série ? Si non, l&#x27;étiquette n&#x27;est pas prête." data-es="El comprador hace una sola pregunta: ¿este código resuelve lote y número de serie? Si la respuesta es no, la etiqueta no está lista." data-ja="買い手の質問は一つです。このコードはロットとシリアルまで解決できるか。できないなら、まだ準備できていません。" data-ko="구매팀의 질문은 하나입니다. 이 코드가 로트와 시리얼까지 연결되는가. 아니라면 아직 준비되지 않은 것입니다.">買手只問一句話：掃這個碼，能不能分辨到批次與序號？答不出來，就還沒準備好。</div>
+
+      <h2 data-zh="6. 2027 前的試點清單" data-en="6. A pilot checklist before 2027" data-fr="6. Une liste de pilote avant 2027" data-es="6. Lista de piloto antes de 2027" data-ja="6. 2027 年までのパイロットチェックリスト" data-ko="6. 2027년 전 파일럿 체크리스트">6. 2027 前的試點清單</h2>
+
+      <ol>
+        <li data-zh="拿現有洗水標與吊牌，用買家的掃描器實測，不要用手機相機代替" data-en="Test existing care labels and hang tags on the buyer&#x27;s scanner, not a phone camera" data-fr="Tester les étiquettes existantes sur le scanner de l&#x27;acheteur, pas avec un téléphone" data-es="Probar etiquetas existentes en el escáner del comprador, no con el móvil" data-ja="既存ラベルを買い手のスキャナで実測する（スマホのカメラで代用しない）" data-ko="기존 라벨을 구매팀 스캐너로 실측합니다(휴대폰 카메라로 대체 금지)">拿現有洗水標與吊牌，用買家的掃描器實測，不要用手機相機代替</li>
+        <li data-zh="定下模組尺寸與靜區，寫進規格書，連 GTIN 前綴一起交給供應商" data-en="Fix module size and quiet zone in the spec, and pass the GTIN prefix to the supplier" data-fr="Fixer module et zone de silence au cahier des charges, et transmettre le préfixe GTIN" data-es="Fijar módulo y zona de silencio en la ficha, y pasar el prefijo GTIN" data-ja="モジュール寸法と余白を仕様書に固定し、GTIN プレフィックスも渡す" data-ko="모듈 크기와 여백을 사양서에 확정하고 GTIN 프리픽스도 전달합니다">定下模組尺寸與靜區，寫進規格書，連 GTIN 前綴一起交給供應商</li>
+        <li data-zh="打樣即上 ISO/IEC 15415 驗碼，要求 B（2,5）以上" data-en="Verify at proof stage to ISO/IEC 15415, asking for B (2,5) or better" data-fr="Vérifier dès l&#x27;épreuve selon ISO/IEC 15415, en visant B (2,5)" data-es="Verificar desde la prueba según ISO/IEC 15415, pidiendo B (2,5)" data-ja="試作段階で ISO/IEC 15415 検証を行い、B（2.5）以上を求める" data-ko="시험 단계에서 ISO/IEC 15415 검증, B(2.5) 이상 요구">打樣即上 ISO/IEC 15415 驗碼，要求 B（2,5）以上</li>
+        <li data-zh="大貨每批抽 5 至 10 個碼留檔，出問題時這是唯一能自證的資料" data-en="Keep five to ten verified codes per production lot; it is the only evidence you can show later" data-fr="Conserver cinq à dix codes vérifiés par lot : c&#x27;est la seule preuve opposable" data-es="Guardar cinco a diez códigos verificados por lote: es la única prueba defendible" data-ja="量産ロットごとに 5〜10 個の検証記録を残す。問題時の唯一の証拠になります" data-ko="양산 로트마다 5~10개 검증 기록을 보관합니다. 문제 시 유일한 증거입니다">大貨每批抽 5 至 10 個碼留檔，出問題時這是唯一能自證的資料</li>
+      </ol>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="hang-tag-barcode-guide.html" data-zh="吊牌條碼：位置、靜區與印刷公差" data-en="Hang tag barcodes: placement, quiet zone and print tolerance" data-fr="Codes-barres sur hangtag : position, zone de silence et tolérance" data-es="Códigos de barras en colgantes: posición, zona de silencio y tolerancia" data-ja="下げ札のバーコード：位置・余白・印刷公差" data-ko="행택 바코드: 위치, 여백, 인쇄 공차">吊牌條碼：位置、靜區與印刷公差</a></li>
+        <li><a href="barcode-verification-grade-guide.html" data-zh="條碼驗證等級：A 到 F 怎麼讀" data-en="Barcode verification grades: how to read A to F" data-fr="Notes de vérification des codes-barres : lire de A à F" data-es="Notas de verificación de códigos: cómo leer de A a F" data-ja="バーコード検証等級：A〜F の読み方" data-ko="바코드 검증 등급: A~F 읽는 법">條碼驗證等級：A 到 F 怎麼讀</a></li>
+        <li><a href="care-label-printing-requirements.html" data-zh="洗水標印刷要求：解析度、碳帶與對比" data-en="Care label print requirements: resolution, ribbon and contrast" data-fr="Exigences d&#x27;impression des étiquettes d&#x27;entretien : résolution, ruban, contraste" data-es="Requisitos de impresión de etiquetas de cuidado: resolución, cinta y contraste" data-ja="洗濯表示ラベルの印刷要件：解像度・リボン・コントラスト" data-ko="케어 라벨 인쇄 요건: 해상도, 리본, 대비">洗水標印刷要求：解析度、碳帶與對比</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要打樣、驗碼或原產地文件協助？" data-en="Need samples, barcode verification or origin paperwork?" data-fr="Besoin d&#x27;échantillons, de vérification de code ou de documents d&#x27;origine ?" data-es="¿Necesita muestras, verificación de códigos o documentos de origen?" data-ja="試作・コード検証・原産地書類のご相談は。" data-ko="시료, 코드 검증, 원산지 서류 지원이 필요하신가요?">需要打樣、驗碼或原產地文件協助？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取樣品與報價 →" data-en="Request samples and a quote →" data-fr="Demander échantillons et devis →" data-es="Solicitar muestras y presupuesto →" data-ja="試作とお見積りを依頼 →" data-ko="시료와 견적 요청 →">索取樣品與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>
