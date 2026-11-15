@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="輔料附著力拉力測試：織嘜、四合扣與鉚釘的驗收值 | TAGE" data-en="Trim Attachment Strength: Pull Testing Labels and Hardware | TAGE" data-fr="Résistance d&#x27;attache des accessoires : essais de traction | TAGE" data-es="Resistencia de fijación de accesorios: ensayos de tracción | TAGE" data-ja="副資材の取付強度：引張試験と合格値 | TAGE" data-ko="부자재 부착 강도: 인장 시험과 합격값 | TAGE">輔料附著力拉力測試：織嘜、四合扣與鉚釘的驗收值 | TAGE</title>
+<meta name="description" data-zh="輔料附著力怎麼測、怎麼驗：織嘜與洗水標的縫口拉力、四合扣與鉚釘的 EN 71-1 拉力扭力、不乾膠標剝離值，以及五個必須寫進工藝單的欄位。" data-en="Pull test values for woven labels, care labels, snaps and rivets: how attachment strength is measured, why trims fail at seams, and what to write in the spec." data-fr="Valeurs d&#x27;essai de traction pour labels tissés, étiquettes d&#x27;entretien, pressions et rivets : comment se mesure la résistance d&#x27;attache, pourquoi ça lâche à la couture, et quoi écrire sur la fiche technique." data-es="Valores de tracción para etiquetas tejidas, de cuidado, broches y remaches: cómo se mide la resistencia de fijación, por qué falla en la costura y qué escribir en la ficha técnica." data-ja="織りラベル・洗濯表示・スナップ・リベットの引張試験。取付強度の測り方、縫い目で壊れる理由、仕様書に書く五つの欄をまとめます。" data-ko="직조 라벨, 케어 라벨, 스냅, 리벳의 인장 시험값. 부착 강도를 어떻게 측정하고 왜 봉제선에서 실패하는지, 사양서에 적을 다섯 항목을 정리했습니다."
+      content="輔料附著力怎麼測、怎麼驗：織嘜與洗水標的縫口拉力、四合扣與鉚釘的 EN 71-1 拉力扭力、不乾膠標剝離值，以及五個必須寫進工藝單的欄位。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值", "item": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值",
+   "url": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="品質與驗收" data-en="Quality &amp; Inspection" data-fr="Qualité et contrôle" data-es="Calidad e inspección" data-ja="品質と検査" data-ko="품질과 검사">品質與驗收</span></div>
+      <h1 data-zh="輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值" data-en="Trim Attachment Strength: Pull Testing Woven Labels, Snaps and Rivets" data-fr="Résistance d&#x27;attache : essais de traction sur labels, pressions et rivets" data-es="Resistencia de fijación: tracción en etiquetas, broches y remaches" data-ja="副資材の取付強度：織りラベル・スナップ・リベットの引張試験" data-ko="부자재 부착 강도: 직조 라벨, 스냅, 리벳의 인장 시험">輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月15日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 15, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 15 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 15 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月15日更新" data-ko="TAGE 패키징 · 2026년 11월 15일 업데이트">泰閣包裝 · 更新於 2026年11月15日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="洗水標在 12 N 就剝離，等於整批重工；四合扣在 40 N 就張開，等於一次召回。附著力不是手感問題，而是可以量、可以寫進合約的數字——而且它失敗的位置幾乎總在同一個地方：車縫線，不是輔料本身。" data-en="A care label that peels at 12 N is a rework batch; a snap that opens at 40 N is a recall. Attachment strength is not a matter of feel — it is a number you can measure and write into a contract, and it fails in almost the same place every time: the seam, not the trim." data-fr="Une étiquette d&#x27;entretien qui se décolle à 12 N, c&#x27;est une série à reprendre ; une pression qui s&#x27;ouvre à 40 N, c&#x27;est un rappel. La résistance d&#x27;attache n&#x27;est pas une affaire de toucher : c&#x27;est un chiffre mesurable et contractualisable, et il lâche presque toujours au même endroit — la couture, pas l&#x27;accessoire." data-es="Una etiqueta de cuidado que se despega a 12 N es una serie a reprocesar; un broche que se abre a 40 N es una retirada del mercado. La resistencia de fijación no es cuestión de tacto: es una cifra medible y contractual, y falla casi siempre en el mismo sitio: la costura, no el accesorio." data-ja="洗濯表示ラベルが 12 N で剥がれるのは全数手直し、スナップが 40 N で外れるのはリコールです。取付強度は手触りの問題ではなく、測定できて契約に書ける数値です。しかも破綻する場所はほぼ一定で、副資材そのものではなく縫い目です。" data-ko="케어 라벨이 12 N 에서 떨어지면 전량 재작업이고, 스냅이 40 N 에서 열리면 리콜입니다. 부착 강도는 감촉의 문제가 아니라 측정하고 계약서에 적을 수 있는 숫자이며, 실패 지점은 거의 항상 같습니다. 부자재가 아니라 봉제선입니다.">洗水標在 12 N 就剝離，等於整批重工；四合扣在 40 N 就張開，等於一次召回。附著力不是手感問題，而是可以量、可以寫進合約的數字——而且它失敗的位置幾乎總在同一個地方：車縫線，不是輔料本身。</p>
+
+      <h2 data-zh="1. 三種測試，問的是三個不同問題" data-en="1. Three tests, three different questions" data-fr="1. Trois essais, trois questions différentes" data-es="1. Tres ensayos, tres preguntas distintas" data-ja="1. 三つの試験、三つの異なる問い" data-ko="1. 세 가지 시험, 세 가지 다른 질문">1. 三種測試，問的是三個不同問題</h2>
+
+      <p data-zh="車縫附著力用 ISO 13935-2（縫口拉伸）或 ASTM D1683，單位 N/50 mm；小零件用 EN 71-1 的拉力 70 N、扭力 0.45 N·m 各持 10 秒，判的是「會不會整顆脫落成可吞入物」；不乾膠標用 ISO 29862 的 180° 剝離，單位 N/25 mm。三者不能互換：縫口過關不代表小零件安全，小零件過關也不代表洗十次還貼得住。" data-en="Seam attachment is measured by ISO 13935-2 (seam tensile) or ASTM D1683, reported in N/50 mm. Small parts use the EN 71-1 tension test at 70 N and torque at 0.45 N·m, each held 10 seconds; the question is whether anything comes off whole and swallowable. Adhesive labels use the 180° peel of ISO 29862 in N/25 mm. They do not substitute for one another: a seam pass says nothing about small-part safety, and a small-part pass says nothing about surviving ten washes." data-fr="La résistance d&#x27;une couture se mesure selon l&#x27;ISO 13935-2 (traction de couture) ou l&#x27;ASTM D1683, en N/50 mm. Les petites pièces relèvent de l&#x27;essai de traction EN 71-1 à 70 N et du couple de 0,45 N·m maintenus 10 secondes : la question est de savoir si un élément se détache entier et peut être avalé. Les étiquettes adhésives se mesurent en pelage 180° selon l&#x27;ISO 29862, en N/25 mm. Ces essais ne se remplacent pas : réussir la couture ne dit rien de la sécurité petite pièce, et l&#x27;inverse est vrai aussi." data-es="La resistencia de una costura se mide con ISO 13935-2 o ASTM D1683, en N/50 mm. Las piezas pequeñas usan el ensayo de tracción EN 71-1 a 70 N y par de 0,45 N·m mantenidos 10 segundos: la pregunta es si algo se desprende entero y puede ingerirse. Las etiquetas adhesivas se miden por pelado a 180° según ISO 29862, en N/25 mm. No son intercambiables: pasar la costura no dice nada de la seguridad de pieza pequeña, ni al revés." data-ja="縫い目の取付強度は ISO 13935-2（縫い目引張）または ASTM D1683 で N/50 mm として測ります。小さな部品は EN 71-1 の引張 70 N とトルク 0.45 N·m を各 10 秒与え、丸ごと外れて飲み込める大きさになるかを判定します。粘着ラベルは ISO 29862 の 180° ピールで N/25 mm です。これらは代替できません。縫い目が合格でも小部品の安全は保証されず、その逆も同じです。" data-ko="봉제 부착 강도는 ISO 13935-2 또는 ASTM D1683으로 N/50 mm 단위로 측정합니다. 소형 부품은 EN 71-1의 인장 70 N 과 토크 0.45 N·m 를 각 10초 적용해 통째로 떨어져 삼킬 수 있는 크기가 되는지를 봅니다. 점착 라벨은 ISO 29862의 180° 박리로 N/25 mm 입니다. 서로 대체할 수 없습니다. 봉제가 통과해도 소형 부품 안전은 보장되지 않고 그 반대도 마찬가지입니다.">車縫附著力用 ISO 13935-2（縫口拉伸）或 ASTM D1683，單位 N/50 mm；小零件用 EN 71-1 的拉力 70 N、扭力 0.45 N·m 各持 10 秒，判的是「會不會整顆脫落成可吞入物」；不乾膠標用 ISO 29862 的 180° 剝離，單位 N/25 mm。三者不能互換：縫口過關不代表小零件安全，小零件過關也不代表洗十次還貼得住。</p>
+
+      <h2 data-zh="2. 按輔料類型給出的驗收值" data-en="2. Acceptance values by trim type" data-fr="2. Valeurs d&#x27;acceptation par type d&#x27;accessoire" data-es="2. Valores de aceptación por tipo de accesorio" data-ja="2. 副資材別の合格値" data-ko="2. 부자재 유형별 합격값">2. 按輔料類型給出的驗收值</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="輔料" data-en="Trim" data-fr="Accessoire" data-es="Accesorio" data-ja="副資材" data-ko="부자재">輔料</th>
+            <th data-zh="測試方法" data-en="Test method" data-fr="Méthode d&#x27;essai" data-es="Método de ensayo" data-ja="試験方法" data-ko="시험 방법">測試方法</th>
+            <th data-zh="我方常規驗收線" data-en="Our usual acceptance line" data-fr="Notre ligne d&#x27;acceptation" data-es="Nuestra línea de aceptación" data-ja="当社の合格ライン" data-ko="당사 합격선">我方常規驗收線</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="織嘜（車縫）" data-en="Woven label, sewn" data-fr="Label tissé, cousu" data-es="Etiqueta tejida, cosida" data-ja="織りラベル（縫い付け）" data-ko="직조 라벨(봉제)">織嘜（車縫）</td>
+            <td data-zh="ISO 13935-2 縫口拉伸" data-en="ISO 13935-2 seam tensile" data-fr="ISO 13935-2 traction de couture" data-es="ISO 13935-2 tracción de costura" data-ja="ISO 13935-2 縫い目引張" data-ko="ISO 13935-2 봉제 인장">ISO 13935-2 縫口拉伸</td>
+            <td data-zh="≥60 N/50 mm，洗 5 次不脫線" data-en="60 N/50 mm or more; no seam failure after 5 washes" data-fr="60 N/50 mm ou plus ; aucune rupture après 5 lavages" data-es="60 N/50 mm o más; sin fallo tras 5 lavados" data-ja="60 N/50 mm 以上、5 回洗濯後も外れなし" data-ko="60 N/50 mm 이상, 5회 세탁 후 탈락 없음">≥60 N/50 mm，洗 5 次不脫線</td>
+          </tr>
+          <tr>
+            <td data-zh="洗水標（尼龍，車縫）" data-en="Care label, nylon, sewn" data-fr="Étiquette d&#x27;entretien nylon cousue" data-es="Etiqueta de cuidado de nailon cosida" data-ja="洗濯表示ラベル（ナイロン縫い付け）" data-ko="케어 라벨(나일론, 봉제)">洗水標（尼龍，車縫）</td>
+            <td data-zh="同上，加洗後判讀" data-en="Same test, plus legibility after washing" data-fr="Même essai, plus lisibilité après lavage" data-es="Mismo ensayo, más legibilidad tras lavar" data-ja="同試験に加え洗濯後の判読性" data-ko="동일 시험 + 세탁 후 판독성">同上，加洗後判讀</td>
+            <td data-zh="≥40 N/25 mm，字跡不糊" data-en="40 N/25 mm or more; print stays crisp" data-fr="40 N/25 mm ou plus ; impression nette" data-es="40 N/25 mm o más; impresión nítida" data-ja="40 N/25 mm 以上、印字がにじまない" data-ko="40 N/25 mm 이상, 인쇄 번짐 없음">≥40 N/25 mm，字跡不糊</td>
+          </tr>
+          <tr>
+            <td data-zh="四合扣" data-en="Snap fastener" data-fr="Pression" data-es="Broche de presión" data-ja="スナップ" data-ko="스냅">四合扣</td>
+            <td data-zh="EN 71-1 拉力 + 扭力" data-en="EN 71-1 tension plus torque" data-fr="EN 71-1 traction et couple" data-es="EN 71-1 tracción y par" data-ja="EN 71-1 引張とトルク" data-ko="EN 71-1 인장 + 토크">EN 71-1 拉力 + 扭力</td>
+            <td data-zh="70 N 與 0.45 N·m 不脫落；成衣扣 ≥90 N" data-en="No release at 70 N and 0.45 N·m; garment-grade 90 N or more" data-fr="Aucun arrachement à 70 N et 0,45 N·m ; qualité vêtement 90 N ou plus" data-es="Sin desprendimiento a 70 N y 0,45 N·m; grado prenda 90 N o más" data-ja="70 N と 0.45 N·m で外れなし、衣料用は 90 N 以上" data-ko="70 N 과 0.45 N·m 에서 탈락 없음, 의류용 90 N 이상">70 N 與 0.45 N·m 不脫落；成衣扣 ≥90 N</td>
+          </tr>
+          <tr>
+            <td data-zh="鉚釘／氣眼" data-en="Rivet or eyelet" data-fr="Rivet ou œillet" data-es="Remache u ojal" data-ja="リベット・ハトメ" data-ko="리벳·아일릿">鉚釘／氣眼</td>
+            <td data-zh="拉力 + 外觀檢查" data-en="Pull plus visual check" data-fr="Traction et contrôle visuel" data-es="Tracción y control visual" data-ja="引張と外観確認" data-ko="인장 + 외관 검사">拉力 + 外觀檢查</td>
+            <td data-zh="≥80 N，基布不撕裂" data-en="80 N or more; the base fabric must not tear" data-fr="80 N ou plus ; le tissu support ne doit pas se déchirer" data-es="80 N o más; el tejido base no debe romperse" data-ja="80 N 以上、基布が破れないこと" data-ko="80 N 이상, 바탕 원단 파열 없음">≥80 N，基布不撕裂</td>
+          </tr>
+          <tr>
+            <td data-zh="不乾膠標" data-en="Adhesive label" data-fr="Étiquette adhésive" data-es="Etiqueta adhesiva" data-ja="粘着ラベル" data-ko="점착 라벨">不乾膠標</td>
+            <td data-zh="ISO 29862 180° 剝離" data-en="ISO 29862 180° peel" data-fr="ISO 29862 pelage 180°" data-es="ISO 29862 pelado 180°" data-ja="ISO 29862 180° ピール" data-ko="ISO 29862 180° 박리">ISO 29862 180° 剝離</td>
+            <td data-zh="≥8 N/25 mm；40 ℃ 老化 72 h 後 ≥6 N/25 mm" data-en="8 N/25 mm or more; 6 N/25 mm after 72 h ageing at 40 °C" data-fr="8 N/25 mm ou plus ; 6 N/25 mm après 72 h à 40 °C" data-es="8 N/25 mm o más; 6 N/25 mm tras 72 h a 40 °C" data-ja="8 N/25 mm 以上、40 ℃ で 72 時間後に 6 N/25 mm 以上" data-ko="8 N/25 mm 이상, 40 ℃ 72시간 노화 후 6 N/25 mm 이상">≥8 N/25 mm；40 ℃ 老化 72 h 後 ≥6 N/25 mm</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="3. 為什麼附著力總在車縫線失敗" data-en="3. Why attachment fails at the seam, not the trim" data-fr="3. Pourquoi l&#x27;attache lâche à la couture" data-es="3. Por qué falla en la costura y no en el accesorio" data-ja="3. なぜ縫い目から壊れるのか" data-ko="3. 왜 부자재가 아니라 봉제선에서 실패하는가">3. 為什麼附著力總在車縫線失敗</h2>
+
+      <ul>
+        <li data-zh="針距：低於 10 SPI（約 12 針/3 cm）時標籤邊緣先開；建議 10–12 SPI。" data-en="Stitch density: under 10 SPI the label edge opens first; 10–12 SPI is the working range." data-fr="Densité de piqûre : sous 10 SPI, le bord du label s&#x27;ouvre en premier ; travaillez entre 10 et 12 SPI." data-es="Densidad de puntada: por debajo de 10 SPI el borde de la etiqueta se abre primero; trabaje entre 10 y 12 SPI." data-ja="縫い目密度：10 SPI 未満ではラベルの耳から先に開きます。10〜12 SPI が実用域です。" data-ko="봉제 밀도: 10 SPI 미만이면 라벨 가장자리가 먼저 벌어집니다. 10~12 SPI 가 실무 범위입니다.">針距：低於 10 SPI（約 12 針/3 cm）時標籤邊緣先開；建議 10–12 SPI。</li>
+        <li data-zh="縫線：滌綸 40/2 或 60/3，線太粗會切布、太細會斷。" data-en="Thread: polyester 40/2 or 60/3 — too thick cuts the fabric, too thin snaps." data-fr="Fil : polyester 40/2 ou 60/3 ; trop gros il coupe le tissu, trop fin il casse." data-es="Hilo: poliéster 40/2 o 60/3; demasiado grueso corta el tejido, demasiado fino se rompe." data-ja="縫い糸：ポリエステル 40/2 か 60/3。太いと生地を切り、細いと切れます。" data-ko="봉제사: 폴리에스터 40/2 또는 60/3. 너무 굵으면 원단을 자르고, 너무 가늘면 끊어집니다.">縫線：滌綸 40/2 或 60/3，線太粗會切布、太細會斷。</li>
+        <li data-zh="針號：尼龍標用 9–11 號圓頭針，粗針直接扎斷緯紗。" data-en="Needle size: 9–11 ballpoint for nylon labels; a heavy needle breaks the weft outright." data-fr="Aiguille : 9–11 à pointe boule pour le nylon ; une aiguille lourde casse la trame." data-es="Aguja: 9–11 de punta redonda para nailon; una aguja gruesa rompe la trama." data-ja="針：ナイロンには 9〜11 番のボールポイント針。太い針は緯糸を断ちます。" data-ko="바늘: 나일론에는 9~11번 볼포인트. 굵은 바늘은 위사를 끊습니다.">針號：尼龍標用 9–11 號圓頭針，粗針直接扎斷緯紗。</li>
+        <li data-zh="邊緣：熱切邊若起毛，拉力會全部集中在起毛處。" data-en="Edge: a hot cut that fibres at the edge concentrates all the load on that fringe." data-fr="Bord : une coupe à chaud effilochée concentre toute la traction sur la frange." data-es="Borde: un corte en caliente deshilachado concentra toda la tracción en esa franja." data-ja="耳：熱切断で毛羽が出ると、引張がその部分に集中します。" data-ko="가장자리: 열절단에서 풀림이 생기면 인장이 그 부분에 집중됩니다.">邊緣：熱切邊若起毛，拉力會全部集中在起毛處。</li>
+        <li data-zh="底布：針織布需加貼襯，否則拉力沿線圈滑移。" data-en="Ground fabric: knits need an interlining, or the load slides along the loops." data-fr="Support : un tricot exige une thermocollante, sinon la charge glisse le long des mailles." data-es="Base: el punto necesita entretela, o la carga se desliza por las mallas." data-ja="基布：ニットには接着芯が必要で、ないと荷重が編み目を滑ります。" data-ko="바탕 원단: 니트에는 심지를 붙여야 하며, 없으면 하중이 코를 따라 미끄러집니다.">底布：針織布需加貼襯，否則拉力沿線圈滑移。</li>
+      </ul>
+
+      <div class="callout" data-zh="我們的驗收線：每批抽 5 件做拉力，任一件低於線值即整批待判；拉力數據與洗後照片一起附在出貨報告裡，不靠口頭保證。" data-en="Our acceptance line: five pieces pulled per batch, and any result under the line puts the batch on hold; pull data and post-wash photographs go into the shipping report, so nothing rests on a verbal assurance." data-fr="Notre ligne d&#x27;acceptation : cinq pièces testées par lot, et tout résultat inférieur met le lot en attente ; les valeurs de traction et les photos après lavage figurent dans le rapport d&#x27;expédition, rien ne repose sur une parole." data-es="Nuestra línea de aceptación: cinco piezas por lote a tracción y cualquier resultado por debajo deja el lote en espera; los datos y las fotos tras el lavado van en el informe de envío, nada queda en una promesa verbal." data-ja="当社の合格基準は、ロットごとに 5 枚を引張試験し、1 枚でも基準を下回れば出荷保留とすることです。引張データと洗濯後の写真は出荷報告書に添付し、口頭保証には頼りません。" data-ko="당사 합격 기준은 로트당 5장 인장 시험이며, 한 장이라도 기준 미달이면 출하 보류입니다. 인장 데이터와 세탁 후 사진을 출하 보고서에 첨부하고 구두 보증에 기대지 않습니다.">我們的驗收線：每批抽 5 件做拉力，任一件低於線值即整批待判；拉力數據與洗後照片一起附在出貨報告裡，不靠口頭保證。</div>
+
+      <h2 data-zh="4. 童裝：70 N 不是行銷數字" data-en="4. Children&#x27;s wear: why 70 N is not a marketing number" data-fr="4. Puériculture : 70 N n&#x27;est pas un argument marketing" data-es="4. Infantil: 70 N no es una cifra de marketing" data-ja="4. 子ども服：70 N は宣伝文句ではない" data-ko="4. 유아복: 70 N 은 마케팅 숫자가 아니다">4. 童裝：70 N 不是行銷數字</h2>
+
+      <p data-zh="童裝的附著力標準來自誤吞風險：美國 CPSIA 下 16 CFR 1501 的小零件圓筒、歐盟 EN 71-1 的 70 N 拉力與 0.45 N·m 扭力，判的都是零件會不會整顆脫落。日本沒有對應的強制拉力值，但製造物責任法讓「可預見的誤吞」成為責任基礎；韓國 KC 認證對兒童用品另有要求。實務做法不是等法規，而是把所有 ≤ 6 mm 的零件都當小零件測。" data-en="Children&#x27;s wear attachment rules exist because of ingestion risk: the small-parts cylinder of 16 CFR 1501 under CPSIA in the US, and EN 71-1&#x27;s 70 N tension plus 0.45 N·m torque in the EU, both asking whether a component detaches whole. Japan sets no equivalent mandatory force, but the Product Liability Act makes a foreseeable ingestion the basis of liability; Korea&#x27;s KC certification adds its own requirements for children&#x27;s products. The practical answer is not to wait for a rule: treat every component of 6 mm or less as a small part and test it." data-fr="Les règles d&#x27;attache en puériculture existent à cause du risque d&#x27;ingestion : le cylindre petites pièces de la règle 16 CFR 1501 (CPSIA) aux États-Unis, la traction de 70 N et le couple de 0,45 N·m de l&#x27;EN 71-1 dans l&#x27;UE, qui demandent si un élément se détache entier. La France n&#x27;impose pas de force équivalente, mais le Code de la consommation et la responsabilité du fait des produits permettent d&#x27;engager le fabricant. En pratique : traiter tout élément de 6 mm ou moins comme une petite pièce et l&#x27;essayer, sans attendre un texte." data-es="Las reglas de fijación en infantil existen por riesgo de ingestión: el cilindro de piezas pequeñas de 16 CFR 1501 (CPSIA) en EE. UU., y la tracción de 70 N con par de 0,45 N·m de EN 71-1 en la UE, que preguntan si un elemento se desprende entero. España no fija una fuerza equivalente, pero el Real Decreto Legislativo 1/2007 y la responsabilidad por producto defectuoso sostienen la exigencia. En la práctica: tratar cualquier elemento de 6 mm o menos como pieza pequeña y ensayarlo." data-ja="子ども服の取付基準は誤飲リスクから来ています。米国は CPSIA の 16 CFR 1501 の小部品用円筒、欧州は EN 71-1 の引張 70 N とトルク 0.45 N·m で、いずれも部品が丸ごと外れるかを判定します。日本に同種の強制値はありませんが、製造物責任法により予見可能な誤飲は責任の基礎になります。実務では規制を待たず、6 mm 以下の部品はすべて小部品として試験します。" data-ko="유아복 부착 기준은 삼킴 위험에서 나옵니다. 미국은 CPSIA의 16 CFR 1501 소형 부품 원통, 유럽은 EN 71-1의 인장 70 N 과 토크 0.45 N·m 로 부품이 통째로 분리되는지를 봅니다. 한국은 동등한 강제 수치는 없지만 어린이제품 안전 특별법에 따라 원산지와 취급 표시 등 표시 의무가 붙고 KC 인증이 별도 요구를 두며, 제조물 책임법이 예견 가능한 삼킴의 책임 근거가 됩니다. 실무에서는 규제를 기다리지 않고 6 mm 이하 부품은 모두 소형 부품으로 시험합니다.">童裝的附著力標準來自誤吞風險：美國 CPSIA 下 16 CFR 1501 的小零件圓筒、歐盟 EN 71-1 的 70 N 拉力與 0.45 N·m 扭力，判的都是零件會不會整顆脫落。日本沒有對應的強制拉力值，但製造物責任法讓「可預見的誤吞」成為責任基礎；韓國 KC 認證對兒童用品另有要求。實務做法不是等法規，而是把所有 ≤ 6 mm 的零件都當小零件測。</p>
+
+      <h2 data-zh="5. 寫進工藝單的五個欄位" data-en="5. Five fields to put in the spec sheet" data-fr="5. Cinq champs à inscrire sur la fiche technique" data-es="5. Cinco campos en la ficha técnica" data-ja="5. 仕様書に書く五つの欄" data-ko="5. 사양서에 넣을 다섯 항목">5. 寫進工藝單的五個欄位</h2>
+
+      <ol>
+        <li data-zh="測試方法與標準號（ISO 13935-2 / ASTM D1683 / EN 71-1），不寫「拉力合格」這種模糊字眼。" data-en="Test method with the standard number (ISO 13935-2 / ASTM D1683 / EN 71-1) — never a vague &#x27;pull test passed&#x27;." data-fr="La méthode avec le numéro de norme (ISO 13935-2 / ASTM D1683 / EN 71-1), jamais un vague « traction conforme »." data-es="El método con su número de norma (ISO 13935-2 / ASTM D1683 / EN 71-1), nunca un vago «tracción conforme»." data-ja="試験方法と規格番号（ISO 13935-2 / ASTM D1683 / EN 71-1）。「引張合格」のような曖昧な表現は使いません。" data-ko="시험 방법과 규격 번호(ISO 13935-2 / ASTM D1683 / EN 71-1). &#x27;인장 합격&#x27; 같은 모호한 표현은 쓰지 않습니다.">測試方法與標準號（ISO 13935-2 / ASTM D1683 / EN 71-1），不寫「拉力合格」這種模糊字眼。</li>
+        <li data-zh="驗收值連單位一起寫：N/50 mm、N/25 mm、N·m。" data-en="Acceptance values with their units: N/50 mm, N/25 mm, N·m." data-fr="Les valeurs avec leurs unités : N/50 mm, N/25 mm, N·m." data-es="Los valores con unidades: N/50 mm, N/25 mm, N·m." data-ja="合格値は単位とセットで記載します。N/50 mm、N/25 mm、N·m。" data-ko="합격값은 단위와 함께 적습니다. N/50 mm, N/25 mm, N·m.">驗收值連單位一起寫：N/50 mm、N/25 mm、N·m。</li>
+        <li data-zh="抽樣數與判定規則：AQL 或全檢，不合格如何處置。" data-en="Sample size and decision rule: AQL or 100% inspection, and what happens on failure." data-fr="Taille d&#x27;échantillon et règle de décision : AQL ou contrôle à 100 %, et la suite en cas d&#x27;échec." data-es="Tamaño de muestra y regla de decisión: AQL o inspección al 100 %, y qué ocurre si falla." data-ja="抜取数と判定ルール（AQL か全数）、不合格時の扱いまで決めます。" data-ko="샘플 수와 판정 규칙(AQL 또는 전수 검사), 불합격 시 처리 방법까지 정합니다.">抽樣數與判定規則：AQL 或全檢，不合格如何處置。</li>
+        <li data-zh="洗滌次數與洗後判讀方式，洗前洗後各拍一張。" data-en="Number of washes and how the result is read after washing — one photo before, one after." data-fr="Nombre de lavages et mode de notation après lavage : une photo avant, une après." data-es="Número de lavados y cómo se lee el resultado después: una foto antes y otra después." data-ja="洗濯回数と洗濯後の判定方法。洗濯前後に各 1 枚の写真を残します。" data-ko="세탁 횟수와 세탁 후 판정 방법. 세탁 전후 사진을 각각 한 장 남깁니다.">洗滌次數與洗後判讀方式，洗前洗後各拍一張。</li>
+        <li data-zh="報告由誰出、保存多久，客戶查得到才算數。" data-en="Who issues the report and how long it is kept — it only counts if the buyer can retrieve it." data-fr="Qui émet le rapport et pendant combien de temps : il ne compte que si l&#x27;acheteur peut le retrouver." data-es="Quién emite el informe y cuánto se conserva: solo cuenta si el comprador puede recuperarlo." data-ja="報告書の発行元と保管期間。バイヤーが取り出せて初めて意味を持ちます。" data-ko="성적서 발행 주체와 보관 기간. 바이어가 꺼낼 수 있어야 의미가 있습니다.">報告由誰出、保存多久，客戶查得到才算數。</li>
+      </ol>
+
+      <p data-zh="拉力測試的價值不在那張報告，而在它把「這批能不能出」變成一個可以當場回答的問題。輔料單價以分計，一次整批重工卻以萬元計——先把五個欄位寫進工藝單，比事後追責便宜。" data-en="The value of a pull test is not the report; it is that &#x27;can this batch ship&#x27; becomes a question with an immediate answer. Trims are priced in cents and one full rework runs into five figures — writing the five fields into the spec sheet costs far less than arguing afterwards." data-fr="L&#x27;intérêt d&#x27;un essai de traction n&#x27;est pas le rapport : c&#x27;est que « ce lot peut-il partir ? » devient une question à réponse immédiate. Un accessoire se compte en centimes, une reprise complète en milliers d&#x27;euros — inscrire les cinq champs sur la fiche technique coûte bien moins que de discuter après coup." data-es="El valor de un ensayo de tracción no es el informe: es que «¿puede salir este lote?» pasa a tener respuesta inmediata. Un accesorio se cuenta en céntimos y un reproceso completo en miles de euros; escribir los cinco campos en la ficha técnica cuesta mucho menos que discutirlo después." data-ja="引張試験の価値は報告書そのものではなく、「このロットを出せるか」がその場で答えられる問いになることです。副資材は一個単位では安く、全数手直しは桁が変わります。五つの欄を仕様書に書くほうが、後から責任を追うより安く済みます。" data-ko="인장 시험의 가치는 성적서가 아니라 &#x27;이 로트를 출하할 수 있는가&#x27;가 즉시 답할 수 있는 질문이 된다는 데 있습니다. 부자재는 개당 몇십 원이지만 전량 재작업은 수천만 원입니다. 다섯 항목을 사양서에 적는 편이 나중에 책임을 따지는 것보다 훨씬 쌉니다.">拉力測試的價值不在那張報告，而在它把「這批能不能出」變成一個可以當場回答的問題。輔料單價以分計，一次整批重工卻以萬元計——先把五個欄位寫進工藝單，比事後追責便宜。</p>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="garment-label-sewing-thread-guide.html" data-zh="標籤縫線：規格與針距" data-en="Label sewing thread: spec and stitch density" data-fr="Fil de couture pour étiquettes : spec et densité" data-es="Hilo de costura para etiquetas: spec y densidad" data-ja="ラベル縫い糸：仕様と縫い目密度" data-ko="라벨 봉제사: 사양과 봉제 밀도">標籤縫線：規格與針距</a></li>
+        <li><a href="garment-trims-quality-inspection.html" data-zh="輔料品質檢驗：抽樣與判定" data-en="Trim quality inspection: sampling and decisions" data-fr="Contrôle qualité des accessoires : échantillonnage" data-es="Inspección de calidad de accesorios: muestreo" data-ja="副資材の品質検査：抜取と判定" data-ko="부자재 품질 검사: 샘플링과 판정">輔料品質檢驗：抽樣與判定</a></li>
+        <li><a href="garment-trims-small-parts-safety-guide.html" data-zh="小零件安全：誤吞風險與測試" data-en="Small parts safety: ingestion risk and testing" data-fr="Petites pièces : risque d&#x27;ingestion et essais" data-es="Piezas pequeñas: riesgo de ingestión y ensayos" data-ja="小部品の安全：誤飲リスクと試験" data-ko="소형 부품 안전: 삼킴 위험과 시험">小零件安全：誤吞風險與測試</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要做拉力測試，或把驗收值寫進工藝單？" data-en="Need pull testing, or the acceptance values written into your spec?" data-fr="Besoin d&#x27;essais de traction ou des valeurs inscrites sur votre fiche technique ?" data-es="¿Necesita ensayos de tracción o fijar los valores en su ficha técnica?" data-ja="引張試験や、合格値を仕様書に落とす作業が必要ですか。" data-ko="인장 시험이나 합격값 사양서 반영이 필요하신가요?">需要做拉力測試，或把驗收值寫進工藝單？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取樣品與報價 →" data-en="Request samples and a quote →" data-fr="Demander échantillons et devis →" data-es="Solicitar muestras y presupuesto →" data-ja="試作とお見積りを依頼 →" data-ko="시료와 견적 요청 →">索取樣品與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

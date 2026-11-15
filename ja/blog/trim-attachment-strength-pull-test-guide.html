@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>副資材の取付強度：引張試験と合格値 | TAGE</title>
+<meta name="description" content="織りラベル・洗濯表示・スナップ・リベットの引張試験。取付強度の測り方、縫い目で壊れる理由、仕様書に書く五つの欄をまとめます。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-attachment-strength-pull-test-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值", "item": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料附著力：織嘜、四合扣與鉚釘的拉力測試與驗收值",
+   "url": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-attachment-strength-pull-test-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>品質と検査</span></div>
+      <h1>副資材の取付強度：織りラベル・スナップ・リベットの引張試験</h1>
+      <p>泰閣包装 · 2026年11月15日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>洗濯表示ラベルが 12 N で剥がれるのは全数手直し、スナップが 40 N で外れるのはリコールです。取付強度は手触りの問題ではなく、測定できて契約に書ける数値です。しかも破綻する場所はほぼ一定で、副資材そのものではなく縫い目です。</p>
+
+      <h2>1. 三つの試験、三つの異なる問い</h2>
+
+      <p>縫い目の取付強度は ISO 13935-2（縫い目引張）または ASTM D1683 で N/50 mm として測ります。小さな部品は EN 71-1 の引張 70 N とトルク 0.45 N·m を各 10 秒与え、丸ごと外れて飲み込める大きさになるかを判定します。粘着ラベルは ISO 29862 の 180° ピールで N/25 mm です。これらは代替できません。縫い目が合格でも小部品の安全は保証されず、その逆も同じです。</p>
+
+      <h2>2. 副資材別の合格値</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>副資材</th>
+            <th>試験方法</th>
+            <th>当社の合格ライン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>織りラベル（縫い付け）</td>
+            <td>ISO 13935-2 縫い目引張</td>
+            <td>60 N/50 mm 以上、5 回洗濯後も外れなし</td>
+          </tr>
+          <tr>
+            <td>洗濯表示ラベル（ナイロン縫い付け）</td>
+            <td>同試験に加え洗濯後の判読性</td>
+            <td>40 N/25 mm 以上、印字がにじまない</td>
+          </tr>
+          <tr>
+            <td>スナップ</td>
+            <td>EN 71-1 引張とトルク</td>
+            <td>70 N と 0.45 N·m で外れなし、衣料用は 90 N 以上</td>
+          </tr>
+          <tr>
+            <td>リベット・ハトメ</td>
+            <td>引張と外観確認</td>
+            <td>80 N 以上、基布が破れないこと</td>
+          </tr>
+          <tr>
+            <td>粘着ラベル</td>
+            <td>ISO 29862 180° ピール</td>
+            <td>8 N/25 mm 以上、40 ℃ で 72 時間後に 6 N/25 mm 以上</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. なぜ縫い目から壊れるのか</h2>
+
+      <ul>
+        <li>縫い目密度：10 SPI 未満ではラベルの耳から先に開きます。10〜12 SPI が実用域です。</li>
+        <li>縫い糸：ポリエステル 40/2 か 60/3。太いと生地を切り、細いと切れます。</li>
+        <li>針：ナイロンには 9〜11 番のボールポイント針。太い針は緯糸を断ちます。</li>
+        <li>耳：熱切断で毛羽が出ると、引張がその部分に集中します。</li>
+        <li>基布：ニットには接着芯が必要で、ないと荷重が編み目を滑ります。</li>
+      </ul>
+
+      <div class="callout">当社の合格基準は、ロットごとに 5 枚を引張試験し、1 枚でも基準を下回れば出荷保留とすることです。引張データと洗濯後の写真は出荷報告書に添付し、口頭保証には頼りません。</div>
+
+      <h2>4. 子ども服：70 N は宣伝文句ではない</h2>
+
+      <p>子ども服の取付基準は誤飲リスクから来ています。米国は CPSIA の 16 CFR 1501 の小部品用円筒、欧州は EN 71-1 の引張 70 N とトルク 0.45 N·m で、いずれも部品が丸ごと外れるかを判定します。日本に同種の強制値はありませんが、製造物責任法により予見可能な誤飲は責任の基礎になります。実務では規制を待たず、6 mm 以下の部品はすべて小部品として試験します。</p>
+
+      <h2>5. 仕様書に書く五つの欄</h2>
+
+      <ol>
+        <li>試験方法と規格番号（ISO 13935-2 / ASTM D1683 / EN 71-1）。「引張合格」のような曖昧な表現は使いません。</li>
+        <li>合格値は単位とセットで記載します。N/50 mm、N/25 mm、N·m。</li>
+        <li>抜取数と判定ルール（AQL か全数）、不合格時の扱いまで決めます。</li>
+        <li>洗濯回数と洗濯後の判定方法。洗濯前後に各 1 枚の写真を残します。</li>
+        <li>報告書の発行元と保管期間。バイヤーが取り出せて初めて意味を持ちます。</li>
+      </ol>
+
+      <p>引張試験の価値は報告書そのものではなく、「このロットを出せるか」がその場で答えられる問いになることです。副資材は一個単位では安く、全数手直しは桁が変わります。五つの欄を仕様書に書くほうが、後から責任を追うより安く済みます。</p>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="garment-label-sewing-thread-guide.html">ラベル縫い糸：仕様と縫い目密度</a></li>
+        <li><a href="garment-trims-quality-inspection.html">副資材の品質検査：抜取と判定</a></li>
+        <li><a href="garment-trims-small-parts-safety-guide.html">小部品の安全：誤飲リスクと試験</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>引張試験や、合格値を仕様書に落とす作業が必要ですか。</p>
+        <a class="cta-btn" href="../contact.html">試作とお見積りを依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
