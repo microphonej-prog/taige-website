@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コードロック・トグル・コードエンド：径の合わせ方 | TAGE</title>
+<meta name="description" content="コードロック・トグル・コードエンドの選定。対応コード径、外殻材質の低温特性、EN 14682 と 16 CFR 1120 の紐規制、ニッケル溶出と検収基準をまとめます。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/cord-locks-toggles-drawstring-hardware-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "繩扣、豬鼻扣與抽繩五金：繩徑、兒童安全與驗收", "item": "https://taigetag.com/blog/cord-locks-toggles-drawstring-hardware-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "繩扣、豬鼻扣與抽繩五金：繩徑、兒童安全與驗收",
+   "url": "https://taigetag.com/blog/cord-locks-toggles-drawstring-hardware-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/cord-locks-toggles-drawstring-hardware-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>金具と副資材</span></div>
+      <h1>コードロック・トグル・コードエンド：径・子ども安全・検収</h1>
+      <p>泰閣包装 · 2026年11月15日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>コードロック、トグル、コードエンド（aglet）は、フード付きジャケット、ジョガーパンツ、レインコート、バックパックで最も小さい部品でありながら、三つのことを同時に決めます。風の中でフードを絞れるか、五回洗濯してもコードが滑るか、そして出荷分が子ども服の紐規制を通るか。本記事では部品の種類、コード径の合わせ方、子ども向け安全、洗濯・腐食耐久性、検収項目を整理します。</p>
+
+      <h2>1. 部品の整理：スプリングロック・スプリング無し・トグル・コードエンド・ハトメ</h2>
+
+      <p>最も一般的なのはバレル型コードロックです。外殻＋スプリング＋押しボタンで片手調整ができ、フードやウエストに向きます。スプリング無しは外殻の弾性や斜面の摩擦で固定し、構造が簡単で安価ですが保持力は一段弱く、軽量なウインドブレーカー向きです。トグルは二穴・三穴の造形部品が多く、コードの通り道で摩擦を作るため装飾性が高く単価も上がります。コードエンド（aglet）は糸端のほつれを止め、通しやすさも左右します。ハトメは生地からの出口で、コード径より 0.5〜1 mm 大きい穴が最も滑ります。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>部品</th>
+            <th>対応コード径</th>
+            <th>主な材質</th>
+            <th>典型的な不具合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>スプリングロック（一穴）</td>
+            <td>3〜6 mm</td>
+            <td>POM・ナイロン</td>
+            <td>スプリング固着・ボタン破断</td>
+          </tr>
+          <tr>
+            <td>スプリング無しロック</td>
+            <td>3〜5 mm</td>
+            <td>POM・ABS</td>
+            <td>コード滑り・長期使用での緩み</td>
+          </tr>
+          <tr>
+            <td>トグル（二穴・三穴）</td>
+            <td>4〜8 mm</td>
+            <td>POM・亜鉛合金</td>
+            <td>バリによるコード傷・塗装摩耗</td>
+          </tr>
+          <tr>
+            <td>コードエンド（金属・樹脂）</td>
+            <td>3〜5 mm</td>
+            <td>ニッケル鍍金真鍮・亜鉛合金・TPU</td>
+            <td>かしめ緩み・ニッケル溶出超過</td>
+          </tr>
+          <tr>
+            <td>ハトメ</td>
+            <td>内径 4〜8 mm</td>
+            <td>真鍮・ステンレス</td>
+            <td>鍍金剥離・生地破れ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>2. 入口寸法はコード径だけ、誤れば全数が使えません</h2>
+
+      <p>4 mm 呼称のコードロックでも実際の適合範囲は 3.6〜4.3 mm であることがあり、綿コードと中空ポリエステルコードは同じ径でも密度が大きく異なります。径 5 mm の綿コードは潰れやすく、径 4 mm の中実ポリエステルは入らないことがあります。実際の工程後、すなわち予備収縮後・プレス後・充填後の三状態で測定し、最も太い値を入口寸法として採用し、公差は ±0.2 mm とします。外殻材質も操作感を左右し、POM は自己潤滑で摩耗に強く、ナイロンは低温でも粘りがあって -20 °C でも操作でき、ABS は安価ですが冬場に脆くなります。</p>
+
+      <h2>3. 子ども向け安全：紐規制がこの部品の絶対条件</h2>
+
+      <p>欧州は EN 14682 で子ども服の紐を判定します。首回りとフードに自由に動く紐を置かないこと、ウエストの調整紐は通路出口から片側 14 cm を超えないこと、裾の紐は衣類の内側に収めること。米国は 16 CFR 1120 により、2T〜12 号の子ども用アウターでフードと首回りのドローコードを禁止し、ウエストと裾の紐は平置きで 7.5 cm を超えて出さないと定めます。どちらも部品選定に直結し、フードに付く部品は隠し式に変えるか廃止するのが原則で、取り外し式ロックで規制を回り込むものではありません。</p>
+
+      <ul>
+        <li>3 歳以下：首回りの絞り紐は使わず、ダミーコードか固定リボンに置き換えます。</li>
+        <li>学童期：ウエストのロックは内側に置き、外露は 14 cm 以内、コードエンドはかしめてほつれを止めます。</li>
+        <li>韓国・日本市場：子ども服の紐は子ども製品安全規制の対象でもあり、韓国では KC 認証と表示義務があるため、証明書と表示を同梱する必要があります。</li>
+      </ul>
+
+      <h2>4. 洗濯・腐食・プレス</h2>
+
+      <p>金属部品が最初に壊れるのは塩水噴霧試験室ではなく、家庭用ドラム洗濯機と洗剤の組み合わせです。塩素系洗剤と 40 °C の温水では、亜鉛合金のコードエンドは 20 回程度で白錆が出ます。ニッケル鍍金真鍮はより持ちますが、鍍金が 3 μm 未満だと縁から素地が出ます。欧州向けは REACH 附属書 XVII 第 27 項に基づき EN 1811 方式でニッケル溶出を試験し、洗濯表示に「金具は裏返しで洗い、浸け置きしない」と明記します。日本向けは家庭用品品質表示法に基づく洗濯表示が必要で、JIS L 0001 の記号と金具の実際の耐性を一致させ、40 °C の機械洗濯可とするなら亜鉛合金ではなくニッケル鍍金真鍮か樹脂を選びます。樹脂ロックはプレス工程でより脆く、POM は約 150 °C で軟化するため、スチームプレスを直接当てると跡が永久に残ります。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>試験</th>
+            <th>規格・根拠</th>
+            <th>推奨判定</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ニッケル溶出</td>
+            <td>EN 1811／REACH 附属書 XVII 第 27 項</td>
+            <td>長期皮膚接触部品は 0.5 μg/cm²/週 以下</td>
+          </tr>
+          <tr>
+            <td>コード保持力</td>
+            <td>社内引張試験</td>
+            <td>50 N を 10 秒保持し滑り・変形なし</td>
+          </tr>
+          <tr>
+            <td>押圧寿命</td>
+            <td>社内往復試験</td>
+            <td>3,000 回押圧後もロック可能</td>
+          </tr>
+          <tr>
+            <td>洗濯後の外観</td>
+            <td>40 °C で 5 回洗濯</td>
+            <td>錆斑・鍍金剥離・染料移行がないこと</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>5. 色・塗装・色差</h2>
+
+      <p>この部品で最も多い失敗は「色番は合っているが表面が違う」ことです。同じ色番でも、POM の成形品では艶消し、亜鉛合金の塗装品では半艶、鍍金品では鏡面になり、同じ衿ぐりに三つ並べば三色に見えます。まず表面処理を決めてから色を合わせます。艶消し品は色見本とグレースケール 4 級で比較し、塗装・鍍金品は色番発注ではなく実物サンプルを求めてください。着色方法も確認します。マスターバッチは紫外線に強く、染料着色の濃紺は半年で赤みに転びやすい傾向があります。</p>
+
+      <h2>6. 発注・梱包・検収</h2>
+
+      <p>単価が安く数量も少ないため、実際のコストは仕分けと補充にあります。色・サイズごとに 1,000 個からの発注が現実的で、多くの工場のマスターバッチ最小ロット 500〜1,000 個とも整合します。納品は製品枚数の 1.05 倍とし、余分な 5% をラインでの欠品緩衝にします。100 個ごとの袋に色番とサイズを印字するのが最も実用的で、混色バラ積みは安価ですが、一度の取り違えで一連の色が混ざります。検収は AQL 2.5 で、対応するコード径のゲージが通るか、押圧が滑らかか、バリやひけがないかの三点を見ます。</p>
+
+      <div class="callout">見落としやすい三点。① EU 向けは GPSR（EU）2023/988 により域内の責任主体とトレーサビリティが求められ、副資材が製品ラベルに現れなくても購買記録はロットまで追える必要があります。② 洗濯表示は金具の実際の耐性と一致させること。機械洗濯可と表示しながら耐洗性の低い亜鉛合金を使えば、自らクレームを作ります。③ 日本と韓国は寸法と表示の作法が異なり、日本は仕上がり寸法を cm で示し原産国を表示、韓国は 55・66・77 などの韓国サイズを用い、取扱表示が義務です。梱包確定前に表示言語を確認してください。</div>
+
+      <p>発注表に落とすと、結局は五つの欄になります。部品の種類、入口径と公差、外殻材質と表面処理、洗濯・金属試験の要件、梱包と表示言語です。この五つが埋まっていればサンプルは一度で承認でき、繁忙期にコードロック 20 個のためにラインを止めることもありません。抽紐金具は製品原価の 1% 未満でありながら、最も苦情が多く、事後の補修が最も難しい部分です。発注前に十分を使う価値があります。</p>
+
+      <h2>関連記事</h2>
+
+      <ul>
+        <li><a href="garment-drawcord-guide.html">ドローコード：素材・仕様・通し方</a></li>
+        <li><a href="metal-trims-nickel-release-guide.html">金属副資材のニッケル溶出：規制値と対策</a></li>
+        <li><a href="eyelet-grommet-rivet-guide.html">ハトメ・グロメット・リベット：寸法と固定</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>お手持ちのコードを少しお送りいただければ、実径に合わせてロックを選定します。</p>
+        <a class="cta-btn" href="../contact.html">試作とお見積りを依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
