@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태깅 건과 스위프트택: 규격·원단 적합성·파손 관리 | TAGE</title>
+<meta name="description" content="태깅 건과 스위프트택 실무. 핀 길이·바늘 굵기·형태 선택, 구멍을 내면 안 되는 다섯 가지 원단, 부러진 바늘 관리와 검침 기록, 시장별 행택 요건을 정리했습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/clothing-tagging-gun-swift-tack-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/clothing-tagging-gun-swift-tack-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "服裝吊牌槍與膠針：規格、面料安全與斷針管控", "item": "https://taigetag.com/blog/clothing-tagging-gun-swift-tack-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "服裝吊牌槍與膠針：規格、面料安全與斷針管控",
+   "url": "https://taigetag.com/blog/clothing-tagging-gun-swift-tack-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/clothing-tagging-gun-swift-tack-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>행택과 부착</span></div>
+      <h1>태깅 건과 스위프트택: 규격, 원단 적합성, 바늘 파손 관리</h1>
+      <p>TAGE 패키징 · 2026년 11월 15일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>태깅 건(tagging gun)과 스위프트택(swift tack)은 제품 포장 직전 마지막 공정이자, 단가만 보고 사기 쉬운 자재입니다. 25 mm 태그핀으로 행택과 네임라벨을 고정하는 것처럼 보이지만, 바늘 굵기를 잘못 고르면 실크에 영구 구멍이 남고, 길이가 짧으면 운송 중 태그가 떨어지며, 바늘이 부러지면 파편이 고객 상자 안으로 들어갑니다. 이 글은 규격, 원단 적합성, 부러진 바늘 관리, 시장별 행택 요건을 정리합니다.</p>
+
+      <h2>1. 태그핀 규격: 길이, 바늘 굵기, 형태</h2>
+
+      <p>태그핀은 세 가지 수치로 정해지고, 세 가지 모두 사용 가능 여부와 자국 여부를 좌우합니다. 길이는 태그 표면에서 삽입점까지의 거리로, 25 mm 는 태그 한 장과 얇은 네임라벨, 35 mm 는 데님 허리밴드나 여러 장 겹침, 50–65 mm 는 니트 세트(태그, 여분 단추 주머니, 혼용률 카드)에 씁니다. 바늘 굵기는 보통 0.9 mm 이고 0.6–0.7 mm 세침은 실크, 시폰, 얇은 니트용이며 촘촘한 직물만 더 굵은 바늘이 필요합니다. 형태는 표준핀, 재사용 가능한 루프락, 한 번만 잠기는 록핀으로 나뉩니다.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>형태</th>
+            <th>표준 길이</th>
+            <th>바늘 굵기</th>
+            <th>적용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>표준핀</td>
+            <td>25 mm</td>
+            <td>0.9 mm</td>
+            <td>태그 한 장+네임라벨, 직물과 중간 두께 니트</td>
+          </tr>
+          <tr>
+            <td>중장핀</td>
+            <td>35 mm</td>
+            <td>0.9–1.0 mm</td>
+            <td>데님, 두꺼운 아우터, 태그 여러 장</td>
+          </tr>
+          <tr>
+            <td>장핀</td>
+            <td>50–65 mm</td>
+            <td>1.0 mm</td>
+            <td>니트 세트(태그, 여분 단추, 벨트)</td>
+          </tr>
+          <tr>
+            <td>세침핀</td>
+            <td>25 mm</td>
+            <td>0.6–0.7 mm</td>
+            <td>실크, 시폰, 얇은 니트, 레이스</td>
+          </tr>
+          <tr>
+            <td>루프락</td>
+            <td>25–35 mm</td>
+            <td>0.9 mm</td>
+            <td>착용 테스트가 있는 리테일 제품, 샘플실</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>구매에서 가장 흔한 실수는 길이만 규격으로 보는 것입니다. 세침은 건 헤드가 달라지고, 많은 공급사가 25 mm·1000개 단가만 제시하므로 불일치는 견적서가 아니라 생산 라인에서 드러납니다. 발주서에 건 모델, 핀 형태, 바늘 굵기, 길이 네 가지를 적으세요. 샘플실에 규격별로 한 상자씩 두면 모델 체인지 때 입고를 기다리지 않아도 됩니다.</p>
+
+      <h2>2. 원단 적합성: 구멍을 견디는 소재인가</h2>
+
+      <p>태그핀은 실 사이를 벌려 구멍을 냅니다. 직물은 실이 되돌아와 닫히지만, 니트와 필라멘트 소재는 실이 밀려나 구멍이 세탁할수록 커집니다. 다섯 가지 소재는 핀을 쓰지 않는 편이 좋습니다. 실크와 새틴(끊긴 필라멘트는 회복되지 않음), 얇은 니트와 캐시미어(늘어난 루프가 돌아오지 않음), 코팅·방수 원단(구멍이 코팅 연속성을 끊어 물이 샘), 가죽과 인조가죽(구멍이 남고 핀 자국을 따라 찢어짐), 고밀도 다운 원단(구멍마다 충전재가 샘). 대신 직조 테이프나 면 끈을 태그에 걸어 단추나 벨트 고리에 묶거나, 루프락으로 네임라벨 가장자리를 집는 방법을 씁니다.</p>
+
+      <div class="callout">한 줄 판단법: 바느질 전에 심지를 대야 하는 원단(실크, 코팅, 얇은 니트)은 핀도 견디지 못합니다. 박음질에 지지가 필요한 원단은 구멍도 견디지 못합니다.</div>
+
+      <h2>3. 부러진 바늘: 이 공정에서 가장 비싼 실패</h2>
+
+      <p>바늘 끝은 두꺼운 겹, 지퍼 이빨, 금속 장식에 닿으면 부러집니다. 파편이 제품 안에 남으면 최악은 리콜, 최선은 클레임입니다. 관리 세 가지: 길이를 맞출 것(건으로 억지로 밀면 파손률이 반드시 오릅니다), 교대조마다 각 건의 바늘 끝 상태를 확인할 것(끝이 말리면 파손 전조), 태그를 단 전 제품을 검침기에 통과시키고 검침 기록과 파손 기록(시각, 공정, 개수, 회수 파편 수)을 남길 것. 일본 유아복·이너웨어 바이어는 검침 보고서를 직접 요구하고, 유럽·미국 바이어는 벤더 매뉴얼에 적어 둡니다.</p>
+
+      <div class="callout">파손 기록은 가장 값싼 보험입니다. 한 주에 바늘 5개가 부러졌는데 파편이 3개만 회수됐다면 그 선적은 나가면 안 됩니다. 이 판단에는 규격이 아니라 산수가 필요합니다.</div>
+
+      <h2>4. 시장별 요구: 행택은 케어 라벨을 대신하지 못한다</h2>
+
+      <p>법정 정보를 행택에만 인쇄하는 브랜드가 많지만 EU에서도 미국에서도 통하지 않습니다. EU 규정 (EU) No 1007/2011 은 섬유 조성을 제품에 영구 부착하도록 요구하고, GPSR (EU) 2023/988 은 EU 역내 책임 사업자를 요구합니다. 프랑스는 소비자법전(Code de la consommation)에 따라 프랑스어 표시를 의무화하고, 스페인은 Real Decreto 928/1987 로 섬유 표시 방법을 정합니다. 미국은 16 CFR 423 으로 취급 표시를 제품에 부착하도록 합니다. 일본은 가정용품품질표시법에 따라 혼용률, 취급 표시(JIS L 0001), 원산지를 일본어로 표시합니다. 한국은 전기용품 및 생활용품 안전관리법에 따라 한국어 표시와 KC 인증 정보를 요구합니다. 행택에 담기는 것은 바코드, 가격, 사이즈, 브랜드 이야기이며 법적 의무의 유일한 매체가 아닙니다.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>시장</th>
+            <th>제품 부착 필수</th>
+            <th>행택에 담을 수 있는 것</th>
+            <th>가장 흔한 오류</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EU</td>
+            <td>섬유 조성 (EU) 1007/2011, 역내 책임 사업자(GPSR)</td>
+            <td>바코드, 가격, 다국어 제품 설명</td>
+            <td>조성을 행택에만 인쇄하고 케어 라벨은 비움</td>
+          </tr>
+          <tr>
+            <td>미국</td>
+            <td>취급 지시 16 CFR 423, 원산지</td>
+            <td>가격, 사이즈, 브랜드 스토리</td>
+            <td>기호만 있고 문구가 없음</td>
+          </tr>
+          <tr>
+            <td>일본</td>
+            <td>혼용률, JIS L 0001 취급 기호, 원산지를 일본어로</td>
+            <td>바코드, 호수·cm 사이즈, 소재 소구점</td>
+            <td>영문 조성만 있고 일본어 표시 없음</td>
+          </tr>
+          <tr>
+            <td>한국</td>
+            <td>혼용률, 취급 표시, KC 인증 정보를 한국어로</td>
+            <td>바코드, 가격, 호수 표기 사이즈</td>
+            <td>KC 인증번호 누락 또는 표시 언어 불일치</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>5. 구매: 핀은 1000개, 건은 개당</h2>
+
+      <p>핀은 1000개 단위로 파는 소모품, 건은 개당 파는 공구이며 교체 헤드는 별도 청구입니다. 소요량은 간단히 계산됩니다. 제품당 1개에 손실 3%를 더해 1만 장이면 10,300개입니다. 가격은 바늘 굵기와 길이에 좌우되고 세침과 장핀은 표준보다 비쌉니다. 대량은 풀 카톤(보통 5,000~10,000개)으로 사서 해상으로 보내 운임을 분산합니다. 긴급 건은 항공뿐인데, 핀은 저가 경량품이라 운임이 화물 가액을 넘는 경우가 흔합니다. 이 점은 발주 전에 말해야 하며, 선적 직전 청구서로 뒤늦게 알려서는 안 됩니다.</p>
+
+      <h2>6. 생산 전 체크리스트</h2>
+
+      <ul>
+        <li>건 모델, 핀 형태, 바늘 굵기, 길이 네 가지를 발주서와 사양서에 기재</li>
+        <li>실크, 시폰, 캐시미어, 코팅, 가죽은 무구멍 방식으로 바꾸고 사유를 사양서에 기재</li>
+        <li>교대조마다 바늘 끝 확인, 파손 기록(시각, 공정, 개수, 파편)</li>
+        <li>전 제품 검침, 보고서 동봉 또는 12개월 이상 보관</li>
+        <li>행택과 케어 라벨 역할 문서화: 법정 정보는 제품 부착, 행택은 보완</li>
+        <li>시장별 언어 완비(프랑스어, 스페인어, 일본어, 한국어), 영어 대체 금지</li>
+      </ul>
+
+      <h2>관련 글</h2>
+
+      <ul>
+        <li><a href="hang-tag-hole-punching-guide.html">행택 천공: 구경과 위치</a></li>
+        <li><a href="garment-trims-needle-detection-guide.html">검침: 금속 이물 관리</a></li>
+        <li><a href="care-label-attachment-guide.html">케어 라벨 부착: 봉제, 접착, 열압착</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>원단에 맞는 핀 사양이나 시험용 샘플이 필요하신가요?</p>
+        <a class="cta-btn" href="../contact.html">시료와 견적 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">의류 행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 요청</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
