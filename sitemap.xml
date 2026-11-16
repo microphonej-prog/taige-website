@@ -122,32 +122,32 @@
     <priority>0.9</priority>
   </url><url>
     <loc>https://taigetag.com/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/ko/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
     <loc>https://taigetag.com/ja/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
     <loc>https://taigetag.com/en/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/fr/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://taigetag.com/es/blog/index.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
@@ -12280,6 +12280,78 @@
   <url>
     <loc>https://taigetag.com/ko/blog/cord-locks-toggles-drawstring-hardware-guide.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/bag-hardware-d-rings-swivel-hooks-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/en/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/fr/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/es/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ja/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://taigetag.com/ko/blog/snap-fastener-press-stud-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="按扣與四合扣：尺寸、開合力與鎳釋放 | TAGE" data-en="Snap Fasteners &amp; Press Studs: Sizes, Holding Force | TAGE" data-fr="Pressions et boutons à ressort : tailles et force | TAGE" data-es="Automáticos y botones de resorte: medidas y fuerza | TAGE" data-ja="スナップ・ジャンパーホック：サイズと保持力 | TAGE" data-ko="스냅·프레스 스터드: 사이즈와 체결력 | TAGE">按扣與四合扣：尺寸、開合力與鎳釋放 | TAGE</title>
+<meta name="description" data-zh="按扣選型指南：四類按扣的差別、ligne 與毫米換算、開合力的實測區間與洗後衰減、黃銅與 POM 取捨、REACH 鎳釋放限制，以及鉚合模具與五項驗收。" data-en="Snap fasteners and press studs: ligne sizing in millimetres, holding force in newtons, brass versus POM, nickel release limits, setting dies and five checks." data-fr="Pressions et boutons à ressort : tailles en lignes et millimètres, force de maintien en newtons, laiton ou POM, limites de nickel, matrices de pose et cinq contrôles." data-es="Automáticos y botones de resorte: medidas en líneas y milímetros, fuerza de sujeción en newtons, latón o POM, límites de níquel, troqueles y cinco controles." data-ja="スナップの選定。ラインとミリの換算、保持力の実測レンジと洗濯後の低下、黄銅と POM の使い分け、ニッケル溶出規制、金型と五項目の検収をまとめます。" data-ko="스냅 선택 가이드. 리뉴와 밀리미터 환산, 체결력 실측 범위와 세탁 후 저하, 황동과 POM 선택, 니켈 용출 규제, 금형과 다섯 가지 검수를 정리합니다."
+      content="按扣選型指南：四類按扣的差別、ligne 與毫米換算、開合力的實測區間與洗後衰減、黃銅與 POM 取捨、REACH 鎳釋放限制，以及鉚合模具與五項驗收。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/snap-fastener-press-stud-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/snap-fastener-press-stud-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "按扣與四合扣：尺寸、開合力、鉚合與驗收", "item": "https://taigetag.com/blog/snap-fastener-press-stud-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "按扣與四合扣：尺寸、開合力、鉚合與驗收",
+   "url": "https://taigetag.com/blog/snap-fastener-press-stud-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/snap-fastener-press-stud-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="五金與輔料" data-en="Hardware &amp; Trims" data-fr="Quincaillerie et accessoires" data-es="Herrajes y accesorios" data-ja="金具と副資材" data-ko="금속 부자재">五金與輔料</span></div>
+      <h1 data-zh="按扣與四合扣：尺寸、開合力、鉚合與驗收" data-en="Snap Fasteners and Press Studs: Sizing, Holding Force and Setting" data-fr="Pressions et boutons à ressort : tailles, force de maintien et pose" data-es="Automáticos y botones de resorte: medidas, fuerza de sujeción y colocación" data-ja="スナップ・ジャンパーホック：サイズ・保持力・打ち込み・検収" data-ko="스냅과 프레스 스터드: 사이즈, 체결력, 타격, 검수">按扣與四合扣：尺寸、開合力、鉚合與驗收</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月16日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 16, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 16 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 16 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月16日更新" data-ko="TAGE 패키징 · 2026년 11월 16일 업데이트">泰閣包裝 · 更新於 2026年11月16日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="按扣（四合扣、彈簧扣、爪扣）是婴童裝、羽絨、工裝與包袋用得最多的扣件，也是最容易被退貨的一類：開合力太鬆，客人一抬手就開；太緊，單手打不開；爪長不對，洗兩次就鬆脫。這篇把尺寸體系、開合力、材質電鍍、鉚合與驗收五件事講清楚，讓按扣從「憑手感」變成可寫進規格的數字。" data-en="Snap fasteners, meaning ring snaps, spring snaps, prong snaps and sew-on snaps, are the most used closure on kidswear, down jackets, workwear and bags, and the easiest to get returned. Too loose and the placket pops open when the wearer lifts an arm; too tight and it cannot be closed one-handed; the wrong prong length and it works loose after two washes. This guide turns snaps from a matter of feel into numbers you can put in a specification: sizing systems, holding force, materials and plating, setting, and acceptance." data-fr="Les pressions, c&#x27;est-à-dire boutons à ressort, boutons à anneau, pressions à griffes et pressions à coudre, sont la fermeture la plus utilisée sur les vêtements enfant, les doudounes, les vêtements de travail et les sacs, et la plus facile à se faire retourner. Trop lâche, la patte s&#x27;ouvre dès qu&#x27;on lève le bras ; trop ferme, impossible à fermer d&#x27;une main ; une griffe trop courte et la pression se desserre en deux lavages. Ce guide transforme la pression en chiffres inscrivables dans un cahier des charges : systèmes de taille, force de maintien, matières et revêtement, pose et contrôle." data-es="Los automáticos, es decir botones de resorte, de anilla, de púas y de coser, son el cierre más usado en ropa infantil, plumíferos, ropa de trabajo y bolsos, y el más fácil de que devuelvan. Si van flojos, la tapeta se abre al levantar el brazo; si van duros, no se abrochan con una mano; con la púa equivocada se aflojan en dos lavados. Esta guía convierte el automático en cifras que se pueden poner en una especificación: sistemas de medida, fuerza de sujeción, materiales y baño, colocación e inspección." data-ja="スナップ（ジャンパーホック・リングスナップ・爪付きスナップ・縫い付けタイプ）は、子ども服、ダウン、作業服、バッグで最も使われる留め具であり、最も返品になりやすい部品でもあります。緩いと腕を上げただけで開き、固いと片手で留められず、爪の長さが合わないと二回の洗濯で緩みます。本記事ではサイズ体系、保持力、素材とメッキ、打ち込み、検収の五点を、感覚ではなく仕様に書ける数値として整理します。" data-ko="스냅(링 스냅, 스프링 스냅, 프롱 스냅, 재봉형 스냅)은 아동복, 다운, 작업복, 가방에서 가장 많이 쓰이는 여밈 장치이면서 가장 반품이 잦은 부품입니다. 헐거우면 팔을 들 때 여밈이 벌어지고, 너무 뻑뻑하면 한 손으로 잠글 수 없으며, 다리 길이가 맞지 않으면 두 번 세탁에 풀립니다. 이 글은 사이즈 체계, 체결력, 소재와 도금, 타격, 검수 다섯 가지를 감이 아니라 사양서에 적을 수 있는 숫자로 정리합니다.">按扣（四合扣、彈簧扣、爪扣）是婴童裝、羽絨、工裝與包袋用得最多的扣件，也是最容易被退貨的一類：開合力太鬆，客人一抬手就開；太緊，單手打不開；爪長不對，洗兩次就鬆脫。這篇把尺寸體系、開合力、材質電鍍、鉚合與驗收五件事講清楚，讓按扣從「憑手感」變成可寫進規格的數字。</p>
+
+      <h2 data-zh="一、四類按扣，先分清再談規格" data-en="1. Four Families, Sorted Before You Specify" data-fr="1. Quatre familles à distinguer avant de spécifier" data-es="1. Cuatro familias antes de especificar" data-ja="1. 四つの分類を分けてから仕様を決める" data-ko="1. 네 가지 분류를 먼저 구분합니다">一、四類按扣，先分清再談規格</h2>
+
+      <p data-zh="彈簧圈扣（ring snap）內含彈簧線圈，開合力穩定、壽命長，是童裝與工裝首選；四合扣（spring snap）靠沖壓彈片，成本最低但開合力衰減快；爪扣（prong snap）不需模具底座、直接穿布爪合，適合薄料與小批量；縫扣（sew-on snap）用線固定，最適合針織與不能打穿的料。四類不能互相替代——用爪扣做厚牛仔，爪會歪；用四合扣做針織，布料先破。" data-en="A ring snap carries a spring coil, holds its force over thousands of cycles and is the first choice for kidswear and workwear. A spring snap uses a stamped spring leaf: cheapest, but the force fades fastest. A prong snap pierces the fabric and clinches without a die-set base, which suits light fabric and small runs. A sew-on snap is stitched in place and is the only safe option on knits and materials that must not be pierced. They are not interchangeable: prong snaps set into heavy denim bend their prongs, and spring snaps on jersey tear the fabric before they release." data-fr="Le bouton à anneau contient un ressort hélicoïdal : force stable sur des milliers de cycles, premier choix pour l&#x27;enfant et le vêtement de travail. Le bouton à ressort utilise une lame estampée : le moins cher, mais la force chute le plus vite. La pression à griffes traverse le tissu et se rabat sans embase : adaptée aux tissus légers et aux petites séries. La pression à coudre est fixée au fil et reste la seule option sûre sur maille et sur les matières à ne pas percer. Ces quatre familles ne se remplacent pas : des griffes dans un denim lourd se couchent, et un bouton à ressort sur jersey déchire le tissu avant de s&#x27;ouvrir." data-es="El botón de anilla lleva un resorte helicoidal: fuerza estable durante miles de ciclos y primera opción para infantil y ropa de trabajo. El botón de resorte usa una lengüeta estampada: el más barato, pero el que pierde fuerza antes. El automático de púas atraviesa el tejido sin base de troquel, adecuado para tejido ligero y series cortas. El de coser se fija con hilo y es la única opción segura en punto y en materiales que no deben perforarse. No son intercambiables: las púas en denim pesado se doblan, y un botón de resorte en jersey rompe el tejido antes de abrirse." data-ja="リングスナップはバネコイルを内蔵し、数千回の開閉でも保持力が安定するため、子ども服や作業服の第一選択です。スプリングスナップは打ち抜き板バネ式で最も安価ですが、保持力の低下が最も早い。爪付きスナップは台座なしで布を貫通させて爪を折るため、薄地や小ロットに向きます。縫い付けタイプは糸で固定し、ニットや穴を開けられない素材では唯一安全な選択です。互換はできません。厚手デニムに爪付きを使うと爪が倒れ、ジャージーにスプリングスナップを使うと外れる前に布が破れます。" data-ko="링 스냅은 스프링 코일이 들어 있어 수천 회 개폐에도 체결력이 안정적이며 아동복과 작업복의 첫 선택입니다. 스프링 스냅은 프레스 판스프링 방식으로 가장 저렴하지만 체결력 저하가 가장 빠릅니다. 프롱 스냅은 받침대 없이 원단을 관통해 다리를 접어 고정하므로 얇은 원단과 소량에 적합합니다. 재봉형 스냅은 실로 고정하며 니트나 구멍을 낼 수 없는 소재에서 유일하게 안전한 선택입니다. 서로 대체할 수 없습니다. 두꺼운 데님에 프롱을 쓰면 다리가 눕고, 저지에 스프링 스냅을 쓰면 열리기 전에 원단이 찢어집니다.">彈簧圈扣（ring snap）內含彈簧線圈，開合力穩定、壽命長，是童裝與工裝首選；四合扣（spring snap）靠沖壓彈片，成本最低但開合力衰減快；爪扣（prong snap）不需模具底座、直接穿布爪合，適合薄料與小批量；縫扣（sew-on snap）用線固定，最適合針織與不能打穿的料。四類不能互相替代——用爪扣做厚牛仔，爪會歪；用四合扣做針織，布料先破。</p>
+
+      <ul>
+        <li data-zh="針織、羊毛、絲：一律縫扣，打穿即為永久性損傷" data-en="Knit, wool, silk: sew-on only; a pierced hole is permanent damage" data-fr="Maille, laine, soie : uniquement à coudre ; un trou percé est un dommage définitif" data-es="Punto, lana, seda: solo de coser; un agujero perforado es daño permanente" data-ja="ニット・ウール・シルク：縫い付けのみ。穴は恒久的な損傷になります" data-ko="니트, 울, 실크: 재봉형만 사용. 구멍은 영구 손상입니다">針織、羊毛、絲：一律縫扣，打穿即為永久性損傷</li>
+        <li data-zh="羽絨與棉服：用四合扣＋墊片，避免夾傷絨布與撕破面料" data-en="Down and padded jackets: spring snap with a backing plate, to avoid tearing the shell" data-fr="Doudoune et ouatine : bouton à ressort avec plaque d&#x27;appui, pour ne pas déchirer l&#x27;enduit" data-es="Plumífero y acolchado: botón de resorte con placa de refuerzo para no romper el exterior" data-ja="ダウン・中綿：スプリングスナップ＋座金で表地の破れを防ぎます" data-ko="다운·패딩: 스프링 스냅과 받침판을 사용해 겉감 파손을 막습니다">羽絨與棉服：用四合扣＋墊片，避免夾傷絨布與撕破面料</li>
+        <li data-zh="童裝與嬰兒連體衣：優先圈扣，並確認拉力與小零件安全" data-en="Kidswear and babygrows: prefer ring snaps, and confirm pull strength and small-parts safety" data-fr="Vêtement enfant et pyjama bébé : préférer l&#x27;anneau et vérifier la traction et les petites pièces" data-es="Ropa infantil y pelele: preferir anilla y verificar tracción y piezas pequeñas" data-ja="子ども服・ベビーロンパース：リングスナップを優先し、引張強さと小部品安全を確認" data-ko="아동복·유아 우주복: 링 스냅을 우선하고 인장 강도와 소부품 안전을 확인합니다">童裝與嬰兒連體衣：優先圈扣，並確認拉力與小零件安全</li>
+      </ul>
+
+      <h2 data-zh="二、尺寸：ligne 與毫米的換算" data-en="2. Sizing: Ligne Converted to Millimetres" data-fr="2. Tailles : conversion des lignes en millimètres" data-es="2. Medidas: conversión de líneas a milímetros" data-ja="2. サイズ：ラインとミリの換算" data-ko="2. 사이즈: 리뉴(ligne)와 밀리미터 환산">二、尺寸：ligne 與毫米的換算</h2>
+
+      <p data-zh="行業仍用 ligne（L）標按扣，1 L 等於 0.635 mm。這是歷史單位，不是直徑精確值——同為 15 L，不同廠的帽蓋外徑可能差 0.3 mm，而這 0.3 mm 決定它能不能蓋住既有的扣洞。所以規格要寫「15 L，帽蓋外徑 9.5 mm，公差 ±0.15 mm」，只寫 15 L 等於沒寫。" data-en="The trade still sizes snaps in ligne, where 1 L equals 0.635 mm. It is a historical unit, not an exact diameter: two 15 L caps from different makers can differ by 0.3 mm in outside diameter, and that 0.3 mm decides whether the cap covers the existing hole. So specify 15 L with a 9.5 mm cap diameter and a tolerance of plus or minus 0.15 mm. Writing 15 L alone writes nothing." data-fr="Le métier dimensionne encore les pressions en lignes, où 1 L vaut 0,635 mm. C&#x27;est une unité historique, pas un diamètre exact : deux capsules de 15 L de fabricants différents peuvent différer de 0,3 mm de diamètre extérieur, et ces 0,3 mm décident si la capsule couvre le trou existant. Spécifiez donc 15 L avec un diamètre de capsule de 9,5 mm et une tolérance de plus ou moins 0,15 mm. Écrire 15 L seul n&#x27;écrit rien." data-es="El sector sigue midiendo los automáticos en líneas, donde 1 L equivale a 0,635 mm. Es una unidad histórica, no un diámetro exacto: dos cápsulas de 15 L de fabricantes distintos pueden diferir en 0,3 mm de diámetro exterior, y esos 0,3 mm deciden si la cápsula cubre el agujero existente. Especifique 15 L con 9,5 mm de diámetro de cápsula y tolerancia de más menos 0,15 mm. Escribir solo 15 L no dice nada." data-ja="業界では依然としてライン（L）で表記し、1 L は 0.635 mm です。これは歴史的な単位で正確な直径ではなく、同じ 15 L でもメーカーが違えばキャップ外径が 0.3 mm 違うことがあり、その 0.3 mm が既存の穴を覆えるかどうかを決めます。したがって「15 L、キャップ外径 9.5 mm、公差 ±0.15 mm」と書き、15 L だけでは仕様になりません。" data-ko="업계는 여전히 리뉴(L)로 표기하며 1 L은 0.635 mm입니다. 이는 역사적 단위로 정확한 직경이 아니어서 같은 15 L라도 제조사가 다르면 캡 외경이 0.3 mm 차이 날 수 있고, 그 0.3 mm가 기존 구멍을 덮을 수 있는지를 결정합니다. 따라서 15 L, 캡 외경 9.5 mm, 공차 ±0.15 mm로 적어야 하며 15 L만 쓰면 사양이 아닙니다.">行業仍用 ligne（L）標按扣，1 L 等於 0.635 mm。這是歷史單位，不是直徑精確值——同為 15 L，不同廠的帽蓋外徑可能差 0.3 mm，而這 0.3 mm 決定它能不能蓋住既有的扣洞。所以規格要寫「15 L，帽蓋外徑 9.5 mm，公差 ±0.15 mm」，只寫 15 L 等於沒寫。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="規格" data-en="Size" data-fr="Taille" data-es="Medida" data-ja="呼び" data-ko="규격">規格</th>
+            <th data-zh="帽蓋外徑（約）" data-en="Cap diameter (approx.)" data-fr="Diamètre de capsule (env.)" data-es="Diámetro de cápsula (aprox.)" data-ja="キャップ外径（約）" data-ko="캡 외경(약)">帽蓋外徑（約）</th>
+            <th data-zh="常見用途" data-en="Typical use" data-fr="Usage courant" data-es="Uso habitual" data-ja="一般的な用途" data-ko="일반 용도">常見用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="12 L" data-en="12 L" data-fr="12 L" data-es="12 L" data-ja="12 L" data-ko="12 L">12 L</td>
+            <td data-zh="7.6 mm" data-en="7.6 mm" data-fr="7,6 mm" data-es="7,6 mm" data-ja="7.6 mm" data-ko="7.6 mm">7.6 mm</td>
+            <td data-zh="嬰兒連體衣、薄料口袋" data-en="Babygrows, light pocket flaps" data-fr="Pyjamas bébé, rabats légers" data-es="Peleles, carteras ligeras" data-ja="ベビーロンパース、薄手のポケット" data-ko="유아 우주복, 얇은 포켓">嬰兒連體衣、薄料口袋</td>
+          </tr>
+          <tr>
+            <td data-zh="15 L" data-en="15 L" data-fr="15 L" data-es="15 L" data-ja="15 L" data-ko="15 L">15 L</td>
+            <td data-zh="9.5 mm" data-en="9.5 mm" data-fr="9,5 mm" data-es="9,5 mm" data-ja="9.5 mm" data-ko="9.5 mm">9.5 mm</td>
+            <td data-zh="襯衫門襟、童裝外套" data-en="Shirt plackets, kids jackets" data-fr="Patte de chemise, veste enfant" data-es="Tapetas de camisa, chaqueta infantil" data-ja="シャツの前立て、子ども用ジャケット" data-ko="셔츠 여밈, 아동 재킷">襯衫門襟、童裝外套</td>
+          </tr>
+          <tr>
+            <td data-zh="20 L" data-en="20 L" data-fr="20 L" data-es="20 L" data-ja="20 L" data-ko="20 L">20 L</td>
+            <td data-zh="12.7 mm" data-en="12.7 mm" data-fr="12,7 mm" data-es="12,7 mm" data-ja="12.7 mm" data-ko="12.7 mm">12.7 mm</td>
+            <td data-zh="工裝、羽絨、包袋" data-en="Workwear, down jackets, bags" data-fr="Vêtement de travail, doudoune, sacs" data-es="Ropa de trabajo, plumífero, bolsos" data-ja="作業服、ダウン、バッグ" data-ko="작업복, 다운, 가방">工裝、羽絨、包袋</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="三、開合力：把「手感」變成公斤" data-en="3. Holding Force: Turning Feel Into Newtons" data-fr="3. Force de maintien : traduire la sensation en newtons" data-es="3. Fuerza de sujeción: convertir la sensación en newtons" data-ja="3. 保持力：手触りを数値にする" data-ko="3. 체결력: 감을 수치로 바꾸기">三、開合力：把「手感」變成公斤</h2>
+
+      <p data-zh="開合力分兩個方向測：拉開（pull-apart）與側推（shear）。門襟用按扣主要受側推，必須看剪切值；領口與口袋翻蓋主要受拉開。一般成衣 15 L 按扣的拉開值落在 20–45 N，20 L 落在 35–60 N；婴童裝要更低，讓家長單手可開、但幼兒自己不易開。數值一定要以「封樣 + 實測」定，寫區間，不寫單值。" data-en="Holding force is measured in two directions: pull-apart and shear. Placket snaps mostly see shear and must be specified on that value; collars and pocket flaps mostly see pull-apart. A 15 L garment snap typically lands between 20 and 45 N pull-apart, and a 20 L between 35 and 60 N. Kidswear should sit lower so a parent can open it one-handed while a toddler cannot. Always fix the figure against a sealed sample with a measured value, and specify a range, not a single number." data-fr="La force de maintien se mesure dans deux directions : arrachement et cisaillement. Les pressions de patte travaillent surtout en cisaillement et doivent être spécifiées sur cette valeur ; cols et rabats de poche travaillent surtout en arrachement. Une pression 15 L de vêtement se situe couramment entre 20 et 45 N en arrachement, une 20 L entre 35 et 60 N. Le vêtement enfant doit rester plus bas, pour qu&#x27;un parent ouvre d&#x27;une main sans qu&#x27;un tout-petit y arrive. Fixez toujours la valeur sur un échantillon scellé mesuré, et spécifiez une plage, pas un chiffre unique." data-es="La fuerza de sujeción se mide en dos direcciones: arranque y cizalladura. Los automáticos de tapeta trabajan sobre todo a cizalladura y deben especificarse con ese valor; cuellos y carteras de bolsillo trabajan a arranque. Un automático 15 L de prenda suele quedar entre 20 y 45 N al arranque, y uno 20 L entre 35 y 60 N. En infantil conviene bajar, para que un adulto lo abra con una mano y un niño pequeño no. Fije siempre el valor contra una muestra sellada medida y especifique un rango, no una cifra única." data-ja="保持力は引張り（引き離し）とせん断の二方向で測ります。前立てのスナップは主にせん断を受けるため、せん断値で規定します。襟やポケットのフラップは主に引き離しです。既製服の 15 L は引き離しでおおむね 20〜45 N、20 L は 35〜60 N。子ども服は低めに設定し、大人は片手で開けられ、幼児は開けにくい状態にします。数値は必ず封緘見本の実測で決め、単一値ではなく範囲で指定してください。" data-ko="체결력은 당김(분리)과 전단 두 방향으로 측정합니다. 여밈의 스냅은 주로 전단을 받으므로 전단값으로 규정하고, 깃과 포켓 플랩은 주로 당김을 받습니다. 일반 의류 15 L은 당김 20~45 N, 20 L은 35~60 N 수준입니다. 아동복은 더 낮게 잡아 보호자가 한 손으로 열고 유아는 열기 어렵게 해야 합니다. 수치는 반드시 봉인 견본의 실측으로 정하고 단일값이 아닌 범위로 지정하십시오.">開合力分兩個方向測：拉開（pull-apart）與側推（shear）。門襟用按扣主要受側推，必須看剪切值；領口與口袋翻蓋主要受拉開。一般成衣 15 L 按扣的拉開值落在 20–45 N，20 L 落在 35–60 N；婴童裝要更低，讓家長單手可開、但幼兒自己不易開。數值一定要以「封樣 + 實測」定，寫區間，不寫單值。</p>
+
+      <div class="callout" data-zh="開合力會隨洗滌次數下降。要求在洗 5 次後複測，衰減超過 30% 就換規格或換供應商——這一條能擋掉大部分半年後的客訴。" data-en="Holding force drops with washing. Require a re-test after five home washes and change the spec or the supplier if it falls by more than thirty percent; that single rule prevents most complaints six months later." data-fr="La force de maintien baisse avec les lavages. Exigez un nouvel essai après cinq lavages domestiques et changez de spécification ou de fournisseur au-delà de trente pour cent de perte : cette règle évite l&#x27;essentiel des réclamations six mois plus tard." data-es="La fuerza de sujeción baja con los lavados. Exija un nuevo ensayo tras cinco lavados domésticos y cambie de especificación o de proveedor si cae más de un treinta por ciento: esa regla evita la mayoría de las reclamaciones seis meses después." data-ja="保持力は洗濯回数とともに低下します。家庭洗濯 5 回後の再測定を条件とし、30% を超えて低下したら仕様か取引先を変えてください。この一条で半年後の苦情の大半を防げます。" data-ko="체결력은 세탁 횟수에 따라 떨어집니다. 가정 세탁 5회 후 재측정을 조건으로 하고 30% 넘게 저하되면 사양이나 공급사를 바꾸십시오. 이 한 조항으로 반년 뒤 클레임 대부분을 막을 수 있습니다.">開合力會隨洗滌次數下降。要求在洗 5 次後複測，衰減超過 30% 就換規格或換供應商——這一條能擋掉大部分半年後的客訴。</div>
+
+      <h2 data-zh="四、材質與電鍍：鎳釋放是硬門檻" data-en="4. Material and Plating: Nickel Release Is the Hard Gate" data-fr="4. Matière et revêtement : le nickel est le seuil incontournable" data-es="4. Material y baño: el níquel es el umbral obligatorio" data-ja="4. 素材とメッキ：ニッケル溶出が必須条件" data-ko="4. 소재와 도금: 니켈 용출이 필수 조건">四、材質與電鍍：鎳釋放是硬門檻</h2>
+
+      <p data-zh="常用材質是黃銅（耐用、可做細螺紋）、不鏽鋼（耐蝕最好、成本高）、鋅合金（便宜、適合大件）與 POM（塑料按扣，無金屬過敏風險、但耐熱差）。金屬件與皮膚長時間接觸時，歐盟 REACH (EC) No 1907/2006 附錄 XVII 限制鎳釋放，用 EN 1811 篩檢、EN 12472 磨耗後複測；出口美國要看 CPSIA 與 16 CFR 1501 小零件；出口日本，纺织品按家庭用品品質表示法需標明纖維組成（混用率）與取扱表示，金属件的安全性则受製造物責任法约束。無鎳方案（鍍錫、鍍銅鎳底＋有機塗層、POM）要供應商給第三方報告，不能只給樣品。" data-en="The usual materials are brass, which is durable and takes fine threads; stainless steel, the most corrosion resistant and the most expensive; zinc alloy, cheap and suited to larger parts; and POM, a plastic snap with no metal-allergy risk but poor heat resistance. Where metal sits against skin for long periods, Annex XVII of REACH (EC) No 1907/2006 restricts nickel release, screened by EN 1811 and re-tested after wear simulation to EN 12472. For the US, CPSIA and the small-parts rule at 16 CFR 1501 apply. For Japan, textile goods carry fibre composition and care labelling under the Household Goods Quality Labelling Act, while metal parts fall under product liability. Nickel-free routes such as tin plating, copper-nickel with an organic topcoat, or POM need a third-party report, not a sample." data-fr="Les matières courantes sont le laiton, durable et apte aux filetages fins ; l&#x27;inox, le plus résistant à la corrosion et le plus cher ; le zamak, bon marché et adapté aux grosses pièces ; et le POM, pression plastique sans risque d&#x27;allergie au métal mais sensible à la chaleur. Lorsqu&#x27;une pièce métallique reste au contact de la peau, l&#x27;annexe XVII du règlement (CE) n° 1907/2006 (REACH) limite la libération de nickel, criblée selon EN 1811 puis retestée après usure selon EN 12472. Pour les États-Unis, la CPSIA et la règle des petites pièces du 16 CFR 1501 s&#x27;appliquent. Les solutions sans nickel, comme l&#x27;étamage, le cuivre-nickel sous couche organique ou le POM, exigent un rapport tiers : les mentions obligatoires du dossier produit ne se remplissent pas avec un échantillon." data-es="Los materiales habituales son el latón, duradero y apto para roscas finas; el acero inoxidable, el más resistente a la corrosión y el más caro; la aleación de zinc, barata y adecuada para piezas grandes; y el POM, automático plástico sin riesgo de alergia al metal pero con poca resistencia al calor. Cuando el metal queda en contacto prolongado con la piel, el anexo XVII del Reglamento (CE) n.º 1907/2006 (REACH) limita la liberación de níquel, con cribado por EN 1811 y nuevo ensayo tras desgaste por EN 12472. Para EE. UU. aplican CPSIA y la regla de piezas pequeñas del 16 CFR 1501. Las soluciones sin níquel, como estañado, cobre-níquel con capa orgánica o POM, exigen informe de tercero: la información obligatoria del expediente no se llena con una muestra." data-ja="一般的な素材は、耐久性があり細いねじも切れる黄銅、耐食性が最も高く高価なステンレス、安価で大型品に向く亜鉛合金、金属アレルギーのリスクがない代わりに耐熱性が低い POM です。金属が皮膚に長時間触れる場合、EU の REACH (EC) No 1907/2006 附属書 XVII がニッケル溶出を制限し、EN 1811 でスクリーニング、EN 12472 の摩耗後に再試験します。米国向けは CPSIA と 16 CFR 1501 の小部品規制、日本向けは繊維製品が家庭用品品質表示法により組成（混用率）と取扱表示の対象となり、金属部品は製造物責任法の範囲に入ります。ニッケルフリーの方法（スズメッキ、銅ニッケル下地＋有機被膜、POM）は、見本ではなく第三者報告書で確認してください。" data-ko="일반 소재는 내구성이 좋고 가는 나사산을 낼 수 있는 황동, 내식성이 가장 좋지만 비싼 스테인리스, 저렴하고 큰 부품에 맞는 아연합금, 금속 알레르기 위험은 없지만 내열성이 낮은 POM입니다. 금속이 피부에 장시간 닿으면 EU REACH (EC) No 1907/2006 부속서 XVII가 니켈 용출을 제한하며 EN 1811로 스크리닝하고 EN 12472 마모 후 재시험합니다. 미국 수출은 CPSIA와 16 CFR 1501 소부품 규정, 일본은 섬유 제품의 품질 표시(혼용률·취급 표시)와 제조물 책임이 적용됩니다. 니켈 프리 방식(주석 도금, 구리-니켈 하지에 유기 피막, POM)은 견본이 아니라 제3자 성적서로 확인해야 합니다. 아동복이나 어린이용 가방에 쓰는 스냅은 어린이제품 안전특별법에 따른 KC 인증 대상 여부를 먼저 확인하십시오.">常用材質是黃銅（耐用、可做細螺紋）、不鏽鋼（耐蝕最好、成本高）、鋅合金（便宜、適合大件）與 POM（塑料按扣，無金屬過敏風險、但耐熱差）。金屬件與皮膚長時間接觸時，歐盟 REACH (EC) No 1907/2006 附錄 XVII 限制鎳釋放，用 EN 1811 篩檢、EN 12472 磨耗後複測；出口美國要看 CPSIA 與 16 CFR 1501 小零件；出口日本，纺织品按家庭用品品質表示法需標明纖維組成（混用率）與取扱表示，金属件的安全性则受製造物責任法约束。無鎳方案（鍍錫、鍍銅鎳底＋有機塗層、POM）要供應商給第三方報告，不能只給樣品。</p>
+
+      <h2 data-zh="五、鉚合：模具、爪長與三次試打" data-en="5. Setting: Die, Prong Length and Three Trial Strikes" data-fr="5. Pose : matrice, longueur de griffe et trois essais" data-es="5. Colocación: troquel, longitud de púa y tres pruebas" data-ja="5. 打ち込み：金型・爪長・三回の試打" data-ko="5. 타격: 금형, 다리 길이, 세 번의 시타">五、鉚合：模具、爪長與三次試打</h2>
+
+      <p data-zh="按扣鬆脫八成出在鉚合，不在按扣本身。三個要點：模具與按扣品牌必須配對（不同廠的曲面角度差 1–2 度就會壓歪）；爪長要等於「面料厚度 + 0.8 至 1.2 mm」，先量三處不同部位的厚度再定；量產前用實料試打三次，看爪是否均勻外翻、帽蓋是否平整、開合是否有澀感。試打記錄留檔，換料換季時直接對照。" data-en="Loose snaps are mostly a setting problem, not a snap problem. Three points: the die must match the snap brand, since a one or two degree difference in the curve angle between makers crimps them crooked; prong length must equal material thickness plus 0.8 to 1.2 mm, measured at three different points first; and strike three trials on real material before production, checking that prongs roll outward evenly, the cap sits flat, and the action has no grit. Keep the trial records and compare them when the fabric or season changes." data-fr="Une pression qui se desserre est un problème de pose, pas de bouton. Trois points : la matrice doit correspondre à la marque, un écart de un à deux degrés sur l&#x27;angle de courbure suffit à sertir de travers ; la longueur de griffe doit valoir l&#x27;épaisseur de matière plus 0,8 à 1,2 mm, mesurée en trois points différents ; et il faut trois essais sur matière réelle avant production, en vérifiant que les griffes se rabattent régulièrement, que la capsule est plane et que le mouvement n&#x27;accroche pas. Conservez les essais et comparez-les au changement de tissu ou de saison." data-es="Un automático flojo es casi siempre un problema de colocación, no del botón. Tres puntos: el troquel debe corresponder a la marca, porque uno o dos grados de diferencia en el ángulo de curvatura basta para engastar torcido; la longitud de púa debe ser el espesor del material más 0,8 a 1,2 mm, medido antes en tres puntos distintos; y hay que hacer tres pruebas en material real antes de producir, comprobando que las púas se doblen parejas, la cápsula quede plana y el movimiento no raspe. Guarde los registros de prueba y compárelos al cambiar de tejido o de temporada." data-ja="スナップの緩みは八割が打ち込み側の問題で、スナップ自体の問題ではありません。金型はスナップのブランドと一致させる必要があり、曲面角度が 1〜2 度違うだけで斜めに潰れます。爪長は素材厚＋0.8〜1.2 mm とし、先に三か所の厚みを測ります。量産前に実素材で三回試打し、爪が均一に外へ倒れるか、キャップが平らか、開閉に引っ掛かりがないかを確認します。試打記録は保管し、生地や季節の切り替え時に照合してください。" data-ko="스냅 풀림은 대부분 타격 문제이지 스냅 자체 문제가 아닙니다. 금형은 스냅 브랜드와 일치해야 하며, 곡면 각도가 1~2도만 달라도 비뚤게 눌립니다. 다리 길이는 소재 두께에 0.8~1.2 mm를 더한 값으로 하고, 먼저 세 지점의 두께를 측정합니다. 양산 전에 실제 소재로 세 번 시타해 다리가 고르게 벌어지는지, 캡이 평평한지, 개폐에 걸림이 없는지 확인하십시오. 시타 기록을 보관하고 원단이나 시즌이 바뀔 때 대조하십시오.">按扣鬆脫八成出在鉚合，不在按扣本身。三個要點：模具與按扣品牌必須配對（不同廠的曲面角度差 1–2 度就會壓歪）；爪長要等於「面料厚度 + 0.8 至 1.2 mm」，先量三處不同部位的厚度再定；量產前用實料試打三次，看爪是否均勻外翻、帽蓋是否平整、開合是否有澀感。試打記錄留檔，換料換季時直接對照。</p>
+
+      <h2 data-zh="六、驗收清單：五項就夠" data-en="6. Acceptance: Five Checks Are Enough" data-fr="6. Contrôle : cinq points suffisent" data-es="6. Inspección: cinco puntos bastan" data-ja="6. 検収：五項目で十分" data-ko="6. 검수: 다섯 항목이면 충분합니다">六、驗收清單：五項就夠</h2>
+
+      <ul>
+        <li data-zh="拉力：每批抽 10 件，開合力與封樣差不得超過 15%" data-en="Pull: ten pieces per lot, holding force within fifteen percent of the sealed sample" data-fr="Traction : dix pièces par lot, force à quinze pour cent de l&#x27;échantillon scellé" data-es="Tracción: diez piezas por lote, fuerza dentro del quince por ciento de la muestra sellada" data-ja="引張：ロットごとに 10 個、保持力は封緘見本の 15% 以内" data-ko="인장: 로트당 10개, 체결력은 봉인 견본의 15% 이내">拉力：每批抽 10 件，開合力與封樣差不得超過 15%</li>
+        <li data-zh="洗後衰減：5 次洗滌後複測，下降不得超過 30%" data-en="Wash decay: re-test after five washes, no more than thirty percent loss" data-fr="Après lavage : nouvel essai à cinq lavages, perte maximale de trente pour cent" data-es="Tras lavado: nuevo ensayo a cinco lavados, pérdida máxima del treinta por ciento" data-ja="洗濯後の低下：5 回洗濯後に再測定し、30% を超える低下は不可" data-ko="세탁 후 저하: 5회 세탁 후 재측정, 30% 초과 저하는 불가">洗後衰減：5 次洗滌後複測，下降不得超過 30%</li>
+        <li data-zh="鎳釋放：第三方報告在有效期內，且與本批材質一致" data-en="Nickel release: a third-party report inside its validity and matching this batch" data-fr="Nickel : rapport tiers en cours de validité et correspondant à ce lot" data-es="Níquel: informe de tercero vigente y correspondiente a este lote" data-ja="ニッケル溶出：有効期限内の第三者報告書があり、本ロットの素材と一致" data-ko="니켈 용출: 유효기간 내 제3자 성적서가 있고 이 로트 소재와 일치">鎳釋放：第三方報告在有效期內，且與本批材質一致</li>
+        <li data-zh="外觀：帽蓋無壓痕、無色差、無毛邊，鍍層無露底" data-en="Appearance: no die marks, no colour drift, no burrs, no exposed substrate" data-fr="Aspect : pas de marque de matrice, pas de dérive de teinte, pas de bavure, pas de sous-couche à nu" data-es="Aspecto: sin marcas de troquel, sin deriva de color, sin rebabas, sin sustrato a la vista" data-ja="外観：金型痕・色差・バリがなく、下地の露出がないこと" data-ko="외관: 금형 자국, 색차, 버가 없고 도금 하지가 드러나지 않을 것">外觀：帽蓋無壓痕、無色差、無毛邊，鍍層無露底</li>
+        <li data-zh="功能：連續開合 500 次後仍能單手開合、不卡死" data-en="Function: still opens and closes one-handed after 500 cycles, without jamming" data-fr="Fonction : ouverture et fermeture à une main après 500 cycles, sans blocage" data-es="Función: sigue abriendo y cerrando con una mano tras 500 ciclos, sin agarrotarse" data-ja="機能：500 回の開閉後も片手で操作でき、固着しないこと" data-ko="기능: 500회 개폐 후에도 한 손으로 여닫을 수 있고 고착이 없을 것">功能：連續開合 500 次後仍能單手開合、不卡死</li>
+      </ul>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="garment-buttons-fasteners-guide.html" data-zh="紐扣與扣件：全品類選型" data-en="Buttons and fasteners: the full selection" data-fr="Boutons et fermetures : la sélection complète" data-es="Botones y cierres: la selección completa" data-ja="ボタンと留め具：全体の選定" data-ko="단추와 여밈 장치: 전체 선택">紐扣與扣件：全品類選型</a></li>
+        <li><a href="metal-trims-nickel-release-guide.html" data-zh="金屬輔料鎳釋放：限值與對策" data-en="Nickel release from metal trims: limits and fixes" data-fr="Libération de nickel des pièces métalliques : limites" data-es="Liberación de níquel en piezas metálicas: límites" data-ja="金属部品のニッケル溶出：規制値と対策" data-ko="금속 부품 니켈 용출: 규제치와 대응">金屬輔料鎳釋放：限值與對策</a></li>
+        <li><a href="plastic-hardware-trims-guide.html" data-zh="塑料五金：材質與耐溫" data-en="Plastic hardware: materials and heat resistance" data-fr="Quincaillerie plastique : matières et tenue en température" data-es="Herrajes plásticos: materiales y temperatura" data-ja="プラスチック金具：素材と耐熱性" data-ko="플라스틱 금속 부품: 소재와 내열성">塑料五金：材質與耐溫</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="把面料樣與現用按扣寄來，我們先試打三片再定爪長？" data-en="Send the fabric swatch and your current snap and we will strike three trials before fixing prong length?" data-fr="Envoyez le tissu et votre pression actuelle : nous ferons trois essais avant de fixer la griffe ?" data-es="¿Envía la muestra de tejido y tu automático actual y hacemos tres pruebas antes de fijar la púa?" data-ja="生地見本と現行スナップをお送りいただければ、三回試打してから爪長を決めます。" data-ko="원단 샘플과 현재 사용 중인 스냅을 보내주시면 세 번 시타한 뒤 다리 길이를 정하겠습니다.">把面料樣與現用按扣寄來，我們先試打三片再定爪長？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取樣品與報價 →" data-en="Request samples and a quote →" data-fr="Demander échantillons et devis →" data-es="Solicitar muestras y presupuesto →" data-ja="試作とお見積りを依頼 →" data-ko="시료와 견적 요청 →">索取樣品與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>
