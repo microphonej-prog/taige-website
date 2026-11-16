@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="織嘜 QR 碼：提花能織出可掃的二維碼嗎 | TAGE" data-en="Woven QR Code Labels: Can Jacquard Weave a Scannable Code? | TAGE" data-fr="QR code tissé : un jacquard peut-il produire un code lisible ? | TAGE" data-es="Etiqueta tejida con QR: ¿puede un jacquard hacer un código legible? | TAGE" data-ja="織りネームの QR コード：ジャカードで読めるか | TAGE" data-ko="직조 QR 코드 라벨: 자카드로 판독 가능한 코드를 짤 수 있나 | TAGE">織嘜 QR 碼：提花能織出可掃的二維碼嗎 | TAGE</title>
+<meta name="description" data-zh="織嘜 QR 碼的解析度天花板：每公分 25–40 根經紗、模組 0.4–0.6 mm、靜區 4 個模組、洗後掃描成功率與 ISO/IEC 15415 驗收寫法。" data-en="Woven QR code labels: module size limits at 25–40 ends per cm, contrast pairing, quiet zones, post-wash scan testing and ISO/IEC 15415 symbol grading." data-fr="QR code tissé : limite de module à 25–40 fils/cm, contraste, zone de silence, test après lavage et notation ISO/IEC 15415." data-es="Etiqueta tejida con QR: límite de módulo a 25–40 hilos/cm, contraste, zona de silencio, prueba tras lavado y clasificación ISO/IEC 15415." data-ja="織りネームの QR コード。1 cm あたり 25〜40 本の経糸で決まるモジュール下限、配色、余白、洗濯後の読取試験と ISO/IEC 15415 の等級を整理します。" data-ko="직조 QR 코드 라벨. 1 cm당 경사 25~40올에서 결정되는 모듈 하한, 배색, 여백, 세탁 후 판독 시험과 ISO/IEC 15415 등급을 정리합니다."
+      content="織嘜 QR 碼的解析度天花板：每公分 25–40 根經紗、模組 0.4–0.6 mm、靜區 4 個模組、洗後掃描成功率與 ISO/IEC 15415 驗收寫法。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/woven-label-qr-code-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/woven-label-qr-code-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "織嘜 QR 碼：提花織機到底能織出多細的二維碼", "item": "https://taigetag.com/blog/woven-label-qr-code-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "織嘜 QR 碼：提花織機到底能織出多細的二維碼",
+   "url": "https://taigetag.com/blog/woven-label-qr-code-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/woven-label-qr-code-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="織嘜與吊牌" data-en="Labels &amp; Hang Tags" data-fr="Étiquettes" data-es="Etiquetas" data-ja="ネーム・下げ札" data-ko="라벨·행택">織嘜與吊牌</span></div>
+      <h1 data-zh="織嘜 QR 碼：提花織機到底能織出多細的二維碼" data-en="Woven QR Code Labels: What a Jacquard Loom Can Really Weave" data-fr="QR code tissé : ce qu&#x27;un métier jacquard peut réellement produire" data-es="Etiqueta tejida con QR: qué puede tejer de verdad un jacquard" data-ja="織りネームの QR コード：ジャカード織機が出せる限界" data-ko="직조 QR 코드 라벨: 자카드 직기가 실제로 낼 수 있는 한계">織嘜 QR 碼：提花織機到底能織出多細的二維碼</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月16日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 16, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 16 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 16 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月16日更新" data-ko="TAGE 패키징 · 2026년 11월 16일 업데이트">泰閣包裝 · 更新於 2026年11月16日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="織嘜 QR 碼（woven QR code label）是唯一會跟著成衣走完洗滌、轉售與回收全程的輔料，因此它是承載永久數位連結最自然的位置。但它同時也是最難做出可掃碼的位置：提花織機是一根紗一根紗織出圖像，解析度、對比與邊緣銳利度都受組織與紗線限制，而不是受印表機限制。這篇說明織嘜二維碼實際能裝多少資料、在哪些環節會失效，以及在訂 5,000 個之前該怎麼驗。" data-en="A woven QR code label is the only trims component that stays with the garment through washing, resale and recycling, which makes it the natural home for a persistent digital link. It is also the hardest place to make a scannable code: a jacquard loom builds the image one yarn at a time, so resolution, contrast and edge sharpness are bounded by the weave and the yarn, not by a print head. This guide covers how much data a woven 2D code can really hold, where it fails, and how to test it before you commit 5,000 labels." data-fr="Une étiquette tissée avec QR code est le seul accessoire qui accompagne le vêtement pendant les lavages, la revente et le recyclage : c&#x27;est donc l&#x27;endroit naturel pour un lien numérique permanent. C&#x27;est aussi l&#x27;endroit le plus difficile pour un code lisible, car un métier jacquard construit l&#x27;image fil par fil. Résolution, contraste et netteté des bords dépendent de l&#x27;armure et du fil, pas d&#x27;une tête d&#x27;impression. Ce guide couvre la capacité réelle d&#x27;un code 2D tissé, ses points de défaillance et la façon de le valider avant d&#x27;engager 5 000 étiquettes." data-es="Una etiqueta tejida con código QR es el único accesorio que acompaña a la prenda durante el lavado, la reventa y el reciclaje, y por eso es el lugar natural para un enlace digital permanente. También es el lugar más difícil para un código legible: un telar jacquard construye la imagen hilo a hilo, de modo que la resolución, el contraste y la nitidez de los bordes dependen del ligamento y del hilo, no de un cabezal de impresión. Esta guía cubre cuántos datos admite de verdad un código 2D tejido, dónde falla y cómo validarlo antes de pedir 5.000 etiquetas." data-ja="織りネームの QR コードは、洗濯・再販・再リサイクル過程まで衣料と一緒に残る唯一の副資材であり、恒久的なデジタルリンクを載せる場所として最も自然です。一方で最も読み取りにくい場所でもあります。ジャカード織機は糸一本ずつ画像を織るため、解像度・コントラスト・エッジの鮮明さは織組織と糸で決まり、印字ヘッドでは決まりません。本記事では、織り二次元コードに実際どれだけの情報が入るのか、どこで破綻するのか、5,000 枚の発注前にどう検証するのかを整理します。" data-ko="직조 QR 코드 라벨은 세탁, 재판매, 재활용 과정까지 의류와 함께 남는 유일한 부자재이므로 영구 디지털 링크를 담기에 가장 자연스러운 위치입니다. 동시에 판독이 가장 어려운 위치이기도 합니다. 자카드 직기는 실 한 올씩 이미지를 짜기 때문에 해상도, 대비, 경계 선명도가 프린트 헤드가 아니라 조직과 원사에 의해 결정됩니다. 이 글은 직조 2D 코드에 실제로 얼마나 많은 데이터가 들어가는지, 어디서 실패하는지, 5,000장을 발주하기 전에 어떻게 검증하는지를 다룹니다.">織嘜 QR 碼（woven QR code label）是唯一會跟著成衣走完洗滌、轉售與回收全程的輔料，因此它是承載永久數位連結最自然的位置。但它同時也是最難做出可掃碼的位置：提花織機是一根紗一根紗織出圖像，解析度、對比與邊緣銳利度都受組織與紗線限制，而不是受印表機限制。這篇說明織嘜二維碼實際能裝多少資料、在哪些環節會失效，以及在訂 5,000 個之前該怎麼驗。</p>
+
+      <h2 data-zh="一、提花織機實際能織出多細" data-en="1. What a Jacquard Loom Can Actually Resolve" data-fr="1. Ce qu&#x27;un métier jacquard peut réellement résoudre" data-es="1. Qué resolución real tiene un telar jacquard" data-ja="1. ジャカード織機が出せる実解像度" data-ko="1. 자카드 직기가 실제로 낼 수 있는 해상도">一、提花織機實際能織出多細</h2>
+
+      <p data-zh="成衣織嘜的密度通常落在每公分 25–40 根經紗（約 60–100 根／英寸），高密度緞面組織可以到 40 以上。一個二維碼的每個「模組」（黑白小方塊）至少要佔到 2×2 根經紗與 2 根緯紗，才不會被織點之間的斜紋吃掉邊界；換算下來，實務上可用的最小模組邊長約 0.4–0.6 mm，再小就只剩模糊的灰塊。下單時請直接把「模組邊長」寫進規格，不要只寫「高密度」。" data-en="Garment labels are normally woven at 25–40 warp ends per centimetre (about 60–100 per inch), and a dense satin weave can exceed 40. Every module of a 2D code has to occupy at least 2×2 warp ends and 2 weft picks, otherwise the diagonal interlacing eats its edges. That puts the practical floor for module size at roughly 0.4–0.6 mm; below that you get a grey blur. Write the module size into the label spec, not just the words high density." data-fr="Les étiquettes tissées sont généralement tissées à 25–40 fils de chaîne par centimètre (60–100 par pouce), un satin serré dépassant 40. Chaque module d&#x27;un code 2D doit occuper au moins 2×2 fils de chaîne et 2 duites, sinon le liage en diagonale ronge ses bords. La limite pratique du module se situe donc autour de 0,4–0,6 mm ; en dessous, on obtient une tache grise. Inscrivez la taille du module dans le cahier des charges, pas seulement les mots haute densité." data-es="Las etiquetas tejidas se fabrican normalmente a 25–40 hilos de urdimbre por centímetro (60–100 por pulgada), y un satén denso supera los 40. Cada módulo de un código 2D debe ocupar al menos 2×2 hilos de urdimbre y 2 pasadas de trama; si no, el ligamento diagonal se come los bordes. El límite práctico del módulo queda en 0,4–0,6 mm; por debajo solo se obtiene una mancha gris. Especifique el tamaño del módulo en la ficha técnica, no solo las palabras alta densidad." data-ja="衣料用の織りネームは通常 1 cm あたり 25〜40 本の経糸（1 インチ 60〜100 本）で、高密度の朱子組織なら 40 本を超えます。二次元コードの各モジュールは最低 2×2 本の経糸と緯糸 2 本を占めないと、斜文の交差で境界が削られます。そのため実用上のモジュール下限はおよそ 0.4〜0.6 mm で、それ以下は灰色の塊になります。仕様書には「高密度」ではなくモジュール寸法を数値で書いてください。" data-ko="의류용 직조 라벨은 보통 1 cm당 경사 25~40올(인치당 60~100올)이며, 고밀도 새틴 조직은 40올을 넘습니다. 2D 코드의 각 모듈은 최소 2×2올의 경사와 위사 2픽을 차지해야 그렇지 않으면 대각 교직이 경계를 먹어버립니다. 그래서 실용적인 모듈 하한은 약 0.4~0.6 mm이고 그 이하에서는 회색 덩어리가 됩니다. 사양서에는 &#x27;고밀도&#x27;라는 말 대신 모듈 치수를 숫자로 적으세요.">成衣織嘜的密度通常落在每公分 25–40 根經紗（約 60–100 根／英寸），高密度緞面組織可以到 40 以上。一個二維碼的每個「模組」（黑白小方塊）至少要佔到 2×2 根經紗與 2 根緯紗，才不會被織點之間的斜紋吃掉邊界；換算下來，實務上可用的最小模組邊長約 0.4–0.6 mm，再小就只剩模糊的灰塊。下單時請直接把「模組邊長」寫進規格，不要只寫「高密度」。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="碼型" data-en="Code type" data-fr="Type de code" data-es="Tipo de código" data-ja="コード種別" data-ko="코드 종류">碼型</th>
+            <th data-zh="模組數" data-en="Modules" data-fr="Modules" data-es="Módulos" data-ja="モジュール数" data-ko="모듈 수">模組數</th>
+            <th data-zh="0.5 mm 模組的邊長" data-en="Side at 0.5 mm module" data-fr="Côté à 0,5 mm" data-es="Lado con módulo de 0,5 mm" data-ja="0.5 mm モジュールの一辺" data-ko="0.5 mm 모듈 기준 한 변">0.5 mm 模組的邊長</th>
+            <th data-zh="織嘜可行性" data-en="Woven feasibility" data-fr="Faisabilité en tissé" data-es="Viabilidad en tejido" data-ja="織りでの実現性" data-ko="직조 구현성">織嘜可行性</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="QR 版本 1" data-en="QR version 1" data-fr="QR version 1" data-es="QR versión 1" data-ja="QR バージョン 1" data-ko="QR 버전 1">QR 版本 1</td>
+            <td data-zh="21×21" data-en="21×21" data-fr="21×21" data-es="21×21" data-ja="21×21" data-ko="21×21">21×21</td>
+            <td data-zh="約 10.5 mm" data-en="about 10.5 mm" data-fr="environ 10,5 mm" data-es="unos 10,5 mm" data-ja="約 10.5 mm" data-ko="약 10.5 mm">約 10.5 mm</td>
+            <td data-zh="可行（短碼、純數字或短網址）" data-en="workable for short codes" data-fr="possible pour un code court" data-es="viable para códigos cortos" data-ja="短いコードなら可" data-ko="짧은 코드는 가능">可行（短碼、純數字或短網址）</td>
+          </tr>
+          <tr>
+            <td data-zh="QR 版本 3" data-en="QR version 3" data-fr="QR version 3" data-es="QR versión 3" data-ja="QR バージョン 3" data-ko="QR 버전 3">QR 版本 3</td>
+            <td data-zh="29×29" data-en="29×29" data-fr="29×29" data-es="29×29" data-ja="29×29" data-ko="29×29">29×29</td>
+            <td data-zh="約 14.5 mm" data-en="about 14.5 mm" data-fr="environ 14,5 mm" data-es="unos 14,5 mm" data-ja="約 14.5 mm" data-ko="약 14.5 mm">約 14.5 mm</td>
+            <td data-zh="可行，需 40 mm 以上標面" data-en="workable on a 40 mm label" data-fr="possible sur 40 mm" data-es="viable en 40 mm" data-ja="40 mm 以上で可" data-ko="40 mm 이상 가능">可行，需 40 mm 以上標面</td>
+          </tr>
+          <tr>
+            <td data-zh="QR 版本 4（含網址）" data-en="QR version 4 with URL" data-fr="QR version 4 avec URL" data-es="QR versión 4 con URL" data-ja="QR バージョン 4（URL）" data-ko="QR 버전 4(URL)">QR 版本 4（含網址）</td>
+            <td data-zh="33×33" data-en="33×33" data-fr="33×33" data-es="33×33" data-ja="33×33" data-ko="33×33">33×33</td>
+            <td data-zh="約 16.5 mm" data-en="about 16.5 mm" data-fr="environ 16,5 mm" data-es="unos 16,5 mm" data-ja="約 16.5 mm" data-ko="약 16.5 mm">約 16.5 mm</td>
+            <td data-zh="勉強可行，須留靜區" data-en="marginal, quiet zone critical" data-fr="limite, zone de silence vitale" data-es="justo, zona de silencio crítica" data-ja="ぎりぎり可、余白必須" data-ko="간신히 가능, 여백 필수">勉強可行，須留靜區</td>
+          </tr>
+          <tr>
+            <td data-zh="Data Matrix 16×16" data-en="Data Matrix 16×16" data-fr="Data Matrix 16×16" data-es="Data Matrix 16×16" data-ja="Data Matrix 16×16" data-ko="Data Matrix 16×16">Data Matrix 16×16</td>
+            <td data-zh="16×16" data-en="16×16" data-fr="16×16" data-es="16×16" data-ja="16×16" data-ko="16×16">16×16</td>
+            <td data-zh="約 8 mm" data-en="about 8 mm" data-fr="environ 8 mm" data-es="unos 8 mm" data-ja="約 8 mm" data-ko="약 8 mm">約 8 mm</td>
+            <td data-zh="最適合小面積，容量小" data-en="best for small areas" data-fr="idéal pour petites zones" data-es="mejor para áreas pequeñas" data-ja="小面積に最適" data-ko="소면적에 최적">最適合小面積，容量小</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="二、只有兩色，沒有灰階" data-en="2. Two Colours and No Grey Scale" data-fr="2. Deux couleurs, pas de niveaux de gris" data-es="2. Dos colores y sin escala de grises" data-ja="2. 二色しかなく、グレースケールはない" data-ko="2. 두 가지 색만, 그레이스케일 없음">二、只有兩色，沒有灰階</h2>
+
+      <p data-zh="織嘜的圖像由經紗與緯紗的位置決定，本質上只有「這根紗在上面」與「這根紗在下面」兩種狀態，所以 QR 的深色模組必須由深色紗構成、淺色模組由淺色紗構成，中間沒有灰階可以補。這代表對比完全靠配色：黑白或深藍配白最穩，深紅配白在紅色光源下容易糊，米白配淺灰則幾乎一定失敗。還要看洗滌後的表現——棉質織嘜第一次水洗後收縮 3–5%，模組等比縮小通常還能讀，但毛邊與起絨會拉低對比，所以驗證必須在洗後做，不是只驗樣品。" data-en="A woven image is built from where warp and weft sit, so there are only two states: this yarn on top, or underneath. Dark modules must be dark yarn and light modules light yarn, with no grey scale to fall back on. Contrast is therefore entirely a colour decision: black on white, or navy on white, is the most reliable; dark red on white smears under red scanner light; ecru on light grey almost always fails. Washing matters too. Cotton labels shrink 3–5% on the first wash; modules shrink proportionally and usually still read, but fraying and fuzz cut contrast, so verification has to happen after washing, not on the flat sample." data-fr="Une image tissée résulte de la position des fils : ce fil dessus, ou dessous. Les modules sombres doivent être en fil sombre, les clairs en fil clair, sans niveaux de gris pour rattraper. Le contraste est donc un choix de couleur : noir sur blanc ou marine sur blanc est le plus fiable, rouge foncé sur blanc bave sous un scanner rouge, écru sur gris clair échoue presque toujours. Le lavage compte aussi : une étiquette coton se rétracte de 3 à 5 % au premier lavage ; les modules rétrécissent proportionnellement et restent souvent lisibles, mais l&#x27;effilochage et le duvet réduisent le contraste. La validation se fait donc après lavage, pas sur l&#x27;échantillon à plat." data-es="Una imagen tejida nace de la posición de los hilos: este hilo arriba o abajo. Los módulos oscuros deben ser hilo oscuro y los claros hilo claro, sin escala de grises que compense. El contraste es, por tanto, una decisión de color: negro sobre blanco o azul marino sobre blanco es lo más fiable; rojo oscuro sobre blanco se emborrona con luz roja del escáner; crudo sobre gris claro casi siempre falla. El lavado también cuenta: una etiqueta de algodón encoge 3–5% en el primer lavado; los módulos encogen en proporción y suelen seguir leyéndose, pero el deshilachado y la pelusa reducen el contraste. La validación se hace después del lavado, no sobre la muestra plana." data-ja="織り画像は経糸と緯糸のどちらが上にあるかで決まり、グレースケールの逃げはありません。濃いモジュールは濃い糸、淡いモジュールは淡い糸で織るしかありません。したがってコントラストは配色の問題です。白地に黒、白地に濃紺が最も安定し、白地に濃赤は赤色光源のスキャナで潰れ、生成りに淡いグレーはほぼ確実に失敗します。洗濯後の挙動も重要です。綿の織りネームは初回洗濯で 3〜5% 収縮し、モジュールも比例して縮むため多くは読めますが、毛羽立ちがコントラストを下げます。検証は平面サンプルではなく洗濯後に実施してください。" data-ko="직조 이미지는 경사와 위사가 위에 있느냐 아래에 있느냐로만 결정되므로 그레이스케일로 보정할 여지가 없습니다. 어두운 모듈은 어두운 실, 밝은 모듈은 밝은 실로 짜야 합니다. 즉 대비는 순전히 배색 문제입니다. 흰 바탕에 검정 또는 진남색이 가장 안정적이고, 흰 바탕에 진홍색은 붉은 광원 스캐너에서 뭉개지며, 아이보리 바탕에 연회색은 거의 실패합니다. 세탁 후 거동도 중요합니다. 면 직조 라벨은 첫 세탁에서 3~5% 수축하고 모듈도 비례해 줄어 대부분 판독되지만, 풀림과 보풀이 대비를 떨어뜨립니다. 검증은 평면 샘플이 아니라 세탁 후에 해야 합니다.">織嘜的圖像由經紗與緯紗的位置決定，本質上只有「這根紗在上面」與「這根紗在下面」兩種狀態，所以 QR 的深色模組必須由深色紗構成、淺色模組由淺色紗構成，中間沒有灰階可以補。這代表對比完全靠配色：黑白或深藍配白最穩，深紅配白在紅色光源下容易糊，米白配淺灰則幾乎一定失敗。還要看洗滌後的表現——棉質織嘜第一次水洗後收縮 3–5%，模組等比縮小通常還能讀，但毛邊與起絨會拉低對比，所以驗證必須在洗後做，不是只驗樣品。</p>
+
+      <h2 data-zh="三、織嘜 QR 最常失效的四個位置" data-en="3. Where Woven Codes Actually Fail" data-fr="3. Où les codes tissés échouent réellement" data-es="3. Dónde fallan de verdad los códigos tejidos" data-ja="3. 織りコードが実際に破綻する四つの箇所" data-ko="3. 직조 코드가 실제로 실패하는 네 지점">三、織嘜 QR 最常失效的四個位置</h2>
+
+      <ul>
+        <li data-zh="摺位：後領標常見對摺，碼被摺線切斷就永遠讀不到，必須避開摺線至少 3 mm" data-en="Fold line: a centre-back label is often folded; a code split by the fold never reads, so keep 3 mm clear of it" data-fr="Ligne de pliage : une étiquette dos est souvent pliée ; un code coupé par le pli ne se lit jamais, laissez 3 mm de dégagement" data-es="Línea de doblez: la etiqueta de cuello suele ir doblada; un código partido por el doblez nunca se lee, deje 3 mm libres" data-ja="折り位置：後ろ襟のネームは二つ折りが多く、折り線で切れたコードは読めません。折り線から 3 mm 以上離します" data-ko="접힘선: 뒤목 라벨은 이중 접힘이 많아 접힘선에 걸린 코드는 절대 판독되지 않습니다. 접힘선에서 최소 3 mm 띄우세요">摺位：後領標常見對摺，碼被摺線切斷就永遠讀不到，必須避開摺線至少 3 mm</li>
+        <li data-zh="靜區被吃掉：二維碼四周需要 4 個模組寬的空白，織嘜常為了塞品牌字把它織掉" data-en="Quiet zone lost: a 2D code needs four modules of clear space on every side, and labels often weave the brand name into it" data-fr="Zone de silence perdue : un code 2D exige quatre modules libres de chaque côté, or on y tisse souvent la marque" data-es="Zona de silencio perdida: un código 2D necesita cuatro módulos libres por lado, y a menudo se teje ahí la marca" data-ja="余白の消失：二次元コードは四方に 4 モジュールの空白が必要ですが、ブランド名を重ねて織ってしまう例が多いです" data-ko="여백 손실: 2D 코드는 사방 4모듈의 여백이 필요하지만 브랜드명을 그 위에 짜 넣는 경우가 많습니다">靜區被吃掉：二維碼四周需要 4 個模組寬的空白，織嘜常為了塞品牌字把它織掉</li>
+        <li data-zh="燙壓與雷射：織嘜背面貼合或整燙溫度過高，表層紗線壓扁後對比下降" data-en="Ironing and heat: fusing or pressing the back of the label flattens surface yarns and drops contrast" data-fr="Repassage et thermocollage : thermocoller le dos aplatit les fils de surface et fait chuter le contraste" data-es="Planchado y termofijado: fijar el reverso aplana los hilos superficiales y baja el contraste" data-ja="プレスと熱接着：裏面を接着すると表層の糸が潰れてコントラストが落ちます" data-ko="프레스와 열접착: 라벨 뒷면을 접착하면 표면사가 눌려 대비가 떨어집니다">燙壓與雷射：織嘜背面貼合或整燙溫度過高，表層紗線壓扁後對比下降</li>
+        <li data-zh="洗後起絨：高撚紗比低撚紗耐起絨，毛圈組織則容易把模組糊在一起" data-en="Fuzz after washing: high-twist yarn resists fuzz better than low twist, and terry structures blur adjacent modules" data-fr="Duvet après lavage : un fil retors résiste mieux qu&#x27;un fil simple, et une structure éponge brouille les modules" data-es="Pelusa tras el lavado: un hilo retorcido resiste mejor que uno simple, y la estructura de rizo emborrona módulos" data-ja="洗濯後の毛羽：強撚糸は甘撚糸より毛羽立ちに強く、パイル組織は隣接モジュールを潰します" data-ko="세탁 후 보풀: 강연사가 연사보다 보풀에 강하고, 파일 조직은 인접 모듈을 뭉개버립니다">洗後起絨：高撚紗比低撚紗耐起絨，毛圈組織則容易把模組糊在一起</li>
+      </ul>
+
+      <h2 data-zh="四、驗收：洗五次再掃三十次" data-en="4. How to Verify Before You Commit" data-fr="4. Comment valider avant de commander" data-es="4. Cómo validar antes de pedir" data-ja="4. 発注前の検証方法" data-ko="4. 발주 전 검증 방법">四、驗收：洗五次再掃三十次</h2>
+
+      <p data-zh="驗證不需要實驗室，但必須有程序：取 3 個量產條件下的樣品，先按 ISO 6330 家用洗滌程序在 40 °C 洗 5 次（相當於一般成衣壽命前段），晾乾後在日光、室內白光與手機閃光三種光源下各掃 10 次，記錄成功率。通過門檻建議寫成「30 次掃描 ≥ 28 次成功」。若要做嚴謹分級，可用 ISO/IEC 15415 的符號等級（A–F），織嘜一般能拿 B 或 C，D 以下不建議量產。另外要一起驗的是二維碼指向的網址：洗後碼還在、連結卻 404，等於白做。" data-en="Verification does not need a laboratory, but it does need a procedure. Take three samples from production conditions, wash them five times at 40 °C on an ISO 6330 domestic programme (roughly the first stretch of a garment&#x27;s life), dry them, then scan ten times each under daylight, indoor white light and phone flash, and record the hit rate. Write the pass mark as at least 28 of 30 scans. For a formal grade, use ISO/IEC 15415 symbol grading, where woven labels typically land at B or C; D or below should not go to mass production. Test the destination too: a code that survives washing but points at a 404 is worthless." data-fr="La validation ne demande pas de laboratoire, mais une procédure. Prenez trois échantillons en conditions de production, lavez-les cinq fois à 40 °C selon un programme domestique ISO 6330 (le début de vie d&#x27;un vêtement), séchez-les, puis scannez dix fois chacun sous lumière du jour, lumière blanche intérieure et flash de téléphone, en notant le taux de réussite. Le seuil recommandé : au moins 28 scans réussis sur 30. Pour une note formelle, utilisez la notation ISO/IEC 15415, où le tissé obtient généralement B ou C ; D ou moins ne doit pas partir en série. Testez aussi la destination : un code qui survit au lavage mais pointe vers une 404 ne sert à rien." data-es="Validar no requiere laboratorio, pero sí un procedimiento. Tome tres muestras en condiciones de producción, lávelas cinco veces a 40 °C con un programa doméstico ISO 6330 (el primer tramo de la vida de una prenda), séquelas y escanee diez veces cada una con luz de día, luz blanca interior y flash del móvil, registrando el porcentaje de acierto. El criterio recomendado: al menos 28 lecturas correctas de 30. Para una nota formal use la clasificación ISO/IEC 15415, donde el tejido suele obtener B o C; D o inferior no debe ir a producción. Compruebe también el destino: un código que sobrevive al lavado pero lleva a un 404 no sirve." data-ja="検証に実験室は不要ですが、手順は必要です。量産条件のサンプルを 3 点取り、ISO 6330 の家庭洗濯プログラムで 40 °C を 5 回（衣料寿命の前半に相当）、乾燥後に日光・室内白色光・スマホのフラッシュの 3 光源で各 10 回スキャンし、成功率を記録します。合格基準は「30 回中 28 回以上」と明記するのがおすすめです。正式な等級が必要なら ISO/IEC 15415 のシンボル等級を使い、織りでは B か C が一般的で、D 以下は量産に回さないでください。遷移先 URL の確認も忘れずに。洗濯に耐えてもリンクが 404 なら意味がありません。" data-ko="검증에 실험실은 필요 없지만 절차는 필요합니다. 양산 조건 샘플 3장을 ISO 6330 가정 세탁 프로그램으로 40 °C에서 5회(의류 수명의 초반에 해당) 세탁하고 건조한 뒤, 자연광·실내 백색광·휴대폰 플래시 세 광원에서 각 10회 스캔해 성공률을 기록합니다. 합격 기준은 &#x27;30회 중 28회 이상&#x27;으로 명시하는 것이 좋습니다. 정식 등급이 필요하면 ISO/IEC 15415 심볼 등급을 사용하세요. 직조는 보통 B 또는 C가 나오며 D 이하는 양산에 돌리지 마세요. 연결 URL도 함께 확인해야 합니다. 세탁은 견뎌도 링크가 404면 무의미합니다.">驗證不需要實驗室，但必須有程序：取 3 個量產條件下的樣品，先按 ISO 6330 家用洗滌程序在 40 °C 洗 5 次（相當於一般成衣壽命前段），晾乾後在日光、室內白光與手機閃光三種光源下各掃 10 次，記錄成功率。通過門檻建議寫成「30 次掃描 ≥ 28 次成功」。若要做嚴謹分級，可用 ISO/IEC 15415 的符號等級（A–F），織嘜一般能拿 B 或 C，D 以下不建議量產。另外要一起驗的是二維碼指向的網址：洗後碼還在、連結卻 404，等於白做。</p>
+
+      <h2 data-zh="五、織嘜碼、洗標碼、吊牌碼怎麼分工" data-en="5. Woven Code, Printed Care Label or Hang Tag" data-fr="5. Code tissé, étiquette d&#x27;entretien ou étiquette volante" data-es="5. Código tejido, etiqueta de cuidado o colgante" data-ja="5. 織りコード・洗濯表示・下げ札の使い分け" data-ko="5. 직조 코드, 세탁 라벨, 행택의 역할 분담">五、織嘜碼、洗標碼、吊牌碼怎麼分工</h2>
+
+      <p data-zh="三種位置的壽命完全不同：吊牌在第一次穿著前就被剪掉，洗標跟著衣服但不耐磨，織嘜從出廠到回收都在。所以「這個碼要活多久」是唯一的決策問題。做會員註冊、活動導流的碼，放吊牌最便宜、改版也快；做產品履歷、數位產品護照（歐盟 ESPR 規則 (EU) 2024/1781 下的 DPP 方向）這類需要長期指向的碼，應該織進嘜頭，並確保網址至少五年不變。洗標介於兩者之間，適合放較長的網址或法規要求的資訊。日本市場另有一層：家庭用品品質表示法要求組成、取扱表示與原産国並列，織嘜編碼若同時承担品質表示，務必確認洗後仍可辨識。" data-en="The three positions have completely different lifespans: a hang tag is cut off before first wear, a care label follows the garment but wears out, and a woven label is there from factory to recycling. So the only real question is how long the code must live. For membership sign-ups and campaign traffic, print it on the hang tag: cheapest and easiest to reprint. For product passports and the digital product passport direction under the EU ESPR, Regulation (EU) 2024/1781, weave it into the label and keep the URL stable for at least five years. Care labels sit in between and are the better home for long URLs or mandatory regulatory text." data-fr="Les trois emplacements n&#x27;ont pas la même durée de vie : l&#x27;étiquette volante est coupée avant la première utilisation, l&#x27;étiquette d&#x27;entretien suit le vêtement mais s&#x27;use, l&#x27;étiquette tissée va de l&#x27;usine au recyclage. La seule vraie question est donc la durée de vie exigée du code. Pour un programme de fidélité ou une campagne, imprimez-le sur l&#x27;étiquette volante : moins cher et plus facile à rééditer. Pour un passeport produit, dans la direction du passeport numérique européen prévu par le règlement (UE) 2024/1781 (ESPR), tissez-le dans l&#x27;étiquette et gardez l&#x27;URL stable au moins cinq ans. L&#x27;étiquette d&#x27;entretien se situe entre les deux et accueille mieux les URL longues ou les mentions obligatoires." data-es="Las tres posiciones tienen vidas muy distintas: el colgante se corta antes del primer uso, la etiqueta de cuidado acompaña la prenda pero se desgasta, y la etiqueta tejida va de fábrica al reciclaje. La única pregunta real es cuánto debe durar el código. Para registros y campañas, imprímalo en el colgante: es lo más barato y fácil de reeditár. Para un pasaporte de producto, en la línea del pasaporte digital del Reglamento (UE) 2024/1781 (ESPR), téjalo en la etiqueta y mantenga la URL estable al menos cinco años. La etiqueta de cuidado queda en medio y admite mejor URL largas o la información obligatoria." data-ja="三つの位置は寿命がまったく違います。下げ札は初回着用前に切られ、洗濯表示は衣料に残るが摩耗し、織りネームは工場から再生素まで残ります。したがって「このコードを何年生かすか」が唯一の判断軸です。会員登録やキャンペーン用なら下げ札が最も安く、改版も簡単です。製品履歴や、EU の ESPR（規則 (EU) 2024/1781）が示すデジタル製品パスポートを狙うなら、織りネームに織り込み、URL を最低 5 年維持してください。洗濯表示は中間で、長い URL や法定表示に向きます。日本では家庭用品品質表示法により組成・取扱表示・原産国の表示が求められるため、織りネームに品質表示を兼ねさせる場合は洗濯後も判読できることが必須です。" data-ko="세 위치의 수명은 전혀 다릅니다. 행택은 첫 착용 전에 잘리고, 세탁 라벨은 의류에 남지만 마모되며, 직조 라벨은 공장에서 재활용까지 남습니다. 그래서 &#x27;이 코드가 얼마나 오래 살아야 하는가&#x27;가 유일한 판단 기준입니다. 회원 가입이나 캠페인 유입용이라면 행택에 인쇄하는 것이 가장 저렴하고 수정도 쉽습니다. 제품 이력이나 EU ESPR(규정 (EU) 2024/1781)이 지향하는 디지털 제품 여권용이라면 직조 라벨에 짜 넣고 URL을 최소 5년 유지하세요. 세탁 라벨은 중간에 위치하며 긴 URL이나 법정 표시에 적합합니다. 한국은 품질경영 및 공산품 안전관리법에 따라 혼용률과 원산지 등 품질 표시를 라벨에 기재해야 하므로, 직조 라벨에 코드를 함께 넣을 때는 표시 항목을 가리지 않고 30 cm 거리에서도 판독되는지 확인해야 합니다.">三種位置的壽命完全不同：吊牌在第一次穿著前就被剪掉，洗標跟著衣服但不耐磨，織嘜從出廠到回收都在。所以「這個碼要活多久」是唯一的決策問題。做會員註冊、活動導流的碼，放吊牌最便宜、改版也快；做產品履歷、數位產品護照（歐盟 ESPR 規則 (EU) 2024/1781 下的 DPP 方向）這類需要長期指向的碼，應該織進嘜頭，並確保網址至少五年不變。洗標介於兩者之間，適合放較長的網址或法規要求的資訊。日本市場另有一層：家庭用品品質表示法要求組成、取扱表示與原産国並列，織嘜編碼若同時承担品質表示，務必確認洗後仍可辨識。</p>
+
+      <div class="callout" data-zh="給織廠的最小規格：二維碼版本與模組尺寸（例：QR v3、模組 0.5 mm）、配色（深紗／淺紗各一）、靜區 4 個模組、離摺線 ≥ 3 mm、洗後掃描成功率 ≥ 93%（28/30）、以及連結網址與其有效期限。把這六項寫進採購單，比事後改模省事得多。" data-en="The minimum spec to hand a weaver: code version and module size (for example QR v3 at 0.5 mm), colour pair (one dark yarn, one light yarn), four-module quiet zone, at least 3 mm clear of any fold, a post-wash scan success rate of 93% or better (28 of 30), and the destination URL with its expiry date. Putting those six lines in the purchase order is far cheaper than remaking the loom programme." data-fr="Le cahier des charges minimal à transmettre au tisseur : version du code et taille du module (par exemple QR v3 à 0,5 mm), couple de couleurs (un fil foncé, un fil clair), zone de silence de quatre modules, au moins 3 mm hors pli, taux de lecture après lavage de 93 % ou plus (28 sur 30), et l&#x27;URL de destination avec sa date d&#x27;expiration. Ces six lignes dans le bon de commande coûtent bien moins qu&#x27;une reprise du programme de métier." data-es="La especificación mínima para el tejedor: versión del código y tamaño de módulo (por ejemplo QR v3 a 0,5 mm), par de colores (un hilo oscuro y uno claro), zona de silencio de cuatro módulos, al menos 3 mm libre de cualquier doblez, tasa de lectura tras lavado del 93% o más (28 de 30) y la URL de destino con su fecha de caducidad. Estas seis líneas en la orden de compra cuestan mucho menos que rehacer el programa del telar." data-ja="織り工場に渡す最小仕様は六項目です。コードのバージョンとモジュール寸法（例：QR v3、0.5 mm）、配色（濃糸と淡糸を各一色）、四方 4 モジュールの余白、折り線から 3 mm 以上、洗濯後の読取成功率 93% 以上（30 回中 28 回）、遷移先 URL と有効期限。この六行を発注書に入れるほうが、後から織りプログラムを直すよりはるかに安く済みます。" data-ko="직조 공장에 전달할 최소 사양은 여섯 항목입니다. 코드 버전과 모듈 치수(예: QR v3, 0.5 mm), 배색(진한 실과 밝은 실 각 하나), 사방 4모듈 여백, 접힘선에서 3 mm 이상 이격, 세탁 후 판독 성공률 93% 이상(30회 중 28회), 연결 URL과 유효 기간. 이 여섯 줄을 발주서에 넣는 편이 나중에 직기 프로그램을 다시 짜는 것보다 훨씬 저렴합니다.">給織廠的最小規格：二維碼版本與模組尺寸（例：QR v3、模組 0.5 mm）、配色（深紗／淺紗各一）、靜區 4 個模組、離摺線 ≥ 3 mm、洗後掃描成功率 ≥ 93%（28/30）、以及連結網址與其有效期限。把這六項寫進採購單，比事後改模省事得多。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="hang-tag-qr-code-guide.html" data-zh="吊牌 QR 碼：尺寸與印刷" data-en="QR codes on hang tags: size and printing" data-fr="QR codes sur étiquettes volantes" data-es="Códigos QR en colgantes" data-ja="下げ札の QR コード：サイズと印刷" data-ko="행택 QR 코드: 크기와 인쇄">吊牌 QR 碼：尺寸與印刷</a></li>
+        <li><a href="apparel-label-barcode-printing-guide.html" data-zh="服裝標籤條碼印刷指南" data-en="Apparel label barcode printing" data-fr="Impression de codes-barres sur étiquettes" data-es="Impresión de códigos de barras en etiquetas" data-ja="衣料ラベルのバーコード印刷" data-ko="의류 라벨 바코드 인쇄">服裝標籤條碼印刷指南</a></li>
+        <li><a href="woven-label-density-guide.html" data-zh="織嘜密度：經緯紗與手感" data-en="Woven label density: ends, picks and hand feel" data-fr="Densité d&#x27;une étiquette tissée" data-es="Densidad de etiqueta tejida" data-ja="織りネームの密度：経糸・緯糸" data-ko="직조 라벨 밀도: 경사·위사">織嘜密度：經緯紗與手感</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="要先把碼織出來測一輪嗎？把網址與標面尺寸給我們，我們回一份含模組尺寸的規格與洗後對照片。" data-en="Want to weave a test run first? Send us the URL and label dimensions and we will return a module-level spec with post-wash photos." data-fr="Un essai de tissage d&#x27;abord ? Envoyez l&#x27;URL et les dimensions, nous renvoyons un cahier des charges au module près avec photos après lavage." data-es="¿Quiere un tejido de prueba primero? Envíe la URL y las medidas y devolvemos una especificación al módulo con fotos tras lavado." data-ja="まず試織で確認しませんか。URL とラベル寸法をお送りいただければ、モジュール単位の仕様と洗濯後の写真をお返しします。" data-ko="먼저 시험 직조로 확인하시겠습니까? URL과 라벨 치수를 보내주시면 모듈 단위 사양과 세탁 후 사진을 회신합니다.">要先把碼織出來測一輪嗎？把網址與標面尺寸給我們，我們回一份含模組尺寸的規格與洗後對照片。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取織嘜 QR 規格與報價 →" data-en="Request a woven QR spec and quote →" data-fr="Demander un cahier des charges et un devis →" data-es="Solicitar especificación y presupuesto →" data-ja="織り QR の仕様とお見積り →" data-ko="직조 QR 사양과 견적 요청 →">索取織嘜 QR 規格與報價 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>
