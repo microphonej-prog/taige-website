@@ -1,0 +1,233 @@
+# -*- coding: utf-8 -*-
+"""2026-11-17 20:00 文章 A：吊牌背面印刷（hang tag back printing，英文主稿 + 五语翻译）"""
+
+
+def d(zh, en, fr, es, ja, ko):
+    return {"zh": zh, "en": en, "fr": fr, "es": es, "ja": ja, "ko": ko}
+
+
+A1 = [
+    ("p", d(
+        "吊牌有兩面，多數品牌只設計了一面。吊牌背面才是衣服上真正裝得下條碼、價格欄、原產國聲明與歐盟責任方地址的地方——這些內容洗水標放不下，零售商與海關卻一定要看到。背面排對了，這張吊牌整季安靜地完成工作；排錯了，先來的不是客訴，而是品牌開的扣款單。本文把背面該印什麼、每個市場的法定差異、每個元素要留多少毫米，逐項講清楚。",
+        "A hang tag has two sides, but most brands only design one. The back of a hang tag is where a garment carries what a care label cannot fit: an EAN-13 barcode for the retailer's till, a price field for markdowns, a country-of-origin statement for customs, and an address for the economic operator responsible in the European Union. Get the back right and the tag works silently for the whole season. Get it wrong and the first thing that arrives is not a complaint but a chargeback from the brand.",
+        "Une étiquette de vêtement a deux faces, mais la plupart des marques n'en dessinent qu'une. C'est au dos que se placent ce que l'étiquette d'entretien ne peut pas contenir : le code-barres EAN-13 pour la caisse, une zone de prix pour les démarques, la mention d'origine pour la douane et l'adresse de l'opérateur économique responsable dans l'Union. Un dos bien composé travaille en silence toute la saison ; un dos mal composé n'apporte pas une réclamation mais une note de débit de la marque.",
+        "Una etiqueta colgante tiene dos caras, pero la mayoría de las marcas solo diseña una. El reverso es donde la prenda lleva lo que la etiqueta de cuidado no admite: el código de barras EAN-13 para el punto de venta, una zona de precio para los rebajes, la declaración de origen para la aduana y la dirección del operador económico responsable en la Unión. Un reverso bien compuesto trabaja en silencio toda la temporada; uno mal compuesto no trae una reclamación, trae un cargo de la marca.",
+        "下げ札には表と裏がありますが、多くのブランドは表しか設計していません。洗濯表示ラベルに入りきらない情報——小売のレジ用 EAN-13 バーコード、値下げ用の価格欄、通関用の原産国表示、EU における責任事業者の住所——は、実は裏面にしか載せられません。裏面を正しく組めば、下げ札は一季節ずっと静かに仕事をします。組み違えると、最初に届くのはクレームではなくブランドからの請求減額です。",
+        "행택은 양면이지만 대부분의 브랜드는 앞면만 디자인합니다. 세탁 라벨에 담을 수 없는 것 — 매장 계산대용 EAN-13 바코드, 할인용 가격란, 통관용 원산지 표시, EU 내 책임 경제운영자 주소 — 은 사실상 행택 뒷면에만 실을 수 있습니다. 뒷면을 제대로 짜면 행택은 한 시즌 내내 조용히 제 역할을 합니다. 잘못 짜면 가장 먼저 오는 것은 클레임이 아니라 브랜드의 차감 청구서입니다.",
+    )),
+
+    ("h2", d(
+        "一、背面是法定表面，不是剩下的空白",
+        "1. The Back Is a Legal Surface, Not Leftover Space",
+        "1. Le dos est une surface légale, pas un espace résiduel",
+        "1. El reverso es una superficie legal, no un espacio sobrante",
+        "1. 裏面は法定の面であり、余白ではない",
+        "1. 뒷면은 법정 면이지 남는 여백이 아닙니다",
+    )),
+    ("p", d(
+        "吊牌正面賣的是品牌，背面決定這件衣服能不能賣。讀背面的是三方，而且沒有三方是你的顧客：收銀機讀條碼、海關讀原產國、市場監管讀責任方與纖維成分。所以專業的吊牌排版，背面先排、正面後排——正面的插畫可以為背面的法定資訊讓位，反過來不行。實務上可以把背面內容分三層：法定必印（成分、原產國、責任方、進口商）、通路必印（條碼、價格欄、尺碼）、品牌自選（QR 碼、保養提示、社群帳號）。三層的優先級是固定的，自選內容永遠先被犧牲。",
+        "The front sells the brand; the back decides whether the garment can be sold at all. Three parties read the back, and none of them is your customer: the till reads the barcode, customs reads the origin, market surveillance reads the responsible person and the fibre composition. That is why a professional hang tag is laid out back first. The artwork on the front can give way to legal text on the back — never the other way round. In practice the back splits into three layers: legally required (composition, origin, responsible person, importer), retail-required (barcode, price field, size) and brand-optional (QR code, care hints, social handle). The priority order is fixed; optional content is always the first to go.",
+        "Le recto vend la marque ; le dos décide si le vêtement peut être vendu. Trois acteurs lisent le dos, et aucun n'est votre client : la caisse lit le code-barres, la douane lit l'origine, la surveillance du marché lit le responsable et la composition. C'est pourquoi une étiquette professionnelle se compose par le dos. Le visuel du recto peut céder la place aux mentions obligatoires du dos — jamais l'inverse. En pratique, le dos se divise en trois couches : obligations légales (composition, origine, responsable, importateur), exigences du distributeur (code-barres, zone de prix, taille) et contenus facultatifs (QR code, conseils d'entretien, compte social). L'ordre de priorité est fixe : le facultatif saute en premier.",
+        "El anverso vende la marca; el reverso decide si la prenda se puede vender. Tres actores leen el reverso y ninguno es su cliente: el punto de venta lee el código de barras, la aduana lee el origen, la vigilancia de mercado lee el responsable y la composición. Por eso una etiqueta profesional se maqueta primero por el reverso. El arte del anverso puede ceder ante la información obligatoria del reverso, nunca al contrario. En la práctica el reverso se divide en tres capas: obligatorio legal (composición, origen, responsable, importador), exigido por el canal (código de barras, zona de precio, talla) y opcional de marca (código QR, consejos de cuidado, cuenta social). El orden de prioridad es fijo: lo opcional se sacrifica primero.",
+        "表はブランドを売り、裏はその服を売ってよいかを決めます。裏を読むのは三者で、いずれもお客様ではありません。レジはバーコードを、税関は原産国を、市場監視当局は責任事業者と繊維組成を読みます。だからプロの下げ札は裏面から組みます。表の図案が裏の法定表示に場所を譲ることはあっても、その逆はありません。実務では裏面を三層に分けます。法定必須（組成・原産国・責任事業者・輸入者）、流通必須（バーコード・価格欄・サイズ）、ブランド任意（QR コード・取扱いのヒント・SNS アカウント）。優先順位は固定で、任意項目が最初に落ちます。",
+        "앞면은 브랜드를 팔고, 뒷면은 그 옷을 팔 수 있는지를 결정합니다. 뒷면을 읽는 주체는 셋이며 어느 쪽도 고객이 아닙니다. 계산대는 바코드를, 세관은 원산지를, 시장 감독 당국은 책임 경제운영자와 섬유 혼용률을 읽습니다. 그래서 제대로 된 행택은 뒷면부터 짭니다. 앞면 그래픽이 뒷면의 법정 표시에 자리를 내줄 수는 있어도 그 반대는 없습니다. 실무에서 뒷면은 세 층으로 나뉩니다. 법정 필수(혼용률·원산지·책임자·수입자), 유통 필수(바코드·가격란·사이즈), 브랜드 선택(QR 코드·관리 안내·SNS 계정). 우선순위는 고정이며 선택 항목이 가장 먼저 빠집니다.",
+    )),
+
+    ("h2", d(
+        "二、逐市場：背面必須出現什麼",
+        "2. Market by Market: What Must Appear on the Back",
+        "2. Marché par marché : ce qui doit figurer au dos",
+        "2. Mercado por mercado: qué debe figurar al dorso",
+        "2. 市場別：裏面に必ず入れる情報",
+        "2. 시장별: 뒷면에 반드시 들어가야 하는 정보",
+    )),
+    ("p", d(
+        "下表是我們為客戶排稿時使用的對照表。同一個品牌賣到五個市場，往往不是五套吊牌，而是一張背面分區印刷的吊牌加上一張市場專用貼紙；分界點在於法定文字能不能共存於同一區域。若某市場要求以当地語言完整表述，就必須獨立一版，不能靠貼紙遮蓋（貼紙在洗滌、試穿與運輸中會掉）。",
+        "The table below is the one we use when laying out a client's back side. A brand selling into five markets usually does not need five tags: one back side with zoned printing plus a market-specific sticker covers most cases. The dividing line is whether the legal wording can coexist in the same zone. Where a market requires full wording in its own language, that market needs its own version — a sticker is not a substitute, because stickers come off in washing, fitting and transit.",
+        "Le tableau ci-dessous est celui que nous utilisons pour composer un dos. Une marque vendue sur cinq marchés n'a généralement pas besoin de cinq étiquettes : un dos en zones plus un autocollant propre au marché suffit le plus souvent. La ligne de partage est la suivante : les mentions peuvent-elles cohabiter dans la même zone ? Si un marché exige une formulation complète dans sa langue, il lui faut sa propre version — un autocollant ne remplace pas, car il se décolle au lavage, à l'essayage et au transport.",
+        "La tabla siguiente es la que usamos al componer un reverso. Una marca que vende en cinco mercados no suele necesitar cinco etiquetas: un reverso por zonas más una pegatina específica del mercado resuelve la mayoría de los casos. La frontera es si los textos legales pueden convivir en la misma zona. Si un mercado exige la formulación completa en su idioma, ese mercado necesita su propia versión: una pegatina no sustituye, porque se despega en el lavado, la prueba y el transporte.",
+        "下表は、当社が裏面を組むときに使う対照表です。5 市場で売るブランドでも、下げ札を 5 種類そろえる必要は通常ありません。裏面を区分けして印刷し、市場別のシールを足せば足りる場合がほとんどです。分かれ目は、法定表示が同一区画に共存できるかどうか。ある市場がその言語での完全な表示を求めるなら、その市場専用の版が必要です。シールでは代替できません。洗濯・試着・輸送で剥がれるからです。",
+        "아래 표는 저희가 뒷면을 짤 때 쓰는 대조표입니다. 다섯 개 시장에 파는 브랜드라고 해서 행택을 다섯 종 만들 필요는 없습니다. 뒷면을 구역으로 나눠 인쇄하고 시장별 스티커를 더하면 대부분 해결됩니다. 기준선은 법정 문구가 같은 구역에 함께 들어갈 수 있느냐입니다. 특정 시장이 자국어로 완전한 표시를 요구하면 그 시장은 별도 판이 필요합니다. 스티커로 대체할 수 없습니다. 세탁·착용·운송에서 떨어지기 때문입니다.",
+    )),
+    ("table", (
+        [
+            d("市場", "Market", "Marché", "Mercado", "市場", "시장"),
+            d("背面必須出現", "Required on the back", "Obligatoire au dos", "Obligatorio al dorso", "裏面の必須項目", "뒷면 필수 항목"),
+            d("依據", "Source", "Base légale", "Base legal", "根拠", "근거"),
+        ],
+        [
+            [
+                d("歐盟", "European Union", "Union européenne", "Unión Europea", "EU", "EU"),
+                d("纖維成分；原產國（或標明產地見於他處）；歐盟責任方名稱與地址", "Fibre composition; country of origin (or a reference to where it is stated); name and address of the EU responsible person",
+                  "Composition des fibres ; pays d'origine (ou renvoi à l'endroit où il figure) ; nom et adresse du responsable dans l'UE",
+                  "Composición de fibras; país de origen (o referencia a dónde consta); nombre y dirección del responsable en la UE",
+                  "繊維組成、原産国（他箇所に表示がある旨の記載でも可）、EU 責任事業者の名称と住所",
+                  "섬유 혼용률, 원산지(다른 곳에 표시되어 있다는 안내로 대체 가능), EU 책임자 명칭과 주소"),
+                d("Règlement (UE) no 1007/2011；GPSR (UE) 2023/988", "Regulation (EU) No 1007/2011; GPSR (EU) 2023/988", "Règlement (UE) no 1007/2011 ; GPSR (UE) 2023/988", "Reglamento (UE) no 1007/2011; GPSR (UE) 2023/988", "規則 (EU) 1007/2011、GPSR (EU) 2023/988", "규정 (EU) 1007/2011, GPSR (EU) 2023/988"),
+            ],
+            [
+                d("法國", "France", "France", "Francia", "フランス", "프랑스"),
+                d("法定資訊須以法語表述；分類投放標識（如 Triman）依品類適用", "Legal information in French; sorting information such as Triman where the category requires it",
+                  "Mentions obligatoires en français ; signalétique de tri (Triman) selon la catégorie",
+                  "Información obligatoria en francés; señalización de clasificación (Triman) según la categoría",
+                  "法定表示はフランス語。分別表示（Triman など）は品目に応じて必要",
+                  "법정 정보는 프랑스어. 분리배출 표시(Triman 등)는 품목에 따라 적용"),
+                d("Code de la consommation；loi AGEC", "Code de la consommation; loi AGEC", "Code de la consommation ; loi AGEC", "Code de la consommation; loi AGEC (Francia)", "フランス消費法典、AGEC 法", "프랑스 소비자법전, AGEC법"),
+            ],
+            [
+                d("西班牙", "Spain", "Espagne", "España", "スペイン", "스페인"),
+                d("法定資訊以西班牙語表述；吊牌兼作價籤時須標單位價格", "Legal information in Spanish; where the tag doubles as the price ticket it must show the unit price",
+                  "Mentions obligatoires en espagnol ; si l'étiquette sert de prix, le prix à l'unité est requis",
+                  "Información obligatoria en español; si la etiqueta hace de precio, se exige el precio por unidad",
+                  "法定表示はスペイン語。下げ札が値札を兼ねる場合は単位価格の表示が必要",
+                  "법정 정보는 스페인어. 행택이 가격표를 겸하면 단위 가격 표시 필요"),
+                d("Reglamento (UE) no 1007/2011；Real Decreto Legislativo 1/2007", "Regulation (EU) No 1007/2011; Real Decreto Legislativo 1/2007", "Règlement (UE) no 1007/2011 ; Real Decreto Legislativo 1/2007", "Reglamento (UE) no 1007/2011; Real Decreto Legislativo 1/2007", "規則 (EU) 1007/2011、Real Decreto Legislativo 1/2007", "규정 (EU) 1007/2011, Real Decreto Legislativo 1/2007"),
+            ],
+            [
+                d("日本", "Japan", "Japon", "Japón", "日本", "일본"),
+                d("混用率、取扱表示（洗濯表示）、事業者名、原産国；以日語標示", "Fibre mix ratio, care symbols, business operator name, country of origin — all in Japanese",
+                  "Taux de mélange, symboles d'entretien, nom de l'opérateur, pays d'origine — en japonais",
+                  "Porcentaje de mezcla, símbolos de cuidado, nombre del operador, país de origen — en japonés",
+                  "混用率、取扱表示（洗濯表示）、事業者名、原産国。日本語表記",
+                  "혼용률, 취급 표시(세탁 표시), 사업자명, 원산지. 일본어 표기"),
+                d("家庭用品品質表示法；JIS L 0001", "家庭用品品質表示法 (Household Goods Quality Labeling Act); JIS L 0001", "家庭用品品質表示法 (loi japonaise sur les mentions obligatoires) ; JIS L 0001", "家庭用品品質表示法 (ley japonesa de etiquetado); JIS L 0001", "家庭用品品質表示法、JIS L 0001", "家庭用品品質表示法(일본 가정용품 품질표시법), JIS L 0001"),
+            ],
+            [
+                d("韓國", "Korea", "Corée", "Corea", "韓国", "한국"),
+                d("原產地標示、混用率、取扱表示、進口商；以韓語標示", "Country of origin marking, fibre mix, care symbols, importer — in Korean",
+                  "Marquage de l'origine, composition, symboles d'entretien, importateur — en coréen",
+                  "Marcado de origen, composición, símbolos de cuidado, importador — en coreano",
+                  "原産地表示、混用率、取扱表示、輸入者。韓国語表記",
+                  "원산지 표시, 혼용률, 취급 표시, 수입자. 한국어 표기"),
+                d("大韓民國對外貿易法（原產地標示）；KS K 0021", "Foreign Trade Act (origin marking); KS K 0021", "Foreign Trade Act (marquage de l'origine) ; KS K 0021", "Ley de Comercio Exterior (marcado de origen); KS K 0021", "対外貿易法（原産地表示）、KS K 0021", "대외무역법(원산지 표시), KS K 0021"),
+            ],
+            [
+                d("美國", "United States", "États-Unis", "Estados Unidos", "米国", "미국"),
+                d("纖維含量、原產國、進口商或製造商身分；紡織品須附洗護指示", "Fibre content, country of origin, importer or manufacturer identity; care instructions for textile products",
+                  "Teneur en fibres, pays d'origine, identité de l'importateur ou du fabricant ; instructions d'entretien pour les textiles",
+                  "Contenido de fibras, país de origen, identidad del importador o fabricante; instrucciones de cuidado para textiles",
+                  "繊維含有率、原産国、輸入者または製造者の表示。繊維製品は取扱い指示が必要",
+                  "섬유 함유율, 원산지, 수입자 또는 제조자 표시. 섬유 제품은 취급 지침 필요"),
+                d("16 CFR Part 303", "16 CFR Part 303", "16 CFR Part 303", "16 CFR Part 303", "16 CFR Part 303", "16 CFR Part 303"),
+            ],
+        ],
+    )),
+
+    ("h2", d(
+        "三、每個元素要留多少毫米",
+        "3. How Many Millimetres Each Element Needs",
+        "3. Combien de millimètres pour chaque élément",
+        "3. Cuántos milímetros necesita cada elemento",
+        "3. 各要素に必要なミリ数",
+        "3. 각 요소에 필요한 밀리미터",
+    )),
+    ("p", d(
+        "背面排版失敗，八成不是設計問題而是尺寸問題：條碼留白被吃掉、法文字高太小掃不出、價格欄被壓在出血線上。下面這組是我們常用的最小值，低於它就要在打樣階段實測掃描，而不是等到門店退貨。吊牌常用尺寸是 50 × 90 mm 與 45 × 70 mm，前者剛好排得下條碼加三行法定文字，後者只放得下條碼加兩行。",
+        "When a back side fails, the cause is usually dimension, not design: the barcode quiet zone gets eaten, French legal text drops below the cap height that scans read, the price field lands on the bleed. The numbers below are our working minimums. Below them, test-scan at proof stage instead of waiting for a store rejection. The two tag sizes we produce most are 50 × 90 mm, which fits a barcode plus three lines of legal text, and 45 × 70 mm, which fits a barcode plus two.",
+        "Quand un dos échoue, la cause est presque toujours dimensionnelle : la zone de silence du code-barres est rognée, les mentions légales passent sous la hauteur de capitale lisible, la zone de prix tombe dans le fond perdu. Les valeurs ci-dessous sont nos minima de travail. En dessous, faites scanner l'épreuve au lieu d'attendre un refus en magasin. Les deux formats que nous produisons le plus sont 50 × 90 mm (code-barres plus trois lignes de mentions) et 45 × 70 mm (code-barres plus deux lignes).",
+        "Cuando un reverso falla, casi siempre es por dimensiones y no por diseño: se come la zona de silencio del código de barras, el texto legal baja de la altura de mayúscula legible, la zona de precio cae en el sangrado. Los valores siguientes son nuestros mínimos de trabajo. Por debajo, conviene escanear la prueba en lugar de esperar un rechazo en tienda. Los dos formatos que más producimos son 50 × 90 mm (código de barras más tres líneas legales) y 45 × 70 mm (código de barras más dos líneas).",
+        "裏面の組版が破綻する原因は、ほとんどがデザインではなく寸法です。バーコードの余白（クワイエットゾーン）が削られ、法定表示が読める文字高を下回り、価格欄が塗り足しに乗ります。以下は当社の実務上の最小値です。これを下回る場合は、店頭で返品される前に校正段階でスキャン実測してください。最も多く作る寸法は 50 × 90 mm（バーコード＋法定表示 3 行）と 45 × 70 mm（バーコード＋2 行）です。",
+        "뒷면 조판이 무너지는 원인은 대개 디자인이 아니라 치수입니다. 바코드 여백(콰이어트 존)이 먹히고, 법정 문구가 판독 가능한 글자 높이 아래로 내려가고, 가격란이 도련에 걸립니다. 아래 수치는 저희 실무 최소값입니다. 이보다 작으면 매장 반품을 기다리지 말고 교정 단계에서 스캔 실측을 하십시오. 가장 많이 만드는 규격은 50 × 90 mm(바코드 + 법정 문구 3행)와 45 × 70 mm(바코드 + 2행)입니다.",
+    )),
+    ("table", (
+        [
+            d("元素", "Element", "Élément", "Elemento", "要素", "요소"),
+            d("最小尺寸", "Minimum size", "Dimension minimale", "Tamaño mínimo", "最小寸法", "최소 치수"),
+            d("為什麼", "Why", "Pourquoi", "Por qué", "理由", "이유"),
+        ],
+        [
+            [
+                d("EAN-13 條碼（含左右留白）", "EAN-13 barcode including quiet zones", "Code-barres EAN-13, zones de silence comprises", "Código de barras EAN-13 con zonas de silencio", "EAN-13 バーコード（左右余白込み）", "EAN-13 바코드(좌우 여백 포함)"),
+                d("37.3 × 25.9 mm；縮小不得低於 80%", "37.3 × 25.9 mm; never below 80% magnification", "37,3 × 25,9 mm ; jamais sous 80 %", "37,3 × 25,9 mm; nunca por debajo del 80 %", "37.3 × 25.9 mm。80 % 未満に縮小しない", "37.3 × 25.9 mm. 80% 이하로 축소 금지"),
+                d("留白被裁或加字，收銀機會直接讀不到", "Trim the quiet zone or add text and the till simply cannot read it", "Rogner la zone de silence ou y ajouter du texte rend la lecture impossible en caisse", "Recortar la zona de silencio o añadir texto hace que la caja no lea", "余白を裁ったり文字を入れたりするとレジで読めない", "여백을 재단하거나 글자를 넣으면 계산대에서 읽히지 않습니다"),
+            ],
+            [
+                d("QR 或二維碼", "QR or other 2D code", "QR ou autre code 2D", "QR u otro código 2D", "QR などの二次元コード", "QR 등 2차원 코드"),
+                d("12 × 12 mm", "12 × 12 mm", "12 × 12 mm", "12 × 12 mm", "12 × 12 mm", "12 × 12 mm"),
+                d("低於 12 mm，手機在 20 cm 距離常掃不出", "Under 12 mm a phone at 20 cm often fails to scan", "Sous 12 mm, un téléphone à 20 cm échoue souvent", "Por debajo de 12 mm el móvil a 20 cm suele fallar", "12 mm 未満だと 20 cm の距離で読めないことが多い", "12 mm 미만이면 20 cm 거리에서 휴대폰이 자주 실패합니다"),
+            ],
+            [
+                d("法定文字（成分、原產國、責任方）", "Legal text: composition, origin, responsible person", "Mentions légales : composition, origine, responsable", "Texto legal: composición, origen, responsable", "法定表示（組成・原産国・責任者）", "법정 문구(혼용률·원산지·책임자)"),
+                d("字高 1.5 mm；行距不小於字高 1.3 倍", "1.5 mm cap height; leading at least 1.3 times the cap height", "1,5 mm de hauteur de capitale ; interligne au moins 1,3 fois", "1,5 mm de altura de mayúscula; interlínea mínima de 1,3 veces", "文字高 1.5 mm、行間は文字高の 1.3 倍以上", "글자 높이 1.5 mm, 행간은 글자 높이의 1.3배 이상"),
+                d("低於 1.5 mm 印刷會糊，监管与消费者都读不清", "Below 1.5 mm the print fills in and neither inspectors nor consumers can read it", "Sous 1,5 mm l'impression se bouche et personne ne lit", "Por debajo de 1,5 mm la impresión se embota y nadie lo lee", "1.5 mm 未満は印刷が潰れて誰も読めない", "1.5 mm 미만이면 인쇄가 뭉개져 아무도 읽지 못합니다"),
+            ],
+            [
+                d("價格欄", "Price field", "Zone de prix", "Zona de precio", "価格欄", "가격란"),
+                d("12 × 8 mm，離裁切線至少 3 mm", "12 × 8 mm, at least 3 mm inside the trim line", "12 × 8 mm, à 3 mm au moins du trait de coupe", "12 × 8 mm, al menos 3 mm dentro de la línea de corte", "12 × 8 mm、断裁線から 3 mm 以上内側", "12 × 8 mm, 재단선에서 최소 3 mm 안쪽"),
+                d("貼價標後要能被重新貼一次，不會翻邊", "It must take a price sticker twice without lifting", "Il doit supporter deux pose d'étiquette sans se décoller", "Debe admitir dos pegatinas sin despegarse", "値札シールを 2 回貼っても剥がれない", "가격 스티커를 두 번 붙여도 들뜨지 않아야 합니다"),
+            ],
+            [
+                d("紙張厚度（背面滿版時）", "Paper weight when the back is solid", "Grammage quand le dos est en aplat", "Gramaje cuando el dorso va en pleno", "裏面ベタ印刷時の坪量", "뒷면 풀 커버리지일 때 평량"),
+                d("不低於 300 g/m²，否則正面透印", "Not under 300 g/m² or the front shows through", "Pas moins de 300 g/m², sinon transparence au recto", "No menos de 300 g/m² o se transparenta al anverso", "300 g/m² 未満だと表に透ける", "300 g/m² 미만이면 앞면에 비칩니다"),
+                d("深色滿版背面在 250 g/m² 上一定透", "Solid dark ink on 250 g/m² always shows through", "Un aplat sombre sur 250 g/m² transparaît toujours", "Un pleno oscuro sobre 250 g/m² siempre transparenta", "濃色ベタを 250 g/m² に置くと必ず透ける", "250 g/m²에 진한 풀 커버리지를 올리면 반드시 비칩니다"),
+            ],
+        ],
+    )),
+
+    ("h2", d(
+        "四、背面滿版的三個工藝代價",
+        "4. Three Costs of a Solid Back Side",
+        "4. Trois coûts cachés d'un dos en aplat",
+        "4. Tres costes ocultos de un dorso en pleno",
+        "4. 裏面ベタ印刷の 3 つのコスト",
+        "4. 뒷면 풀 커버리지의 세 가지 비용",
+    )),
+    ("p", d(
+        "背面滿版看起來高級，但它同時改了三件事：紙張厚度、油墨量與乾燥時間。第一，滿版需要更厚的紙才不透印，這一項就讓單價上升；第二，深色滿版要上兩道墨，否則燈下會花，兩道墨又延長乾燥，散件包裝前必須先過一遍翻紙；第三，滿版正面燙金時，背面油墨中的溶劑可能在壓印時遷移，燙金邊緣會發霧。我們的建議是背面用 40–60% 的淺灰或品牌色網點做大面積，法定文字用 100% 黑，既壓得住畫面又不必上兩道墨。",
+        "A solid back looks premium but changes three things at once: paper weight, ink volume and drying time. First, solid coverage needs a heavier sheet to stop show-through, which lifts the unit price. Second, dark solids need two passes or they mottle under store lighting, and two passes extend drying, so the sheets must be fanned before packing. Third, when the front is foil stamped, solvents in the back-side ink can migrate under pressure and fog the foil edge. Our default is a 40–60% tint of grey or the brand colour for the large area, with legal text in 100% black: it holds the design without a second pass.",
+        "Un dos en aplat fait premium mais change trois choses : le grammage, la quantité d'encre et le temps de séchage. D'abord, l'aplat exige un support plus lourd pour éviter la transparence, ce qui augmente le prix unitaire. Ensuite, un aplat sombre demande deux passages, sinon il marbre sous l'éclairage du magasin, et deux passages allongent le séchage : les feuilles doivent être éventées avant emballage. Enfin, si le recto est doré à chaud, les solvants de l'encre du dos peuvent migrer sous la pression et voiler le bord du foil. Notre réglage par défaut : un aplat à 40–60 % de gris ou de la couleur de marque, et les mentions en noir 100 %, ce qui tient le visuel sans second passage.",
+        "Un dorso en pleno parece premium pero cambia tres cosas: el gramaje, la cantidad de tinta y el secado. Primero, el pleno exige un papel más grueso para evitar la transparencia, lo que sube el precio unitario. Segundo, un pleno oscuro necesita dos pasadas o hace moteado bajo la luz de la tienda, y dos pasadas alargan el secado: las hojas deben abanicarse antes de embalar. Tercero, si el anverso lleva estampación en caliente, los disolventes de la tinta del dorso pueden migrar bajo presión y velar el borde del foil. Nuestro ajuste por defecto: un pleno al 40–60 % de gris o del color de marca y el texto legal en negro 100 %, que sostiene el diseño sin segunda pasada.",
+        "裏面ベタは高級に見えますが、紙の坪量・インク量・乾燥時間の 3 つを同時に変えます。第一に、透けを防ぐため厚い紙が必要になり単価が上がります。第二に、濃色ベタは 2 度刷りにしないと店頭照明でムラが出ますが、2 度刷りは乾燥を延ばすため、梱包前に紙を扇いで乾燥させる工程が要ります。第三に、表に箔押しをする場合、裏面インクの溶剤が加圧で移り、箔の縁が曇ることがあります。当社の既定は、大面積をグレーまたはブランド色の 40〜60 % 網点にし、法定表示を 100 % 黒にすることです。2 度刷りなしで画面が締まります。",
+        "뒷면 풀 커버리지는 고급스러워 보이지만 세 가지를 동시에 바꿉니다. 종이 평량, 잉크량, 건조 시간입니다. 첫째, 비침을 막으려면 더 두꺼운 종이가 필요해 단가가 올라갑니다. 둘째, 진한 풀 커버리지는 두 번 인쇄하지 않으면 매장 조명에서 얼룩이 보이고, 두 번 인쇄하면 건조가 길어져 포장 전에 종이를 펼쳐 말려야 합니다. 셋째, 앞면에 박을 넣으면 뒷면 잉크의 용제가 압력으로 이동해 박 가장자리가 뿌옇게 됩니다. 저희 기본값은 큰 면적을 회색 또는 브랜드 컬러 40~60% 망점으로, 법정 문구는 100% 검정으로 두는 것입니다. 두 번 인쇄 없이 화면이 잡힙니다.",
+    )),
+
+    ("h2", d(
+        "五、讓吊牌被重印的五個錯誤",
+        "5. Five Mistakes That Get the Tag Reprinted",
+        "5. Cinq erreurs qui font réimprimer l'étiquette",
+        "5. Cinco errores que obligan a reimprimir la etiqueta",
+        "5. 下げ札の刷り直しになる 5 つのミス",
+        "5. 행택을 다시 찍게 만드는 다섯 가지 실수",
+    )),
+    ("ul", [
+        d("條碼號段用錯：把內部貨號當 GTIN 印上去，門店掃出別的商品，整批下架。",
+          "Wrong number range: an internal SKU printed where a GTIN belongs makes the till ring up another product, and the batch is pulled.",
+          "Mauvaise plage de numéros : un code interne imprimé à la place du GTIN fait scanner un autre article en caisse et le lot est retiré.",
+          "Rango de números erróneo: un código interno en lugar del GTIN hace que la caja marque otro artículo y se retire el lote.",
+          "番号体系の取り違え：社内品番を GTIN の位置に印刷すると、レジで別商品が読まれ、ロットごと撤去になります。",
+          "번호 체계 혼동: 내부 품번을 GTIN 자리에 인쇄하면 계산대에서 다른 상품이 잡혀 로트 전체가 철수됩니다."),
+        d("原產國與實際生產地不一致：面料在 A 國、成衣在 B 國縫製時，原產國按成衣地認定，不是按面料地。",
+          "Origin that does not match where the garment was made: when fabric comes from one country and sewing happens in another, origin follows the sewing country, not the fabric.",
+          "Origine incohérente : quand le tissu vient d'un pays et la confection d'un autre, l'origine suit le pays de confection, pas celui du tissu.",
+          "Origen incoherente: si el tejido viene de un país y la confección de otro, el origen sigue al país de confección, no al del tejido.",
+          "原産国と実際の製造地の不一致：生地が A 国、縫製が B 国の場合、原産国は縫製地で判断され、生地の国ではありません。",
+          "원산지와 실제 제조지 불일치: 원단이 A국, 봉제가 B국이면 원산지는 봉제국 기준이며 원단 국가가 아닙니다."),
+        d("歐盟責任方只寫品牌名沒寫地址：市場監管要求可聯絡的實體地址，只有品牌名視同未標。",
+          "EU responsible person with a brand name but no address: surveillance authorities need a reachable address; a brand name alone counts as missing.",
+          "Responsable UE sans adresse : les autorités exigent une adresse joignable ; un simple nom de marque équivaut à une absence de mention.",
+          "Responsable UE sin dirección: la autoridad exige una dirección localizable; solo el nombre de marca equivale a no declararlo.",
+          "EU 責任事業者がブランド名だけで住所がない：当局は連絡可能な住所を求めており、名称のみは未表示とみなされます。",
+          "EU 책임자가 브랜드명만 있고 주소가 없음: 당국은 연락 가능한 주소를 요구하며 명칭만으로는 미표시로 간주됩니다."),
+        d("把洗護符號印在吊牌上卻沒印在洗水標上：符號必須永久附著在產品上，吊牌可撕除，不能作為唯一載體。",
+          "Care symbols on the hang tag but not on the care label: symbols must be permanently attached to the product; a tag can be removed and cannot be the only carrier.",
+          "Symboles d'entretien sur l'étiquette volante mais pas sur l'étiquette d'entretien : ils doivent être fixés à demeure ; une étiquette amovible ne peut pas être le seul support.",
+          "Símbolos de cuidado en la etiqueta colgante pero no en la de cuidado: deben ir fijados de forma permanente; una etiqueta extraíble no puede ser el único soporte.",
+          "取扱記号を下げ札だけに印刷：記号は製品に恒久的に付いている必要があり、取り外せる下げ札は唯一の表示媒体になれません。",
+          "취급 기호를 행택에만 인쇄: 기호는 제품에 영구 부착되어야 하며, 떼어낼 수 있는 행택은 유일한 표시 수단이 될 수 없습니다."),
+        d("背面深色滿版配 250 g/m² 紙：正面圖案被透印毀掉，退貨率比印錯字更高。",
+          "Solid dark back on 250 g/m² stock: show-through ruins the front artwork, and the return rate beats any typo.",
+          "Aplat sombre au dos sur 250 g/m² : la transparence détruit le visuel du recto, avec un taux de retour supérieur à une faute de frappe.",
+          "Pleno oscuro al dorso sobre 250 g/m²: la transparencia arruina el arte frontal y la tasa de devolución supera a la de una errata.",
+          "濃色ベタの裏面を 250 g/m² に：表の図案が透けて崩れ、誤字よりも返品率が高くなります。",
+          "250 g/m²에 진한 뒷면 풀 커버리지: 비침으로 앞면 그래픽이 망가지고, 오탈자보다 반품률이 높습니다."),
+    ]),
+
+    ("callout", d(
+        "費用怎麼算：吊牌背面印刷的單價主要由三項決定——紙張克重（300 與 350 g/m² 差一檔）、背面是單色還是滿版、以及是否需要逐張可變資料（序號、二維碼）。我們不報固定單價，因為同樣 50 × 90 mm 的吊牌，這三項不同可以差出一倍。把圖稿、目標市場與預計數量發給我們，我們回一份含紙張、工藝與法定文字校對的清單。",
+        "How the cost works: the unit price of a back-printed tag is driven by three things — paper weight (300 versus 350 g/m² is one step), whether the back is one colour or solid, and whether the data varies per piece (serial number, QR). We do not quote a fixed price, because on the same 50 × 90 mm tag these three can differ by a factor of two. Send the artwork, the target markets and the quantity and we return a sheet covering paper, process and a proofread of the legal wording.",
+        "Comment se calcule le prix : le prix unitaire d'une étiquette imprimée au dos dépend de trois facteurs — le grammage (300 ou 350 g/m², un cran d'écart), le dos en une couleur ou en aplat, et la présence de données variables (numéro de série, QR). Nous ne donnons pas de prix fixe : sur une même étiquette de 50 × 90 mm, ces trois points peuvent doubler la facture. Envoyez le fichier, les marchés visés et la quantité ; nous renvoyons une fiche papier, procédé et relecture des mentions.",
+        "Cómo se calcula el coste: el precio unitario de una etiqueta impresa al dorso depende de tres factores — el gramaje (300 o 350 g/m² es un escalón), si el dorso va a una tinta o en pleno, y si hay datos variables (número de serie, QR). No damos precio fijo: en una misma etiqueta de 50 × 90 mm estos tres puntos pueden duplicar la factura. Envíe el arte, los mercados de destino y la cantidad; devolvemos una ficha con papel, proceso y revisión del texto legal.",
+        "費用の考え方：裏面印刷の単価は主に 3 点で決まります。紙の坪量（300 と 350 g/m² で 1 段）、裏面が 1 色かベタか、そして可変データ（シリアル、QR）の有無です。同じ 50 × 90 mm でも、この 3 点で単価が 2 倍まで振れるため、固定価格はお出ししていません。図案・対象市場・予定数量をお送りいただければ、用紙・工法・法定表示の校正を含む一覧をお返しします。",
+        "비용 산정: 뒷면 인쇄 행택의 단가는 세 가지로 결정됩니다. 종이 평량(300과 350 g/m²는 한 단계 차이), 뒷면이 단색인지 풀 커버리지인지, 가변 데이터(시리얼, QR) 유무입니다. 같은 50 × 90 mm라도 이 세 가지에 따라 단가가 두 배까지 벌어지므로 고정 가격은 드리지 않습니다. 원고, 대상 시장, 예상 수량을 보내주시면 용지·공정·법정 문구 교정을 포함한 목록을 회신합니다.",
+    )),
+]
