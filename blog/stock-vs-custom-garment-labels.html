@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="現貨標籤還是訂製標籤：成本、交期與混用時機 | TAGE" data-en="Stock vs Custom Garment Labels: Cost, Lead Time, When to Mix | TAGE" data-fr="Étiquettes de stock ou sur mesure : coût, délai, quand mixer | TAGE" data-es="Etiquetas de stock o a medida: coste, plazo y cuándo mezclar | TAGE" data-ja="既製ラベルか別注か：コスト・納期・併用の判断 | TAGE" data-ko="기성 라벨 vs 맞춤 라벨: 비용·납기·혼용 시점 | TAGE">現貨標籤還是訂製標籤：成本、交期與混用時機 | TAGE</title>
+<meta name="description" data-zh="現貨標籤便宜快，但沒有品牌、成分固定、沒有市場語言。附四種失守情境、每件落地成本的損益平衡算法、情境對照表，以及空白帶加二次列印的混合路線。" data-en="Stock or custom garment labels? What off-the-shelf tape covers, where it breaks on care text and market rules, the break-even maths and the hybrid route." data-fr="Stock ou sur mesure ? Ce qu&#x27;un rouleau couvre, où il cède sur l&#x27;entretien et les règles de marché, le calcul du point mort et la voie hybride." data-es="¿Stock o a medida? Qué cubre un rollo, dónde falla en cuidado y normas de mercado, el cálculo del punto de equilibrio y la vía híbrida." data-ja="既製か別注か。巻きテープで足りる範囲、洗濯表示や市場ルールで破綻する場面、損益分岐の計算、無地テープ＋追い刷りの併用案を整理します。" data-ko="기성인가 맞춤인가. 롤 테이프로 충분한 범위, 세탁 표시와 시장 규칙에서 무너지는 지점, 손익분기 계산, 무지 테이프 추가 인쇄 혼합안을 정리합니다."
+      content="現貨標籤便宜快，但沒有品牌、成分固定、沒有市場語言。附四種失守情境、每件落地成本的損益平衡算法、情境對照表，以及空白帶加二次列印的混合路線。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/stock-vs-custom-garment-labels.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/stock-vs-custom-garment-labels.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞泰閣包裝製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "現貨標籤還是訂製標籤：哪些能買現成的，哪些不能", "item": "https://taigetag.com/blog/stock-vs-custom-garment-labels.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "現貨標籤還是訂製標籤：哪些能買現成的，哪些不能",
+   "url": "https://taigetag.com/blog/stock-vs-custom-garment-labels.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/stock-vs-custom-garment-labels.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="採購與成本" data-en="Sourcing &amp; Cost" data-fr="Achats et coûts" data-es="Compras y coste" data-ja="調達・コスト" data-ko="구매·원가">採購與成本</span></div>
+      <h1 data-zh="現貨標籤還是訂製標籤：哪些能買現成的，哪些不能" data-en="Stock or Custom Garment Labels: What You Can and Cannot Buy Off the Shelf" data-fr="Étiquettes de stock ou sur mesure : ce qui s&#x27;achète en rouleau" data-es="Etiquetas de stock o a medida: qué se puede comprar en rollo" data-ja="既製ラベルと別注ラベル：巻き売りで済む範囲" data-ko="기성 라벨과 맞춤 라벨: 롤 구매로 끝나는 범위">現貨標籤還是訂製標籤：哪些能買現成的，哪些不能</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月17日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 17, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 17 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 17 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月17日更新" data-ko="TAGE 패키징 · 2026년 11월 17일 업데이트">泰閣包裝 · 更新於 2026年11月17日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="現貨服裝標籤（stock garment label）指的是已經印好、論卷賣的通用布帶：預印的尺碼帶、通用洗護符號帶、空白緞帶或塔夫綢。它便宜、快、沒有版費，對剛起步的品牌很有吸引力。問題是通用的意思是「不含你的資訊」——沒有品牌名、沒有正確的纖維成分、沒有各市場要求的責任主體與語言。本文把現貨與訂製的邊界畫清楚：哪些情境買現貨完全夠用，哪些情境用現貨等於在標籤上寫錯話，以及那個「設定費 ÷ 單價差」的損益平衡點到底怎麼算。" data-en="A stock garment label is a generic roll that is already printed: pre-printed size tapes, generic care-symbol tapes, blank satin or taffeta. It is cheap, fast, carries no setup fee, and is genuinely attractive to a brand in its first season. The catch is that generic means it contains nothing about you: no brand name, no correct fibre composition, no responsible party and no market language. This guide draws the line between stock and custom — which situations are fully served by a roll off the shelf, which ones turn a stock label into a false statement, and how the setup-cost-divided-by-price-gap break-even actually works." data-fr="Une étiquette de stock (stock garment label) est un ruban générique déjà imprimé : bandes de tailles préimprimées, rubans de symboles d&#x27;entretien génériques, satin ou taffetas vierge. C&#x27;est bon marché, rapide, sans frais de calage, et réellement attractif pour une marque à sa première saison. Le piège, c&#x27;est que générique signifie qu&#x27;elle ne dit rien de vous : pas de nom de marque, pas de composition de fibres correcte, pas de responsable ni de langue du marché. Ce guide trace la frontière entre stock et sur-mesure : les cas où un rouleau suffit, ceux où l&#x27;étiquette de stock devient une fausse déclaration, et le calcul du point mort entre frais de calage et écart de prix unitaire." data-es="Una etiqueta de stock (stock garment label) es una cinta genérica ya impresa: tiras de tallas preimpresas, cintas de símbolos de cuidado genéricas, satén o tafetán en blanco. Es barata, rápida, sin coste de preparación, y realmente atractiva para una marca en su primera temporada. La trampa es que genérica significa que no dice nada de usted: ni marca, ni composición de fibras correcta, ni responsable, ni idioma del mercado. Esta guía traza la frontera entre stock y a medida: en qué casos basta un rollo, en cuáles la etiqueta de stock se convierte en una declaración falsa, y cómo se calcula el punto de equilibrio entre coste de preparación y diferencia de precio unitario." data-ja="既製（ストック）衣料ラベルとは、すでに印刷済みで巻き売りされる汎用テープです。サイズ表示の印刷済みテープ、汎用の洗濯表示テープ、無地のサテンやタフタなどがあります。安く、速く、版代も不要で、最初のシーズンのブランドには確かに魅力的です。落とし穴は「汎用＝自分の情報が入っていない」ことです。ブランド名も、正しい繊維組成も、責任主体も、市場ごとの言語も入っていません。本記事では既製と別注の境界を整理します。既製で足りる場面、既製が「誤った表示」になる場面、そして版代を単価差で割る損益分岐点の計算方法です。" data-ko="기성(stock) 의류 라벨은 이미 인쇄되어 롤로 판매되는 범용 테이프입니다. 사이즈가 인쇄된 테이프, 범용 세탁 기호 테이프, 무지 새틴이나 태피터 등입니다. 저렴하고 빠르며 판 비용이 없어 첫 시즌 브랜드에는 확실히 매력적입니다. 함정은 &#x27;범용&#x27;이 곧 &#x27;내 정보가 없다&#x27;는 뜻이라는 점입니다. 브랜드명도, 정확한 섬유 조성도, 책임 주체도, 시장별 언어도 없습니다. 이 글은 기성과 맞춤의 경계를 정리합니다. 기성으로 충분한 상황, 기성이 &#x27;틀린 표시&#x27;가 되는 상황, 그리고 판 비용을 단가 차이로 나누는 손익분기 계산법입니다.">現貨服裝標籤（stock garment label）指的是已經印好、論卷賣的通用布帶：預印的尺碼帶、通用洗護符號帶、空白緞帶或塔夫綢。它便宜、快、沒有版費，對剛起步的品牌很有吸引力。問題是通用的意思是「不含你的資訊」——沒有品牌名、沒有正確的纖維成分、沒有各市場要求的責任主體與語言。本文把現貨與訂製的邊界畫清楚：哪些情境買現貨完全夠用，哪些情境用現貨等於在標籤上寫錯話，以及那個「設定費 ÷ 單價差」的損益平衡點到底怎麼算。</p>
+
+      <h2 data-zh="一、現貨標籤到底買到什麼" data-en="1. What Stock Actually Means" data-fr="1. Ce que l&#x27;on achète vraiment en stock" data-es="1. Qué se compra realmente en stock" data-ja="1. 既製ラベルで実際に買えるもの" data-ko="1. 기성 라벨로 실제 사는 것">一、現貨標籤到底買到什麼</h2>
+
+      <p data-zh="現貨的定義是「不含你的變動資料」：布帶規格固定（常見 15、20、25、30 mm 寬），符號走通用版，尺碼逐格印好，整卷出貨。它省掉的是兩件事——圖稿製作與網版或刀模的設定費——所以小量時單價差距最明顯。代價是標籤上的每一句通用文字都變成你的承諾：通用洗護符號帶上印的成分若與實際布料不符，那就是標示不實，不是「先這樣用」。" data-en="Stock means fixed content: a set tape width (15, 20, 25 or 30 mm are the common ones), a generic symbol set, one size per position, sold by the roll. What it removes is artwork preparation and the screen or die setup fee, which is why the price gap is widest at low quantities. The cost is that every generic word on the tape becomes your statement: if a pre-printed composition does not match the fabric, that is a false label, not a temporary placeholder." data-fr="Le stock, c&#x27;est un contenu figé : largeur de ruban imposée (15, 20, 25 ou 30 mm le plus souvent), jeu de symboles générique, une taille par position, vendu au rouleau. Ce qu&#x27;il supprime, c&#x27;est la préparation de fichier et les frais de calage d&#x27;écran ou de forme — d&#x27;où un écart de prix maximal sur les petites quantités. Le coût, c&#x27;est que chaque mot générique devient votre déclaration : une composition préimprimée qui ne correspond pas au tissu est une étiquette fausse, pas un provisoire." data-es="Stock significa contenido fijo: ancho de cinta impuesto (15, 20, 25 o 30 mm los habituales), juego de símbolos genérico, una talla por posición, vendido por rollo. Lo que elimina es la preparación de arte y el coste de preparación de pantalla o forma, por eso la diferencia de precio es máxima en cantidades bajas. El coste es que cada palabra genérica se convierte en su declaración: una composición preimpresa que no coincide con el tejido es una etiqueta falsa, no un provisional." data-ja="既製の定義は「内容が固定」であることです。テープ幅は 15・20・25・30 mm などの規格品、記号は汎用セット、サイズは 1 ポジション 1 種類、巻き売りです。削減できるのは入稿とスクリーン（または抜き型）の版代なので、小ロットほど単価差が大きく出ます。代償は、テープ上の汎用文言がすべて自社の表明になることです。プリント済みの組成が実際の生地と違えば、それは一時的な代用ではなく誤表示です。" data-ko="기성은 내용이 고정되어 있다는 뜻입니다. 테이프 폭은 15·20·25·30 mm 같은 규격품, 기호는 범용 세트, 사이즈는 위치당 한 종류, 롤 단위 판매입니다. 절감되는 것은 원고 작업과 스크린(또는 금형) 판 비용이라 소량일수록 단가 차이가 크게 벌어집니다. 대가는 테이프 위의 모든 범용 문구가 곧 회사의 표시가 된다는 점입니다. 인쇄된 조성이 실제 원단과 다르면 그것은 임시 대체가 아니라 허위 표시입니다.">現貨的定義是「不含你的變動資料」：布帶規格固定（常見 15、20、25、30 mm 寬），符號走通用版，尺碼逐格印好，整卷出貨。它省掉的是兩件事——圖稿製作與網版或刀模的設定費——所以小量時單價差距最明顯。代價是標籤上的每一句通用文字都變成你的承諾：通用洗護符號帶上印的成分若與實際布料不符，那就是標示不實，不是「先這樣用」。</p>
+
+      <h2 data-zh="二、現貨會失守的四個地方" data-en="2. Four Places Stock Labels Break" data-fr="2. Les quatre points où le stock cède" data-es="2. Los cuatro puntos donde el stock falla" data-ja="2. 既製が破綻する 4 つの場面" data-ko="2. 기성이 무너지는 네 가지 지점">二、現貨會失守的四個地方</h2>
+
+      <p data-zh="不是所有品項都需要訂製。但只要碰到以下任一項，現貨就不再是省錢，而是風險。" data-en="Not every style needs custom. But hit any one of the following and the roll stops being a saving and becomes a risk." data-fr="Tous les modèles n&#x27;ont pas besoin de sur-mesure. Mais dès que l&#x27;un des points suivants apparaît, le rouleau cesse d&#x27;être une économie pour devenir un risque." data-es="No todos los modelos necesitan medida. Pero en cuanto aparece uno de los puntos siguientes, el rollo deja de ser un ahorro y pasa a ser un riesgo." data-ja="すべての型に別注が必要なわけではありません。ただし以下のいずれかに当たれば、既製は「節約」ではなく「リスク」になります。" data-ko="모든 스타일에 맞춤이 필요한 것은 아닙니다. 다만 아래 중 하나라도 해당하면 기성은 절약이 아니라 리스크가 됩니다.">不是所有品項都需要訂製。但只要碰到以下任一項，現貨就不再是省錢，而是風險。</p>
+
+      <ul>
+        <li data-zh="品牌名與標誌——現貨帶上沒有空間，硬要加就得二次加工（燙印、車小標），成本與牢度都要重算。" data-en="Brand name and logo — there is no space on a stock tape, and adding one means a second operation (heat transfer, a small sewn tab) with its own cost and fastness questions." data-fr="Nom et logo — pas de place sur un ruban de stock ; l&#x27;ajouter impose une seconde opération (transfert à chaud, petite étiquette cousue) avec son propre coût et ses questions de tenue." data-es="Marca y logotipo: no hay espacio en una cinta de stock, y añadirlo exige una segunda operación (transferencia térmica, pequeña etiqueta cosida) con su propio coste y dudas de solidez." data-ja="ブランド名とロゴ——既製テープに余白はなく、後から載せるには二次加工（熱転写、小さな縫いタグ）が必要で、コストと堅牢度を計算し直すことになります。" data-ko="브랜드명과 로고 — 기성 테이프에는 자리가 없고, 나중에 얹으려면 2차 공정(열전사, 작은 재봉 탭)이 필요하며 원가와 견뢰도를 다시 계산해야 합니다.">品牌名與標誌——現貨帶上沒有空間，硬要加就得二次加工（燙印、車小標），成本與牢度都要重算。</li>
+        <li data-zh="成分隨色號改變——同款不同色的布料混率不同（例如 95% 棉 5% 彈性纖維與 100% 棉），現貨成分句一旦不符就是標示不實。" data-en="Composition that changes by colourway — the same style in two colours can be 95% cotton 5% elastane in one and 100% cotton in the other, and a fixed stock sentence becomes false the moment it does not match." data-fr="Composition variable selon le coloris — un même modèle peut être 95 % coton 5 % élasthanne dans un coloris et 100 % coton dans un autre ; une phrase figée devient fausse dès qu&#x27;elle ne correspond plus." data-es="Composición que cambia por color — un mismo modelo puede ser 95 % algodón 5 % elastano en un color y 100 % algodón en otro, y una frase fija pasa a ser falsa en cuanto no coincide." data-ja="色番で組成が変わる——同型でも 95 % 綿・5 % ポリウレタンと 100 % 綿のように色ごとに混率が違えば、固定文言は合わない時点で誤りになります。" data-ko="색상별로 조성이 달라짐 — 같은 스타일도 95% 면·5% 스판과 100% 면처럼 색상마다 혼용률이 다르면, 고정 문구는 맞지 않는 순간 허위가 됩니다.">成分隨色號改變——同款不同色的布料混率不同（例如 95% 棉 5% 彈性纖維與 100% 棉），現貨成分句一旦不符就是標示不實。</li>
+        <li data-zh="跨市場的必印內容——歐盟 (EU) No 1007/2011 要求永久標示纖維成分，洗護符號依 EN ISO 3758；法國還要法文的護理用語與責任主體，西班牙須以西文呈現，日本依家庭用品品質表示法標示組成（混用率）、JIS L 0001 洗濯表示、表示者與原産国，韓國須標混用率、KS K 0021 取扱表示與原産地。一份通用帶不可能同時合規。" data-en="Market-specific mandatory content — Regulation (EU) No 1007/2011 requires the fibre composition on a permanent label with care symbols under EN ISO 3758; France adds French care wording and the responsible party, Spain requires Spanish wording, Japan requires composition, JIS L 0001 care symbols, the labeller and the country of origin, and Korea requires fibre content, KS K 0021 care symbols and origin. No generic roll satisfies all of them." data-fr="Mentions obligatoires par marché — le règlement (UE) n° 1007/2011 impose la composition sur une étiquette permanente avec symboles d&#x27;entretien selon EN ISO 3758 ; la France ajoute la terminologie française et le responsable, l&#x27;Espagne exige l&#x27;espagnol, le Japon impose composition, symboles JIS L 0001, responsable de l&#x27;étiquetage et origine, la Corée impose teneur en fibres, symboles KS K 0021 et origine. Aucun rouleau générique ne satisfait tout cela." data-es="Menciones obligatorias por mercado — el Reglamento (UE) n.º 1007/2011 exige la composición en etiqueta permanente con símbolos de cuidado según EN ISO 3758; Francia añade terminología francesa y responsable, España exige español, Japón exige composición, símbolos JIS L 0001, responsable y origen, y Corea exige contenido de fibra, símbolos KS K 0021 y origen. Ningún rollo genérico cumple todo eso." data-ja="市場ごとの必須表示——EU は規則 (EU) No 1007/2011 により永久表示ラベルへの繊維組成と EN ISO 3758 の洗濯表示を要求します。フランスはフランス語の取扱用語と責任主体、スペインはスペイン語表記、日本は家庭用品品質表示法による組成（混用率）・JIS L 0001 の洗濯表示・表示者・原産国、韓国は混用率・KS K 0021 取扱表示・原産地が必要です。汎用の巻きテープ 1 本でこれらすべてを満たすことはできません。" data-ko="시장별 필수 표시 — EU는 규정 (EU) No 1007/2011에 따라 영구 라벨의 섬유 조성과 EN ISO 3758 세탁 기호를 요구합니다. 프랑스는 프랑스어 취급 용어와 책임 주체, 스페인은 스페인어 표기, 일본은 가정용품품질표시법에 따른 조성(혼용률)·JIS L 0001 세탁 기호·표시자·원산국, 한국은 혼용률·KS K 0021 취급 표시·원산지가 필요합니다. 범용 롤 한 개로 이 모두를 충족할 수 없습니다.">跨市場的必印內容——歐盟 (EU) No 1007/2011 要求永久標示纖維成分，洗護符號依 EN ISO 3758；法國還要法文的護理用語與責任主體，西班牙須以西文呈現，日本依家庭用品品質表示法標示組成（混用率）、JIS L 0001 洗濯表示、表示者與原産国，韓國須標混用率、KS K 0021 取扱表示與原産地。一份通用帶不可能同時合規。</li>
+        <li data-zh="尺碼帶的粒度——現貨尺碼帶一格一碼，遇到 S/M/L 同 SKU 或多碼合一包裝，就得改用訂製尺碼組合或另貼尺碼貼。" data-en="Size granularity — a stock size tape gives one size per label, so a style sold as S/M/L in one SKU, or multi-size packs, needs a custom size combination or a separate size sticker." data-fr="Granularité des tailles — une bande de stock donne une taille par étiquette ; un modèle vendu S/M/L dans une seule référence, ou en lots multi-tailles, exige une combinaison sur mesure ou une vignette de taille séparée." data-es="Granularidad de tallas — una tira de stock da una talla por etiqueta; un modelo vendido como S/M/L en una sola referencia, o en packs multitalle, necesita combinación a medida o etiqueta de talla aparte." data-ja="サイズの粒度——既製サイズテープは 1 枚 1 サイズです。S/M/L を 1 SKU で売る場合やマルチサイズのパックには、別注のサイズ組みかサイズシールが必要です。" data-ko="사이즈 세분성 — 기성 사이즈 테이프는 장당 한 사이즈입니다. S/M/L을 한 SKU로 판매하거나 멀티 사이즈 팩을 구성하면 맞춤 조합이나 별도 사이즈 스티커가 필요합니다.">尺碼帶的粒度——現貨尺碼帶一格一碼，遇到 S/M/L 同 SKU 或多碼合一包裝，就得改用訂製尺碼組合或另貼尺碼貼。</li>
+      </ul>
+
+      <h2 data-zh="三、單價比錯了的成本算法" data-en="3. The Cost Comparison Buyers Get Wrong" data-fr="3. Le calcul de coût que les acheteurs ratent" data-es="3. El cálculo de coste que se hace mal" data-ja="3. 単価比較で間違えるコスト計算" data-ko="3. 단가 비교에서 틀리는 원가 계산">三、單價比錯了的成本算法</h2>
+
+      <p data-zh="兩張報價單不能直接比單價，要比「每件成衣的落地成本」：（設定費 + 單價 × 數量）÷ 數量。設定費包含圖稿、網版或刀模與一次校樣；現貨的設定費是零，但可能多一次二次加工。損益平衡量 = 設定費 ÷（現貨單價 − 訂製單價）。這個數字算出來常比採購想像的小：數位印刷把設定費壓到很低，平衡點往往落在幾百件，而不是幾千件。別忘了把錯誤成本算進去——成分寫錯導致整批換標，成本是標籤價的幾十倍。" data-en="Two quotations cannot be compared on unit price; compare landed cost per garment: (setup + unit price × quantity) ÷ quantity. Setup covers artwork, the screen or die and one proof. Stock setup is zero but may add a second operation. Break-even quantity = setup ÷ (stock unit price − custom unit price). That number is usually smaller than buyers expect, because digital printing pushes setup down and moves the break-even into the hundreds rather than the thousands. Do not forget the cost of being wrong: a composition error that forces a whole shipment to be relabelled costs tens of times the label price." data-fr="Deux devis ne se comparent pas au prix unitaire mais au coût rendu par vêtement : (calage + prix unitaire × quantité) ÷ quantité. Le calage couvre le fichier, l&#x27;écran ou la forme et une épreuve. En stock, le calage est nul mais une seconde opération peut s&#x27;ajouter. Quantité d&#x27;équilibre = calage ÷ (prix stock − prix sur-mesure). Ce chiffre est souvent plus petit qu&#x27;attendu, car l&#x27;impression numérique abaisse le calage et place le point mort dans les centaines plutôt que dans les milliers. N&#x27;oubliez pas le coût de l&#x27;erreur : une composition fautive qui impose de réétiqueter un envoi entier coûte des dizaines de fois le prix de l&#x27;étiquette." data-es="Dos cotizaciones no se comparan por precio unitario sino por coste puesto en prenda: (preparación + precio unitario × cantidad) ÷ cantidad. La preparación cubre el arte, la pantalla o forma y una prueba. En stock es cero, pero puede sumar una segunda operación. Cantidad de equilibrio = preparación ÷ (precio stock − precio a medida). Ese número suele ser menor de lo que se espera, porque la impresión digital baja la preparación y sitúa el punto de equilibrio en cientos, no en miles. No olvide el coste del error: una composición equivocada que obliga a reetiquetar un envío completo cuesta decenas de veces el precio de la etiqueta." data-ja="見積り 2 本を単価で比べてはいけません。比べるのは 1 着あたりの着地コスト：（版代＋単価×数量）÷数量です。版代には入稿、スクリーンまたは抜き型、校正 1 回が含まれます。既製は版代ゼロですが二次加工が増えることがあります。損益分岐数量＝版代÷（既製単価−別注単価）。この数字は多くの場合、購買の想定より小さくなります。デジタル印刷は版代を大きく下げ、分岐点を数千枚から数百枚へ引き下げるからです。誤りのコストも忘れずに。組成の誤記で出荷分を全部貼り替えると、ラベル単価の数十倍のコストになります。" data-ko="견적 두 장은 단가로 비교하면 안 됩니다. 비교할 것은 의류 1장당 착지 원가입니다: (판 비용 + 단가 × 수량) ÷ 수량. 판 비용에는 원고, 스크린 또는 금형, 교정 1회가 포함됩니다. 기성은 판 비용이 0이지만 2차 공정이 붙을 수 있습니다. 손익분기 수량 = 판 비용 ÷ (기성 단가 − 맞춤 단가). 이 숫자는 대개 구매 담당의 예상보다 작습니다. 디지털 인쇄가 판 비용을 크게 낮춰 분기점을 수천 장에서 수백 장으로 끌어내리기 때문입니다. 오류 비용도 잊지 마세요. 조성 오기로 출하분 전체를 다시 붙이면 라벨 단가의 수십 배가 듭니다.">兩張報價單不能直接比單價，要比「每件成衣的落地成本」：（設定費 + 單價 × 數量）÷ 數量。設定費包含圖稿、網版或刀模與一次校樣；現貨的設定費是零，但可能多一次二次加工。損益平衡量 = 設定費 ÷（現貨單價 − 訂製單價）。這個數字算出來常比採購想像的小：數位印刷把設定費壓到很低，平衡點往往落在幾百件，而不是幾千件。別忘了把錯誤成本算進去——成分寫錯導致整批換標，成本是標籤價的幾十倍。</p>
+
+      <h2 data-zh="四、情境對照：該走哪條路" data-en="4. Which Route for Which Scenario" data-fr="4. Quelle voie pour quel cas" data-es="4. Qué vía para cada caso" data-ja="4. ケース別の選択" data-ko="4. 상황별 선택">四、情境對照：該走哪條路</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="情境" data-en="Scenario" data-fr="Cas" data-es="Caso" data-ja="状況" data-ko="상황">情境</th>
+            <th data-zh="現貨夠用？" data-en="Stock enough?" data-fr="Stock suffisant ?" data-es="¿Basta stock?" data-ja="既製で足りる？" data-ko="기성으로 충분?">現貨夠用？</th>
+            <th data-zh="需要訂製的部分" data-en="What must be custom" data-fr="Ce qui doit être sur mesure" data-es="Lo que debe ser a medida" data-ja="別注が必要な部分" data-ko="맞춤이 필요한 부분">需要訂製的部分</th>
+            <th data-zh="建議" data-en="Recommendation" data-fr="Recommandation" data-es="Recomendación" data-ja="推奨" data-ko="권장">建議</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="單一成分基本款、單一市場" data-en="Basic single-fibre style, one market" data-fr="Modèle basique monomatière, un seul marché" data-es="Modelo básico monofibra, un solo mercado" data-ja="単一素材のベーシック、単一市場" data-ko="단일 소재 기본형, 단일 시장">單一成分基本款、單一市場</td>
+            <td data-zh="是" data-en="Yes" data-fr="Oui" data-es="Sí" data-ja="はい" data-ko="예">是</td>
+            <td data-zh="品牌名與尺碼帶" data-en="Brand name and the size tape" data-fr="Nom de marque et bande de tailles" data-es="Marca y tira de tallas" data-ja="ブランド名とサイズテープ" data-ko="브랜드명과 사이즈 테이프">品牌名與尺碼帶</td>
+            <td data-zh="現貨尺碼帶＋燙印品牌" data-en="Stock size tape plus heat-transfer brand" data-fr="Bande de stock + marque par transfert" data-es="Tira de stock + marca por transferencia" data-ja="既製サイズテープ＋熱転写ブランド" data-ko="기성 사이즈 테이프 + 열전사 브랜드">現貨尺碼帶＋燙印品牌</td>
+          </tr>
+          <tr>
+            <td data-zh="混紡、三個色號" data-en="Blend fabric, three colourways" data-fr="Matière mélangée, trois coloris" data-es="Tejido mezcla, tres colores" data-ja="混紡・3 色展開" data-ko="혼방, 3가지 색상">混紡、三個色號</td>
+            <td data-zh="否" data-en="No" data-fr="Non" data-es="No" data-ja="いいえ" data-ko="아니오">否</td>
+            <td data-zh="每個成分一句永久標" data-en="One permanent label per composition" data-fr="Une étiquette permanente par composition" data-es="Una etiqueta permanente por composición" data-ja="組成ごとに永久表示ラベル" data-ko="조성별 영구 라벨 1종">每個成分一句永久標</td>
+            <td data-zh="訂製，一成分一檔" data-en="Custom, one file per composition" data-fr="Sur-mesure, un fichier par composition" data-es="A medida, un archivo por composición" data-ja="別注。組成ごとに 1 データ" data-ko="맞춤, 조성별 원고 1개">訂製，一成分一檔</td>
+          </tr>
+          <tr>
+            <td data-zh="同時出口歐盟、日本、韓國" data-en="Export to the EU, Japan and Korea" data-fr="Export UE, Japon et Corée" data-es="Exportación a UE, Japón y Corea" data-ja="EU・日本・韓国へ同時輸出" data-ko="EU·일본·한국 동시 수출">同時出口歐盟、日本、韓國</td>
+            <td data-zh="否" data-en="No" data-fr="Non" data-es="No" data-ja="いいえ" data-ko="아니오">否</td>
+            <td data-zh="各市場語言、符號版本與責任主體" data-en="Market language, symbol version and responsible party" data-fr="Langue, version des symboles et responsable" data-es="Idioma, versión de símbolos y responsable" data-ja="市場ごとの言語・記号版・責任主体" data-ko="시장별 언어·기호 판본·책임 주체">各市場語言、符號版本與責任主體</td>
+            <td data-zh="訂製，一市場一檔" data-en="Custom, one file per market" data-fr="Sur-mesure, un fichier par marché" data-es="A medida, un archivo por mercado" data-ja="別注。市場ごとに 1 データ" data-ko="맞춤, 시장별 원고 1개">訂製，一市場一檔</td>
+          </tr>
+          <tr>
+            <td data-zh="樣品間、30 套樣衣" data-en="Sample room, 30 sample sets" data-fr="Atelier d&#x27;échantillons, 30 jeux" data-es="Muestrario, 30 juegos" data-ja="サンプル室・30 セット" data-ko="샘플실, 30세트">樣品間、30 套樣衣</td>
+            <td data-zh="可" data-en="Yes" data-fr="Oui" data-es="Sí" data-ja="可" data-ko="가능">可</td>
+            <td data-zh="尺碼與品牌" data-en="Size and brand" data-fr="Taille et marque" data-es="Talla y marca" data-ja="サイズとブランド" data-ko="사이즈와 브랜드">尺碼與品牌</td>
+            <td data-zh="數位訂製，交期短" data-en="Digital custom, short lead time" data-fr="Sur-mesure numérique, délai court" data-es="A medida digital, plazo corto" data-ja="デジタル別注で短納期" data-ko="디지털 맞춤, 짧은 납기">數位訂製，交期短</td>
+          </tr>
+          <tr>
+            <td data-zh="工業洗滌工裝" data-en="Industrial-laundry workwear" data-fr="Vêtements de travail à lavage industriel" data-es="Ropa de trabajo de lavado industrial" data-ja="産業洗濯のワークウェア" data-ko="산업 세탁 작업복">工業洗滌工裝</td>
+            <td data-zh="否" data-en="No" data-fr="Non" data-es="No" data-ja="いいえ" data-ko="아니오">否</td>
+            <td data-zh="耐洗油墨與洗後實測" data-en="Wash-resistant ink and a wash test" data-fr="Encre résistante et essai après lavage" data-es="Tinta resistente y ensayo tras lavado" data-ja="耐洗インクと洗濯後の実測" data-ko="내세탁 잉크와 세탁 후 시험">耐洗油墨與洗後實測</td>
+            <td data-zh="訂製，先做洗後驗證" data-en="Custom, with a wash test first" data-fr="Sur-mesure, essai après lavage d&#x27;abord" data-es="A medida, con ensayo tras lavado previo" data-ja="別注。洗濯後の検証を先行" data-ko="맞춤, 세탁 후 검증 선행">訂製，先做洗後驗證</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-zh="五、混合路線：空白布帶＋二次列印" data-en="5. The Hybrid Route: Blank Tape Plus Overprint" data-fr="5. La voie hybride : ruban vierge et surimpression" data-es="5. La vía híbrida: cinta en blanco y sobreimpresión" data-ja="5. 併用案：無地テープ＋追い刷り" data-ko="5. 혼합 경로: 무지 테이프 + 추가 인쇄">五、混合路線：空白布帶＋二次列印</h2>
+
+      <p data-zh="最常被忽略的折衷方案是：買通用洗護符號帶或空白布帶，再用熱轉印把品牌、尺碼、批號打在留白區。它的好處是同一卷料可以吃多個訂單，資料逐單更換，且不必為每個尺碼開一次網版。限制有三：留白區要夠（品牌字高 1.2 mm 以上，後面還要留 3 mm 邊距）；碳帶等級要對得上洗滌次數；符號版本必須與目標市場一致——歐盟用 EN ISO 3758、日本用 JIS L 0001、韓國用 KS K 0021，版本混用等於同一件衣服給了兩套指令。" data-en="The compromise buyers overlook most often is to buy a generic care-symbol tape or blank tape and overprint the brand, size and lot by thermal transfer. One roll then serves several orders, the data changes per order, and no screen has to be opened per size. Three limits apply: the clear area must be big enough (1.2 mm cap height for the brand, plus a 3 mm margin); the ribbon grade must match the number of washes the garment will take; and the symbol version must match the market — EN ISO 3758 in the EU, JIS L 0001 in Japan, KS K 0021 in Korea — because mixing versions gives one garment two sets of instructions." data-fr="Le compromis le plus souvent oublié : acheter un ruban générique de symboles d&#x27;entretien, ou un ruban vierge, et surimprimer marque, taille et lot par transfert thermique. Un rouleau sert alors plusieurs commandes, les données changent à chaque commande et aucune trame n&#x27;est à ouvrir par taille. Trois limites : la zone libre doit suffire (1,2 mm de hauteur de capitale pour la marque, plus 3 mm de marge) ; la qualité du ruban transfert doit correspondre au nombre de lavages ; et la version des symboles doit correspondre au marché — EN ISO 3758 dans l&#x27;UE, JIS L 0001 au Japon, KS K 0021 en Corée — car mélanger les versions donne deux jeux d&#x27;instructions pour un seul vêtement." data-es="El compromiso que más se pasa por alto: comprar cinta genérica de símbolos de cuidado, o cinta en blanco, y sobreimprimir marca, talla y lote por transferencia térmica. Un rollo sirve para varios pedidos, los datos cambian por pedido y no hay que abrir pantalla por talla. Tres límites: la zona libre debe bastar (1,2 mm de altura de mayúscula para la marca más 3 mm de margen); la calidad de la cinta de transferencia debe corresponder al número de lavados; y la versión de símbolos debe coincidir con el mercado — EN ISO 3758 en la UE, JIS L 0001 en Japón, KS K 0021 en Corea — porque mezclar versiones da dos juegos de instrucciones a una sola prenda." data-ja="最も見落とされる折衷案は、汎用の洗濯表示テープや無地テープを買い、熱転写でブランド・サイズ・ロットを追い刷りする方法です。1 本のロールで複数注文を賄え、データは注文ごとに変わり、サイズごとにスクリーンを起こす必要もありません。制約は 3 つ。余白が足りること（ブランドはキャップハイト 1.2 mm 以上、さらに 3 mm の余白）、転写リボンのグレードが想定洗濯回数に合うこと、そして記号の版が市場と一致すること——EU は EN ISO 3758、日本は JIS L 0001、韓国は KS K 0021 で、版を混ぜると 1 着に 2 套の指示を与えることになります。" data-ko="가장 자주 놓치는 절충안은 범용 세탁 기호 테이프나 무지 테이프를 사서 열전사로 브랜드·사이즈·로트를 추가 인쇄하는 방법입니다. 롤 하나로 여러 주문을 소화하고, 데이터는 주문마다 바뀌며, 사이즈마다 스크린을 새로 만들 필요도 없습니다. 제약은 세 가지입니다. 여백이 충분해야 하고(브랜드 캡 하이트 1.2 mm 이상, 가장자리 3 mm 여유), 전사 리본 등급이 예상 세탁 횟수에 맞아야 하며, 기호 판본이 시장과 일치해야 합니다 — EU는 EN ISO 3758, 일본은 JIS L 0001, 한국은 KS K 0021이며, 판본을 섞으면 한 벌의 옷에 두 가지 지시를 주는 셈입니다.">最常被忽略的折衷方案是：買通用洗護符號帶或空白布帶，再用熱轉印把品牌、尺碼、批號打在留白區。它的好處是同一卷料可以吃多個訂單，資料逐單更換，且不必為每個尺碼開一次網版。限制有三：留白區要夠（品牌字高 1.2 mm 以上，後面還要留 3 mm 邊距）；碳帶等級要對得上洗滌次數；符號版本必須與目標市場一致——歐盟用 EN ISO 3758、日本用 JIS L 0001、韓國用 KS K 0021，版本混用等於同一件衣服給了兩套指令。</p>
+
+      <h2 data-zh="六、版本管理：改一次標籤的真實成本" data-en="6. Revision Control: The Real Cost of a Label Change" data-fr="6. Gestion des versions : le vrai coût d&#x27;un changement" data-es="6. Control de versiones: el coste real de un cambio" data-ja="6. 版管理：ラベル 1 回の変更にかかる実費" data-ko="6. 판본 관리: 라벨 한 번 바꾸는 실제 비용">六、版本管理：改一次標籤的真實成本</h2>
+
+      <p data-zh="標籤不是獨立文件，它同時活在四處：圖稿檔、採購 BOM、車縫規格與代工廠的標籤手冊。任何一處沒同步，就會出現「衣服上的標籤寫著沒人驗證過的成分」——這是市場抽查最常見的缺失，也是最便宜就能防住的一項。做法很樸素：一個成分一個檔、一個市場一個版本號，改動時四處一起改，並在採購單上寫明版本號與生效日期。若要改成分或換供應商，先在 3 件大貨上做洗後與摩擦實測，再改版本號。" data-en="A label is not a standalone file; it lives in four places at once — the artwork file, the purchasing BOM, the sewing specification and the factory&#x27;s labelling manual. If one place is not updated, a garment ships with a label stating a composition nobody verified, which is the most common finding in market surveillance and also the cheapest one to prevent. The method is unglamorous: one file per composition, one version number per market, change all four places together, and print the version number and effective date on the purchase order. If the composition or the supplier changes, run a wash and rub test on three production labels before the version number moves." data-fr="Une étiquette n&#x27;est pas un fichier isolé : elle vit en quatre endroits à la fois — le fichier, la nomenclature d&#x27;achat, la spécification de couture et le manuel d&#x27;étiquetage de l&#x27;usine. Si un seul n&#x27;est pas mis à jour, un vêtement part avec une étiquette annonçant une composition que personne n&#x27;a vérifiée : c&#x27;est le constat le plus fréquent des contrôles de marché, et le moins coûteux à prévenir. La méthode est banale : un fichier par composition, un numéro de version par marché, les quatre endroits modifiés ensemble, et le numéro de version avec la date d&#x27;effet imprimés sur le bon de commande. En cas de changement de composition ou de fournisseur, faites un essai de lavage et de frottement sur trois étiquettes de production avant de changer de version." data-es="Una etiqueta no es un archivo aislado: vive en cuatro lugares a la vez — el archivo de arte, el BOM de compras, la especificación de costura y el manual de etiquetado de la fábrica. Si uno no se actualiza, la prenda sale con una etiqueta que declara una composición que nadie verificó: es el hallazgo más común en las inspecciones de mercado y también el más barato de evitar. El método no tiene misterio: un archivo por composición, un número de versión por mercado, cambiar los cuatro lugares a la vez y hacer constar número de versión y fecha de entrada en vigor en el pedido. Si cambia la composición o el proveedor, haga un ensayo de lavado y frote sobre tres etiquetas de producción antes de mover la versión." data-ja="ラベルは独立したファイルではなく、同時に 4 か所に存在します。図案データ、購買 BOM、縫製仕様、そして工場の表示マニュアルです。どこか 1 か所でも同期しないと、「誰も検証していない組成を書いたラベル」を着けた商品が出荷されます。市場の抜き取り調査で最も多い指摘であり、最も安く防げる不備でもあります。方法は地味です。組成ごとに 1 データ、市場ごとに 1 版番号、4 か所を同時に更新し、発注書に版番号と発効日を明記する。組成や供給元を変える場合は、版番号を動かす前に量産ラベル 3 枚で洗濯と摩擦の実測を行ってください。" data-ko="라벨은 독립된 파일이 아니라 동시에 네 곳에 존재합니다. 원고 파일, 구매 BOM, 봉제 사양, 그리고 공장의 표시 매뉴얼입니다. 한 곳이라도 동기화되지 않으면 아무도 검증하지 않은 조성을 적은 라벨이 달린 옷이 출하됩니다. 시장 조사에서 가장 흔한 지적이며 가장 저렴하게 막을 수 있는 결함입니다. 방법은 소박합니다. 조성별 원고 1개, 시장별 판본 번호 1개, 네 곳을 함께 수정하고, 발주서에 판본 번호와 시행일을 적습니다. 조성이나 공급사를 바꾸면 판본 번호를 올리기 전에 양산 라벨 3장으로 세탁·마찰 시험을 하세요.">標籤不是獨立文件，它同時活在四處：圖稿檔、採購 BOM、車縫規格與代工廠的標籤手冊。任何一處沒同步，就會出現「衣服上的標籤寫著沒人驗證過的成分」——這是市場抽查最常見的缺失，也是最便宜就能防住的一項。做法很樸素：一個成分一個檔、一個市場一個版本號，改動時四處一起改，並在採購單上寫明版本號與生效日期。若要改成分或換供應商，先在 3 件大貨上做洗後與摩擦實測，再改版本號。</p>
+
+      <div class="callout" data-zh="最快判斷：只要這款要賣到第二個市場、或成分與色號有關、或要放品牌，就別買現貨帶。現貨真正的用途是打樣與急救補貨，不是量產。" data-en="Quick test: if the style sells into a second market, if the composition depends on the colourway, or if the brand has to appear, do not buy a stock roll. Stock&#x27;s real job is samples and emergency top-ups, not production." data-fr="Test rapide : si le modèle part sur un second marché, si la composition dépend du coloris, ou si la marque doit apparaître, n&#x27;achetez pas de rouleau de stock. Le stock sert aux échantillons et aux réassorts d&#x27;urgence, pas à la production." data-es="Prueba rápida: si el modelo va a un segundo mercado, si la composición depende del color, o si la marca debe aparecer, no compre rollo de stock. El stock sirve para muestras y reposiciones de urgencia, no para producción." data-ja="最短の判断：2 つ目の市場に出す、組成が色番で変わる、ブランドを載せる。どれかに当たれば既製ロールは買わないこと。既製の本来の役割はサンプルと緊急補充で、量産ではありません。" data-ko="가장 빠른 판단: 두 번째 시장에 팔거나, 조성이 색상에 따라 달라지거나, 브랜드를 넣어야 한다면 기성 롤을 사지 마세요. 기성의 본래 역할은 샘플과 긴급 보충이며 양산이 아닙니다.">最快判斷：只要這款要賣到第二個市場、或成分與色號有關、或要放品牌，就別買現貨帶。現貨真正的用途是打樣與急救補貨，不是量產。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <ul>
+        <li><a href="care-label-materials.html" data-zh="洗水標材質怎麼選" data-en="Care label materials" data-fr="Matériaux d&#x27;étiquette d&#x27;entretien" data-es="Materiales de etiqueta de cuidado" data-ja="洗濯表示ラベルの素材" data-ko="세탁 라벨 소재">洗水標材質怎麼選</a></li>
+        <li><a href="woven-vs-printed-labels.html" data-zh="織嘜與印刷標的差別" data-en="Woven vs printed labels" data-fr="Tissé ou imprimé" data-es="Tejido o impreso" data-ja="織りとプリントの違い" data-ko="직조와 프린트의 차이">織嘜與印刷標的差別</a></li>
+        <li><a href="garment-label-configuration-guide.html" data-zh="一件衣服要幾個標" data-en="How many labels a garment needs" data-fr="Combien d&#x27;étiquettes par vêtement" data-es="Cuántas etiquetas por prenda" data-ja="1 着に必要なラベル数" data-ko="의류 1장에 필요한 라벨 수">一件衣服要幾個標</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="把 BOM 與銷售市場給我們，我們回一份標籤配置表：哪些買現貨、哪些要訂製、每個市場要印什麼。" data-en="Send your BOM and the markets you sell into; we return a label configuration sheet showing what can be stock, what must be custom, and what each market needs printed." data-fr="Envoyez la nomenclature et les marchés visés : nous renvoyons une fiche de configuration indiquant ce qui peut rester en stock, ce qui doit être sur mesure et ce que chaque marché exige." data-es="Envíe el BOM y los mercados de venta: devolvemos una ficha de configuración con lo que puede ser stock, lo que debe ser a medida y lo que exige cada mercado." data-ja="BOM と販売市場をお送りください。既製で足りる品目、別注が必要な品目、市場ごとの必須表示をまとめたラベル構成表をお返しします。" data-ko="BOM과 판매 시장을 보내주세요. 기성으로 가능한 품목, 맞춤이 필요한 품목, 시장별 필수 표시를 정리한 라벨 구성표를 회신합니다.">把 BOM 與銷售市場給我們，我們回一份標籤配置表：哪些買現貨、哪些要訂製、每個市場要印什麼。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取標籤配置表 →" data-en="Request a label configuration sheet →" data-fr="Demander la fiche de configuration →" data-es="Solicitar la ficha de configuración →" data-ja="ラベル構成表を依頼 →" data-ko="라벨 구성표 요청 →">索取標籤配置表 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞にある衣料副資材・包装・印刷の専門メーカーです。" data-ko="중국 둥관에 위치한 의류 부자재 및 포장 인쇄 전문 제조업체입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="의류 행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="바로가기">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り依頼" data-ko="견적 요청">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞泰閣包裝製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞泰閣包裝製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

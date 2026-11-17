@@ -1,0 +1,208 @@
+# -*- coding: utf-8 -*-
+"""2026-11-17 14:00 文章 A：印刷布標（printed fabric labels，英文主稿 + 五语翻译）"""
+
+
+def d(zh, en, fr, es, ja, ko):
+    return {"zh": zh, "en": en, "fr": fr, "es": es, "ja": ja, "ko": ko}
+
+
+A1 = [
+    ("p", d(
+        "印刷布標（printed fabric label）是在現成的布帶上印刷——緞帶、塔夫綢、羅紋帶或棉帶——而不是在提花織機上一根紗一根紗織出來。這個選擇會直接改變成本結構、起訂量、字級能做到多細，以及洗過二十次之後還剩下什麼。本文比較泰閣最常印的四種布帶，說明網版印刷與熱轉印各自勝出的場合，並列出決定 15 mm 標籤還看不看得清的圖稿與切邊規則。以下每一條都可以直接抄進採購單。",
+        "A printed fabric label is printed on ready-made tape — satin, taffeta, grosgrain or cotton — instead of being woven on a jacquard loom. That one decision changes the cost structure, the minimum order, how fine the type can be, and what is left of the label after twenty washes. This guide compares the four tapes TAGE prints most often, sets out where rotary screen printing beats thermal transfer and the other way round, and lists the artwork and edge-finishing rules that decide whether a 15 mm label stays legible. Every rule below can be copied straight into a purchase order.",
+        "Une étiquette imprimée (printed fabric label) est imprimée sur un ruban prêt à l'emploi — satin, taffetas, gros-grain ou coton — au lieu d'être tissée sur un métier jacquard. Ce seul choix change la structure de coût, la quantité minimale, la finesse du texte et ce qu'il reste de l'étiquette après vingt lavages. Ce guide compare les quatre rubans que TAGE imprime le plus souvent, précise où la sérigraphie circulaire bat le transfert thermique et inversement, et donne les règles de fichier et de finition de bord qui décident si une étiquette de 15 mm reste lisible. Chaque règle ci-dessous peut être recopiée telle quelle dans un bon de commande.",
+        "Una etiqueta impresa (printed fabric label) se imprime sobre una cinta ya fabricada — satén, tafetán, grosgrain o algodón — en lugar de tejerse en un telar jacquard. Esa sola decisión cambia la estructura de coste, el pedido mínimo, la finura del texto y lo que queda de la etiqueta tras veinte lavados. Esta guía compara las cuatro cintas que TAGE imprime con más frecuencia, explica cuándo la serigrafía rotativa supera a la transferencia térmica y al revés, y fija las reglas de arte y de borde que deciden si una etiqueta de 15 mm sigue siendo legible. Cada regla puede copiarse tal cual en un pedido.",
+        "プリント生地ラベル（printed fabric label）は、ジャカード織機で一本ずつ織るのではなく、既製のテープ——サテン、タフタ、グログラン、コットン——に印刷するラベルです。この選択だけでコスト構造、最小ロット、表現できる文字の細さ、20 回洗濯した後に何が残るかが変わります。本記事では泰閣が最も多く印刷する 4 種類のテープを比較し、ロータリースクリーン印刷と熱転写がそれぞれ有利になる条件、そして 15 mm 幅のラベルが読めるかどうかを決める入稿・断裁ルールを整理します。以下のルールはそのまま発注書に転記できます。",
+        "프린트 원단 라벨(printed fabric label)은 자카드 직기로 한 올씩 짜는 대신 이미 만들어진 테이프 — 새틴, 태피터, 그로스그레인, 코튼 — 에 인쇄한 라벨입니다. 이 선택 하나로 원가 구조, 최소 주문량, 표현 가능한 글자 크기, 20번 세탁 후 무엇이 남는지가 달라집니다. 이 글은 TAGE가 가장 많이 인쇄하는 네 가지 테이프를 비교하고, 로터리 스크린 인쇄와 열전사가 각각 유리한 조건, 그리고 15 mm 폭 라벨의 판독성을 결정하는 원고·재단 규칙을 정리합니다. 아래 규칙은 그대로 발주서에 옮겨 적을 수 있습니다.",
+    )),
+
+    ("h2", d(
+        "一、先決定印刷還是織造",
+        "1. Printed or Woven: The Decision That Sets Everything Else",
+        "1. Imprimé ou tissé : la décision qui conditionne le reste",
+        "1. Impreso o tejido: la decisión que condiciona todo lo demás",
+        "1. 印刷か製織か、最初に決めること",
+        "1. 인쇄인가 직조인가, 먼저 정할 것",
+    )),
+    ("p", d(
+        "織嘜是用有色紗線織出圖像，所以標誌不會被磨掉，但最細的字受經紗密度限制——成衣織嘜大約每公分 25–40 根經紗。印刷布標則把油墨放在平滑的布帶表面，1 mm 級的字與細襯線都做得出來，一次可以上六色，還能印變動資料（尺碼、批次、序號）。代價是油墨附著在纖維表面，必須撐過洗滌，因此油墨選擇與洗後實測比織嘜更關鍵。實務上多數品牌的分工是：洗水標與尺碼標用印刷，品牌標誌看圖稿細度在織嘜與印刷布標之間選。",
+        "A woven label builds the image from coloured yarn, so the logo cannot rub off, but the finest type is limited by warp density — roughly 25–40 ends per centimetre on garment labels. A printed label puts ink on the surface of a smooth tape, so 1 mm type and thin serifs are possible, six colours go down in one pass, and the tape can carry variable data such as size, lot or serial number. The trade-off is surface ink: it sits on the fibre and has to survive washing, so ink choice and a wash test matter more than they do on a woven label. In practice most brands print the care and size labels and choose between woven and printed for the brand mark depending on how fine the artwork is.",
+        "Une étiquette tissée construit l'image avec des fils teints : le logo ne peut pas s'effacer, mais la finesse du texte est limitée par la densité de chaîne — environ 25 à 40 fils par centimètre sur une étiquette de vêtement. Une étiquette imprimée dépose de l'encre à la surface d'un ruban lisse : un texte de 1 mm et des empattements fins sont possibles, six couleurs passent en une fois, et le ruban peut porter des données variables (taille, lot, numéro de série). La contrepartie est une encre de surface, posée sur la fibre, qui doit résister au lavage : le choix de l'encre et l'essai après lavage comptent donc plus que sur une étiquette tissée. En pratique, la plupart des marques impriment l'étiquette d'entretien et de taille, et arbitrent entre tissé et imprimé pour la marque selon la finesse du fichier.",
+        "Una etiqueta tejida construye la imagen con hilos tintados: el logotipo no se borra, pero la finura del texto está limitada por la densidad de urdimbre — unas 25 a 40 urdimbres por centímetro en una etiqueta de prenda. Una etiqueta impresa deposita tinta sobre la superficie de una cinta lisa: permite texto de 1 mm y remates finos, seis colores en una pasada y datos variables (talla, lote, número de serie). La contrapartida es la tinta superficial, que se apoya en la fibra y debe resistir el lavado, por lo que la elección de tinta y el ensayo tras lavado importan más que en una etiqueta tejida. En la práctica, la mayoría de las marcas imprime la etiqueta de cuidado y talla, y elige entre tejido e impreso para la marca según la finura del arte.",
+        "織りネームは有色の糸で画像を織るため、ロゴが摩耗で消えることはありませんが、文字の細さは経糸密度で決まります。衣料用では 1 cm あたり 25〜40 本程度です。一方プリント生地ラベルは平滑なテープ表面にインクを載せるため、1 mm の文字や細いセリフも表現でき、6 色を一度に印刷でき、サイズ・ロット・シリアルなどの可変情報も載せられます。代償は表面のインクで、繊維の上に載るため洗濯に耐える必要があります。そのためインク選定と洗濯後の実測が、織りネーム以上に重要になります。実際には多くのブランドが、洗濯表示・サイズ表示は印刷、ブランドマークは図案の細さで織りと印刷を選び分けています。",
+        "직조 라벨은 염색된 실로 이미지를 짜기 때문에 로고가 마모로 지워지지 않지만, 가장 가는 글자는 경사 밀도에 제한됩니다. 의류용은 1 cm당 25~40올 정도입니다. 반면 프린트 원단 라벨은 매끄러운 테이프 표면에 잉크를 올리므로 1 mm 글자와 얇은 세리프도 가능하고, 6색을 한 번에 인쇄하며, 사이즈·로트·시리얼 같은 가변 정보도 담을 수 있습니다. 대신 잉크가 섬유 표면에 얹히므로 세탁을 견뎌야 하고, 그래서 잉크 선택과 세탁 후 실측이 직조 라벨보다 더 중요합니다. 실무에서는 대부분 브랜드가 세탁·사이즈 라벨은 인쇄로, 브랜드 마크는 원고의 정밀도에 따라 직조와 인쇄를 나눠 씁니다.",
+    )),
+
+    ("h2", d(
+        "二、四種布帶各自能印到多細",
+        "2. Four Substrates and What Each Can Print",
+        "2. Quatre supports et ce que chacun accepte",
+        "2. Cuatro soportes y lo que admite cada uno",
+        "2. 4 種類のテープと、それぞれの表現限界",
+        "2. 네 가지 테이프와 각각의 표현 한계",
+    )),
+    ("p", d(
+        "布帶決定印刷方式、最小寬度，以及貼在後領時的手感。下表是泰閣常備的範圍；超出範圍就要訂製布帶，交期會拉長兩到三週。",
+        "The tape decides the printing method, the minimum width and the hand feel against the neck. The ranges below are what TAGE keeps in stock; outside them the tape has to be made to order, which adds two to three weeks.",
+        "Le ruban décide du procédé, de la largeur minimale et du toucher à l'encolure. Les plages ci-dessous correspondent aux stocks TAGE ; au-delà, le ruban est fabriqué sur mesure, ce qui ajoute deux à trois semaines.",
+        "La cinta decide el método de impresión, el ancho mínimo y el tacto en el cuello. Los rangos siguientes son los que TAGE tiene en stock; fuera de ellos la cinta se fabrica a medida y el plazo sube dos o tres semanas.",
+        "テープの種類が印刷方式、最小幅、後ろ襟に当たる肌触りを決めます。下表は泰閣が在庫する範囲です。これを外れるとテープを別注するため、納期が 2〜3 週間延びます。",
+        "테이프가 인쇄 방식, 최소 폭, 뒷목에 닿는 촉감을 결정합니다. 아래 범위는 TAGE가 상비하는 규격이며, 벗어나면 테이프를 별도 제작해야 해서 납기가 2~3주 늘어납니다.",
+    )),
+    ("table", (
+        [
+            d("布帶", "Tape", "Ruban", "Cinta", "テープ", "테이프"),
+            d("表面與印刷表現", "Surface and print result", "Surface et rendu", "Superficie y resultado", "表面と印刷の出方", "표면과 인쇄 결과"),
+            d("常用寬度", "Typical width", "Largeur courante", "Ancho habitual", "標準幅", "표준 폭"),
+            d("最適用途", "Best for", "Usage idéal", "Uso ideal", "最適用途", "최적 용도"),
+            d("要注意", "Watch out", "Attention", "Atención", "注意点", "주의점"),
+        ],
+        [
+            [
+                d("聚酯緞帶", "Polyester satin", "Satin polyester", "Satén de poliéster", "ポリエステルサテン", "폴리에스터 새틴"),
+                d("光亮平滑，細字與小標誌最清楚；油墨浮在表面", "Glossy and smooth; sharpest fine type and small logos; ink sits on top", "Brillant et lisse ; le texte fin et les petits logos sont les plus nets ; encre en surface", "Brillante y lisa; texto fino y logos pequeños más nítidos; tinta en superficie", "光沢があり平滑。細字と小ロゴが最も鮮明。インクは表面に載る", "광택·평활. 가는 글자와 작은 로고가 가장 선명. 잉크가 표면에 얹힘"),
+                d("15–40 mm", "15–40 mm", "15–40 mm", "15–40 mm", "15〜40 mm", "15~40 mm"),
+                d("後領或側縫品牌標", "Brand label at neck or side seam", "Marque à l'encolure ou couture de côté", "Marca en cuello o costura lateral", "後ろ襟・脇縫いのブランド表示", "뒷목·옆솔기 브랜드 라벨"),
+                d("四種中耐磨最弱，務必做洗後實測", "Lowest rub fastness of the four; test after washing", "La plus faible résistance au frottement ; essai après lavage obligatoire", "La menor resistencia al frote; ensayo tras lavado obligatorio", "4 種で最も耐摩耗が弱い。洗濯後の実測必須", "네 가지 중 마모 강도가 가장 약함. 세탁 후 시험 필수"),
+            ],
+            [
+                d("聚酯塔夫綢", "Polyester taffeta", "Taffetas polyester", "Tafetán de poliéster", "ポリエステルタフタ", "폴리에스터 태피터"),
+                d("霧面硬挺，小字銳利，合成布帶中最便宜", "Matte and firm; crisp small type; cheapest of the synthetics", "Mat, ferme ; petits caractères nets ; le moins cher des synthétiques", "Mate y firme; texto pequeño nítido; la más económica de las sintéticas", "マットで腰があり、小さい文字が鮮明。合成テープで最安", "무광·경직. 작은 글씨 선명. 합성 테이프 중 최저가"),
+                d("15–50 mm", "15–50 mm", "15–50 mm", "15–50 mm", "15〜50 mm", "15~50 mm"),
+                d("洗水標與尺碼標", "Care and size labels", "Étiquette d'entretien et de taille", "Etiqueta de cuidado y talla", "洗濯表示・サイズ表示", "세탁·사이즈 라벨"),
+                d("針孔明顯，用細一號針", "Needle marks show; use a finer needle", "Les marques d'aiguille se voient ; aiguille plus fine", "Se notan las agujas; use aguja más fina", "針穴が目立つ。ワンサイズ細い針を使う", "바늘 자국이 보임. 한 단계 가는 바늘 사용"),
+            ],
+            [
+                d("羅紋帶", "Grosgrain", "Gros-grain", "Grosgrain", "グログラン", "그로스그레인"),
+                d("橫向羅紋，只適合粗筆畫；細襯線會被羅紋吃掉", "Ribbed surface; bold artwork only, fine serifs fill in", "Nervures transversales ; dessin gras uniquement, les empattements fins se bouchent", "Nervios transversales; solo dibujo grueso, los remates finos se tapan", "横方向の畝。太い線のみ可、細いセリフは潰れる", "가로 골. 굵은 선만 가능, 가는 세리프는 메워짐"),
+                d("10–38 mm", "10–38 mm", "10–38 mm", "10–38 mm", "10〜38 mm", "10~38 mm"),
+                d("工裝、牛仔、中性款", "Workwear, denim, unisex", "Vêtements de travail, denim, unisexe", "Ropa de trabajo, denim, unisex", "ワークウェア・デニム・ユニセックス", "작업복·데님·유니섹스"),
+                d("字高低於 1.5 mm 就會糊成一片", "Type under 1.5 mm fills the ribs", "Un texte sous 1,5 mm bouche les nervures", "Texto bajo 1,5 mm se mete en los nervios", "1.5 mm 未満の文字は畝に埋まる", "1.5 mm 미만 글자는 골에 메워짐"),
+            ],
+            [
+                d("棉帶", "Cotton tape", "Ruban de coton", "Cinta de algodón", "コットンテープ", "코튼 테이프"),
+                d("天然手感、霧面；油墨被吸收，邊緣會柔化", "Natural hand feel and matte; ink absorbs and edges soften", "Toucher naturel et mat ; l'encre pénètre et les bords s'adoucissent", "Tacto natural y mate; la tinta penetra y los bordes se suavizan", "天然の風合いでマット。インクが吸収され輪郭が甘くなる", "천연 촉감·무광. 잉크가 흡수되어 경계가 부드러워짐"),
+                d("10–30 mm", "10–30 mm", "10–30 mm", "10–30 mm", "10〜30 mm", "10~30 mm"),
+                d("有機棉與天然定位的系列", "Organic and natural-positioning ranges", "Gammes bio et positionnement naturel", "Colecciones orgánicas y de posicionamiento natural", "オーガニック・天然系のライン", "오가닉·내추럴 라인"),
+                d("首次水洗收縮 2–4%，摺邊要預留", "Shrinks 2–4% on the first wash; allow for it in the fold", "Se rétracte de 2 à 4 % au premier lavage ; prévoir le pli", "Encoge 2–4 % en el primer lavado; preverlo en el doblez", "初回洗濯で 2〜4 % 収縮。折り代に織り込む", "첫 세탁에서 2~4% 수축. 접힘 여유에 반영"),
+            ],
+        ],
+    )),
+
+    ("h2", d(
+        "三、三種印刷方式的分界線",
+        "3. Printing Methods: Where Each One Wins",
+        "3. Les trois procédés et leur point de bascule",
+        "3. Los tres métodos y su punto de inflexión",
+        "3. 3 つの印刷方式の分岐点",
+        "3. 세 가지 인쇄 방식의 분기점",
+    )),
+    ("p", d(
+        "數量、色數，以及資料是否逐件不同，這三件事決定該用哪一種。同一批貨裡混用兩種方式是常態，不必全案綁死一種。",
+        "Quantity, colour count and whether the data changes per piece decide the method. Mixing two methods within one order is normal; there is no need to commit the whole collection to one.",
+        "La quantité, le nombre de couleurs et le caractère variable des données décident du procédé. Mélanger deux procédés dans une même commande est courant ; inutile d'engager toute la collection sur un seul.",
+        "La cantidad, el número de colores y si los datos cambian por pieza deciden el método. Mezclar dos métodos en un mismo pedido es normal; no hace falta comprometer toda la colección con uno solo.",
+        "数量、色数、情報が 1 枚ごとに変わるかどうか、この 3 点で方式が決まります。1 回の発注で 2 方式を併用するのは普通で、コレクション全体を 1 方式に縛る必要はありません。",
+        "수량, 색수, 정보가 장마다 달라지는지 여부가 방식을 결정합니다. 한 주문에서 두 방식을 섞는 것은 일반적이며, 컬렉션 전체를 한 방식으로 묶을 필요는 없습니다.",
+    )),
+    ("ul", [
+        d("網版印刷：一色一版，從數千件起量最划算，能準確落在 Pantone 特別色；20 mm 布帶上跑六色是可行的。",
+          "Rotary screen: one screen per colour, so it wins from a few thousand pieces upward and lands Pantone spot colours accurately; six colours are practical on a 20 mm tape.",
+          "Sérigraphie circulaire : un écran par couleur, donc rentable à partir de quelques milliers de pièces, avec des Pantone justes ; six couleurs tiennent sur un ruban de 20 mm.",
+          "Serigrafía rotativa: una pantalla por color, rentable desde unos miles de piezas y con Pantone exactos; seis colores caben en una cinta de 20 mm.",
+          "ロータリースクリーン：1 色 1 版のため数千枚から有利で、Pantone のスポット色が正確に出ます。20 mm 幅で 6 色は現実的です。",
+          "로터리 스크린: 1색 1판이라 수천 장부터 유리하고 팬톤 별색을 정확히 맞춥니다. 20 mm 폭에서 6색까지 현실적입니다."),
+        d("熱轉印：沒有網版也沒有刀模，檔案直接進機台，所以短單、以及尺碼或批號逐件不同的標籤都以它為默认。",
+          "Thermal transfer: no screen and no plate, the file goes straight to the line, which makes it the default for short runs and for labels where size or lot number changes piece by piece.",
+          "Transfert thermique : ni écran ni forme, le fichier part directement en machine ; c'est la solution par défaut des petites séries et des étiquettes dont la taille ou le lot change à chaque pièce.",
+          "Transferencia térmica: sin pantalla ni forma, el archivo va directo a la máquina; es la opción por defecto para series cortas y para etiquetas cuyo tamaño o lote cambia pieza a pieza.",
+          "熱転写：版も抜き型も不要で、データをそのまま機台へ送れます。短ロットや、サイズ・ロット番号が 1 枚ごとに変わるラベルはこれが既定です。",
+          "열전사: 판도 금형도 없이 파일이 바로 기기에 들어가므로, 짧은 수량과 장마다 사이즈·로트가 바뀌는 라벨의 기본 선택입니다."),
+        d("數位碳粉或噴墨：適合打樣、樣品套組與一次性圖稿驗證；單價偏高，數百件以上很少當生產主力。",
+          "Digital toner or inkjet: best for proofs, sample sets and one-off artwork tests; unit cost stays high, so it rarely becomes the production route above a few hundred pieces.",
+          "Toner numérique ou jet d'encre : idéal pour les épreuves, les jeux d'échantillons et la validation d'un fichier ; le coût unitaire reste élevé, rarement rentable au-delà de quelques centaines de pièces.",
+          "Tóner digital o inyección: ideal para pruebas, juegos de muestras y validación de un arte; el coste unitario sigue alto y rara vez es la vía de producción por encima de unos cientos de piezas.",
+          "デジタルトナー・インクジェット：校正、サンプルセット、図案の一度きりの検証向け。単価が高く、数百枚を超えると生産手段にはなりにくい方式です。",
+          "디지털 토너·잉크젯: 교정, 샘플 세트, 원고 단발 검증에 적합합니다. 단가가 높아 수백 장을 넘으면 양산 수단이 되기 어렵습니다."),
+    ]),
+
+    ("h2", d(
+        "四、能活過布帶的圖稿規則",
+        "4. Artwork Rules That Survive the Tape",
+        "4. Règles de fichier qui survivent au ruban",
+        "4. Reglas de arte que sobreviven a la cinta",
+        "4. テープ上で生き残る入稿ルール",
+        "4. 테이프 위에서 살아남는 원고 규칙",
+    )),
+    ("p", d(
+        "布帶印刷出問題，原因通常很無聊：字太小、線太細、反白。以下門檻是泰閣在出校樣前一定先檢查的項目，先自己對一遍可以省掉一輪往返。",
+        "Tape printing fails for boring reasons: type too small, lines too thin, reversed type. These thresholds are what TAGE checks before a proof is issued; running through them yourself saves one round of emails.",
+        "L'impression sur ruban échoue pour des raisons banales : texte trop petit, filets trop fins, texte en réserve. Voici les seuils que TAGE vérifie avant d'émettre une épreuve ; les contrôler vous-même évite un aller-retour.",
+        "La impresión sobre cinta falla por motivos aburridos: texto demasiado pequeño, líneas demasiado finas, texto en negativo. Estos umbrales son los que TAGE revisa antes de emitir una prueba; comprobarlos usted mismo ahorra un intercambio.",
+        "テープ印刷の失敗は大概退屈な原因です。文字が小さい、線が細い、反転文字。以下は泰閣が校正紙を出す前に必ず確認するしきい値で、事前に自分で見ておけば往復が 1 回減ります。",
+        "테이프 인쇄 실패는 대개 지루한 이유입니다. 글자가 너무 작거나, 선이 너무 얇거나, 반전 문자. 아래 기준은 TAGE가 교정본을 보내기 전 반드시 확인하는 항목이며, 미리 점검하면 왕복이 한 번 줄어듭니다.",
+    )),
+    ("ul", [
+        d("拉丁字母字高至少 1.2 mm，中日韓文字至少 1.5 mm；低於這個值，油墨會往字腔裡漲。",
+          "Cap height of at least 1.2 mm for Latin text and 1.5 mm for Chinese, Japanese or Korean characters; below that the ink spreads into the counters.",
+          "Hauteur de capitale d'au moins 1,2 mm pour le latin et 1,5 mm pour les caractères chinois, japonais ou coréens ; en dessous, l'encre envahit les contre-formes.",
+          "Altura de mayúscula mínima de 1,2 mm para texto latino y 1,5 mm para caracteres chinos, japoneses o coreanos; por debajo, la tinta invade los huecos.",
+          "ラテン文字はキャップハイト 1.2 mm 以上、中日韓文字は 1.5 mm 以上。これを下回るとインクが字腔に流れ込みます。",
+          "라틴 문자는 캡 하이트 1.2 mm 이상, 중일한 문자는 1.5 mm 이상. 이보다 작으면 잉크가 글자 속공간으로 번집니다."),
+        d("線寬不小於 0.25 mm；反白（白字印在色地上）不要低於 6 pt，否則油墨會把字填掉。",
+          "No line thinner than 0.25 mm, and no reversed type (white on colour) below 6 pt — the ink bleeds and fills the letters.",
+          "Aucun filet sous 0,25 mm, et pas de texte en réserve sous 6 pt : l'encre déborde et bouche les lettres.",
+          "Ninguna línea por debajo de 0,25 mm, y nada de texto en negativo por debajo de 6 pt: la tinta se corre y tapa las letras.",
+          "線幅は 0.25 mm 以上。反転文字（色地に白抜き）は 6 pt 未満にしないでください。インクが広がって文字が埋まります。",
+          "선 굵기는 0.25 mm 이상, 반전 문자(색지에 흰 글자)는 6 pt 미만 금지. 잉크가 번져 글자를 메웁니다."),
+        d("條碼放塔夫綢，不要放緞帶：緞面反光會干擾掃描光束，兩側各留 3 mm 靜區。",
+          "Barcodes belong on taffeta, not satin: the gloss reflects the scanner beam and the read rate drops. Keep a 3 mm quiet zone on each side.",
+          "Les codes-barres vont sur taffetas, pas sur satin : le brillant renvoie le faisceau du lecteur et le taux de lecture chute. Prévoyez 3 mm de zone de silence de chaque côté.",
+          "Los códigos de barras van en tafetán, no en satén: el brillo refleja el haz del lector y baja la tasa de lectura. Deje 3 mm de zona de silencio a cada lado.",
+          "バーコードはサテンではなくタフタへ。光沢がスキャナの光束を反射し、読取率が落ちます。両側に 3 mm の余白（クワイエットゾーン）を確保してください。",
+          "바코드는 새틴이 아니라 태피터에 넣습니다. 광택이 스캐너 빔을 반사해 판독률이 떨어집니다. 양쪽에 3 mm 여백(콰이엇 존)을 두세요."),
+    ]),
+
+    ("h2", d(
+        "五、切邊、摺法與車縫餘量",
+        "5. Edges, Folds and Stitch Allowance",
+        "5. Bords, plis et marge de couture",
+        "5. Bordes, dobleces y margen de costura",
+        "5. 断裁、折り、縫い代",
+        "5. 재단, 접힘, 봉제 여유",
+    )),
+    ("p", d(
+        "印刷布帶兩端是切斷面，不封邊就會在洗滌中散紗。熱切或超音波切把紗端熔封，是緞帶與塔夫綢的標準做法；棉帶通常改用摺邊車縫，因為熔封會讓末端變硬。摺法跟著車縫位置走：兩端折（end fold）把兩個短邊折進去，裁切長度要加 10 mm；中折（center fold）對折做後領標，長度不用加但要標明摺線；四邊折（miter fold）四邊都收，適合四面車死的標籤。採購單上請同時寫明裁切長度、摺法與車縫餘量——20 mm 布帶做兩端折，每個標籤要用掉約 30 mm 的材料，這才是你在付的錢。",
+        "A printed tape has two cut ends, and a cut end frays in the wash unless it is sealed. Hot cutting or ultrasonic cutting welds the yarn ends and is the standard for satin and taffeta; cotton tape is usually folded and stitched instead, because a welded edge stiffens the end. Folds follow the sewing position: an end fold turns both short ends under and needs 10 mm of extra cut length; a centre fold doubles the tape for a neck label and needs no extra length but must state the fold line; a miter fold turns all four edges for a label stitched on all sides. Put the cut length, the fold type and the stitch allowance on the purchase order — a 20 mm tape with an end fold consumes about 30 mm of material per label, and that is what you are paying for.",
+        "Un ruban imprimé a deux extrémités coupées, et une extrémité coupée s'effiloche au lavage si elle n'est pas scellée. La coupe à chaud ou ultrasonique soude les fils et constitue le standard du satin et du taffetas ; le ruban de coton est plutôt plié et cousu, car un bord soudé durcit l'extrémité. Les plis suivent la position de couture : le pli aux deux extrémités (end fold) replie les deux bords courts et exige 10 mm de longueur en plus ; le pli central double le ruban pour une étiquette d'encolure, sans longueur supplémentaire mais avec la ligne de pli indiquée ; le pli en onglet (miter) replie les quatre bords pour une étiquette cousue sur tout le pourtour. Indiquez longueur de coupe, type de pli et marge de couture sur le bon de commande : un ruban de 20 mm avec pli aux extrémités consomme environ 30 mm de matière par étiquette, et c'est cela que vous payez.",
+        "Una cinta impresa tiene dos extremos cortados, y un extremo cortado se deshilacha en el lavado si no está sellado. El corte en caliente o por ultrasonidos sella los hilos y es el estándar en satén y tafetán; la cinta de algodón suele plegarse y coserse, porque un borde soldado endurece el extremo. Los dobleces siguen la posición de costura: el doblez en los dos extremos (end fold) repliega ambos bordes cortos y exige 10 mm más de longitud de corte; el doblez central duplica la cinta para una etiqueta de cuello, sin longitud extra pero indicando la línea de doblez; el doblez en inglete (miter) repliega los cuatro bordes para una etiqueta cosida por todo el perímetro. Indique longitud de corte, tipo de doblez y margen de costura en el pedido: una cinta de 20 mm con doblez en extremos consume unos 30 mm de material por etiqueta, y eso es lo que está pagando.",
+        "印刷テープは両端が断裁面で、封止しないと洗濯でほつれます。熱断裁や超音波断裁は糸端を溶着させるため、サテンとタフタの標準処理です。コットンテープは溶着すると端が硬くなるので、折り返して縫うのが一般的です。折り方は縫い位置で決まります。両端折り（end fold）は短辺 2 辺を折り込むため裁断長に 10 mm 加算、中折り（center fold）は後ろ襟用に二つ折りで長さの加算は不要ですが折り線の指定が必要、四辺折り（miter fold）は四辺すべてを折り返し、全周を縫うラベルに向きます。発注書には裁断長・折り方・縫い代を必ず併記してください。20 mm 幅の両端折りは 1 枚あたり約 30 mm の材料を使い、それが価格になります。",
+        "프린트 테이프는 양 끝이 재단면이라 봉합하지 않으면 세탁에서 올이 풀립니다. 열 절단이나 초음파 절단은 실 끝을 융착시키며 새틴·태피터의 표준 처리입니다. 코튼 테이프는 융착하면 끝이 뻣뻣해져서 접어서 박는 방식이 일반적입니다. 접힘은 봉제 위치를 따릅니다. 양끝 접기(end fold)는 짧은 두 변을 접어 넣어 재단 길이에 10 mm를 더하고, 중앙 접기(center fold)는 뒷목 라벨용으로 두 겹이 되며 길이 추가는 없지만 접힘선을 지정해야 하고, 사방 접기(miter fold)는 네 변을 모두 접어 전둘레를 박는 라벨에 맞습니다. 발주서에 재단 길이·접힘 방식·봉제 여유를 함께 적으세요. 20 mm 폭 양끝 접기는 라벨당 약 30 mm의 재료를 쓰며, 그것이 곧 가격입니다.",
+    )),
+
+    ("h2", d(
+        "六、洗後牢度與各市場必印內容",
+        "6. Wash Durability and What Each Market Requires",
+        "6. Tenue au lavage et mentions obligatoires par marché",
+        "6. Resistencia al lavado y menciones obligatorias por mercado",
+        "6. 洗濯堅牢度と市場ごとの必須表示",
+        "6. 세탁 견뢰도와 시장별 필수 표시",
+    )),
+    ("p", d(
+        "牢度是測出來的，不是講出來的。請供應商在實際布帶與實際油墨上做 ISO 105-C06 耐洗試驗（40 °C）與 ISO 105-X12 摩擦試驗，然後拿三片大貨標籤下水洗一次再讀一遍：字高 1.2 mm 的內容如果在洗後糊掉，就代表它本來就太小。內容則是各市場分歧最大的地方。歐盟法規 (EU) No 1007/2011 要求纖維成分標在永久標上，洗護符號依 EN ISO 3758；法國另加消費者法典要求的責任主體識別與法文護理用語，西班牙同類資訊須以西文呈現。日本依家庭用品品質表示法標示組成（混用率）、JIS L 0001 的洗濯表示、表示者名稱地址與原産国。韓國須標混用率、KS K 0021 的取扱表示與原産地。一份圖稿不可能同時滿足四個市場——這正是洗水標用印刷的理由：你改的是檔案，不是織造程式。",
+        "Durability is a test, not a claim. Ask for ISO 105-C06 wash fastness at 40 °C and ISO 105-X12 rub fastness results on the actual tape and the actual ink, then wash three production labels once and read them again: if 1.2 mm text closes up, it was already too small. Content is where markets diverge most. In the EU, Regulation (EU) No 1007/2011 requires the fibre composition on a permanent label and EN ISO 3758 governs the care symbols. France adds the responsible party's identity and the French wording for care terms under the consumer code; Spain requires the same information in Spanish. In Japan the Household Goods Quality Labelling Act requires fibre composition, care symbols under JIS L 0001, the labeller's name and address, and the country of origin. In Korea, fibre content, care symbols under KS K 0021 and the country of origin are mandatory. One artwork cannot serve four markets at once — which is exactly why printed labels own the care text: you change the file, not the weaving programme.",
+        "La tenue est un essai, pas une affirmation. Demandez les résultats ISO 105-C06 en lavage à 40 °C et ISO 105-X12 au frottement sur le ruban et l'encre réels, puis lavez trois étiquettes de production et relisez-les : un texte de 1,2 mm qui se bouche était déjà trop petit. Le contenu, lui, varie fortement selon le marché. Dans l'Union, le règlement (UE) n° 1007/2011 impose la composition des fibres sur une étiquette permanente, et l'EN ISO 3758 régit les symboles d'entretien. La France ajoute l'identification du responsable et la terminologie d'entretien en français au titre du code de la consommation ; l'Espagne exige les mêmes informations en espagnol. Au Japon, la loi sur l'étiquetage de qualité des biens de consommation courante impose la composition, les symboles de lavage selon JIS L 0001, le nom et l'adresse du responsable de l'étiquetage et l'origine. En Corée, la teneur en fibres, les symboles selon KS K 0021 et l'origine sont obligatoires. Un seul fichier ne peut pas servir quatre marchés : c'est précisément pourquoi le texte d'entretien va sur une étiquette imprimée — vous changez le fichier, pas le programme de tissage.",
+        "La resistencia se mide, no se afirma. Pida los resultados de solidez al lavado ISO 105-C06 a 40 °C y de frote ISO 105-X12 sobre la cinta y la tinta reales, lave tres etiquetas de producción y vuelva a leerlas: un texto de 1,2 mm que se cierra ya era demasiado pequeño. El contenido es donde más difieren los mercados. En la UE, el Reglamento (UE) n.º 1007/2011 exige la composición de fibras en una etiqueta permanente y la EN ISO 3758 rige los símbolos de cuidado. Francia añade la identificación del responsable y la terminología de cuidado en francés según el código de consumo; España exige la misma información en español. En Japón, la ley de etiquetado de calidad de bienes de consumo exige composición, símbolos según JIS L 0001, nombre y dirección del etiquetador y país de origen. En Corea son obligatorios el contenido de fibra, los símbolos según KS K 0021 y el país de origen. Un solo arte no sirve para cuatro mercados: por eso el texto de cuidado va en etiqueta impresa, porque se cambia el archivo y no el programa de tejido.",
+        "堅牢度は試験で示すもので、言葉ではありません。実際のテープと実際のインクで ISO 105-C06（40 °C 洗濯）と ISO 105-X12（摩擦）の結果を求め、量産ロットから 3 枚を洗濯して読み直してください。1.2 mm の文字が洗後に潰れるなら、そもそも小さすぎたということです。表示内容は市場で最も差が出ます。EU では規則 (EU) No 1007/2011 が繊維組成を永久表示ラベルに求め、洗濯表示は EN ISO 3758 に従います。フランスは消費者法典に基づき責任主体の表示とフランス語の取扱用語を追加し、スペインは同じ情報をスペイン語で求めます。日本は家庭用品品質表示法により、組成（混用率）、JIS L 0001 の洗濯表示、表示者名・連絡先、原産国を表示する義務があります。韓国は混用率、KS K 0021 の取扱表示、原産地が必須です。1 つの図案で 4 市場は賄えません。だからこそ取扱表示は印刷ラベルに向くのです。変えるのは織りプログラムではなくデータだからです。",
+        "견뢰도는 시험으로 증명하는 것이지 주장이 아닙니다. 실제 테이프와 실제 잉크로 ISO 105-C06(40 °C 세탁)과 ISO 105-X12(마찰) 결과를 요구하고, 양산 로트에서 3장을 세탁한 뒤 다시 읽어보세요. 1.2 mm 글자가 세탁 후 뭉개진다면 처음부터 너무 작았던 것입니다. 표시 내용은 시장별 차이가 가장 큽니다. EU에서는 규정 (EU) No 1007/2011이 섬유 조성을 영구 라벨에 요구하고, 세탁 기호는 EN ISO 3758을 따릅니다. 프랑스는 소비자법에 따라 책임 주체 표시와 프랑스어 취급 용어를 추가하고, 스페인은 같은 정보를 스페인어로 요구합니다. 일본은 가정용품품질표시법에 따라 조성(혼용률), JIS L 0001 세탁 기호, 표시자 명칭·연락처, 원산국을 표시해야 합니다. 한국은 혼용률, KS K 0021 취급 표시, 원산지가 필수입니다. 하나의 원고로 네 시장을 커버할 수 없습니다. 그래서 취급 표시는 인쇄 라벨로 가는 것입니다. 바꾸는 것이 직조 프로그램이 아니라 데이터 파일이기 때문입니다.",
+    )),
+
+    ("callout", d(
+        "一句判斷：標籤要印尺碼、批號、序號，或字高在 1.5 mm 以下，就印刷；要跟著衣服洗十年還看得見品牌，就織造。多數系列最後兩種都用——品牌標織造，洗水標印刷。",
+        "Rule of thumb: if the label carries size, lot or serial data, or any type under 1.5 mm, print it. If it must carry the brand through years of washing, weave it. Most collections end up using both — a woven brand mark and a printed care label.",
+        "Règle simple : si l'étiquette porte une taille, un lot, un numéro de série ou du texte sous 1,5 mm, imprimez-la. Si elle doit porter la marque à travers des années de lavage, tissez-la. La plupart des collections finissent par utiliser les deux : marque tissée, étiquette d'entretien imprimée.",
+        "Regla simple: si la etiqueta lleva talla, lote, número de serie o texto por debajo de 1,5 mm, imprímala. Si debe llevar la marca durante años de lavado, téjala. La mayoría de las colecciones acaban usando ambas: marca tejida y etiqueta de cuidado impresa.",
+        "判断は一行で済みます。サイズ・ロット・シリアル、または 1.5 mm 未満の文字を載せるなら印刷。ブランドを何年も洗濯に耐えて残すなら製織。多くのコレクションは結局どちらも使い、ブランドは織り、洗濯表示は印刷になります。",
+        "판단은 한 줄입니다. 사이즈·로트·시리얼, 또는 1.5 mm 미만 글자를 담아야 하면 인쇄. 브랜드를 수년간 세탁 속에서 유지해야 하면 직조. 대부분의 컬렉션은 결국 둘 다 쓰며, 브랜드는 직조, 세탁 표시는 인쇄로 갑니다.",
+    )),
+]
