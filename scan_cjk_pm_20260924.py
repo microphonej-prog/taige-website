@@ -9,7 +9,7 @@ import re, sys
 
 SLUGS = ["garment-packaging-transit-testing.html", "shirt-blouse-trims-guide.html"]
 LANGS = ["en", "ja", "ko", "fr", "es"]
-ALLOW = ("泰閣包裝", "東莞泰閣包裝製品有限公司", "虎門鎮", "東莞市", "廣東省", "泰閣包装")
+ALLOW = ("泰閣包裝", "東莞市泰閣包装製品有限公司", "虎門鎮", "東莞市", "廣東省", "泰閣包装")
 SIMP_ONLY = re.compile(r'[纸样说签码烫尔东们这为]')
 CJK_KANA = re.compile(r'[\u4e00-\u9fff\u3040-\u30ff]')
 

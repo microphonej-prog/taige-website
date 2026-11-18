@@ -53,7 +53,7 @@ for l in LANGS:
 
 print("\n=== ② 语言页正文中文残留（fr/es/ja/ko，排除品牌名与语言按钮标题）===")
 CJK = re.compile(r"[\u4e00-\u9fff]")
-ALLOW = ["泰閣", "泰阁", "江磊", "吳文潘", "陳清港", "東莞泰閣包裝製品有限公司", "首頁", "輔料 FAQ",
+ALLOW = ["泰閣", "泰阁", "江磊", "吳文潘", "陳清港", "東莞市泰閣包装製品有限公司", "首頁", "輔料 FAQ",
          "日本語", "繁體中文", "한국어", "Français", "Español", "English", "中文"]
 for l in ["fr", "es", "ja", "ko"]:
     for s in SLUGS:
