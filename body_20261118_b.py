@@ -1,0 +1,218 @@
+# -*- coding: utf-8 -*-
+"""2026-11-18 08:00 批次 B：輔料測試報告怎麼讀（ISO 105 / JIS / KS 級數判定）"""
+
+SLUG = "trim-test-report-reading-guide"
+CATEGORY = {
+    "zh": "品質與檢測", "en": "Quality & Testing", "fr": "Qualité et essais",
+    "es": "Calidad y ensayos", "ja": "品質・試験", "ko": "품질·시험",
+}
+TITLE = {
+    "zh": "輔料測試報告怎麼讀：ISO 105、JIS L 0844、KS K 0650 與 4 級門檻 | TAGE",
+    "en": "How to Read an Apparel Trim Test Report: ISO 105, JIS L 0844, KS K 0650 | TAGE",
+    "fr": "Lire un rapport d'essai d'accessoires : ISO 105, JIS L 0844, KS K 0650 | TAGE",
+    "es": "Cómo leer un informe de ensayo de accesorios: ISO 105, JIS L 0844, KS K 0650 | TAGE",
+    "ja": "副資材の試験報告書の読み方：ISO 105・JIS L 0844・KS K 0650 と 4 級判定 | TAGE",
+    "ko": "부자재 시험 성적서 읽는 법: ISO 105·JIS L 0844·KS K 0650과 4급 판정 | TAGE",
+}
+DESC = {
+    "zh": "輔料測試報告怎麼讀：方法編號先於結論、灰卡 1–5 級與半級、耐洗與耐摩擦的常見門檻、樣品批號與報告有效期，以及報告不能替代的三件事。附歐美日韓標準對照。",
+    "en": "How to read a trim test report: method codes before results, grey scale grades 1 to 5, typical wash and rub thresholds, lot numbers and report validity.",
+    "fr": "Lire un rapport d'essai : le code méthode prime sur le résultat, échelle de gris 1 à 5, seuils usuels de lavage et de frottement, numéro de lot et validité, et trois limites du rapport.",
+    "es": "Leer un informe de ensayo: el código de método manda sobre el resultado, escala de grises de 1 a 5, umbrales habituales de lavado y frote, lote y validez, y tres límites del informe.",
+    "ja": "試験報告書の読み方。方法番号が結論より先、グレースケール 1〜5 級と半級、洗濯・摩擦の一般的なしきい値、試験片のロットと有効期限、報告書で代替できない 3 点を整理します。",
+    "ko": "시험 성적서 읽는 법. 결론보다 방법 번호가 먼저, 그레이 스케일 1~5급과 반급, 세탁·마찰의 일반적 기준, 시험편 로트와 유효 기간, 성적서로 대체할 수 없는 세 가지를 정리합니다.",
+}
+H1 = {
+    "zh": "輔料測試報告怎麼讀：方法編號、級數與門檻",
+    "en": "How to Read an Apparel Trim Test Report",
+    "fr": "Lire un rapport d'essai d'accessoires",
+    "es": "Cómo leer un informe de ensayo de accesorios",
+    "ja": "副資材の試験報告書の読み方",
+    "ko": "부자재 시험 성적서 읽는 법",
+}
+
+BLOCKS = [
+    ("p", {
+        "zh": "收到一份輔料測試報告，多數人先看最後一頁的結論，這是讀錯方向。報告的第一行、也就是方法編號與測試條件，才是決定這份報告能不能用的地方：同樣寫「耐洗色牢度 4 級」，用 40 度溫和洗與用 60 度程序洗出來的 4 級不是同一件事。本文按讀報告的順序講：方法與條件、級數怎麼讀、常見門檻、四欄最容易漏看的資訊，以及報告不能替代的三件事。",
+        "en": "Most people open a trim test report and read the conclusion on the last page, which is the wrong end. The method code and test conditions on the first page decide whether the report can be used at all: a grade 4 for colourfastness to washing means two different things when one lab ran a mild 40 degrees programme and the other ran a 60 degrees cycle. This guide follows the order in which a report should be read: method and conditions, how grades work, typical thresholds, the four fields people skip, and the three things a report cannot replace.",
+        "fr": "La plupart des lecteurs ouvrent un rapport d'essai et vont directement à la conclusion de la dernière page : c'est le mauvais bout. Le code méthode et les conditions d'essai, en première page, décident si le rapport est utilisable. Un degré 4 de solidité au lavage ne signifie pas la même chose selon que le laboratoire a lancé un programme doux à 40 degrés ou un cycle à 60 degrés. Ce guide suit l'ordre de lecture : méthode et conditions, signification des degrés, seuils usuels, les quatre champs que l'on saute, et les trois choses qu'un rapport ne remplace pas.",
+        "es": "Casi todo el mundo abre un informe de ensayo y va a la conclusión de la última página, que es el extremo equivocado. El código de método y las condiciones de ensayo de la primera página deciden si el informe sirve: un grado 4 de solidez al lavado no significa lo mismo si el laboratorio usó un programa suave a 40 grados o un ciclo a 60 grados. Esta guía sigue el orden correcto de lectura: método y condiciones, cómo se leen los grados, umbrales habituales, los cuatro campos que se saltan y las tres cosas que un informe no sustituye.",
+        "ja": "試験報告書を受け取ると、多くの人は最終ページの結論を先に読みますが、それは逆です。使える報告書かどうかを決めるのは 1 ページ目の方法番号と試験条件です。同じ「洗濯堅ろう度 4 級」でも、40 度の穏やかな条件と 60 度のサイクルでは意味が違います。本稿は読む順に沿って、方法と条件、級数の読み方、一般的なしきい値、見落としやすい 4 項目、そして報告書で代替できない 3 点を整理します。",
+        "ko": "시험 성적서를 받으면 대부분 마지막 페이지의 결론부터 봅니다. 그러나 방향이 반대입니다. 성적서를 쓸 수 있는지 결정하는 것은 1페이지의 방법 번호와 시험 조건입니다. 같은 '세탁 견뢰도 4급'이라도 40도 완만한 조건과 60도 사이클에서는 의미가 다릅니다. 이 글은 읽는 순서대로 방법과 조건, 급수 판독, 일반적 기준, 놓치기 쉬운 네 항목, 성적서로 대체할 수 없는 세 가지를 정리합니다.",
+    }),
+    ("h2", {
+        "zh": "一、先看方法編號與測試條件，再看結論",
+        "en": "1. Method Code and Conditions Before the Conclusion",
+        "fr": "1. Le code méthode et les conditions avant la conclusion",
+        "es": "1. Primero el método y las condiciones, después la conclusión",
+        "ja": "1. 結論より先に方法番号と試験条件を見る",
+        "ko": "1. 결론보다 방법 번호와 시험 조건을 먼저 본다",
+    }),
+    ("p", {
+        "zh": "耐洗色牢度在國際上有多個方法並存：ISO 105-C06 依洗衣機或手洗條件分 A1S、A2S、B1S、C1S 等程序，ISO 6330 規定前處理與乾燥方式；美國用 AATCC 61，日本用 JIS L 0844，韓國用 KS K 0430 系列。方法不同、條件不同，級數不能互相比較，也不能把 40 度溫和洗的 4 級寫成「可機洗 60 度」。看到報告先確認三件事：方法編號帶的是哪一檔條件、試驗幾次循環、乾燥方式是平乾還是滾筒烘乾。",
+        "en": "Wash fastness exists in several parallel methods. ISO 105-C06 splits into programmes such as A1S, A2S, B1S and C1S depending on machine or hand conditions, with ISO 6330 governing pre-treatment and drying; the United States uses AATCC 61, Japan JIS L 0844, Korea the KS K 0430 series. Different methods and conditions cannot be compared, and a grade 4 from a mild 40 degrees programme cannot be presented as machine washable at 60. Before reading the result, confirm which condition the method code carries, how many cycles were run, and whether drying was line or tumble.",
+        "fr": "La solidité au lavage coexiste en plusieurs méthodes. ISO 105-C06 se décline en programmes A1S, A2S, B1S, C1S selon les conditions machine ou main, avec ISO 6330 pour le prétraitement et le séchage ; les États-Unis utilisent AATCC 61, le Japon JIS L 0844, la Corée la série KS K 0430. Des méthodes et conditions différentes ne se comparent pas, et un degré 4 obtenu à 40 degrés ne peut pas être présenté comme lavable en machine à 60. Avant le résultat, vérifiez la condition portée par le code, le nombre de cycles et le mode de séchage.",
+        "es": "La solidez al lavado convive con varios métodos. ISO 105-C06 se divide en programas A1S, A2S, B1S y C1S según condiciones de máquina o mano, con ISO 6330 para pretratamiento y secado; EE. UU. usa AATCC 61, Japón JIS L 0844, Corea la serie KS K 0430. Métodos y condiciones distintas no se comparan, y un grado 4 obtenido a 40 grados no puede presentarse como lavable a máquina a 60. Antes del resultado, confirme qué condición lleva el código, cuántos ciclos se hicieron y si el secado fue en línea o en secadora.",
+        "ja": "洗濯堅ろう度には複数の方法が併存します。ISO 105-C06 は機械洗濯か手洗いかに応じて A1S、A2S、B1S、C1S などの条件に分かれ、前処理と乾燥は ISO 6330 に従います。米国は AATCC 61、日本は JIS L 0844、韓国は KS K 0430 系列です。方法と条件が違えば級数は比較できず、40 度の穏やかな条件での 4 級を「60 度で洗濯機可」と表示することはできません。結果の前に、方法番号がどの条件か、何サイクルか、乾燥が自然乾燥かタンブラー乾燥かを確認します。",
+        "ko": "세탁 견뢰도에는 여러 방법이 병존합니다. ISO 105-C06은 기계세탁과 손세탁 조건에 따라 A1S, A2S, B1S, C1S 등으로 나뉘고 전처리와 건조는 ISO 6330을 따릅니다. 미국은 AATCC 61, 일본은 JIS L 0844, 한국은 KS K 0430 계열을 씁니다. 방법과 조건이 다르면 급수를 비교할 수 없고, 40도 완만 조건의 4급을 '60도 기계세탁 가능'으로 표시할 수 없습니다. 결과 전에 방법 번호의 조건, 사이클 횟수, 건조 방식(자연건조·건조기)을 확인합니다.",
+    }),
+    ("h2", {
+        "zh": "二、灰卡 1 到 5 級怎麼讀",
+        "en": "2. Reading the Grey Scale from 1 to 5",
+        "fr": "2. Lire l'échelle de gris de 1 à 5",
+        "es": "2. Leer la escala de grises de 1 a 5",
+        "ja": "2. グレースケール 1〜5 級の読み方",
+        "ko": "2. 그레이 스케일 1~5급 읽는 법",
+    }),
+    ("p", {
+        "zh": "變褪色與沾色各用一張灰卡評級，1 級最差、5 級最好，實務上大量出現的是 3 級、3-4 級與 4 級，半級（3-4）代表介於兩者之間。同一份報告裡要看兩組數字：變色指的是樣品自身顏色變化，沾色指的是多纖維貼襯布上每個纖維條被染的程度。只看變色不看沾色是最常見的誤讀——一件深色彈性帶變色 4 級，但沾到白色棉條只有 2-3 級，這批帶子在客戶那裡就是不合格品。",
+        "en": "Change in colour and staining are graded separately against two grey scales, 1 the worst and 5 the best. In practice most results sit at 3, 3-4 and 4, where a half grade means between two boxes. Every report carries two sets of numbers: change in colour describes the sample itself, staining describes how much each strip of the adjacent multifibre fabric took up. Reading only the change column is the commonest misreading. A dark elastic band can score 4 for change while staining the white cotton strip at 2-3, and that band will fail at the customer.",
+        "fr": "Le changement de teinte et le dégorgement sont notés séparément sur deux échelles de gris, 1 le plus mauvais et 5 le meilleur ; en pratique les résultats se situent à 3, 3-4 et 4, une demi-note signifiant entre deux boîtes. Chaque rapport porte deux séries : le changement décrit l'échantillon, le dégorgement décrit ce que chaque bande du tissu multifibres a absorbé. Lire uniquement la colonne changement est l'erreur la plus fréquente. Un élastique foncé peut tenir 4 en changement tout en tachant la bande coton blanche à 2-3 : ce lot sera refusé chez le client.",
+        "es": "El cambio de color y el sangrado se puntúan por separado con dos escalas de grises, 1 el peor y 5 el mejor; en la práctica casi todo cae en 3, 3-4 y 4, donde media nota significa entre dos casillas. Cada informe trae dos series: el cambio describe la muestra y el sangrado describe cuánto absorbió cada tira de la tela multifibra. Leer solo la columna de cambio es el error más común. Una cinta elástica oscura puede dar 4 en cambio y teñir la tira de algodón blanco a 2-3: ese lote será rechazado en el cliente.",
+        "ja": "変退色と汚染は別々のグレースケールで評価し、1 級が最下、5 級が最良です。実際には 3 級、3-4 級、4 級に大半が集まり、半級はその中間を意味します。報告書には必ず 2 系統の数値があります。変退色は試験片そのものの色変化、汚染は多繊交織布の各繊維帯がどれだけ染まったかです。変退色だけを見て汚染を見ないのが最も多い誤読です。濃色のゴムテープが変退色 4 級でも、白い綿帯への汚染が 2-3 級なら、そのロットは客先で不合格になります。",
+        "ko": "변퇴색과 오염은 각각 다른 그레이 스케일로 평가하며 1급이 최하, 5급이 최상입니다. 실제로는 3급, 3-4급, 4급에 대부분 몰리고 반급은 그 사이를 뜻합니다. 성적서에는 항상 두 계열의 숫자가 있습니다. 변색은 시험편 자체의 색 변화, 오염은 다섬 혼방포 각 섬유 띠가 얼마나 물들었는지를 나타냅니다. 변색만 보고 오염을 보지 않는 것이 가장 흔한 오독입니다. 진한 고무 테이프가 변색 4급이어도 흰 면 띠 오염이 2-3급이면 그 로트는 고객사에서 불합격입니다.",
+    }),
+    ("h2", {
+        "zh": "三、常見項目與客戶實際採用的門檻",
+        "en": "3. Common Tests and the Thresholds Buyers Actually Use",
+        "fr": "3. Essais courants et seuils réellement appliqués",
+        "es": "3. Ensayos habituales y umbrales que aplican los clientes",
+        "ja": "3. 一般的な試験項目と客先が実際に使うしきい値",
+        "ko": "3. 일반 시험 항목과 고객이 실제로 쓰는 기준",
+    }),
+    ("table", (
+        [
+            {"zh": "測試項目", "en": "Test", "fr": "Essai", "es": "Ensayo", "ja": "試験項目", "ko": "시험 항목"},
+            {"zh": "方法（歐／美／日／韓）", "en": "Method (EU/US/JP/KR)", "fr": "Méthode (UE/US/JP/KR)", "es": "Método (UE/US/JP/KR)", "ja": "方法（欧／米／日／韓）", "ko": "방법(유럽/미국/일본/한국)"},
+            {"zh": "客戶常用門檻", "en": "Typical buyer threshold", "fr": "Seuil client courant", "es": "Umbral habitual del cliente", "ja": "客先の一般的なしきい値", "ko": "고객사 일반 기준"},
+        ],
+        [
+            [
+                {"zh": "耐洗色牢度", "en": "Colourfastness to washing", "fr": "Solidité au lavage", "es": "Solidez al lavado", "ja": "洗濯堅ろう度", "ko": "세탁 견뢰도"},
+                {"zh": "ISO 105-C06／AATCC 61／JIS L 0844／KS K 0430", "en": "ISO 105-C06 / AATCC 61 / JIS L 0844 / KS K 0430", "fr": "ISO 105-C06 / AATCC 61 / JIS L 0844 / KS K 0430", "es": "ISO 105-C06 / AATCC 61 / JIS L 0844 / KS K 0430", "ja": "ISO 105-C06／AATCC 61／JIS L 0844／KS K 0430", "ko": "ISO 105-C06 / AATCC 61 / JIS L 0844 / KS K 0430"},
+                {"zh": "變色 4 級、沾色 3-4 級起", "en": "4 for change, 3-4 for staining", "fr": "4 en changement, 3-4 en dégorgement", "es": "4 en cambio, 3-4 en sangrado", "ja": "変退色 4 級、汚染 3-4 級以上", "ko": "변색 4급, 오염 3-4급 이상"},
+            ],
+            [
+                {"zh": "耐摩擦色牢度", "en": "Colourfastness to rubbing", "fr": "Solidité au frottement", "es": "Solidez al frote", "ja": "摩擦堅ろう度", "ko": "마찰 견뢰도"},
+                {"zh": "ISO 105-X12／AATCC 8／JIS L 0849／KS K 0650", "en": "ISO 105-X12 / AATCC 8 / JIS L 0849 / KS K 0650", "fr": "ISO 105-X12 / AATCC 8 / JIS L 0849 / KS K 0650", "es": "ISO 105-X12 / AATCC 8 / JIS L 0849 / KS K 0650", "ja": "ISO 105-X12／AATCC 8／JIS L 0849／KS K 0650", "ko": "ISO 105-X12 / AATCC 8 / JIS L 0849 / KS K 0650"},
+                {"zh": "乾 4 級、濕 3 級起；深色牛仔另議", "en": "4 dry, 3 wet; dark denim is negotiated separately", "fr": "4 à sec, 3 humide ; jean foncé négocié à part", "es": "4 en seco, 3 en húmedo; el denim oscuro se negocia aparte", "ja": "乾燥 4 級、湿潤 3 級以上。濃色デニムは別途協議", "ko": "건조 4급, 습윤 3급 이상. 진한 데님은 별도 협의"},
+            ],
+            [
+                {"zh": "耐汗與耐水", "en": "Perspiration and water", "fr": "Transpiration et eau", "es": "Sudor y agua", "ja": "汗・水堅ろう度", "ko": "땀·물 견뢰도"},
+                {"zh": "ISO 105-E04／AATCC 15／JIS L 0848／KS K 0715", "en": "ISO 105-E04 / AATCC 15 / JIS L 0848 / KS K 0715", "fr": "ISO 105-E04 / AATCC 15 / JIS L 0848 / KS K 0715", "es": "ISO 105-E04 / AATCC 15 / JIS L 0848 / KS K 0715", "ja": "ISO 105-E04／AATCC 15／JIS L 0848／KS K 0715", "ko": "ISO 105-E04 / AATCC 15 / JIS L 0848 / KS K 0715"},
+                {"zh": "變色與沾色均 4 級起", "en": "4 on both change and staining", "fr": "4 en changement et en dégorgement", "es": "4 en cambio y en sangrado", "ja": "変退色・汚染とも 4 級以上", "ko": "변색·오염 모두 4급 이상"},
+            ],
+            [
+                {"zh": "水洗尺寸變化", "en": "Dimensional change after washing", "fr": "Variation dimensionnelle au lavage", "es": "Cambio dimensional tras lavado", "ja": "洗濯による寸法変化", "ko": "세탁 후 치수 변화"},
+                {"zh": "ISO 6330＋ISO 5077／AATCC 135／JIS L 1096／KS K 0870", "en": "ISO 6330 + ISO 5077 / AATCC 135 / JIS L 1096 / KS K 0870", "fr": "ISO 6330 + ISO 5077 / AATCC 135 / JIS L 1096 / KS K 0870", "es": "ISO 6330 + ISO 5077 / AATCC 135 / JIS L 1096 / KS K 0870", "ja": "ISO 6330＋ISO 5077／AATCC 135／JIS L 1096／KS K 0870", "ko": "ISO 6330 + ISO 5077 / AATCC 135 / JIS L 1096 / KS K 0870"},
+                {"zh": "經向與緯向各 ±3 % 內；針織常收緊到 ±5 %", "en": "within ±3 % warp and weft; knits are often relaxed to ±5 %", "fr": "dans ±3 % chaîne et trame ; les mailles souvent à ±5 %", "es": "dentro de ±3 % urdimbre y trama; los tejidos de punto a menudo ±5 %", "ja": "たて・よこ各 ±3 % 以内。ニットは ±5 % に緩和されることが多い", "ko": "경사·위사 각 ±3% 이내. 니트는 ±5%로 완화되는 경우가 많음"},
+            ],
+        ],
+    )),
+    ("p", {
+        "zh": "這組數字是客戶實際寫進品質協議的常見值，不是法規。法規管的是標示與資訊，例如歐盟 (EU) 1007/2011 的纖維成分與 EU 責任方、日本家庭用品品質表示法的混用率與洗濯表示、韓國的品質量表示與原產地。也就是說：測試報告證明「你說的是真的」，標示法規規定「你必須說什麼」，兩者不能互相替代。標籤上寫可機洗 40 度，報告卻只做到 30 度溫和程序，這才是最容易被市場監管抓到的破口。",
+        "en": "These numbers are the values buyers write into quality agreements; they are not law. The law governs labelling and information: fibre composition and the EU responsible person under (EU) 1007/2011, the mix ratio and care symbols under Japan's Household Goods Quality Labeling Act, quality display and origin in Korea. A test report proves that what you say is true; labelling law says what you must say. Neither replaces the other. A care label promising a 40 degrees machine wash against a report that only covered a mild 30 degrees programme is the gap market surveillance finds first.",
+        "fr": "Ces valeurs sont celles que les clients inscrivent dans leurs accords qualité ; elles ne sont pas la loi. La loi régit l'étiquetage et l'information : composition et responsable UE selon (UE) 1007/2011, taux de mélange et symboles au titre de la loi japonaise, mentions de qualité et origine en Corée. Un rapport d'essai prouve que ce que vous dites est vrai ; la réglementation d'étiquetage impose ce que vous devez dire. Une étiquette annonçant un lavage machine à 40 degrés alors que le rapport ne couvre qu'un programme doux à 30 degrés est le défaut que le contrôle du marché relève en premier.",
+        "es": "Esos valores son los que los clientes escriben en sus acuerdos de calidad; no son ley. La ley regula etiquetado e información: composición y responsable UE según el Reglamento (UE) 1007/2011, porcentaje de mezcla y símbolos en la ley japonesa, y calidad y origen en Corea. Un informe de ensayo prueba que lo que usted dice es cierto; la norma de etiquetado fija lo que debe decir. Una etiqueta que promete lavado a máquina a 40 grados frente a un informe que solo cubrió un programa suave a 30 grados es el hueco que la inspección detecta antes.",
+        "ja": "これらの数値は客先が品質協定に書き込む値であり、法令ではありません。法令が定めるのは表示と情報です。(EU) 1007/2011 の混用率と EU 責任事業者、家庭用品品質表示法の混用率と洗濯表示、韓国の品質表示と原産地などです。試験報告は「表示が事実である」ことを証明し、表示法令は「何を書くか」を定めます。40 度の洗濯機洗いを表示しながら、報告が 30 度の穏やかな条件しか覆っていない状態は、市場監視が最初に見つける穴です。",
+        "ko": "이 수치들은 고객이 품질 협약에 적는 값이며 법규가 아닙니다. 법규는 표시와 정보를 규율합니다. (EU) 1007/2011의 혼용률과 EU 책임자, 일본 家庭用品品質表示法의 혼용률과 취급 표시, 한국의 품질 표시와 원산지가 그것입니다. 시험 성적서는 '표시가 사실'임을 증명하고, 표시 법규는 '무엇을 적어야 하는지'를 정합니다. 40도 기계세탁을 표시하면서 성적서는 30도 완만 조건만 다룬 상태가 시장 감독이 가장 먼저 찾는 구멍입니다.",
+    }),
+    ("h2", {
+        "zh": "四、報告裡最容易被跳過的四欄",
+        "en": "4. The Four Fields Everyone Skips",
+        "fr": "4. Les quatre champs que tout le monde saute",
+        "es": "4. Los cuatro campos que todos se saltan",
+        "ja": "4. 見落としやすい 4 つの欄",
+        "ko": "4. 가장 많이 건너뛰는 네 항목",
+    }),
+    ("ul", [
+        {
+            "zh": "樣品描述：報告上的克重（g/m²）、成分與顏色是否就是這一批，換了面料或染廠，舊報告立即失效。",
+            "en": "Sample description: do the weight in g/m², composition and colour on the report match this lot? A new fabric or dyehouse voids the old report.",
+            "fr": "Description de l'échantillon : le grammage en g/m², la composition et la couleur correspondent-ils à ce lot ? Un nouveau tissu ou une nouvelle teinturerie annule le rapport.",
+            "es": "Descripción de la muestra: ¿el gramaje en g/m², la composición y el color coinciden con este lote? Un tejido o tintorería nuevos invalidan el informe.",
+            "ja": "試験片の記載：報告の g/m²（坪量）、組成、色が今回のロットと一致していますか。生地や染色工場が変われば古い報告は無効です。",
+            "ko": "시험편 기재: 보고서의 g/m²(평량), 혼용률, 색상이 이번 로트와 일치합니까? 원단이나 염색 공장이 바뀌면 기존 성적서는 효력이 없습니다.",
+        },
+        {
+            "zh": "批號與送樣日期：只有一個批號的報告不能代表後續所有批次，客戶要求的通常是「每季或每批抽測」。",
+            "en": "Lot number and submission date: a single-lot report does not cover later batches, and buyers usually require seasonal or per-batch retesting.",
+            "fr": "Numéro de lot et date d'envoi : un rapport sur un seul lot ne couvre pas les suivants ; les clients exigent en général un essai saisonnier ou par lot.",
+            "es": "Lote y fecha de envío: un informe de un solo lote no cubre los siguientes; los clientes suelen exigir ensayo por temporada o por lote.",
+            "ja": "ロット番号と受付日：1 ロットのみの報告は後続ロットを代表しません。客先は通常、季節ごとかロットごとの再試験を求めます。",
+            "ko": "로트 번호와 접수일: 단일 로트 성적서는 이후 로트를 대표하지 않습니다. 고객은 보통 시즌별 또는 로트별 재시험을 요구합니다.",
+        },
+        {
+            "zh": "測試條件細節：水溫、浴比、洗劑、乾燥方式，四項任一不同，級數就不能橫向比較。",
+            "en": "Condition details: water temperature, liquor ratio, detergent and drying. Change any one and the grades stop being comparable.",
+            "fr": "Détail des conditions : température, rapport de bain, détergent, séchage. Un seul paramètre différent et les notes ne se comparent plus.",
+            "es": "Detalle de condiciones: temperatura, relación de baño, detergente y secado. Cambie uno y los grados dejan de ser comparables.",
+            "ja": "条件の詳細：水温、浴比、洗剤、乾燥方法。どれか 1 つ違えば級数は横比較できません。",
+            "ko": "조건 세부: 수온, 욕비, 세제, 건조 방식. 하나만 달라도 급수를 비교할 수 없습니다.",
+        },
+        {
+            "zh": "報告有效期與實驗室資質：多數客戶只認一年內的報告，且要求實驗室有 ISO/IEC 17025 認可。",
+            "en": "Validity and lab accreditation: most buyers accept reports under a year old and require ISO/IEC 17025 accreditation.",
+            "fr": "Validité et accréditation : la plupart des clients acceptent un rapport de moins d'un an et exigent l'accréditation ISO/IEC 17025.",
+            "es": "Validez y acreditación: casi todos los clientes aceptan informes de menos de un año y exigen acreditación ISO/IEC 17025.",
+            "ja": "有効期限と試験所の認定：多くの客先は 1 年以内の報告のみ認め、ISO/IEC 17025 の認定を求めます。",
+            "ko": "유효 기간과 시험소 인정: 대부분 1년 이내 성적서만 인정하며 ISO/IEC 17025 인정을 요구합니다.",
+        },
+    ]),
+    ("h2", {
+        "zh": "五、報告不能替代的三件事",
+        "en": "5. Three Things a Report Cannot Replace",
+        "fr": "5. Trois choses qu'un rapport ne remplace pas",
+        "es": "5. Tres cosas que un informe no sustituye",
+        "ja": "5. 報告書で代替できない 3 点",
+        "ko": "5. 성적서로 대체할 수 없는 세 가지",
+    }),
+    ("p", {
+        "zh": "第一，替代不了大貨一致性。報告合格只說明送樣那一批合格，同一配方換了織造廠、染色批號，實際交付可能已經不同。第二，替代不了法規標示：歐盟要求 EU 責任方與 GPSR 資訊、日本要求事業者名與取扱表示、韓國要求韓語原產地與進口商，這些是標示義務，不是測試項目。第三，替代不了你的品質協議本身：客戶的門檻寫在協議裡，測試報告只是證明手段；協議沒寫清楚用哪個方法，兩邊就會各拿一份報告爭論。",
+        "en": "First, it cannot replace bulk consistency. A pass covers the sample submitted, not the next batch from a different knitting mill or dye lot. Second, it cannot replace labelling law: the EU responsible person and GPSR information, the Japanese business operator name and care symbols, the Korean-language origin and importer are labelling obligations, not tests. Third, it cannot replace the quality agreement itself: the buyer's thresholds live in that document and the report only proves them, so if the method is not named there, two parties will argue with two different reports.",
+        "fr": "Premièrement, il ne remplace pas la constance de la production : un résultat conforme couvre l'échantillon envoyé, pas le lot suivant d'un autre tricotage ou d'un autre bain de teinture. Deuxièmement, il ne remplace pas la réglementation d'étiquetage : responsable UE et informations GPSR, nom de l'opérateur et symboles au Japon, origine et importateur en coréen. Troisièmement, il ne remplace pas l'accord qualité : les seuils du client y figurent et le rapport ne fait que les prouver ; si la méthode n'y est pas nommée, deux parties discuteront avec deux rapports différents.",
+        "es": "Primero, no sustituye la consistencia de producción: un aprobado cubre la muestra enviada, no el lote siguiente de otro taller de tejido u otro baño de tinte. Segundo, no sustituye la norma de etiquetado: responsable UE e información GPSR, nombre del operador y símbolos en Japón, origen e importador en coreano son obligaciones de etiquetado, no ensayos. Tercero, no sustituye el acuerdo de calidad: los umbrales del cliente están en ese documento y el informe solo los demuestra; si no se nombra el método, dos partes discutirán con dos informes.",
+        "ja": "第一に、量産の一致性は代替できません。合格は提出した試験片の結果であり、別の編立工場や別の染色ロットには及びません。第二に、表示法令は代替できません。EU 責任事業者と GPSR 情報、日本の事業者名と取扱表示、韓国語の原産地と輸入者は表示義務であり試験項目ではありません。第三に、品質協定そのものは代替できません。客先のしきい値は協定に書かれ、報告はそれを証明するだけです。方法が協定に書かれていなければ、双方が別の報告書を持って議論することになります。",
+        "ko": "첫째, 양산 일관성은 대체할 수 없습니다. 합격은 제출한 시험편의 결과이며, 다른 편직 공장이나 다른 염색 로트에는 적용되지 않습니다. 둘째, 표시 법규는 대체할 수 없습니다. EU 책임자와 GPSR 정보, 일본의 사업자명과 취급 표시, 한국어 원산지와 수입자는 표시 의무이지 시험 항목이 아닙니다. 셋째, 품질 협약 자체를 대체할 수 없습니다. 고객의 기준은 협약에 있고 성적서는 이를 증명할 뿐입니다. 방법이 협약에 적혀 있지 않으면 양측이 서로 다른 성적서로 다투게 됩니다.",
+    }),
+    ("callout", {
+        "zh": "收貨當天就能做的三件事：把報告上的方法編號與批號抄進收貨記錄；量一塊 10 cm × 4 cm 的樣布與報告上的克重核對；把「下一次重測時間」寫進採購行事曆。三件都是五分鐘的事，卻能在客戶提出扣款前發現問題。",
+        "en": "Three things you can do on the receiving day. Copy the method code and lot number from the report into the goods-in record. Cut a 10 cm × 4 cm swatch and check its weight against the g/m² on the report. Put the next re-test date in the purchasing calendar. Each takes five minutes and each finds the problem before the debit note does.",
+        "fr": "Trois gestes le jour de la réception : recopier le code méthode et le numéro de lot du rapport dans le registre d'entrée ; découper une chute de 10 cm × 4 cm et vérifier son grammage face au g/m² du rapport ; inscrire la prochaine date de re-test au calendrier achats. Chacun prend cinq minutes et détecte le problème avant la note de débit.",
+        "es": "Tres gestos el día de la recepción: copiar el código de método y el lote del informe en el registro de entrada; cortar una muestra de 10 cm × 4 cm y comprobar su gramaje frente al g/m² del informe; anotar la próxima fecha de reensayo en el calendario de compras. Cada uno lleva cinco minutos y detecta el problema antes que el cargo.",
+        "ja": "入荷当日にできる 3 つのこと。報告書の方法番号とロット番号を入荷記録に転記する。10 cm × 4 cm の端切れを切り、報告の g/m² と重さを突き合わせる。次回再試験の予定を購買カレンダーに入れる。いずれも 5 分で終わり、請求減額より先に問題を見つけられます。",
+        "ko": "입고 당일 할 수 있는 세 가지. 성적서의 방법 번호와 로트 번호를 입고 기록에 옮겨 적습니다. 10 cm × 4 cm 시료를 잘라 g/m²와 무게를 대조합니다. 다음 재시험 일정을 구매 캘린더에 넣습니다. 모두 5분이면 되고, 차감 통보보다 먼저 문제를 찾습니다.",
+    }),
+    ("related", [
+        ("trim-third-party-testing-guide.html", {
+            "zh": "輔料第三方測試怎麼安排", "en": "Arranging third-party trim testing",
+            "fr": "Organiser les essais tiers", "es": "Organizar ensayos de terceros",
+            "ja": "第三者試験の進め方", "ko": "제3자 시험 진행",
+        }),
+        ("care-label-wash-durability.html", {
+            "zh": "洗水標洗後還能讀嗎", "en": "Does the care label survive washing",
+            "fr": "L'étiquette résiste-t-elle au lavage", "es": "¿Resiste la etiqueta al lavado",
+            "ja": "洗濯後も表示は読めるか", "ko": "세탁 후에도 라벨이 읽히는가",
+        }),
+        ("trim-crocking-perspiration-fastness-guide.html", {
+            "zh": "耐摩擦與耐汗漬色牢度", "en": "Crocking and perspiration fastness",
+            "fr": "Solidité au frottement et à la transpiration", "es": "Solidez al frote y al sudor",
+            "ja": "摩擦・汗に対する堅ろう度", "ko": "마찰·땀 견뢰도",
+        }),
+    ]),
+    ("cta", (
+        {
+            "zh": "把客戶的品質協議與現有測試報告寄給我們，我們對照出缺哪幾項、哪幾項的方法與條件對不上客戶要求，並列出補測清單與交期。",
+            "en": "Send the buyer's quality agreement and your current reports; we map which tests are missing, where method or conditions do not match the requirement, and return a re-test list with lead times.",
+            "fr": "Envoyez l'accord qualité du client et vos rapports actuels : nous identifions les essais manquants et les écarts de méthode ou de conditions, puis renvoyons une liste de re-tests avec délais.",
+            "es": "Envíe el acuerdo de calidad del cliente y sus informes actuales: identificamos los ensayos que faltan y las diferencias de método o condiciones, y devolvemos una lista de reensayos con plazos.",
+            "ja": "客先の品質協定と現行の試験報告をお送りください。不足している項目、方法や条件が要求と合わない箇所を洗い出し、再試験リストと納期をお返しします。",
+            "ko": "고객의 품질 협약과 현재 성적서를 보내주세요. 누락된 항목과 방법·조건이 요구와 다른 부분을 대조해 재시험 목록과 납기를 회신합니다.",
+        },
+        {
+            "zh": "索取測試對照與報價 →", "en": "Request a test gap review and quote →",
+            "fr": "Demander une revue des essais et un devis →", "es": "Solicitar revisión de ensayos y presupuesto →",
+            "ja": "試験ギャップの確認とお見積り →", "ko": "시험 격차 검토와 견적 요청 →",
+        },
+    )),
+]
