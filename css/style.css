@@ -567,3 +567,39 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .lang-hint { font-size: 12.5px; gap: 8px; padding: 8px 42px 8px 12px; justify-content: flex-start; }
 }
+
+/* ---------- 品牌宣言 / Brand manifesto（about 页，2026-11 替代客户 logo 墙） ---------- */
+.manifesto { max-width: 840px; margin: 0 auto; text-align: center; }
+.manifesto .mf-h {
+  font-size: clamp(25px, 3.5vw, 44px);
+  line-height: 1.2; letter-spacing: -.03em; color: var(--ink);
+  font-weight: 800; margin-bottom: 34px;
+}
+.manifesto .mf-h span { display: block; }
+.manifesto .mf-h em { font-style: normal; color: #a8781d; display: block; }
+.manifesto .mf-lines {
+  font-size: clamp(18px, 2vw, 25px); line-height: 1.55; color: var(--ink);
+  font-weight: 600; letter-spacing: -.01em; margin-bottom: 24px;
+}
+.manifesto .mf-lines br { line-height: 1.55; }
+.manifesto .mf-punch {
+  font-size: clamp(16px, 1.7vw, 20px); color: #a8781d; font-weight: 700;
+  letter-spacing: .02em; margin-bottom: 28px;
+}
+.manifesto .mf-body {
+  font-size: 16px; color: var(--text-muted); line-height: 1.8;
+  max-width: 680px; margin: 0 auto 12px;
+}
+.manifesto .mf-close {
+  font-size: clamp(16px, 1.9vw, 22px); color: var(--ink); font-weight: 800;
+  letter-spacing: -.015em; margin: 36px auto 8px; padding-top: 28px;
+  border-top: 1px solid var(--line); max-width: 520px;
+}
+.manifesto .mf-note { font-size: 14px; color: var(--text-muted); font-style: italic; }
+@media (max-width: 560px) {
+  .manifesto .mf-h { font-size: 23px; margin-bottom: 26px; }
+  .manifesto .mf-lines { font-size: 17px; }
+  .manifesto .mf-punch { font-size: 15.5px; }
+  .manifesto .mf-body { font-size: 15px; }
+  .manifesto .mf-close { font-size: 16px; }
+}
