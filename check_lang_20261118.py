@@ -12,7 +12,7 @@ for s in SLUGS:
         FILES.append("%s/blog/%s.html" % (l, s))
 
 CJK = re.compile(r"[\u4e00-\u9fff]")
-OK_CJK = ("江磊", "張旭勝", "陳清港", "繁體中文", "日本語", "한국어", "台灣", "虎門", "東莞", "泰閣", "原産国：中国")
+OK_CJK = ("江磊", "吳文潘", "陳清港", "繁體中文", "日本語", "한국어", "台灣", "虎門", "東莞", "泰閣", "原産国：中国")
 
 for f in FILES:
     if not os.path.isfile(f):
