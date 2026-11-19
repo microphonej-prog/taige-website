@@ -1,0 +1,291 @@
+# -*- coding: utf-8 -*-
+"""2026-11-19 20:00 批次 B：每單包裝成本（packaging cost per order）——六個成本項、工時、材積重。"""
+
+SLUG = "packaging-cost-per-order"
+CATEGORY = {
+    "zh": "包裝與物流", "en": "Packaging & Logistics", "fr": "Emballage et logistique",
+    "es": "Embalaje y logística", "ja": "梱包・物流", "ko": "포장·물류",
+}
+TITLE = {
+    "zh": "每單包裝成本怎麼算：六個成本項與一張能對帳的表 | TAGE",
+    "en": "Packaging Cost per Order: Six Lines and One Number | TAGE",
+    "fr": "Coût d'emballage par commande : six postes et un chiffre | TAGE",
+    "es": "Coste de embalaje por pedido: seis líneas y una cifra | TAGE",
+    "ja": "1 注文あたりの梱包コスト：6 費目と説明できる数字 | TAGE",
+    "ko": "주문당 포장 원가: 여섯 항목과 방어 가능한 숫자 | TAGE",
+}
+DESC = {
+    "zh": "一個袋子多少錢不是成本。拆成六個成本項、人工工時怎麼用秒錶量、材積重如何決定運費，附三個不損防護的降本動作與可對帳的每單成本表。",
+    "en": "A bag price is not a cost. Six cost lines, how to time labour, how dimensional weight decides freight, and three savings that keep protection intact.",
+    "fr": "Le prix d'un sac n'est pas un coût. Six postes de coût, mesure du temps de main-d'œuvre, poids volumétrique et trois économies sans perte de protection.",
+    "es": "El precio de una bolsa no es un coste. Seis líneas de coste, medición del tiempo de trabajo, peso volumétrico y tres ahorros que mantienen la protección.",
+    "ja": "袋の単価はコストではありません。6 つの費目、作業時間の測り方、容積重量が送料を決める仕組み、防護性を落とさない 3 つの改善を整理します。",
+    "ko": "봉투 단가는 원가가 아닙니다. 여섯 가지 비용 항목, 작업 시간 측정법, 부피 중량이 운임을 결정하는 구조, 보호 성능을 지키는 세 가지 절감을 정리합니다.",
+}
+H1 = {
+    "zh": "每單包裝成本：六個成本項與一個能對帳的數字",
+    "en": "Packaging Cost per Order: Six Lines and One Number You Can Defend",
+    "fr": "Coût d'emballage par commande : six postes et un chiffre défendable",
+    "es": "Coste de embalaje por pedido: seis líneas y una cifra defendible",
+    "ja": "1 注文あたりの梱包コスト：6 つの費目と説明できる数字",
+    "ko": "주문당 포장 원가: 여섯 항목과 방어 가능한 숫자",
+}
+
+BLOCKS = [
+    ("p", {
+        "zh": "品牌通常知道「一個紙袋多少錢」，卻答不出「發一筆訂單的包裝成本是多少」。中間差六個成本項：主包裝、內襯、封口、標籤貼紙、人工工時、損耗與重包。漏掉後三項，包裝成本至少被低估三成，定價時就等於把這部分當成零。",
+        "en": "Brands usually know what a single paper bag costs, yet cannot answer what one shipped order costs to pack. Six cost lines sit in between: the primary pack, the void fill, the closure, the labels and stickers, the labour minutes, and the damage and repack rate. Miss the last three and packaging is understated by at least 30%, which means the pricing model treats it as free.",
+        "fr": "Les marques connaissent en général le prix d'un sac papier, mais pas le coût d'emballage d'une commande expédiée. Six postes s'intercalent : l'emballage principal, le calage, la fermeture, les étiquettes et autocollants, le temps de main-d'œuvre, et les rebuts et réemballages. Oublier les trois derniers sous-estime l'emballage d'au moins 30 %, c'est-à-dire que le prix de vente le traite comme gratuit.",
+        "es": "Las marcas suelen saber cuánto cuesta una bolsa de papel, pero no cuánto cuesta embalar un pedido enviado. Entre ambos hay seis líneas: el envase principal, el relleno, el cierre, las etiquetas y pegatinas, el tiempo de mano de obra y la merma por daños y reembalaje. Omitir las tres últimas subestima el embalaje al menos un 30 %, es decir, el precio lo trata como gratis.",
+        "ja": "ブランドは紙袋 1 枚の単価は知っていても、出荷 1 件あたりの梱包コストは答えられません。その間に 6 つの費目があります。主包装、緩衝材、封かん、ラベル・シール、作業時間、破損と再梱包です。後ろ 3 つを落とすと梱包費は最低 3 割過小になり、価格設定ではゼロ扱いになります。",
+        "ko": "브랜드는 종이 봉투 한 장의 단가를 알지만 출고 한 건의 포장 원가는 답하지 못합니다. 그 사이에 여섯 항목이 있습니다. 주 포장재, 완충재, 밀봉, 라벨·스티커, 작업 시간, 파손과 재포장입니다. 뒤 세 가지를 빼면 포장비는 최소 30% 과소 계상되고 가격 책정에서는 0으로 취급됩니다.",
+    }),
+
+    ("h2", {
+        "zh": "一、單價不是成本",
+        "en": "1. Unit Price Is Not Cost",
+        "fr": "1. Le prix unitaire n'est pas un coût",
+        "es": "1. El precio unitario no es el coste",
+        "ja": "1. 単価はコストではない",
+        "ko": "1. 단가는 원가가 아니다",
+    }),
+
+    ("p", {
+        "zh": "單價只回答「一個多少錢」，不回答「一筆訂單用幾個、誰來裝、裝壞了怎麼辦」。同樣單價的快遞袋，A 品牌每單用一個，B 品牌因為多件訂單要套兩層並加一張感謝卡，實際每單成本可以差一倍。要算的單位是每單，不是每個。",
+        "en": "A unit price answers how much one piece costs; it does not answer how many pieces go into one order, who packs it, or what happens when it splits. At the same bag price, brand A uses one per order while brand B double-bags multi-item orders and adds a thank-you card, so the real cost per order can differ by a factor of two. The unit to model is the order, not the piece.",
+        "fr": "Un prix unitaire répond au prix d'une pièce, pas au nombre de pièces par commande, ni à qui emballe, ni à ce qui se passe en cas de casse. À prix de sac identique, la marque A en utilise un par commande tandis que la marque B double les commandes multi-articles et ajoute une carte de remerciement : le coût réel par commande peut varier du simple au double. L'unité à modéliser, c'est la commande.",
+        "es": "Un precio unitario responde cuánto cuesta una pieza, no cuántas van por pedido, ni quién embala, ni qué pasa si se rompe. Con el mismo precio de bolsa, la marca A usa una por pedido mientras la marca B duplica los pedidos de varios artículos y añade una tarjeta: el coste real por pedido puede variar al doble. La unidad que hay que modelar es el pedido.",
+        "ja": "単価は 1 枚の値段に答えるだけで、1 注文に何枚使うか、誰が詰めるか、破損したらどうなるかには答えません。同じ袋単価でも、A 社は 1 注文 1 枚、B 社は複数点注文で二重に包みカードも入れるため、実際の 1 注文コストは 2 倍近く違います。モデル化すべき単位は「注文」です。",
+        "ko": "단가는 한 장의 가격에 답할 뿐, 한 주문에 몇 장 쓰는지, 누가 포장하는지, 파손되면 어떻게 되는지에는 답하지 않습니다. 같은 봉투 단가에서도 A 브랜드는 주문당 한 장, B 브랜드는 다품목 주문을 이중 포장하고 카드까지 넣어 실제 주문당 원가가 두 배 가까이 차이납니다. 모델링 단위는 '주문'입니다.",
+    }),
+
+    ("h2", {
+        "zh": "二、六個成本項與各自的計量方式",
+        "en": "2. The Six Cost Lines and How Each Is Measured",
+        "fr": "2. Les six postes de coût et leur mode de mesure",
+        "es": "2. Las seis líneas de coste y cómo se mide cada una",
+        "ja": "2. 6 つの費目と測定方法",
+        "ko": "2. 여섯 가지 비용 항목과 측정 방법",
+    }),
+
+    ("table", (
+        [
+            {"zh": "成本項", "en": "Cost line", "fr": "Poste de coût", "es": "Línea de coste", "ja": "費目", "ko": "비용 항목"},
+            {"zh": "怎麼計量", "en": "How to measure", "fr": "Comment mesurer", "es": "Cómo medir", "ja": "測り方", "ko": "측정 방법"},
+            {"zh": "經驗佔比", "en": "Typical share", "fr": "Part habituelle", "es": "Peso habitual", "ja": "一般的な比率", "ko": "일반적 비중"},
+        ],
+        [
+            [
+                {"zh": "主包裝（袋、盒）", "en": "Primary pack (bag, box)", "fr": "Emballage principal (sac, boîte)", "es": "Envase principal (bolsa, caja)", "ja": "主包装（袋・箱）", "ko": "주 포장재(봉투·박스)"},
+                {"zh": "單價 × 每單用量", "en": "Unit price × pieces per order", "fr": "Prix unitaire × pièces par commande", "es": "Precio unitario × unidades por pedido", "ja": "単価 × 1 注文あたり使用数", "ko": "단가 × 주문당 사용 수량"},
+                {"zh": "40–60%", "en": "40–60%", "fr": "40–60 %", "es": "40–60 %", "ja": "40〜60 %", "ko": "40~60%"},
+            ],
+            [
+                {"zh": "內襯與填充", "en": "Void fill and inserts", "fr": "Calage et intercalaires", "es": "Relleno e intercalarios", "ja": "緩衝材・中紙", "ko": "완충재·중간지"},
+                {"zh": "單價 × 用量", "en": "Unit price × quantity", "fr": "Prix unitaire × quantité", "es": "Precio unitario × cantidad", "ja": "単価 × 使用量", "ko": "단가 × 사용량"},
+                {"zh": "10–20%", "en": "10–20%", "fr": "10–20 %", "es": "10–20 %", "ja": "10〜20 %", "ko": "10~20%"},
+            ],
+            [
+                {"zh": "封口與膠帶", "en": "Closure and tape", "fr": "Fermeture et adhésif", "es": "Cierre y cinta", "ja": "封かん・テープ", "ko": "밀봉·테이프"},
+                {"zh": "單價 × 用量", "en": "Unit price × quantity", "fr": "Prix unitaire × quantité", "es": "Precio unitario × cantidad", "ja": "単価 × 使用量", "ko": "단가 × 사용량"},
+                {"zh": "5–10%", "en": "5–10%", "fr": "5–10 %", "es": "5–10 %", "ja": "5〜10 %", "ko": "5~10%"},
+            ],
+            [
+                {"zh": "標籤與貼紙", "en": "Labels and stickers", "fr": "Étiquettes et autocollants", "es": "Etiquetas y pegatinas", "ja": "ラベル・シール", "ko": "라벨·스티커"},
+                {"zh": "單價 × 用量", "en": "Unit price × quantity", "fr": "Prix unitaire × quantité", "es": "Precio unitario × cantidad", "ja": "単価 × 使用量", "ko": "단가 × 사용량"},
+                {"zh": "5–10%", "en": "5–10%", "fr": "5–10 %", "es": "5–10 %", "ja": "5〜10 %", "ko": "5~10%"},
+            ],
+            [
+                {"zh": "人工工時", "en": "Labour minutes", "fr": "Temps de main-d'œuvre", "es": "Tiempo de mano de obra", "ja": "作業時間", "ko": "작업 시간"},
+                {"zh": "每單秒數 ÷ 3600 × 工時費", "en": "Seconds per order ÷ 3600 × hourly rate", "fr": "Secondes par commande ÷ 3600 × taux horaire", "es": "Segundos por pedido ÷ 3600 × coste hora", "ja": "1 注文の秒数 ÷ 3600 × 時間単価", "ko": "주문당 초 ÷ 3600 × 시간당 인건비"},
+                {"zh": "15–25%", "en": "15–25%", "fr": "15–25 %", "es": "15–25 %", "ja": "15〜25 %", "ko": "15~25%"},
+            ],
+            [
+                {"zh": "損耗與重包", "en": "Damage and repack", "fr": "Rebuts et réemballage", "es": "Merma y reembalaje", "ja": "破損・再梱包", "ko": "파손·재포장"},
+                {"zh": "上月重包率 × 每單成本", "en": "Last month's repack rate × cost per order", "fr": "Taux de réemballage du mois × coût par commande", "es": "Tasa de reembalaje del mes × coste por pedido", "ja": "前月の再梱包率 × 1 注文コスト", "ko": "전월 재포장률 × 주문당 원가"},
+                {"zh": "2–8%", "en": "2–8%", "fr": "2–8 %", "es": "2–8 %", "ja": "2〜8 %", "ko": "2~8%"},
+            ],
+        ],
+    )),
+
+    ("p", {
+        "zh": "六行相加才是每單成本。再把這個數字除以平均客單價，得到包裝佔比；服裝電商多數落在 2–5%，超過 6% 就值得專門做一輪規格檢討，而不是繼續在袋子單價上比價。",
+        "en": "Add the six lines and you have the cost per order. Divide that by average order value to get the packaging ratio; most apparel e-commerce sits between 2% and 5%, and above 6% it is worth a full specification review rather than more price comparison on the bag itself.",
+        "fr": "L'addition des six postes donne le coût par commande. Divisé par le panier moyen, il donne le ratio d'emballage ; la plupart des sites de mode se situent entre 2 % et 5 %, et au-delà de 6 % une revue complète de la spécification vaut mieux qu'une comparaison de prix sur le sac.",
+        "es": "Sumar las seis líneas da el coste por pedido. Dividido por el ticket medio se obtiene el ratio de embalaje; la mayoría del e-commerce de moda está entre 2 % y 5 %, y por encima de 6 % conviene revisar la especificación completa en lugar de seguir comparando precios de bolsa.",
+        "ja": "6 つを足して初めて 1 注文コストになります。平均客単価で割れば梱包比率が出ます。アパレル EC はおおむね 2〜5 %、6 % を超えたら袋の単価を比べ続けるより、仕様を一度見直す価値があります。",
+        "ko": "여섯 항목을 더해야 주문당 원가가 됩니다. 평균 객단가로 나누면 포장 비율이 나옵니다. 의류 이커머스는 대개 2~5%이고 6%를 넘으면 봉투 단가 비교를 계속하기보다 사양을 한 번 점검할 가치가 있습니다.",
+    }),
+
+    ("h2", {
+        "zh": "三、人工工時：沒人報價的那一項",
+        "en": "3. Labour Minutes: the Line Nobody Quotes",
+        "fr": "3. Temps de main-d'œuvre : le poste que personne ne chiffre",
+        "es": "3. Tiempo de mano de obra: la línea que nadie presupuesta",
+        "ja": "3. 作業時間：誰も見積もらない費目",
+        "ko": "3. 작업 시간: 아무도 견적에 넣지 않는 항목",
+    }),
+
+    ("p", {
+        "zh": "工時要用秒錶量，不要憑印象。做法是抽 20 筆真實訂單，從揀貨完成到封箱貼單計時，取中位數而不是平均數，因為平均數會被新手拖高。單件訂單常見落在 60–120 秒，含折疊、套袋、貼標、稱重。",
+        "en": "Time it with a stopwatch, not with impressions. Take 20 real orders and clock each one from pick complete to box sealed and label applied, then use the median rather than the mean, because the mean gets dragged up by whoever is new. Single-item orders commonly land between 60 and 120 seconds, folding, bagging, labelling and weighing included.",
+        "fr": "Mesurez au chronomètre, pas à l'impression. Prenez 20 commandes réelles et chronométrez de la fin du prélèvement au carton scellé et étiqueté, puis retenez la médiane plutôt que la moyenne, celle-ci étant tirée vers le haut par les nouveaux. Une commande d'un article se situe souvent entre 60 et 120 secondes, pliage, mise en sac, étiquetage et pesée compris.",
+        "es": "Mídelo con cronómetro, no de memoria. Toma 20 pedidos reales y cronometra desde que termina el picking hasta la caja sellada y etiquetada; usa la mediana y no la media, porque la media la suben los operarios nuevos. Un pedido de un solo artículo suele quedar entre 60 y 120 segundos, con plegado, embolsado, etiquetado y pesaje incluidos.",
+        "ja": "作業時間はストップウォッチで測ります。実際の注文 20 件を、ピッキング完了から箱詰め・封かん・ラベル貼付まで計測し、平均ではなく中央値を使います。平均は不慣れな作業者に引き上げられるためです。単品注文は折り畳み・袋詰め・ラベル・計量を含めて 60〜120 秒が目安です。",
+        "ko": "작업 시간은 스톱워치로 잽니다. 실제 주문 20건을 피킹 완료부터 박스 밀봉·라벨 부착까지 측정하고 평균이 아니라 중앙값을 씁니다. 평균은 미숙한 작업자 때문에 올라갑니다. 단품 주문은 접기·봉투·라벨·계량 포함 60~120초가 흔합니다.",
+    }),
+
+    ("p", {
+        "zh": "再換算成錢：秒數 ÷ 3600 × 每小時人工成本。這一步常被跳過，因為它不是採購單上的一行，但它往往佔到每單成本的兩成，是規格檢討時最容易被忽略、也最容易改善的一項。",
+        "en": "Then convert to money: seconds ÷ 3600 × hourly labour cost. This step is usually skipped because it is not a line on the purchase order, yet it is often a fifth of the cost per order, which makes it the easiest item to improve and the easiest to overlook.",
+        "fr": "Puis convertissez en argent : secondes ÷ 3600 × coût horaire. Cette étape est souvent sautée car elle ne figure pas sur le bon de commande, alors qu'elle représente souvent un cinquième du coût par commande : c'est le poste le plus facile à améliorer et le plus facile à oublier.",
+        "es": "Después conviértelo en dinero: segundos ÷ 3600 × coste hora. Este paso se salta porque no aparece en el pedido, y sin embargo suele ser un quinto del coste por pedido: es la partida más fácil de mejorar y la más fácil de olvidar.",
+        "ja": "金額に直します。秒数 ÷ 3600 × 時間あたり人件費。発注書に 1 行もないため飛ばされがちですが、1 注文コストの 2 割を占めることも多く、最も見落とされ、最も改善しやすい項目です。",
+        "ko": "금액으로 바꿉니다. 초 ÷ 3600 × 시간당 인건비. 발주서에 한 줄도 없어 자주 생략되지만 주문당 원가의 20%를 차지하기도 하며, 가장 놓치기 쉽고 가장 개선하기 쉬운 항목입니다.",
+    }),
+
+    ("h2", {
+        "zh": "四、尺寸決定運費：材積重常常大於包裝本身",
+        "en": "4. Dimensions Decide Freight, and Freight Often Exceeds the Pack",
+        "fr": "4. Les dimensions décident du fret, souvent supérieur à l'emballage",
+        "es": "4. Las dimensiones deciden el flete, que a menudo supera el embalaje",
+        "ja": "4. サイズが送料を決める：容積重量は梱包費を超えることが多い",
+        "ko": "4. 크기가 운임을 결정한다: 부피 중량이 포장비를 넘기도 한다",
+    }),
+
+    ("p", {
+        "zh": "快遞取實重與材積重的較大值計費。材積重 = 長 × 寬 × 高（cm）÷ 除數，國內快遞常用 6000、國際空運常用 5000。一個 35 × 25 × 5 cm 的郵袋，材積重約 0.73 kg；實重 0.5 kg 的訂單就按 0.73 kg 計費。",
+        "en": "Couriers bill the greater of actual weight and dimensional weight. Dimensional weight is length × width × height in cm divided by a divisor: 6000 is common in domestic express and 5000 in international air. A mailer measuring 35 × 25 × 5 cm works out at roughly 0.73 kg, so an order weighing 0.5 kg is billed at 0.73 kg.",
+        "fr": "Les transporteurs facturent le plus élevé du poids réel et du poids volumétrique. Le poids volumétrique est longueur × largeur × hauteur en cm divisé par un diviseur : 6000 en express domestique, 5000 en aérien international. Un sac de 35 × 25 × 5 cm donne environ 0,73 kg, donc une commande de 0,5 kg est facturée 0,73 kg.",
+        "es": "Los transportistas facturan el mayor entre peso real y peso volumétrico. El volumétrico es largo × ancho × alto en cm dividido por un divisor: 6000 en express nacional y 5000 en aéreo internacional. Una bolsa de 35 × 25 × 5 cm da unos 0,73 kg, así que un pedido de 0,5 kg se factura como 0,73 kg.",
+        "ja": "運送会社は実重量と容積重量の大きい方で請求します。容積重量は縦 × 横 × 高さ（cm）÷ 除数で、国内便は 6000、国際航空便は 5000 が一般的です。35 × 25 × 5 cm の袋なら約 0.73 kg、実重量 0.5 kg の注文は 0.73 kg で請求されます。",
+        "ko": "택배사는 실중량과 부피 중량 중 큰 값으로 청구합니다. 부피 중량은 가로 × 세로 × 높이(cm) ÷ 제수이며 국내는 6000, 국제 항공은 5000이 흔합니다. 35 × 25 × 5 cm 봉투는 약 0.73 kg이므로 실중량 0.5 kg 주문도 0.73 kg으로 청구됩니다.",
+    }),
+
+    ("p", {
+        "zh": "所以「換更便宜的袋子」不一定省錢：袋型小 2 cm 若能把材積重壓下一檔，省下的運費遠多於袋子差價；反過來，為省一點袋子錢把衣服壓出摺痕，一次退貨就吃掉幾十單的節省。",
+        "en": "So a cheaper bag is not automatically a saving. Shrinking a dimension by 2 cm can drop dimensional weight into the next bracket, and the freight saved dwarfs the bag difference. The reverse is also true: compressing a garment to save a few cents on a bag creates creases, and one return wipes out the saving from dozens of orders.",
+        "fr": "Un sac moins cher n'est donc pas automatiquement une économie. Réduire une dimension de 2 cm peut faire changer de tranche de poids volumétrique, et le fret gagné dépasse largement l'écart de prix du sac. L'inverse est vrai aussi : comprimer un vêtement pour gagner quelques centimes sur le sac crée des plis, et un seul retour efface l'économie de dizaines de commandes.",
+        "es": "Una bolsa más barata no es automáticamente un ahorro. Reducir una dimensión 2 cm puede bajar el peso volumétrico de tramo, y el flete ahorrado supera con creces la diferencia de la bolsa. Lo contrario también: comprimir la prenda para ahorrar céntimos en la bolsa crea marcas, y una sola devolución borra el ahorro de decenas de pedidos.",
+        "ja": "「安い袋に替える」は自動的な節約ではありません。一辺を 2 cm 縮めて容積重量が 1 段階下がれば、送料の差は袋の差額をはるかに上回ります。逆も同じで、袋代を削るために衣類を圧縮すると折りジワが付き、返品 1 件で数十件分の節約が消えます。",
+        "ko": "더 싼 봉투가 자동으로 절감은 아닙니다. 한 변을 2 cm 줄여 부피 중량이 한 단계 내려가면 절약되는 운임이 봉투 차액을 크게 웃돕니다. 반대도 같습니다. 봉투값을 아끼려 옷을 눌러 포장하면 주름이 생기고 반품 한 건이 수십 건의 절감을 지웁니다.",
+    }),
+
+    ("h2", {
+        "zh": "五、三個不損防護的降本動作",
+        "en": "5. Three Ways to Cut Cost Without Cutting Protection",
+        "fr": "5. Trois leviers d'économie sans réduire la protection",
+        "es": "5. Tres formas de ahorrar sin reducir la protección",
+        "ja": "5. 防護性を落とさない 3 つの改善",
+        "ko": "5. 보호 성능을 지키는 세 가지 절감",
+    }),
+
+    ("ul", [
+        {
+            "zh": "規格標準化：把十幾種袋型收斂到五種，提高單一批量與現貨率，也讓包裝線不必記十套折法。",
+            "en": "Standardise specifications: collapse a dozen bag formats into five, which raises batch size and in-stock rate and stops the packing line memorising ten folding routines.",
+            "fr": "Standardiser les spécifications : ramener une douzaine de formats de sac à cinq, ce qui augmente les lots et le taux de disponibilité et évite à la ligne de retenir dix méthodes de pliage.",
+            "es": "Estandarizar especificaciones: reducir una docena de formatos de bolsa a cinco, lo que sube el lote y la disponibilidad y evita que la línea memorice diez formas de plegado.",
+            "ja": "仕様の標準化：十数種の袋型を 5 種に絞ると、ロットと在庫率が上がり、包装ラインが 10 通りの折り方を覚える必要もなくなります。",
+            "ko": "사양 표준화: 열 가지가 넘는 봉투 규격을 다섯 가지로 줄이면 로트와 재고율이 올라가고 포장 라인이 열 가지 접기 방식을 외울 필요가 없습니다.",
+        },
+        {
+            "zh": "共用版面與共用刀模：吊牌、貼紙、內襯卡共用同一組尺寸，換版停機時間直接減半。",
+            "en": "Share artwork and tooling: let the tag, the sticker and the insert card share one set of dimensions, and changeover downtime drops by half.",
+            "fr": "Mutualiser maquettes et formes de découpe : que l'étiquette, l'autocollant et l'intercalaire partagent un même jeu de dimensions, et le temps de changement est divisé par deux.",
+            "es": "Compartir arte y troqueles: que etiqueta, pegatina e intercalario compartan un mismo juego de medidas, y el tiempo de cambio se reduce a la mitad.",
+            "ja": "版と抜き型の共用：下げ札・シール・中紙を同じ寸法セットにすれば、段取り時間は半分になります。",
+            "ko": "판과 칼형 공유: 행택·스티커·중간지를 같은 치수 세트로 맞추면 준비 교체 시간이 절반으로 줄어듭니다.",
+        },
+        {
+            "zh": "工位重排：膠帶、貼紙、襯紙放在同一側伸手可及的位置，單件可省 5–10 秒，換算下來比換供應商更直接。",
+            "en": "Re-lay the packing station: tape, stickers and void fill within arm's reach on one side saves 5–10 seconds per order, which moves the number more directly than switching suppliers.",
+            "fr": "Réorganiser le poste : adhésif, autocollants et calage à portée de main du même côté fait gagner 5–10 secondes par commande, ce qui pèse plus que de changer de fournisseur.",
+            "es": "Reordenar el puesto: cinta, pegatinas y relleno al alcance en el mismo lado ahorra 5–10 segundos por pedido, lo que mueve la cifra más que cambiar de proveedor.",
+            "ja": "作業台の再配置：テープ・シール・緩衝材を同じ側の手の届く位置に置くと 1 件 5〜10 秒短縮でき、取引先を変えるより直接効きます。",
+            "ko": "작업대 재배치: 테이프·스티커·완충재를 같은 쪽 손 닿는 위치에 두면 건당 5~10초가 줄어 공급사 교체보다 직접적입니다.",
+        },
+    ]),
+
+    ("h2", {
+        "zh": "六、什麼時候不該省",
+        "en": "6. Where Not to Save",
+        "fr": "6. Là où il ne faut pas économiser",
+        "es": "6. Dónde no hay que ahorrar",
+        "ja": "6. 削ってはいけない部分",
+        "ko": "6. 줄이면 안 되는 부분",
+    }),
+
+    ("p", {
+        "zh": "防護不足的代價不是包裝成本，而是退貨成本：破損、受潮、壓痕會產生雙程運費與重新包裝，還會拉低店鋪評分。歐洲市場還要把包裝法規算進來——歐盟包裝與包裝廢棄物條例 (EU) 2025/40（PPWR）與各國生產者責任註冊費，會直接變成每單的固定支出，回收材質比例與註冊費要一起算進表裡。",
+        "en": "Under-protection costs returns rather than packaging: damage, moisture and crush marks produce two-way freight, repacking, and a shop rating that slides. In Europe, add packaging law to the model — Regulation (EU) 2025/40, the PPWR, and national producer responsibility registration fees turn into a fixed cost per order, so recycled content ratios and registration fees belong in the same table.",
+        "fr": "Le défaut de protection coûte des retours, pas de l'emballage : casse, humidité et marques de compression entraînent un fret aller-retour, un réemballage et une note de boutique qui baisse. En Europe, ajoutez le droit de l'emballage au modèle : le règlement (UE) 2025/40, dit PPWR, et les frais d'enregistrement de responsabilité élargie du producteur deviennent un coût fixe par commande, à intégrer dans le même tableau avec le taux de matière recyclée.",
+        "es": "La falta de protección cuesta devoluciones, no embalaje: roturas, humedad y marcas de compresión generan flete de ida y vuelta, reembalaje y una valoración de tienda que baja. En Europa hay que sumar la normativa de envases: el Reglamento (UE) 2025/40, el PPWR, y las tasas de registro de responsabilidad ampliada del productor se convierten en un coste fijo por pedido, así que el porcentaje de material reciclado y las tasas van en la misma tabla.",
+        "ja": "防護不足の代償は梱包費ではなく返品コストです。破損・湿気・圧縮ジワは往復送料と再梱包を生み、店舗評価も下げます。欧州では包装規制も算入します。EU 包装規則 (EU) 2025/40（PPWR）と各国の生産者責任登録料は 1 注文あたりの固定費になり、再生材比率と登録料は同じ表で管理します。",
+        "ko": "보호 부족의 대가는 포장비가 아니라 반품 비용입니다. 파손, 습기, 압축 자국은 왕복 운임과 재포장을 만들고 스토어 평점도 떨어뜨립니다. 유럽에서는 포장 규제도 넣어야 합니다. EU 포장 규정 (EU) 2025/40(PPWR)과 각국 생산자책임 등록료는 주문당 고정비가 되므로 재생 소재 비율과 등록료를 같은 표에서 관리합니다. 국내 판매용 포장에는 원산지 표시 의무와 주의 사항 문구가 들어가므로 인쇄판 비용도 함께 계산합니다.",
+    }),
+
+    ("p", {
+        "zh": "也別在包裝上寫沒有依據的環保聲明。宣稱「可回收」「可降解」都要有材料與認證支撐：法國適用《消費法典》對環境宣稱的要求，西班牙適用反不正當競爭法，日本《景品表示法》對優良誤認的處理同樣適用於包裝上的環境標語，韓國則由《表示廣告法》規範。寫錯比不寫貴得多。",
+        "en": "Nor should unsubstantiated green claims go on the pack. Recyclable and biodegradable both need material evidence and certificates behind them; France applies the Code de la consommation to environmental claims, Spain applies unfair competition law, Japan's Act against Unjustifiable Premiums and Misleading Representations covers eco wording on packaging, and Korea applies its Act on Fair Labelling and Advertising. Getting it wrong costs far more than not saying it.",
+        "fr": "N'imprimez pas non plus d'allégations environnementales sans preuve. « Recyclable » et « biodégradable » exigent des justificatifs matière et des certificats ; la France applique le Code de la consommation aux allégations environnementales, l'Espagne le droit de la concurrence déloyale, le Japon la loi contre les primes injustifiables et les représentations trompeuses, la Corée sa loi sur la publicité et l'étiquetage. Se tromper coûte bien plus cher que de se taire.",
+        "es": "Tampoco imprimas alegaciones ambientales sin respaldo. Reciclable y biodegradable exigen evidencia de material y certificados; Francia aplica el Code de la consommation a las alegaciones ambientales, España la Ley 3/1991 de competencia desleal, Japón su ley contra representaciones engañosas y Corea su ley de publicidad y etiquetado. Equivocarse cuesta mucho más que callar.",
+        "ja": "根拠のない環境表示も避けます。「リサイクル可能」「生分解性」には材料の裏付けと認証が必要です。フランスは消費法典、スペインは不公正競争法、日本は景品表示法が包装の環境コピーにも適用され、韓国は表示広告法が適用されます。書き間違えるほうが、書かないよりはるかに高くつきます。",
+        "ko": "근거 없는 환경 표시도 피해야 합니다. 재활용 가능, 생분해라는 문구에는 소재 근거와 인증이 필요합니다. 프랑스는 소비자법, 스페인은 부정경쟁법, 일본은 경품표시법이 포장의 환경 문구에도 적용되고 한국은 표시광고법이 적용됩니다. 잘못 쓰는 편이 쓰지 않는 것보다 훨씬 비쌉니다.",
+    }),
+
+    ("p", {
+        "zh": "一張能對帳的表長這樣：六行成本、一行每單合計、一行每單佔客單價比例。把這張表做出來，包裝就不再是「估個數」，而是可以和設計、物流、財務一起討論的指標。",
+        "en": "A table you can defend looks like this: six cost lines, one line for the total per order, one line for that total as a share of order value. Build it once and packaging stops being an estimate and becomes a number design, logistics and finance can argue about together.",
+        "fr": "Un tableau défendable ressemble à ceci : six postes, une ligne de total par commande, une ligne de ce total en pourcentage du panier moyen. Construit une fois, l'emballage cesse d'être une estimation pour devenir un indicateur que le design, la logistique et la finance discutent ensemble.",
+        "es": "Una tabla defendible tiene este aspecto: seis líneas de coste, una línea de total por pedido y una línea con ese total como porcentaje del ticket medio. Con la tabla hecha, el embalaje deja de ser una estimación y pasa a ser un indicador que diseño, logística y finanzas discuten juntos.",
+        "ja": "説明できる表はこうなります。6 つの費目、1 注文合計の行、平均客単価に対する比率の行。一度作れば、梱包は「だいたいの数字」ではなく、デザイン・物流・財務が同じ土俵で議論できる指標になります。",
+        "ko": "설명 가능한 표는 이렇습니다. 여섯 개 비용 항목, 주문당 합계 한 줄, 객단가 대비 비율 한 줄. 한 번 만들어 두면 포장은 어림값이 아니라 디자인·물류·재무가 함께 논의할 수 있는 지표가 됩니다.",
+    }),
+
+    ("related", [
+        ("garment-packaging-budget-allocation.html", {
+            "zh": "服裝包裝成本結構與預算分配",
+            "en": "Garment packaging cost structure and budget allocation",
+            "fr": "Structure de coût et budget d'emballage",
+            "es": "Estructura de coste y presupuesto de embalaje",
+            "ja": "衣料品梱包のコスト構造と予算配分",
+            "ko": "의류 포장 원가 구조와 예산 배분",
+        }),
+        ("poly-bag-cost-guide.html", {
+            "zh": "膠袋成本：厚度、材質與用量怎麼算",
+            "en": "Poly bag cost: thickness, material and usage",
+            "fr": "Coût des sacs plastique : épaisseur, matière, usage",
+            "es": "Coste de bolsas: espesor, material y uso",
+            "ja": "ポリ袋のコスト：厚み・材質・使用量",
+            "ko": "폴리백 원가: 두께·재질·사용량",
+        }),
+        ("garment-trims-cost-saving-guide.html", {
+            "zh": "輔料降本：八個不損品質的做法",
+            "en": "Trims cost reduction: eight levers that keep quality",
+            "fr": "Réduire le coût des accessoires : huit leviers",
+            "es": "Reducir el coste de accesorios: ocho palancas",
+            "ja": "副資材コスト削減：品質を落とさない 8 つの手法",
+            "ko": "부자재 원가 절감: 품질을 지키는 여덟 가지",
+        }),
+    ]),
+
+    ("cta", (
+        {
+            "zh": "想知道你現在的每單包裝成本落在什麼區間？把近 30 天的訂單結構（單件與多件比例、平均客單價）與現用包裝清單發給我們，我們按六個成本項幫你算一版，並標出可以立刻調整的三處。",
+            "en": "Want to know where your cost per order actually sits? Send the last 30 days of order mix, single versus multi-item and average order value, plus your current packaging list, and we will model the six lines and flag the three changes you can make immediately.",
+            "fr": "Vous voulez savoir où se situe réellement votre coût par commande ? Envoyez la structure des 30 derniers jours (part de commandes mono et multi-articles, panier moyen) et votre liste d'emballage actuelle : nous modélisons les six postes et signalons trois ajustements immédiats.",
+            "es": "¿Quieres saber dónde está realmente tu coste por pedido? Envía la estructura de los últimos 30 días (proporción de pedidos de uno y varios artículos, ticket medio) y tu lista actual de embalaje: modelamos las seis líneas y señalamos tres cambios inmediatos.",
+            "ja": "現在の 1 注文あたり梱包コストがどの水準か知りたい場合、直近 30 日の注文構成（単品・複数点の比率、平均客単価）と現行の梱包資材リストをお送りください。6 費目で試算し、すぐに変えられる 3 点を提示します。",
+            "ko": "현재 주문당 포장 원가가 어느 수준인지 알고 싶으신가요? 최근 30일 주문 구성(단품·다품목 비율, 평균 객단가)과 현재 포장 자재 목록을 보내주시면 여섯 항목으로 산출해 즉시 조정 가능한 세 가지를 표시해 드립니다.",
+        },
+        {
+            "zh": "索取每單包裝成本測算 →",
+            "en": "Request a cost-per-order model →",
+            "fr": "Demander une modélisation du coût →",
+            "es": "Solicitar un modelo de coste →",
+            "ja": "1 注文コストの試算を依頼 →",
+            "ko": "주문당 원가 산출 요청 →",
+        },
+    )),
+]
