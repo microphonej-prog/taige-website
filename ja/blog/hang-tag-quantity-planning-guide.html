@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>下げ札の発注数量の決め方：1 着あたり枚数・予備率・再印刷 | TAGE</title>
+<meta name="description" content="下げ札は何枚発注するのか。縫製品の枚数・サイズ構成・予備率から基礎数を出し、サンプルと撮影分を加え、再印刷コストで単価区切りを判断します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-quantity-planning-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌下單數量怎麼算：每件張數、備品率與補印成本",
+     "item": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌下單數量怎麼算：每件張數、備品率與補印成本",
+   "url": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>調達・コスト</span></div>
+      <h1>下げ札の発注数量：1 着あたり枚数・予備率・再印刷コスト</h1>
+      <p>泰閣包装 · 2026年11月20日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>下げ札の数量を間違えると、どちらに転んでも高くつきます。少なければ生産終盤に付ける札がなく、出荷を遅らせるか、札なしで出すかになります。後者はコストではなくコンプライアンスの問題です。多ければ、前シーズンのコレクション名が入った札が残って廃棄になります。本稿では数量を 4 つの加算と 1 つの乗算に分解し、10,000 着の注文が最終的に 12,000 枚になる例を最後まで計算します。</p>
+
+      <h2>1. 起点は縫製品の枚数、札の単価ではない</h2>
+
+      <p>よくある間違いは、先に札の単価を見て最低ロットまで数量を積むことです。下げ札は縫製品の部品であり、上限は生産する着数で決まり、印刷会社の価格階段では決まりません。正しい順序は、着数 × 1 着あたり枚数に予備と固定使用量を足して必要総量を出し、その総量をサプライヤーの価格区分と比べて 1 段上げるか判断することです。逆にすると 8,000 着に対して 20,000 枚の札を買うことになります。</p>
+
+      <h2>2. 1 着あたり枚数：単票・セット・言語版</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>構成</th>
+            <th>1 着あたり</th>
+            <th>補足</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>メイン札 1 枚</td>
+            <td>1</td>
+            <td>最も一般的。ベーシックと短納期リピート向け</td>
+          </tr>
+          <tr>
+            <td>札＋組成カード＋値札</td>
+            <td>2〜3</td>
+            <td>多層ブランドや百貨店向け。一度に紐通し</td>
+          </tr>
+          <tr>
+            <td>言語市場ごとに 1 枚</td>
+            <td>市場ごとに発注</td>
+            <td>EU は多言語 1 枚で可。日韓は単言語で分ける</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>サイズ構成が変えるのは総枚数ではなく、箱とサイズへの振り分けです。2,000 着を S〜XL に 2:4:3:1 で分ける場合、札自体はサイズを印刷しない限り共通ですが、サイズ別の箱ごとに枚数が必要です。実務では総着数 × 1.02 をマスターカートンに入れ、内袋にサイズ比で分けます。箱ごとに数えるより簡単で、サイズ欠けも起きません。</p>
+
+      <h2>3. 予備率：3 %・5 %・8 % がそれぞれ何をカバーするか</h2>
+
+      <ul>
+        <li>3 %：生産ロス分のみ。紐通しで切れる、穴で破れる、梱包で折れる、工場で付け替える。低単価で再印刷が許容される安定定番向けです。</li>
+        <li>5 %：付け替えと手直し分を追加。ショールーム用サンプル、買い手都合の付け替え、QC で外した不良品の再ラベル。輸出案件の標準値で、当社の推奨既定値です。</li>
+        <li>8〜10 %：複数倉庫・EC・ライブ販売の返品対応。返品のたびに付け替えが必要で、店舗と倉庫の移動でも消費します。返品率が 20 % を超える品種は 10 % を取ってください。</li>
+        <li>さらに着数と無関係な固定 100〜500 枚：サンプル、撮影、ライブ配信用、プレス送付、店頭陳列、保管見本。これは案件数で見積もります。</li>
+      </ul>
+
+      <h2>4. 不足の代償：下げ札は法定表示の媒体</h2>
+
+      <p>予備率は安心のための余裕ではなく、コンプライアンスの緩衝です。下げ札には通常、ブランド、コレクション、組成、原産国、バーコードが入り、その多くが法定表示です。EU では繊維組成を規則 (EU) No 1007/2011 に従って表示し、GPSR (EU) 2023/988 はトレーサビリティと EU 域内の責任事業者を求めます。米国は FTC の 16 CFR Part 303 が繊維組成と原産国の表示を義務づけます。日本は家庭用品品質表示法により組成（混用率）と取扱表示、韓国は전기용품 및 생활용품 안전관리법により付属ラベルへの混用率と原産国の表示が必要です。札のない衣料は適合した状態で出荷できず、待つしかありません。1 週間の保管料と違約金は、札の 5 % よりはるかに高くつきます。</p>
+
+      <div class="callout">重量も運賃に入ります。55 × 90 mm、350 g/m² の札は 1 枚約 1.7 g。10,000 枚で約 17 kg、紐と内袋を含めると約 21 kg で通常 2 カートンです。容積重量で請求される航空便では、この差が価格区分を 1 段上げて得た値引きの半分を消すことがあります。</div>
+
+      <h2>5. 多めに刷るか再印刷か：3 つの数字で決まる</h2>
+
+      <p>再印刷の隠れコストは過小評価されがちです。要素は 4 つ。版と木型（木型が残っていれば印刷版のみ）、最低ロット（多くのサプライヤーで 1 品番 3,000〜5,000 枚、300 枚の追加は 3,000 枚の単価の 3 倍になり得ます）、納期（7〜12 営業日＋輸送）、そして色差（新しい紙とインキのロットで ΔE 1.5〜2.5 は珍しくなく、高級ブランドの買い手は気づきます）。判断は単純です。再印刷が必要になる確率が 3 割を超えるなら価格区分を 1 段上げ、ただし増やす量は 15 % 未満に抑えます。それを超えると保険ではなく在庫です。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>状況</th>
+            <th>推奨</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>定番・デザイン確定・木型保管あり</td>
+            <td>3 % で十分。区分は狙わない</td>
+          </tr>
+          <tr>
+            <td>輸出案件・QC と付け替えあり</td>
+            <td>5 % とし、直近の区分まで（+15 % 以内）</td>
+          </tr>
+          <tr>
+            <td>複数倉庫 EC・ライブ・返品多</td>
+            <td>10 %、区分は狙わない（先に改版があり得る）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>6. 段取りと保管：旧正月・海上輸送・湿度</h2>
+
+      <p>下げ札は小さな部品に見えますが、出荷前の最後の工程であり、なければ何も出せません。押さえるべき日付は 3 つ。旧正月で工場は 2〜3 週間止まり、その前 4 週間は印刷と物流が最も混みます。札は縫製品の納期の 45〜60 日前に手元に置いてください。欧米向け海上輸送はさらに 30〜35 日、札と縫製品の生産地が違う場合は国内輸送に 3〜5 日を見ます。保管では寒さより湿気が大敵です。20 ± 5 °C、相対湿度 50 ± 10 %、パレットで床から 100 mm、開封後は乾燥剤とともに密封し、先入れ先出しを守ります。湿った札は反り、紐穴が柔らかくなり、紙の目と合わせて最終的な平坦さが決まります。</p>
+
+      <h2>7. そのまま使える計算例</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>数量</th>
+            <th>算出</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>縫製品枚数</td>
+            <td>10,000</td>
+            <td>受注数</td>
+          </tr>
+          <tr>
+            <td>1 着あたり枚数</td>
+            <td>1</td>
+            <td>メイン札 1 枚</td>
+          </tr>
+          <tr>
+            <td>予備 5 %</td>
+            <td>500</td>
+            <td>10,000 × 5 %</td>
+          </tr>
+          <tr>
+            <td>固定使用量</td>
+            <td>100</td>
+            <td>サンプル 60＋撮影・陳列 40</td>
+          </tr>
+          <tr>
+            <td>必要総量</td>
+            <td>10,600</td>
+            <td>社内ロス 1 % を加え 10,700</td>
+          </tr>
+          <tr>
+            <td>実際の発注</td>
+            <td>12,000</td>
+            <td>直近の区分が 12,000、+11 % で 15 % 以内</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>最後に見落とされがちな確認が 1 つあります。札の法定表示が最終的な縫製品と一致しているか。混用率の変更、生地サプライヤーの変更、原産国の変更は改版を意味します。だからこそ予備率を反射的に 20 % まで上げるべきではありません。デザイン改版の多いブランドは、予備を絞り、再印刷を日常業務とし、木型を保管し、紙とインキのロットを仕様に記録するほうが、再印刷時の色差リスクを下げられます。</p>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="hang-tag-moq-cost.html">下げ札の MOQ と単価：1,000 枚が 3,000 枚より高い理由</a></li>
+        <li><a href="trim-order-quantity-tolerance-guide.html">副資材の数量公差：±3 % か ±5 % か</a></li>
+        <li><a href="hang-tag-imposition-yield-guide.html">下げ札の面付けと取り数</a></li>
+        <li><a href="trim-dead-stock-guide.html">副資材の死蔵在庫：定義と処理</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>今季の札の数量を検討中ですか。縫製品枚数、サイズ構成、販売チャネル、対象市場をお送りください。予備と固定使用量を含む推奨発注数量と、再印刷の版代・最低ロットのリスクを算出します。</p>
+        <a class="cta-btn" href="../contact.html">下げ札数量の提案を依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞の専門的な衣料副資材・包装印刷メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 발주 수량 계산: 착당 매수·예비율·재인쇄 | TAGE</title>
+<meta name="description" content="행택을 몇 장 발주할까요? 의류 수량, 사이즈 구성, 예비율로 기준 수량을 만들고 샘플·촬영분을 더한 뒤 재인쇄 비용으로 가격 구간을 정합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-quantity-planning-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-quantity-planning-guide.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌下單數量怎麼算：每件張數、備品率與補印成本",
+     "item": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌下單數量怎麼算：每件張數、備品率與補印成本",
+   "url": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-quantity-planning-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>구매·원가</span></div>
+      <h1>행택 발주 수량: 착당 매수·예비율·재인쇄 비용</h1>
+      <p>TAGE 패키징 · 2026년 11월 20일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>행택 수량을 잘못 잡으면 양쪽 모두 비쌉니다. 부족하면 생산 막바지에 달 행택이 없어 출하를 미루거나 라벨 없이 내보내야 하는데, 후자는 원가가 아니라 컴플라이언스 문제입니다. 남으면 지난 시즌 컬렉션명이 찍힌 행택이 폐기됩니다. 이 글은 수량을 네 개의 가산과 한 개의 승산으로 나누고, 10,000장 주문이 최종 12,000장이 되는 예를 끝까지 계산합니다.</p>
+
+      <h2>1. 기준은 의류 수량이지 행택 단가가 아니다</h2>
+
+      <p>흔한 실수는 행택 단가를 먼저 보고 최소 주문 수량까지 수량을 채우는 것입니다. 행택은 의류의 부품이고, 상한은 생산 수량으로 정해지며 인쇄소의 가격 구간으로 정해지지 않습니다. 올바른 순서는 착수 × 착당 매수에 예비와 고정 사용량을 더해 필요 총량을 만들고, 그 총량을 공급사 가격 구간과 비교해 한 단계 올릴지 판단하는 것입니다. 순서를 뒤집으면 8,000착에 20,000장 행택을 사게 됩니다.</p>
+
+      <h2>2. 착당 매수: 단일·세트·언어판</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>구성</th>
+            <th>착당 매수</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>메인 행택 1장</td>
+            <td>1</td>
+            <td>가장 흔함. 베이직과 단납기 리오더</td>
+          </tr>
+          <tr>
+            <td>행택+혼용률 카드+가격표</td>
+            <td>2~3</td>
+            <td>다층 브랜드나 백화점 요구. 한 번에 끈 통과</td>
+          </tr>
+          <tr>
+            <td>언어 시장별 1장</td>
+            <td>시장별로 발주</td>
+            <td>EU는 다국어 1장 가능. 일본·한국은 단일 언어로 분리</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>사이즈 구성이 바꾸는 것은 총수량이 아니라 박스와 사이즈 배분입니다. 2,000착을 S~XL로 2:4:3:1로 나눌 때 행택은 사이즈를 인쇄하지 않는 한 공통이지만, 사이즈별 박스마다 수량이 필요합니다. 실무에서는 총착수 × 1.02를 마스터 카톤에 넣고 사이즈 비율로 내포에 나눕니다. 박스마다 세는 것보다 간단하고 특정 사이즈가 부족하지도 않습니다.</p>
+
+      <h2>3. 예비율: 3 %, 5 %, 8 %가 각각 무엇을 덮는가</h2>
+
+      <ul>
+        <li>3 %: 생산 손실만. 끈 통과 중 찢어짐, 구멍 갈라짐, 포장 중 접힘, 공장 내 재부착. 단가가 낮고 소량 재인쇄가 가능한 안정적 베이직에 적합합니다.</li>
+        <li>5 %: 재부착과 재작업 포함. 쇼룸 샘플, 바이어 변경으로 인한 재부착, QC에서 걸러진 불량의 재라벨. 수출 주문의 통상 값이며 저희 기본 권장값입니다.</li>
+        <li>8~10 %: 다창고, 이커머스, 라이브 판매 반품. 반품마다 재부착이 필요하고 매장과 창고 간 이동도 소모합니다. 반품률이 20 %를 넘는 품목은 10 %를 잡으십시오.</li>
+        <li>여기에 착수와 무관한 고정 100~500장: 샘플, 촬영, 라이브 방송용, 언론 발송, 매장 진열, 보관 견본. 이는 활동 수로 산정합니다.</li>
+      </ul>
+
+      <h2>4. 부족의 대가: 행택은 법정 표시의 매체</h2>
+
+      <p>예비율은 안심용 여유가 아니라 컴플라이언스 완충입니다. 행택에는 보통 브랜드, 컬렉션, 혼용률, 원산지, 바코드가 들어가고 상당 부분이 법정 표시입니다. EU에서는 섬유 혼용률을 규정 (EU) No 1007/2011에 따라 표시하고, GPSR (EU) 2023/988은 추적성과 EU 역내 책임 사업자를 요구합니다. 미국은 FTC의 16 CFR Part 303이 섬유 혼용률과 원산지 표시를 요구합니다. 일본은 가정용품품질표시법에 따라 혼용률과 취급 표시를, 한국은 전기용품 및 생활용품 안전관리법에 따라 부착 라벨에 혼용률과 원산지를 표시해야 합니다. 행택이 없는 의류는 적합한 상태로 출하할 수 없고 기다려야 합니다. 일주일의 보관료와 위약금은 행택 5 %보다 훨씬 큽니다.</p>
+
+      <div class="callout">중량도 운임에 들어갑니다. 55 × 90 mm, 350 g/m² 행택은 장당 약 1.7 g으로 10,000장이 약 17 kg, 끈과 내포를 포함하면 약 21 kg이며 보통 2카톤입니다. 용적 중량으로 청구되는 항공 운송에서는 이 차이가 가격 구간을 한 단계 올려 받은 할인의 절반을 없앨 수 있습니다.</div>
+
+      <h2>5. 더 인쇄할까 재인쇄할까: 숫자 세 개면 정리된다</h2>
+
+      <p>재인쇄의 숨은 비용은 대개 과소평가됩니다. 네 가지입니다. 판과 목형(목형이 남아 있으면 인쇄 판만 청구), 최소 인쇄 수량(대부분 공급사가 품번당 3,000~5,000장이라 300장 보충은 3,000장 단가의 세 배까지 나옵니다), 납기(영업일 7~12일 더하기 운송), 그리고 색차(새 종이와 잉크 로트에서 ΔE 1.5~2.5는 흔하고 프리미엄 바이어는 알아봅니다). 그래서 판단은 단순합니다. 재인쇄가 필요할 확률이 30 %를 넘으면 가격 구간을 한 단계 올리되, 늘리는 수량은 15 % 미만으로 유지하십시오. 그 이상은 보험이 아니라 재고입니다.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>상황</th>
+            <th>권장</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>베이직, 디자인 확정, 목형 보관</td>
+            <td>3 %면 충분. 구간은 좇지 않음</td>
+          </tr>
+          <tr>
+            <td>수출 주문, QC와 재부착 있음</td>
+            <td>5 %에 가장 가까운 구간까지(+15 % 이내)</td>
+          </tr>
+          <tr>
+            <td>다창고 이커머스, 라이브, 반품 많음</td>
+            <td>10 %, 구간은 올리지 않음(디자인이 먼저 바뀔 수 있음)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>6. 일정과 보관: 설 연휴·해상 운송·습도</h2>
+
+      <p>행택은 작은 부품 같지만 출하 전 마지막 공정이고, 없으면 아무것도 나가지 못합니다. 챙길 날짜는 세 가지입니다. 설 연휴로 공장이 2~3주 멈추고 그 전 4주가 인쇄와 물류가 가장 붐비므로, 행택은 의류 납기 45~60일 전에 손에 있어야 합니다. 유럽·미주행 해상 운송은 30~35일이 더 걸리고, 행택과 의류 생산지가 다르면 국내 운송 3~5일을 봐야 합니다. 보관에서는 추위보다 습기가 문제입니다. 20 ± 5 °C, 상대습도 50 ± 10 %, 파렛트로 바닥에서 100 mm, 개봉 후에는 건조제와 함께 밀봉하고 선입선출을 지킵니다. 습기를 먹은 행택은 휘고 끈 구멍이 물러지며, 종이 결 방향과 함께 최종 평탄도를 결정합니다.</p>
+
+      <h2>7. 그대로 쓸 수 있는 계산 예</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>수량</th>
+            <th>산출</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>의류 착수</td>
+            <td>10,000</td>
+            <td>주문 수량</td>
+          </tr>
+          <tr>
+            <td>착당 매수</td>
+            <td>1</td>
+            <td>메인 행택 1장</td>
+          </tr>
+          <tr>
+            <td>예비 5 %</td>
+            <td>500</td>
+            <td>10,000 × 5 %</td>
+          </tr>
+          <tr>
+            <td>고정 사용량</td>
+            <td>100</td>
+            <td>샘플 60 + 촬영·진열 40</td>
+          </tr>
+          <tr>
+            <td>필요 총량</td>
+            <td>10,600</td>
+            <td>사내 손실 1 % 추가해 10,700</td>
+          </tr>
+          <tr>
+            <td>실제 발주</td>
+            <td>12,000</td>
+            <td>가장 가까운 구간이 12,000, +11 %로 15 % 이내</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>마지막으로 자주 건너뛰는 확인이 하나 있습니다. 행택의 법정 표시가 최종 의류와 여전히 일치하는지입니다. 혼용률 변경, 원단 공급사 변경, 원산지 변경은 디자인 수정을 뜻하므로 예비율을 습관적으로 20 %까지 올리면 안 됩니다. 디자인 수정이 잦은 브랜드는 예비를 줄이고 재인쇄를 일상 업무로 삼으며, 목형을 보관하고 종이·잉크 로트를 사양서에 기록하는 편이 재인쇄 시 색차 위험을 낮춥니다.</p>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="hang-tag-moq-cost.html">행택 MOQ와 단가: 1,000장이 3,000장보다 비싼 이유</a></li>
+        <li><a href="trim-order-quantity-tolerance-guide.html">부자재 수량 공차: ±3 % vs ±5 %</a></li>
+        <li><a href="hang-tag-imposition-yield-guide.html">행택 판걸이와 수율</a></li>
+        <li><a href="trim-dead-stock-guide.html">부자재 사장 재고: 정의와 처리</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>이번 시즌 행택 수량을 계산 중이신가요? 의류 착수, 사이즈 구성, 판매 채널, 대상 시장을 보내주시면 예비와 고정 사용량을 포함한 권장 발주 수량과 재인쇄의 판 비용·최소 수량 위험을 계산해 드립니다.</p>
+        <a class="cta-btn" href="../contact.html">행택 수량 제안 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 받기</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
