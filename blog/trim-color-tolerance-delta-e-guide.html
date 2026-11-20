@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步 | TAGE" data-en="Trim Colour Tolerance: Writing Delta E Limits Into a Spec | TAGE" data-fr="Tolérance de couleur des accessoires : inscrire un Delta E au cahier des charges | TAGE" data-es="Tolerancia de color en accesorios: cómo fijar el Delta E en la especificación | TAGE" data-ja="副資材の色公差：ΔE を仕様書にどう書くか | TAGE" data-ko="부자재 색 공차: ΔE를 사양서에 어떻게 쓸까 | TAGE">輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步 | TAGE</title>
+<meta name="description" data-zh="「顏色不對」是最難結案的客訴。這篇把 ΔE 寫進規格：先鎖定公式、光源與儀器幾何，再按吊牌、織唛、洗水标、金屬件定閾值，附取樣規則與不合格的三條路徑。" data-en="Colour complaints are the hardest to close. Fix the formula, light source and geometry first, then set Delta E limits by trim type, plus sampling rules." data-fr="Les litiges de couleur sont les plus difficiles à clore. Fixez la formule, la source lumineuse et la géométrie, puis les seuils Delta E par type d&#x27;accessoire, avec règles d&#x27;échantillonnage." data-es="Las reclamaciones de color son las más difíciles de cerrar. Fije la fórmula, la fuente de luz y la geometría, y luego los límites Delta E por tipo de accesorio, con reglas de muestreo." data-ja="「色が違う」は最も決着しにくいクレームです。計算式・光源・測定幾何を先に固定し、下げ札・織ネーム・洗濯表示・金具ごとに ΔE の上限を定め、抜取規則と不合格時の 3 経路まで整理します。" data-ko="색상 클레임은 가장 마무리하기 어렵습니다. 계산식, 광원, 측정 기하를 먼저 고정하고 행택·직조 라벨·취급 라벨·금속 부자재별 ΔE 상한과 샘플링 규칙, 불합격 시 세 경로를 정리합니다."
+      content="「顏色不對」是最難結案的客訴。這篇把 ΔE 寫進規格：先鎖定公式、光源與儀器幾何，再按吊牌、織唛、洗水标、金屬件定閾值，附取樣規則與不合格的三條路徑。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+     "item": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+   "url": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="品質與檢測" data-en="Quality &amp; Testing" data-fr="Qualité et essais" data-es="Calidad y ensayos" data-ja="品質・試験" data-ko="품질·시험">品質與檢測</span></div>
+      <h1 data-zh="輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步" data-en="Trim Colour Tolerance: How to Write Delta E Limits Into a Spec" data-fr="Tolérance de couleur : comment inscrire un Delta E au cahier des charges" data-es="Tolerancia de color: cómo fijar el Delta E en la especificación" data-ja="副資材の色公差：ΔE を仕様書に書き、どこで妥協するか" data-ko="부자재 색 공차: ΔE를 사양서에 쓰고 어디서 양보할까">輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月20日" data-en="By TAGE Packaging &nbsp;·&nbsp; Updated November 20, 2026" data-fr="Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 20 novembre 2026" data-es="Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 20 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月20日更新" data-ko="TAGE 패키징 · 2026년 11월 20일 업데이트">泰閣包裝 · 更新於 2026年11月20日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="輔料客訴裡最難結案的一類是顏色。「這批織唛跟上次不一樣」——供應商說在公差內，品牌說肉眼一看就不同，雙方都拍了照片，照片在兩支手機上又是兩個顏色。問題不在誰說謊，而在規格從頭到尾沒有定義「不一樣」到什麼程度算不合格。把 ΔE 寫進規格並不難，難的是寫之前先鎖定三件事：用哪個公式、在什麼光源下、用什麼儀器測。這三項沒鎖定，同一個 ΔE 數字可以同時判合格與不合格。" data-en="Colour is the hardest trim complaint to close. &quot;These woven labels are not the same as last time&quot; — the supplier says the batch is within tolerance, the brand says the difference is obvious, both send photographs, and the photographs are two different colours on two different phones. Nobody is lying; the specification never defined how much difference counts as a failure. Writing a Delta E limit into a spec is not difficult. The hard part is fixing three things before the number means anything: which formula, under which light source, measured on which instrument." data-fr="La couleur est le litige d&#x27;accessoires le plus difficile à clore. « Ces étiquettes tissées ne sont pas comme la dernière fois » : le fournisseur affirme être dans la tolérance, la marque voit une différence évidente, chacun envoie des photos, et les photos donnent deux couleurs sur deux téléphones. Personne ne ment : le cahier des charges n&#x27;a jamais défini à partir de quel écart on refuse. Inscrire une limite Delta E n&#x27;est pas compliqué ; le difficile est de figer trois points avant que le chiffre ait un sens : quelle formule, sous quelle source lumineuse, sur quel instrument." data-es="El color es la reclamación de accesorios más difícil de cerrar. «Estas etiquetas tejidas no son como las de la vez anterior»: el proveedor dice estar dentro de tolerancia, la marca ve una diferencia evidente, ambos envían fotos y las fotos muestran dos colores en dos teléfonos. Nadie miente: la especificación nunca definió a partir de qué diferencia se rechaza. Poner un límite Delta E no es difícil; lo difícil es fijar tres cosas antes de que el número signifique algo: qué fórmula, bajo qué fuente de luz y con qué instrumento." data-ja="副資材のクレームで最も決着しにくいのが色です。「今回の織ネームは前回と違う」。供給側は公差内と言い、ブランド側は明らかに違うと言い、双方が写真を送り、その写真は端末が違えば別の色になります。嘘ではなく、仕様書が「どこから不合格か」を定義していないだけです。ΔE の上限を書くこと自体は難しくありません。難しいのは、数字が意味を持つ前に 3 点を固定することです。どの計算式か、どの光源か、どの測定器か。" data-ko="부자재 클레임에서 가장 마무리하기 어려운 것이 색상입니다. &quot;이번 직조 라벨은 지난번과 다릅니다.&quot; 공급사는 공차 내라고 하고 브랜드는 눈에 띄게 다르다고 하며, 양쪽이 사진을 보내지만 사진은 기기마다 다른 색이 됩니다. 거짓말이 아니라 사양서가 &#x27;어디부터 불량인지&#x27;를 정의하지 않은 것입니다. ΔE 상한을 적는 일은 어렵지 않습니다. 어려운 것은 숫자가 의미를 가지려면 먼저 세 가지를 고정하는 것입니다. 어떤 계산식, 어느 광원, 어떤 측정기.">輔料客訴裡最難結案的一類是顏色。「這批織唛跟上次不一樣」——供應商說在公差內，品牌說肉眼一看就不同，雙方都拍了照片，照片在兩支手機上又是兩個顏色。問題不在誰說謊，而在規格從頭到尾沒有定義「不一樣」到什麼程度算不合格。把 ΔE 寫進規格並不難，難的是寫之前先鎖定三件事：用哪個公式、在什麼光源下、用什麼儀器測。這三項沒鎖定，同一個 ΔE 數字可以同時判合格與不合格。</p>
+
+      <h2 data-zh="一、ΔE 不是一個數字，是一個協定" data-en="1. Delta E Is Not a Number, It Is an Agreement" data-fr="1. Le Delta E n&#x27;est pas un chiffre, c&#x27;est une convention" data-es="1. El Delta E no es un número, es un acuerdo" data-ja="1. ΔE は数値ではなく取り決めである" data-ko="1. ΔE는 숫자가 아니라 합의다">一、ΔE 不是一個數字，是一個協定</h2>
+
+      <p data-zh="ΔE 表示兩個顏色在色空間裡的距離，數值越小越接近。常見的判讀是：ΔE 約 1 時，受過訓練的眼睛在標準光源下勉強可分辨；2 到 3 之間，多數人能看出差異；超過 5，任何人在任何光源下都會覺得「這不是同一個顏色」。但這個距離怎麼算，取決於公式：ΔE*ab（1976，簡單歐氏距離，對深色與高飽和色偏寬鬆）、ΔE*94、以及目前紡織與塗料最常用的 ΔE00（CIEDE2000，對色相與明度的加權更接近人眼）。" data-en="Delta E is the distance between two colours in a colour space; the smaller the figure, the closer the match. The usual reading: around 1, a trained eye can just separate them under standard light; between 2 and 3, most people see a difference; above 5, anyone under any light says these are not the same colour. How that distance is computed, however, depends on the formula — Delta E*ab (1976, a plain Euclidean distance that is generous on dark and highly saturated colours), Delta E*94, and Delta E00 (CIEDE2000), which weights hue and lightness closer to human vision and is now the usual choice in textiles and coatings." data-fr="Le Delta E mesure la distance entre deux couleurs dans un espace colorimétrique : plus il est petit, plus l&#x27;écart est faible. Lecture courante : vers 1, un œil entraîné distingue à peine sous lumière normalisée ; entre 2 et 3, la plupart des gens voient une différence ; au-delà de 5, tout le monde, sous n&#x27;importe quelle lumière, dit que ce n&#x27;est pas la même couleur. Mais le calcul dépend de la formule : Delta E*ab (1976, distance euclidienne simple, indulgente sur les teintes sombres et saturées), Delta E*94, et Delta E00 (CIEDE2000), qui pondère teinte et clarté plus près de la vision humaine et s&#x27;impose aujourd&#x27;hui en textile et en revêtement." data-es="El Delta E mide la distancia entre dos colores en un espacio cromático: cuanto menor, más cerca. La lectura habitual: alrededor de 1, un ojo entrenado apenas distingue bajo luz normalizada; entre 2 y 3, la mayoría ve diferencia; por encima de 5, cualquiera bajo cualquier luz dice que no es el mismo color. Pero el cálculo depende de la fórmula: Delta E*ab (1976, distancia euclídea simple, indulgente con tonos oscuros y saturados), Delta E*94 y Delta E00 (CIEDE2000), que pondera tono y luminosidad más cerca de la visión humana y hoy es la opción habitual en textil y recubrimientos." data-ja="ΔE は色空間上の 2 色の距離で、小さいほど近い色です。目安として、ΔE が 1 前後なら訓練された目が標準光源下でかろうじて区別でき、2〜3 で多くの人が差を感じ、5 を超えると誰がどの光源で見ても別の色です。ただし距離の算出は式に依存します。ΔE*ab（1976、単純なユークリッド距離で暗色・高彩度に甘い）、ΔE*94、そして現在の繊維・塗料で主流の ΔE00（CIEDE2000、色相と明度の重み付けが人の視覚に近い）です。" data-ko="ΔE는 색공간에서 두 색의 거리이며 값이 작을수록 가깝습니다. 보통 ΔE 1 전후면 훈련된 눈이 표준 광원에서 겨우 구분하고, 2~3이면 대부분 차이를 느끼며, 5를 넘으면 누구든 어떤 광원에서도 다른 색이라고 합니다. 다만 그 거리를 계산하는 방식은 공식에 따라 다릅니다. ΔE*ab(1976, 단순 유클리드 거리로 어두운 색과 고채도에 관대함), ΔE*94, 그리고 현재 섬유·도료에서 주로 쓰는 ΔE00(CIEDE2000, 색상과 명도의 가중이 사람 눈에 가깝습니다).">ΔE 表示兩個顏色在色空間裡的距離，數值越小越接近。常見的判讀是：ΔE 約 1 時，受過訓練的眼睛在標準光源下勉強可分辨；2 到 3 之間，多數人能看出差異；超過 5，任何人在任何光源下都會覺得「這不是同一個顏色」。但這個距離怎麼算，取決於公式：ΔE*ab（1976，簡單歐氏距離，對深色與高飽和色偏寬鬆）、ΔE*94、以及目前紡織與塗料最常用的 ΔE00（CIEDE2000，對色相與明度的加權更接近人眼）。</p>
+
+      <div class="callout" data-zh="紡織品的色差計算有現成標準可引：ISO 105-J03《紡織品 色牢度試驗 J03 部分：色差的計算》定義了儀器色差與灰卡評級的換算；ISO 105-A02 提供變色用灰色樣卡；ASTM D2244 則是不透明材料儀器測色的常用做法。規格裡只寫「ΔE ≤ 1.5」而不寫公式與版本，等於兩邊各用一套算法在談同一個字，永遠談不完。" data-en="Textiles have published standards to cite: ISO 105-J03 covers the calculation of colour differences and the relation between instrumental values and grey-scale ratings, ISO 105-A02 supplies the grey scale for change in colour, and ASTM D2244 is the common practice for instrumental measurement of opaque materials. A spec that says &quot;Delta E 1.5 or less&quot; without naming formula and edition leaves the two sides comparing numbers from different algorithms, and that argument never closes." data-fr="Le textile dispose de normes à citer : ISO 105-J03 traite du calcul des écarts de couleur et de la correspondance avec l&#x27;échelle de gris, ISO 105-A02 fournit l&#x27;échelle de gris pour le changement de couleur, et ASTM D2244 est la pratique courante pour la mesure instrumentale des matériaux opaques. Un cahier des charges qui écrit « Delta E inférieur ou égal à 1,5 » sans nommer formule et édition laisse chacun comparer des chiffres issus d&#x27;algorithmes différents : ce débat ne se clôt jamais." data-es="El textil tiene normas que citar: ISO 105-J03 cubre el cálculo de diferencias de color y su correspondencia con la escala de grises, ISO 105-A02 aporta la escala de grises para el cambio de color, y ASTM D2244 es la práctica habitual para medir materiales opacos con instrumento. Una especificación que dice «Delta E 1,5 o menos» sin indicar fórmula y edición deja que cada parte compare números de algoritmos distintos, y esa discusión no termina nunca." data-ja="繊維には引用できる規格があります。ISO 105-J03 は色差の計算とグレースケール判定との対応を定め、ISO 105-A02 は変退色用グレースケールを提供し、ASTM D2244 は不透明材料の測色の慣行です。式と版を書かずに「ΔE 1.5 以下」とだけ指定すると、双方が別のアルゴリズムの数値を突き合わせることになり、議論は終わりません。" data-ko="섬유에는 인용할 표준이 있습니다. ISO 105-J03은 색차 계산과 그레이 스케일 판정의 대응을 규정하고, ISO 105-A02는 변퇴색용 그레이 스케일을 제공하며, ASTM D2244는 불투명 소재의 기기 측색 관행입니다. 공식과 판을 적지 않고 &#x27;ΔE 1.5 이하&#x27;만 쓰면 양쪽이 서로 다른 알고리즘의 숫자를 맞대게 되어 논의가 끝나지 않습니다.">紡織品的色差計算有現成標準可引：ISO 105-J03《紡織品 色牢度試驗 J03 部分：色差的計算》定義了儀器色差與灰卡評級的換算；ISO 105-A02 提供變色用灰色樣卡；ASTM D2244 則是不透明材料儀器測色的常用做法。規格裡只寫「ΔE ≤ 1.5」而不寫公式與版本，等於兩邊各用一套算法在談同一個字，永遠談不完。</div>
+
+      <h2 data-zh="二、光源與幾何：同一個樣品能測出三個答案" data-en="2. Light Source and Geometry: One Sample, Three Answers" data-fr="2. Source lumineuse et géométrie : un échantillon, trois réponses" data-es="2. Fuente de luz y geometría: una muestra, tres respuestas" data-ja="2. 光源と測定幾何：同じ試料が 3 つの答えを出す" data-ko="2. 광원과 측정 기하: 같은 시료가 세 가지 답을 낸다">二、光源與幾何：同一個樣品能測出三個答案</h2>
+
+      <p data-zh="把公式鎖定之後，還有兩個變量會讓同一張織唛測出不同 ΔE。第一是光源與視角：D65（約 6500 K 的日光模擬）配 10° 視角是紡織業的預設，但門店常用暖白的 TL84 或 3000 K LED，同一對顏色在 D65 下 ΔE 0.8、在暖白光下可以到 2.5。第二是儀器幾何：45/0（45 度入射、0 度接收）與積分球 d/8 對有紋理、有光澤的織唛與緞帶會給出不同的值，孔徑大小也會影響——用 4 mm 小孔測織唛的經緯交錯點，與用 8 mm 大孔測平均色，本來就是兩個問題。" data-en="Fix the formula and two variables still move the same woven label to different Delta E values. The first is light source and observer: D65 (a daylight simulator around 6500 K) with the 10° observer is the textile default, but stores light with warm-white TL84 or 3000 K LED, and a pair that reads 0.8 under D65 can reach 2.5 under warm white. The second is instrument geometry: 45/0 (45° illumination, 0° viewing) and an integrating sphere at d/8 give different numbers on textured or glossy labels and ribbons, and aperture size matters too — a 4 mm spot on the warp-and-weft crossings of a woven label and an 8 mm spot on the average colour are answering two different questions." data-fr="La formule étant fixée, deux variables font encore varier le Delta E d&#x27;une même étiquette tissée. D&#x27;abord la source et l&#x27;observateur : D65 (simulateur de lumière du jour, environ 6500 K) avec observateur 10° est la référence textile, mais les magasins éclairent en TL84 blanc chaud ou en LED 3000 K, et un couple à 0,8 sous D65 peut atteindre 2,5 en blanc chaud. Ensuite la géométrie : 45/0 (éclairage à 45°, observation à 0°) et sphère d&#x27;intégration en d/8 ne donnent pas les mêmes valeurs sur une étiquette texturée ou brillante, et le diamètre de mesure compte — 4 mm sur les croisements de chaîne et de trame, 8 mm sur la couleur moyenne, ce sont deux questions différentes." data-es="Fijada la fórmula, dos variables siguen moviendo la misma etiqueta tejida a valores distintos. La primera es la fuente y el observador: D65 (simulador de luz diurna, unos 6500 K) con observador 10° es la referencia textil, pero las tiendas iluminan con TL84 blanco cálido o LED de 3000 K, y un par que da 0,8 en D65 puede llegar a 2,5 en blanco cálido. La segunda es la geometría: 45/0 (iluminación a 45°, observación a 0°) y esfera integradora d/8 no dan lo mismo en etiquetas con textura o brillo, y el diámetro importa: 4 mm sobre los cruces de urdimbre y trama, 8 mm sobre el color medio, responden a preguntas distintas." data-ja="式を固定しても、同じ織ネームが別の ΔE になる変数が 2 つ残ります。1 つは光源と視角です。D65（約 6500 K の昼光シミュレーション）と 10° 視角が繊維の既定ですが、店頭は温白色の TL84 や 3000 K の LED が多く、D65 で ΔE 0.8 の組み合わせが温白色では 2.5 になり得ます。もう 1 つは測定幾何です。45/0（45 度入射・0 度受光）と積分球 d/8 では、起毛や光沢のある織ネーム・リボンで値が変わり、測定径も影響します。4 mm 径で経緯の交点を測るのと、8 mm 径で平均色を測るのは別の問いです。" data-ko="공식을 고정해도 같은 직조 라벨이 다른 ΔE로 나오게 하는 변수가 둘 남습니다. 첫째는 광원과 시야각입니다. D65(약 6500 K 주광 시뮬레이션)와 10° 시야각이 섬유의 기본이지만, 매장은 온백색 TL84나 3000 K LED로 조명하며 D65에서 ΔE 0.8인 조합이 온백색에서 2.5까지 올라갑니다. 둘째는 측정 기하입니다. 45/0(45도 입사·0도 수광)과 적분구 d/8은 요철이나 광택이 있는 직조 라벨·리본에서 다른 값을 주고, 측정 구경도 영향을 줍니다. 4 mm 구경으로 경위사 교차점을 재는 것과 8 mm로 평균색을 재는 것은 다른 질문입니다.">把公式鎖定之後，還有兩個變量會讓同一張織唛測出不同 ΔE。第一是光源與視角：D65（約 6500 K 的日光模擬）配 10° 視角是紡織業的預設，但門店常用暖白的 TL84 或 3000 K LED，同一對顏色在 D65 下 ΔE 0.8、在暖白光下可以到 2.5。第二是儀器幾何：45/0（45 度入射、0 度接收）與積分球 d/8 對有紋理、有光澤的織唛與緞帶會給出不同的值，孔徑大小也會影響——用 4 mm 小孔測織唛的經緯交錯點，與用 8 mm 大孔測平均色，本來就是兩個問題。</p>
+
+      <h2 data-zh="三、按品類定閾值：一張可以談判的表" data-en="3. Limits by Trim Type: A Table You Can Negotiate" data-fr="3. Seuils par type d&#x27;accessoire : une table négociable" data-es="3. Límites por tipo de accesorio: una tabla negociable" data-ja="3. 品種別の上限：交渉できる表" data-ko="3. 품종별 상한: 협상할 수 있는 표">三、按品類定閾值：一張可以談判的表</h2>
+
+      <p data-zh="下表是我們在輔料打樣與量產中慣用的起談值，不是法規，也不是行業唯一答案——它存在的目的是把「差不多」換成一個可以寫進訂單、可以吵、也可以驗的數字。同一品類內，「與核可標準樣比」的公差通常比「同批內互比」寬一倍，因為前者要吸收不同批次、不同機台與不同原料的累積漂移。" data-en="The table below is the starting point we use in sampling and bulk production for trims. It is not a regulation and not the industry&#x27;s only answer; its purpose is to replace &quot;close enough&quot; with a number that can be written into an order, argued over and inspected. Within a category, the tolerance against the approved standard is usually about twice the within-lot tolerance, because the first has to absorb accumulated drift across batches, machines and raw material lots." data-fr="Le tableau ci-dessous est notre point de départ en échantillonnage et en série pour les accessoires. Ce n&#x27;est ni une réglementation ni la seule réponse du secteur : son but est de remplacer « à peu près » par un chiffre inscrit au bon de commande, discutable et vérifiable. Dans une même catégorie, la tolérance par rapport au témoin approuvé vaut souvent le double de la tolérance intra-lot, car elle doit absorber la dérive cumulée entre lots, machines et matières." data-es="La tabla siguiente es nuestro punto de partida en muestreo y producción en serie de accesorios. No es una norma ni la única respuesta del sector: su objetivo es sustituir «más o menos» por un número que se pueda escribir en el pedido, discutir e inspeccionar. Dentro de una categoría, la tolerancia frente al patrón aprobado suele duplicar la tolerancia intra-lote, porque debe absorber la deriva acumulada entre lotes, máquinas y materias primas." data-ja="下表は副資材の試作・量産で当社が起点にしている値で、法規でも業界唯一の答えでもありません。「だいたい同じ」を、発注書に書け、議論でき、検査できる数値に置き換えるためのものです。同一品種では、承認見本との公差はロット内公差の約 2 倍が目安です。ロット・機械・原料の違いによる累積ドリフトを吸収する必要があるからです。" data-ko="아래 표는 부자재 샘플링과 양산에서 당사가 출발점으로 쓰는 값이며, 법규도 업계의 유일한 답도 아닙니다. &#x27;거의 같다&#x27;를 발주서에 적고 논의하고 검사할 수 있는 숫자로 바꾸기 위한 것입니다. 같은 품종에서 승인 기준 샘플 대비 공차는 로트 내 공차의 약 두 배가 기준입니다. 로트·기계·원자재 차이에 따른 누적 드리프트를 흡수해야 하기 때문입니다.">下表是我們在輔料打樣與量產中慣用的起談值，不是法規，也不是行業唯一答案——它存在的目的是把「差不多」換成一個可以寫進訂單、可以吵、也可以驗的數字。同一品類內，「與核可標準樣比」的公差通常比「同批內互比」寬一倍，因為前者要吸收不同批次、不同機台與不同原料的累積漂移。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-zh="品類" data-en="Trim type" data-fr="Type" data-es="Tipo" data-ja="品種" data-ko="품종">品類</th>
+            <th data-zh="對標準樣（ΔE00）" data-en="vs approved standard (ΔE00)" data-fr="vs témoin (ΔE00)" data-es="vs patrón (ΔE00)" data-ja="承認見本との比較（ΔE00）" data-ko="승인 기준 대비(ΔE00)">對標準樣（ΔE00）</th>
+            <th data-zh="同批內（ΔE00）" data-en="Within a lot (ΔE00)" data-fr="Intra-lot (ΔE00)" data-es="Intra-lote (ΔE00)" data-ja="ロット内（ΔE00）" data-ko="로트 내(ΔE00)">同批內（ΔE00）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-zh="吊牌印刷（膠印／數碼）" data-en="Printed hang tag (offset / digital)" data-fr="Étiquette imprimée (offset / numérique)" data-es="Etiqueta impresa (ófset / digital)" data-ja="下げ札印刷（オフセット／デジタル）" data-ko="행택 인쇄(오프셋·디지털)">吊牌印刷（膠印／數碼）</td>
+            <td data-zh="≤2.0" data-en="2.0" data-fr="2,0" data-es="2,0" data-ja="2.0 以下" data-ko="2.0 이하">≤2.0</td>
+            <td data-zh="≤1.0" data-en="1.0" data-fr="1,0" data-es="1,0" data-ja="1.0 以下" data-ko="1.0 이하">≤1.0</td>
+          </tr>
+          <tr>
+            <td data-zh="織唛（緞面／平面）" data-en="Woven label (satin / damask)" data-fr="Étiquette tissée (satin / damassé)" data-es="Etiqueta tejida (satén / damasco)" data-ja="織ネーム（サテン／ダマスク）" data-ko="직조 라벨(새틴·다마스크)">織唛（緞面／平面）</td>
+            <td data-zh="≤1.5" data-en="1.5" data-fr="1,5" data-es="1,5" data-ja="1.5 以下" data-ko="1.5 이하">≤1.5</td>
+            <td data-zh="≤1.0" data-en="1.0" data-fr="1,0" data-es="1,0" data-ja="1.0 以下" data-ko="1.0 이하">≤1.0</td>
+          </tr>
+          <tr>
+            <td data-zh="洗水标（熱轉印／印刷）" data-en="Care label (thermal transfer / printed)" data-fr="Étiquette d&#x27;entretien (transfert / imprimée)" data-es="Etiqueta de cuidado (transfer / impresa)" data-ja="洗濯表示（熱転写／印刷）" data-ko="취급 라벨(열전사·인쇄)">洗水标（熱轉印／印刷）</td>
+            <td data-zh="≤2.0" data-en="2.0" data-fr="2,0" data-es="2,0" data-ja="2.0 以下" data-ko="2.0 이하">≤2.0</td>
+            <td data-zh="≤1.5" data-en="1.5" data-fr="1,5" data-es="1,5" data-ja="1.5 以下" data-ko="1.5 이하">≤1.5</td>
+          </tr>
+          <tr>
+            <td data-zh="硅膠／PVC 標" data-en="Silicone / PVC patch" data-fr="Patch silicone / PVC" data-es="Parche de silicona / PVC" data-ja="シリコーン／PVC パッチ" data-ko="실리콘·PVC 패치">硅膠／PVC 標</td>
+            <td data-zh="≤1.5" data-en="1.5" data-fr="1,5" data-es="1,5" data-ja="1.5 以下" data-ko="1.5 이하">≤1.5</td>
+            <td data-zh="≤1.0" data-en="1.0" data-fr="1,0" data-es="1,0" data-ja="1.0 以下" data-ko="1.0 이하">≤1.0</td>
+          </tr>
+          <tr>
+            <td data-zh="織帶／縫線" data-en="Webbing / sewing thread" data-fr="Sangle / fil" data-es="Cinta / hilo" data-ja="テープ／縫糸" data-ko="웨빙·봉사">織帶／縫線</td>
+            <td data-zh="≤1.0" data-en="1.0" data-fr="1,0" data-es="1,0" data-ja="1.0 以下" data-ko="1.0 이하">≤1.0</td>
+            <td data-zh="≤0.8" data-en="0.8" data-fr="0,8" data-es="0,8" data-ja="0.8 以下" data-ko="0.8 이하">≤0.8</td>
+          </tr>
+          <tr>
+            <td data-zh="金屬件（電鍍／陽極）" data-en="Metal hardware (plated / anodised)" data-fr="Pièces métalliques (plaqué / anodisé)" data-es="Herrajes metálicos (galvanizado / anodizado)" data-ja="金具（めっき／アルマイト）" data-ko="금속 부자재(도금·아노다이징)">金屬件（電鍍／陽極）</td>
+            <td data-zh="≤2.5" data-en="2.5" data-fr="2,5" data-es="2,5" data-ja="2.5 以下" data-ko="2.5 이하">≤2.5</td>
+            <td data-zh="≤1.5" data-en="1.5" data-fr="1,5" data-es="1,5" data-ja="1.5 以下" data-ko="1.5 이하">≤1.5</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-zh="金屬件的數字要特別說明：電鍍與陽極處理的表面會隨角度改變明度，5° 的轉動就能讓 ΔE 跳 1 以上，所以金屬件通常採「儀器值 + 目視」雙軌判定，並且指定量測角度（例如 45/0 固定平台、樣品不得手持）。這也是為什麼同一份規格不能把金屬件和織唛套同一個門檻——不是為了放寬，而是因為量測本身的不確定度不同。" data-en="The metal figure needs a note: plated and anodised surfaces shift in lightness with viewing angle, and a 5° rotation can move Delta E by more than 1. Metal hardware is therefore judged on two tracks — instrument reading plus visual assessment — with the geometry specified (45/0 on a fixed stage, sample never handheld). That is why one spec should not apply the same limit to hardware and to woven labels: not to be lenient, but because the measurement uncertainty itself differs." data-fr="Le chiffre des métaux mérite une note : une surface plaquée ou anodisée change de clarté avec l&#x27;angle, et une rotation de 5° déplace le Delta E de plus de 1. Les pièces métalliques se jugent donc sur deux voies — mesure instrumentale et appréciation visuelle — avec une géométrie imposée (45/0 sur platine fixe, échantillon jamais tenu à la main). C&#x27;est pourquoi un même cahier des charges ne doit pas appliquer le même seuil aux métaux et aux tissés : non par indulgence, mais parce que l&#x27;incertitude de mesure diffère." data-es="La cifra de los metales requiere una nota: las superficies galvanizadas o anodizadas cambian de luminosidad con el ángulo, y girar 5° desplaza el Delta E más de 1. Por eso los herrajes se juzgan en dos vías — lectura instrumental y valoración visual — con geometría fijada (45/0 sobre plataforma, muestra nunca en mano). Es la razón de no aplicar el mismo límite a herrajes y a tejidos: no por indulgencia, sino porque la incertidumbre de medición es distinta." data-ja="金具の数値には注記が必要です。めっきやアルマイト面は角度で明度が変わり、5 度回すだけで ΔE が 1 以上動きます。そのため金具は「測色値＋目視」の二本立てで判定し、測定幾何を指定します（45/0、固定ステージ、手で持たない）。同じ仕様書で金具と織ネームに同じ上限を課してはいけない理由は、緩くするためではなく、測定の不確かさそのものが違うからです。" data-ko="금속 수치에는 주석이 필요합니다. 도금·아노다이징 표면은 각도에 따라 명도가 변하고 5도만 돌려도 ΔE가 1 이상 움직입니다. 그래서 금속 부자재는 &#x27;측색값+육안&#x27; 두 갈래로 판정하고 측정 기하를 지정합니다(45/0, 고정 스테이지, 손으로 들지 않음). 같은 사양서에서 금속과 직조 라벨에 같은 상한을 적용하면 안 되는 이유는 관대하게 하려는 것이 아니라 측정 불확도 자체가 다르기 때문입니다.">金屬件的數字要特別說明：電鍍與陽極處理的表面會隨角度改變明度，5° 的轉動就能讓 ΔE 跳 1 以上，所以金屬件通常採「儀器值 + 目視」雙軌判定，並且指定量測角度（例如 45/0 固定平台、樣品不得手持）。這也是為什麼同一份規格不能把金屬件和織唛套同一個門檻——不是為了放寬，而是因為量測本身的不確定度不同。</p>
+
+      <h2 data-zh="四、取樣與判定：看最大值，不看平均值" data-en="4. Sampling and Verdict: Judge the Worst, Not the Mean" data-fr="4. Échantillonnage et verdict : le pire, pas la moyenne" data-es="4. Muestreo y veredicto: el peor valor, no la media" data-ja="4. 抜取りと判定：平均ではなく最大値を見る" data-ko="4. 샘플링과 판정: 평균이 아니라 최댓값">四、取樣與判定：看最大值，不看平均值</h2>
+
+      <ul>
+        <li data-zh="每批抽 5 件，每件測 3 個點（避開邊緣 10 mm 內的區域），取 15 個值中的最大值判定，不用平均值。" data-en="Draw five pieces per lot, take three readings on each, avoiding the outer 10 mm, and judge on the highest of the fifteen values rather than the mean." data-fr="Prélevez cinq pièces par lot, trois mesures par pièce en évitant les 10 mm de bord, et jugez sur la plus haute des quinze valeurs, non sur la moyenne." data-es="Tome cinco piezas por lote, tres lecturas por pieza evitando los 10 mm del borde, y juzgue por el mayor de los quince valores, no por la media." data-ja="ロットから 5 枚、各 3 点（端から 10 mm を避ける）を測り、15 値の最大値で判定します。平均は使いません。" data-ko="로트에서 5장, 장당 3점(가장자리 10 mm 회피)을 측정해 15개 값 중 최댓값으로 판정합니다. 평균은 쓰지 않습니다.">每批抽 5 件，每件測 3 個點（避開邊緣 10 mm 內的區域），取 15 個值中的最大值判定，不用平均值。</li>
+        <li data-zh="標準樣必須是簽核過的實物，不是電子檔。數位稿在每一台螢幕上都是一個新顏色，實物標準樣要一式三份：品牌、工廠、供應商各留一份，並註明簽核日期與光源條件。" data-en="The standard must be a signed physical sample, not a file. A digital artwork is a new colour on every screen; the physical standard needs three copies — brand, factory and supplier — each marked with the approval date and viewing conditions." data-fr="Le témoin doit être un échantillon physique signé, pas un fichier. Une maquette numérique est une couleur nouvelle sur chaque écran ; le témoin physique existe en trois exemplaires — marque, usine, fournisseur — datés et annotés des conditions d&#x27;examen." data-es="El patrón debe ser una muestra física firmada, no un archivo. Un diseño digital es un color nuevo en cada pantalla; el patrón físico necesita tres copias —marca, fábrica y proveedor— con fecha de aprobación y condiciones de observación." data-ja="標準見本は承認済みの現物でなければなりません。デジタルデータは画面ごとに別の色になります。現物見本は 3 部（ブランド・工場・供給者）を用意し、承認日と観察条件を記します。" data-ko="기준 샘플은 승인된 실물이어야 하며 파일이 아닙니다. 디지털 시안은 화면마다 다른 색이 됩니다. 실물 기준은 3부(브랜드·공장·공급사)로 나누고 승인일과 관찰 조건을 적습니다.">標準樣必須是簽核過的實物，不是電子檔。數位稿在每一台螢幕上都是一個新顏色，實物標準樣要一式三份：品牌、工廠、供應商各留一份，並註明簽核日期與光源條件。</li>
+        <li data-zh="標準樣有保存期限：多數材料在光照與氧化下 12 個月就會漂移，紙類吊牌更短。超過 12 個月的標準樣要重新簽核，否則供應商是在跟一個已經變色的樣本比對。" data-en="Standards expire: most materials drift within 12 months under light and oxidation, and paper tags sooner. Any standard older than 12 months should be re-approved, otherwise the supplier is matching against a sample that has already moved." data-fr="Les témoins ont une durée de vie : la plupart des matières dérivent en 12 mois sous la lumière et l&#x27;oxydation, les étiquettes papier plus vite. Au-delà de 12 mois, le témoin doit être réapprouvé, sinon le fournisseur se cale sur un échantillon déjà décalé." data-es="Los patrones caducan: la mayoría de los materiales derivan en 12 meses por luz y oxidación, y el papel antes. Un patrón de más de 12 meses debe reaprobarse, o el proveedor estará comparando contra una muestra ya desplazada." data-ja="標準見本には寿命があります。多くの材料は光と酸化で 12 か月でドリフトし、紙の下げ札はさらに早いです。12 か月を超えた見本は再承認が必要で、そうしないと供給者は既に変色した見本と比較することになります。" data-ko="기준 샘플에는 유효기간이 있습니다. 대부분의 소재는 빛과 산화로 12개월 내에 변하며 종이 행택은 더 빠릅니다. 12개월이 지난 기준은 재승인해야 하고, 그렇지 않으면 공급사가 이미 변색된 샘플과 비교하게 됩니다.">標準樣有保存期限：多數材料在光照與氧化下 12 個月就會漂移，紙類吊牌更短。超過 12 個月的標準樣要重新簽核，否則供應商是在跟一個已經變色的樣本比對。</li>
+      </ul>
+
+      <h2 data-zh="五、同色異譜：兩個 ΔE 都合格，放在店裡卻不對" data-en="5. Metamerism: Both Delta E Values Pass, the Store Says Otherwise" data-fr="5. Métamérisme : deux Delta E conformes, un rendu faux en magasin" data-es="5. Metamerismo: dos Delta E conformes y un color equivocado en tienda" data-ja="5. 条件等色：どちらの ΔE も合格なのに店頭で合わない" data-ko="5. 조건등색: 두 ΔE 모두 합격인데 매장에서 틀려 보인다">五、同色異譜：兩個 ΔE 都合格，放在店裡卻不對</h2>
+
+      <p data-zh="同色異譜（metamerism）指的是兩個樣品在某一光源下顏色一致，換一個光源就分開。成因是光譜曲線不同而三刺激值相同：用不同染料的織唛、用顏料墨與染料墨混印的吊牌、以及織唛與衣服主體布料之間，都是高風險組合。實務判法是三光源比對：D65、TL84（或 3000–4000 K 暖白 LED）、A（約 2856 K 白熾）。三者在 ΔE00 上都合格才算過關；若 D65 合格而 A 明顯分開，通常是配方而非設備問題。" data-en="Metamerism means two samples match under one light and separate under another. The cause is different spectral curves producing the same tristimulus values: woven labels dyed with different dyes, hang tags printed with pigment inks against dye inks, and any label matched to the garment&#x27;s main fabric are all high-risk pairs. The practical test is a three-source comparison — D65, TL84 (or 3000–4000 K warm LED) and A (around 2856 K incandescent). All three must pass on Delta E00; if D65 passes and A separates, the cause is usually the colorant recipe, not the instrument." data-fr="Le métamérisme, c&#x27;est deux échantillons qui s&#x27;accordent sous une lumière et divergent sous une autre. La cause : des courbes spectrales différentes pour des valeurs trichromatiques identiques. Étiquettes tissées teintes avec des colorants différents, étiquettes imprimées en encre pigmentaire face à des encres tinctoriales, et tout assemblage avec le tissu principal du vêtement sont des couples à risque. L&#x27;essai pratique compare trois sources : D65, TL84 (ou LED blanc chaud 3000–4000 K) et A (environ 2856 K incandescent). Les trois doivent passer en Delta E00 ; si D65 passe et que A décroche, la cause est généralement la formule colorante, pas l&#x27;appareil." data-es="El metamerismo es que dos muestras coinciden bajo una luz y se separan bajo otra. La causa son curvas espectrales distintas con los mismos valores triestímulo: etiquetas tejidas teñidas con colorantes diferentes, etiquetas impresas con tintas pigmentarias frente a tintas de colorante, y cualquier etiqueta igualada al tejido principal de la prenda son combinaciones de riesgo. La prueba práctica compara tres fuentes: D65, TL84 (o LED blanco cálido de 3000–4000 K) y A (unos 2856 K incandescente). Las tres deben pasar en Delta E00; si D65 pasa y A se separa, la causa suele ser la receta de colorante, no el aparato." data-ja="条件等色（メタメリズム）とは、ある光源では一致し、別の光源では分かれる現象です。分光曲線が違うのに三刺激値が同じことで起こります。異なる染料で染めた織ネーム、顔料インキと染料インキで刷った下げ札、そして織ネームと本体生地の組み合わせは高リスクです。実務では 3 光源比較を行います。D65、TL84（または 3000〜4000 K の温白 LED）、A（約 2856 K 白熱）。3 つすべてが ΔE00 で合格して初めて通過です。D65 は合格で A が外れる場合、原因は装置ではなく色材の処方が通常です。" data-ko="조건등색(메타머리즘)은 한 광원에서는 일치하고 다른 광원에서는 갈라지는 현상입니다. 분광 곡선은 다른데 삼자극값이 같기 때문에 생깁니다. 다른 염료로 염색한 직조 라벨, 안료 잉크와 염료 잉크로 인쇄한 행택, 그리고 직조 라벨과 본체 원단의 조합이 고위험입니다. 실무 판정은 삼광원 비교입니다. D65, TL84(또는 3000~4000 K 온백색 LED), A(약 2856 K 백열). 세 광원 모두 ΔE00에서 합격해야 통과이며, D65는 합격인데 A에서 갈라지면 원인은 보통 측정기가 아니라 착색 배합입니다.">同色異譜（metamerism）指的是兩個樣品在某一光源下顏色一致，換一個光源就分開。成因是光譜曲線不同而三刺激值相同：用不同染料的織唛、用顏料墨與染料墨混印的吊牌、以及織唛與衣服主體布料之間，都是高風險組合。實務判法是三光源比對：D65、TL84（或 3000–4000 K 暖白 LED）、A（約 2856 K 白熾）。三者在 ΔE00 上都合格才算過關；若 D65 合格而 A 明顯分開，通常是配方而非設備問題。</p>
+
+      <h2 data-zh="六、寫進規格的六句話" data-en="6. Six Lines to Put in the Specification" data-fr="6. Six lignes à inscrire au cahier des charges" data-es="6. Seis líneas para la especificación" data-ja="6. 仕様書に書く 6 行" data-ko="6. 사양서에 넣을 여섯 줄">六、寫進規格的六句話</h2>
+
+      <div class="callout" data-zh="①「色差以 ΔE00（CIEDE2000）計算，依 ISO 105-J03 執行」；②「量測條件：D65／10°、45/0 幾何、孔徑 8 mm（織唛與織帶 4 mm）、樣品平貼固定平台」；③「對標準樣 ΔE00 ≤1.5，同批內 ≤1.0」（按品類替換）；④「每批抽 5 件、每件 3 點，取最大值判定」；⑤「標準樣一式三份，簽核日 12 個月內有效」；⑥「三光源（D65／TL84／A）下皆須合格，A 光源分離者退回」。六句話寫進訂單附件，顏色爭議從「看法不同」變成「數據對不上」。" data-en="(1) Colour difference is calculated as Delta E00 (CIEDE2000) to ISO 105-J03; (2) measurement conditions: D65 / 10°, 45/0 geometry, 8 mm aperture (4 mm for woven labels and webbing), sample fixed flat on the stage; (3) Delta E00 1.5 or less against the standard and 1.0 or less within a lot (adjust by trim type); (4) five pieces per lot, three readings each, judged on the maximum; (5) three standard copies, valid 12 months from approval; (6) all three sources (D65, TL84, A) must pass, and separation under A is a rejection. With these six lines in the order annex, a colour dispute stops being about opinions and becomes a data mismatch." data-fr="(1) L&#x27;écart de couleur est calculé en Delta E00 (CIEDE2000) selon ISO 105-J03 ; (2) conditions : D65 / 10°, géométrie 45/0, ouverture 8 mm (4 mm pour tissés et sangles), échantillon fixé à plat ; (3) Delta E00 inférieur ou égal à 1,5 face au témoin et 1,0 intra-lot (à adapter au type) ; (4) cinq pièces par lot, trois mesures, jugement sur le maximum ; (5) trois exemplaires du témoin, valables 12 mois après approbation ; (6) les trois sources (D65, TL84, A) doivent passer, un décrochage sous A est un refus. Ces six lignes en annexe transforment un litige d&#x27;opinions en écart de données." data-es="(1) La diferencia de color se calcula como Delta E00 (CIEDE2000) según ISO 105-J03; (2) condiciones: D65 / 10°, geometría 45/0, apertura 8 mm (4 mm en tejidos y cintas), muestra fijada en plano; (3) Delta E00 1,5 o menos frente al patrón y 1,0 intra-lote (ajustar por tipo); (4) cinco piezas por lote, tres lecturas, juicio por el máximo; (5) tres copias del patrón, válidas 12 meses desde la aprobación; (6) las tres fuentes (D65, TL84, A) deben pasar y una separación bajo A es rechazo. Con estas seis líneas en el anexo, la disputa de color deja de ser de opiniones y pasa a ser de datos." data-ja="(1) 色差は ΔE00（CIEDE2000）で ISO 105-J03 に従って算出する。(2) 測定条件は D65／10°、45/0 幾何、口径 8 mm（織ネーム・テープは 4 mm）、試料は固定ステージに平置き。(3) 標準見本に対し ΔE00 1.5 以下、ロット内 1.0 以下（品種で調整）。(4) ロット 5 枚、各 3 点、最大値で判定。(5) 標準見本は 3 部、承認日から 12 か月有効。(6) 3 光源（D65／TL84／A）すべて合格、A で分離するものは不合格。この 6 行を発注書の別紙に入れると、色の争いは意見の相違からデータの不一致に変わります。" data-ko="(1) 색차는 ΔE00(CIEDE2000)으로 ISO 105-J03에 따라 계산한다. (2) 측정 조건은 D65/10°, 45/0 기하, 구경 8 mm(직조 라벨·웨빙은 4 mm), 시료는 고정 스테이지에 평평하게. (3) 기준 샘플 대비 ΔE00 1.5 이하, 로트 내 1.0 이하(품종별 조정). (4) 로트당 5장, 장당 3점, 최댓값으로 판정. (5) 기준 샘플은 3부, 승인일로부터 12개월 유효. (6) 삼광원(D65/TL84/A) 모두 합격, A에서 갈라지면 불합격. 이 여섯 줄을 발주서 별지에 넣으면 색상 분쟁이 의견 차이에서 데이터 불일치로 바뀝니다.">①「色差以 ΔE00（CIEDE2000）計算，依 ISO 105-J03 執行」；②「量測條件：D65／10°、45/0 幾何、孔徑 8 mm（織唛與織帶 4 mm）、樣品平貼固定平台」；③「對標準樣 ΔE00 ≤1.5，同批內 ≤1.0」（按品類替換）；④「每批抽 5 件、每件 3 點，取最大值判定」；⑤「標準樣一式三份，簽核日 12 個月內有效」；⑥「三光源（D65／TL84／A）下皆須合格，A 光源分離者退回」。六句話寫進訂單附件，顏色爭議從「看法不同」變成「數據對不上」。</div>
+
+      <h2 data-zh="七、不合格的三條路徑" data-en="7. Three Routes When a Batch Fails" data-fr="7. Trois voies en cas d&#x27;échec" data-es="7. Tres vías cuando el lote falla" data-ja="7. 不合格時の 3 つの経路" data-ko="7. 불합격 시 세 가지 경로">七、不合格的三條路徑</h2>
+
+      <p data-zh="第一條是全檢挑選：把落在公差外的成品挑出來，適用於色差來源是局部（例如織唛邊緣的緯斜）而不是整批偏移的情況，成本是人工與延遲。第二條是讓步接收（deviation）：品牌書面同意這批可用，但必須限定用途——例如只用在內銷或深色底款的吊牌上，不能與核可標準樣同時出現在同一陳列。第三條是重做，通常在整批偏移超過兩倍公差、或色相方向錯了（偏紅而非偏黃）時才划算，因為色相偏移無法靠挑選解決。" data-en="The first route is 100% sorting: pull the pieces outside tolerance, which works when the variation is local (a weft skew at the label edge) rather than a batch-wide shift; the cost is labour and delay. The second is a written deviation: the brand accepts the batch for a restricted use — say, domestic-only or dark-ground tags — never mixed on shelf with the approved standard. The third is remaking, which pays off when the batch shift exceeds twice the tolerance or the hue direction is wrong (red instead of yellow), because a hue shift cannot be sorted out." data-fr="Première voie : le tri à 100 %, qui sort les pièces hors tolérance — efficace quand la variation est locale (une trame de travers en bord d&#x27;étiquette) et non un décalage de lot ; le coût est la main-d&#x27;œuvre et le retard. Deuxième : une dérogation écrite, la marque acceptant le lot pour un usage restreint (marché intérieur, étiquettes sur fond sombre) et jamais mélangé en linéaire avec le témoin approuvé. Troisième : refaire, rentable quand le décalage dépasse le double de la tolérance ou quand la direction de teinte est fausse (rouge au lieu de jaune), car un décalage de teinte ne se trie pas." data-es="La primera vía es la selección al 100 %: retirar las piezas fuera de tolerancia, útil cuando la variación es local (una trama torcida en el borde) y no un desplazamiento de lote; el coste es mano de obra y retraso. La segunda es una desviación por escrito: la marca acepta el lote para un uso restringido —mercado interior o etiquetas sobre fondo oscuro— y nunca mezclado en el lineal con el patrón aprobado. La tercera es rehacer, rentable cuando el desplazamiento supera el doble de la tolerancia o la dirección de tono es errónea (rojo en lugar de amarillo), porque un cambio de tono no se selecciona." data-ja="第 1 は全数選別です。公差外を抜き取る方法で、ばらつきが局所（織ネーム端の緯斜など）でロット全体のずれでない場合に有効ですが、工数と遅延のコストがかかります。第 2 は書面による特採（deviation）で、用途を限定して受け入れます（国内向け、濃色地の下げ札など）。承認見本と同じ売り場に混在させてはいけません。第 3 は作り直しで、ずれが公差の 2 倍を超える場合や色相の方向が違う（黄ではなく赤）場合に妥当です。色相のずれは選別では解決できません。" data-ko="첫째는 전수 선별입니다. 공차를 벗어난 것을 골라내며, 편차가 국소적(직조 라벨 끝의 위사 기울어짐 등)이고 로트 전체 이동이 아닐 때 유효하지만 인건비와 지연이 듭니다. 둘째는 서면 특채(deviation)로, 용도를 제한해 받아들입니다(내수용, 어두운 바탕 행택 등). 승인 기준 샘플과 같은 매대에 섞어 두면 안 됩니다. 셋째는 재제작으로, 이동이 공차의 두 배를 넘거나 색상 방향이 틀렸을 때(노랑이 아니라 빨강) 타당합니다. 색상 이동은 선별로 해결되지 않습니다.">第一條是全檢挑選：把落在公差外的成品挑出來，適用於色差來源是局部（例如織唛邊緣的緯斜）而不是整批偏移的情況，成本是人工與延遲。第二條是讓步接收（deviation）：品牌書面同意這批可用，但必須限定用途——例如只用在內銷或深色底款的吊牌上，不能與核可標準樣同時出現在同一陳列。第三條是重做，通常在整批偏移超過兩倍公差、或色相方向錯了（偏紅而非偏黃）時才划算，因為色相偏移無法靠挑選解決。</p>
+
+      <p data-zh="最後一件事與規格無關，但每次都要提醒：顏色條款不能與法定信息打架。洗水标上的成分與護理符號必須清楚可讀（歐盟市場依紡織品標示條例 (EU) No 1007/2011，日本依家庭用品品質表示法要求以日文標示組成與取扱方法，韓國依《電器用品及生活用品安全管理法》要求混用率與取扱標示），不能為了「顏色更統一」把文字印淺、把符號縮小到 4 pt 以下。判色不合格可以重做，法定標示不合格整批不能賣。" data-en="One last point has nothing to do with tolerance but should be repeated every time: a colour clause must never fight mandatory information. Fibre content and care symbols on the care label have to stay legible — under (EU) No 1007/2011 in the European Union, under the Household Goods Quality Labelling Act in Japan, which requires composition and handling in Japanese, and under Korea&#x27;s safety regime, which requires fibre content and handling marks. Do not print the text lighter or shrink symbols below 4 pt to make the colour look more uniform. A failed colour match can be remade; a failed mandatory label cannot be sold." data-fr="Un dernier point n&#x27;a rien à voir avec la tolérance mais mérite d&#x27;être répété : une clause de couleur ne doit jamais entrer en conflit avec les mentions obligatoires. La composition et les symboles d&#x27;entretien doivent rester lisibles — règlement (UE) n° 1007/2011 dans l&#x27;Union, loi japonaise sur l&#x27;étiquetage de qualité des articles domestiques qui impose composition et entretien en japonais, régime coréen imposant teneur en fibres et marques d&#x27;entretien. Ne pas éclaircir le texte ni réduire les symboles sous 4 pt pour unifier la couleur : un écart de teinte se refait, une mention légale manquante ne se vend pas." data-es="Un último punto no tiene que ver con la tolerancia pero conviene repetirlo: una cláusula de color nunca debe chocar con la información obligatoria. La composición y los símbolos de cuidado deben seguir legibles: Reglamento (UE) 1007/2011 en la Unión, la normativa japonesa que exige composición y cuidado en japonés, y el régimen coreano que exige contenido de fibras y marcas de cuidado. No aclare el texto ni reduzca los símbolos por debajo de 4 pt para unificar el color: un desajuste de tono se rehace, un etiquetado obligatorio defectuoso no se vende." data-ja="最後の 1 点は公差とは別ですが、毎回伝えるべきことです。色の条項が法定表示と衝突してはいけません。洗濯表示の組成と取扱記号は読みやすく保つ必要があります。EU では (EU) No 1007/2011、日本では家庭用品品質表示法により組成（混用率）と取扱表示を日本語で、韓国では生活用品の安全基準により混用率と取扱表示が求められます。色を揃えるために文字を薄くしたり、記号を 4 pt 未満に縮めたりしてはいけません。色の不合格は作り直せますが、法定表示の不合格は販売できません。" data-ko="마지막 한 가지는 공차와 무관하지만 매번 전해야 합니다. 색상 조항이 법정 표시와 충돌해서는 안 됩니다. 취급 라벨의 혼용률과 취급 기호는 읽을 수 있어야 합니다. EU는 (EU) No 1007/2011, 일본은 가정용품 품질표시법에 따라 조성(혼용률)과 취급 표시를 일본어로, 한국은 전기용품 및 생활용품 안전관리법의 가정용 섬유제품 안전기준에 따라 혼용률과 취급 표시, 원산지를 요구합니다. 색을 맞추려고 글자를 흐리게 하거나 기호를 4 pt 미만으로 줄이면 안 됩니다. 색 불합격은 다시 만들 수 있지만 법정 표시 불합격은 판매할 수 없습니다.">最後一件事與規格無關，但每次都要提醒：顏色條款不能與法定信息打架。洗水标上的成分與護理符號必須清楚可讀（歐盟市場依紡織品標示條例 (EU) No 1007/2011，日本依家庭用品品質表示法要求以日文標示組成與取扱方法，韓國依《電器用品及生活用品安全管理法》要求混用率與取扱標示），不能為了「顏色更統一」把文字印淺、把符號縮小到 4 pt 以下。判色不合格可以重做，法定標示不合格整批不能賣。</p>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+      <ul>
+        <li><a href="label-color-metamerism-guide.html" data-zh="標籤同色異譜：為什麼在店裡看起來不一樣" data-en="Label metamerism: why it looks different in store" data-fr="Métamérisme des étiquettes : pourquoi le rendu change en magasin" data-es="Metamerismo en etiquetas: por qué cambia en tienda" data-ja="ラベルの条件等色：店頭で色が変わる理由" data-ko="라벨 조건등색: 매장에서 색이 달라 보이는 이유">標籤同色異譜：為什麼在店裡看起來不一樣</a></li>
+        <li><a href="trim-color-approval-process.html" data-zh="輔料顏色承認流程：從色卡到簽核" data-en="Trim colour approval: from lab dip to sign-off" data-fr="Validation couleur des accessoires : du bain d&#x27;essai à la signature" data-es="Aprobación de color: del baño de prueba a la firma" data-ja="副資材の色承認：試験染から承認まで" data-ko="부자재 색 승인: 시험 염색에서 승인까지">輔料顏色承認流程：從色卡到簽核</a></li>
+        <li><a href="woven-label-color-matching.html" data-zh="織唛對色：從紗線到成品的偏差控制" data-en="Woven label colour matching: controlling drift from yarn to finish" data-fr="Mise au ton des étiquettes tissées : maîtriser la dérive du fil au fini" data-es="Igualación de color en etiquetas tejidas: del hilo al acabado" data-ja="織ネームの色合わせ：糸から製品までのドリフト管理" data-ko="직조 라벨 색 맞춤: 원사에서 완성까지 편차 관리">織唛對色：從紗線到成品的偏差控制</a></li>
+        <li><a href="hang-tag-color-management.html" data-zh="吊牌色彩管理：從打樣到量產" data-en="Hang tag colour management: from proof to bulk" data-fr="Gestion de la couleur des étiquettes : de l&#x27;épreuve à la série" data-es="Gestión del color en etiquetas: de la prueba a la serie" data-ja="下げ札のカラーマネジメント：校正から量産まで" data-ko="행택 색상 관리: 교정에서 양산까지">吊牌色彩管理：從打樣到量產</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="遇到顏色爭議、或想把公差寫進下一份訂單？把品類、現有標準樣與目標市場發給我們，我們會給一份含公式、量測條件、閾值與取樣規則的顏色條款草稿。" data-en="Stuck in a colour dispute, or want tolerance written into the next order? Send the trim type, your current standard and the destination markets, and we will draft a colour clause with formula, measurement conditions, limits and sampling rules." data-fr="Un litige de couleur, ou l&#x27;envie d&#x27;inscrire la tolérance au prochain bon de commande ? Envoyez le type d&#x27;accessoire, votre témoin actuel et les marchés visés : nous rédigeons une clause couleur avec formule, conditions de mesure, seuils et règles d&#x27;échantillonnage." data-es="¿Una disputa de color o quiere fijar la tolerancia en el próximo pedido? Envíe el tipo de accesorio, su patrón actual y los mercados destino: redactamos una cláusula de color con fórmula, condiciones de medición, límites y reglas de muestreo." data-ja="色の紛争中、または次の発注に公差を明記したい方へ。品種、現在の標準見本、対象市場をお送りください。計算式・測定条件・上限・抜取規則を入れた色条項の草案をご提案します。" data-ko="색상 분쟁 중이거나 다음 발주에 공차를 넣고 싶으신가요? 품종, 현재 기준 샘플, 대상 시장을 보내주시면 공식·측정 조건·상한·샘플링 규칙을 담은 색상 조항 초안을 제안합니다.">遇到顏色爭議、或想把公差寫進下一份訂單？把品類、現有標準樣與目標市場發給我們，我們會給一份含公式、量測條件、閾值與取樣規則的顏色條款草稿。</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取顏色公差條款草稿 →" data-en="Request a colour tolerance clause →" data-fr="Demander une clause de tolérance couleur →" data-es="Solicitar una cláusula de tolerancia de color →" data-ja="色公差条項の草案を依頼 →" data-ko="색 공차 조항 초안 요청 →">索取顏色公差條款草稿 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞の専門的な衣料副資材・包装印刷メーカーです。" data-ko="중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="빠른 링크">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り" data-ko="견적 받기">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞市泰閣包装製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞市泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>

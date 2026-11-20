@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tolerancia de color en accesorios: cómo fijar el Delta E en la especificación | TAGE</title>
+<meta name="description" content="Las reclamaciones de color son las más difíciles de cerrar. Fije la fórmula, la fuente de luz y la geometría, y luego los límites Delta E por tipo de accesorio, con reglas de muestreo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/es/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+     "item": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+   "url": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Calidad y ensayos</span></div>
+      <h1>Tolerancia de color: cómo fijar el Delta E en la especificación</h1>
+      <p>Por TAGE Packaging  ·  Actualizado el 20 de noviembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>El color es la reclamación de accesorios más difícil de cerrar. «Estas etiquetas tejidas no son como las de la vez anterior»: el proveedor dice estar dentro de tolerancia, la marca ve una diferencia evidente, ambos envían fotos y las fotos muestran dos colores en dos teléfonos. Nadie miente: la especificación nunca definió a partir de qué diferencia se rechaza. Poner un límite Delta E no es difícil; lo difícil es fijar tres cosas antes de que el número signifique algo: qué fórmula, bajo qué fuente de luz y con qué instrumento.</p>
+
+      <h2>1. El Delta E no es un número, es un acuerdo</h2>
+
+      <p>El Delta E mide la distancia entre dos colores en un espacio cromático: cuanto menor, más cerca. La lectura habitual: alrededor de 1, un ojo entrenado apenas distingue bajo luz normalizada; entre 2 y 3, la mayoría ve diferencia; por encima de 5, cualquiera bajo cualquier luz dice que no es el mismo color. Pero el cálculo depende de la fórmula: Delta E*ab (1976, distancia euclídea simple, indulgente con tonos oscuros y saturados), Delta E*94 y Delta E00 (CIEDE2000), que pondera tono y luminosidad más cerca de la visión humana y hoy es la opción habitual en textil y recubrimientos.</p>
+
+      <div class="callout">El textil tiene normas que citar: ISO 105-J03 cubre el cálculo de diferencias de color y su correspondencia con la escala de grises, ISO 105-A02 aporta la escala de grises para el cambio de color, y ASTM D2244 es la práctica habitual para medir materiales opacos con instrumento. Una especificación que dice «Delta E 1,5 o menos» sin indicar fórmula y edición deja que cada parte compare números de algoritmos distintos, y esa discusión no termina nunca.</div>
+
+      <h2>2. Fuente de luz y geometría: una muestra, tres respuestas</h2>
+
+      <p>Fijada la fórmula, dos variables siguen moviendo la misma etiqueta tejida a valores distintos. La primera es la fuente y el observador: D65 (simulador de luz diurna, unos 6500 K) con observador 10° es la referencia textil, pero las tiendas iluminan con TL84 blanco cálido o LED de 3000 K, y un par que da 0,8 en D65 puede llegar a 2,5 en blanco cálido. La segunda es la geometría: 45/0 (iluminación a 45°, observación a 0°) y esfera integradora d/8 no dan lo mismo en etiquetas con textura o brillo, y el diámetro importa: 4 mm sobre los cruces de urdimbre y trama, 8 mm sobre el color medio, responden a preguntas distintas.</p>
+
+      <h2>3. Límites por tipo de accesorio: una tabla negociable</h2>
+
+      <p>La tabla siguiente es nuestro punto de partida en muestreo y producción en serie de accesorios. No es una norma ni la única respuesta del sector: su objetivo es sustituir «más o menos» por un número que se pueda escribir en el pedido, discutir e inspeccionar. Dentro de una categoría, la tolerancia frente al patrón aprobado suele duplicar la tolerancia intra-lote, porque debe absorber la deriva acumulada entre lotes, máquinas y materias primas.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>vs patrón (ΔE00)</th>
+            <th>Intra-lote (ΔE00)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Etiqueta impresa (ófset / digital)</td>
+            <td>2,0</td>
+            <td>1,0</td>
+          </tr>
+          <tr>
+            <td>Etiqueta tejida (satén / damasco)</td>
+            <td>1,5</td>
+            <td>1,0</td>
+          </tr>
+          <tr>
+            <td>Etiqueta de cuidado (transfer / impresa)</td>
+            <td>2,0</td>
+            <td>1,5</td>
+          </tr>
+          <tr>
+            <td>Parche de silicona / PVC</td>
+            <td>1,5</td>
+            <td>1,0</td>
+          </tr>
+          <tr>
+            <td>Cinta / hilo</td>
+            <td>1,0</td>
+            <td>0,8</td>
+          </tr>
+          <tr>
+            <td>Herrajes metálicos (galvanizado / anodizado)</td>
+            <td>2,5</td>
+            <td>1,5</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>La cifra de los metales requiere una nota: las superficies galvanizadas o anodizadas cambian de luminosidad con el ángulo, y girar 5° desplaza el Delta E más de 1. Por eso los herrajes se juzgan en dos vías — lectura instrumental y valoración visual — con geometría fijada (45/0 sobre plataforma, muestra nunca en mano). Es la razón de no aplicar el mismo límite a herrajes y a tejidos: no por indulgencia, sino porque la incertidumbre de medición es distinta.</p>
+
+      <h2>4. Muestreo y veredicto: el peor valor, no la media</h2>
+
+      <ul>
+        <li>Tome cinco piezas por lote, tres lecturas por pieza evitando los 10 mm del borde, y juzgue por el mayor de los quince valores, no por la media.</li>
+        <li>El patrón debe ser una muestra física firmada, no un archivo. Un diseño digital es un color nuevo en cada pantalla; el patrón físico necesita tres copias —marca, fábrica y proveedor— con fecha de aprobación y condiciones de observación.</li>
+        <li>Los patrones caducan: la mayoría de los materiales derivan en 12 meses por luz y oxidación, y el papel antes. Un patrón de más de 12 meses debe reaprobarse, o el proveedor estará comparando contra una muestra ya desplazada.</li>
+      </ul>
+
+      <h2>5. Metamerismo: dos Delta E conformes y un color equivocado en tienda</h2>
+
+      <p>El metamerismo es que dos muestras coinciden bajo una luz y se separan bajo otra. La causa son curvas espectrales distintas con los mismos valores triestímulo: etiquetas tejidas teñidas con colorantes diferentes, etiquetas impresas con tintas pigmentarias frente a tintas de colorante, y cualquier etiqueta igualada al tejido principal de la prenda son combinaciones de riesgo. La prueba práctica compara tres fuentes: D65, TL84 (o LED blanco cálido de 3000–4000 K) y A (unos 2856 K incandescente). Las tres deben pasar en Delta E00; si D65 pasa y A se separa, la causa suele ser la receta de colorante, no el aparato.</p>
+
+      <h2>6. Seis líneas para la especificación</h2>
+
+      <div class="callout">(1) La diferencia de color se calcula como Delta E00 (CIEDE2000) según ISO 105-J03; (2) condiciones: D65 / 10°, geometría 45/0, apertura 8 mm (4 mm en tejidos y cintas), muestra fijada en plano; (3) Delta E00 1,5 o menos frente al patrón y 1,0 intra-lote (ajustar por tipo); (4) cinco piezas por lote, tres lecturas, juicio por el máximo; (5) tres copias del patrón, válidas 12 meses desde la aprobación; (6) las tres fuentes (D65, TL84, A) deben pasar y una separación bajo A es rechazo. Con estas seis líneas en el anexo, la disputa de color deja de ser de opiniones y pasa a ser de datos.</div>
+
+      <h2>7. Tres vías cuando el lote falla</h2>
+
+      <p>La primera vía es la selección al 100 %: retirar las piezas fuera de tolerancia, útil cuando la variación es local (una trama torcida en el borde) y no un desplazamiento de lote; el coste es mano de obra y retraso. La segunda es una desviación por escrito: la marca acepta el lote para un uso restringido —mercado interior o etiquetas sobre fondo oscuro— y nunca mezclado en el lineal con el patrón aprobado. La tercera es rehacer, rentable cuando el desplazamiento supera el doble de la tolerancia o la dirección de tono es errónea (rojo en lugar de amarillo), porque un cambio de tono no se selecciona.</p>
+
+      <p>Un último punto no tiene que ver con la tolerancia pero conviene repetirlo: una cláusula de color nunca debe chocar con la información obligatoria. La composición y los símbolos de cuidado deben seguir legibles: Reglamento (UE) 1007/2011 en la Unión, la normativa japonesa que exige composición y cuidado en japonés, y el régimen coreano que exige contenido de fibras y marcas de cuidado. No aclare el texto ni reduzca los símbolos por debajo de 4 pt para unificar el color: un desajuste de tono se rehace, un etiquetado obligatorio defectuoso no se vende.</p>
+
+      <h2>Artículos relacionados</h2>
+      <ul>
+        <li><a href="label-color-metamerism-guide.html">Metamerismo en etiquetas: por qué cambia en tienda</a></li>
+        <li><a href="trim-color-approval-process.html">Aprobación de color: del baño de prueba a la firma</a></li>
+        <li><a href="woven-label-color-matching.html">Igualación de color en etiquetas tejidas: del hilo al acabado</a></li>
+        <li><a href="hang-tag-color-management.html">Gestión del color en etiquetas: de la prueba a la serie</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>¿Una disputa de color o quiere fijar la tolerancia en el próximo pedido? Envíe el tipo de accesorio, su patrón actual y los mercados destino: redactamos una cláusula de color con fórmula, condiciones de medición, límites y reglas de muestreo.</p>
+        <a class="cta-btn" href="../contact.html">Solicitar una cláusula de tolerancia de color →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trim Colour Tolerance: Writing Delta E Limits Into a Spec | TAGE</title>
+<meta name="description" content="Colour complaints are the hardest to close. Fix the formula, light source and geometry first, then set Delta E limits by trim type, plus sampling rules.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/en/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-color-tolerance-delta-e-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+     "item": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料顏色公差：ΔE 怎麼寫進規格，什麼時候該讓步",
+   "url": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-color-tolerance-delta-e-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../products.html">Products</a>
+      <a href="../about.html">About Us</a>
+      <a href="index.html">Trims FAQ</a>
+      <a href="../contact.html">Contact</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag active" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Home</a> / <a href="index.html">Trims FAQ</a> / <span>Quality &amp; Testing</span></div>
+      <h1>Trim Colour Tolerance: How to Write Delta E Limits Into a Spec</h1>
+      <p>By TAGE Packaging  ·  Updated November 20, 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Colour is the hardest trim complaint to close. &quot;These woven labels are not the same as last time&quot; — the supplier says the batch is within tolerance, the brand says the difference is obvious, both send photographs, and the photographs are two different colours on two different phones. Nobody is lying; the specification never defined how much difference counts as a failure. Writing a Delta E limit into a spec is not difficult. The hard part is fixing three things before the number means anything: which formula, under which light source, measured on which instrument.</p>
+
+      <h2>1. Delta E Is Not a Number, It Is an Agreement</h2>
+
+      <p>Delta E is the distance between two colours in a colour space; the smaller the figure, the closer the match. The usual reading: around 1, a trained eye can just separate them under standard light; between 2 and 3, most people see a difference; above 5, anyone under any light says these are not the same colour. How that distance is computed, however, depends on the formula — Delta E*ab (1976, a plain Euclidean distance that is generous on dark and highly saturated colours), Delta E*94, and Delta E00 (CIEDE2000), which weights hue and lightness closer to human vision and is now the usual choice in textiles and coatings.</p>
+
+      <div class="callout">Textiles have published standards to cite: ISO 105-J03 covers the calculation of colour differences and the relation between instrumental values and grey-scale ratings, ISO 105-A02 supplies the grey scale for change in colour, and ASTM D2244 is the common practice for instrumental measurement of opaque materials. A spec that says &quot;Delta E 1.5 or less&quot; without naming formula and edition leaves the two sides comparing numbers from different algorithms, and that argument never closes.</div>
+
+      <h2>2. Light Source and Geometry: One Sample, Three Answers</h2>
+
+      <p>Fix the formula and two variables still move the same woven label to different Delta E values. The first is light source and observer: D65 (a daylight simulator around 6500 K) with the 10° observer is the textile default, but stores light with warm-white TL84 or 3000 K LED, and a pair that reads 0.8 under D65 can reach 2.5 under warm white. The second is instrument geometry: 45/0 (45° illumination, 0° viewing) and an integrating sphere at d/8 give different numbers on textured or glossy labels and ribbons, and aperture size matters too — a 4 mm spot on the warp-and-weft crossings of a woven label and an 8 mm spot on the average colour are answering two different questions.</p>
+
+      <h2>3. Limits by Trim Type: A Table You Can Negotiate</h2>
+
+      <p>The table below is the starting point we use in sampling and bulk production for trims. It is not a regulation and not the industry&#x27;s only answer; its purpose is to replace &quot;close enough&quot; with a number that can be written into an order, argued over and inspected. Within a category, the tolerance against the approved standard is usually about twice the within-lot tolerance, because the first has to absorb accumulated drift across batches, machines and raw material lots.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Trim type</th>
+            <th>vs approved standard (ΔE00)</th>
+            <th>Within a lot (ΔE00)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Printed hang tag (offset / digital)</td>
+            <td>2.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Woven label (satin / damask)</td>
+            <td>1.5</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Care label (thermal transfer / printed)</td>
+            <td>2.0</td>
+            <td>1.5</td>
+          </tr>
+          <tr>
+            <td>Silicone / PVC patch</td>
+            <td>1.5</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Webbing / sewing thread</td>
+            <td>1.0</td>
+            <td>0.8</td>
+          </tr>
+          <tr>
+            <td>Metal hardware (plated / anodised)</td>
+            <td>2.5</td>
+            <td>1.5</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The metal figure needs a note: plated and anodised surfaces shift in lightness with viewing angle, and a 5° rotation can move Delta E by more than 1. Metal hardware is therefore judged on two tracks — instrument reading plus visual assessment — with the geometry specified (45/0 on a fixed stage, sample never handheld). That is why one spec should not apply the same limit to hardware and to woven labels: not to be lenient, but because the measurement uncertainty itself differs.</p>
+
+      <h2>4. Sampling and Verdict: Judge the Worst, Not the Mean</h2>
+
+      <ul>
+        <li>Draw five pieces per lot, take three readings on each, avoiding the outer 10 mm, and judge on the highest of the fifteen values rather than the mean.</li>
+        <li>The standard must be a signed physical sample, not a file. A digital artwork is a new colour on every screen; the physical standard needs three copies — brand, factory and supplier — each marked with the approval date and viewing conditions.</li>
+        <li>Standards expire: most materials drift within 12 months under light and oxidation, and paper tags sooner. Any standard older than 12 months should be re-approved, otherwise the supplier is matching against a sample that has already moved.</li>
+      </ul>
+
+      <h2>5. Metamerism: Both Delta E Values Pass, the Store Says Otherwise</h2>
+
+      <p>Metamerism means two samples match under one light and separate under another. The cause is different spectral curves producing the same tristimulus values: woven labels dyed with different dyes, hang tags printed with pigment inks against dye inks, and any label matched to the garment&#x27;s main fabric are all high-risk pairs. The practical test is a three-source comparison — D65, TL84 (or 3000–4000 K warm LED) and A (around 2856 K incandescent). All three must pass on Delta E00; if D65 passes and A separates, the cause is usually the colorant recipe, not the instrument.</p>
+
+      <h2>6. Six Lines to Put in the Specification</h2>
+
+      <div class="callout">(1) Colour difference is calculated as Delta E00 (CIEDE2000) to ISO 105-J03; (2) measurement conditions: D65 / 10°, 45/0 geometry, 8 mm aperture (4 mm for woven labels and webbing), sample fixed flat on the stage; (3) Delta E00 1.5 or less against the standard and 1.0 or less within a lot (adjust by trim type); (4) five pieces per lot, three readings each, judged on the maximum; (5) three standard copies, valid 12 months from approval; (6) all three sources (D65, TL84, A) must pass, and separation under A is a rejection. With these six lines in the order annex, a colour dispute stops being about opinions and becomes a data mismatch.</div>
+
+      <h2>7. Three Routes When a Batch Fails</h2>
+
+      <p>The first route is 100% sorting: pull the pieces outside tolerance, which works when the variation is local (a weft skew at the label edge) rather than a batch-wide shift; the cost is labour and delay. The second is a written deviation: the brand accepts the batch for a restricted use — say, domestic-only or dark-ground tags — never mixed on shelf with the approved standard. The third is remaking, which pays off when the batch shift exceeds twice the tolerance or the hue direction is wrong (red instead of yellow), because a hue shift cannot be sorted out.</p>
+
+      <p>One last point has nothing to do with tolerance but should be repeated every time: a colour clause must never fight mandatory information. Fibre content and care symbols on the care label have to stay legible — under (EU) No 1007/2011 in the European Union, under the Household Goods Quality Labelling Act in Japan, which requires composition and handling in Japanese, and under Korea&#x27;s safety regime, which requires fibre content and handling marks. Do not print the text lighter or shrink symbols below 4 pt to make the colour look more uniform. A failed colour match can be remade; a failed mandatory label cannot be sold.</p>
+
+      <h2>Related Articles</h2>
+      <ul>
+        <li><a href="label-color-metamerism-guide.html">Label metamerism: why it looks different in store</a></li>
+        <li><a href="trim-color-approval-process.html">Trim colour approval: from lab dip to sign-off</a></li>
+        <li><a href="woven-label-color-matching.html">Woven label colour matching: controlling drift from yarn to finish</a></li>
+        <li><a href="hang-tag-color-management.html">Hang tag colour management: from proof to bulk</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Stuck in a colour dispute, or want tolerance written into the next order? Send the trim type, your current standard and the destination markets, and we will draft a colour clause with formula, measurement conditions, limits and sampling rules.</p>
+        <a class="cta-btn" href="../contact.html">Request a colour tolerance clause →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Packaging</h4>
+        <p>Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Hang Tags</a></li>
+          <li><a href="../products.html#wovenlabels">Woven Labels</a></li>
+          <li><a href="../products.html#carelabels">Care Labels</a></li>
+          <li><a href="../products.html#bags">Packaging Bags</a></li>
+          <li><a href="../products.html#paperbags">Eco Paper Bags</a></li>
+          <li><a href="../products.html#brochures">Brochures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen Town, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
