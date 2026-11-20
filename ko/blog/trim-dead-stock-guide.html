@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시즌 취소로 남은 부자재: 네 가지 처리 경로 | TAGE</title>
+<meta name="description" content="기획이 취소돼도 부자재는 이미 입고됩니다. 재사용·개조·양도·폐기 네 경로를 회수율과 리스크로 비교하고, 하면 안 되는 세 가지와 재출고 시 다시 발생하는 의무를 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trim-dead-stock-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trim-dead-stock-guide.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "取消款的輔料庫存：四條路徑與各自的代價",
+     "item": "https://taigetag.com/blog/trim-dead-stock-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "取消款的輔料庫存：四條路徑與各自的代價",
+   "url": "https://taigetag.com/blog/trim-dead-stock-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/trim-dead-stock-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>소싱·원가</span></div>
+      <h1>시즌 취소로 남은 부자재: 네 가지 처리 경로와 비용</h1>
+      <p>TAGE 패키징 · 2026년 11월 20일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>시즌 전에 스타일이 취소되어도 부자재는 이미 입고된 경우가 많습니다. 행택, 직조 라벨, 세탁 라벨, 봉투가 창고에 남습니다. 장부상 수천 달러일 수 있지만 잘못 처리하면 브랜드 리스크가 됩니다. A 브랜드 직조 라벨을 B 브랜드 의류에 봉제하는 것은 위조이고, 브랜드 자재를 고지로 파는 것은 정보 유출입니다. 보관·개조·양도·폐기 네 경로에는 각각 회수율과 비용이 있으며, 잘못 고르면 폐기보다 비쌉니다.</p>
+
+      <h2>1. 재고는 어떻게 생기는가</h2>
+
+      <ul>
+        <li>양산 전에 기획이 취소되었지만 개발 일정에 따라 발주한 부자재는 이미 납품되었습니다.</li>
+        <li>MOQ와 실제 소요량 차이. 필요 8,000개인데 최소 주문이 10,000개.</li>
+        <li>개정 후 구버전. 색상, 버전 번호, 언어 구성이 바뀌어 이전 로트가 모두 불용이 됩니다.</li>
+        <li>손실 대비 3~5% 더 발주했는데 실제 수율이 좋아 남은 재고.</li>
+        <li>공급사 과납. ±10% 납품 공차의 상한까지 납품됩니다.</li>
+      </ul>
+
+      <h2>2. 네 경로와 각각의 회수율</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>경로</th>
+            <th>초기 비용</th>
+            <th>회수 장부가</th>
+            <th>주요 리스크</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>다음 시즌 보관</td>
+            <td>보관과 재고 조사</td>
+            <td>70~100%</td>
+            <td>디자인은 이어지지만 혼용률이나 규정이 바뀌어 보관이 두 번째 낭비가 됨</td>
+          </tr>
+          <tr>
+            <td>개조 후 재사용</td>
+            <td>뜯기, 세탁 라벨 교체, 재포장 작업</td>
+            <td>40~60%</td>
+            <td>뜯으면 원단이 손상되고 잔여 접착제가 새 라벨 부착을 방해</td>
+          </tr>
+          <tr>
+            <td>양도 또는 할인 판매</td>
+            <td>협상, 운송, 재포장</td>
+            <td>10~40%</td>
+            <td>브랜드 자재 유출. 상표가 있는 부자재는 제3자에게 재판매할 수 없음</td>
+          </tr>
+          <tr>
+            <td>폐기 후 증명 확보</td>
+            <td>폐기 비용과 입회 인력</td>
+            <td>0%</td>
+            <td>회수 없음. 다만 증명이 없으면 고객 감사에서 폐기를 입증할 수 없음</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>숫자로 보면, 직조 라벨 10,000장(0.03달러)과 행택 10,000장(0.05달러)은 장부상 800달러입니다. 한 시즌 보관은 세제곱미터당 월 8달러이고 두 상자가 약 0.3세제곱미터이므로 시즌당 약 7달러로 거의 무시할 수준입니다. 그러나 다음 시즌에 행택 평량을 350 g/m²에서 400 g/m²로 올리고 직조 밀도까지 높인다면 보관은 두 번째 낭비가 됩니다. 장부상 800달러는 0이 되고 보관료를 두 번 내게 됩니다.</p>
+
+      <h2>3. 절대 해서는 안 되는 세 가지</h2>
+
+      <ul>
+        <li>A 브랜드의 직조 라벨이나 행택을 B 브랜드 제품에 사용하는 것. 재활용이 아니라 위조와 상표 침해이며 공장 감사와 세관 모두에서 문제가 됩니다.</li>
+        <li>브랜드의 서면 동의 없이 상표가 있는 자재를 재판매, 고지화, 재고 정리 명목으로 유출하는 것. 브랜드가 지키려는 것은 통제권이지 수백 달러가 아닙니다.</li>
+        <li>점착제 수명이 지난 부자재를 그대로 라인에 투입하는 것. 점착 라벨은 보통 12~24개월이며 30 °C 이상에서 노화가 빨라지고, 기한 지난 재고는 반년 뒤 클레임이 됩니다.</li>
+      </ul>
+
+      <h2>4. 보관은 면책이 아니다: 의무가 다시 발생한다</h2>
+
+      <p>오래된 부자재를 다시 출고하는 것은 시장에 재투입하는 것이며 의무가 모두 다시 발생합니다. EU REACH((EC) No 1907/2006)는 SVHC 정보 제공과 신고를 요구하고, GPSR((EU) 2023/988)은 제조사와 책임자의 추적 가능성을, 규정 (EU) No 1007/2011은 섬유 혼용률 표시를 정합니다. 미국은 16 CFR 423으로 취급 표시의 영구 부착을 요구합니다. 프랑스는 소비자법의 표시·언어 규정을 더하고, 스페인은 Real Decreto 928/1987, 일본은 가정용품 품질 표시법으로 조성·세탁 표시·표시자를, 한국은 품질경영 및 공산품 안전관리법으로 품질 표시와 원산지를 요구합니다. 선반에 3년 둔다고 적합해지지 않습니다.</p>
+
+      <div class="callout">원칙은 한 줄입니다. 보관 전에 컴플라이언스를 다시 확인하십시오. 혼용률, 세탁 표시, 원산지, 책임자 중 하나라도 바뀌었다면 선반이 아니라 폐기나 개조로 보냅니다.</div>
+
+      <h2>5. 보관 비용과 수명: 언제 보관이 손해인가</h2>
+
+      <p>보관은 무료가 아닙니다. 외부 창고는 세제곱미터당 월 6~10달러에 재고 조사와 하역 작업이 더해집니다. 환경 영향이 더 큽니다. 종이는 상대습도 60%를 넘으면 물결과 곰팡이가 생기고, 금속은 습한 환경에서 3~6개월이면 녹이 피며, 점착제는 30 °C를 넘으면 노화가 빨라집니다. 보관 비용은 보관료 + 재고 조사 2회 + 실제 사용 확률로 계산합니다. 확률이 50%를 밑돌면 개조나 폐기가 더 저렴합니다.</p>
+
+      <p>실무적 타협은 세 갈래로 나누는 것입니다. A는 디자인과 규정 변화 없이 다음 시즌 재사용이 확정된 재고로 보관합니다. B는 디자인은 이어지지만 색상이나 버전이 바뀐 재고로 개조로 보냅니다. C는 취소되어 재사용 계획이 없는 재고로 제3자 증명을 받아 폐기합니다. 세 갈래를 다른 색으로 표시하고 ERP나 재고 카드에 처분 상태를 기록하지 않으면 반년 뒤 누군가 다른 상자를 꺼냅니다.</p>
+
+      <h2>6. 결정 체크리스트</h2>
+
+      <ul>
+        <li>고객 상표가 들어 있는가. 있으면 보관이나 폐기만 가능하고 재판매는 안 됩니다.</li>
+        <li>다음 시즌 디자인이 바뀌는가. 평량, 폭, 색상이 바뀌면 보관 가치가 즉시 떨어집니다.</li>
+        <li>혼용률과 세탁 표시가 현행 규정에 맞는가. 부적합 재고는 출고할 수 없습니다.</li>
+        <li>점착제 잔여 수명이 얼마인가. 6개월 미만이면 보관을 중단합니다.</li>
+        <li>고객이 폐기 증명을 요구하는가. 브랜드 고객은 거의 항상 요구하므로 처리 방법을 정하기 전에 확인합니다.</li>
+        <li>처분 결정이 문서로 남았는가. 기록이 없으면 1년 뒤 같은 상자가 새 문제로 다시 논의됩니다.</li>
+      </ul>
+
+      <p>남은 부자재는 재무 문제이기 전에 프로세스 문제입니다. 발주 시 버전과 소요량을 명기하고, 개정 시 재고를 세고, 취소가 결정되는 즉시 분류해 기록하십시오. 이 세 가지면 잔량은 작은 꼬리로 남고 회의가 필요한 자산이 되지 않습니다.</p>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="trim-scrap-destruction-certificate-guide.html">부자재 폐기와 폐기 증명: 감사에서 요구하는 서류</a></li>
+        <li><a href="garment-trims-inventory-management.html">부자재 재고 관리: 안전 재고와 회전율</a></li>
+        <li><a href="trim-material-substitution-guide.html">부자재 대체: 교체 전 다섯 가지 확인</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>취소된 스타일의 행택, 라벨, 봉투가 창고에 남아 있나요? 품목, 수량, 고객 상표 포함 여부, 다음 시즌 계획을 보내주시면 네 경로를 회수율과 리스크로 평가하고 증명 폐기가 필요한 품목을 표시해 드립니다.</p>
+        <a class="cta-btn" href="../contact.html">재고 처분 검토 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 받기</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
