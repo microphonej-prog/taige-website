@@ -1,0 +1,295 @@
+# -*- coding: utf-8 -*-
+"""2026-11-21 08:00 第一篇：抖音/小红书服装吊牌与标签合规清单（英文主稿，zh/fr/es/ja/ko 从英文翻译）"""
+
+SLUG = "douyin-xiaohongshu-tag-label-compliance.html"
+CAT = {"zh": "標籤與吊牌", "en": "Labels &amp; Hang Tags", "fr": "Étiquettes", "es": "Etiquetas",
+       "ja": "ネーム・下げ札", "ko": "라벨·행택"}
+TITLE = {
+    "zh": "抖音小紅書服裝吊牌與標籤：合規清單 7 項 | TAGE",
+    "en": "Douyin &amp; Xiaohongshu Apparel Tags and Labels: 7-Point Checklist | TAGE",
+    "fr": "Étiquettes et pendants Douyin / Xiaohongshu : check-list en 7 points | TAGE",
+    "es": "Etiquetas colgantes y de confección para Douyin y Xiaohongshu: 7 puntos | TAGE",
+    "ja": "抖音・小紅書向け衣料タグと表示：7 項目の適合チェック | TAGE",
+    "ko": "더우인·샤오홍슈 의류 행택과 라벨: 7가지 적합성 점검 | TAGE",
+}
+DESC = {
+    "zh": "在抖音、小紅書賣服裝，平台核對的是詳情頁參數與實物吊牌是否一致。七項必備法定內容、洗水標耐久要求、直播鏡頭下最容易失分的三個環節，以及一張能直接用的出貨前驗收表。",
+    "en": "What Douyin and Xiaohongshu listings are checked against: seven mandatory hang tag items, durable care label rules, live-stream mistakes and a checklist.",
+    "fr": "Ce que Douyin et Xiaohongshu vérifient : sept mentions obligatoires sur le pendant, règles d&#x27;étiquetage durable, erreurs en direct et check-list de réception.",
+    "es": "Qué revisan Douyin y Xiaohongshu: siete datos obligatorios en la etiqueta colgante, etiqueta de cuidado duradera, errores en directo y lista de control.",
+    "ja": "抖音・小紅書で確認される内容：下げ札の必須 7 項目、耐久性のある洗濯表示、ライブ配信での失点、1 枚の検収チェック表まで。",
+    "ko": "더우인·샤오홍슈가 확인하는 항목: 행택 필수 7가지, 내구성 있는 취급 표시, 라이브 방송 실수, 1장짜리 검수표.",
+}
+H1 = {
+    "zh": "抖音小紅書服裝吊牌與標籤：合規清單 7 項",
+    "en": "Douyin and Xiaohongshu Apparel Tags and Labels: A 7-Point Compliance Checklist",
+    "fr": "Étiquettes et pendants pour Douyin et Xiaohongshu : la check-list en 7 points",
+    "es": "Etiquetas colgantes y de confección para Douyin y Xiaohongshu: lista de 7 puntos",
+    "ja": "抖音・小紅書向け衣料タグと表示：7 項目の適合チェック",
+    "ko": "더우인·샤오홍슈 의류 행택과 라벨: 7가지 적합성 점검",
+}
+DATE = {"zh": "泰閣包裝 · 更新於 2026年11月21日", "en": "By TAGE Packaging &nbsp;·&nbsp; Updated November 21, 2026",
+        "fr": "Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 21 novembre 2026",
+        "es": "Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 21 de noviembre de 2026",
+        "ja": "泰閣包装 · 2026年11月21日更新", "ko": "TAGE 패키징 · 2026년 11월 21일 업데이트"}
+
+BLOCKS = [
+    ("p", {
+        "zh": "在抖音或小紅書成交一筆服裝訂單，買家第一次看到吊牌與洗水標，是在拆開的快遞袋裡——那一刻決定他要不要退貨，也決定平台會不會把這條商品判為虛假宣傳。商品頁、直播話術與實物標籤三者說的必須是同一件事：纖維含量、號型、洗滌方式、產地與執行標準。這份清單把上架前該對齊的七項、洗水標的耐久要求、以及出貨前最常被罰的幾個失分點放在一起。",
+        "en": "On Douyin or Xiaohongshu an apparel order is won in a fifteen-second clip, but the shopper meets the hang tag and care label for the first time inside the courier bag. That moment decides whether the order comes back, and whether the platform treats the listing as misleading advertising. The product page, the live-stream script and the physical label all have to say the same thing: fibre content, size code, care method, country of origin and the product standard the garment was made to. This checklist pulls together the seven items to align before listing, the durability rules for the care label, and the failures that trigger penalties after shipment.",
+        "fr": "Sur Douyin ou Xiaohongshu, une commande de vêtement se gagne en quinze secondes de vidéo, mais l&#x27;acheteur découvre le pendant et l&#x27;étiquette d&#x27;entretien dans le colis. C&#x27;est ce moment qui décide du retour, et qui décide si la plateforme qualifie la fiche de publicité trompeuse. La fiche produit, le discours du live et l&#x27;étiquette physique doivent dire la même chose : composition, taille, entretien, origine et norme de fabrication. Cette check-list réunit les sept mentions à aligner avant la mise en ligne, les règles de durabilité de l&#x27;étiquette d&#x27;entretien et les erreurs qui déclenchent des sanctions après expédition.",
+        "es": "En Douyin o Xiaohongshu un pedido de ropa se gana en quince segundos de vídeo, pero el comprador descubre la etiqueta colgante y la etiqueta de cuidado dentro del paquete. Ese momento decide si habrá devolución y si la plataforma considera la ficha publicidad engañosa. La ficha de producto, el guion del directo y la etiqueta física tienen que decir lo mismo: composición, talla, cuidado, origen y norma de fabricación. Esta lista reúne los siete datos que hay que alinear antes de publicar, las reglas de durabilidad de la etiqueta de cuidado y los fallos que provocan sanciones tras el envío.",
+        "ja": "抖音や小紅書では、衣料の注文は 15 秒の動画で決まりますが、買い手が下げ札と洗濯表示ラベルを初めて見るのは届いた袋の中です。その瞬間に返品するかどうか、そしてプラットフォームが掲載を虚偽広告と判断するかどうかが決まります。商品ページ、ライブの説明、現物の表示は同じことを言わなければなりません。混用率、サイズ、取扱方法、原産国、そして製造した製品規格です。本記事では、掲載前に揃える 7 項目、洗濯表示ラベルの耐久要件、出荷後に指摘されやすい失点をまとめます。",
+        "ko": "더우인이나 샤오홍슈에서 의류 주문은 15초 영상으로 결정되지만, 구매자가 행택과 취급 표시 라벨을 처음 보는 순간은 택배 봉투를 열 때입니다. 그 순간 반품 여부와 플랫폼의 허위 광고 판정이 갈립니다. 상품 페이지, 라이브 방송 설명, 실물 라벨은 같은 내용을 말해야 합니다. 혼용률, 사이즈, 취급 방법, 원산지, 제조 규격입니다. 이 글은 게시 전에 맞춰야 할 7가지, 취급 표시 라벨의 내구성 요건, 출고 후 지적받기 쉬운 실수를 정리합니다.",
+    }),
+
+    ("h2", {
+        "zh": "一、平台只核對一件事：頁面與實物一致",
+        "en": "1. The Platform Checks One Thing: Page Matches Product",
+        "fr": "1. La plateforme ne vérifie qu&#x27;une chose : la fiche correspond au produit",
+        "es": "1. La plataforma comprueba una sola cosa: que la ficha coincida con el producto",
+        "ja": "1. プラットフォームが見るのは 1 点：ページと現物の一致",
+        "ko": "1. 플랫폼이 확인하는 것은 하나: 페이지와 실물의 일치",
+    }),
+
+    ("p", {
+        "zh": "抖音的商品發布規範與小紅書的商品筆記規則，都不會逐字審你的吊牌，但它們要求詳情頁參數（材質、成分、版型、執行標準）與實物一致。買家投訴材質不符時，平台會拿頁面截圖與實物標籤比對；對不上，處理方向是虛假宣傳，不是普通售後。所以順序應該是：先把標籤內容定稿，再照著吊牌填詳情頁，而不是先寫頁面再回頭找標籤配合。",
+        "en": "Douyin&#x27;s product publication rules and Xiaohongshu&#x27;s product note rules do not read your hang tag word by word, but they do require the listing parameters, material, composition, fit and standard, to match what ships. When a buyer complains that the material is not as described, the platform puts the listing screenshot next to the physical label. If they disagree, the case is handled as misleading advertising, not as an ordinary after-sales request. So the order of work matters: finalise the label content first, then fill the listing from the tag, never the reverse.",
+        "fr": "Les règles de publication de produits de Douyin et celles des notes produit de Xiaohongshu ne lisent pas votre pendant mot à mot, mais elles exigent que les paramètres de la fiche (matière, composition, coupe, norme) correspondent à ce qui est expédié. En cas de réclamation sur la matière, la plateforme place la capture de la fiche à côté de l&#x27;étiquette physique. Si les deux divergent, le dossier est traité comme publicité trompeuse, pas comme un simple service après-vente. L&#x27;ordre de travail compte donc : on finalise d&#x27;abord l&#x27;étiquette, puis on remplit la fiche à partir d&#x27;elle.",
+        "es": "Las normas de publicación de producto de Douyin y las de notas de producto de Xiaohongshu no leen la etiqueta palabra por palabra, pero exigen que los parámetros de la ficha (material, composición, corte, norma) coincidan con lo que se envía. Ante una reclamación por material, la plataforma compara la captura de la ficha con la etiqueta física. Si no coinciden, el caso se trata como publicidad engañosa y no como una simple posventa. Por eso el orden importa: primero se cierra el contenido de la etiqueta y después se rellena la ficha a partir de ella.",
+        "ja": "抖音の商品掲載規範も小紅書の商品ノート規約も、下げ札を一字ずつ審査するわけではありません。ただし商品ページの材質・組成・シルエット・規格が現物と一致することを求めます。材質が違うという申告があれば、プラットフォームはページのスクリーンショットと現物の表示を並べて確認します。食い違えば通常のアフター対応ではなく虚偽広告として処理されます。したがって作業順序は、先に表示内容を確定し、その表示に合わせてページを埋めるのが正解です。",
+        "ko": "더우인의 상품 게시 규정과 샤오홍슈의 상품 노트 규칙은 행택을 한 글자씩 심사하지는 않지만, 상품 페이지의 소재·혼용률·핏·규격이 실제 출고품과 일치하기를 요구합니다. 소재가 다르다는 신고가 들어오면 플랫폼은 페이지 캡처와 실물 라벨을 나란히 비교합니다. 둘이 어긋나면 일반적인 사후 서비스가 아니라 허위 광고로 처리됩니다. 그래서 순서가 중요합니다. 라벨 내용을 먼저 확정하고, 그 라벨을 기준으로 페이지를 채워야 합니다.",
+    }),
+
+    ("callout", {
+        "zh": "上架前花十分鐘做一次逐項對照：纖維含量、號型、洗滌方式、產地、執行標準。五項裡任何一項不一致，先改頁面，不要先發貨——改頁面只要一分鐘，改一萬件吊牌要十天。",
+        "en": "Ten minutes of cross-checking before listing: fibre content, size code, care method, country of origin, product standard. If any one of the five disagrees, fix the page first, do not ship and hope. Editing a page takes a minute; reprinting ten thousand tags takes ten days.",
+        "fr": "Dix minutes de vérification avant la mise en ligne : composition, taille, entretien, origine, norme de fabrication. Si une seule des cinq diverge, corrigez la fiche d&#x27;abord, n&#x27;expédiez pas en espérant. Modifier une fiche prend une minute, réimprimer dix mille pendants prend dix jours.",
+        "es": "Diez minutos de comprobación antes de publicar: composición, talla, cuidado, origen y norma de fabricación. Si uno de los cinco no coincide, corrija primero la ficha y no envíe esperando que salga bien. Editar una ficha lleva un minuto; reimprimir diez mil etiquetas lleva diez días.",
+        "ja": "掲載前に 10 分かけて 1 項目ずつ照合します。混用率、サイズ、取扱方法、原産国、製品規格の 5 つです。1 つでも食い違えば、まずページを直してから出荷します。ページの修正は 1 分、1 万枚の下げ札の再印刷は 10 日かかります。",
+        "ko": "게시 전 10분만 항목별로 대조하십시오. 혼용률, 사이즈, 취급 방법, 원산지, 제조 규격 다섯 가지입니다. 하나라도 어긋나면 페이지를 먼저 고치고 출고해야 합니다. 페이지 수정은 1분, 행택 1만 장 재인쇄는 10일이 걸립니다.",
+    }),
+
+    ("h2", {
+        "zh": "二、吊牌與標籤上必須有的七項",
+        "en": "2. Seven Items That Must Appear on the Tag and Label",
+        "fr": "2. Les sept mentions indispensables sur le pendant et l&#x27;étiquette",
+        "es": "2. Los siete datos obligatorios en la etiqueta colgante y la de confección",
+        "ja": "2. 下げ札とラベルに必ず入れる 7 項目",
+        "ko": "2. 행택과 라벨에 반드시 들어가야 할 7가지",
+    }),
+
+    ("p", {
+        "zh": "中國境內銷售的紡織品與服裝，使用說明依 GB/T 5296.4-2012，纖維含量標識依 GB/T 29862-2013，號型依 GB/T 1335 系列，維護方法符號依 GB/T 8685-2008，基本安全類別依 GB 18401-2010 分 A、B、C 三類。吊牌可以承載品牌故事、價格與二維碼，但這七項法定內容不能只寫在詳情頁上——詳情頁可以改，縫在衣服上的標籤改不了。",
+        "en": "For textiles and apparel sold in mainland China, use instructions follow GB/T 5296.4-2012, fibre content follows GB/T 29862-2013, size designation follows the GB/T 1335 series, care symbols follow GB/T 8685-2008, and basic safety categories follow GB 18401-2010, which splits products into class A, B and C. A hang tag can carry brand story, price and a QR code, but these seven legal items cannot live only on the product page: a page can be edited, a label sewn into the garment cannot.",
+        "fr": "Pour les textiles et vêtements vendus en Chine continentale, les instructions d&#x27;usage suivent la GB/T 5296.4-2012, la composition la GB/T 29862-2013, la taille la série GB/T 1335, les symboles d&#x27;entretien la GB/T 8685-2008 et les catégories de sécurité la GB 18401-2010, qui répartit les produits en classes A, B et C. Le pendant peut porter l&#x27;histoire de la marque, le prix et un QR code, mais ces sept mentions légales ne peuvent pas rester sur la seule fiche produit : une fiche se modifie, une étiquette cousue non.",
+        "es": "Para los textiles y prendas vendidos en China continental, las instrucciones de uso siguen la GB/T 5296.4-2012, la composición la GB/T 29862-2013, la talla la serie GB/T 1335, los símbolos de cuidado la GB/T 8685-2008 y las categorías de seguridad la GB 18401-2010, que divide los productos en clase A, B y C. La etiqueta colgante puede llevar la historia de marca, el precio y un código QR, pero estos siete datos legales no pueden vivir solo en la ficha: una ficha se edita, una etiqueta cosida no.",
+        "ja": "中国本土で販売する繊維製品と衣料は、取扱説明が GB/T 5296.4-2012、混用率の表示が GB/T 29862-2013、サイズが GB/T 1335 シリーズ、取扱記号が GB/T 8685-2008、基本安全カテゴリが GB 18401-2010 の A・B・C 類に従います。下げ札にはブランドの物語、価格、QR コードを載せられますが、この 7 つの法定表示を商品ページだけに置くことはできません。ページは直せますが、縫い付けたラベルは直せません。",
+        "ko": "중국 본토에서 판매하는 섬유제품과 의류는 취급 설명이 GB/T 5296.4-2012, 혼용률 표시가 GB/T 29862-2013, 사이즈가 GB/T 1335 시리즈, 취급 기호가 GB/T 8685-2008, 기본 안전 분류가 GB 18401-2010의 A·B·C 등급을 따릅니다. 행택에는 브랜드 이야기와 가격, QR 코드를 담을 수 있지만 이 7가지 법정 표시를 상품 페이지에만 둘 수는 없습니다. 페이지는 고칠 수 있지만 봉제된 라벨은 고칠 수 없습니다.",
+    }),
+
+    ("ul", [
+        {"zh": "品名與貨號：與詳情頁、內部系統一致，退換與對帳都要用同一組號碼。",
+         "en": "Product name and style code: identical on the page and in your internal system, so returns and reconciliation use one number.",
+         "fr": "Nom du produit et référence : identiques sur la fiche et dans votre système interne, pour que retours et rapprochements utilisent le même numéro.",
+         "es": "Nombre del producto y referencia: idénticos en la ficha y en su sistema interno, para que devoluciones y conciliación usen el mismo número.",
+         "ja": "品名と品番：商品ページと社内システムで同じ番号にします。返品も照合も同じ番号で処理できます。",
+         "ko": "품명과 품번: 상품 페이지와 내부 시스템에서 동일해야 합니다. 반품과 대조 작업이 같은 번호로 처리됩니다."},
+        {"zh": "纖維含量：依 GB/T 29862-2013 標示，混紡列主次與百分比；棉感、絲滑是手感描述，不是成分。",
+         "en": "Fibre content: declared under GB/T 29862-2013, with blends listed in order and by percentage. Cottony and silky are handle descriptions, not fibre names.",
+         "fr": "Composition : déclarée selon la GB/T 29862-2013, mélanges listés dans l&#x27;ordre avec pourcentages. Cotonneux ou soyeux décrit le toucher, pas la fibre.",
+         "es": "Composición: declarada según la GB/T 29862-2013, con las mezclas en orden y con porcentajes. Algodonoso o sedoso describen el tacto, no la fibra.",
+         "ja": "混用率：GB/T 29862-2013 に従い、混紡は順序とパーセントを明記します。綿っぽい、シルキーは風合いの表現で、組成ではありません。",
+         "ko": "혼용률: GB/T 29862-2013에 따라 표시하고 혼방은 순서와 비율을 명시합니다. 코튼 같은, 실키한은 촉감 표현이며 혼용률이 아닙니다."},
+        {"zh": "號型：依 GB/T 1335 寫成 160/84A 這種身高加圍度加體型的形式，只寫 M 或 L 不符合要求。",
+         "en": "Size code: written as 160/84A, height plus body measurement plus figure type, per GB/T 1335. An M or L alone does not meet the requirement.",
+         "fr": "Taille : notée 160/84A, hauteur, tour et morphologie, selon la GB/T 1335. Un simple M ou L ne répond pas à l&#x27;exigence.",
+         "es": "Talla: expresada como 160/84A, altura, contorno y complexión, según la GB/T 1335. Un M o L solo no cumple.",
+         "ja": "サイズ：GB/T 1335 に従い 160/84A のように身長・寸法・体型で表記します。M や L だけでは要件を満たしません。",
+         "ko": "사이즈: GB/T 1335에 따라 160/84A처럼 신장·둘레·체형으로 표기합니다. M이나 L만으로는 요건을 충족하지 않습니다."},
+        {"zh": "維護方法：依 GB/T 8685-2008 的符號，順序為水洗、漂白、乾燥、熨燙、專業護理，缺一項就是缺項。",
+         "en": "Care method: symbols per GB/T 8685-2008 in the fixed order of wash, bleach, dry, iron and professional care. A missing symbol is a missing declaration.",
+         "fr": "Entretien : symboles selon la GB/T 8685-2008 dans l&#x27;ordre lavage, blanchiment, séchage, repassage, entretien professionnel. Un symbole absent est une mention absente.",
+         "es": "Cuidado: símbolos según la GB/T 8685-2008 en el orden lavado, blanqueo, secado, planchado y cuidado profesional. Un símbolo ausente es una declaración ausente.",
+         "ja": "取扱方法：GB/T 8685-2008 の記号を、洗濯・漂白・乾燥・アイロン・専門処理の順に並べます。欠けた記号は未表示と同じです。",
+         "ko": "취급 방법: GB/T 8685-2008 기호를 세탁, 표백, 건조, 다림질, 전문 관리 순서로 표시합니다. 기호가 빠지면 표시하지 않은 것과 같습니다."},
+        {"zh": "安全類別：依 GB 18401-2010 分 A 類（嬰幼兒）、B 類（直接接觸皮膚）、C 類（非直接接觸），貼身款標 C 類是典型錯誤。",
+         "en": "Safety class: class A for infants, B for direct skin contact and C for non-direct contact under GB 18401-2010. Marking a base layer as class C is a classic error.",
+         "fr": "Classe de sécurité : A pour le nourrisson, B pour le contact direct avec la peau, C sans contact direct, selon la GB 18401-2010. Marquer un sous-vêtement en classe C est l&#x27;erreur classique.",
+         "es": "Clase de seguridad: A para bebés, B para contacto directo con la piel y C sin contacto directo, según la GB 18401-2010. Marcar una prenda interior como clase C es el error típico.",
+         "ja": "安全カテゴリ：GB 18401-2010 の A 類（乳幼児）、B 類（皮膚直接接触）、C 類（非直接接触）。肌着を C 類にするのは典型的な誤りです。",
+         "ko": "안전 분류: GB 18401-2010의 A류(유아), B류(피부 직접 접촉), C류(비직접 접촉)입니다. 속옷을 C류로 표시하는 것이 대표적인 실수입니다."},
+        {"zh": "執行標準號：例如針織休閒服裝 FZ/T 73020，或已在平台備案的企業標準號。",
+         "en": "Product standard number: for example FZ/T 73020 for knitted casual wear, or a company standard already filed on the platform.",
+         "fr": "Numéro de norme de fabrication : par exemple FZ/T 73020 pour le prêt-à-porter tricoté, ou une norme d&#x27;entreprise déjà déposée.",
+         "es": "Número de norma de fabricación: por ejemplo FZ/T 73020 para punto casual, o una norma de empresa ya registrada.",
+         "ja": "製品規格番号：ニットカジュアルなら FZ/T 73020、または届出済みの企業規格番号です。",
+         "ko": "제품 규격 번호: 니트 캐주얼은 FZ/T 73020, 또는 이미 신고된 기업 규격 번호입니다."},
+        {"zh": "廠名廠址：中國境內製造商名稱與地址；委託生產要同時標委託方與受託方，只寫品牌名不算。",
+         "en": "Manufacturer name and address: the Chinese legal entity and its address. For contract manufacturing, name both the commissioner and the producer; a brand name alone is not enough.",
+         "fr": "Nom et adresse du fabricant : l&#x27;entité chinoise et son adresse. En fabrication sous-traitée, indiquez le donneur d&#x27;ordre et le producteur ; un nom de marque seul ne suffit pas.",
+         "es": "Nombre y dirección del fabricante: la entidad china y su dirección. En fabricación por contrato hay que indicar comitente y productor; solo la marca no basta.",
+         "ja": "製造者名と住所：中国国内の事業者名と所在地。委託生産では委託者と受託者の両方を表示します。ブランド名だけでは足りません。",
+         "ko": "제조사명과 주소: 중국 내 법인명과 주소입니다. 위탁 생산은 위탁자와 수탁자를 모두 표시해야 하며 브랜드명만으로는 부족합니다."},
+    ]),
+
+    ("table", {
+        "head": [
+            {"zh": "項目", "en": "Item", "fr": "Mention", "es": "Dato", "ja": "項目", "ko": "항목"},
+            {"zh": "依據", "en": "Basis", "fr": "Référence", "es": "Base", "ja": "根拠", "ko": "근거"},
+            {"zh": "最常見的錯", "en": "Most common error", "fr": "Erreur la plus fréquente", "es": "Error más frecuente", "ja": "最も多い誤り", "ko": "가장 흔한 오류"},
+        ],
+        "rows": [
+            [{"zh": "纖維含量", "en": "Fibre content", "fr": "Composition", "es": "Composición", "ja": "混用率", "ko": "혼용률"},
+             {"zh": "GB/T 29862-2013", "en": "GB/T 29862-2013", "fr": "GB/T 29862-2013", "es": "GB/T 29862-2013", "ja": "GB/T 29862-2013", "ko": "GB/T 29862-2013"},
+             {"zh": "只寫棉，沒有百分比", "en": "Cotton with no percentage", "fr": "Coton sans pourcentage", "es": "Algodón sin porcentaje", "ja": "綿のみでパーセントなし", "ko": "면만 표기하고 비율 없음"}],
+            [{"zh": "號型", "en": "Size code", "fr": "Taille", "es": "Talla", "ja": "サイズ", "ko": "사이즈"},
+             {"zh": "GB/T 1335", "en": "GB/T 1335", "fr": "GB/T 1335", "es": "GB/T 1335", "ja": "GB/T 1335", "ko": "GB/T 1335"},
+             {"zh": "只標 M / L，缺身高與體型", "en": "M or L only, no height or figure", "fr": "M ou L seul, sans hauteur ni morphologie", "es": "Solo M o L, sin altura ni complexión", "ja": "M / L のみで身長・体型なし", "ko": "M/L만 표기, 신장·체형 없음"}],
+            [{"zh": "維護方法", "en": "Care method", "fr": "Entretien", "es": "Cuidado", "ja": "取扱方法", "ko": "취급 방법"},
+             {"zh": "GB/T 8685-2008", "en": "GB/T 8685-2008", "fr": "GB/T 8685-2008", "es": "GB/T 8685-2008", "ja": "GB/T 8685-2008", "ko": "GB/T 8685-2008"},
+             {"zh": "符號缺項或順序錯", "en": "Missing symbol or wrong order", "fr": "Symbole manquant ou ordre erroné", "es": "Símbolo ausente u orden incorrecto", "ja": "記号の欠落・順序の誤り", "ko": "기호 누락 또는 순서 오류"}],
+            [{"zh": "安全類別", "en": "Safety class", "fr": "Classe de sécurité", "es": "Clase de seguridad", "ja": "安全カテゴリ", "ko": "안전 분류"},
+             {"zh": "GB 18401-2010", "en": "GB 18401-2010", "fr": "GB 18401-2010", "es": "GB 18401-2010", "ja": "GB 18401-2010", "ko": "GB 18401-2010"},
+             {"zh": "貼身款誤標 C 類", "en": "Base layer marked class C", "fr": "Sous-vêtement en classe C", "es": "Prenda interior en clase C", "ja": "肌着を C 類に", "ko": "속옷을 C류로 표기"}],
+        ],
+    }),
+
+    ("h2", {
+        "zh": "三、洗水標是耐久標識，吊牌不能取代它",
+        "en": "3. The Care Label Is the Durable Mark: A Hang Tag Cannot Replace It",
+        "fr": "3. L&#x27;étiquette d&#x27;entretien est le marquage durable : le pendant ne la remplace pas",
+        "es": "3. La etiqueta de cuidado es el marcado duradero: la colgante no la sustituye",
+        "ja": "3. 洗濯表示ラベルは耐久表示：下げ札では代替できません",
+        "ko": "3. 취급 표시 라벨은 내구 표시입니다. 행택이 대신할 수 없습니다",
+    }),
+
+    ("p", {
+        "zh": "吊牌掛在繩上，剪下就丟；洗水標縫在衣服裡，要陪這件衣服洗很多次。GB/T 5296.4-2012 對耐久性有明確要求，內容在正常洗滌後仍須清楚可讀，所以纖維含量、維護方法、產地與安全類別要落在縫製標籤上，吊牌只做補充與品牌表達。材料上，尼龍塗層標耐洗、字跡清晰；聚酯絲帶柔軟，適合貼身款與童裝；棉帶手感自然但印刷精度較低。字高建議不小於 1.5 mm，深色底反白再加 0.2 mm。",
+        "en": "A hang tag hangs on a string and is cut off and thrown away. A care label is sewn into the garment and has to survive many washes. GB/T 5296.4-2012 sets clear durability requirements: the content must stay legible after normal washing, which is why fibre content, care method, origin and safety class belong on the sewn label, with the hang tag only supplementing and carrying brand expression. On materials, coated nylon is wash-resistant and stays sharp, polyester satin is soft and suits base layers and childrenswear, and cotton tape feels natural but prints less precisely. Keep type at 1.5 mm or above, and add 0.2 mm when reversed out of a dark ground.",
+        "fr": "Un pendant est suspendu à une ficelle : on le coupe et on le jette. L&#x27;étiquette d&#x27;entretien est cousue dans le vêtement et doit survivre à de nombreux lavages. La GB/T 5296.4-2012 fixe une exigence de durabilité claire : le contenu doit rester lisible après un lavage normal. C&#x27;est pourquoi composition, entretien, origine et classe de sécurité appartiennent à l&#x27;étiquette cousue, le pendant ne servant que de complément et de support de marque. Côté matières, le nylon enduit résiste au lavage et reste net, le satin polyester est doux et convient aux sous-vêtements et à l&#x27;enfant, le ruban coton est naturel mais s&#x27;imprime moins finement. Gardez des caractères d&#x27;au moins 1,5 mm, et 0,2 mm de plus en réserve sur fond sombre.",
+        "es": "La etiqueta colgante va atada a un hilo: se corta y se tira. La etiqueta de cuidado va cosida a la prenda y tiene que resistir muchos lavados. La GB/T 5296.4-2012 fija un requisito claro de durabilidad: el contenido debe seguir siendo legible tras un lavado normal, y por eso composición, cuidado, origen y clase de seguridad pertenecen a la etiqueta cosida, mientras la colgante solo complementa y comunica marca. En materiales, el nylon recubierto resiste el lavado y mantiene el trazo, el satén de poliéster es suave y sirve para prendas interiores e infantil, y la cinta de algodón se siente natural pero imprime con menos precisión. Mantenga el cuerpo de letra en 1,5 mm o más, y sume 0,2 mm si va en negativo sobre fondo oscuro.",
+        "ja": "下げ札は紐で吊るされ、切って捨てられます。洗濯表示ラベルは衣料に縫い付けられ、何度もの洗濯に耐える必要があります。GB/T 5296.4-2012 は耐久性の要件を明確に定め、通常の洗濯後も内容が判読できることを求めます。だからこそ混用率、取扱方法、原産国、安全カテゴリは縫い付けラベルに入れ、下げ札は補足とブランド表現に使います。素材は、ナイロンコートは耐洗性があり文字が鮮明、ポリエステルサテンは柔らかく肌着や子供服に向き、綿テープは自然な風合いですが印刷精度は劣ります。文字高は 1.5 mm 以上、暗い地の白抜きはさらに 0.2 mm 足します。",
+        "ko": "행택은 끈에 매달려 잘려 버려집니다. 취급 표시 라벨은 의류에 봉제되어 여러 번 세탁을 견뎌야 합니다. GB/T 5296.4-2012는 일반 세탁 후에도 내용이 읽을 수 있어야 한다는 내구성 요건을 명확히 정합니다. 그래서 혼용률, 취급 방법, 원산지, 안전 분류는 봉제 라벨에 넣고, 행택은 보완과 브랜드 표현에 사용합니다. 소재는 나일론 코팅이 세탁에 강하고 글자가 선명하며, 폴리에스터 새틴은 부드러워 속옷과 아동복에 적합하고, 면 테이프는 자연스럽지만 인쇄 정밀도가 낮습니다. 글자 높이는 1.5 mm 이상, 어두운 바탕의 흰 글자는 0.2 mm를 더합니다.",
+    }),
+
+    ("h2", {
+        "zh": "四、直播鏡頭與多市場：同一件衣服的第二套標示",
+        "en": "4. Live-Stream Close-Ups and Multiple Markets: The Second Layer of Labelling",
+        "fr": "4. Gros plan en direct et marchés multiples : la seconde couche d&#x27;étiquetage",
+        "es": "4. Primer plano en directo y varios mercados: la segunda capa de etiquetado",
+        "ja": "4. ライブの寄りと多市場：表示のもう一つの層",
+        "ko": "4. 라이브 클로즈업과 다중 시장: 두 번째 표시 층",
+    }),
+
+    ("p", {
+        "zh": "直播間把吊牌舉到鏡頭前特寫，等於放大給幾萬人看：舊版吊牌、貼紙改價、手寫批註都會被截圖。規則很簡單——鏡頭裡出現的標籤，必須就是出貨的那一版。跨境或出口時，一件衣服常要同時滿足兩套要求：歐盟的纖維成分依 Règlement (UE) n° 1007/2011 標示，並依 GPSR (EU) 2023/988 指定歐盟境內責任主體與可追溯資訊；美國依 16 CFR Part 303 標示纖維成分，產地依 19 CFR 134。",
+        "en": "Holding a tag up to the camera in a live stream magnifies it for tens of thousands of viewers: an old tag version, a price over-stickered by hand or a handwritten note all get screenshotted. The rule is simple. The label that appears on camera must be the version that ships. For cross-border and export programmes a garment often has to satisfy two rule sets at once: in the EU, fibre composition is declared under Regulation (EU) No 1007/2011 and GPSR (EU) 2023/988 requires an economic operator established in the Union plus traceability information; in the US, fibre content follows 16 CFR Part 303 and origin marking follows 19 CFR 134.",
+        "fr": "Tenir un pendant devant la caméra en direct, c&#x27;est l&#x27;agrandir pour des dizaines de milliers de spectateurs : une ancienne version, un prix remplacé par autocollant ou une annotation manuscrite finissent en capture d&#x27;écran. La règle est simple : l&#x27;étiquette vue à l&#x27;écran doit être celle qui part. En export, un vêtement doit souvent satisfaire deux jeux de règles : dans l&#x27;UE, la composition est déclarée selon le règlement (UE) n° 1007/2011 et le GPSR (UE) 2023/988 exige un opérateur économique établi dans l&#x27;Union et des informations de traçabilité ; aux États-Unis, la composition relève du 16 CFR Part 303 et l&#x27;origine du 19 CFR 134.",
+        "es": "Sostener una etiqueta ante la cámara en directo la amplía para decenas de miles de espectadores: una versión antigua, un precio tapado con pegatina o una nota manuscrita acaban en capturas. La regla es simple: la etiqueta que aparece en pantalla debe ser la que se envía. En exportación una prenda suele tener que cumplir dos juegos de reglas: en la UE la composición se declara según el Reglamento (UE) n.º 1007/2011 y el GPSR (UE) 2023/988 exige un operador económico establecido en la Unión e información de trazabilidad; en EE. UU. la composición sigue el 16 CFR Part 303 y el origen el 19 CFR 134.",
+        "ja": "ライブ配信で下げ札をカメラに近づけると、数万人に見える形で拡大されます。旧版の札、値札を貼り替えた跡、手書きの書き込みはすべてスクリーンショットに残ります。原則は単純で、画面に出た表示がそのまま出荷する版でなければなりません。越境・輸出では 1 着が 2 つの規則を同時に満たす必要があります。EU では混用率を Règlement (UE) n° 1007/2011 に従って表示し、GPSR (EU) 2023/988 により域内の責任事業者とトレーサビリティ情報が求められます。米国では混用率が 16 CFR Part 303、原産地が 19 CFR 134 です。",
+        "ko": "라이브 방송에서 행택을 카메라에 들이대면 수만 명에게 확대됩니다. 구버전 행택, 가격을 덧붙인 스티커, 손으로 쓴 메모가 모두 캡처됩니다. 원칙은 단순합니다. 화면에 나온 라벨이 출고되는 그 버전이어야 합니다. 수출에서는 한 벌이 두 가지 규정을 동시에 만족해야 합니다. EU는 혼용률을 Règlement (UE) n° 1007/2011에 따라 표시하고 GPSR (EU) 2023/988에 따라 역내 책임 사업자와 추적 정보가 필요합니다. 미국은 혼용률이 16 CFR Part 303, 원산지가 19 CFR 134입니다.",
+    }),
+
+    ("ul", [
+        {"zh": "歐盟：纖維名稱與百分比依 1007/2011，洗護符號用 EN ISO 3758，尺碼可用 EN 13402 標示，法國與西班牙女裝常見 taille 34 至 48。",
+         "en": "European Union: fibre names and percentages under 1007/2011, care symbols per EN ISO 3758, sizing optionally to EN 13402, with French and Spanish womenswear typically running taille 34 to 48.",
+         "fr": "Union européenne : noms de fibres et pourcentages selon 1007/2011, symboles d&#x27;entretien selon EN ISO 3758, tailles éventuellement selon EN 13402, le prêt-à-porter féminin français et espagnol allant couramment de la taille 34 à 48.",
+         "es": "Unión Europea: nombres de fibras y porcentajes según 1007/2011, símbolos de cuidado según EN ISO 3758, tallas opcionalmente según EN 13402, con la moda mujer francesa y española habitualmente de la talla 34 a 48.",
+         "ja": "EU：混用率は 1007/2011 に従い、取扱記号は EN ISO 3758、サイズは EN 13402 で示せます。フランスとスペインの婦人服はおおむね 34〜48 サイズです。",
+         "ko": "EU: 혼용률은 1007/2011, 취급 기호는 EN ISO 3758, 사이즈는 EN 13402로 표시할 수 있으며 프랑스와 스페인 여성복은 보통 34~48 사이즈입니다."},
+        {"zh": "日本：家庭用品品質表示法要求日語標示組成（混用率）與取扱表示，洗濯表示依 JIS L 0001，尺碼用 7 号、9 号、11 号這種写法。",
+         "en": "Japan: the Household Goods Quality Labelling Act requires composition and handling in Japanese, care symbols per JIS L 0001, and sizes as 7, 9 or 11 go.",
+         "fr": "Japon : la loi sur l&#x27;étiquetage de qualité impose composition et entretien en japonais, symboles selon JIS L 0001, tailles exprimées en 7, 9 ou 11 go.",
+         "es": "Japón: la Ley de Etiquetado de Calidad exige composición y cuidado en japonés, símbolos según JIS L 0001 y tallas expresadas como 7, 9 u 11 go.",
+         "ja": "日本：家庭用品品質表示法により組成（混用率）と取扱表示を日本語で表示し、洗濯表示は JIS L 0001、サイズは 7 号・9 号・11 号で示します。",
+         "ko": "일본: 가정용품품질표시법에 따라 혼용률과 취급 표시를 일본어로 표시하고, 세탁 표시는 JIS L 0001, 사이즈는 7호·9호·11호로 표기합니다."},
+        {"zh": "韓國：전기용품 및 생활용품 안전관리법要求混用率、취급 표시與 원산지 標在附著標籤上，尺碼用 55、66、77 這類 호수，不能只寫 S/M/L。",
+         "en": "Korea: the Electrical Appliances and Consumer Products Safety Control Act puts composition, care instructions and country of origin on an attached label, with sizes as 55, 66 or 77 ho, not S/M/L alone.",
+         "fr": "Corée : la loi sur le contrôle de sécurité des appareils électriques et produits de consommation impose composition, entretien et origine sur une étiquette attachée, avec des tailles en 55, 66 ou 77 ho, pas seulement S/M/L.",
+         "es": "Corea: la Ley de Control de Seguridad de Aparatos Eléctricos y Productos de Consumo exige composición, cuidado y origen en una etiqueta adherida, con tallas 55, 66 o 77 ho, no solo S/M/L.",
+         "ja": "韓国：전기용품 및 생활용품 안전관리법により混用率・취급 표시・원산지를取り付けラベルに表示し、サイズは 55・66・77 号（호수）で示します。S/M/L だけでは足りません。",
+         "ko": "한국: 전기용품 및 생활용품 안전관리법에 따라 혼용률, 취급 표시, 원산지를 부착 라벨에 표시하고 사이즈는 55·66·77 호수로 표기합니다. S/M/L만으로는 부족합니다."},
+        {"zh": "美國：16 CFR Part 303 要求纖維成分與產地，州層面另有加州 65 號提案的化學品警示要求，童裝還要看 CPSIA 的追溯標籤。",
+         "en": "United States: 16 CFR Part 303 covers fibre content and origin marking, states add chemical warnings such as California Proposition 65, and childrenswear also needs a CPSIA tracking label.",
+         "fr": "États-Unis : le 16 CFR Part 303 couvre composition et origine, les États ajoutent des avertissements chimiques comme la proposition 65 californienne, et l&#x27;enfant requiert une étiquette de traçabilité CPSIA.",
+         "es": "Estados Unidos: el 16 CFR Part 303 cubre composición y origen, los estados añaden avisos químicos como la Proposición 65 de California, y el infantil requiere etiqueta de trazabilidad CPSIA.",
+         "ja": "米国：16 CFR Part 303 が混用率と原産地を定め、州レベルではカリフォルニア州提案 65 号のような化学物質警告があり、子供服は CPSIA の追跡ラベルも必要です。",
+         "ko": "미국: 16 CFR Part 303이 혼용률과 원산지를 규정하고, 주 단위로 캘리포니아 제안 65호 같은 화학물질 경고가 있으며, 아동복은 CPSIA 추적 라벨도 필요합니다."},
+    ]),
+
+    ("h2", {
+        "zh": "五、一頁驗收表：五項判斷標籤能不能出貨",
+        "en": "5. One-Page Inspection Sheet: Five Checks Before the Carton Ships",
+        "fr": "5. Check-list d&#x27;une page : cinq contrôles avant expédition",
+        "es": "5. Lista de una página: cinco controles antes de enviar",
+        "ja": "5. 1 枚の検収表：出荷前の 5 チェック",
+        "ko": "5. 1장짜리 검수표: 출고 전 5가지 확인",
+    }),
+
+    ("table", {
+        "head": [
+            {"zh": "檢查項", "en": "Check", "fr": "Contrôle", "es": "Control", "ja": "検査項目", "ko": "검사 항목"},
+            {"zh": "方法", "en": "Method", "fr": "Méthode", "es": "Método", "ja": "方法", "ko": "방법"},
+            {"zh": "合格線", "en": "Pass limit", "fr": "Limite", "es": "Límite", "ja": "合格ライン", "ko": "합격 기준"},
+        ],
+        "rows": [
+            [{"zh": "纖維含量", "en": "Fibre content", "fr": "Composition", "es": "Composición", "ja": "混用率", "ko": "혼용률"},
+             {"zh": "與第三方檢測報告逐項比對", "en": "Compare against the third-party test report, item by item", "fr": "Comparer au rapport d&#x27;essai tiers, poste par poste", "es": "Comparar con el informe de ensayo externo, punto por punto", "ja": "第三者試験報告と項目ごとに照合", "ko": "제3자 시험 성적서와 항목별 대조"},
+             {"zh": "每項百分比一致", "en": "Every percentage matches", "fr": "Chaque pourcentage concorde", "es": "Cada porcentaje coincide", "ja": "各パーセントが一致", "ko": "각 비율 일치"}],
+            [{"zh": "號型", "en": "Size code", "fr": "Taille", "es": "Talla", "ja": "サイズ", "ko": "사이즈"},
+             {"zh": "對照 GB/T 1335 表", "en": "Check against the GB/T 1335 tables", "fr": "Vérifier dans les tableaux GB/T 1335", "es": "Verificar con las tablas GB/T 1335", "ja": "GB/T 1335 の表と照合", "ko": "GB/T 1335 표와 대조"},
+             {"zh": "身高、圍度、體型三項齊全", "en": "Height, measurement and figure all present", "fr": "Hauteur, tour et morphologie présents", "es": "Altura, contorno y complexión presentes", "ja": "身長・寸法・体型が揃う", "ko": "신장·둘레·체형 모두 표기"}],
+            [{"zh": "洗護符號", "en": "Care symbols", "fr": "Symboles d&#x27;entretien", "es": "Símbolos de cuidado", "ja": "取扱記号", "ko": "취급 기호"},
+             {"zh": "對照 GB/T 8685 或 JIS L 0001", "en": "Check against GB/T 8685 or JIS L 0001", "fr": "Vérifier selon GB/T 8685 ou JIS L 0001", "es": "Verificar con GB/T 8685 o JIS L 0001", "ja": "GB/T 8685 または JIS L 0001 と照合", "ko": "GB/T 8685 또는 JIS L 0001과 대조"},
+             {"zh": "五類符號齊全，順序正確", "en": "All five groups present, in the right order", "fr": "Les cinq groupes présents, dans le bon ordre", "es": "Los cinco grupos presentes y en orden", "ja": "5 分類が揃い順序も正しい", "ko": "5개 분류 모두 있고 순서 정확"}],
+            [{"zh": "字高", "en": "Type height", "fr": "Hauteur de caractère", "es": "Altura de carácter", "ja": "文字高", "ko": "글자 높이"},
+             {"zh": "卡尺量維護方法的最小字", "en": "Caliper the smallest character in the care text", "fr": "Mesurer au pied à coulisse le plus petit caractère", "es": "Medir con calibre el carácter más pequeño", "ja": "ノギスで取扱表示の最小文字を測定", "ko": "버니어캘리퍼스로 취급 표시 최소 글자 측정"},
+             {"zh": "不小於 1.5 mm", "en": "1.5 mm or larger", "fr": "1,5 mm minimum", "es": "1,5 mm o más", "ja": "1.5 mm 以上", "ko": "1.5 mm 이상"}],
+            [{"zh": "安全類別", "en": "Safety class", "fr": "Classe de sécurité", "es": "Clase de seguridad", "ja": "安全カテゴリ", "ko": "안전 분류"},
+             {"zh": "依最終用途判定", "en": "Judge by the final use of the garment", "fr": "Juger selon l&#x27;usage final", "es": "Decidir según el uso final", "ja": "最終用途で判定", "ko": "최종 용도로 판정"},
+             {"zh": "嬰幼兒 A、貼身 B、外套 C", "en": "A for infants, B for next-to-skin, C for outerwear", "fr": "A pour le nourrisson, B pour le contact cutané, C pour la veste", "es": "A para bebés, B para contacto con la piel, C para abrigo", "ja": "乳幼児 A、肌着 B、上着 C", "ko": "유아 A, 속옷 B, 겉옷 C"}],
+        ],
+    }),
+
+    ("p", {
+        "zh": "一張吊牌的成本是幾毛錢，一次虛假宣傳處理加上一波退貨，代價是幾千單的流量。把這七項內容、耐久標籤與五項驗收寫進規格書，風險就留在工廠與倉庫，不會跟著直播間一起放大。下一批貨開印前，先讓標籤自己通過這五項——比事後解釋便宜太多。",
+        "en": "A hang tag costs a few cents. One misleading-advertising case plus a wave of returns costs thousands of orders worth of traffic. Writing these seven items, the durable label rule and the five checks into the specification keeps the risk inside the factory and the warehouse instead of amplifying it in a live stream. Before the next print run, make the label pass these five checks on its own; it is far cheaper than explaining afterwards.",
+        "fr": "Un pendant coûte quelques centimes. Un dossier de publicité trompeuse et une vague de retours coûtent des milliers de commandes en visibilité. Inscrire ces sept mentions, la règle de l&#x27;étiquette durable et les cinq contrôles dans le cahier des charges garde le risque à l&#x27;usine et à l&#x27;entrepôt au lieu de l&#x27;amplifier en direct. Avant la prochaine impression, faites passer l&#x27;étiquette par ces cinq contrôles : c&#x27;est bien moins cher que de s&#x27;expliquer après.",
+        "es": "Una etiqueta colgante cuesta céntimos. Un expediente de publicidad engañosa más una ola de devoluciones cuesta miles de pedidos en visibilidad. Incluir estos siete datos, la regla de la etiqueta duradera y los cinco controles en la especificación mantiene el riesgo en la fábrica y el almacén en lugar de amplificarlo en directo. Antes de la próxima tirada, haga que la etiqueta pase estos cinco controles: sale mucho más barato que explicarlo después.",
+        "ja": "下げ札の原価は数円です。虚偽広告の指摘が 1 件と返品の波が重なると、数千件分の流入が失われます。この 7 項目、耐久表示のルール、5 つの検収を仕様書に書き込めば、リスクは工場と倉庫の中に収まり、ライブ配信で増幅されません。次の印刷の前に、ラベル自体をこの 5 項目で通してください。後から説明するよりはるかに安く済みます。",
+        "ko": "행택 원가는 몇백 원입니다. 허위 광고 지적 한 건과 반품 물결이 겹치면 수천 건 분량의 유입이 사라집니다. 이 7가지 항목, 내구 표시 규칙, 5가지 검수를 사양서에 넣으면 위험은 공장과 창고 안에서 끝나고 라이브 방송에서 증폭되지 않습니다. 다음 인쇄 전에 라벨 자체를 이 5가지로 통과시키십시오. 나중에 설명하는 것보다 훨씬 저렴합니다.",
+    }),
+]
+
+RELATED = [
+    {"slug": "clothing-label-compliance-china.html",
+     "zh": "中國服裝標籤：GB 5296.4 與安全類別", "en": "China apparel labels: GB 5296.4 and safety classes",
+     "fr": "Étiquetage chinois : GB 5296.4 et classes de sécurité", "es": "Etiquetado en China: GB 5296.4 y clases de seguridad",
+     "ja": "中国の衣料表示：GB 5296.4 と安全カテゴリ", "ko": "중국 의류 라벨: GB 5296.4와 안전 분류"},
+    {"slug": "care-label-wash-durability.html",
+     "zh": "洗水標耐洗性：多少次洗滌後還看得清", "en": "Care label durability: legible after how many washes",
+     "fr": "Durabilité de l&#x27;étiquette d&#x27;entretien : lisible après combien de lavages", "es": "Durabilidad de la etiqueta de cuidado: legible tras cuántos lavados",
+     "ja": "洗濯表示ラベルの耐久性：何回洗っても読めるか", "ko": "취급 표시 라벨 내구성: 몇 번 세탁까지 읽히는가"},
+    {"slug": "clothing-label-compliance-japan.html",
+     "zh": "日本服裝標籤：家庭用品品質表示法實務", "en": "Japan apparel labels: the Household Goods Quality Labelling Act in practice",
+     "fr": "Étiquetage japonais : la loi sur la qualité des biens de consommation", "es": "Etiquetado en Japón: la Ley de Etiquetado de Calidad",
+     "ja": "日本の衣料表示：家庭用品品質表示法の実務", "ko": "일본 의류 라벨: 가정용품품질표시법 실무"},
+    {"slug": "clothing-labels-ecommerce-platform-requirements.html",
+     "zh": "電商平台對服裝標籤的要求", "en": "What ecommerce platforms require on apparel labels",
+     "fr": "Ce que les plateformes exigent sur les étiquettes", "es": "Qué exigen las plataformas de etiquetas",
+     "ja": "EC プラットフォームが求める衣料表示", "ko": "이커머스 플랫폼이 요구하는 의류 라벨"},
+]
+
+CTA_P = {
+    "zh": "正在為抖音、小紅書或跨境渠道準備吊牌與洗水標？把品類、纖維成分、號型範圍與目標市場發給我們，我們會出一版同時滿足平台核對與法定標示的規格，並附上驗收表。",
+    "en": "Preparing tags and care labels for Douyin, Xiaohongshu or cross-border channels? Send the category, fibre composition, size range and destination markets, and we will issue a spec that satisfies both the platform check and the legal labelling, with the inspection sheet attached.",
+    "fr": "Vous préparez pendants et étiquettes d&#x27;entretien pour Douyin, Xiaohongshu ou l&#x27;export ? Envoyez la catégorie, la composition, la plage de tailles et les marchés : nous rédigerons une spécification conforme au contrôle de la plateforme et à l&#x27;étiquetage légal, check-list incluse.",
+    "es": "¿Prepara etiquetas colgantes y de cuidado para Douyin, Xiaohongshu o canales transfronterizos? Envíe la categoría, la composición, el rango de tallas y los mercados destino: emitiremos una especificación que cumple el control de la plataforma y el etiquetado legal, con la lista de control.",
+    "ja": "抖音・小紅書や越境チャネル向けに下げ札と洗濯表示をご準備中ですか。カテゴリ、混用率、サイズ範囲、対象市場をお送りください。プラットフォームの確認と法定表示の両方を満たす仕様を、検収表付きでご提案します。",
+    "ko": "더우인·샤오홍슈 또는 크로스보더 채널용 행택과 취급 표시를 준비 중이신가요? 카테고리, 혼용률, 사이즈 범위, 대상 시장을 보내주시면 플랫폼 확인과 법정 표시를 동시에 만족하는 사양서를 검수표와 함께 제안합니다.",
+}
+CTA_BTN = {
+    "zh": "索取吊牌與標籤規格 →", "en": "Request a tag and label spec →", "fr": "Demander une spécification →",
+    "es": "Solicitar una especificación →", "ja": "タグと表示の仕様を依頼 →", "ko": "행택·라벨 사양 요청 →",
+}
