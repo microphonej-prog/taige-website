@@ -1,0 +1,266 @@
+# -*- coding: utf-8 -*-
+"""2026-11-22 08:00 第二篇：鈕扣尺寸（L 號）與釦眼（Button Size and Buttonhole）（英文主稿，zh/fr/es/ja/ko 從英文翻譯）"""
+
+SLUG = "button-size-ligne-buttonhole-guide.html"
+CAT = {"zh": "五金配件", "en": "Hardware", "fr": "Quincaillerie", "es": "Herrajes",
+       "ja": "金具", "ko": "금속 부자재"}
+TITLE = {
+    "zh": "鈕扣尺寸與釦眼：L 號換算、釦眼長度與拉力 | TAGE",
+    "en": "Button Size in Ligne and Buttonhole Length: A Matching Guide | TAGE",
+    "fr": "Taille de bouton en ligne et longueur de boutonnière | TAGE",
+    "es": "Tamaño de botón en línea y largo de ojal: guía de cálculo | TAGE",
+    "ja": "ボタンのサイズ（ライン）とボタン穴の長さの決め方 | TAGE",
+    "ko": "단추 사이즈(리뉴)와 단추 구멍 길이 계산 | TAGE",
+}
+DESC = {
+    "zh": "釦眼短 1 mm，整批襯衫就扣不上；鈕扣大 2 L，前襟就起波浪。本文講清 L 號換算、鈕扣尺寸與布料門襟的搭配、釦眼長度公式、彈性布與童裝的安全要求，以及採購單上該寫的五個數字。",
+    "en": "Button size in ligne and buttonhole length: the 0.635 mm conversion, size-to-fabric matching, the buttonhole formula and knit safety checks for production.",
+    "fr": "Taille de bouton en ligne et longueur de boutonnière : conversion 0,635 mm, accord taille/tissu, formule de boutonnière, sécurité maille et enfant, cinq chiffres à commander.",
+    "es": "Tamaño de botón en línea y largo de ojal: conversión de 0,635 mm, correspondencia talla/tejido, fórmula del ojal, seguridad en punto e infantil y cinco cifras de pedido.",
+    "ja": "ボタンのサイズ（ライン）とボタン穴の長さ。0.635 mm 換算、生地と前立ての対応、ボタン穴長の計算式、ニット・子供服の安全要件、発注書に入れる 5 数値。",
+    "ko": "단추 사이즈(리뉴)와 단추 구멍 길이. 0.635 mm 환산, 원단과 앞여밈 대응, 단추 구멍 길이 공식, 니트·아동복 안전 요건, 발주서에 넣을 다섯 수치.",
+}
+H1 = {
+    "zh": "鈕扣與釦眼：差 0.6 mm 就扣不上",
+    "en": "Button and Buttonhole: Where 0.6 mm Decides Whether It Closes",
+    "fr": "Bouton et boutonnière : 0,6 mm décident de la fermeture",
+    "es": "Botón y ojal: 0,6 mm deciden si abrocha",
+    "ja": "ボタンとボタン穴：0.6 mm の差で留まらなくなる",
+    "ko": "단추와 단추 구멍: 0.6 mm 차이로 잠기지 않습니다",
+}
+DATE = {"zh": "泰閣包裝 · 更新於 2026年11月22日",
+        "en": "By TAGE Packaging &nbsp;·&nbsp; Updated November 22, 2026",
+        "fr": "Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 22 novembre 2026",
+        "es": "Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 22 de noviembre de 2026",
+        "ja": "泰閣包装 · 2026年11月22日更新",
+        "ko": "TAGE 패키징 · 2026년 11월 22일 업데이트"}
+
+BLOCKS = [
+    ("p", {
+        "zh": "鈕扣與釦眼是服裝上最少被討論、卻最容易在驗貨台上出問題的一對零件。鈕扣是標準件，規格以「L」（ligne，音譯「里尼」）標示；釦眼是布料加工出來的尺寸，只能靠公式與試縫控制。買錯一號鈕扣，師傅勉強能擴釦眼補救；釦眼做短了 1 mm，整批衣服就是扣不上。所以正確順序是先定釦眼公式，再回頭挑鈕扣。",
+        "en": "Buttons and buttonholes are the least discussed pair of components on a garment and the fastest way to fail an inspection table. The button is a standard part, sized in ligne, abbreviated L. The buttonhole is fabric, cut and stitched to a dimension that only a formula and a trial seam can control. Buy the wrong button size and a mechanic can enlarge the hole; cut the hole one millimetre short and the whole run will not close. Which is why the order matters: fix the buttonhole formula first, then choose the button.",
+        "fr": "Boutons et boutonnières sont le couple de composants le moins discuté d'un vêtement et le plus rapide à faire échouer un contrôle. Le bouton est une pièce standard, dimensionnée en ligne (L). La boutonnière est du tissu, découpé et piqué à une cote que seule une formule et un essayage peuvent maîtriser. Une taille de bouton erronée se rattrape en agrandissant la fente ; une boutonnière trop courte d'un millimètre bloque toute la série. L'ordre compte donc : d'abord la formule, ensuite le bouton.",
+        "es": "Botones y ojales son el par de componentes menos discutido de una prenda y el que más rápido hace fallar una mesa de inspección. El botón es una pieza estándar, dimensionada en línea (L). El ojal es tejido, cortado y cosido a una cota que solo una fórmula y una costura de prueba controlan. Un botón equivocado se compensa agrandando el ojal; un ojal 1 mm corto bloquea toda la serie. Por eso el orden importa: primero la fórmula del ojal, después el botón.",
+        "ja": "ボタンとボタン穴は、衣料で最も議論されない部品であり、検品台で最も早く失格になる箇所でもあります。ボタンは規格品で、サイズはライン（L）で表します。ボタン穴は生地を切り、縫って作る寸法で、計算式と试缝でしか管理できません。ボタンのサイズを間違えても穴を広げれば補えますが、穴を 1 mm 短く切ると全数が留まりません。順序は「まず穴の式、次にボタン」です。",
+        "ko": "단추와 단추 구멍은 의류에서 가장 논의가 적으면서 검품대에서 가장 빨리 불합격이 나는 짝입니다. 단추는 규격 부품으로 크기를 리뉴(L)로 표시합니다. 단추 구멍은 원단을 잘라 봉제해 만드는 치수라 계산식과 시봉으로만 관리할 수 있습니다. 단추를 잘못 사면 구멍을 넓혀 만회할 수 있지만, 구멍을 1 mm 짧게 만들면 전량이 잠기지 않습니다. 그래서 순서는 구멍 공식이 먼저, 단추가 다음입니다.",
+    }),
+
+    ("h2", {
+        "zh": "一、L 是什麼：一個 0.635 mm 的單位",
+        "en": "1. What a Ligne Is: One Unit of 0.635 mm",
+        "fr": "1. La ligne : une unité de 0,635 mm",
+        "es": "1. La línea: una unidad de 0,635 mm",
+        "ja": "1. ラインとは 0.635 mm の単位",
+        "ko": "1. 리뉴란 0.635 mm 단위",
+    }),
+
+    ("p", {
+        "zh": "L（ligne）源自紐扣業的舊制，1 L 等於 0.635 mm，也就是 1/40 英寸。業界不寫直徑、只寫 L，是因為早期量具按 L 分檔。換算時直接乘：18 L = 11.4 mm、20 L = 12.7 mm、24 L = 15.2 mm、30 L = 19.1 mm、36 L = 22.9 mm、40 L = 25.4 mm。注意這是鈕扣的「外徑名義值」，實測公差一般為 ±0.2 mm，同一批不同顏色的鈕扣還可能差 0.3 mm——訂釦眼尺寸時必須用量具實測，不能只看標稱 L 號。",
+        "en": "Ligne comes from the old button trade: 1 L equals 0.635 mm, which is 1/40 inch. The trade quotes L rather than diameter because the old gauges were graded in lignes. Convert by multiplying: 18 L is 11.4 mm, 20 L is 12.7 mm, 24 L is 15.2 mm, 30 L is 19.1 mm, 36 L is 22.9 mm and 40 L is 25.4 mm. These are nominal outside diameters, and real parts run to plus or minus 0.2 mm; the same lot in different colours can differ by 0.3 mm. Measure the actual part with calipers before you cut a buttonhole, never the nominal number alone.",
+        "fr": "La ligne vient de l'ancienne profession du bouton : 1 L vaut 0,635 mm, soit 1/40 de pouce. Le métier annonce des lignes et non des diamètres, car les jauges historiques étaient graduées ainsi. Il suffit de multiplier : 18 L = 11,4 mm, 20 L = 12,7 mm, 24 L = 15,2 mm, 30 L = 19,1 mm, 36 L = 22,9 mm, 40 L = 25,4 mm. Ce sont des diamètres extérieurs nominaux ; les pièces réelles tiennent ± 0,2 mm et un même lot en plusieurs coloris peut varier de 0,3 mm. Mesurez au pied à coulisse avant de couper la boutonnière, jamais le seul chiffre nominal.",
+        "es": "La línea proviene del antiguo oficio del botón: 1 L equivale a 0,635 mm, es decir 1/40 de pulgada. El sector cita líneas y no diámetros porque los calibres históricos se graduaban así. Basta multiplicar: 18 L = 11,4 mm, 20 L = 12,7 mm, 24 L = 15,2 mm, 30 L = 19,1 mm, 36 L = 22,9 mm y 40 L = 25,4 mm. Son diámetros exteriores nominales; la pieza real se mueve ± 0,2 mm y un mismo lote en varios colores puede variar 0,3 mm. Mida con calibre antes de cortar el ojal, nunca el número nominal solo.",
+        "ja": "ラインはボタン業界の旧単位で、1 L = 0.635 mm（1/40 インチ）です。直径ではなくラインで表すのは、昔のゲージがライン刻みだったためです。掛けるだけで換算できます。18 L = 11.4 mm、20 L = 12.7 mm、24 L = 15.2 mm、30 L = 19.1 mm、36 L = 22.9 mm、40 L = 25.4 mm。これは外径の呼び値で、実測は ±0.2 mm、同一ロットでも色違いで 0.3 mm 違うことがあります。ボタン穴を切る前にノギスで実測し、呼び値だけで決めないでください。",
+        "ko": "리뉴는 단추 업계의 옛 단위로 1 L = 0.635 mm, 즉 1/40인치입니다. 지름 대신 리뉴를 쓰는 이유는 옛 게이지가 리뉴 눈금이었기 때문입니다. 곱하면 환산됩니다. 18 L = 11.4 mm, 20 L = 12.7 mm, 24 L = 15.2 mm, 30 L = 19.1 mm, 36 L = 22.9 mm, 40 L = 25.4 mm입니다. 이는 외경 호칭값이며 실측은 ±0.2 mm, 같은 로트에서도 색상별로 0.3 mm 차이가 날 수 있습니다. 단추 구멍을 자르기 전에 반드시 버니어캘리퍼스로 실측하십시오.",
+    }),
+
+    ("h2", {
+        "zh": "二、尺寸要跟布料與門襟配",
+        "en": "2. Match the Size to Fabric and Placket",
+        "fr": "2. Accorder la taille au tissu et à la patte",
+        "es": "2. Ajustar la talla al tejido y a la tapeta",
+        "ja": "2. サイズは生地と前立てに合わせる",
+        "ko": "2. 크기는 원단과 앞여밈에 맞춥니다",
+    }),
+
+    ("table", {
+        "head": [
+            {"zh": "部位", "en": "Position", "fr": "Emplacement", "es": "Ubicación", "ja": "部位", "ko": "부위"},
+            {"zh": "常用尺寸", "en": "Usual size", "fr": "Taille courante", "es": "Talla habitual", "ja": "一般的なサイズ", "ko": "일반 크기"},
+            {"zh": "選型邏輯", "en": "Selection logic", "fr": "Logique de choix", "es": "Lógica de elección", "ja": "選定の考え方", "ko": "선정 기준"},
+        ],
+        "rows": [
+            [
+                {"zh": "襯衫前襟", "en": "Shirt front placket", "fr": "Patte de chemise", "es": "Tapeta de camisa", "ja": "シャツ前立て", "ko": "셔츠 앞여밈"},
+                {"zh": "18 L（11.4 mm）", "en": "18 L (11.4 mm)", "fr": "18 L (11,4 mm)", "es": "18 L (11,4 mm)", "ja": "18 L（11.4 mm）", "ko": "18 L(11.4 mm)"},
+                {"zh": "門襟寬 30–35 mm，鈕扣直徑約為門襟寬的 1/3", "en": "Placket 30 to 35 mm wide, button about one third of that", "fr": "Patte de 30 à 35 mm, bouton au tiers de cette largeur", "es": "Tapeta de 30 a 35 mm, botón de un tercio de ese ancho", "ja": "前立て幅 30〜35 mm、ボタンは幅の約 1/3", "ko": "앞여밈 폭 30~35 mm, 단추는 폭의 약 1/3"},
+            ],
+            [
+                {"zh": "袖口", "en": "Cuff", "fr": "Poignet", "es": "Puño", "ja": "カフス", "ko": "커프스"},
+                {"zh": "16 L（10.2 mm）", "en": "16 L (10.2 mm)", "fr": "16 L (10,2 mm)", "es": "16 L (10,2 mm)", "ja": "16 L（10.2 mm）", "ko": "16 L(10.2 mm)"},
+                {"zh": "袖口只有單層布，小一號避免壓出硬塊", "en": "One fabric layer only, so go one size down to avoid a hard lump", "fr": "Une seule épaisseur : une taille en moins pour éviter une bosse dure", "es": "Una sola capa: una talla menos para evitar un bulto duro", "ja": "一重仕立てなので 1 サイズ下げて硬い塊を避ける", "ko": "한 겹 원단이므로 한 사이즈 작게 해 딱딱한 뭉침 방지"},
+            ],
+            [
+                {"zh": "外套 / 西裝", "en": "Jacket or blazer", "fr": "Veste", "es": "Chaqueta", "ja": "ジャケット", "ko": "재킷"},
+                {"zh": "20–24 L（12.7–15.2 mm）", "en": "20 to 24 L (12.7 to 15.2 mm)", "fr": "20 à 24 L (12,7 à 15,2 mm)", "es": "20 a 24 L (12,7 a 15,2 mm)", "ja": "20〜24 L（12.7〜15.2 mm）", "ko": "20~24 L(12.7~15.2 mm)"},
+                {"zh": "與翻領寬度、扣位間距成比例，扣距 8–10 cm", "en": "Proportional to lapel width, spacing 8 to 10 cm", "fr": "Proportionné au revers, entraxe 8 à 10 cm", "es": "Proporcional a la solapa, separación 8 a 10 cm", "ja": "襟幅と比例させ、間隔は 8〜10 cm", "ko": "라펠 폭에 비례, 간격 8~10 cm"},
+            ],
+            [
+                {"zh": "大衣 / 風衣", "en": "Coat or trench", "fr": "Manteau ou trench", "es": "Abrigo o trinchera", "ja": "コート／トレンチ", "ko": "코트·트렌치"},
+                {"zh": "30–40 L（19–25 mm）", "en": "30 to 40 L (19 to 25 mm)", "fr": "30 à 40 L (19 à 25 mm)", "es": "30 a 40 L (19 a 25 mm)", "ja": "30〜40 L（19〜25 mm）", "ko": "30~40 L(19~25 mm)"},
+                {"zh": "厚面料要配長柄（shank）鈕扣，留出布料厚度", "en": "Thick fabric needs a shank button to absorb the cloth thickness", "fr": "Tissu épais : bouton à queue pour absorber l'épaisseur", "es": "Tejido grueso: botón con cuello para absorber el espesor", "ja": "厚地は足付き（シャンク）ボタンで布厚を逃がす", "ko": "두꺼운 원단은 다리형(섕크) 단추로 두께를 흡수"},
+            ],
+            [
+                {"zh": "針織衫 / 開襟", "en": "Knit cardigan", "fr": "Gilet en maille", "es": "Cárdigan de punto", "ja": "ニットカーディガン", "ko": "니트 가디건"},
+                {"zh": "18–20 L 平底", "en": "18 to 20 L, flat back", "fr": "18 à 20 L, dos plat", "es": "18 a 20 L, base plana", "ja": "18〜20 L、平底", "ko": "18~20 L, 평평한 바닥"},
+                {"zh": "平底＋墊布，避免鈕扣陷進針織孔", "en": "Flat back with a stay tape so the button does not sink into the knit", "fr": "Dos plat avec renfort pour que le bouton ne s'enfonce pas dans la maille", "es": "Base plana con cinta de refuerzo para que el botón no se hunda en el punto", "ja": "平底＋当て布でニット穴に沈むのを防ぐ", "ko": "평평한 바닥과 보강 테이프로 니트 구멍에 꺼지지 않게"},
+            ],
+        ],
+    }),
+
+    ("h2", {
+        "zh": "三、釦眼長度公式：直徑＋厚度＋2 mm",
+        "en": "3. The Buttonhole Formula: Diameter Plus Thickness Plus 2 mm",
+        "fr": "3. La formule : diamètre + épaisseur + 2 mm",
+        "es": "3. La fórmula: diámetro + espesor + 2 mm",
+        "ja": "3. ボタン穴の式：直径＋厚み＋2 mm",
+        "ko": "3. 단추 구멍 공식: 지름 + 두께 + 2 mm",
+    }),
+
+    ("p", {
+        "zh": "釦眼長度 = 鈕扣實測直徑 + 鈕扣厚度 + 2 mm（梭織布）；厚料或需穿脫頻繁的款式用 3 mm。這個 2 mm 是給縫線包邊與布料回彈留的量，不是餘裕越多越好：加太多，鈕扣會自己脫出。橫向釦眼（釦眼與門襟方向垂直）要讓釦眼中心往門襟外側偏 2–3 mm，扣上後鈕扣才不會壓在門襟線上；縱向釦眼則對齊中線。扣位間距通常等於釦眼長度加 6–8 mm。",
+        "en": "Buttonhole length equals the measured button diameter plus the button thickness plus 2 mm on woven fabric; go to 3 mm on heavy cloth or on garments that are opened often. That 2 mm covers the stitch bead and fabric recovery, and more is not better, because too much clearance lets the button slide out by itself. A horizontal hole, cut across the placket direction, should sit with its centre 2 to 3 mm on the overlap side of the centre line so the button does not press on the placket edge once closed; a vertical hole sits on the centre line. Button spacing is normally the hole length plus 6 to 8 mm.",
+        "fr": "La longueur de boutonnière égale le diamètre mesuré du bouton plus son épaisseur plus 2 mm sur tissu chaîne et trame ; passez à 3 mm sur tissu épais ou sur les pièces souvent ouvertes. Ces 2 mm couvrent le bourrelet de couture et la reprise du tissu ; en rajouter n'améliore rien, car un jeu excessif laisse le bouton glisser seul. Une boutonnière horizontale, perpendiculaire à la patte, se place avec son centre 2 à 3 mm du côté recouvrement par rapport à la ligne médiane, afin que le bouton ne presse pas le bord une fois fermé ; une boutonnière verticale se place sur l'axe. L'entraxe des boutons vaut la longueur de fente plus 6 à 8 mm.",
+        "es": "El largo del ojal es el diámetro medido del botón más su espesor más 2 mm en tejido plano; use 3 mm en tejido grueso o en prendas que se abren a menudo. Esos 2 mm cubren el cordón de puntada y la recuperación del tejido, y más no es mejor: un juego excesivo deja que el botón se salga solo. Un ojal horizontal, perpendicular a la tapeta, se coloca con su centro 2 a 3 mm hacia el lado de cruce respecto a la línea central, para que el botón no presione el borde al cerrar; un ojal vertical va sobre el eje. La separación entre botones suele ser el largo del ojal más 6 a 8 mm.",
+        "ja": "ボタン穴の長さ = 実測したボタン直径 + ボタンの厚み + 2 mm（織物）。厚地や開閉の多い製品では 3 mm にします。この 2 mm は縫い代の盛り上がりと生地の戻りを吸収する分で、多くすれば良いわけではありません。余裕が過ぎるとボタンが自然に外れます。横穴（前立てと直交）は、穴の中心を前立て線より重なり側へ 2〜3 mm 寄せると、留めたときにボタンが前立て端を押しません。縦穴は中心線上に置きます。ボタンの間隔は穴の長さ + 6〜8 mm が標準です。",
+        "ko": "단추 구멍 길이는 실측 단추 지름 + 단추 두께 + 2 mm(직물)입니다. 두꺼운 원단이나 개폐가 잦은 제품은 3 mm로 합니다. 이 2 mm는 봉제선 두께와 원단 회복량을 흡수하는 값이며 많을수록 좋은 것이 아닙니다. 여유가 과하면 단추가 스스로 빠집니다. 가로 구멍(앞여밈과 직각)은 구멍 중심을 중심선보다 겹침 쪽으로 2~3 mm 옮겨야 잠갔을 때 단추가 앞여밈 끝을 누르지 않습니다. 세로 구멍은 중심선에 놓습니다. 단추 간격은 구멍 길이 + 6~8 mm가 표준입니다.",
+    }),
+
+    ("callout", {
+        "zh": "一個可記住的算式：18 L 鈕扣（11.4 mm）＋3 mm 厚＋2 mm ＝ 16.4 mm 釦眼。做短了扣不上，做長了會自己開。",
+        "en": "One formula worth memorising: an 18 L button at 11.4 mm plus 3 mm thickness plus 2 mm gives a 16.4 mm buttonhole. Short and it will not close; long and it opens itself.",
+        "fr": "Une formule à retenir : bouton 18 L de 11,4 mm + 3 mm d'épaisseur + 2 mm = boutonnière de 16,4 mm. Plus court, elle ne ferme pas ; plus long, elle s'ouvre seule.",
+        "es": "Una fórmula para recordar: botón 18 L de 11,4 mm + 3 mm de espesor + 2 mm = ojal de 16,4 mm. Más corto no abrocha; más largo se abre solo.",
+        "ja": "覚えておきたい式：18 L（11.4 mm）＋厚み 3 mm＋2 mm＝16.4 mm のボタン穴。短いと留まらず、長いと自然に外れます。",
+        "ko": "기억할 공식: 18 L(11.4 mm) + 두께 3 mm + 2 mm = 16.4 mm 단추 구멍. 짧으면 잠기지 않고, 길면 스스로 열립니다.",
+    }),
+
+    ("h2", {
+        "zh": "四、彈性布料與童裝：兩個高風險場景",
+        "en": "4. Knits and Childrenswear: Two High-Risk Cases",
+        "fr": "4. Maille et vêtement enfant : deux cas à risque",
+        "es": "4. Punto y ropa infantil: dos casos de riesgo",
+        "ja": "4. ニットと子供服：リスクの高い 2 つの場面",
+        "ko": "4. 니트와 아동복: 위험이 큰 두 경우",
+    }),
+
+    ("p", {
+        "zh": "彈性布料的釦眼有兩個敵人：拉伸變形與咬邊。門襟內側必須貼一層 30–40 g/m² 的熱熔襯或加一條 10 mm 寬的織帶，否則每扣一次，釦眼就被拉長一點，一個月後孔變成橢圓。鎖眼針距 12–14 針/公分，兩端打結（bartack）寬度 1.5–2 mm；少了結頭，釦眼兩端會裂。童裝則要注意小零件：直徑小於 21 mm 的鈕扣要通過拉力測試，歐盟童裝安全指引 CEN/TR 16792 建議 6 kg 或 90 N 的拉脫力，並要求同一件衣服上所有可觸及的小部件都做同樣測試。",
+        "en": "Buttonholes in stretch fabric have two enemies: stretch and edge chewing. The inside of the placket needs a 30 to 40 g/m² fusible or a 10 mm stay tape, otherwise every closure stretches the hole a little and within a month it is an oval. Stitch the buttonhole at 12 to 14 stitches per centimetre with a 1.5 to 2 mm bartack at both ends; without the bartacks the ends split. On childrenswear the issue is small parts: buttons under 21 mm in diameter must pass a pull test, and the European children s clothing guidance CEN/TR 16792 works to 6 kg or 90 N, applied to every accessible small part on the same garment.",
+        "fr": "Les boutonnières en maille ont deux ennemis : l'étirement et le mordant du bord. L'envers de la patte exige un thermocollant de 30 à 40 g/m² ou un ruban de renfort de 10 mm, sinon chaque fermeture allonge la fente jusqu'à l'ovale en un mois. Piquez à 12 à 14 points par centimètre avec un arrêt de 1,5 à 2 mm aux deux bouts ; sans ces arrêts, les extrémités se déchirent. Sur le vêtement enfant, le sujet est celui des petites pièces : les boutons de moins de 21 mm de diamètre doivent passer un essai de traction, et le guide européen CEN/TR 16792 retient 6 kg ou 90 N, appliqué à chaque petite pièce accessible de la même pièce.",
+        "es": "Los ojales en tejido elástico tienen dos enemigos: el estiramiento y el mordido del borde. El revés de la tapeta necesita una entretela termoadhesiva de 30 a 40 g/m² o una cinta de refuerzo de 10 mm, o cada cierre alarga la ranura hasta volverla ovalada en un mes. Cosa a 12 a 14 puntadas por centímetro con remate de 1,5 a 2 mm en los dos extremos; sin remate, los extremos se rasgan. En infantil el tema son las piezas pequeñas: los botones de menos de 21 mm deben pasar un ensayo de tracción, y la guía europea CEN/TR 16792 aplica 6 kg o 90 N a cada pieza pequeña accesible de la misma prenda.",
+        "ja": "伸縮生地のボタン穴には 2 つの敵がいます。伸びと端の噛み込みです。前立ての裏には 30〜40 g/m² の接着芯か幅 10 mm のテープを貼らないと、留めるたびに穴が伸び、1 か月で楕円になります。針数は 12〜14 針/cm、両端の止め（バータック）は幅 1.5〜2 mm。これがないと端が裂けます。子供服では小さな部品が問題です。直径 21 mm 未満のボタンは引張試験が必要で、欧州の子供服安全ガイド CEN/TR 16792 は 6 kg または 90 N を、同じ製品の触知可能な小部品すべてに適用するよう求めています。",
+        "ko": "신축성 원단의 단추 구멍에는 두 가지 적이 있습니다. 늘어남과 끝단 물림입니다. 앞여밈 안쪽에 30~40 g/m² 접착 심지나 폭 10 mm 보강 테이프를 붙이지 않으면 잠글 때마다 구멍이 늘어나 한 달이면 타원이 됩니다. 바늘땀은 1 cm당 12~14개, 양 끝 되박기(bartack)는 폭 1.5~2 mm로 해야 하며, 이것이 없으면 끝이 찢어집니다. 아동복에서는 작은 부품이 문제입니다. 지름 21 mm 미만 단추는 인장 시험을 통과해야 하며, 유럽 아동복 안전 지침 CEN/TR 16792는 같은 제품의 접촉 가능한 모든 소부품에 6 kg 또는 90 N을 적용하도록 권고합니다.",
+    }),
+
+    ("h2", {
+        "zh": "五、合規與標示：鎳、鉛、纖維三條線",
+        "en": "5. Compliance and Labelling: Nickel, Lead, Fibre",
+        "fr": "5. Conformité et étiquetage : nickel, plomb, composition",
+        "es": "5. Conformidad y etiquetado: níquel, plomo, composición",
+        "ja": "5. 合规と表示：ニッケル・鉛・組成",
+        "ko": "5. 규제와 표시: 니켈·납·혼용률",
+    }),
+
+    ("p", {
+        "zh": "金屬鈕扣是鎳釋放的高風險件。歐盟 REACH 法規（EC）1907/2006 附件 XVII 第 27 條要求與皮膚長時間接觸的金屬件鎳釋放 ≤ 0.5 µg/cm²/週，測試照 EN 1811，有鍍層的先做 EN 12472 磨耗模擬，所以「電鍍後噴一層漆」不構成豁免。美國市場看 CPSIA：兒童服裝的可觸及基材總鉛 ≤ 100 ppm，主要供 12 歲以下使用的產品還要符合鄰苯二甲酸酯限制。歐盟另在《通用產品安全條例》GPSR（EU）2023/988 下要求每件產品在歐盟有責任主體與可追溯資訊，鈕扣這種小零件要在技術文件裡連結到供應商批次。",
+        "en": "Metal buttons are a high-risk item for nickel release. REACH (EC) 1907/2006, Annex XVII, entry 27 requires metal parts in prolonged direct skin contact to release no more than 0.5 micrograms per square centimetre per week, tested to EN 1811, with EN 12472 wear simulation first on coated parts, so a lacquer over plating is not an exemption. In the United States, CPSIA caps total lead in accessible substrates of children s products at 100 ppm, and phthalate limits apply to items mainly for children under twelve. In the EU, the General Product Safety Regulation (EU) 2023/988 additionally requires a responsible economic operator and traceability information for every product, which for a small part like a button means a documented link to the supplier lot in the technical file.",
+        "fr": "Les boutons métalliques sont à haut risque pour le nickel. Le règlement REACH (CE) 1907/2006, annexe XVII, entrée 27 impose aux pièces métalliques en contact prolongé avec la peau une migration inférieure ou égale à 0,5 microgramme par centimètre carré et par semaine, mesurée selon EN 1811, avec simulation d'usure EN 12472 sur les pièces revêtues : un vernis sur le dépôt n'exempte donc pas. Aux États-Unis, le CPSIA plafonne le plomb total à 100 ppm dans les substrats accessibles des produits enfants, et les limites de phtalates s'appliquent aux articles destinés principalement aux moins de douze ans. Dans l'Union, le règlement (UE) 2023/988 (GPSR) exige en outre un opérateur responsable établi dans l'Union et des informations de traçabilité pour chaque produit : pour un bouton, cela signifie un lien documenté vers le lot fournisseur dans le dossier technique.",
+        "es": "Los botones metálicos son un artículo de alto riesgo para el níquel. El Reglamento REACH (CE) 1907/2006, anexo XVII, entrada 27 exige que las piezas metálicas en contacto prolongado con la piel no liberen más de 0,5 microgramos por centímetro cuadrado por semana, medido según EN 1811, con simulación de desgaste EN 12472 en piezas recubiertas, de modo que una laca sobre el depósito no exime. En Estados Unidos, CPSIA limita el plomo total a 100 ppm en sustratos accesibles de productos infantiles, y los límites de ftalatos se aplican a artículos destinados principalmente a menores de doce años. En la Unión, el Reglamento (UE) 2023/988 (GPSR) exige además un operador responsable establecido en la UE e información de trazabilidad por producto: para un botón, un vínculo documentado al lote del proveedor en el expediente técnico.",
+        "ja": "金属ボタンはニッケル溶出の高リスク部品です。EU の REACH 規則 (EC) 1907/2006 附属書 XVII 第 27 項は、皮膚に長時間接する金属部品の溶出を 0.5 µg/cm²/週 以下とし、EN 1811 で試験、めっき品は EN 12472 で摩耗を模擬した後に測定します。したがってめっき上の塗装は免除になりません。米国は CPSIA により子供用品の触知可能な基材の総鉛を 100 ppm 以下とし、主に 12 歳未満向けの製品にはフタル酸エステルの制限もあります。EU では一般製品安全規則 GPSR (EU) 2023/988 により、製品ごとに EU 内の責任事業者とトレーサビリティ情報が求められ、ボタンのような小部品は技術文書でサプライヤーのロットに紐づける必要があります。",
+        "ko": "금속 단추는 니켈 용출 고위험 부품입니다. EU REACH 규정 (EC) 1907/2006 부속서 XVII 제27항은 피부에 장시간 접촉하는 금속 부품의 용출을 주당 0.5 µg/cm² 이하로 규정하고, EN 1811로 시험하며 도금품은 EN 12472로 마모를 모사한 뒤 측정합니다. 따라서 도금 위 도료는 면제가 되지 않습니다. 미국은 CPSIA로 어린이제품 접촉 가능 기재의 총 납을 100 ppm 이하로 제한하고, 주로 12세 미만용 제품에는 프탈레이트 제한도 적용됩니다. EU는 일반제품안전규정 GPSR (EU) 2023/988에 따라 제품마다 EU 내 책임 사업자와 추적성 정보를 요구하며, 단추 같은 소부품은 기술 문서에서 공급 로트와 연결되어야 합니다.",
+    }),
+
+    ("p", {
+        "zh": "纖維標示要回到法規本身：依（EU）No 1007/2011，標籤上的成分百分比只算紡織纖維，金屬、尿素樹脂、椰子殼這類非纖維材質的鈕扣不列入，但必須在洗滌符號（EN ISO 3758）與其他必要資訊裡交代使用限制。若鈕扣是天然材質（椰殼、木、牛角），歐盟還要求標示動物來源成分的非紡織部分——牛角與珍珠母貝屬於此類。法國另要求服裝標示環境資訊（Code de la consommation 下的 affichage environnemental 試行），買家會直接要求供應商提供材料與重量數據。",
+        "en": "Fibre labelling goes back to the regulation itself: under (EU) No 1007/2011 the percentages on the label count textile fibres only, so metal, urea resin or corozo buttons are non-textile components and are not listed, but the care symbols under EN ISO 3758 and the other mandatory information still have to state any restriction on use. Where buttons are of animal origin, such as horn or mother of pearl, the EU also requires non-textile parts of animal origin to be labelled. France goes further with a trial environmental display under the Code de la consommation, for which buyers ask suppliers directly for material and weight data.",
+        "fr": "L'étiquetage de composition renvoie au texte lui-même : selon le règlement (UE) n° 1007/2011, les pourcentages portent uniquement sur les fibres textiles ; un bouton métal, résine ou corozo est un composant non textile et n'y figure pas, mais les symboles d'entretien selon EN ISO 3758 et les autres mentions obligatoires doivent signaler toute restriction d'usage. Lorsque le bouton est d'origine animale, come ou nacre, l'Union impose aussi l'étiquetage des parties non textiles d'origine animale. La France va plus loin avec l'affichage environnemental expérimental prévu par le Code de la consommation : les acheteurs demandent alors directement matière et poids au fournisseur.",
+        "es": "El etiquetado de composición remite al propio texto: según el Reglamento (UE) n.º 1007/2011 los porcentajes cuentan solo fibras textiles, así que un botón de metal, resina o corozo es un componente no textil y no se lista, pero los símbolos de cuidado según EN ISO 3758 y la demás información obligatoria deben indicar cualquier restricción de uso. Cuando el botón es de origen animal, como cuerno o nácar, la Unión exige además etiquetar las partes no textiles de origen animal. Francia va más lejos con el etiquetado ambiental en pruebas previsto en el Code de la consommation, y los compradores piden entonces material y peso directamente al proveedor.",
+        "ja": "組成表示は法規に戻って考えます。(EU) No 1007/2011 では表示する百分比は紡織繊維のみを対象とするため、金属・尿素樹脂・コロゾーのボタンは非繊維部品として記載しません。ただし EN ISO 3758 に基づく洗濯表示とその他の必要情報で使用上の制限を示す必要があります。角・貝などの動物由来のボタンは、EU では非繊維の動物由来部分の表示も求められます。日本では家庭用品品質表示法により、組成（混用率）と取扱表示を日本語で付ける義務があり、ボタンの材質と耐洗性は洗濯表示に整合させてください。",
+        "ko": "혼용률 표시는 규정 자체로 돌아갑니다. (EU) No 1007/2011에서 라벨의 백분율은 섬유만 계산하므로 금속, 요소수지, 코로조 단추는 비섬유 부품으로 기재하지 않습니다. 다만 EN ISO 3758에 따른 취급 표시와 기타 필수 정보에는 사용 제한을 밝혀야 합니다. 뿔이나 자개처럼 동물성 재질 단추는 EU에서 비섬유 동물성 부위 표시도 요구됩니다. 한국에서는 품질경영 및 공산품 안전관리법에 따라 혼용률과 취급 표시를 한국어로 표시해야 하며, 단추 재질과 내세탁성은 표시된 세탁 방법과 일치해야 합니다.",
+    }),
+
+    ("h2", {
+        "zh": "六、採購單上的五個數字",
+        "en": "6. Five Numbers for the Purchase Order",
+        "fr": "6. Cinq chiffres pour le bon de commande",
+        "es": "6. Cinco cifras para el pedido",
+        "ja": "6. 発注書に入れる 5 つの数値",
+        "ko": "6. 발주서에 넣을 다섯 수치",
+    }),
+
+    ("table", {
+        "head": [
+            {"zh": "項目", "en": "Item", "fr": "Élément", "es": "Elemento", "ja": "項目", "ko": "항목"},
+            {"zh": "規格寫法", "en": "How to write it", "fr": "Formulation", "es": "Cómo redactarlo", "ja": "仕様の書き方", "ko": "사양 표기"},
+            {"zh": "驗收", "en": "Verification", "fr": "Contrôle", "es": "Verificación", "ja": "検収", "ko": "검수"},
+        ],
+        "rows": [
+            [
+                {"zh": "尺寸", "en": "Size", "fr": "Taille", "es": "Talla", "ja": "サイズ", "ko": "크기"},
+                {"zh": "18 L，實測外徑 11.4 ±0.2 mm", "en": "18 L, measured outside diameter 11.4 mm plus or minus 0.2", "fr": "18 L, diamètre mesuré 11,4 mm ± 0,2", "es": "18 L, diámetro medido 11,4 mm ± 0,2", "ja": "18 L、実測外径 11.4 mm ±0.2", "ko": "18 L, 실측 외경 11.4 ±0.2 mm"},
+                {"zh": "每批抽 20 顆用千分尺量", "en": "Twenty pieces per lot with a micrometer", "fr": "Vingt pièces par lot au micromètre", "es": "Veinte piezas por lote con micrómetro", "ja": "ロットごと 20 個をマイクロメータで測定", "ko": "로트당 20개 마이크로미터 측정"},
+            ],
+            [
+                {"zh": "厚度", "en": "Thickness", "fr": "Épaisseur", "es": "Espesor", "ja": "厚み", "ko": "두께"},
+                {"zh": "3.0 ±0.2 mm，用於換算釦眼 16.4 mm", "en": "3.0 mm plus or minus 0.2, giving a 16.4 mm buttonhole", "fr": "3,0 mm ± 0,2, soit une boutonnière de 16,4 mm", "es": "3,0 mm ± 0,2, ojal de 16,4 mm", "ja": "3.0 ±0.2 mm、ボタン穴 16.4 mm の根拠", "ko": "3.0 ±0.2 mm, 16.4 mm 구멍 근거"},
+                {"zh": "與釦眼試縫同步確認", "en": "Confirm together with the trial buttonhole", "fr": "À confirmer avec la boutonnière d'essai", "es": "Confirmar con el ojal de prueba", "ja": "試し穴と同時に確認", "ko": "시험 구멍과 함께 확인"},
+            ],
+            [
+                {"zh": "拉力", "en": "Pull strength", "fr": "Résistance", "es": "Resistencia", "ja": "引張強度", "ko": "인장 강도"},
+                {"zh": "鈕扣縫合拉脫 ≥ 90 N（童裝同值）", "en": "Button attachment 90 N or more, same for childrenswear", "fr": "Arrachement 90 N ou plus, idem enfant", "es": "Arranque 90 N o más, igual en infantil", "ja": "引張 90 N 以上（子供服も同値）", "ko": "인장 90 N 이상(아동복 동일)"},
+                {"zh": "拉力機每色抽 5 顆，記錄峰值", "en": "Five pieces per colour on a tensile tester, record the peak", "fr": "Cinq pièces par coloris au dynamomètre", "es": "Cinco piezas por color en dinamómetro", "ja": "色ごと 5 個を引張試験機で測定", "ko": "색상당 5개 인장 시험기 측정"},
+            ],
+            [
+                {"zh": "鎳釋放", "en": "Nickel release", "fr": "Migration du nickel", "es": "Migración de níquel", "ja": "ニッケル溶出", "ko": "니켈 용출"},
+                {"zh": "≤ 0.5 µg/cm²/週（EN 1811，鍍層先做 EN 12472）", "en": "0.5 micrograms per square centimetre per week, EN 1811 after EN 12472", "fr": "≤ 0,5 µg/cm²/semaine, EN 1811 après EN 12472", "es": "≤ 0,5 µg/cm²/semana, EN 1811 tras EN 12472", "ja": "0.5 µg/cm²/週 以下（EN 1811、めっきは EN 12472 後）", "ko": "0.5 µg/cm²/주 이하(EN 1811, 도금은 EN 12472 후)"},
+                {"zh": "第三方報告，每色每電鍍批一次", "en": "Third-party report, once per colour and plating lot", "fr": "Rapport tiers, une fois par coloris et lot de dépôt", "es": "Informe de tercero, uno por color y lote de depósito", "ja": "第三者報告書、色・めっきロットごと", "ko": "제3자 성적서, 색상·도금 로트별"},
+            ],
+            [
+                {"zh": "包裝與標識", "en": "Packing and marking", "fr": "Conditionnement et marquage", "es": "Embalaje y marcado", "ja": "包装と表示", "ko": "포장과 표시"},
+                {"zh": "每袋 100 顆，袋標註 L 號、色號、批號", "en": "100 per bag, bag marked with size, colour and lot", "fr": "100 par sachet, sachet marqué taille, coloris, lot", "es": "100 por bolsa, marcada talla, color y lote", "ja": "1 袋 100 個、L 号・色番・ロットを表示", "ko": "봉지당 100개, L·색상·로트 표기"},
+                {"zh": "抽 3 袋核對標識與實物", "en": "Check three bags against the contents", "fr": "Trois sachets vérifiés", "es": "Revisar tres bolsas", "ja": "3 袋で中身と表示を照合", "ko": "3봉지 표기와 내용물 대조"},
+            ],
+        ],
+    }),
+
+    ("p", {
+        "zh": "把這五個數字連同釦眼公式寫進同一份技術文件，打樣階段就能確認「扣得上、扣得牢、洗後不鬆」。鈕扣單價低，但釦眼是布料加工，一旦做錯只能整批換門襟——這正是為什麼採購單上寧可多寫兩行尺寸，也不要事後在驗貨台上爭論。",
+        "en": "Put those five numbers and the buttonhole formula into the same tech pack and the sample stage already proves the closure closes, holds and stays closed after washing. A button costs very little, but a buttonhole is cut into fabric, and a wrong one means replacing the whole placket. That is why two extra lines of dimension on a purchase order beat an argument at the inspection table.",
+        "fr": "Réunissez ces cinq valeurs et la formule dans un même dossier technique : l'échantillon prouve alors que la fermeture ferme, tient et reste fermée après lavage. Un bouton coûte peu, mais une boutonnière est taillée dans le tissu, et une erreur impose de remplacer toute la patte. Deux lignes de cotes en plus valent mieux qu'une discussion au contrôle final.",
+        "es": "Reúna esas cinco cifras y la fórmula del ojal en la misma ficha técnica y la muestra ya demuestra que el cierre abrocha, aguanta y sigue cerrado tras el lavado. Un botón cuesta poco, pero un ojal se corta en la tela y un error obliga a sustituir toda la tapeta. Dos líneas más de cota valen más que una discusión en la mesa de inspección.",
+        "ja": "この 5 つの数値とボタン穴の式を同じ仕様書にまとめれば、サンプル段階で「留まる・外れない・洗濯後も緩まない」ことを確認できます。ボタンは安価ですが、ボタン穴は生地を切る加工で、誤れば前立てごと交換になります。発注書に寸法を 2 行足すほうが、検品台での議論より安く済みます。",
+        "ko": "이 다섯 수치와 단추 구멍 공식을 같은 테크팩에 담으면 샘플 단계에서 잠김, 고정, 세탁 후 유지까지 확인됩니다. 단추는 저렴하지만 단추 구멍은 원단을 자르는 공정이라 잘못되면 앞여밈 전체를 교체해야 합니다. 발주서에 치수 두 줄을 더하는 편이 검품대에서 논쟁하는 것보다 쌉니다.",
+    }),
+]
+
+RELATED = [
+    {"slug": "garment-buttons-fasteners-guide.html",
+     "zh": "鈕扣與扣件：材質、尺寸與拉力", "en": "Buttons and fasteners: material, size and strength",
+     "fr": "Boutons et fermetures : matière, taille, résistance", "es": "Botones y cierres: material, tamaño y resistencia",
+     "ja": "ボタンと留め具：材質・サイズ・強度", "ko": "버튼과 여밈: 재질·사이즈·강도"},
+    {"slug": "snap-fastener-press-stud-guide.html",
+     "zh": "四合扣與壓扣：選型、模具與拉力", "en": "Snap fasteners: selection, tooling and pull strength",
+     "fr": "Pressions : choix, outillage et résistance", "es": "Broches de presión: elección, utillaje y resistencia",
+     "ja": "スナップボタン：選定・金型・引張強度", "ko": "스냅 단추: 선택·금형·인장 강도"},
+    {"slug": "garment-label-sewing-defect-troubleshooting.html",
+     "zh": "標籤縫製缺陷排查：起皺、偏移與斷線", "en": "Label sewing defects: puckering, shifting and thread breaks",
+     "fr": "Défauts de couture d'étiquettes : gondolement, décalage", "es": "Defectos de costura de etiquetas: ondulado, desvío",
+     "ja": "ラベル縫製の不具合：波打ち・ずれ・糸切れ", "ko": "라벨 봉제 불량: 물결·밀림·실 끊김"},
+    {"slug": "trim-attachment-strength-pull-test-guide.html",
+     "zh": "輔料接著強力：拉力測試怎麼做", "en": "Trim attachment strength: how to run the pull test",
+     "fr": "Résistance d'assemblage : conduire l'essai de traction", "es": "Resistencia de unión: cómo hacer el ensayo de tracción",
+     "ja": "付属品の取付強度：引張試験の進め方", "ko": "부자재 부착 강도: 인장 시험 방법"},
+]
+
+CTA_P = {
+    "zh": "要為新款定鈕扣與釦眼？把布料、門襟結構、目標市場與年用量發給我們，我們會回一份含 L 號換算表、釦眼公式、鎳釋放與拉力要求的規格，並附試縫樣品。",
+    "en": "Sizing buttons and buttonholes for a new style? Send the fabric, placket construction, destination markets and annual volume, and we will return a spec with ligne conversion, the buttonhole formula, nickel and pull requirements, plus a sewn sample.",
+    "fr": "Vous calibrez boutons et boutonnières pour un nouveau modèle ? Envoyez tissu, construction de patte, marchés et volume annuel : nous renverrons une spécification avec conversion en lignes, formule de boutonnière, exigences nickel et traction, plus un échantillon piqué.",
+    "es": "¿Definiendo botones y ojales para un nuevo modelo? Envíe tejido, construcción de tapeta, mercados y volumen anual: devolveremos una especificación con conversión en líneas, fórmula del ojal, requisitos de níquel y tracción, más una muestra cosida.",
+    "ja": "新作のボタンとボタン穴を決めるときは、生地・前立て構造・対象市場・年間数量をお送りください。ライン換算表、ボタン穴の式、ニッケル・引張要件を含む仕様と縫製サンプルをご提案します。",
+    "ko": "신규 스타일의 단추와 단추 구멍을 정하시려면 원단, 앞여밈 구조, 대상 시장, 연간 수량을 보내주십시오. 리뉴 환산표, 단추 구멍 공식, 니켈·인장 요건을 담은 사양서와 봉제 샘플을 제안합니다.",
+}
+CTA_BTN = {
+    "zh": "索取鈕扣與釦眼規格 →", "en": "Request a button and buttonhole spec →", "fr": "Demander une spécification →",
+    "es": "Solicitar una especificación →", "ja": "ボタンとボタン穴の仕様を依頼 →", "ko": "단추·구멍 사양 요청 →",
+}

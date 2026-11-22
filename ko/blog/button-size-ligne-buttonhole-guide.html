@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단추 사이즈(리뉴)와 단추 구멍 길이 계산 | TAGE</title>
+<meta name="description" content="단추 사이즈(리뉴)와 단추 구멍 길이. 0.635 mm 환산, 원단과 앞여밈 대응, 단추 구멍 길이 공식, 니트·아동복 안전 요건, 발주서에 넣을 다섯 수치.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/button-size-ligne-buttonhole-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/button-size-ligne-buttonhole-guide.html">
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "鈕扣與釦眼：差 0.6 mm 就扣不上",
+     "item": "https://taigetag.com/blog/button-size-ligne-buttonhole-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "鈕扣與釦眼：差 0.6 mm 就扣不上",
+   "url": "https://taigetag.com/blog/button-size-ligne-buttonhole-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/button-size-ligne-buttonhole-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>금속 부자재</span></div>
+      <h1>단추와 단추 구멍: 0.6 mm 차이로 잠기지 않습니다</h1>
+      <p>TAGE 패키징 · 2026년 11월 22일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>단추와 단추 구멍은 의류에서 가장 논의가 적으면서 검품대에서 가장 빨리 불합격이 나는 짝입니다. 단추는 규격 부품으로 크기를 리뉴(L)로 표시합니다. 단추 구멍은 원단을 잘라 봉제해 만드는 치수라 계산식과 시봉으로만 관리할 수 있습니다. 단추를 잘못 사면 구멍을 넓혀 만회할 수 있지만, 구멍을 1 mm 짧게 만들면 전량이 잠기지 않습니다. 그래서 순서는 구멍 공식이 먼저, 단추가 다음입니다.</p>
+
+      <h2>1. 리뉴란 0.635 mm 단위</h2>
+
+      <p>리뉴는 단추 업계의 옛 단위로 1 L = 0.635 mm, 즉 1/40인치입니다. 지름 대신 리뉴를 쓰는 이유는 옛 게이지가 리뉴 눈금이었기 때문입니다. 곱하면 환산됩니다. 18 L = 11.4 mm, 20 L = 12.7 mm, 24 L = 15.2 mm, 30 L = 19.1 mm, 36 L = 22.9 mm, 40 L = 25.4 mm입니다. 이는 외경 호칭값이며 실측은 ±0.2 mm, 같은 로트에서도 색상별로 0.3 mm 차이가 날 수 있습니다. 단추 구멍을 자르기 전에 반드시 버니어캘리퍼스로 실측하십시오.</p>
+
+      <h2>2. 크기는 원단과 앞여밈에 맞춥니다</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>부위</th>
+
+            <th>일반 크기</th>
+
+            <th>선정 기준</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>셔츠 앞여밈</td>
+
+            <td>18 L(11.4 mm)</td>
+
+            <td>앞여밈 폭 30~35 mm, 단추는 폭의 약 1/3</td>
+
+          </tr>
+
+          <tr>
+
+            <td>커프스</td>
+
+            <td>16 L(10.2 mm)</td>
+
+            <td>한 겹 원단이므로 한 사이즈 작게 해 딱딱한 뭉침 방지</td>
+
+          </tr>
+
+          <tr>
+
+            <td>재킷</td>
+
+            <td>20~24 L(12.7~15.2 mm)</td>
+
+            <td>라펠 폭에 비례, 간격 8~10 cm</td>
+
+          </tr>
+
+          <tr>
+
+            <td>코트·트렌치</td>
+
+            <td>30~40 L(19~25 mm)</td>
+
+            <td>두꺼운 원단은 다리형(섕크) 단추로 두께를 흡수</td>
+
+          </tr>
+
+          <tr>
+
+            <td>니트 가디건</td>
+
+            <td>18~20 L, 평평한 바닥</td>
+
+            <td>평평한 바닥과 보강 테이프로 니트 구멍에 꺼지지 않게</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <h2>3. 단추 구멍 공식: 지름 + 두께 + 2 mm</h2>
+
+      <p>단추 구멍 길이는 실측 단추 지름 + 단추 두께 + 2 mm(직물)입니다. 두꺼운 원단이나 개폐가 잦은 제품은 3 mm로 합니다. 이 2 mm는 봉제선 두께와 원단 회복량을 흡수하는 값이며 많을수록 좋은 것이 아닙니다. 여유가 과하면 단추가 스스로 빠집니다. 가로 구멍(앞여밈과 직각)은 구멍 중심을 중심선보다 겹침 쪽으로 2~3 mm 옮겨야 잠갔을 때 단추가 앞여밈 끝을 누르지 않습니다. 세로 구멍은 중심선에 놓습니다. 단추 간격은 구멍 길이 + 6~8 mm가 표준입니다.</p>
+
+      <div class="callout">기억할 공식: 18 L(11.4 mm) + 두께 3 mm + 2 mm = 16.4 mm 단추 구멍. 짧으면 잠기지 않고, 길면 스스로 열립니다.</div>
+
+      <h2>4. 니트와 아동복: 위험이 큰 두 경우</h2>
+
+      <p>신축성 원단의 단추 구멍에는 두 가지 적이 있습니다. 늘어남과 끝단 물림입니다. 앞여밈 안쪽에 30~40 g/m² 접착 심지나 폭 10 mm 보강 테이프를 붙이지 않으면 잠글 때마다 구멍이 늘어나 한 달이면 타원이 됩니다. 바늘땀은 1 cm당 12~14개, 양 끝 되박기(bartack)는 폭 1.5~2 mm로 해야 하며, 이것이 없으면 끝이 찢어집니다. 아동복에서는 작은 부품이 문제입니다. 지름 21 mm 미만 단추는 인장 시험을 통과해야 하며, 유럽 아동복 안전 지침 CEN/TR 16792는 같은 제품의 접촉 가능한 모든 소부품에 6 kg 또는 90 N을 적용하도록 권고합니다.</p>
+
+      <h2>5. 규제와 표시: 니켈·납·혼용률</h2>
+
+      <p>금속 단추는 니켈 용출 고위험 부품입니다. EU REACH 규정 (EC) 1907/2006 부속서 XVII 제27항은 피부에 장시간 접촉하는 금속 부품의 용출을 주당 0.5 µg/cm² 이하로 규정하고, EN 1811로 시험하며 도금품은 EN 12472로 마모를 모사한 뒤 측정합니다. 따라서 도금 위 도료는 면제가 되지 않습니다. 미국은 CPSIA로 어린이제품 접촉 가능 기재의 총 납을 100 ppm 이하로 제한하고, 주로 12세 미만용 제품에는 프탈레이트 제한도 적용됩니다. EU는 일반제품안전규정 GPSR (EU) 2023/988에 따라 제품마다 EU 내 책임 사업자와 추적성 정보를 요구하며, 단추 같은 소부품은 기술 문서에서 공급 로트와 연결되어야 합니다.</p>
+
+      <p>혼용률 표시는 규정 자체로 돌아갑니다. (EU) No 1007/2011에서 라벨의 백분율은 섬유만 계산하므로 금속, 요소수지, 코로조 단추는 비섬유 부품으로 기재하지 않습니다. 다만 EN ISO 3758에 따른 취급 표시와 기타 필수 정보에는 사용 제한을 밝혀야 합니다. 뿔이나 자개처럼 동물성 재질 단추는 EU에서 비섬유 동물성 부위 표시도 요구됩니다. 한국에서는 품질경영 및 공산품 안전관리법에 따라 혼용률과 취급 표시를 한국어로 표시해야 하며, 단추 재질과 내세탁성은 표시된 세탁 방법과 일치해야 합니다.</p>
+
+      <h2>6. 발주서에 넣을 다섯 수치</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>항목</th>
+
+            <th>사양 표기</th>
+
+            <th>검수</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>크기</td>
+
+            <td>18 L, 실측 외경 11.4 ±0.2 mm</td>
+
+            <td>로트당 20개 마이크로미터 측정</td>
+
+          </tr>
+
+          <tr>
+
+            <td>두께</td>
+
+            <td>3.0 ±0.2 mm, 16.4 mm 구멍 근거</td>
+
+            <td>시험 구멍과 함께 확인</td>
+
+          </tr>
+
+          <tr>
+
+            <td>인장 강도</td>
+
+            <td>인장 90 N 이상(아동복 동일)</td>
+
+            <td>색상당 5개 인장 시험기 측정</td>
+
+          </tr>
+
+          <tr>
+
+            <td>니켈 용출</td>
+
+            <td>0.5 µg/cm²/주 이하(EN 1811, 도금은 EN 12472 후)</td>
+
+            <td>제3자 성적서, 색상·도금 로트별</td>
+
+          </tr>
+
+          <tr>
+
+            <td>포장과 표시</td>
+
+            <td>봉지당 100개, L·색상·로트 표기</td>
+
+            <td>3봉지 표기와 내용물 대조</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p>이 다섯 수치와 단추 구멍 공식을 같은 테크팩에 담으면 샘플 단계에서 잠김, 고정, 세탁 후 유지까지 확인됩니다. 단추는 저렴하지만 단추 구멍은 원단을 자르는 공정이라 잘못되면 앞여밈 전체를 교체해야 합니다. 발주서에 치수 두 줄을 더하는 편이 검품대에서 논쟁하는 것보다 쌉니다.</p>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="garment-buttons-fasteners-guide.html">버튼과 여밈: 재질·사이즈·강도</a></li>
+        <li><a href="snap-fastener-press-stud-guide.html">스냅 단추: 선택·금형·인장 강도</a></li>
+        <li><a href="garment-label-sewing-defect-troubleshooting.html">라벨 봉제 불량: 물결·밀림·실 끊김</a></li>
+        <li><a href="trim-attachment-strength-pull-test-guide.html">부자재 부착 강도: 인장 시험 방법</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>신규 스타일의 단추와 단추 구멍을 정하시려면 원단, 앞여밈 구조, 대상 시장, 연간 수량을 보내주십시오. 리뉴 환산표, 단추 구멍 공식, 니켈·인장 요건을 담은 사양서와 봉제 샘플을 제안합니다.</p>
+        <a class="cta-btn" href="../contact.html">단추·구멍 사양 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 받기</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
