@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gramaje de etiquetas: conversión g/m², pt y lb | TAGE</title>
+<meta name="description" content="Convertir el gramaje de una etiqueta entre g/m², puntos y libras: tabla práctica, por qué dos papeles iguales se sienten distintos y una especificación en tres líneas.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/es/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-paper-weight-conversion-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-paper-weight-conversion-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌紙張重量：克重、pt 與 lb，不用猜的換算法",
+     "item": "https://taigetag.com/blog/hang-tag-paper-weight-conversion-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌紙張重量：克重、pt 與 lb，不用猜的換算法",
+   "url": "https://taigetag.com/blog/hang-tag-paper-weight-conversion-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-paper-weight-conversion-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Papel e impresión</span></div>
+      <h1>Gramaje del papel de etiqueta: g/m², pt y lb sin adivinar</h1>
+      <p>Por TAGE Packaging &amp;nbsp;·&amp;nbsp; Actualizado el 22 de noviembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Pregunta el gramaje de una etiqueta a tres compradores y obtendrás tres respuestas: 350 g/m² en Hamburgo, 14 pt en Nueva York y 130 lb cover de una imprenta que aún cotiza en peso base. Puede ser el mismo cartón. El problema empieza cuando una especificación mezcla un gramaje métrico con un objetivo en puntos: la etiqueta queda demasiado blanda bajo un logo en foil o demasiado rígida para un formato de 35 mm, y el comprador paga la reimpresión. Esta guía cubre las tres unidades, una tabla de conversión utilizable en un pedido, por qué dos papeles de igual gramaje se sienten distintos y cómo redactar una especificación sin ambigüedad.</p>
+
+      <h2>1. Tres unidades, tres medidas distintas</h2>
+
+      <p>El gramaje (g/m²) mide masa por superficie. El punto (pt) mide espesor en milésimas de pulgada: 14 pt son 0,356 mm. La libra (lb) es un peso base, el de 500 hojas en el formato base de ese grado: 20 × 26 pulgadas para cartulina de cubierta, 24 × 36 para cartón de etiquetas y 17 × 22 para papel de escribir. Como ese formato cambia según el grado, 100 lb cover y 100 lb text no son la misma hoja: la cubierta equivale a unos 2,7 g/m² por libra y el text a unos 3,8.</p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Unidad</th>
+
+            <th>Qué mide</th>
+
+            <th>Dónde se usa</th>
+
+            <th>Cómo verificarlo</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>g/m² (gsm)</td>
+
+            <td>masa por metro cuadrado</td>
+
+            <td>Europa, Asia, Australia, Sudamérica</td>
+
+            <td>pesar una muestra de 100 cm² y escalar</td>
+
+          </tr>
+
+          <tr>
+
+            <td>pt (punto)</td>
+
+            <td>espesor en 1/1000 pulgada</td>
+
+            <td>Estados Unidos, Canadá</td>
+
+            <td>micrómetro en esquinas y centro</td>
+
+          </tr>
+
+          <tr>
+
+            <td>lb (peso base)</td>
+
+            <td>peso de 500 hojas en el formato base</td>
+
+            <td>papeleros e imprentas de EE. UU.</td>
+
+            <td>preguntar el formato base antes de convertir</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <h2>2. Una tabla de conversión que sirve</h2>
+
+      <p>La tabla recoge los gramajes que más aparecen en los pedidos. Los valores suponen cartulina estucada con densidad cercana a 1,0 g/cm³; los papeles sin estucar y el kraft son más voluminosos, así que a igual gramaje resultan 20 a 40 % más gruesos. La columna de espesor sirve para alinear expectativas, no para sustituir un micrómetro.</p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Gramaje g/m²</th>
+
+            <th>Espesor mm</th>
+
+            <th>pt</th>
+
+            <th>≈ lb cover</th>
+
+            <th>Uso habitual</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>200</td>
+
+            <td>0,20</td>
+
+            <td>8</td>
+
+            <td>74</td>
+
+            <td>etiquetas pequeñas, encartes plegados</td>
+
+          </tr>
+
+          <tr>
+
+            <td>250</td>
+
+            <td>0,25</td>
+
+            <td>10</td>
+
+            <td>92</td>
+
+            <td>básicos de e-commerce y moda rápida</td>
+
+          </tr>
+
+          <tr>
+
+            <td>300</td>
+
+            <td>0,30</td>
+
+            <td>12</td>
+
+            <td>111</td>
+
+            <td>etiquetas retail, impresión a dos caras</td>
+
+          </tr>
+
+          <tr>
+
+            <td>350</td>
+
+            <td>0,35</td>
+
+            <td>14</td>
+
+            <td>130</td>
+
+            <td>etiquetas principales con foil o relieve</td>
+
+          </tr>
+
+          <tr>
+
+            <td>400</td>
+
+            <td>0,40</td>
+
+            <td>16</td>
+
+            <td>148</td>
+
+            <td>cartulinas premium y formatos grandes rígidos</td>
+
+          </tr>
+
+          <tr>
+
+            <td>450</td>
+
+            <td>0,45</td>
+
+            <td>18</td>
+
+            <td>167</td>
+
+            <td>tarjetas de estuche y certificado</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p>Tres relaciones que conviene recordar: g/m² ÷ 2,7 equivale aproximadamente a lb cover, mm × 39,37 a pt, y 1 pt son 25,4 micras. El cartón de etiquetas usa un formato base de 24 × 36 pulgadas, así que 100 lb tag queda cerca de 163 g/m², una cifra que desconcierta a quien supone que toda libra es igual.</p>
+
+      <h2>3. Por qué dos etiquetas de 350 g/m² se sienten distintas</h2>
+
+      <p>El gramaje dice cuánta fibra hay por metro cuadrado; el espesor dice cuánto aire hay entre las fibras. Lo que decide si una etiqueta se siente firme, suave o barata es la relación entre ambos: el volumen específico, en cm³/g.</p>
+
+      <ul>
+
+        <li>La cartulina estucada es densa, cerca de 1,0 g/cm³: 350 g/m² queda en unos 0,35 mm, corta limpio y admite foil y troqueles finos</li>
+
+        <li>Los papeles sin estucar y el kraft son más voluminosos, densidad 0,7 a 0,85: el mismo gramaje llega a 0,45 o 0,50 mm, se siente contundente pero el canto se deshilacha</li>
+
+        <li>El laminado añade 15 a 25 µm por cara y sube la rigidez: 350 g/m² con film mate es bastante más rígido y pliega mejor que la hoja desnuda</li>
+
+        <li>La dirección de fibra decide el plegado: plegar a contrahílo agrieta el estucado, plegar a favor resiste la manipulación. Un papel con más humedad se siente más blando en meses húmedos</li>
+
+      </ul>
+
+      <h2>4. Escribe la especificación en tres líneas</h2>
+
+      <p>Un gramaje solo deja que el proveedor elija cualquier cartón de esa clase, y dentro de una clase el espesor varía un 30 %. Indica el grado, el gramaje y un rango de espesor, y añade cómo se medirá.</p>
+
+      <ul>
+
+        <li>Línea 1, grado y gramaje: cartulina blanca estucada por las dos caras, 350 g/m², FSC Mix</li>
+
+        <li>Línea 2, rango de espesor: 0,34 a 0,38 mm, tolerancia ±0,02 mm</li>
+
+        <li>Línea 3, medición y criterio: acondicionar 24 h a 23 °C y 50 % HR, medir con micrómetro cada esquina y el centro, y usar la mediana</li>
+
+      </ul>
+
+      <div class="callout">💡 Consejo: envía dos tarjetas de muestra con el mismo gramaje pero distinto espesor. El comprador decide al tacto, más rápido que cambiando libras por correo.</div>
+
+      <h2>5. Elige el gramaje según lo que la etiqueta debe aguantar</h2>
+
+      <p>El gramaje lo fijan el ojal, el pliegue, el acabado y la forma de colgar, no la línea de presupuesto. Estos son los cinco casos más frecuentes en pedidos de exportación.</p>
+
+      <ul>
+
+        <li>Etiquetas de menos de 35 × 70 mm: 250 a 300 g/m². Un gramaje mayor se alabea y tapa el cuello en la percha</li>
+
+        <li>Retail estándar 40 × 90 mm: 300 a 350 g/m², el mejor equilibrio entre coste y tacto</li>
+
+        <li>Foil, relieve y UV selectivo: 350 a 400 g/m². Un papel fino marca el relieve al dorso y ampolla tras el laminado</li>
+
+        <li>Ojales o cordón pasado varias veces: 350 g/m² o más, con refuerzo de 3 mm alrededor del ojal</li>
+
+        <li>Tarjetas de dos o tres cuerpos: 250 a 300 g/m², y marcar la línea de pliegue antes o el estucado se agrieta</li>
+
+      </ul>
+
+      <h2>6. Cómo lo pide cada mercado y cómo verificarlo a la recepción</h2>
+
+      <p>Los compradores europeos y australianos hablan en g/m²; los estadounidenses, en puntos o libras. Las imprentas japonesas citan la 坪量 en g/m² junto con la 連量, y los compradores coreanos piden el 평량, que es la misma cifra métrica. Convierte una vez, pon las dos cifras en el pedido y resuelve con micrómetro en la recepción.</p>
+
+      <ul>
+
+        <li>Toma tres hojas por lote, cinco lecturas por hoja, y reinspecciona el lote si algún punto sale de ±0,02 mm</li>
+
+        <li>Una deriva de espesor suele aparecer antes que un problema de impresión. Trátala como aviso temprano en vez de esperar una queja sobre el tacto</li>
+
+        <li>La mayoría de las quejas de tacto vienen de cambiar de papelería, no de gramaje. Guarda el nombre del fabricante y el número de lote de cada partida</li>
+
+        <li>La composición, el cuidado y el origen siguen correspondiendo a la etiqueta cosida (Reglamento (UE) No 1007/2011): el etiquetado en la tarjeta colgante no lo sustituye</li>
+
+      </ul>
+
+      <h2>Artículos relacionados</h2>
+      <ul>
+        <li><a href="index.html">Todos los artículos de la FAQ</a></li>
+        <li><a href="hang-tag-paper-types.html">Comparativa de papeles de etiqueta</a></li>
+        <li><a href="hang-tag-paper-thickness.html">Gramaje y espesor</a></li>
+        <li><a href="vellum-translucent-hang-tags.html">Etiquetas de papel translúcido</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>¿Necesitas fijar el papel antes de pedir presupuesto?</p>
+        <a class="cta-btn" href="../contact.html">Solicitar muestras de papel →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

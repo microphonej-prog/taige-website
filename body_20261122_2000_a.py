@@ -1,0 +1,341 @@
+# -*- coding: utf-8 -*-
+"""2026-11-22 20:00 第一篇：吊牌纸张重量换算 g/m² / pt / lb（英文主稿，zh/fr/es/ja/ko 从英文翻译）"""
+
+SLUG = "hang-tag-paper-weight-conversion-guide.html"
+CAT = {"zh": "紙張與印刷", "en": "Paper &amp; Printing", "fr": "Papier et impression",
+       "es": "Papel e impresión", "ja": "紙・印刷", "ko": "용지·인쇄"}
+TITLE = {
+    "zh": "吊牌紙張重量換算：克重、pt 與 lb 對照指南 | TAGE",
+    "en": "Hang Tag Paper Weight: GSM, PT and Lb Conversion | TAGE",
+    "fr": "Grammage des étiquettes : conversion g/m², pt et lb | TAGE",
+    "es": "Gramaje de etiquetas: conversión g/m², pt y lb | TAGE",
+    "ja": "ハングタグ用紙の坪量換算：g/m²・pt・lb 対照 | TAGE",
+    "ko": "행택 용지 평량 환산: g/m²·pt·lb 대조표 | TAGE",
+}
+DESC = {
+    "zh": "吊牌紙張重量三種寫法怎麼換算：g/m²、pt 與 lb 對照表、同克重手感不同的原因，以及把紙種、克重、厚度寫成三行規格的方法，附進貨量測與各市場問法。",
+    "en": "Convert hang tag paper weight between gsm, points and pounds with a practical table, then write a caliper based spec your printer cannot misread or substitute.",
+    "fr": "Convertir le grammage d'une étiquette entre g/m², points et livres : tableau pratique, écart de main au même grammage et spécification en trois lignes.",
+    "es": "Convertir el gramaje de una etiqueta entre g/m², puntos y libras: tabla práctica, por qué dos papeles iguales se sienten distintos y una especificación en tres líneas.",
+    "ja": "ハングタグ用紙の坪量を g/m²・pt・lb で換算する実用表。同じ坪量でも硬さが変わる理由、紙種・坪量・厚みを3行で書く発注仕様、受入時の測定まで整理します。",
+    "ko": "행택 용지 평량을 g/m²·pt·lb로 환산하는 실용표. 같은 평량에서도 뻣뻣함이 달라지는 이유와 지종·평량·두께 3줄 사양, 입고 측정 기준까지 정리합니다.",
+}
+H1 = {
+    "zh": "吊牌紙張重量：克重、pt 與 lb，不用猜的換算法",
+    "en": "Hang Tag Paper Weight: GSM, PT and Lb Without the Guesswork",
+    "fr": "Poids du papier d'étiquette : g/m², pt et lb sans approximation",
+    "es": "Gramaje del papel de etiqueta: g/m², pt y lb sin adivinar",
+    "ja": "ハングタグ用紙の重さ：g/m²・pt・lb を推測なしで換算する",
+    "ko": "행택 용지 무게: g/m²·pt·lb를 추측 없이 환산하기",
+}
+DATE = {"zh": "泰閣包裝 · 更新於 2026年11月22日",
+        "en": "By TAGE Packaging &nbsp;·&nbsp; Updated November 22, 2026",
+        "fr": "Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 22 novembre 2026",
+        "es": "Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 22 de noviembre de 2026",
+        "ja": "泰閣包装 · 2026年11月22日更新",
+        "ko": "TAGE 패키징 · 2026년 11월 22일 업데이트"}
+
+L = ["zh", "en", "fr", "es", "ja", "ko"]
+
+
+def d(zh, en, fr, es, ja, ko):
+    return {"zh": zh, "en": en, "fr": fr, "es": es, "ja": ja, "ko": ko}
+
+
+BLOCKS = [
+    ("p", d(
+        "同一張吊牌，問三個買家會得到三個答案：漢堡客戶說 350 g/m²，紐約客戶說 14 pt，另一位印刷廠仍用基重報 130 lb cover。三者可能指的是同一張紙板。麻煩從規格書把公制克重和美國 pt 混著寫開始：結果不是燙金 LOGO 底下軟得沒有支撐，就是 35 mm 的小吊牌硬得像證卡，而重印的錢由買家出。這篇把三種單位、換算表、同克重不同手感的原因，以及怎麼寫成供應商無法誤讀的規格，一次講清。",
+        "Ask three buyers for the weight of a hang tag and you get three answers: 350 g/m² in Hamburg, 14 pt in New York, and 130 lb cover from a printer who still quotes in basis weights. They may describe the same board. Trouble starts when one specification mixes a metric grammage with a US point target: the tag ends up too soft under a foil logo, or too stiff for a 35 mm shape, and the buyer pays for the reprint. This guide covers the three units, a conversion table you can use on a purchase order, why equal grammages feel different, and how to write a spec a supplier cannot misread.",
+        "Demandez le poids d'une étiquette à trois acheteurs et vous obtiendrez trois réponses : 350 g/m² à Hambourg, 14 pt à New York, 130 lb cover chez un imprimeur qui raisonne encore en poids de base. Il peut s'agir du même carton. Les ennuis commencent quand une spécification mélange un grammage métrique et une cible en points : l'étiquette devient trop molle sous une dorure, ou trop rigide pour un format de 35 mm, et le client paie la réimpression. Ce guide couvre les trois unités, un tableau de conversion utilisable sur un bon de commande, l'écart de main à grammage égal et la rédaction d'une spécification non ambiguë.",
+        "Pregunta el gramaje de una etiqueta a tres compradores y obtendrás tres respuestas: 350 g/m² en Hamburgo, 14 pt en Nueva York y 130 lb cover de una imprenta que aún cotiza en peso base. Puede ser el mismo cartón. El problema empieza cuando una especificación mezcla un gramaje métrico con un objetivo en puntos: la etiqueta queda demasiado blanda bajo un logo en foil o demasiado rígida para un formato de 35 mm, y el comprador paga la reimpresión. Esta guía cubre las tres unidades, una tabla de conversión utilizable en un pedido, por qué dos papeles de igual gramaje se sienten distintos y cómo redactar una especificación sin ambigüedad.",
+        "同じハングタグの重さを3人のバイヤーに聞くと、答えは3つに分かれます。ハンブルクの担当は 350 g/m²、ニューヨークの担当は 14 pt、基量で見積もる印刷会社は 130 lb cover。同じ板紙を指していることもあります。問題は、メートル法の坪量と米国のポイント指定が1枚の仕様書に混在したときに始まります。箔押しのロゴの下で柔らかすぎたり、35 mm の小型タグには硬すぎたりして、その再印刷代はバイヤーが払うことになります。本稿では3つの単位、発注書にそのまま使える換算表、同じ坪量で硬さが変わる理由、そして誤読されない仕様の書き方を整理します。",
+        "같은 행택의 무게를 세 명의 바이어에게 물으면 답이 세 가지로 갈립니다. 함부르크 담당은 350 g/m², 뉴욕 담당은 14 pt, 아직 평량 기준으로 견적을 내는 인쇄사는 130 lb cover라고 합니다. 같은 판지를 가리키는 경우도 있습니다. 문제는 미터법 평량과 미국식 포인트 기준이 한 장의 사양서에 섞여 들어갈 때 시작됩니다. 박 로고 아래에서 너무 물러 보이거나 35 mm 소형 행택에는 너무 뻣뻣해지고, 재인쇄 비용은 바이어가 부담합니다. 이 글은 세 단위, 발주서에 바로 쓸 수 있는 환산표, 같은 평량에서도 뻣뻣함이 달라지는 이유, 공급업체가 오독할 수 없는 사양 작성법을 정리합니다.",
+    )),
+
+    ("h2", d("一、三種單位，量的是三件不同的事", "1. Three Units, Three Different Measurements",
+             "1. Trois unités, trois mesures différentes", "1. Tres unidades, tres medidas distintas",
+             "1. 3つの単位は3つの別のものを測っている", "1. 세 가지 단위는 서로 다른 것을 잽니다")),
+
+    ("p", d(
+        "克重（g/m²，口語 gsm）量的是每平方米的質量。pt（point）量厚度，單位是千分之一英吋，14 pt 等於 0.356 mm。lb 量基重：該紙種基重尺寸下 500 張的總重，封面卡用 20 × 26 英吋，吊牌卡用 24 × 36 英吋，書寫紙用 17 × 22 英吋。基重尺寸隨紙種改變，所以 100 lb cover 和 100 lb text 完全不是同一張紙：封面卡每磅約 2.7 g/m²，書寫紙每磅約 3.8 g/m²。",
+        "Grammage (g/m², spoken as gsm) is mass per area. Point (pt) is caliper, thickness in thousandths of an inch, so 14 pt is 0.356 mm. Pound (lb) is a basis weight: the weight of 500 sheets in the basis size of that grade, which is 20 × 26 in for cover, 24 × 36 in for tag stock and 17 × 22 in for bond. Because the basis area changes with the grade, 100 lb cover and 100 lb text are nowhere near the same sheet: cover carries about 2.7 g/m² per pound, text about 3.8.",
+        "Le grammage (g/m²) mesure une masse par surface. Le point (pt) mesure l'épaisseur en millièmes de pouce : 14 pt valent 0,356 mm. La livre (lb) est un poids de base, celui de 500 feuilles dans le format de base du grade : 20 × 26 in pour la carte couverture, 24 × 36 in pour le carton à étiquettes, 17 × 22 in pour le papier écriture. Ce format variant selon le grade, 100 lb cover et 100 lb text ne sont pas la même feuille : la couverture vaut environ 2,7 g/m² par livre, le text environ 3,8.",
+        "El gramaje (g/m²) mide masa por superficie. El punto (pt) mide espesor en milésimas de pulgada: 14 pt son 0,356 mm. La libra (lb) es un peso base, el de 500 hojas en el formato base de ese grado: 20 × 26 pulgadas para cartulina de cubierta, 24 × 36 para cartón de etiquetas y 17 × 22 para papel de escribir. Como ese formato cambia según el grado, 100 lb cover y 100 lb text no son la misma hoja: la cubierta equivale a unos 2,7 g/m² por libra y el text a unos 3,8.",
+        "坪量（g/m²）は面積あたりの質量です。pt（ポイント）は厚みを 1/1000 インチ単位で表した値で、14 pt は 0.356 mm になります。lb は連量・基量で、その品種の基準寸法における 500 枚の重さです。基準寸法は品種ごとに異なり、カバーは 20 × 26 インチ、タグ用カードは 24 × 36 インチ、筆記用紙は 17 × 22 インチです。基準面積が違うため、100 lb cover と 100 lb text はまったく別の紙です。カバーは 1 lb あたり約 2.7 g/m²、text は約 3.8 g/m² に相当します。",
+        "평량(g/m²)은 면적당 질량입니다. pt(포인트)는 두께를 1/1000인치 단위로 나타낸 값으로 14 pt는 0.356 mm입니다. lb는 평량 기준 중량으로, 해당 지종의 기준 치수에서 500장의 무게입니다. 기준 치수는 지종마다 달라 커버는 20 × 26인치, 태그 카드는 24 × 36인치, 필기용지는 17 × 22인치입니다. 기준 면적이 다르므로 100 lb cover와 100 lb text는 전혀 다른 종이입니다. 커버는 1 lb당 약 2.7 g/m², text는 약 3.8 g/m²에 해당합니다.",
+    )),
+
+    ("table", {
+        "head": [
+            d("單位", "Unit", "Unité", "Unidad", "単位", "단위"),
+            d("量的是什麼", "What it measures", "Ce qu'elle mesure", "Qué mide", "測っているもの", "재는 대상"),
+            d("常用地區", "Where it is used", "Où on l'utilise", "Dónde se usa", "主な使用地域", "주 사용 지역"),
+            d("怎麼核對", "How to verify", "Comment vérifier", "Cómo verificarlo", "確認方法", "확인 방법"),
+        ],
+        "rows": [
+            [d("g/m²（gsm）", "g/m² (gsm)", "g/m² (gsm)", "g/m² (gsm)", "g/m²（gsm）", "g/m²(gsm)"),
+             d("每平方米質量", "mass per square metre", "masse par mètre carré", "masa por metro cuadrado", "1 m² あたりの質量", "1 m²당 질량"),
+             d("歐洲、亞洲、澳洲、南美", "Europe, Asia, Australia, South America", "Europe, Asie, Australie, Amérique du Sud", "Europa, Asia, Australia, Sudamérica", "欧州・アジア・豪州・南米", "유럽·아시아·호주·남미"),
+             d("稱 100 cm² 樣片換算", "weigh a 100 cm² sample and scale up", "peser un échantillon de 100 cm² et ramener au m²", "pesar una muestra de 100 cm² y escalar", "100 cm² の試料を秤量して換算", "100 cm² 시료를 달아 환산")],
+            [d("pt（point）", "pt (point)", "pt (point)", "pt (punto)", "pt（ポイント）", "pt(포인트)"),
+             d("厚度，1/1000 英吋", "thickness in 1/1000 in", "épaisseur en 1/1000 in", "espesor en 1/1000 pulgada", "厚み（1/1000 インチ）", "두께(1/1000인치)"),
+             d("美國、加拿大", "United States, Canada", "États-Unis, Canada", "Estados Unidos, Canadá", "米国・カナダ", "미국·캐나다"),
+             d("千分尺量四角與中心", "micrometer at the corners and centre", "palmer aux angles et au centre", "micrómetro en esquinas y centro", "マイクロメータで四隅と中央を測定", "마이크로미터로 네 모서리와 중앙 측정")],
+            [d("lb（基重）", "lb (basis weight)", "lb (poids de base)", "lb (peso base)", "lb（連量・基量）", "lb(평량 기준 중량)"),
+             d("500 張基重尺寸紙的重量", "weight of 500 sheets at the basis size", "poids de 500 feuilles au format de base", "peso de 500 hojas en el formato base", "基準寸法 500 枚の重さ", "기준 치수 500장의 무게"),
+             d("美國紙商與印刷廠報價", "US paper merchants and printers", "papetiers et imprimeurs américains", "papeleros e imprentas de EE. UU.", "米国の紙商・印刷会社", "미국 지상·인쇄사 견적"),
+             d("先問基重尺寸再換算", "ask the basis size first, then convert", "demander le format de base avant de convertir", "preguntar el formato base antes de convertir", "基準寸法を確認してから換算", "기준 치수를 확인한 뒤 환산")],
+        ],
+    }),
+
+    ("h2", d("二、可直接使用的換算表", "2. A Conversion Table You Can Actually Use",
+             "2. Un tableau de conversion utilisable", "2. Una tabla de conversión que sirve",
+             "2. 実務で使える換算表", "2. 바로 쓰는 환산표")),
+
+    ("p", d(
+        "下表列出吊牌訂單最常出現的克重。數值以密度接近 1.0 g/cm³ 的塗佈白卡為準；非塗佈紙與牛皮卡鬆厚，同克重會厚 20% 至 40%。厚度欄用來對齊認知，不能取代千分尺。",
+        "The table below covers the weights that appear most often on hang tag purchase orders. Figures assume coated art card at a density near 1.0 g/cm³; uncoated and kraft stocks are bulkier, so the same grammage runs 20 to 40 percent thicker. Use the caliper column to align expectations, not to replace a micrometer.",
+        "Le tableau ci-dessous reprend les grammages qui apparaissent le plus souvent sur les bons de commande. Les valeurs supposent une carte couchée de densité proche de 1,0 g/cm³ ; les papiers non couchés et le kraft sont plus bouffants, donc 20 à 40 % plus épais à grammage égal. La colonne épaisseur sert à cadrer les attentes, pas à remplacer un palmer.",
+        "La tabla recoge los gramajes que más aparecen en los pedidos. Los valores suponen cartulina estucada con densidad cercana a 1,0 g/cm³; los papeles sin estucar y el kraft son más voluminosos, así que a igual gramaje resultan 20 a 40 % más gruesos. La columna de espesor sirve para alinear expectativas, no para sustituir un micrómetro.",
+        "下表は発注書で最もよく見る坪量をまとめたものです。数値は密度 1.0 g/cm³ 前後のコートカードを前提とします。非塗工紙やクラフトは嵩高く、同じ坪量でも 20〜40% 厚くなります。厚みの列は認識合わせの目安で、マイクロメータの代わりにはなりません。",
+        "아래 표는 행택 발주서에 가장 자주 등장하는 평량을 정리한 것입니다. 수치는 밀도 1.0 g/cm³ 전후의 코팅 카드를 기준으로 합니다. 비코팅지와 크라프트는 부피가 커서 같은 평량에서도 20~40% 두껍습니다. 두께 열은 기준을 맞추기 위한 값이며 마이크로미터를 대신하지 않습니다.",
+    )),
+
+    ("table", {
+        "head": [
+            d("克重 g/m²", "Grammage g/m²", "Grammage g/m²", "Gramaje g/m²", "坪量 g/m²", "평량 g/m²"),
+            d("厚度 mm", "Caliper mm", "Épaisseur mm", "Espesor mm", "厚み mm", "두께 mm"),
+            d("pt", "pt", "pt", "pt", "pt", "pt"),
+            d("約當 lb cover", "≈ lb cover", "≈ lb cover", "≈ lb cover", "≈ lb cover", "≈ lb cover"),
+            d("常見用途", "Typical use", "Usage courant", "Uso habitual", "主な用途", "주 용도"),
+        ],
+        "rows": [
+            [d("200", "200", "200", "200", "200", "200"), d("0.20", "0.20", "0,20", "0,20", "0.20", "0.20"),
+             d("8", "8", "8", "8", "8", "8"), d("74", "74", "74", "74", "74", "74"),
+             d("小型吊牌、折卡內頁", "small tags, folded inserts", "petites étiquettes, encarts pliés", "etiquetas pequeñas, encartes plegados", "小型タグ・折りカードの中身", "소형 행택, 접지 삽입카드")],
+            [d("250", "250", "250", "250", "250", "250"), d("0.25", "0.25", "0,25", "0,25", "0.25", "0.25"),
+             d("10", "10", "10", "10", "10", "10"), d("92", "92", "92", "92", "92", "92"),
+             d("電商快消品牌基本款", "e-commerce and fast fashion basics", "bases e-commerce et mode rapide", "básicos de e-commerce y moda rápida", "EC・ファストファッションの基本", "이커머스·패스트패션 기본형")],
+            [d("300", "300", "300", "300", "300", "300"), d("0.30", "0.30", "0,30", "0,30", "0.30", "0.30"),
+             d("12", "12", "12", "12", "12", "12"), d("111", "111", "111", "111", "111", "111"),
+             d("常規零售吊牌、雙面印刷", "standard retail tags, printed both sides", "étiquettes retail, impression recto verso", "etiquetas retail, impresión a dos caras", "一般小売タグ・両面印刷", "일반 리테일 행택, 양면 인쇄")],
+            [d("350", "350", "350", "350", "350", "350"), d("0.35", "0.35", "0,35", "0,35", "0.35", "0.35"),
+             d("14", "14", "14", "14", "14", "14"), d("130", "130", "130", "130", "130", "130"),
+             d("燙金壓凸主吊牌", "foil and embossed main tags", "étiquettes principales dorées ou gaufrées", "etiquetas principales con foil o relieve", "箔押し・エンボスのメインタグ", "박·엠보싱 메인 행택")],
+            [d("400", "400", "400", "400", "400", "400"), d("0.40", "0.40", "0,40", "0,40", "0.40", "0.40"),
+             d("16", "16", "16", "16", "16", "16"), d("148", "148", "148", "148", "148", "148"),
+             d("厚卡高級感、需挺度的大吊牌", "premium heavy cards, large stiff tags", "cartes épaisses premium, grands formats rigides", "cartulinas premium y formatos grandes rígidos", "高級厚手カード・剛性が必要な大型タグ", "고급 두꺼운 카드, 강성이 필요한 대형 행택")],
+            [d("450", "450", "450", "450", "450", "450"), d("0.45", "0.45", "0,45", "0,45", "0.45", "0.45"),
+             d("18", "18", "18", "18", "18", "18"), d("167", "167", "167", "167", "167", "167"),
+             d("禮盒卡、證卡", "gift box cards, certificate cards", "cartes de coffret, cartes certificat", "tarjetas de estuche y certificado", "ギフトボックスカード・証書カード", "선물 상자 카드, 인증 카드")],
+        ],
+    }),
+
+    ("p", d(
+        "三個值得記住的關係：g/m² ÷ 2.7 約等於 lb cover；mm × 39.37 約等於 pt；1 pt 等於 25.4 微米。吊牌卡（tag stock）的基重尺寸是 24 × 36 英吋，所以 100 lb tag 約等於 163 g/m²——以為「磅就是磅」的人最容易被這個數字絆倒。",
+        "Three relationships worth keeping: gsm ÷ 2.7 is roughly lb cover, mm × 39.37 is roughly pt, and 1 pt equals 25.4 micron. Tag stock uses a 24 × 36 in base, so 100 lb tag lands near 163 g/m², a figure that trips anyone who assumes every pound is the same pound.",
+        "Trois relations à retenir : g/m² ÷ 2,7 donne environ le lb cover, mm × 39,37 donne environ le pt, et 1 pt vaut 25,4 microns. Le carton à étiquettes utilise un format de base de 24 × 36 in, donc 100 lb tag correspond à environ 163 g/m² — un chiffre qui piège ceux qui croient que toutes les livres sont égales.",
+        "Tres relaciones que conviene recordar: g/m² ÷ 2,7 equivale aproximadamente a lb cover, mm × 39,37 a pt, y 1 pt son 25,4 micras. El cartón de etiquetas usa un formato base de 24 × 36 pulgadas, así que 100 lb tag queda cerca de 163 g/m², una cifra que desconcierta a quien supone que toda libra es igual.",
+        "覚えておきたい関係は3つです。g/m² ÷ 2.7 がほぼ lb cover、mm × 39.37 がほぼ pt、1 pt は 25.4 マイクロメートル。タグ用カードの基準寸法は 24 × 36 インチなので、100 lb tag は約 163 g/m² になります。すべてのポンドが同じだと考えると、この数字で足をすくわれます。",
+        "기억할 관계는 세 가지입니다. g/m² ÷ 2.7이 대략 lb cover, mm × 39.37이 대략 pt, 1 pt는 25.4 마이크로미터입니다. 태그 카드의 기준 치수는 24 × 36인치이므로 100 lb tag는 약 163 g/m²가 됩니다. 모든 파운드가 같다고 생각하면 이 숫자에서 발목을 잡힙니다.",
+    )),
+
+    ("h2", d("三、同樣 350 g/m²，手感為什麼差很多", "3. Why Two 350 g/m² Tags Feel Different",
+             "3. Pourquoi deux étiquettes de 350 g/m² ne se ressemblent pas",
+             "3. Por qué dos etiquetas de 350 g/m² se sienten distintas",
+             "3. 同じ 350 g/m² でも硬さが変わる理由", "3. 같은 350 g/m²인데 뻣뻣함이 다른 이유")),
+
+    ("p", d(
+        "克重告訴你每平方米裡有多少纖維，厚度告訴你纖維之間塞了多少空氣。真正決定吊牌摸起來是俐落、柔軟還是廉價的，是兩者的比值——鬆厚度 bulk，單位 cm³/g。",
+        "Grammage says how much fibre sits in a square metre; caliper says how much air sits between the fibres. What decides whether a tag feels crisp, soft or cheap is the ratio of the two: bulk, in cm³/g.",
+        "Le grammage indique la quantité de fibre au mètre carré ; l'épaisseur indique l'air entre les fibres. Ce qui décide si une étiquette paraît nette, souple ou bon marché, c'est le rapport des deux : le bouffant, en cm³/g.",
+        "El gramaje dice cuánta fibra hay por metro cuadrado; el espesor dice cuánto aire hay entre las fibras. Lo que decide si una etiqueta se siente firme, suave o barata es la relación entre ambos: el volumen específico, en cm³/g.",
+        "坪量は 1 m² に含まれる繊維の量、厚みは繊維の間の空気の量を示します。タグがシャープに感じるか、柔らかく感じるか、安っぽく感じるかを決めるのは、その比である嵩高さ（cm³/g）です。",
+        "평량은 1 m²에 들어 있는 섬유의 양, 두께는 섬유 사이의 공기 양을 말합니다. 행택이 또렷한지, 부드러운지, 싸구려처럼 느껴지는지를 결정하는 것은 두 값의 비율, 즉 벌크(cm³/g)입니다.",
+    )),
+
+    ("ul", [
+        d("塗佈白卡密度高（約 1.0 g/cm³）：350 g/m² 約 0.35 mm，切口乾淨，適合燙金與細模切",
+          "Coated card is dense, near 1.0 g/cm³: 350 g/m² lands at about 0.35 mm, cuts clean and holds foil and fine die-cut shapes",
+          "La carte couchée est dense, proche de 1,0 g/cm³ : 350 g/m² donne environ 0,35 mm, se découpe net et tient la dorure comme les découpes fines",
+          "La cartulina estucada es densa, cerca de 1,0 g/cm³: 350 g/m² queda en unos 0,35 mm, corta limpio y admite foil y troqueles finos",
+          "コートカードは密度が高く 1.0 g/cm³ 前後です。350 g/m² で約 0.35 mm、切口がきれいで箔押しや細かい型抜きに向きます",
+          "코팅 카드는 밀도가 약 1.0 g/cm³로 높습니다. 350 g/m²가 약 0.35 mm이며 재단면이 깔끔해 박과 정교한 다이커팅에 적합합니다"),
+        d("非塗佈紙與牛皮卡鬆厚（密度 0.7–0.85）：同克重可到 0.45–0.50 mm，手感厚實，但邊緣容易起毛",
+          "Uncoated and kraft stocks are bulkier, density 0.7 to 0.85: the same grammage can reach 0.45 to 0.50 mm, feels substantial, but the cut edge tends to fur",
+          "Les papiers non couchés et le kraft sont plus bouffants, densité 0,7 à 0,85 : le même grammage atteint 0,45 à 0,50 mm, la main est pleine mais la coupe s'effiloche",
+          "Los papeles sin estucar y el kraft son más voluminosos, densidad 0,7 a 0,85: el mismo gramaje llega a 0,45 o 0,50 mm, se siente contundente pero el canto se deshilacha",
+          "非塗工紙やクラフトは嵩高く密度 0.7〜0.85 です。同じ坪量で 0.45〜0.50 mm に達し、手応えはありますが切口が毛羽立ちます",
+          "비코팅지와 크라프트는 부피가 커 밀도가 0.7~0.85입니다. 같은 평량에서 0.45~0.50 mm에 이르고 두툼하게 느껴지지만 재단면이 일어납니다"),
+        d("覆膜每面再加 15–25 µm，貼合後挺度上升：「350 g/m² 加啞膜」比素紙硬得多，也更耐折",
+          "Lamination adds 15 to 25 µm per side and raises stiffness: 350 g/m² with matte film is markedly stiffer and folds better than the bare sheet",
+          "Le pelliculage ajoute 15 à 25 µm par face et augmente la rigidité : 350 g/m² avec film mat est nettement plus raide et plie mieux que la feuille nue",
+          "El laminado añade 15 a 25 µm por cara y sube la rigidez: 350 g/m² con film mate es bastante más rígido y pliega mejor que la hoja desnuda",
+          "ラミネートは片面あたり 15〜25 µm を加え、剛性が上がります。350 g/m² にマットフィルムを貼ると、素の紙より明らかに硬く、折りにも耐えます",
+          "라미네이팅은 면당 15~25 µm를 더해 강성을 높입니다. 350 g/m²에 무광 필름을 입히면 민종이보다 확실히 뻣뻣하고 접힘에도 강합니다"),
+        d("紙紋方向決定耐折性：橫紋對折會爆裂，縱紋才經得起反覆彎折；含水率高的紙在潮濕季節更軟",
+          "Grain direction decides foldability: folding across the grain cracks the coating, folding with the grain survives handling. Paper with higher moisture content feels softer in humid months",
+          "Le sens du grain décide de la pliabilité : plier contre le grain fissure le couchage, plier dans le sens du grain résiste à la manipulation. Un papier plus humide paraît plus souple en saison humide",
+          "La dirección de fibra decide el plegado: plegar a contrahílo agrieta el estucado, plegar a favor resiste la manipulación. Un papel con más humedad se siente más blando en meses húmedos",
+          "紙の流れ目が折り耐性を決めます。流れ目に直交して折るとコート層が割れ、流れ目方向なら繰り返しの扱いに耐えます。含水率が高い紙は湿度の高い時期に柔らかく感じます",
+          "결 방향이 접힘성을 결정합니다. 결에 직각으로 접으면 코팅층이 갈라지고, 결 방향으로 접으면 반복 취급을 견딥니다. 함수율이 높은 종이는 습한 계절에 더 물러 보입니다"),
+    ]),
+
+    ("h2", d("四、把規格寫成三行", "4. Write the Spec in Three Lines",
+             "4. Écrire la spécification en trois lignes", "4. Escribe la especificación en tres líneas",
+             "4. 仕様は3行で書く", "4. 사양은 세 줄로 씁니다")),
+
+    ("p", d(
+        "只寫克重，等於讓紙廠在同一克重區間裡自由選紙，而同區間的紙厚度可以差 30%。所以要寫清紙種、克重與厚度範圍三件事，再補一句厚度怎麼量。",
+        "A grammage on its own lets the mill pick any board in that weight class, and boards in one class differ by 30 percent in caliper. Name the grade, the grammage and a caliper window, then say how the caliper will be measured.",
+        "Un grammage seul laisse le papetier choisir n'importe quel carton de cette classe, et l'épaisseur varie de 30 % à l'intérieur d'une classe. Nommez le grade, le grammage et une plage d'épaisseur, puis précisez comment l'épaisseur sera mesurée.",
+        "Un gramaje solo deja que el proveedor elija cualquier cartón de esa clase, y dentro de una clase el espesor varía un 30 %. Indica el grado, el gramaje y un rango de espesor, y añade cómo se medirá.",
+        "坪量だけを書くと、その坪量帯の中で紙を自由に選べてしまい、同じ帯でも厚みは 30% 変わります。品種、坪量、厚みの範囲を書き、最後に測り方を一行添えます。",
+        "평량만 적으면 같은 평량대 안에서 지종을 자유롭게 고를 수 있고, 같은 대역에서도 두께는 30% 차이가 납니다. 지종, 평량, 두께 범위를 쓰고 측정 방법을 한 줄 덧붙입니다.",
+    )),
+
+    ("ul", [
+        d("第一行 紙種與克重：雙面塗佈白卡 350 g/m²，FSC Mix",
+          "Line 1, grade and grammage: coated both sides white card, 350 g/m², FSC Mix",
+          "Ligne 1, grade et grammage : carte blanche couchée deux faces, 350 g/m², FSC Mix",
+          "Línea 1, grado y gramaje: cartulina blanca estucada por las dos caras, 350 g/m², FSC Mix",
+          "1行目 品種と坪量：両面コート白カード 350 g/m²、FSC Mix",
+          "1행 지종과 평량: 양면 코팅 백카드 350 g/m², FSC Mix"),
+        d("第二行 厚度範圍：0.34–0.38 mm，允許 ±0.02 mm",
+          "Line 2, caliper window: 0.34 to 0.38 mm, tolerance ±0.02 mm",
+          "Ligne 2, plage d'épaisseur : 0,34 à 0,38 mm, tolérance ±0,02 mm",
+          "Línea 2, rango de espesor: 0,34 a 0,38 mm, tolerancia ±0,02 mm",
+          "2行目 厚みの範囲：0.34〜0.38 mm、公差 ±0.02 mm",
+          "2행 두께 범위: 0.34~0.38 mm, 공차 ±0.02 mm"),
+        d("第三行 量測與判定：23 °C、50% RH 平衡 24 小時後，千分尺於四角與中心各量一點，取中位數",
+          "Line 3, measurement and ruling: condition 24 hours at 23 °C and 50% RH, then take one micrometer reading at each corner and the centre, and use the median",
+          "Ligne 3, mesure et décision : conditionner 24 h à 23 °C et 50 % HR, puis relever au palmer chaque angle et le centre, et retenir la médiane",
+          "Línea 3, medición y criterio: acondicionar 24 h a 23 °C y 50 % HR, medir con micrómetro cada esquina y el centro, y usar la mediana",
+          "3行目 測定と判定：23 °C・50% RH で 24 時間調湿し、マイクロメータで四隅と中央を測り中央値を採用",
+          "3행 측정과 판정: 23 °C·50% RH에서 24시간 조습 후 마이크로미터로 네 모서리와 중앙을 재고 중앙값을 사용"),
+    ]),
+
+    ("callout", d(
+        "💡 提示：打樣時一次寄「同克重、不同厚度」兩張樣卡，客戶摸一下就能定案，比在郵件裡換算 lb 快得多。",
+        "💡 Tip: send two sample cards at the same grammage but different caliper. A buyer settles the question in one touch, faster than any exchange of pound figures by email.",
+        "💡 Conseil : envoyez deux cartes d'échantillon au même grammage mais d'épaisseur différente. L'acheteur tranche au toucher, plus vite que par un échange de livres par courriel.",
+        "💡 Consejo: envía dos tarjetas de muestra con el mismo gramaje pero distinto espesor. El comprador decide al tacto, más rápido que cambiando libras por correo.",
+        "💡 ヒント：同じ坪量で厚みの違うサンプルカードを2枚送ると、バイヤーは手触りで即決できます。メールで lb を換算し合うより速い方法です。",
+        "💡 팁: 같은 평량에 두께만 다른 샘플 카드 두 장을 보내면 바이어가 만져 보고 바로 결정합니다. 메일로 lb를 환산하는 것보다 훨씬 빠릅니다.",
+    )),
+
+    ("h2", d("五、依「吊牌要撐過什麼」選克重", "5. Pick the Weight by What the Tag Survives",
+             "5. Choisir le grammage selon ce que l'étiquette doit supporter",
+             "5. Elige el gramaje según lo que la etiqueta debe aguantar",
+             "5. タグが耐えるべき条件から坪量を選ぶ", "5. 행택이 견뎌야 할 조건으로 평량 선택")),
+
+    ("p", d(
+        "克重該由孔位、折線、後道工藝與懸掛方式決定，不是由預算那一行決定。以下是出口訂單上最常見的五種情況。",
+        "Weight is set by the hole, the fold, the finishing and the way the tag hangs, not by the budget line. These are the five cases that come up most on export orders.",
+        "Le grammage se décide par le trou, le pli, la finition et la façon dont l'étiquette pend, pas par la ligne de budget. Voici les cinq cas les plus fréquents sur les commandes export.",
+        "El gramaje lo fijan el ojal, el pliegue, el acabado y la forma de colgar, no la línea de presupuesto. Estos son los cinco casos más frecuentes en pedidos de exportación.",
+        "坪量は穴、折り、後加工、吊り方で決まります。予算の行で決まるものではありません。輸出案件で最も多い5つのケースです。",
+        "평량은 구멍, 접힘, 후가공, 거는 방식으로 결정됩니다. 예산 항목이 정하는 것이 아닙니다. 수출 주문에서 가장 흔한 다섯 가지 경우입니다.",
+    )),
+
+    ("ul", [
+        d("35 × 70 mm 以下的小吊牌：250–300 g/m²，過厚會翹起，也會擋住衣架上的領口",
+          "Tags under 35 × 70 mm: 250 to 300 g/m². Heavier stock curls and hides the collar on the hanger",
+          "Étiquettes sous 35 × 70 mm : 250 à 300 g/m². Un grammage plus lourd gondole et masque le col sur le cintre",
+          "Etiquetas de menos de 35 × 70 mm: 250 a 300 g/m². Un gramaje mayor se alabea y tapa el cuello en la percha",
+          "35 × 70 mm 以下の小型タグ：250〜300 g/m²。厚いと反り、ハンガー上の襟を隠します",
+          "35 × 70 mm 이하 소형 행택: 250~300 g/m². 더 두꺼우면 휘고 행거의 깃을 가립니다"),
+        d("常規零售 40 × 90 mm：300–350 g/m²，成本與質感的最佳平衡",
+          "Standard retail 40 × 90 mm: 300 to 350 g/m², the best balance of cost and feel",
+          "Retail standard 40 × 90 mm : 300 à 350 g/m², le meilleur équilibre entre coût et main",
+          "Retail estándar 40 × 90 mm: 300 a 350 g/m², el mejor equilibrio entre coste y tacto",
+          "一般小売 40 × 90 mm：300〜350 g/m²、コストと質感の最適点",
+          "일반 리테일 40 × 90 mm: 300~350 g/m², 비용과 질감의 최적점"),
+        d("燙金、壓凸、局部 UV：350–400 g/m²，薄紙壓凸會透背，覆膜後容易起泡",
+          "Foil, embossing, spot UV: 350 to 400 g/m². Thin stock shows the relief on the reverse and blisters after lamination",
+          "Dorure, gaufrage, vernis sélectif : 350 à 400 g/m². Un papier fin marque le relief au verso et cloque après pelliculage",
+          "Foil, relieve y UV selectivo: 350 a 400 g/m². Un papel fino marca el relieve al dorso y ampolla tras el laminado",
+          "箔押し・エンボス・部分 UV：350〜400 g/m²。薄い紙は裏に凹凸が出て、ラミネート後に浮きが出ます",
+          "박, 엠보싱, 부분 UV: 350~400 g/m². 얇은 종이는 뒷면에 요철이 비치고 라미네이팅 후 들뜹니다"),
+        d("要打雞眼或反覆穿繩：350 g/m² 以上，孔位邊緣留 3 mm 加強圈",
+          "Eyelets or repeated stringing: 350 g/m² and up, with a 3 mm reinforced ring around the hole",
+          "Œillets ou cordon passé plusieurs fois : 350 g/m² et plus, avec un renfort de 3 mm autour du trou",
+          "Ojales o cordón pasado varias veces: 350 g/m² o más, con refuerzo de 3 mm alrededor del ojal",
+          "ハトメや紐の通し直しが多い場合：350 g/m² 以上、穴の周囲に 3 mm の補強を",
+          "아일렛 또는 끈을 여러 번 다시 끼우는 경우: 350 g/m² 이상, 구멍 주위 3 mm 보강"),
+        d("兩折或三折卡：250–300 g/m²，折線要先壓線，否則塗佈紙會爆色",
+          "Two or three panel folded cards: 250 to 300 g/m², and score the fold line first or the coated surface cracks",
+          "Cartes à deux ou trois volets : 250 à 300 g/m², et pré-plier la ligne de pliure, sinon le couchage craque",
+          "Tarjetas de dos o tres cuerpos: 250 a 300 g/m², y marcar la línea de pliegue antes o el estucado se agrieta",
+          "2折・3折カード：250〜300 g/m²。折り線にスコアを入れないとコート面が割れます",
+          "2단·3단 접지 카드: 250~300 g/m². 접힘선에 스코어를 넣지 않으면 코팅면이 갈라집니다"),
+    ]),
+
+    ("h2", d("六、各市場怎麼問，進貨怎麼驗", "6. How Each Market Asks, and How to Check at Goods-In",
+             "6. Comment chaque marché demande, et comment contrôler à réception",
+             "6. Cómo lo pide cada mercado y cómo verificarlo a la recepción",
+             "6. 市場ごとの聞き方と受入検査", "6. 시장별 표기 방식과 입고 검사")),
+
+    ("p", d(
+        "歐美與澳洲買家寫 g/m²，美國買家寫 pt 或 lb。日本印刷廠會同時給坪量（g/m²）與連量，韓國買家說 평량，其實是同一個公制數字。換算一次，把兩種數字都寫進訂單，進貨時用千分尺定案。",
+        "European and Australian buyers specify g/m². American buyers specify points or pounds. Japanese printers quote 坪量 in g/m² alongside 連量, and Korean buyers ask for 평량, which is the same metric figure. Convert once, put both numbers on the purchase order, and let a caliper settle the argument at goods-in.",
+        "Les acheteurs européens et australiens parlent en g/m² ; les acheteurs américains en points ou en livres. Les imprimeurs japonais annoncent la 坪量 en g/m² avec la 連量, et les acheteurs coréens demandent le 평량, soit le même chiffre métrique. Convertissez une fois, inscrivez les deux nombres sur le bon de commande, et tranchez au palmer à la réception.",
+        "Los compradores europeos y australianos hablan en g/m²; los estadounidenses, en puntos o libras. Las imprentas japonesas citan la 坪量 en g/m² junto con la 連量, y los compradores coreanos piden el 평량, que es la misma cifra métrica. Convierte una vez, pon las dos cifras en el pedido y resuelve con micrómetro en la recepción.",
+        "欧州・豪州のバイヤーは g/m² で指定し、米国のバイヤーは pt か lb で指定します。日本の印刷会社は坪量（g/m²）と連量を併記し、韓国のバイヤーは 평량 と言いますが同じメートル法の数値です。一度換算して両方の数字を発注書に載せ、受入時にマイクロメータで確定します。",
+        "유럽·호주 바이어는 g/m²로, 미국 바이어는 pt나 lb로 지정합니다. 일본 인쇄사는 坪量(g/m²)과 連量을 함께 제시하고, 한국 바이어는 평량이라고 부르지만 같은 미터법 수치입니다. 한 번 환산해 두 숫자를 모두 발주서에 적고, 입고 시 마이크로미터로 확정합니다.",
+    )),
+
+    ("ul", [
+        d("每批抽 3 張，四角與中心共 5 點，任一點超出 ±0.02 mm 就整批複檢",
+          "Pull three sheets per lot, five readings per sheet, and re-inspect the lot if any point is outside ±0.02 mm",
+          "Prélevez trois feuilles par lot, cinq relevés par feuille, et récontrôlez le lot si un point sort de ±0,02 mm",
+          "Toma tres hojas por lote, cinco lecturas por hoja, y reinspecciona el lote si algún punto sale de ±0,02 mm",
+          "ロットごとに3枚、1枚あたり5点を測定し、1点でも ±0.02 mm を外れたらロット全数を再検査",
+          "로트당 3장, 장당 5점을 측정하고 한 점이라도 ±0.02 mm를 벗어나면 로트 전체를 재검사"),
+        d("厚度異常通常比印刷問題先出現，把它當早期預警，而不是等客戶投訴手感",
+          "A caliper drift usually shows up before a print problem does. Treat it as an early warning instead of waiting for a complaint about feel",
+          "Une dérive d'épaisseur apparaît en général avant un problème d'impression. Traitez-la comme une alerte précoce plutôt que d'attendre une réclamation sur la main",
+          "Una deriva de espesor suele aparecer antes que un problema de impresión. Trátala como aviso temprano en vez de esperar una queja sobre el tacto",
+          "厚みのずれは印刷トラブルより先に現れます。手触りのクレームを待たず、早期警告として扱いましょう",
+          "두께 편차는 인쇄 문제보다 먼저 나타납니다. 촉감 불만을 기다리지 말고 조기 경보로 다루십시오"),
+        d("「手感不對」的投訴，八成是換了紙廠而不是換了克重，每批留存紙廠與批號",
+          "Most feel complaints trace back to a change of paper mill, not a change of grammage. Keep the mill name and lot number for every batch",
+          "La plupart des réclamations de main viennent d'un changement de papetier, pas de grammage. Conservez le nom du papetier et le numéro de lot de chaque batch",
+          "La mayoría de las quejas de tacto vienen de cambiar de papelería, no de gramaje. Guarda el nombre del fabricante y el número de lote de cada partida",
+          "手触りのクレームの大半は坪量ではなく紙屋の変更が原因です。ロットごとに紙屋名とロット番号を残します",
+          "촉감 불만의 대부분은 평량이 아니라 제지사 변경에서 나옵니다. 로트마다 제지사와 로트 번호를 남기십시오"),
+        d("纖維成分、洗護與產地仍須在縫入式標籤上（歐盟 Regulation (EU) No 1007/2011），吊牌不能代替",
+          "Fibre composition, care and origin still belong on the sewn-in label (EU Regulation (EU) No 1007/2011). A hang tag is not a substitute",
+          "La composition, l'entretien et l'origine restent sur l'étiquette cousue (Règlement (UE) No 1007/2011) : l'étiquetage par carte pendante ne remplace pas cette obligation",
+          "La composición, el cuidado y el origen siguen correspondiendo a la etiqueta cosida (Reglamento (UE) No 1007/2011): el etiquetado en la tarjeta colgante no lo sustituye",
+          "繊維の混用率・取扱表示・原産国は縫い込みラベル側の要件です（日本は家庭用品品質表示法、EU は Regulation (EU) No 1007/2011）。ハングタグで代替はできません",
+          "섬유 혼용률, 취급 표시, 원산지는 봉제 라벨에 표시해야 합니다(국내는 품질경영 및 공산품안전관리법, EU는 Regulation (EU) No 1007/2011). 행택이 이를 대신할 수 없습니다"),
+    ]),
+]
+
+RELATED = [
+    {"slug": "index.html",
+     "zh": "輔料 FAQ 全部文章", "en": "All trims FAQ articles", "fr": "Tous les articles FAQ",
+     "es": "Todos los artículos de la FAQ", "ja": "副資材 FAQ の記事一覧", "ko": "부자재 FAQ 전체 글"},
+    {"slug": "hang-tag-paper-types.html",
+     "zh": "吊牌紙張種類怎麼選", "en": "Hang tag paper types compared",
+     "fr": "Comparatif des papiers d'étiquette", "es": "Comparativa de papeles de etiqueta",
+     "ja": "ハングタグ用紙の種類比較", "ko": "행택 용지 종류 비교"},
+    {"slug": "hang-tag-paper-thickness.html",
+     "zh": "克重與厚度的關係", "en": "Grammage versus thickness",
+     "fr": "Grammage et épaisseur", "es": "Gramaje y espesor",
+     "ja": "坪量と厚みの関係", "ko": "평량과 두께의 관계"},
+    {"slug": "vellum-translucent-hang-tags.html",
+     "zh": "透光凡蘭紙吊牌", "en": "Vellum and translucent hang tags",
+     "fr": "Étiquettes en papier translucide", "es": "Etiquetas de papel translúcido",
+     "ja": "透ける紙のハングタグ", "ko": "반투명 행택"},
+]
+
+CTA_P = d("需要先把紙張規格定下來再詢價？", "Need the paper spec pinned down before you request a quote?",
+          "Besoin de fixer le papier avant de demander un devis ?",
+          "¿Necesitas fijar el papel antes de pedir presupuesto?",
+          "用紙仕様を固めてから見積もりを依頼したいですか。",
+          "견적 전에 용지 사양을 먼저 확정하고 싶으신가요?")
+CTA_BTN = d("索取吊牌用紙樣卡 →", "Request hang tag paper samples →",
+            "Demander des échantillons de papier →", "Solicitar muestras de papel →",
+            "ハングタグ用紙のサンプルを依頼 →", "행택 용지 샘플 요청 →")
