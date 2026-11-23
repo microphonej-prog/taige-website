@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mantenimiento de impresora de etiquetas: cabezal, cinta y calibración | TAGE</title>
+<meta name="description" content="Por qué la impresión térmica se degrada: limpieza del cabezal, cuatro causas de arrugas de cinta, calibración del sensor de hueco y un plan de mantenimiento.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/es/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/label-printer-printhead-maintenance-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/label-printer-printhead-maintenance-guide.html">
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "標籤打印機保養：印頭、碳帶與校準",
+     "item": "https://taigetag.com/blog/label-printer-printhead-maintenance-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "標籤打印機保養：印頭、碳帶與校準",
+   "url": "https://taigetag.com/blog/label-printer-printhead-maintenance-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/label-printer-printhead-maintenance-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE Embalajes</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Inicio</a>
+      <a href="../products.html">Productos</a>
+      <a href="../about.html">Nosotros</a>
+      <a href="index.html">FAQ Accesorios</a>
+      <a href="../contact.html">Contacto</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag active" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">Inicio</a> / <a href="index.html">FAQ Accesorios</a> / <span>Guía técnica</span></div>
+      <h1>Mantenimiento de la impresora de etiquetas: cabezal, cinta y calibración</h1>
+      <p>Por TAGE Packaging &amp;nbsp;·&amp;nbsp; Actualizado el 23 de noviembre de 2026</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>Un cabezal térmico no falla de golpe, se desvanece. Primero se estrecha una barra fina del código de barras, después los caracteres de una etiqueta de cuidado pierden trazos tras el tercer lavado y al final el minorista no puede escanear y la caja vuelve al almacén. La deriva dura meses y cada escaneo intermedio todavía pasa, así que nadie lo nota. Esta guía convierte la limpieza del cabezal, las arrugas de cinta, la detección de hueco y la calibración en una rutina que se puede colgar junto a la máquina, y fija cuándo cambiar el cabezal en lugar de limpiarlo otra vez.</p>
+
+      <h2>1. Cómo se degrada la calidad de impresión</h2>
+
+      <p>La transferencia térmica usa una fila de elementos calefactores: unos 8 dots/mm en una máquina de 203 dpi y 12 dots/mm a 300 dpi, cada punto es una resistencia. La cinta recibe el calor y transfiere resina o cera a la etiqueta, así que los elementos nunca tocan el soporte. El daño llega por tres vías: un elemento fundido, que imprime una línea blanca permanente; la abrasión del estucado y el polvo de papel, que apaga todo; y un cuerpo extraño atrapado entre cinta y cabezal, que elimina caracteres en un punto. Los dos primeros son crónicos y el tercero súbito, pero los tres se anuncian igual: el mismo archivo en la misma máquina exige una densidad cada vez mayor para seguir legible.</p>
+
+      <h2>2. Limpieza del cabezal: la frecuencia importa más que la técnica</h2>
+
+      <p>La técnica apenas se discute: apagar, dejar enfriar el cabezal, usar alcohol isopropílico al 99 % y un hisopo sin pelusa, pasar una sola vez en una dirección, esperar dos minutos a que evapore y cerrar. Lo que se salta es la frecuencia. A ocho horas diarias y 40 etiquetas por minuto, unas 20.000 etiquetas con polvo de papel pasan por el cabezal en una jornada; esperar a ver un punto blanco significa que el estucado ya está abrasado. Atar la limpieza a cada cambio de rollo es la regla más fiable, porque la máquina ya está parada.</p>
+
+      <ul>
+
+        <li>Solo alcohol isopropílico: acetona, diluyente y limpiadores grasos atacan la capa protectora</li>
+
+        <li>Apaga antes de limpiar: un cabezal recién usado supera los 60 °C y el alcohol puede agrietar la cerámica</li>
+
+        <li>Limpia también el rodillo presor y la guía de cinta: el adhesivo desvía la etiqueta y el polvo de la guía imprime una línea blanca vertical</li>
+
+        <li>Tras limpiar, imprime 20 etiquetas de desecho, confirma que la línea blanca desapareció y que la densidad volvió a su valor antes de reanudar</li>
+
+      </ul>
+
+      <h2>3. Cuatro causas de arrugas en la cinta</h2>
+
+      <ul>
+
+        <li>Tensión desequilibrada: demasiada tensión de suministro crea pliegues finos longitudinales, muy poca deja pliegues anchos. Ponla a cero y sube por pasos</li>
+
+        <li>Ejes no paralelos: 1 mm de desviación en cada uno produce pliegues diagonales tras 500 etiquetas; revisa los portarrollos</li>
+
+        <li>Presión de cabezal desigual: el exceso en un lado es la causa más común de pliegues verticales; prueba con dos etiquetas apiladas a cada lado</li>
+
+        <li>Velocidad y calor desajustados: a alta velocidad y baja energía la cinta no transfiere a tiempo, y el operador suele subir densidad y velocidad a la vez, empeorando el pliegue</li>
+
+      </ul>
+
+      <h2>4. Detección de hueco y calibración: el origen de los desfases</h2>
+
+      <p>Un desfase parece mecánico y casi siempre es detección. El sensor de hueco distingue etiqueta y liner por diferencia de transmisión: las etiquetas transparentes, el liner negro y la impresión hasta el borde del troquel lo confunden, y la máquina alterna entre saltar y avanzar doble. Recalibra tras cada cambio de material y mide el paso de tres etiquetas consecutivas: con un hueco de 3 mm, una deriva de 0,2 mm es aceptable; más allá, busca el sensor y no la compensación.</p>
+
+      <ul>
+
+        <li>Calibra en cada cambio de material, rollo y lote. Si el desfase aparece a mitad de lote, limpia la ventana del sensor antes de calibrar</li>
+
+        <li>Con etiquetas transparentes o metalizadas, pasa a modo hueco manual o marca negra en vez de forzar transmisión</li>
+
+        <li>Tras calibrar, imprime 10 etiquetas y mide el paso antes de producir. No tapes un sensor inestable con una compensación</li>
+
+      </ul>
+
+      <h2>5. Plan de mantenimiento</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Punto</th>
+
+            <th>Frecuencia</th>
+
+            <th>Criterio</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>Limpieza del cabezal</td>
+
+            <td>Cada cambio de rollo</td>
+
+            <td>Sin línea blanca, densidad original</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Rodillo y guías</td>
+
+            <td>Semanal</td>
+
+            <td>Sin acumulación de cola, etiqueta recta</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Calibración de hueco</td>
+
+            <td>Cambio de material o lote</td>
+
+            <td>Deriva en tres etiquetas por debajo de 0,2 mm</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Revisión de tensión de cinta</td>
+
+            <td>Mensual</td>
+
+            <td>Sin pliegue longitudinal ni diagonal</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Control de resistencia y desgaste</td>
+
+            <td>Cada 6 meses o 100 km de etiqueta</td>
+
+            <td>Resistencia dentro del 10 % del valor nominal</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <h2>6. Cuándo cambiar el cabezal en lugar de limpiarlo</h2>
+
+      <p>Una línea blanca fina en el mismo sitio tras dos limpiezas indica un elemento fundido y el cabezal debe cambiarse. La prueba es más fiable que el ojo: imprime una barra negra maciza de 300 mm; si la línea blanca supera 0,2 mm de ancho o permanece al cambiar la cinta, el elemento está perdido. El cabezal es consumible y se mide en metros de papel, normalmente 50 a 100 km en una máquina de 203 dpi y menos a 300 dpi por la mayor densidad de puntos. Tras el cambio, recalibra presión y densidad y anota el número de serie del cabezal en la ficha de la máquina: es la única forma de explicar después por qué un lote salió más claro.</p>
+
+      <ul>
+
+        <li>La durabilidad de la impresión forma parte del cumplimiento: el texto de una etiqueta de cuidado debe seguir legible tras varios lavados, o el marcado no existe (Reglamento (UE) No 1007/2011)</li>
+
+        <li>Talla, composición y origen los aporta el cliente y el operador solo imprime: fija esos tres campos en una plantilla</li>
+
+        <li>Los símbolos de cuidado siguen ISO 3758 o JIS L 0001, y los trazos por debajo de 0,3 mm desaparecen primero con poca densidad: no ahorres cinta imprimiendo más claro</li>
+
+      </ul>
+
+      <div class="callout"><strong>Una regla evita la mayor parte:</strong> limpiar en cada cambio de rollo, calibrar en cada cambio de material e imprimir una barra negra cada trimestre. Menos de cinco minutos cada vez, mucho más barato que reetiquetar una caja.</div>
+
+      <h2>Artículos relacionados</h2>
+      <ul>
+        <li><a href="index.html">Todos los artículos de la FAQ</a></li>
+        <li><a href="garment-label-inhouse-printing-vs-outsourcing.html">Imprimir en casa o externalizar</a></li>
+        <li><a href="care-label-thermal-transfer-ribbon-guide.html">Cintas de transferencia térmica para etiquetas de cuidado</a></li>
+        <li><a href="care-label-printing-requirements.html">Requisitos de impresión de etiquetas de cuidado</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>¿Quieres que revisemos el contenido de tus etiquetas según el mercado destino?</p>
+        <a class="cta-btn" href="../contact.html">Recibir asesoría de impresión y etiqueta →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE Embalajes</h4>
+        <p>Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">Etiquetas colgantes</a></li>
+          <li><a href="../products.html#wovenlabels">Etiquetas tejidas / Principales</a></li>
+          <li><a href="../products.html#carelabels">Etiquetas de cuidado</a></li>
+          <li><a href="../products.html#bags">Bolsas de embalaje</a></li>
+          <li><a href="../products.html#paperbags">Bolsas de papel ecológicas</a></li>
+          <li><a href="../products.html#brochures">Folletos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="../about.html">Nosotros</a></li>
+          <li><a href="../contact.html">Contacto</a></li>
+          <li><a href="../contact.html">Solicitar presupuesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>Humen, Dongguan, Guangdong, China</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dongguan Tage Packaging Products Co., Ltd.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

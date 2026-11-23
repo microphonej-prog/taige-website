@@ -1,0 +1,247 @@
+# -*- coding: utf-8 -*-
+"""2026-11-23 08:00 第一篇：服装标签胶水选型（英文主稿，zh/fr/es/ja/ko 从英文翻译）"""
+
+SLUG = "garment-label-adhesive-types-guide.html"
+CAT = {"zh": "輔料選型", "en": "Trims Selection", "fr": "Choix d'accessoires",
+       "es": "Selección de accesorios", "ja": "副資材選定", "ko": "부자재 선택"}
+TITLE = {
+    "zh": "服裝標籤膠水選型：熱熔、亞克力與可移除 | TAGE",
+    "en": "Garment Label Adhesives: Hot Melt, Acrylic and Removable | TAGE",
+    "fr": "Adhésifs d'étiquettes : hot melt, acrylique et détachable | TAGE",
+    "es": "Adhesivos para etiquetas: hot melt, acrílico y removible | TAGE",
+    "ja": "衣料ラベルの粘着剤：ホットメルト・アクリル・再剥離 | TAGE",
+    "ko": "의류 라벨 접착제: 핫멜트·아크릴·재박리 | TAGE",
+}
+DESC = {
+    "zh": "熱熔、亞克力與可移除膠怎麼選：初黏與耐溫差異、五種服裝基材的實際貼附結果、低溫貼標與耐洗條件，以及該寫進採購單的三個測試數字，附打樣一小時內可完成的驗證法與換膠批、儲存溫度的注意事項。",
+    "en": "Compare hot melt, acrylic and removable label adhesives: first grip, temperature limits, substrate match and the three peel numbers to write on the order.",
+    "fr": "Comparer hot melt, acrylique et détachable : accroche initiale, plage de température, support adapté et les valeurs de pelage à inscrire au bon de commande.",
+    "es": "Comparar hot melt, acrílico y removible: agarre inicial, límites de temperatura, soporte adecuado y las cifras de pelado que conviene exigir en el pedido.",
+    "ja": "ホットメルト・アクリル・再剥離の違いを初粘、温度域、対応基材で比較。低温貼付と洗濯条件、発注書に書くべき3つの試験値まで整理します。",
+    "ko": "핫멜트·아크릴·재박리 접착제를 초기 점착, 온도 범위, 기재 적합성으로 비교하고 저온 부착과 세탁 조건, 발주서에 적어야 할 세 가지 시험값을 정리합니다.",
+}
+H1 = {
+    "zh": "服裝標籤膠水怎麼選：熱熔、亞克力與可移除",
+    "en": "Garment Label Adhesives: Hot Melt, Acrylic and Removable",
+    "fr": "Adhésifs d'étiquettes : hot melt, acrylique et détachable",
+    "es": "Adhesivos para etiquetas: hot melt, acrílico y removible",
+    "ja": "衣料ラベルの粘着剤：ホットメルト・アクリル・再剥離の選び方",
+    "ko": "의류 라벨 접착제: 핫멜트·아크릴·재박리 선택",
+}
+DATE = {"zh": "泰閣包裝 · 更新於 2026年11月23日",
+        "en": "By TAGE Packaging &nbsp;·&nbsp; Updated November 23, 2026",
+        "fr": "Par TAGE Packaging &nbsp;·&nbsp; Mis à jour le 23 novembre 2026",
+        "es": "Por TAGE Packaging &nbsp;·&nbsp; Actualizado el 23 de noviembre de 2026",
+        "ja": "泰閣包装 · 2026年11月23日更新",
+        "ko": "TAGE 패키징 · 2026년 11월 23일 업데이트"}
+
+L = ["zh", "en", "fr", "es", "ja", "ko"]
+
+
+def d(zh, en, fr, es, ja, ko):
+    return {"zh": zh, "en": en, "fr": fr, "es": es, "ja": ja, "ko": ko}
+
+
+BLOCKS = [
+    ("p", d(
+        "沒有人會在第一批貨到港前問過標籤背面的膠是什麼。但它決定了投訴的形狀：洗水標在洗滌後掀邊、尺碼貼紙在冷庫裡從膠袋上脫落、改價貼紙把吊牌撕破，或者退貨回來時撕不乾淨、留下一圈灰影。這篇比較服裝標籤最常用的三種膠系，說明它們各自真正抓得住哪種基材，並列出值得寫進採購單的三個測試數字。",
+        "Nobody asks which adhesive sits on the back of a garment label until the first container arrives. It decides the shape of the complaint: a care label that lifts in the wash, a size sticker that lets go of a poly bag in a cold warehouse, a re-pricing sticker that tears the hang tag, or a label that will not peel off a returned garment without leaving a grey ring. This guide compares the three adhesive families used on garment labels, shows which substrate each one actually grips, and lists the three numbers worth writing into a purchase order.",
+        "Personne ne demande quel adhésif se trouve au dos d'une étiquette avant l'arrivée du premier conteneur. C'est pourtant lui qui décide la forme de la réclamation : une étiquette d'entretien qui se décolle au lavage, un sticker de taille qui lâche un sachet polyéthylène dans un entrepôt froid, un sticker de réétiquetage qui déchire l'étiquette suspendue, ou une étiquette impossible à retirer d'un retour sans laisser un halo gris. Ce guide compare les trois familles d'adhésifs utilisées sur les étiquettes de vêtement, indique le support que chacune tient réellement et donne les trois valeurs à inscrire sur un bon de commande.",
+        "Nadie pregunta qué adhesivo lleva el reverso de una etiqueta hasta que llega el primer contenedor. Ese adhesivo decide la forma de la queja: una etiqueta de cuidado que se levanta en el lavado, un sticker de talla que se suelta de la bolsa de polietileno en un almacén frío, un sticker de recambio de precio que rompe la etiqueta colgante, o una etiqueta imposible de quitar de una devolución sin dejar un cerco gris. Esta guía compara las tres familias de adhesivos usadas en etiquetas de prendas, indica qué soporte agarra realmente cada una y reúne las tres cifras que conviene exigir en el pedido.",
+        "最初のコンテナが届くまで、ラベルの裏にどの粘着剤が付いているかを確認する人はいません。しかしクレームの形を決めるのは粘着剤です。洗濯で洗濯表示ラベルが浮く、低温倉庫でポリ袋からサイズシールが外れる、値札の貼り替えでハングタグが破れる、返品品から剥がすと灰色の輪が残る。本稿では衣料ラベルで使われる3系統の粘着剤を比較し、それぞれが実際に保持できる基材と、発注書に書くべき3つの試験値を整理します。",
+        "첫 컨테이너가 도착하기 전까지 라벨 뒷면에 어떤 접착제가 있는지 묻는 사람은 없습니다. 그러나 불만의 형태를 결정하는 것은 접착제입니다. 세탁 후 취급 표시 라벨이 들뜨고, 저온 창고에서 비닐봉투에서 사이즈 스티커가 떨어지며, 가격 재부착 스티커가 행택을 찢고, 반품 의류에서 떼면 회색 자국이 남습니다. 이 글은 의류 라벨에 쓰이는 세 가지 접착제 계열을 비교하고, 각각이 실제로 붙는 기재와 발주서에 적어야 할 세 가지 시험값을 정리합니다.",
+    )),
+
+    ("h2", d("一、膠水決定的是哪一種失敗", "1. What the Adhesive Actually Decides",
+             "1. Ce que l'adhésif décide réellement", "1. Qué decide realmente el adhesivo",
+             "1. 粘着剤が決めているのは「どの失敗か」", "1. 접착제가 결정하는 것은 실패의 형태")),
+
+    ("p", d(
+        "一張標籤有三層，只有一層看得見。面材承載印刷，離型紙在貼附前保護膠層，膠層——乾燥塗布量通常 18 至 25 g/m²——決定標籤會不會留在原位。因為看不見，它是唯一會安靜失敗的那一層：印刷很清楚、模切很乾淨，三週後邊緣還是翹起來。服裝標籤的膠還要同時活過三種環境：5 °C 的倉庫、40 °C 加洗劑的洗滌、以及退貨櫃檯上客人的指甲。",
+        "A label has three layers and only one is visible. The face stock carries the print, the liner protects the adhesive until application, and the adhesive, usually a dry coat of 18 to 25 g/m², decides whether the label stays where it was put. Because it is invisible it is also the only layer that fails quietly: the print is crisp, the die cut is clean, and the edge still lifts three weeks later. On garment work the adhesive has to survive three different lives: a warehouse at 5 °C, a 40 °C wash with detergent, and a customer's fingernail at the returns desk.",
+        "Une étiquette compte trois couches et une seule est visible. Le support porte l'impression, le silicone protège l'adhésif avant la pose, et l'adhésif — une couche sèche de 18 à 25 g/m² en général — décide si l'étiquette reste en place. Comme il est invisible, c'est la seule couche qui échoue en silence : l'impression est nette, la découpe est propre, et le bord se décolle quand même trois semaines plus tard. Sur un vêtement, l'adhésif doit survivre à trois vies : un entrepôt à 5 °C, un lavage à 40 °C avec détergent, et l'ongle du client au comptoir des retours.",
+        "Una etiqueta tiene tres capas y solo una se ve. El soporte lleva la impresión, el liner protege el adhesivo hasta la aplicación y el adhesivo —una capa seca de 18 a 25 g/m² normalmente— decide si la etiqueta se queda donde se puso. Como es invisible, es la única capa que falla en silencio: la impresión es nítida, el troquelado es limpio y aun así el borde se levanta tres semanas después. En una prenda el adhesivo debe sobrevivir a tres vidas: un almacén a 5 °C, un lavado a 40 °C con detergente y la uña del cliente en el mostrador de devoluciones.",
+        "ラベルは3層構造で、見えるのは1層だけです。表材が印刷を担い、剥離紙が貼る直前まで粘着剤を守り、粘着剤（乾燥塗布量は通常 18〜25 g/m²）が貼った先に留まるかどうかを決めます。見えない層だからこそ、静かに失敗します。印刷は鮮明で型抜きもきれいなのに、3週間後に端が浮いてくる。衣料ラベルは3つの環境を同時に生き延びる必要があります。5 °C の倉庫、洗剤を使う 40 °C の洗濯、そして返品カウンターでの客の爪です。",
+        "라벨은 세 층이고 눈에 보이는 층은 하나뿐입니다. 표면재가 인쇄를 담고, 이형지는 부착 전까지 접착제를 보호하며, 접착제(건조 도포량 보통 18~25 g/m²)가 라벨이 제자리에 남을지를 결정합니다. 보이지 않는 층이라 실패도 조용합니다. 인쇄는 선명하고 다이커팅도 깔끔한데 3주 뒤 모서리가 들뜹니다. 의류 라벨의 접착제는 세 가지 환경을 동시에 견뎌야 합니다. 5 °C 창고, 세제를 넣은 40 °C 세탁, 그리고 반품 카운터에서 고객의 손톱입니다.",
+    )),
+
+    ("h2", d("二、三種膠系，三種失效場景", "2. Three Families, Three Failure Modes",
+             "2. Trois familles, trois modes de défaillance", "2. Tres familias, tres modos de fallo",
+             "2. 3系統の粘着剤、3つの失敗パターン", "2. 세 계열, 세 가지 실패 양상")),
+
+    ("table", {
+        "head": [
+            d("膠系", "Family", "Famille", "Familia", "系統", "계열"),
+            d("初黏", "First grip", "Accroche initiale", "Agarre inicial", "初粘", "초기 점착"),
+            d("溫度窗口", "Service window", "Plage de service", "Rango de servicio", "使用温度域", "사용 온도 범위"),
+            d("適合的基材", "Where it belongs", "Supports adaptés", "Dónde encaja", "向く基材", "적합한 기재"),
+            d("失效場景", "Where it fails", "Où il échoue", "Dónde falla", "失敗する場面", "실패하는 경우"),
+        ],
+        "rows": [
+            [d("熱熔膠（橡膠系）", "Hot melt (rubber)", "Hot melt (caoutchouc)", "Hot melt (caucho)", "ホットメルト（ゴム系）", "핫멜트(고무계)"),
+             d("極高，1 秒內建立", "Very high, builds in about one second", "Très élevée, en une seconde", "Muy alta, en un segundo", "非常に高く1秒で発現", "매우 높음, 1초 내 형성"),
+             d("-20 至 +70 °C，耐高溫剪切差", "Minus 20 to plus 70 °C, weak high-temperature shear", "De moins 20 à plus 70 °C, faible en fluage à chaud", "De menos 20 a más 70 °C, poco fluencia en caliente", "マイナス20〜プラス70 °C、高温せん断に弱い", "영하 20~영상 70 °C, 고온 전단에 약함"),
+             d("未處理 PE／PP 袋、牛皮紙袋、郵寄袋", "Untreated PE and PP bags, kraft mailers", "Sachets PE et PP non traités, pochettes kraft", "Bolsas de PE y PP sin tratar, sobres kraft", "未処理の PE・PP 袋、クラフト袋", "미처리 PE·PP 봉투, 크라프트 우편봉투"),
+             d("5 °C 以下貼標、長期日照高溫、塑化劑遷移", "Below 5 °C application, long sun exposure, plasticiser migration", "Pose sous 5 °C, exposition solaire prolongée, migration de plastifiant", "Aplicación bajo 5 °C, sol prolongado, migración de plastificante", "5 °C 以下での貼付、長時間の日光、可塑剤移行", "5 °C 이하 부착, 장시간 햇빛, 가소제 이행")],
+            [d("亞克力膠（乳液或溶劑型）", "Acrylic (emulsion or solvent)", "Acrylique (émulsion ou solvant)", "Acrílico (emulsión o disolvente)", "アクリル（エマルション・溶剤型）", "아크릴(에멀전·용제형)"),
+             d("中等，24 小時達最終接著力", "Moderate, reaches full bond over 24 hours", "Moyenne, force finale après 24 heures", "Media, alcanza la fuerza final en 24 horas", "中程度、24時間で最終接着力", "중간, 24시간 후 최종 접착력"),
+             d("-30 至 +90 °C，耐老化與紫外線", "Minus 30 to plus 90 °C, good ageing and UV", "De moins 30 à plus 90 °C, bon vieillissement", "De menos 30 a más 90 °C, buen envejecimiento", "マイナス30〜プラス90 °C、耐候・耐UV", "영하 30~영상 90 °C, 내후·내UV"),
+             d("洗水標、塗佈紙吊牌、已電暈處理的膜", "Care labels, coated tag board, corona-treated film", "Étiquettes d'entretien, carton couché, film corona", "Etiquetas de cuidado, cartón estucado, film corona", "洗濯表示ラベル、コート紙、コロナ処理フィルム", "취급 표시 라벨, 코팅 판지, 코로나 처리 필름"),
+             d("未處理 PE／PP、貼後立即搬動、低溫貼標", "Untreated PE and PP, immediate handling, cold application", "PE et PP non traités, manutention immédiate, pose à froid", "PE y PP sin tratar, manipulación inmediata, aplicación en frío", "未処理 PE・PP、貼付直後の移動、低温貼付", "미처리 PE·PP, 부착 직후 취급, 저온 부착")],
+            [d("可移除膠（低黏或微球型）", "Removable (low tack or microsphere)", "Détachable (faible adhérence ou microsphères)", "Removible (baja pegajosidad o microesferas)", "再剥離（低粘着・マイクロスフィア）", "재박리(저점착·마이크로스피어)"),
+             d("低，可反覆撕貼", "Low, repositions more than once", "Faible, repositionnable plusieurs fois", "Baja, reposicionable varias veces", "低く、数回貼り直せる", "낮음, 여러 번 재부착 가능"),
+             d("-20 至 +60 °C，長時間受壓會變永久", "Minus 20 to plus 60 °C, turns permanent under long pressure", "De moins 20 à plus 60 °C, devient permanent sous pression prolongée", "De menos 20 a más 60 °C, se vuelve permanente con presión larga", "マイナス20〜プラス60 °C、長時間の荷重で永久化", "영하 20~영상 60 °C, 장시간 압력에서 영구화"),
+             d("改價標、門店臨時尺碼貼、樣衣標示", "Re-pricing, temporary size stickers, sample room marking", "Réétiquetage, stickers de taille temporaires, repérage en atelier", "Recambio de precio, stickers temporales de talla, marcado de muestras", "値札の貼り替え、店頭の一時的なサイズ表示、サンプル管理", "가격 재부착, 매장 임시 사이즈 표시, 샘플 식별"),
+             d("貼超過三個月、粗糙纖維紙、重壓後回不去", "Left on beyond three months, fibrous paper, pressure makes it permanent", "Posé plus de trois mois, papier fibreux, la pression le rend permanent", "Más de tres meses puesto, papel fibroso, la presión lo vuelve permanente", "3か月以上の貼り置き、繊維の粗い紙、荷重で戻らない", "3개월 이상 부착, 섬유 거친 종이, 압력 후 복원 불가")],
+        ],
+    }),
+
+    ("h2", d("三、基材佔了一半的決定權", "3. The Substrate Is Half the Decision",
+             "3. Le support pèse la moitié de la décision", "3. El soporte es la mitad de la decisión",
+             "3. 決め手の半分は基材", "3. 결정의 절반은 기재")),
+
+    ("p", d(
+        "表面能決定膠能不能「潤濕」基材。未處理聚乙烯約 31 dyn/cm，塗佈紙 38 至 42，聚酯 41，而亞克力膠大約需要 38 dyn/cm 以上才抓得住。這一個數字解釋了大部分被歸咎於「膠不好」的失敗：同一支亞克力膠在樣品間抓住膠袋，到了矽油整理的衝鋒衣上就脫落。",
+        "Surface energy decides whether the adhesive can wet out the substrate at all. Untreated polyethylene sits near 31 dyn/cm, coated paper at 38 to 42, polyester at 41, and an acrylic adhesive needs roughly 38 dyn/cm before it grips. That one number explains most failures blamed on bad glue: the same acrylic that holds a poly bag in the sample room lets go on a silicone-finished shell jacket.",
+        "L'énergie de surface décide si l'adhésif peut mouiller le support. Le polyéthylène non traité est à environ 31 dyn/cm, le papier couché entre 38 et 42, le polyester à 41, et un acrylique a besoin d'environ 38 dyn/cm pour accrocher. Ce seul chiffre explique la plupart des échecs imputés à une mauvaise colle : le même acrylique qui tient un sachet en salle d'échantillons lâche sur une veste traitée au silicone.",
+        "La energía superficial decide si el adhesivo puede mojar el soporte. El polietileno sin tratar ronda 31 dyn/cm, el papel estucado 38 a 42, el poliéster 41, y un acrílico necesita unos 38 dyn/cm para agarrar. Esa sola cifra explica la mayoría de los fallos achacados a la cola: el mismo acrílico que sujeta una bolsa en la sala de muestras se suelta en una chaqueta con acabado de silicona.",
+        "接着できるかどうかは表面エネルギーで決まります。未処理ポリエチレンは約 31 dyn/cm、コート紙は 38〜42、ポリエステルは 41、アクリル系はおよそ 38 dyn/cm 以上でないと噛みません。この一つの数字で、「接着剤が悪い」とされる失敗の大半が説明できます。サンプル室でポリ袋を保持した同じアクリルが、シリコン加工のシェルジャケットでは外れてしまうのです。",
+        "표면 에너지가 접착제의 젖음 여부를 결정합니다. 미처리 폴리에틸렌은 약 31 dyn/cm, 코팅지는 38~42, 폴리에스터는 41이며 아크릴 접착제는 대략 38 dyn/cm 이상에서 붙습니다. 이 숫자 하나가 '접착제 불량'으로 불리는 실패의 대부분을 설명합니다. 샘플룸에서 비닐봉투를 잡아 주던 같은 아크릴이 실리콘 가공 셸 재킷에서는 떨어집니다.",
+    )),
+
+    ("ul", [
+        d("未處理 PE／PP 袋：熱熔膠的初黏在 1 秒內建立，亞克力要 24 小時才到最終接著力，中間任何搬動都會掀邊",
+          "Untreated PE and PP bags: hot melt builds tack in a second, acrylic needs 24 hours to reach final bond, and any handling in between lifts the edge",
+          "Sachets PE et PP non traités : le hot melt accroche en une seconde, l'acrylique met 24 heures à atteindre sa force finale, et toute manutention entre-temps décolle le bord",
+          "Bolsas de PE y PP sin tratar: el hot melt agarra en un segundo, el acrílico tarda 24 horas en alcanzar su fuerza final y cualquier manipulación intermedia levanta el borde",
+          "未処理の PE・PP 袋：ホットメルトは1秒で初粘が出ますが、アクリルは最終接着力まで24時間かかり、その間の移動で端が浮きます",
+          "미처리 PE·PP 봉투: 핫멜트는 1초에 초기 점착이 생기지만 아크릴은 최종 접착력까지 24시간 걸리고, 그 사이 취급하면 모서리가 들뜹니다"),
+        d("防潑水尼龍、矽油整理布料：表面能低於 34 dyn/cm，先做 25 mm 寬的試貼，兩次失敗就改用縫入式標籤",
+          "Water-repellent nylon and silicone-finished fabric: surface energy below 34 dyn/cm, so run a 25 mm wide trial first and switch to a sewn-in label after two failures",
+          "Nylon déperlant et tissu siliconé : énergie de surface inférieure à 34 dyn/cm, faites un essai de 25 mm de large et passez à l'étiquette cousue après deux échecs",
+          "Nailon repelente y tejido con acabado de silicona: energía superficial por debajo de 34 dyn/cm, haz una prueba de 25 mm de ancho y pasa a etiqueta cosida tras dos fallos",
+          "撥水ナイロンやシリコン加工生地：表面エネルギーが 34 dyn/cm 未満なので、まず幅 25 mm で試し、2回失敗したら縫い込みラベルに切り替えます",
+          "발수 나일론과 실리콘 가공 원단: 표면 에너지가 34 dyn/cm 미만이므로 폭 25 mm로 먼저 시험하고 두 번 실패하면 봉제 라벨로 전환하십시오"),
+        d("再生牛皮紙與非塗佈紙：纖維鬆，可移除膠會把紙面纖維一起撕起，改用永久膠或改貼在袋口折邊",
+          "Recycled kraft and uncoated paper: loose fibre, so removable adhesive pulls the surface away. Use permanent adhesive or move the label to a folded edge",
+          "Kraft recyclé et papier non couché : fibres libres, l'adhésif détachable arrache la surface. Préférez un permanent ou déplacez l'étiquette sur un bord plié",
+          "Kraft reciclado y papel sin estucar: fibra suelta, el removible arranca la superficie. Usa permanente o mueve la etiqueta al borde plegado",
+          "再生クラフト紙や非コート紙：繊維が緩く、再剥離は紙面ごと剥がします。永久粘着に変えるか、袋の折り返し部分に貼ります",
+          "재생 크라프트지와 비코팅지: 섬유가 느슨해 재박리 접착제가 표면을 함께 뜯습니다. 영구 접착제로 바꾸거나 봉투 접힘 부분으로 옮기십시오"),
+        d("皮革與 PU：塑化劑會遷移到膠層，讓膠變軟、留下油影，選低遷移亞克力並避免長時間重壓",
+          "Leather and PU: plasticiser migrates into the adhesive, softening it and leaving a stain. Choose a low-migration acrylic and avoid long term stacking",
+          "Cuir et PU : le plastifiant migre dans l'adhésif, le ramollit et laisse une tache. Choisissez un acrylique à faible migration et évitez le gerbage prolongé",
+          "Cuero y PU: el plastificante migra al adhesivo, lo ablanda y deja mancha. Elige un acrílico de baja migración y evita el apilado prolongado",
+          "皮革と PU：可塑剤が粘着層へ移行して柔らかくなり、油じみが出ます。移行の少ないアクリルを選び、長時間の積み重ねを避けます",
+          "가죽과 PU: 가소제가 접착층으로 이행해 접착제가 물러지고 얼룩이 남습니다. 이행이 적은 아크릴을 선택하고 장시간 적재를 피하십시오"),
+    ]),
+
+    ("h2", d("四、低溫貼標、洗滌與法規指向的耐久", "4. Cold Application, Washing and Durability That Regulations Assume",
+             "4. Pose à froid, lavage et durabilité attendue par les textes", "4. Aplicación en frío, lavado y durabilidad que exige la norma",
+             "4. 低温貼付、洗濯、そして法令が前提にしている耐久性", "4. 저온 부착, 세탁, 그리고 규정이 전제하는 내구성")),
+
+    ("p", d(
+        "貼標溫度與使用溫度是兩個數字，而規格書通常只寫一個。標示 70 °C 使用的熱熔膠，仍需要 5 °C 以上才能貼牢；低溫級亞克力可以在 -20 °C 貼附，卻要一週才到最終強度。洗水標真正的使用條件是 40 °C 加洗劑的洗滌與烘乾，所以有效試驗是「洗三次後再測剝離」，而不是在樣品間用拇指壓一下。可追溯資訊屬於成衣而非貼紙：歐盟 GPSR (EU) 2023/988 把經濟營運者與批次放在產品上，纖維成分則依 Regulation (EU) No 1007/2011 留在縫入式標籤上。膠在洗滌中失效能讓義務消失嗎？不會，只是把它藏起來。",
+        "Application temperature and service temperature are two different figures, and spec sheets usually print only one. A hot melt rated to 70 °C in service still needs 5 °C or more to bond, while a low-temperature acrylic bonds at minus 20 °C but takes a week to reach full strength. The real service condition for a care label is a 40 °C wash with detergent followed by tumble drying, so the valid test is three wash cycles and then a peel reading, not a thumb press in the sample room. Traceability belongs on the garment, not on the sticker: GPSR (EU) 2023/988 puts the economic operator and the batch on the product, while fibre composition stays on the sewn-in label under Regulation (EU) No 1007/2011. An adhesive that fails in the wash does not remove the obligation, it hides it.",
+        "La température de pose et la température de service sont deux valeurs différentes, et les fiches techniques n'en impriment souvent qu'une. Un hot melt donné pour 70 °C en service exige encore 5 °C minimum pour adhérer, tandis qu'un acrylique basse température colle à moins 20 °C mais met une semaine à atteindre sa force finale. La condition réelle d'une étiquette d'entretien est un lavage à 40 °C avec détergent suivi d'un séchage en tambour : l'essai valable est donc trois cycles de lavage puis une mesure de pelage, pas une pression du pouce en salle d'échantillons. La traçabilité appartient au vêtement, pas au sticker : le GPSR (UE) 2023/988 place l'opérateur économique et le lot sur le produit, et la composition des fibres reste sur l'étiquette cousue au titre du Règlement (UE) No 1007/2011. Un adhésif qui lâche au lavage ne supprime pas l'obligation, il la cache.",
+        "La temperatura de aplicación y la de servicio son dos cifras distintas, y las fichas técnicas suelen imprimir solo una. Un hot melt declarado para 70 °C en servicio necesita aún 5 °C o más para adherir, mientras que un acrílico de baja temperatura pega a menos 20 °C pero tarda una semana en alcanzar su fuerza final. La condición real de una etiqueta de cuidado es un lavado a 40 °C con detergente y secadora, así que el ensayo válido son tres ciclos de lavado y después una lectura de pelado, no una presión con el pulgar en la sala de muestras. La trazabilidad pertenece a la prenda, no al sticker: el Reglamento (UE) 2023/988 (GPSR) sitúa al operador económico y el lote en el producto, y la composición de fibras permanece en la etiqueta cosida según el Reglamento (UE) No 1007/2011. Un adhesivo que falla en el lavado no elimina la obligación, la esconde.",
+        "貼る温度と使われる温度は別の数字ですが、仕様書には片方しか載っていないことが多いのです。常用 70 °C のホットメルトでも接着には 5 °C 以上が必要で、低温用アクリルはマイナス 20 °C で貼れるものの最終強度まで1週間かかります。洗濯表示ラベルの実際の使用条件は、洗剤を使った 40 °C の洗濯と乾燥です。したがって有効な試験は「3回洗ってから剥離強度を測る」ことであり、サンプル室で指で押す確認ではありません。家庭用品品質表示法では、繊維の混用率や取扱表示を衣類本体に表示する義務があります。粘着剤が洗濯で外れたからといって表示義務が消えるわけではなく、義務が見えなくなるだけです。JIS L 0001 の洗濯表示記号も、面材と粘着剤の組み合わせで判読性が変わります。",
+        "붙이는 온도와 사용 온도는 다른 숫자인데 사양서에는 하나만 적히곤 합니다. 상용 70 °C 등급 핫멜트도 접착에는 5 °C 이상이 필요하고, 저온용 아크릴은 영하 20 °C에서 붙지만 최종 강도까지 일주일 걸립니다. 취급 표시 라벨의 실제 조건은 세제를 넣은 40 °C 세탁과 건조입니다. 따라서 유효한 시험은 세탁 3회 후 박리 강도를 재는 것이지 샘플룸에서 손끝으로 누르는 것이 아닙니다. 섬유 혼용률과 취급 표시는 의류 본체에 표시해야 하며(국내는 품질경영 및 공산품안전관리법, 유럽은 Regulation (UE) No 1007/2011), 접착제가 세탁에서 떨어진다고 의무가 사라지지는 않습니다. 떨어진 라벨은 의무를 숨길 뿐입니다. 또한 표시 내용이 사실과 다르면 표시광고법 위반이 될 수 있으므로, 재박리 라벨로 임시 표시를 할 때도 문구는 정확해야 합니다.",
+    )),
+
+    ("h2", d("五、貨架期與儲存：膠是會過期的", "5. Shelf Life and Storage: Adhesive Expires",
+             "5. Durée de conservation et stockage : la colle périme", "5. Caducidad y almacenaje: la cola caduca",
+             "5. 保管期限と保管条件：粘着剤は劣化する", "5. 유통기한과 보관: 접착제는 만료됩니다")),
+
+    ("ul", [
+        d("貨架期從分切日算起，不是下單日：熱熔膠 12 個月，亞克力 24 個月，超期先做試貼再上線",
+          "Shelf life runs from the slitting date, not the order date: 12 months for hot melt, 24 for acrylic, and trial a roll before running an expired batch",
+          "La conservation court à partir de la date de refente, pas de commande : 12 mois en hot melt, 24 en acrylique, et testez un rouleau avant de lancer un lot périmé",
+          "La caducidad corre desde la fecha de bobinado, no la de pedido: 12 meses en hot melt, 24 en acrílico, y prueba un rollo antes de lanzar un lote vencido",
+          "保管期限は受注日ではなくスリット日から起算します。ホットメルト12か月、アクリル24か月。期限切れは試し貼りをしてから使います",
+          "유통기한은 주문일이 아니라 슬리팅일부터 계산합니다. 핫멜트 12개월, 아크릴 24개월이며 기한이 지난 롤은 시험 부착 후 사용하십시오"),
+        d("儲存 15 至 25 °C、相對濕度 50 % 左右，避免日照；紙箱不要直接落地，底部受潮會讓離型紙起皺",
+          "Store at 15 to 25 °C and around 50 % RH, out of sunlight, and keep cartons off the floor because damp bottoms wrinkle the liner",
+          "Stockez entre 15 et 25 °C et environ 50 % HR, à l'abri du soleil, cartons surélevés : un fond humide froisse le silicone",
+          "Almacena entre 15 y 25 °C y en torno al 50 % HR, sin sol, con las cajas elevadas: una base húmeda arruga el liner",
+          "15〜25 °C、相対湿度 50 % 前後で、直射日光を避けて保管します。段ボールを直接床に置くと、底部の湿気で剥離紙がしわになります",
+          "15~25 °C, 상대습도 50 % 전후에서 직사광선을 피해 보관하고 종이 상자를 바닥에 직접 두지 마십시오. 하부 습기로 이형지가 주름집니다"),
+        d("從冷庫取出的卷材先在工作溫度下靜置 24 小時再開卷，否則膠面會結露被水膜污染",
+          "Let rolls taken from cold storage rest 24 hours at workshop temperature before unwinding, or condensation films the adhesive",
+          "Laissez reposer 24 heures à température d'atelier les rouleaux sortis du froid, sinon la condensation recouvre l'adhésif",
+          "Deja reposar 24 horas a temperatura de taller los rollos sacados del frío, o la condensación cubre el adhesivo",
+          "冷蔵保管から出したロールは、作業場の温度で24時間置いてから開封します。結露が粘着面を覆うためです",
+          "냉장 보관에서 꺼낸 롤은 작업장 온도에서 24시간 두었다가 개봉하십시오. 결로가 접착면을 덮습니다"),
+        d("卷材垂直放置，平放重壓會造成邊緣擠膠，上機後第一圈就臟版",
+          "Stand rolls upright: stacked flat under load makes the adhesive ooze at the edge and soils the first metres on press",
+          "Stockez les rouleaux debout : empilés à plat sous charge, la colle bave sur le bord et salit les premiers mètres",
+          "Coloca los rollos de pie: apilados en plano bajo carga, la cola rebosa en el borde y ensucia los primeros metros",
+          "ロールは縦置きにします。平置きで荷重がかかると端から糊が出て、稼働直後の数メートルが汚れます",
+          "롤은 세워서 보관하십시오. 눕혀 적재하면 모서리로 접착제가 밀려 나와 초기 수 미터가 오염됩니다"),
+        d("換膠批必須重做貼附測試：同一供應商兩批膠的初黏，可以差一個等級",
+          "Repeat the bond test on every adhesive lot change: two batches from one supplier can differ by a whole tack grade",
+          "Refaites l'essai d'adhérence à chaque changement de lot : deux lots d'un même fournisseur peuvent différer d'un grade d'accroche",
+          "Repite el ensayo de adherencia en cada cambio de lote: dos lotes del mismo proveedor pueden diferir un grado de agarre",
+          "ロットが変わるたびに接着試験をやり直します。同じ供給元の2ロットでも初粘が1ランク違うことがあります",
+          "접착제 로트가 바뀔 때마다 부착 시험을 다시 하십시오. 같은 공급사의 두 로트도 초기 점착이 한 등급 차이 날 수 있습니다"),
+    ]),
+
+    ("h2", d("六、寫進採購單的三個數字", "6. Three Numbers to Put on the Purchase Order",
+             "6. Trois valeurs à inscrire au bon de commande", "6. Tres cifras que deben ir en el pedido",
+             "6. 発注書に書く3つの数値", "6. 발주서에 적어야 할 세 가지 수치")),
+
+    ("table", {
+        "head": [
+            d("測試", "Test", "Essai", "Ensayo", "試験", "시험"),
+            d("方法", "Method", "Méthode", "Método", "方法", "방법"),
+            d("建議門檻", "Target to write", "Valeur à inscrire", "Valor a exigir", "発注書に書く値", "권장 기준"),
+        ],
+        "rows": [
+            [d("180° 剝離（不鏽鋼板）", "180° peel on stainless steel", "Pelage à 180° sur inox", "Pelado a 180° sobre acero inoxidable", "180° 剥離（ステンレス板）", "180° 박리(스테인리스 plate)"),
+             d("PSTC-101，25 mm 寬，300 mm/min", "PSTC-101, 25 mm wide, 300 mm per minute", "PSTC-101, 25 mm de large, 300 mm/min", "PSTC-101, 25 mm de ancho, 300 mm/min", "PSTC-101、幅 25 mm、300 mm/分", "PSTC-101, 폭 25 mm, 300 mm/분"),
+             d("永久膠 ≥ 8 N/25 mm；可移除膠 1 至 3 N/25 mm", "Permanent 8 N/25 mm or more; removable 1 to 3 N/25 mm", "Permanent : 8 N/25 mm ou plus ; détachable : 1 à 3 N/25 mm", "Permanente 8 N/25 mm o más; removible 1 a 3 N/25 mm", "永久：8 N/25 mm 以上、再剥離：1〜3 N/25 mm", "영구 8 N/25 mm 이상, 재박리 1~3 N/25 mm")],
+            [d("環形初黏", "Loop tack", "Accroche en boucle", "Agarre en bucle", "ループタック", "루프 택"),
+             d("PSTC-16，貼於實際 PE 袋", "PSTC-16, applied to the actual PE bag", "PSTC-16, sur le sachet PE réel", "PSTC-16, sobre la bolsa de PE real", "PSTC-16、実際の PE 袋に貼付", "PSTC-16, 실제 PE 봉투에 부착"),
+             d("≥ 6 N/25 mm", "6 N/25 mm or more", "6 N/25 mm ou plus", "6 N/25 mm o más", "6 N/25 mm 以上", "6 N/25 mm 이상")],
+            [d("剪切保持力", "Shear holding power", "Résistance au cisaillement", "Resistencia al cizallamiento", "保持力（せん断）", "전단 유지력"),
+             d("1 kg 掛重，25 × 25 mm 貼面，40 °C", "1 kg dead load, 25 × 25 mm bond, 40 °C", "Charge de 1 kg, collage 25 × 25 mm, 40 °C", "Carga de 1 kg, unión de 25 × 25 mm, 40 °C", "1 kg 荷重、25 × 25 mm、40 °C", "1 kg 하중, 25 × 25 mm, 40 °C"),
+             d("洗水標 ≥ 24 小時不滑移", "Care labels: no slip for 24 hours", "Étiquettes d'entretien : aucun glissement en 24 heures", "Etiquetas de cuidado: sin deslizamiento en 24 horas", "洗濯表示ラベル：24時間滑らない", "취급 표시 라벨: 24시간 미끄러짐 없음")],
+        ],
+    }),
+
+    ("callout", d(
+        "<strong>打樣只需測三件事：</strong>貼在實際基材上放 24 小時再看邊緣、洗三次後再測剝離、-18 °C 冷凍 24 小時回溫後再摸一次。三步不到一小時，能擋掉大部分退貨。",
+        "<strong>Three tests settle a sample:</strong> bond on the real substrate and inspect the edge after 24 hours, peel again after three washes, then freeze at minus 18 °C for 24 hours, thaw and check once more. Under an hour of work that prevents most returns.",
+        "<strong>Trois essais suffisent pour un échantillon :</strong> coller sur le support réel et regarder le bord après 24 heures, reprendre le pelage après trois lavages, puis congeler à moins 18 °C pendant 24 heures, laisser revenir et vérifier. Moins d'une heure pour éviter la plupart des retours.",
+        "<strong>Tres ensayos bastan para una muestra:</strong> pega sobre el soporte real y mira el borde a las 24 horas, repite el pelado tras tres lavados y después congela a menos 18 °C durante 24 horas, atempera y revisa. Menos de una hora que evita la mayoría de las devoluciones.",
+        "<strong>サンプルは3つの試験で決まります：</strong>実際の基材に貼って24時間後に端を見る、3回洗ってから剥離を測り直す、マイナス18 °C で24時間凍結し、戻してからもう一度確認する。1時間かからずに、返品の大半を防げます。",
+        "<strong>샘플은 세 가지 시험으로 판정합니다:</strong> 실제 기재에 붙여 24시간 뒤 모서리를 보고, 세탁 3회 후 박리를 다시 재고, 영하 18 °C에서 24시간 냉동한 뒤 상온으로 되돌려 한 번 더 확인합니다. 한 시간이면 대부분의 반품을 막을 수 있습니다.",
+    )),
+]
+
+RELATED = [
+    {"slug": "index.html",
+     "zh": "輔料 FAQ 全部文章", "en": "All trims FAQ articles", "fr": "Tous les articles FAQ",
+     "es": "Todos los artículos de la FAQ", "ja": "副資材 FAQ の記事一覧", "ko": "부자재 FAQ 전체 글"},
+    {"slug": "self-adhesive-woven-labels.html",
+     "zh": "自黏織嘜與背膠標籤", "en": "Self-adhesive woven labels",
+     "fr": "Labels tissés auto-adhésifs", "es": "Etiquetas tejidas autoadhesivas",
+     "ja": "粘着タイプの織りラベル", "ko": "점착형 직조 라벨"},
+    {"slug": "clothing-size-stickers-guide.html",
+     "zh": "服裝尺碼貼紙怎麼做", "en": "Clothing size stickers",
+     "fr": "Stickers de taille pour vêtements", "es": "Stickers de talla para prendas",
+     "ja": "衣料のサイズシール", "ko": "의류 사이즈 스티커"},
+    {"slug": "care-label-attachment-guide.html",
+     "zh": "洗水標固定方式比較", "en": "Care label attachment methods",
+     "fr": "Méthodes de fixation des étiquettes d'entretien", "es": "Métodos de fijación de etiquetas de cuidado",
+     "ja": "洗濯表示ラベルの取り付け方法", "ko": "취급 표시 라벨 부착 방식"},
+]
+
+CTA_P = d("需要我們按您的基材配膠、寄測試貼紙？", "Want us to match the adhesive to your substrate and send test stickers?",
+          "Besoin d'un adhésif adapté à votre support et de stickers d'essai ?",
+          "¿Quieres que ajustemos el adhesivo a tu soporte y enviemos stickers de prueba?",
+          "基材に合わせた粘着剤の選定と試験用シールの送付が必要ですか。",
+          "기재에 맞춰 접착제를 선정하고 시험용 스티커를 보내드릴까요?")
+CTA_BTN = d("索取膠水測試樣品 →", "Request adhesive test samples →",
+            "Demander des échantillons d'adhésif →", "Solicitar muestras de adhesivo →",
+            "粘着剤の試験サンプルを依頼 →", "접착제 시험 샘플 요청 →")
