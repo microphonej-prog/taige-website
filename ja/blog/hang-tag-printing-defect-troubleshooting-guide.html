@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ハングタグ印刷の不良：ゴミ付き・裏移り・見当ズレ | TAGE</title>
+<meta name="description" content="ハングタグ印刷で実際に起きる6つの不良、ゴミ付き・裏移り・見当ズレ・地汚れ・型抜きの欠け・箔のピンホールについて、原因と対策、AQL の検査条項まで整理します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+     "item": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+   "url": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>タグ印刷</span></div>
+      <h1>ハングタグ印刷の不良：実際に起きる6つ</h1>
+      <p>泰閣包装 · 2026年11月23日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>ハングタグは高速で刷られる小さな紙片で、その欠陥は最終的に客の手に渡ります。クレームの多くはデザインの問題ではありません。ロゴ中央のゴミ付き、前の一枚のインキが次の裏に移る裏移り、噛まれたような箔の縁、折り目でコーティングが割れる、といったものです。本稿では欠陥を「いつ起きるか」で3分類し、実際に遭遇する6つについて原因と対策を示し、最後に発注書へ書ける検査条項を用意します。出港前に決着させる方が、到着後に値引き交渉するより安く済みます。</p>
+
+      <h2>1. 「いつ起きるか」で分類する</h2>
+
+      <p>3分類はそれぞれ担当が違い、混ぜると責任の押し付け合いになります。プリプレス：塗り足し 3 mm 未満、RGB データ、ビットマップの拡大ロゴ、0.25 pt 未満の細線、トラップ未処理。印刷：ゴミ付き、地汚れ、見当ズレ、ドットゲイン、ゴースト、裏移り。後加工：型抜きの欠け、折り割れ、箔のピンホール、ラミネートの気泡、梱包時の擦れ、小口塗りの滲み。どの分類かを決めれば、デザイナー・印刷会社・抜き加工屋のどこに連絡すべきか分かります。</p>
+
+      <h2>2. 実際に遭遇する6つの不良</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>不良</th>
+
+            <th>原因</th>
+
+            <th>対策</th>
+
+            <th>担当</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>ゴミ付き（白抜け・汚れ）</td>
+
+            <td>ブランケットや版に付いた紙粉・乾いたインキ皮。湿度 40% 未満で急増</td>
+
+            <td>500枚ごとにブランケットを拭く、インキは濾す、湿度は 50〜60%</td>
+
+            <td>印刷会社</td>
+
+          </tr>
+
+          <tr>
+
+            <td>裏移り</td>
+
+            <td>インキ膜が厚い、パウダーなし、温かいうちに積載・ラミネート</td>
+
+            <td>インキ量を落とす、パウダーを入れる、箱詰め前に冷却し、ラミネート前は12時間静置</td>
+
+            <td>印刷会社</td>
+
+          </tr>
+
+          <tr>
+
+            <td>見当ズレ</td>
+
+            <td>紙の伸縮、湿度変化、版面の張力むら。薄手ほど顕著</td>
+
+            <td>同ロット紙を24時間なじませる、0.1 mm のトラップ、トンボは仕上がり外に印刷</td>
+
+            <td>印刷会社</td>
+
+          </tr>
+
+          <tr>
+
+            <td>地汚れ</td>
+
+            <td>湿し水が弱い、インキが柔らかい、ローラ圧が不適切で非画線部が汚れる</td>
+
+            <td>pH と導電率を測り、インキを替え、ニップを再設定。水量を増やすだけでは解決しない</td>
+
+            <td>印刷会社</td>
+
+          </tr>
+
+          <tr>
+
+            <td>型抜きの欠け</td>
+
+            <td>刃こぼれ、台板の不陸、積みが高い。角丸と穴で最も多い</td>
+
+            <td>型を替え、台板を作り直し、500枚ごとに10枚抜き取って透過光で輪郭と穴位置を確認</td>
+
+            <td>抜き加工</td>
+
+          </tr>
+
+          <tr>
+
+            <td>箔のピンホール・縁の毛羽</td>
+
+            <td>箔の温度不足、圧力不足、版の汚れ、下敷きが柔らかすぎる</td>
+
+            <td>ロットごとに20枚試し刷りで温度と圧を決め、版は不織布で拭き、0.3 mm 未満の細線に箔は使わない</td>
+
+            <td>箔押し</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p>このうち2つは適合性の問題でもあります。衣料に吊るされるタグのインキとコーティングは REACH (EC) 1907/2006 の特定物質制限の対象で、欧米のバイヤーは近年サプライヤー宣言を求めます。ゴミ付きは外観ですが、乾ききらない厚いインキ膜は湿ったコンテナ内で衣料への転写リスクになります。低移行インキと水性ニスを見積段階で指定すれば、議論自体が起きません。</p>
+
+      <h2>3. 箔・エンボス・小口</h2>
+
+      <p>箔の品質は温度・圧力・圧着時間の3変数で決まります。どれかが不足すると箔は6割しか定着せず、目には明るく見えても爪で剥がれ、しかも着用1週間後に破綻するため検品では見つけにくい。エンボスは紙の厚み次第で、300 g/m² なら 0.15 mm の空押しで輪郭がきれいに出ます。それより薄い場合は裏板が必要で、なければ裏面に形が透けます。小口塗りは 0.3〜0.5 mm の染み込みに抑えてください。深いと穴周辺の紙強度を奪い、重いタグは穴から裂けます。</p>
+
+      <h2>4. 増刷の一致性：色と可読性</h2>
+
+      <p>2回目の増刷が1回目と合わないのは最も多い争点で、最も勝ちにくい問題です。3つの数値で管理できます。特色は ΔE 2 以下、プロセス色は 3 以下（D50 光源・2度視野・3点の平均）、紙は同一ロット、インキも同一ロットで見本を保管。加えて、双方署名の校正見本（ゴールデンサンプル）を残し、量産も増刷もそれに合わせて測定します。なければ議論は2台のモニターの比較になります。</p>
+
+      <p>見落とされがちなもう一点は可読性で、これは美観ではなく適合性の要件です。タグに繊維組成・取扱い記号・原産地・価格を印刷する場合、欧州では規則 (EU) 1007/2011、日本では家庭用品品質表示法と景品表示法、韓国では 표시광고법 の対象になります。文字が小さすぎる、コントラストが不足、インキで潰れている場合は「表示がない」のと同じです。実務の下限は、漢字・かなで字高 1.8 mm 以上、ラテン文字で 1.5 mm 以上、濃地の白抜きは一段太くし、30 cm・500 lux で確認することです。</p>
+
+      <h2>5. 発注書に書く検査条項</h2>
+
+      <p>使える条項は5文で足ります。抜き取りは ISO 2859-1、一般検査水準 II、主要欠陥 AQL 2.5、軽微欠陥 4.0。欠陥区分は、バーコード・価格・型番の誤りを致命、ΔE 3 超・箔抜け・型抜き 0.5 mm 超のズレを主要、文字外 1 mm 未満のゴミ付きを軽微とする。観察条件は D50、500 lux、30〜40 cm。10,000 枚ごとに署名見本を5枚、12か月保管。増刷は校正見本に照らして判定し、やり直しの輸送費は印刷会社負担。この5文を発注書に入れれば、争いは早く終わります。</p>
+
+      <div class="callout"><strong>デジタル校正は本機校正の代わりになりません。</strong>モニターもインクジェットも、箔の光沢、エンボスの深さ、ラミネートの気泡、小口塗りの滲みを再現しません。承認できるのは本機校正、または署名した初品のみで、自然光とライトボックスで各1回確認してください。</div>
+
+      <h2>関連記事</h2>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="index.html">副資材 FAQ の記事一覧</a></li>
+        <li><a href="hang-tag-printing-methods.html">タグ印刷方式の比較</a></li>
+        <li><a href="hang-tag-color-management.html">タグの色管理</a></li>
+        <li><a href="apparel-trims-aql-inspection-guide.html">副資材の AQL 検査</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>デザインで箔とエンボスの本機校正を作りますか。</p>
+        <a class="cta-btn" href="../contact.html">本機校正と不良見本を依頼 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞の専門的な衣料副資材・包装印刷メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

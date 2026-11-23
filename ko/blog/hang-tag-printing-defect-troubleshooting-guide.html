@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행택 인쇄 불량: 히키, 뒷묻음, 겹침 어긋남 | TAGE</title>
+<meta name="description" content="행택 인쇄에서 실제로 나타나는 여섯 가지 불량, 히키·뒷묻음·겹침 어긋남·바탕 번짐·다이컷 결손·박 핀홀의 원인과 대책, AQL 검사 조항을 정리합니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ko/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+     "item": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+   "url": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>TAGE 패키징</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">홈</a>
+      <a href="../products.html">제품 소개</a>
+      <a href="../about.html">회사 소개</a>
+      <a href="index.html">부자재 FAQ</a>
+      <a href="../contact.html">문의하기</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag active" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">홈</a> / <a href="index.html">부자재 FAQ</a> / <span>행택 인쇄</span></div>
+      <h1>행택 인쇄 불량: 실제로 나타나는 여섯 가지</h1>
+      <p>TAGE 패키징 · 2026년 11월 23일 업데이트</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>행택은 빠르게 인쇄되는 작은 종이 조각이고, 그 결함은 결국 고객 손에 들어갑니다. 대부분의 불만은 디자인 문제가 아닙니다. 로고 한가운데의 히키, 앞 장의 잉크가 다음 장 뒷면으로 옮은 뒷묻음, 물린 듯한 박 테두리, 접힌 자리에서 코팅이 갈라지는 문제입니다. 이 글은 불량을 &#x27;언제 발생하는가&#x27;로 세 분류하고, 실제로 만나는 여섯 가지의 원인과 대책, 그리고 발주서에 넣을 수 있는 검사 조항을 정리합니다. 선적 전에 정리하는 편이 도착 후 할인 협상보다 저렴합니다.</p>
+
+      <h2>1. &#x27;언제 생기는가&#x27;로 분류하기</h2>
+
+      <p>세 분류는 담당이 다르고 섞으면 책임 공방만 남습니다. 프리프레스: 도련 3 mm 미만, RGB 데이터, 비트맵을 확대한 로고, 0.25 pt 미만 가는 선, 트래핑 미처리. 인쇄: 히키, 바탕 번짐, 겹침 어긋남, 도트 게인, 고스트, 뒷묻음. 후가공: 다이컷 결손, 접힌 자리 갈라짐, 박 핀홀, 라미네이팅 기포, 포장 중 긁힘, 모서리 도색 번짐. 어느 분류인지 정하면 디자이너, 인쇄사, 다이컷·후가공 중 누구에게 연락할지 정해집니다.</p>
+
+      <h2>2. 실제로 만나는 여섯 가지 불량</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>불량</th>
+
+            <th>원인</th>
+
+            <th>대책</th>
+
+            <th>담당</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>히키(흰 점, 오점)</td>
+
+            <td>블랭킷이나 판에 붙은 종이 먼지·마른 잉크 껍질. 습도 40% 미만에서 급증</td>
+
+            <td>500장마다 블랭킷 닦기, 잉크 여과, 습도 50~60% 유지</td>
+
+            <td>인쇄사</td>
+
+          </tr>
+
+          <tr>
+
+            <td>뒷묻음</td>
+
+            <td>잉크 막 두꺼움, 파우더 미살포, 뜨거울 때 적재·라미네이팅</td>
+
+            <td>잉크량 줄이기, 파우더 살포, 상자 포장 전 냉각, 라미네이팅 전 12시간 안정화</td>
+
+            <td>인쇄사</td>
+
+          </tr>
+
+          <tr>
+
+            <td>겹침 어긋남</td>
+
+            <td>종이 신축, 습도 변화, 판 장력 불균일. 얇은 지일수록 심함</td>
+
+            <td>같은 로트 종이 24시간 순화, 0.1 mm 트래핑, 재단선 밖에 규격 표시 인쇄</td>
+
+            <td>인쇄사</td>
+
+          </tr>
+
+          <tr>
+
+            <td>바탕 번짐</td>
+
+            <td>습수액이 약함, 잉크가 묽음, 롤러 압력 부적정으로 비화선부 착묵</td>
+
+            <td>pH와 전도도 확인, 잉크 교체, 닙 재설정. 물량만 늘리는 것으로는 해결되지 않음</td>
+
+            <td>인쇄사</td>
+
+          </tr>
+
+          <tr>
+
+            <td>다이컷 결손</td>
+
+            <td>날 결손, 받침판 불균일, 적재 과다. 둥근 모서리와 구멍에서 가장 흔함</td>
+
+            <td>칼 교체, 받침판 재제작, 500장마다 10장을 샘플링해 투과광으로 윤곽과 구멍 위치 확인</td>
+
+            <td>다이컷</td>
+
+          </tr>
+
+          <tr>
+
+            <td>박 핀홀, 테두리 거스러미</td>
+
+            <td>박 온도 부족, 압력 부족, 판 오염, 받침이 너무 무름</td>
+
+            <td>로트마다 20장 시험 인쇄로 온도와 압력 결정, 판은 보푸라기 없는 천으로 닦기, 0.3 mm 미만 가는 선에 박 사용 금지</td>
+
+            <td>박</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p>이 중 두 가지는 적합성 문제이기도 합니다. 의류에 걸리는 행택의 잉크와 코팅은 REACH (EC) 1907/2006의 특정 물질 제한 대상이며, 유럽과 북미 바이어는 최근 공급사 선언을 요구합니다. 히키는 외관 문제이지만 마르지 않는 두꺼운 잉크 막은 습한 컨테이너 안에서 의류로 전이될 위험입니다. 저이행 잉크와 수성 바니시를 견적 단계에서 지정하면 논쟁 자체가 시작되지 않습니다.</p>
+
+      <h2>3. 박, 엠보, 모서리</h2>
+
+      <p>박 품질은 온도, 압력, 접촉 시간 세 변수로 결정됩니다. 하나라도 부족하면 박이 60%만 정착해 눈에는 밝지만 손톱에 벗겨지고, 착용 일주일 뒤에 문제가 드러나 검사에서 잡기 어렵습니다. 엠보는 지의 두께에 달려 300 g/m²는 0.15 mm 블라인드 엠보로 윤곽이 깨끗하지만, 더 얇으면 받침형이 필요하고 없으면 뒷면에 형이 비칩니다. 모서리 도색은 0.3~0.5 mm 침투로 제한하십시오. 더 깊으면 구멍 주변 지의 강도를 잡아먹어 무거운 행택은 구멍에서 찢어집니다.</p>
+
+      <h2>4. 재판 일관성: 색과 가독성</h2>
+
+      <p>두 번째 인쇄가 첫 번째와 다른 것은 가장 흔하고 가장 이기기 어려운 분쟁입니다. 세 수치로 관리합니다. 별색은 ΔE 2 이하, 4도는 3 이하(D50 광원, 2도 시야, 세 지점 평균), 같은 로트의 종이, 같은 로트의 잉크와 보관 시료. 무엇보다 양측 서명이 있는 골든 샘플을 남기고 양산과 재판을 그것에 맞춰 측정하십시오. 없으면 논의는 모니터 두 대의 비교로 끝납니다.</p>
+
+      <p>자주 무시되는 또 하나는 가독성이며, 이는 미관이 아니라 적합성 요건입니다. 행택에 섬유 조성, 취급 기호, 원산지, 판매가를 인쇄한다면 유럽에서는 규정 (EU) 1007/2011, 일본에서는 家庭用品品質表示法(가정용품 품질표시법)과 景品表示法(경품표시법), 한국에서는 표시광고법의 적용을 받습니다. 글자가 너무 작거나 대비가 부족하거나 잉크로 메워지면 표시가 없는 것과 같습니다. 실무 하한은 한자·가나 1.8 mm 이상, 라틴 문자 1.5 mm 이상, 어두운 바탕의 반전 인쇄는 한 단계 굵게, 30 cm·500 lux에서 확인하는 것입니다.</p>
+
+      <h2>5. 발주서에 넣을 검사 조항</h2>
+
+      <p>쓸 수 있는 조항은 다섯 문장입니다. 샘플링은 ISO 2859-1, 일반검사 수준 II, 주요 결함 AQL 2.5, 경미 결함 4.0. 결함 등급은 바코드·가격·모델 오기재를 치명, ΔE 3 초과·박 누락·다이컷 0.5 mm 초과 어긋남을 주요, 문자 밖 1 mm 미만 히키를 경미로 합니다. 관찰 조건은 D50, 500 lux, 30~40 cm. 10,000장마다 서명 시료 5장을 12개월 보관. 재판은 골든 샘플 대비로 판정하고 재작업 운송비는 인쇄사 부담. 이 다섯 문장을 발주서에 넣으면 분쟁이 일찍 끝납니다.</p>
+
+      <div class="callout"><strong>디지털 교정은 본기 교정을 대신하지 못합니다.</strong> 모니터와 잉크젯은 박의 광택, 엠보 깊이, 라미네이팅 기포, 모서리 도색 번짐을 보여주지 않습니다. 승인할 수 있는 것은 본기 교정 또는 서명한 초도품뿐이며, 자연광과 라이트박스에서 각각 한 번 확인하십시오.</div>
+
+      <h2>관련 글</h2>
+
+      <h2>관련 글</h2>
+      <ul>
+        <li><a href="index.html">부자재 FAQ 전체 글</a></li>
+        <li><a href="hang-tag-printing-methods.html">행택 인쇄 방식 비교</a></li>
+        <li><a href="hang-tag-color-management.html">행택 색상 관리</a></li>
+        <li><a href="apparel-trims-aql-inspection-guide.html">부자재 AQL 검사</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>도안으로 박과 엠보를 적용한 본기 교정이 필요하십니까?</p>
+        <a class="cta-btn" href="../contact.html">본기 교정과 불량 샘플 요청 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TAGE 패키징</h4>
+        <p>중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.</p>
+      </div>
+      <div>
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">행택</a></li>
+          <li><a href="../products.html#wovenlabels">직조 라벨 / 메인 라벨</a></li>
+          <li><a href="../products.html#carelabels">세탁 표시 라벨</a></li>
+          <li><a href="../products.html#bags">포장백</a></li>
+          <li><a href="../products.html#paperbags">친환경 종이백</a></li>
+          <li><a href="../products.html#brochures">브로슈어</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="../about.html">회사 소개</a></li>
+          <li><a href="../contact.html">문의하기</a></li>
+          <li><a href="../contact.html">견적 받기</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>문의하기</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>중국 광둥성 둥관시 후먼진</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 둥관 TAGE 패키징 유한공사</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>

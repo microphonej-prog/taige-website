@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="吊牌印刷缺陷診斷：墨屎、背印與套印不準 | TAGE" data-en="Hang Tag Printing Defects: Hickeys, Set-Off and Misregistration | TAGE" data-fr="Défauts d'impression d'étiquettes : pâtés, maculage, repérage | TAGE" data-es="Defectos de impresión de etiquetas: manchas, repintado y registro | TAGE" data-ja="ハングタグ印刷の不良：ゴミ付き・裏移り・見当ズレ | TAGE" data-ko="행택 인쇄 불량: 히키, 뒷묻음, 겹침 어긋남 | TAGE">吊牌印刷缺陷診斷：墨屎、背印與套印不準 | TAGE</title>
+<meta name="description" data-zh="吊牌印刷最常見的六種缺陷：墨屎、背面粘髒、套印不準、糊版、模切豁口與燙金針孔，逐一給成因與對策，並附可寫進訂單的驗收條款與 AQL 抽樣口徑。" data-en="The six hang tag printing defects you will see: hickeys, set-off, misregistration, scumming, die nicks and foil pinholes, with causes, fixes and an AQL clause." data-fr="Les six défauts d'impression d'étiquettes que l'on voit vraiment : pâtés, maculage, repérage, engraissement, encoches de découpe et piqûres de dorure, avec causes et remèdes." data-es="Los seis defectos reales en etiquetas impresas: manchas, repintado, registro, entintado del fondo, muescas de troquel y poros de estampado, con causas y soluciones." data-ja="ハングタグ印刷で実際に起きる6つの不良、ゴミ付き・裏移り・見当ズレ・地汚れ・型抜きの欠け・箔のピンホールについて、原因と対策、AQL の検査条項まで整理します。" data-ko="행택 인쇄에서 실제로 나타나는 여섯 가지 불량, 히키·뒷묻음·겹침 어긋남·바탕 번짐·다이컷 결손·박 핀홀의 원인과 대책, AQL 검사 조항을 정리합니다."
+      content="吊牌印刷最常見的六種缺陷：墨屎、背面粘髒、套印不準、糊版、模切豁口與燙金針孔，逐一給成因與對策，並附可寫進訂單的驗收條款與 AQL 抽樣口徑。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html">
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+     "item": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "吊牌印刷缺陷診斷：六種真實會出現的問題",
+   "url": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/hang-tag-printing-defect-troubleshooting-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</strong>
+        <small data-zh="DONGGUAN TAGE PACKAGING" data-en="DONGGUAN TAGE PACKAGING" data-fr="DONGGUAN TAGE PACKAGING" data-es="DONGGUAN TAGE PACKAGING" data-ja="DONGGUAN TAGE PACKAGING" data-ko="DONGGUAN TAGE PACKAGING">DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" data-zh="首頁" data-fr="Accueil" data-es="Inicio" data-en="Home" data-ja="ホーム" data-ko="홈">首頁</a>
+      <a href="../products.html" data-zh="產品介紹" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品紹介" data-ko="제품 소개">產品介紹</a>
+      <a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a>
+      <a href="index.html" data-zh="輔料 FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-en="Trims FAQ" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a>
+      <a href="../contact.html" data-zh="聯繫方式" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫方式</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag active" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../images/hero-bg-user1.jpg,../images/hero-bg-user2.jpg,../images/hero-bg-user3.jpg,../images/hero-bg-user4.jpg,../images/hero-bg-user5.jpg,../images/hero-bg-user6.jpg,../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html" data-zh="首頁" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ja="ホーム" data-ko="홈">首頁</a> / <a href="index.html" data-zh="輔料 FAQ" data-en="Trims FAQ" data-fr="FAQ Accessoires" data-es="FAQ Accesorios" data-ja="副資材 FAQ" data-ko="부자재 FAQ">輔料 FAQ</a> / <span data-zh="吊牌工藝" data-en="Hang Tag Printing" data-fr="Impression d'étiquettes" data-es="Impresión de etiquetas" data-ja="タグ印刷" data-ko="행택 인쇄">吊牌工藝</span></div>
+      <h1 data-zh="吊牌印刷缺陷診斷：六種真實會出現的問題" data-en="Hang Tag Printing Defects: The Six You Will Actually See" data-fr="Défauts d'impression d'étiquettes : les six que l'on voit vraiment" data-es="Defectos de impresión de etiquetas: los seis que sí aparecen" data-ja="ハングタグ印刷の不良：実際に起きる6つ" data-ko="행택 인쇄 불량: 실제로 나타나는 여섯 가지">吊牌印刷缺陷診斷：六種真實會出現的問題</h1>
+      <p data-zh="泰閣包裝 · 更新於 2026年11月23日" data-en="By TAGE Packaging &amp;nbsp;·&amp;nbsp; Updated November 23, 2026" data-fr="Par TAGE Packaging &amp;nbsp;·&amp;nbsp; Mis à jour le 23 novembre 2026" data-es="Por TAGE Packaging &amp;nbsp;·&amp;nbsp; Actualizado el 23 de noviembre de 2026" data-ja="泰閣包装 · 2026年11月23日更新" data-ko="TAGE 패키징 · 2026년 11월 23일 업데이트">泰閣包裝 · 更新於 2026年11月23日</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p data-zh="吊牌是高速印出來的小紙片，它帶的每一種缺陷，最後都出現在客人手裡。多數客訴不是設計問題：是 logo 中間一個墨屎、上一張的墨蹭到下一張背面、燙金邊緣像被咬過，或折線處塗層裂開。這篇按缺陷「發生在什麼時候」分成三類，把真正會遇到的六種逐一給成因與對策，最後給一段能寫進訂單的驗收條款——爭議在開船前結束，比到港後談折扣便宜。" data-en="A hang tag is a small sheet printed at speed, and every defect it can carry ends up in a customer's hand. Most complaints are not about design. They are a hickey in the middle of the logo, ink transferred from one tag to the back of the next, a foil edge that looks bitten, or a fold that cracks through the coating. This guide groups defects by when they happen, gives cause and fix for the six you will actually meet, and closes with an inspection clause you can put in the order, because settling that before the container sails is cheaper than negotiating a discount after it lands." data-fr="Une étiquette suspendue est une petite feuille imprimée à grande vitesse, et chacun de ses défauts finit dans la main du client. La plupart des réclamations ne portent pas sur le design : un pâté au milieu du logo, de l'encre transférée du recto au verso de la suivante, un bord de dorure qui semble mordu, ou un pli qui craquelle le couchage. Ce guide classe les défauts selon le moment où ils apparaissent, donne cause et remède pour les six que l'on rencontre vraiment, et se termine par une clause de réception à inscrire au bon de commande : régler cela avant le départ du conteneur coûte moins cher que négocier une remise à l'arrivée." data-es="Una etiqueta colgante es una hoja pequeña impresa a gran velocidad, y cada defecto que puede llevar acaba en manos del cliente. La mayoría de las quejas no son de diseño: una mancha en medio del logo, tinta transferida del anverso al reverso de la siguiente, un borde de estampado que parece mordido o un pliegue que agrieta el recubrimiento. Esta guía agrupa los defectos según cuándo aparecen, da causa y solución para los seis que de verdad se ven y cierra con una cláusula de recepción que puedes poner en el pedido: resolverlo antes de que zarpe el contenedor cuesta menos que negociar un descuento a la llegada." data-ja="ハングタグは高速で刷られる小さな紙片で、その欠陥は最終的に客の手に渡ります。クレームの多くはデザインの問題ではありません。ロゴ中央のゴミ付き、前の一枚のインキが次の裏に移る裏移り、噛まれたような箔の縁、折り目でコーティングが割れる、といったものです。本稿では欠陥を「いつ起きるか」で3分類し、実際に遭遇する6つについて原因と対策を示し、最後に発注書へ書ける検査条項を用意します。出港前に決着させる方が、到着後に値引き交渉するより安く済みます。" data-ko="행택은 빠르게 인쇄되는 작은 종이 조각이고, 그 결함은 결국 고객 손에 들어갑니다. 대부분의 불만은 디자인 문제가 아닙니다. 로고 한가운데의 히키, 앞 장의 잉크가 다음 장 뒷면으로 옮은 뒷묻음, 물린 듯한 박 테두리, 접힌 자리에서 코팅이 갈라지는 문제입니다. 이 글은 불량을 '언제 발생하는가'로 세 분류하고, 실제로 만나는 여섯 가지의 원인과 대책, 그리고 발주서에 넣을 수 있는 검사 조항을 정리합니다. 선적 전에 정리하는 편이 도착 후 할인 협상보다 저렴합니다.">吊牌是高速印出來的小紙片，它帶的每一種缺陷，最後都出現在客人手裡。多數客訴不是設計問題：是 logo 中間一個墨屎、上一張的墨蹭到下一張背面、燙金邊緣像被咬過，或折線處塗層裂開。這篇按缺陷「發生在什麼時候」分成三類，把真正會遇到的六種逐一給成因與對策，最後給一段能寫進訂單的驗收條款——爭議在開船前結束，比到港後談折扣便宜。</p>
+
+      <h2 data-zh="一、先按「什麼時候發生」分類" data-en="1. Sort the Defects by When They Happen" data-fr="1. Classer les défauts selon le moment" data-es="1. Clasificar por cuándo aparecen" data-ja="1. 「いつ起きるか」で分類する" data-ko="1. '언제 생기는가'로 분류하기">一、先按「什麼時候發生」分類</h2>
+
+      <p data-zh="三類各有各的責任人，混在一起談只會互相推。印前：出血少於 3 mm、圖稿是 RGB、小字用點陣圖放大、細線低於 0.25 pt、沒有做補漏白。機上：墨屎、糊版、套印不準、網點擴大、鬼影、背面粘髒。印後：模切豁口、壓線裂、燙金針孔、覆膜氣泡、裝箱刮花、邊油滲邊。先確定是哪一類，才知道該找設計、印刷廠，還是模切與後道。" data-en="The three groups have different owners, and mixing them only produces blame. Prepress: bleed under 3 mm, RGB artwork, a logo scaled up from a bitmap, hairlines below 0.25 pt, no trapping. On press: hickeys, scumming, misregistration, dot gain, ghosting, set-off. Post-press: die nicks, cracked scores, foil pinholes, lamination bubbles, scuffing in packing, edge paint wicking. Decide which group a defect belongs to and you know whether to call the designer, the printer, or the die shop and finisher." data-fr="Les trois familles n'ont pas le même responsable, et les mélanger ne produit que des reproches. Prépresse : fond perdu inférieur à 3 mm, fichier RVB, logo agrandi depuis une image bitmap, filets sous 0,25 pt, absence de recouvrement. Presse : pâtés, engraissement, repérage, gain de point, fantôme, maculage. Finition : encoches de découpe, pli craquelé, piqûres de dorure, bulles de pelliculage, rayures à l'emballage, diffusion de la peinture de chant. Identifier la famille évite d'appeler le graphiste quand le problème vient de la forme de découpe." data-es="Los tres grupos tienen responsables distintos y mezclarlos solo produce reproches. Preprensa: sangrado menor de 3 mm, archivo RGB, logo ampliado desde un mapa de bits, filetes por debajo de 0,25 pt, sin sobreimpresión. Prensa: manchas, entintado del fondo, registro, ganancia de punto, fantasma, repintado. Postprensa: muescas de troquel, pliegue agrietado, poros de estampado, burbujas de laminado, roces al embalar, sangrado de la pintura de canto. Saber a qué grupo pertenece el defecto te dice a quién llamar." data-ja="3分類はそれぞれ担当が違い、混ぜると責任の押し付け合いになります。プリプレス：塗り足し 3 mm 未満、RGB データ、ビットマップの拡大ロゴ、0.25 pt 未満の細線、トラップ未処理。印刷：ゴミ付き、地汚れ、見当ズレ、ドットゲイン、ゴースト、裏移り。後加工：型抜きの欠け、折り割れ、箔のピンホール、ラミネートの気泡、梱包時の擦れ、小口塗りの滲み。どの分類かを決めれば、デザイナー・印刷会社・抜き加工屋のどこに連絡すべきか分かります。" data-ko="세 분류는 담당이 다르고 섞으면 책임 공방만 남습니다. 프리프레스: 도련 3 mm 미만, RGB 데이터, 비트맵을 확대한 로고, 0.25 pt 미만 가는 선, 트래핑 미처리. 인쇄: 히키, 바탕 번짐, 겹침 어긋남, 도트 게인, 고스트, 뒷묻음. 후가공: 다이컷 결손, 접힌 자리 갈라짐, 박 핀홀, 라미네이팅 기포, 포장 중 긁힘, 모서리 도색 번짐. 어느 분류인지 정하면 디자이너, 인쇄사, 다이컷·후가공 중 누구에게 연락할지 정해집니다.">三類各有各的責任人，混在一起談只會互相推。印前：出血少於 3 mm、圖稿是 RGB、小字用點陣圖放大、細線低於 0.25 pt、沒有做補漏白。機上：墨屎、糊版、套印不準、網點擴大、鬼影、背面粘髒。印後：模切豁口、壓線裂、燙金針孔、覆膜氣泡、裝箱刮花、邊油滲邊。先確定是哪一類，才知道該找設計、印刷廠，還是模切與後道。</p>
+
+      <h2 data-zh="二、六種會真的遇到的缺陷" data-en="2. The Six You Will Actually Meet" data-fr="2. Les six défauts que l'on rencontre vraiment" data-es="2. Los seis que de verdad aparecen" data-ja="2. 実際に遭遇する6つの不良" data-ko="2. 실제로 만나는 여섯 가지 불량">二、六種會真的遇到的缺陷</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th data-zh="缺陷" data-en="Defect" data-fr="Défaut" data-es="Defecto" data-ja="不良" data-ko="불량">缺陷</th>
+
+            <th data-zh="成因" data-en="Cause" data-fr="Cause" data-es="Causa" data-ja="原因" data-ko="원인">成因</th>
+
+            <th data-zh="對策" data-en="Fix" data-fr="Remède" data-es="Solución" data-ja="対策" data-ko="대책">對策</th>
+
+            <th data-zh="責任方" data-en="Owner" data-fr="Responsable" data-es="Responsable" data-ja="担当" data-ko="담당">責任方</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td data-zh="墨屎（白點、髒點）" data-en="Hickey (white spot, dirt)" data-fr="Pâté (point blanc, salissure)" data-es="Mancha (punto blanco, suciedad)" data-ja="ゴミ付き（白抜け・汚れ）" data-ko="히키(흰 점, 오점)">墨屎（白點、髒點）</td>
+
+            <td data-zh="橡皮布或版上沾紙粉、乾墨皮；濕度低於 40% 時暴增" data-en="Paper dust or dried ink skin on the blanket or plate, far worse below 40% RH" data-fr="Poussière de papier ou peau d'encre sèche sur le blanchet ou la plaque, bien pire sous 40 % d'HR" data-es="Polvo de papel o piel de tinta seca en la mantilla o la plancha, mucho peor por debajo del 40 % de HR" data-ja="ブランケットや版に付いた紙粉・乾いたインキ皮。湿度 40% 未満で急増" data-ko="블랭킷이나 판에 붙은 종이 먼지·마른 잉크 껍질. 습도 40% 미만에서 급증">橡皮布或版上沾紙粉、乾墨皮；濕度低於 40% 時暴增</td>
+
+            <td data-zh="每 500 張擦一次橡皮布、墨斗加濾網、車間濕度控在 50–60%" data-en="Wipe the blanket every 500 sheets, filter the ink, hold the room at 50 to 60% RH" data-fr="Essuyer le blanchet toutes les 500 feuilles, filtrer l'encre, maintenir 50 à 60 % d'HR" data-es="Limpiar la mantilla cada 500 hojas, filtrar la tinta, mantener 50 a 60 % de HR" data-ja="500枚ごとにブランケットを拭く、インキは濾す、湿度は 50〜60%" data-ko="500장마다 블랭킷 닦기, 잉크 여과, 습도 50~60% 유지">每 500 張擦一次橡皮布、墨斗加濾網、車間濕度控在 50–60%</td>
+
+            <td data-zh="印刷廠" data-en="Printer" data-fr="Imprimeur" data-es="Impresor" data-ja="印刷会社" data-ko="인쇄사">印刷廠</td>
+
+          </tr>
+
+          <tr>
+
+            <td data-zh="背面粘髒（背印）" data-en="Set-off (ink on the reverse)" data-fr="Maculage (encre au verso)" data-es="Repintado (tinta al reverso)" data-ja="裏移り" data-ko="뒷묻음">背面粘髒（背印）</td>
+
+            <td data-zh="墨層過厚、未噴粉、成品還熱就堆疊或覆膜" data-en="Ink film too heavy, no spray powder, sheets stacked or laminated while still warm" data-fr="Couche d'encre trop lourde, pas de poudre, feuilles empilées ou pelliculées encore chaudes" data-es="Película de tinta excesiva, sin polvo antimaculante, hojas apiladas o laminadas aún calientes" data-ja="インキ膜が厚い、パウダーなし、温かいうちに積載・ラミネート" data-ko="잉크 막 두꺼움, 파우더 미살포, 뜨거울 때 적재·라미네이팅">墨層過厚、未噴粉、成品還熱就堆疊或覆膜</td>
+
+            <td data-zh="降墨量、開噴粉、堆疊前過風扇降溫；覆膜前靜置 12 小時" data-en="Cut the ink film, switch the spray powder on, cool the stack before it is boxed, and rest 12 hours before laminating" data-fr="Réduire l'encre, activer la poudre, refroidir la pile avant mise en boîte et laisser reposer 12 heures avant pelliculage" data-es="Bajar la tinta, activar el polvo, enfriar la pila antes de encajonar y reposar 12 horas antes de laminar" data-ja="インキ量を落とす、パウダーを入れる、箱詰め前に冷却し、ラミネート前は12時間静置" data-ko="잉크량 줄이기, 파우더 살포, 상자 포장 전 냉각, 라미네이팅 전 12시간 안정화">降墨量、開噴粉、堆疊前過風扇降溫；覆膜前靜置 12 小時</td>
+
+            <td data-zh="印刷廠" data-en="Printer" data-fr="Imprimeur" data-es="Impresor" data-ja="印刷会社" data-ko="인쇄사">印刷廠</td>
+
+          </tr>
+
+          <tr>
+
+            <td data-zh="套印不準" data-en="Misregistration" data-fr="Défaut de repérage" data-es="Falta de registro" data-ja="見当ズレ" data-ko="겹침 어긋남">套印不準</td>
+
+            <td data-zh="紙張伸縮、濕度變化、版張力不均；薄紙更明顯" data-en="Paper movement, humidity swings, uneven plate tension; worse on light stock" data-fr="Déplacement du papier, variation d'humidité, tension de plaque inégale ; pire sur papier léger" data-es="Movimiento del papel, cambios de humedad, tensión desigual de plancha; peor en papel ligero" data-ja="紙の伸縮、湿度変化、版面の張力むら。薄手ほど顕著" data-ko="종이 신축, 습도 변화, 판 장력 불균일. 얇은 지일수록 심함">紙張伸縮、濕度變化、版張力不均；薄紙更明顯</td>
+
+            <td data-zh="同批紙先晾 24 小時、做 0.1 mm 補漏白、十字規矩印刷在裁切線外" data-en="Condition the paper 24 hours, add 0.1 mm trapping, print register marks outside the trim" data-fr="Laisser le papier s'acclimater 24 heures, prévoir 0,1 mm de recouvrement, imprimer les repères hors format" data-es="Acondicionar el papel 24 horas, añadir 0,1 mm de sobreimpresión, imprimir marcas de registro fuera del corte" data-ja="同ロット紙を24時間なじませる、0.1 mm のトラップ、トンボは仕上がり外に印刷" data-ko="같은 로트 종이 24시간 순화, 0.1 mm 트래핑, 재단선 밖에 규격 표시 인쇄">同批紙先晾 24 小時、做 0.1 mm 補漏白、十字規矩印刷在裁切線外</td>
+
+            <td data-zh="印刷廠" data-en="Printer" data-fr="Imprimeur" data-es="Impresor" data-ja="印刷会社" data-ko="인쇄사">印刷廠</td>
+
+          </tr>
+
+          <tr>
+
+            <td data-zh="糊版（地污）" data-en="Scumming (tinted background)" data-fr="Engraissement du fond" data-es="Entintado del fondo" data-ja="地汚れ" data-ko="바탕 번짐">糊版（地污）</td>
+
+            <td data-zh="水斗液太弱、墨太稀、滾筒壓力不對，非圖文區上墨" data-en="Fountain solution too weak, ink too thin, wrong roller pressure, so the non-image area takes ink" data-fr="Solution de mouillage trop faible, encre trop fluide, pression de rouleau incorrecte" data-es="Solución de mojado demasiado débil, tinta muy fluida, presión de rodillo incorrecta" data-ja="湿し水が弱い、インキが柔らかい、ローラ圧が不適切で非画線部が汚れる" data-ko="습수액이 약함, 잉크가 묽음, 롤러 압력 부적정으로 비화선부 착묵">水斗液太弱、墨太稀、滾筒壓力不對，非圖文區上墨</td>
+
+            <td data-zh="校 pH 與導電率、換墨、重新設定輥壓；不要靠加大水量硬壓" data-en="Check pH and conductivity, change the ink, reset the roller nip; do not just flood more water" data-fr="Contrôler pH et conductivité, changer l'encre, régler le pincement ; ne pas se contenter d'augmenter l'eau" data-es="Controlar pH y conductividad, cambiar tinta, ajustar el pellizco; no basta con subir el agua" data-ja="pH と導電率を測り、インキを替え、ニップを再設定。水量を増やすだけでは解決しない" data-ko="pH와 전도도 확인, 잉크 교체, 닙 재설정. 물량만 늘리는 것으로는 해결되지 않음">校 pH 與導電率、換墨、重新設定輥壓；不要靠加大水量硬壓</td>
+
+            <td data-zh="印刷廠" data-en="Printer" data-fr="Imprimeur" data-es="Impresor" data-ja="印刷会社" data-ko="인쇄사">印刷廠</td>
+
+          </tr>
+
+          <tr>
+
+            <td data-zh="模切豁口" data-en="Die nick" data-fr="Encoche de découpe" data-es="Muesca de troquel" data-ja="型抜きの欠け" data-ko="다이컷 결손">模切豁口</td>
+
+            <td data-zh="刀口崩刃、墊版不平、紙疊過高；落在圓角與吊牌孔最常見" data-en="Chipped die edge, uneven counter, stack too high; most common at rounded corners and the hole" data-fr="Lame ébréchée, contre-partie inégale, pile trop haute ; surtout aux angles arrondis et au perçage" data-es="Filo desportillado, contrapartida desigual, pila demasiado alta; sobre todo en esquinas y taladro" data-ja="刃こぼれ、台板の不陸、積みが高い。角丸と穴で最も多い" data-ko="날 결손, 받침판 불균일, 적재 과다. 둥근 모서리와 구멍에서 가장 흔함">刀口崩刃、墊版不平、紙疊過高；落在圓角與吊牌孔最常見</td>
+
+            <td data-zh="換刀、重做墊版、每 500 張抽 10 張對光看輪廓與孔位" data-en="Replace the die, re-make the counter, and pull 10 sheets every 500 to check outline and hole position against the light" data-fr="Changer la forme, refaire la contre-partie, prélever 10 feuilles tous les 500 et contrôler contour et perçage à contre-jour" data-es="Cambiar la forma, rehacer la contrapartida, sacar 10 hojas cada 500 y revisar contorno y taladro a contraluz" data-ja="型を替え、台板を作り直し、500枚ごとに10枚抜き取って透過光で輪郭と穴位置を確認" data-ko="칼 교체, 받침판 재제작, 500장마다 10장을 샘플링해 투과광으로 윤곽과 구멍 위치 확인">換刀、重做墊版、每 500 張抽 10 張對光看輪廓與孔位</td>
+
+            <td data-zh="模切" data-en="Die shop" data-fr="Façonnage" data-es="Troquelado" data-ja="抜き加工" data-ko="다이컷">模切</td>
+
+          </tr>
+
+          <tr>
+
+            <td data-zh="燙金針孔、邊緣毛邊" data-en="Foil pinholes, ragged edge" data-fr="Piqûres de dorure, bord effrangé" data-es="Poros de estampado, borde deshilachado" data-ja="箔のピンホール・縁の毛羽" data-ko="박 핀홀, 테두리 거스러미">燙金針孔、邊緣毛邊</td>
+
+            <td data-zh="箔溫不足、壓力不夠、版面有塵、襯墊太軟" data-en="Foil too cold, pressure too low, dust on the plate, packing too soft" data-fr="Feuille trop froide, pression insuffisante, poussière sur la forme, tympan trop mou" data-es="Papel de estampado frío, presión baja, polvo en la forma, tympan muy blando" data-ja="箔の温度不足、圧力不足、版の汚れ、下敷きが柔らかすぎる" data-ko="박 온도 부족, 압력 부족, 판 오염, 받침이 너무 무름">箔溫不足、壓力不夠、版面有塵、襯墊太軟</td>
+
+            <td data-zh="每批先試 20 張定溫定壓、無塵布擦版、粗體字別做在 0.3 mm 以下的細線" data-en="Proof 20 sheets per run to set heat and pressure, wipe the plate with a lint-free cloth, and keep fine type off hairlines below 0.3 mm" data-fr="Tirer 20 feuilles par série pour régler chaleur et pression, essuyer la forme avec un chiffon non pelucheux, éviter les filets sous 0,3 mm" data-es="Tirar 20 hojas por tirada para fijar calor y presión, limpiar la forma con paño sin pelusa, evitar filetes bajo 0,3 mm" data-ja="ロットごとに20枚試し刷りで温度と圧を決め、版は不織布で拭き、0.3 mm 未満の細線に箔は使わない" data-ko="로트마다 20장 시험 인쇄로 온도와 압력 결정, 판은 보푸라기 없는 천으로 닦기, 0.3 mm 미만 가는 선에 박 사용 금지">每批先試 20 張定溫定壓、無塵布擦版、粗體字別做在 0.3 mm 以下的細線</td>
+
+            <td data-zh="燙金" data-en="Foil department" data-fr="Dorure" data-es="Estampado" data-ja="箔押し" data-ko="박">燙金</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <p data-zh="其中兩項同時是合規問題。貼在衣服上的吊牌，其油墨與塗層受 REACH (EC) 1907/2006 對特定物質的限制，歐美買家近年會直接要求供應商聲明；墨屎是外觀問題，但一層永遠不乾的厚墨，在潮濕貨櫃裡是轉印到服裝上的風險。要求印刷廠用低遷移油墨與水性上光，並在報價單上註明，比事後辯論便宜。" data-en="Two of these are also compliance questions. Inks and coatings on a tag that hangs against a garment fall under the restrictions on certain substances in REACH (EC) 1907/2006, and buyers in Europe and North America increasingly ask the supplier for a declaration. A hickey is cosmetic; an ink film that never dries is a transfer risk onto the garment inside a humid container. Specify low-migration inks and an aqueous coating on the quotation, and the argument never starts." data-fr="Deux de ces défauts sont aussi des questions de conformité. Les encres et vernis d'une étiquette suspendue à un vêtement relèvent des restrictions de substances du règlement REACH (CE) 1907/2006, et les acheteurs européens et nord-américains demandent de plus en plus une déclaration au fournisseur. Un pâté est esthétique ; une couche d'encre qui ne sèche jamais est un risque de transfert sur le vêtement dans un conteneur humide. Exigez des encres à faible migration et un vernis aqueux dès le devis : le débat n'aura pas lieu." data-es="Dos de estos defectos son además cuestiones de cumplimiento. Las tintas y barnices de una etiqueta que cuelga de una prenda entran en las restricciones de sustancias del REACH (CE) 1907/2006, y los compradores europeos y norteamericanos piden cada vez más una declaración al proveedor. Una mancha es estética; una capa de tinta que nunca seca es un riesgo de transferencia a la prenda dentro de un contenedor húmedo. Exige tintas de baja migración y barniz acuoso desde el presupuesto: la discusión no llegará a empezar." data-ja="このうち2つは適合性の問題でもあります。衣料に吊るされるタグのインキとコーティングは REACH (EC) 1907/2006 の特定物質制限の対象で、欧米のバイヤーは近年サプライヤー宣言を求めます。ゴミ付きは外観ですが、乾ききらない厚いインキ膜は湿ったコンテナ内で衣料への転写リスクになります。低移行インキと水性ニスを見積段階で指定すれば、議論自体が起きません。" data-ko="이 중 두 가지는 적합성 문제이기도 합니다. 의류에 걸리는 행택의 잉크와 코팅은 REACH (EC) 1907/2006의 특정 물질 제한 대상이며, 유럽과 북미 바이어는 최근 공급사 선언을 요구합니다. 히키는 외관 문제이지만 마르지 않는 두꺼운 잉크 막은 습한 컨테이너 안에서 의류로 전이될 위험입니다. 저이행 잉크와 수성 바니시를 견적 단계에서 지정하면 논쟁 자체가 시작되지 않습니다.">其中兩項同時是合規問題。貼在衣服上的吊牌，其油墨與塗層受 REACH (EC) 1907/2006 對特定物質的限制，歐美買家近年會直接要求供應商聲明；墨屎是外觀問題，但一層永遠不乾的厚墨，在潮濕貨櫃裡是轉印到服裝上的風險。要求印刷廠用低遷移油墨與水性上光，並在報價單上註明，比事後辯論便宜。</p>
+
+      <h2 data-zh="三、燙金、壓凹與邊緣" data-en="3. Foil, Emboss and the Edge" data-fr="3. Dorure, gaufrage et chant" data-es="3. Estampado, relieve y canto" data-ja="3. 箔・エンボス・小口" data-ko="3. 박, 엠보, 모서리">三、燙金、壓凹與邊緣</h2>
+
+      <p data-zh="燙金的品質由三個變數決定：溫度、壓力、停留時間。三者任何一個偏低，箔就只附著 60%——看起來金亮，指甲一刮就掉，這在驗貨時幾乎看不出來，要等客人穿一週。壓凹靠的是紙的厚度：300 g/m² 的紙板做 0.15 mm 的盲壓，輪廓乾淨；300 g/m² 以下建議加一道底模，否則背面會透出。邊油（側邊上色）要控在 0.3–0.5 mm 的滲入深度，太深會吃掉吊牌孔周圍的紙強度，掛重一點的吊牌就從孔邊裂開。" data-en="Foil quality rests on three variables: heat, pressure and dwell. Let any one of them fall short and the foil bonds at sixty percent — bright to the eye, gone under a fingernail, and almost impossible to catch at inspection because it fails a week into wear. Embossing depends on the board: 300 g/m² takes a 0.15 mm blind relief with a clean edge, while lighter board needs a counter die or the reverse side shows the shape. Edge painting should wick 0.3 to 0.5 mm into the sheet; deeper than that and it eats the paper strength around the hole, so a heavier tag splits from the punch." data-fr="La qualité de la dorure tient à trois variables : chaleur, pression, temps de contact. Si l'une faiblit, la feuille n'adhère qu'à soixante pour cent — brillante à l'œil, partie sous l'ongle, et presque indétectable en contrôle parce qu'elle lâche après une semaine de port. Le gaufrage dépend du carton : 300 g/m² accepte un relief à sec de 0,15 mm avec un contour net ; plus léger, il faut une contre-forme, sinon le revers marque. La peinture de chant doit pénétrer de 0,3 à 0,5 mm ; plus profond, elle affaiblit le papier autour du perçage et l'étiquette se fend au trou." data-es="La calidad del estampado depende de tres variables: calor, presión y tiempo de contacto. Si una falla, el foil solo adhiere al sesenta por ciento: brillante a la vista, se va con la uña y casi no se detecta en inspección porque falla a la semana de uso. El relieve depende del cartón: 300 g/m² admite un relieve en seco de 0,15 mm con borde limpio; por debajo hace falta contramolde o el reverso marca. La pintura de canto debe penetrar 0,3 a 0,5 mm; más profundo debilita el papel alrededor del taladro y la etiqueta se raja desde el agujero." data-ja="箔の品質は温度・圧力・圧着時間の3変数で決まります。どれかが不足すると箔は6割しか定着せず、目には明るく見えても爪で剥がれ、しかも着用1週間後に破綻するため検品では見つけにくい。エンボスは紙の厚み次第で、300 g/m² なら 0.15 mm の空押しで輪郭がきれいに出ます。それより薄い場合は裏板が必要で、なければ裏面に形が透けます。小口塗りは 0.3〜0.5 mm の染み込みに抑えてください。深いと穴周辺の紙強度を奪い、重いタグは穴から裂けます。" data-ko="박 품질은 온도, 압력, 접촉 시간 세 변수로 결정됩니다. 하나라도 부족하면 박이 60%만 정착해 눈에는 밝지만 손톱에 벗겨지고, 착용 일주일 뒤에 문제가 드러나 검사에서 잡기 어렵습니다. 엠보는 지의 두께에 달려 300 g/m²는 0.15 mm 블라인드 엠보로 윤곽이 깨끗하지만, 더 얇으면 받침형이 필요하고 없으면 뒷면에 형이 비칩니다. 모서리 도색은 0.3~0.5 mm 침투로 제한하십시오. 더 깊으면 구멍 주변 지의 강도를 잡아먹어 무거운 행택은 구멍에서 찢어집니다.">燙金的品質由三個變數決定：溫度、壓力、停留時間。三者任何一個偏低，箔就只附著 60%——看起來金亮，指甲一刮就掉，這在驗貨時幾乎看不出來，要等客人穿一週。壓凹靠的是紙的厚度：300 g/m² 的紙板做 0.15 mm 的盲壓，輪廓乾淨；300 g/m² 以下建議加一道底模，否則背面會透出。邊油（側邊上色）要控在 0.3–0.5 mm 的滲入深度，太深會吃掉吊牌孔周圍的紙強度，掛重一點的吊牌就從孔邊裂開。</p>
+
+      <h2 data-zh="四、重印一致性：顏色與可讀性" data-en="4. Consistency Across Runs: Colour and Legibility" data-fr="4. Constance entre tirages : couleur et lisibilité" data-es="4. Consistencia entre tiradas: color y legibilidad" data-ja="4. 増刷の一致性：色と可読性" data-ko="4. 재판 일관성: 색과 가독성">四、重印一致性：顏色與可讀性</h2>
+
+      <p data-zh="第二批量印出來不像第一批，是最常見也最難吵的爭議。可控的做法是三個數字：專色 ΔE ≤ 2、四色 ΔE ≤ 3（D50 光源、2 度視角、量三個點取平均）；紙張同批號；油墨同批號並留樣。除此之外，請留一份雙方簽字的「金樣」，量產與重印都以它為準——沒有金樣時，討論會變成兩台螢幕的比對。" data-en="A second run that does not match the first is the most common dispute and the hardest to win. Three numbers make it manageable: ΔE of 2 or less for spot colour and 3 or less for process colour, measured under D50 at a 2 degree observer and averaged over three points; the same paper lot; and the same ink batch, with a retained sample. Beyond that, keep a signed golden sample and measure production and reprints against it, because without one the discussion becomes a comparison of two monitors." data-fr="Un deuxième tirage qui ne ressemble pas au premier est le litige le plus fréquent et le plus difficile à trancher. Trois chiffres le rendent gérable : un ΔE inférieur ou égal à 2 en couleur directe et à 3 en quadri, mesuré en D50 sous observateur 2 degrés et moyenné sur trois points ; le même lot de papier ; le même lot d'encre, avec un échantillon conservé. Surtout, gardez un bon à tirer signé et mesurez production et retirages par rapport à lui : sans lui, la discussion se réduit à comparer deux écrans." data-es="Una segunda tirada que no se parece a la primera es la disputa más común y la más difícil de ganar. Tres cifras la hacen manejable: ΔE de 2 o menos en color directo y 3 o menos en cuatricromía, medido en D50 con observador de 2 grados y promediado en tres puntos; el mismo lote de papel; y el mismo lote de tinta, con una muestra conservada. Sobre todo, guarda una prueba firmada de referencia y mide producción y reimpresiones contra ella: sin ella, la discusión acaba comparando dos monitores." data-ja="2回目の増刷が1回目と合わないのは最も多い争点で、最も勝ちにくい問題です。3つの数値で管理できます。特色は ΔE 2 以下、プロセス色は 3 以下（D50 光源・2度視野・3点の平均）、紙は同一ロット、インキも同一ロットで見本を保管。加えて、双方署名の校正見本（ゴールデンサンプル）を残し、量産も増刷もそれに合わせて測定します。なければ議論は2台のモニターの比較になります。" data-ko="두 번째 인쇄가 첫 번째와 다른 것은 가장 흔하고 가장 이기기 어려운 분쟁입니다. 세 수치로 관리합니다. 별색은 ΔE 2 이하, 4도는 3 이하(D50 광원, 2도 시야, 세 지점 평균), 같은 로트의 종이, 같은 로트의 잉크와 보관 시료. 무엇보다 양측 서명이 있는 골든 샘플을 남기고 양산과 재판을 그것에 맞춰 측정하십시오. 없으면 논의는 모니터 두 대의 비교로 끝납니다.">第二批量印出來不像第一批，是最常見也最難吵的爭議。可控的做法是三個數字：專色 ΔE ≤ 2、四色 ΔE ≤ 3（D50 光源、2 度視角、量三個點取平均）；紙張同批號；油墨同批號並留樣。除此之外，請留一份雙方簽字的「金樣」，量產與重印都以它為準——沒有金樣時，討論會變成兩台螢幕的比對。</p>
+
+      <p data-zh="另一件常被忽略的事是可讀性——它是合規要求，不是美感偏好。吊牌上若印纖維成分、洗護符號、產地或售價，這些資訊在歐洲受法規 (EU) 1007/2011 規範，在日本受家庭用品品質表示法與景品表示法規範，在韓國受 표시광고법 規範；字太小、對比不足或被油墨糊掉，等於沒有標示。實務門檻：中文與日文字高不低於 1.8 mm，拉丁字母不低於 1.5 mm，深底反白需加粗一級，並在 30 cm 距離、500 lux 下確認可讀。" data-en="The other thing that gets ignored is legibility, which is a compliance requirement rather than a matter of taste. If a tag carries fibre composition, care symbols, country of origin or a retail price, those statements are governed in Europe by regulation 1007/2011, in Japan by the household goods quality labelling law and the premiums and representations law, and in Korea by the fair labelling and advertising act; type that is too small, too low in contrast or filled in by ink is a missing statement. Practical floor: 1.8 mm minimum character height for Chinese and Japanese, 1.5 mm for Latin, one weight heavier when reversed out of a dark background, and a check at 30 cm under 500 lux." data-fr="L'autre point négligé est la lisibilité, qui relève de la conformité et non du goût. Si l'étiquette porte la composition, les symboles d'entretien, l'origine ou un prix, ces mentions sont encadrées en Europe par le règlement (UE) 1007/2011, au Japon par la loi sur l'étiquetage de qualité des articles ménagers et la loi sur les primes et représentations, en Corée par la loi sur l'étiquetage et la publicité ; un texte trop petit, trop peu contrasté ou bouché par l'encre équivaut à une mention absente. Seuils pratiques : 1,8 mm de hauteur minimale pour le chinois et le japonais, 1,5 mm pour le latin, une graisse de plus en réserve sur fond sombre, et un contrôle à 30 cm sous 500 lux." data-es="Lo otro que se ignora es la legibilidad, que es requisito de cumplimiento y no cuestión de gusto. Si la etiqueta lleva composición, símbolos de cuidado, origen o precio, esas menciones se rigen en Europa por el Reglamento (UE) 1007/2011, en Japón por la ley de etiquetado de calidad de artículos domésticos y la ley de primas y representaciones, y en Corea por la ley de etiquetado y publicidad; un texto demasiado pequeño, con poco contraste o cerrado por la tinta equivale a una mención ausente. Umbrales prácticos: 1,8 mm de altura mínima para chino y japonés, 1,5 mm para latino, un peso más en reserva sobre fondo oscuro y comprobación a 30 cm con 500 lux." data-ja="見落とされがちなもう一点は可読性で、これは美観ではなく適合性の要件です。タグに繊維組成・取扱い記号・原産地・価格を印刷する場合、欧州では規則 (EU) 1007/2011、日本では家庭用品品質表示法と景品表示法、韓国では 표시광고법 の対象になります。文字が小さすぎる、コントラストが不足、インキで潰れている場合は「表示がない」のと同じです。実務の下限は、漢字・かなで字高 1.8 mm 以上、ラテン文字で 1.5 mm 以上、濃地の白抜きは一段太くし、30 cm・500 lux で確認することです。" data-ko="자주 무시되는 또 하나는 가독성이며, 이는 미관이 아니라 적합성 요건입니다. 행택에 섬유 조성, 취급 기호, 원산지, 판매가를 인쇄한다면 유럽에서는 규정 (EU) 1007/2011, 일본에서는 家庭用品品質表示法(가정용품 품질표시법)과 景品表示法(경품표시법), 한국에서는 표시광고법의 적용을 받습니다. 글자가 너무 작거나 대비가 부족하거나 잉크로 메워지면 표시가 없는 것과 같습니다. 실무 하한은 한자·가나 1.8 mm 이상, 라틴 문자 1.5 mm 이상, 어두운 바탕의 반전 인쇄는 한 단계 굵게, 30 cm·500 lux에서 확인하는 것입니다.">另一件常被忽略的事是可讀性——它是合規要求，不是美感偏好。吊牌上若印纖維成分、洗護符號、產地或售價，這些資訊在歐洲受法規 (EU) 1007/2011 規範，在日本受家庭用品品質表示法與景品表示法規範，在韓國受 표시광고법 規範；字太小、對比不足或被油墨糊掉，等於沒有標示。實務門檻：中文與日文字高不低於 1.8 mm，拉丁字母不低於 1.5 mm，深底反白需加粗一級，並在 30 cm 距離、500 lux 下確認可讀。</p>
+
+      <h2 data-zh="五、寫進訂單的驗收條款" data-en="5. The Inspection Clause for Your Order" data-fr="5. La clause de réception à inscrire" data-es="5. La cláusula de recepción" data-ja="5. 発注書に書く検査条項" data-ko="5. 발주서에 넣을 검사 조항">五、寫進訂單的驗收條款</h2>
+
+      <p data-zh="一段能用的條款有五句：① 抽樣依 ISO 2859-1，一般檢驗水準 II，主要缺陷 AQL 2.5、次要缺陷 4.0；② 缺陷分級——條碼、價格、款式印錯為致命缺陷，ΔE 大於 3、燙金缺漏、模切偏移超過 0.5 mm 為主要缺陷，文字外 1 mm 內的墨屎為次要；③ 光源 D50、照度 500 lux、距離 30–40 cm；④ 每 10,000 張留 5 張簽字樣，保存 12 個月；⑤ 重印以金樣為準，超標由印刷廠負擔重做運費。把這五句寫進採購單，等於把爭議提前結束。" data-en="A clause that works has five sentences. Sampling per ISO 2859-1, general inspection level II, AQL 2.5 for major and 4.0 for minor defects. Defect classes: a wrong barcode, price or variant is critical; ΔE above 3, missing foil or a die cut off by more than 0.5 mm is major; a hickey under 1 mm outside the text is minor. Viewing under D50 at 500 lux from 30 to 40 cm. Five signed pieces retained per 10,000 and kept for twelve months. And reprints measured against the golden sample, with the printer carrying the freight on a remake. Five sentences in the purchase order end the argument early." data-fr="Une clause utilisable tient en cinq phrases. Échantillonnage selon ISO 2859-1, niveau II, AQL 2,5 pour les défauts majeurs et 4,0 pour les mineurs. Classes de défauts : code-barres, prix ou variante erronés sont critiques ; un ΔE supérieur à 3, une dorure manquante ou une découpe décalée de plus de 0,5 mm sont majeurs ; un pâté de moins de 1 mm hors du texte est mineur. Observation en D50 à 500 lux à 30–40 cm. Cinq pièces signées conservées par 10 000, gardées douze mois. Et retirages mesurés sur le bon à tirer, le transport de la reprise étant à la charge de l'imprimeur. Cinq phrases au bon de commande closent le débat plus tôt." data-es="Una cláusula útil tiene cinco frases. Muestreo según ISO 2859-1, nivel de inspección general II, AQL 2,5 para defectos mayores y 4,0 para menores. Clases: código de barras, precio o variante erróneos son críticos; ΔE superior a 3, falta de estampado o troquel desplazado más de 0,5 mm son mayores; una mancha de menos de 1 mm fuera del texto es menor. Observación en D50 a 500 lux y 30–40 cm. Cinco piezas firmadas retenidas por cada 10.000, guardadas doce meses. Y reimpresiones medidas contra la prueba de referencia, con el transporte de la repetición a cargo del impresor. Cinco frases en el pedido cierran la discusión pronto." data-ja="使える条項は5文で足ります。抜き取りは ISO 2859-1、一般検査水準 II、主要欠陥 AQL 2.5、軽微欠陥 4.0。欠陥区分は、バーコード・価格・型番の誤りを致命、ΔE 3 超・箔抜け・型抜き 0.5 mm 超のズレを主要、文字外 1 mm 未満のゴミ付きを軽微とする。観察条件は D50、500 lux、30〜40 cm。10,000 枚ごとに署名見本を5枚、12か月保管。増刷は校正見本に照らして判定し、やり直しの輸送費は印刷会社負担。この5文を発注書に入れれば、争いは早く終わります。" data-ko="쓸 수 있는 조항은 다섯 문장입니다. 샘플링은 ISO 2859-1, 일반검사 수준 II, 주요 결함 AQL 2.5, 경미 결함 4.0. 결함 등급은 바코드·가격·모델 오기재를 치명, ΔE 3 초과·박 누락·다이컷 0.5 mm 초과 어긋남을 주요, 문자 밖 1 mm 미만 히키를 경미로 합니다. 관찰 조건은 D50, 500 lux, 30~40 cm. 10,000장마다 서명 시료 5장을 12개월 보관. 재판은 골든 샘플 대비로 판정하고 재작업 운송비는 인쇄사 부담. 이 다섯 문장을 발주서에 넣으면 분쟁이 일찍 끝납니다.">一段能用的條款有五句：① 抽樣依 ISO 2859-1，一般檢驗水準 II，主要缺陷 AQL 2.5、次要缺陷 4.0；② 缺陷分級——條碼、價格、款式印錯為致命缺陷，ΔE 大於 3、燙金缺漏、模切偏移超過 0.5 mm 為主要缺陷，文字外 1 mm 內的墨屎為次要；③ 光源 D50、照度 500 lux、距離 30–40 cm；④ 每 10,000 張留 5 張簽字樣，保存 12 個月；⑤ 重印以金樣為準，超標由印刷廠負擔重做運費。把這五句寫進採購單，等於把爭議提前結束。</p>
+
+      <div class="callout" data-zh="<strong>數位打樣不能代替上機打樣。</strong>螢幕與數位樣看不到燙金的光澤、壓凹的深度、覆膜的氣泡與邊油的滲邊。只有上機打樣（或首件確認）能簽字，簽樣時請在自然光與燈箱下各看一次。" data-en="<strong>A digital proof cannot stand in for a press proof.</strong> Neither screen nor inkjet shows foil gloss, emboss depth, lamination bubbles or edge paint wicking. Only a press proof, or a signed first-off, can be approved, and it should be checked once in daylight and once in the light box." data-fr="<strong>Une épreuve numérique ne remplace pas un bon à tirer.</strong> Ni l'écran ni le jet d'encre ne montrent le brillant de la dorure, la profondeur du gaufrage, les bulles de pelliculage ou la diffusion du chant. Seul un tirage sur presse, ou un premier feuille signé, peut être validé, et il se contrôle une fois à la lumière du jour, une fois en cabine." data-es="<strong>Una prueba digital no sustituye a una prueba de máquina.</strong> Ni la pantalla ni la inyección muestran el brillo del estampado, la profundidad del relieve, las burbujas de laminado o el sangrado del canto. Solo una prueba en prensa, o un primer pliego firmado, se puede aprobar, y conviene revisarla una vez con luz natural y otra en cabina." data-ja="<strong>デジタル校正は本機校正の代わりになりません。</strong>モニターもインクジェットも、箔の光沢、エンボスの深さ、ラミネートの気泡、小口塗りの滲みを再現しません。承認できるのは本機校正、または署名した初品のみで、自然光とライトボックスで各1回確認してください。" data-ko="<strong>디지털 교정은 본기 교정을 대신하지 못합니다.</strong> 모니터와 잉크젯은 박의 광택, 엠보 깊이, 라미네이팅 기포, 모서리 도색 번짐을 보여주지 않습니다. 승인할 수 있는 것은 본기 교정 또는 서명한 초도품뿐이며, 자연광과 라이트박스에서 각각 한 번 확인하십시오."><strong>數位打樣不能代替上機打樣。</strong>螢幕與數位樣看不到燙金的光澤、壓凹的深度、覆膜的氣泡與邊油的滲邊。只有上機打樣（或首件確認）能簽字，簽樣時請在自然光與燈箱下各看一次。</div>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+
+      <h2 data-zh="相關文章" data-en="Related Articles" data-fr="Articles connexes" data-es="Artículos relacionados" data-ja="関連記事" data-ko="관련 글">相關文章</h2>
+      <ul>
+        <li><a href="index.html" data-zh="輔料 FAQ 全部文章" data-en="All trims FAQ articles" data-fr="Tous les articles FAQ" data-es="Todos los artículos de la FAQ" data-ja="副資材 FAQ の記事一覧" data-ko="부자재 FAQ 전체 글">輔料 FAQ 全部文章</a></li>
+        <li><a href="hang-tag-printing-methods.html" data-zh="吊牌印刷方式比較" data-en="Hang tag printing methods" data-fr="Méthodes d'impression d'étiquettes" data-es="Métodos de impresión de etiquetas" data-ja="タグ印刷方式の比較" data-ko="행택 인쇄 방식 비교">吊牌印刷方式比較</a></li>
+        <li><a href="hang-tag-color-management.html" data-zh="吊牌的顏色管理" data-en="Hang tag colour management" data-fr="Gestion de la couleur" data-es="Gestión del color" data-ja="タグの色管理" data-ko="행택 색상 관리">吊牌的顏色管理</a></li>
+        <li><a href="apparel-trims-aql-inspection-guide.html" data-zh="輔料的 AQL 抽檢怎麼做" data-en="AQL inspection for trims" data-fr="Contrôle AQL des accessoires" data-es="Inspección AQL de accesorios" data-ja="副資材の AQL 検査" data-ko="부자재 AQL 검사">輔料的 AQL 抽檢怎麼做</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p data-zh="需要以您的圖稿做燙金與壓凹的上機打樣嗎？" data-en="Want a press proof with your artwork in foil and emboss?" data-fr="Besoin d'un bon à tirer avec votre visuel en dorure et gaufrage ?" data-es="¿Quieres una prueba de máquina con tu arte en estampado y relieve?" data-ja="デザインで箔とエンボスの本機校正を作りますか。" data-ko="도안으로 박과 엠보를 적용한 본기 교정이 필요하십니까?">需要以您的圖稿做燙金與壓凹的上機打樣嗎？</p>
+        <a class="cta-btn" href="../contact.html" data-zh="索取上機打樣與缺陷樣本 →" data-en="Request a press proof and defect samples →" data-fr="Demander un bon à tirer et des échantillons de défauts →" data-es="Solicitar prueba de máquina y muestras de defectos →" data-ja="本機校正と不良見本を依頼 →" data-ko="본기 교정과 불량 샘플 요청 →">索取上機打樣與缺陷樣本 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-zh="泰閣包裝" data-fr="TAGE Emballages" data-es="TAGE Embalajes" data-en="TAGE Packaging" data-ja="泰閣包装" data-ko="TAGE 패키징">泰閣包裝</h4>
+        <p data-zh="專業服裝輔料與包裝印刷製造商，位於中國東莞。" data-fr="Fabricant professionnel d'accessoires vestimentaires, d'emballages et d'impression, situé à Dongguan, en Chine." data-es="Fabricante profesional de accesorios de vestir, embalajes e impresión, ubicado en Dongguan, China." data-en="Professional garment trims, packaging &amp; printing manufacturer in Dongguan, China." data-ja="中国東莞の専門的な衣料副資材・包装印刷メーカーです。" data-ko="중국 둥관에 위치한 전문 의류 부자재·포장 인쇄 제조사입니다.">專業服裝輔料與包裝印刷製造商，位於中國東莞。</p>
+      </div>
+      <div>
+        <h4 data-zh="產品" data-fr="Produits" data-es="Productos" data-en="Products" data-ja="製品" data-ko="제품">產品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags" data-zh="服裝吊牌" data-fr="Étiquettes suspendues" data-es="Etiquetas colgantes" data-en="Hang Tags" data-ja="衣料用タグ" data-ko="행택">服裝吊牌</a></li>
+          <li><a href="../products.html#wovenlabels" data-zh="織嘜 / 主嘜" data-fr="Labels tissés / Principaux" data-es="Etiquetas tejidas / Principales" data-en="Woven Labels" data-ja="織りラベル / メインラベル" data-ko="직조 라벨 / 메인 라벨">織嘜 / 主嘜</a></li>
+          <li><a href="../products.html#carelabels" data-zh="洗水標" data-fr="Étiquettes d'entretien" data-es="Etiquetas de cuidado" data-en="Care Labels" data-ja="洗濯表示ラベル" data-ko="세탁 표시 라벨">洗水標</a></li>
+          <li><a href="../products.html#bags" data-zh="包裝袋" data-fr="Sacs d'emballage" data-es="Bolsas de embalaje" data-en="Packaging Bags" data-ja="包装袋" data-ko="포장백">包裝袋</a></li>
+          <li><a href="../products.html#paperbags" data-zh="環保紙袋" data-fr="Sacs en papier écologiques" data-es="Bolsas de papel ecológicas" data-en="Eco Paper Bags" data-ja="エコ紙袋" data-ko="친환경 종이백">環保紙袋</a></li>
+          <li><a href="../products.html#brochures" data-zh="宣傳手冊" data-fr="Brochures" data-es="Folletos" data-en="Brochures" data-ja="パンフレット" data-ko="브로슈어">宣傳手冊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="快捷鏈接" data-fr="Liens rapides" data-es="Enlaces rápidos" data-en="Quick Links" data-ja="クイックリンク" data-ko="빠른 링크">快捷鏈接</h4>
+        <ul>
+          <li><a href="../about.html" data-zh="關於我們" data-fr="À propos" data-es="Nosotros" data-en="About Us" data-ja="会社概要" data-ko="회사 소개">關於我們</a></li>
+          <li><a href="../contact.html" data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</a></li>
+          <li><a href="../contact.html" data-zh="獲取報價" data-fr="Demander un devis" data-es="Solicitar presupuesto" data-en="Get a Quote" data-ja="お見積り" data-ko="견적 받기">獲取報價</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-zh="聯繫我們" data-fr="Contact" data-es="Contacto" data-en="Contact" data-ja="お問い合わせ" data-ko="문의하기">聯繫我們</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+861****8931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span data-zh="廣東省東莞市虎門鎮" data-fr="Humen, Dongguan, Guangdong, Chine" data-es="Humen, Dongguan, Guangdong, China" data-en="Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮" data-ko="중국 광둥성 둥관시 후먼진">廣東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-zh="© 2026 東莞市泰閣包装製品有限公司" data-fr="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-es="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-en="© 2026 Dongguan Tage Packaging Products Co., Ltd." data-ja="© 2026 東莞市泰閣包装製品有限公司" data-ko="© 2026 둥관 TAGE 패키징 유한공사">© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../js/main.js?v=66"></script>
+<script src="../js/assist.js?v=51"></script>
+</body>
+</html>
