@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>再生材比率の表示：受注製織りラベルと下げ札の GRS／RCS と TC の連鎖</title>
+<meta name="description" content="再生材比率の表示は 3 つの文書で支えます。範囲証明書、出荷ごとの取引証明書、そして再生材の由来を明記した仕様書です。GRS と RCS の基準、実際の副資材、よくある 3 つの誤った書き方。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/recycled-content-claims-trims-grs-rcs.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/recycled-content-claims-trims-grs-rcs.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "首頁",
+     "item": "https://taigetag.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "輔料 FAQ",
+     "item": "https://taigetag.com/blog/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "再生含量聲明：吊牌上能寫與不能寫的",
+     "item": "https://taigetag.com/blog/recycled-content-claims-trims-grs-rcs.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "再生含量聲明：吊牌上能寫與不能寫的",
+   "url": "https://taigetag.com/blog/recycled-content-claims-trims-grs-rcs.html",
+   "inLanguage": [
+    "zh-Hant",
+    "en",
+    "fr",
+    "es",
+    "ja",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "author": {
+    "@id": "https://taigetag.com/#organization"
+   },
+   "mainEntityOfPage": "https://taigetag.com/blog/recycled-content-claims-trims-grs-rcs.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>環境コンプライアンス</span></div>
+      <h1>再生材比率の表示：下げ札に書けること、書けないこと</h1>
+      <p>泰閣包装 · 2026年11月24日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>下げ札に「再生材 60%」と書くのは宣伝文句ではなく、書類で裏づける表示です。裏づけは 3 つ。供給者の範囲証明書、その出荷に対応する取引証明書、そして割合がどの再生材の流れを指すかを明記した仕様書です。どれか 1 つ欠けると、その数字は資産から負債に変わります。2026 年以降、欧米のバイヤーは価格より先に証明書を求めるからです。</p>
+
+      <p>本稿は、織りラベル・下げ札・包装袋・リボンを調達するブランドと購買チーム向けです。GRS と RCS が実際に何を認証するのか、取引証明書がどの項目を固定するのか、同じ一文がフランス・スペインの消費者法や日本の景品表示法、韓国の表示広告法でどう読まれるのか、そして良い取り組みをグリーンウォッシング指摘に変えてしまう 3 つの書き方を整理します。</p>
+
+      <h2>1. 再生材比率は文書であり、一文ではない</h2>
+
+      <p>技術的には、再生材比率は再生材料の質量を製品総質量で割った値です。その一文が耐えるかどうかを決めるのは、どの再生材の流れかを名指ししているかです。工場端材や糸巻き残り（消費前）と、回収されたペットボトルや古着（消費後）は、コストも審査の厳しさも異なる別の表示です。自己環境宣言の定義を定める ISO 14021 は、消費前か消費後か、そして割合を明記することを求めます。環境素材とだけ書いた下げ札は、監査者にとって情報ゼロです。副資材の供給者にとっては、仕様書が 4 つに答えられることが条件になります。どの流れか、どの割合か、どの規格で計算したか、誰が検証したか。</p>
+
+      <h2>2. GRS・RCS・ISO 14021：3 つの異なる約束</h2>
+
+      <p>GRS（Global Recycled Standard 4.0）は任意認証で、認証には再生材 20% 以上、製品に GRS ロゴを付けるには 50% 以上が必要です。RCS（Recycled Claim Standard 3.0）の基準はもっと低く 5% から、95% 以上で RCS 100 を名乗れます。再生糸 30% の織りラベルが RCS を使うのはこのためです。どちらも Textile Exchange が所有し、サプライチェーン管理体制に立脚します。範囲証明書はその工場が何を生産できるかを示し、取引証明書はその出荷が実際にそうであったことを証明します。ISO 14021 は認証ではなく文章の規則で、表現の仕方を定めるもので、工場監査の有無を扱いません。</p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>規格</th>
+
+            <th>最低再生比率</th>
+
+            <th>発行主体</th>
+
+            <th>バイヤーが受け取るもの</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>GRS 4.0</td>
+
+            <td>20%（ロゴは 50%）</td>
+
+            <td>認証機関（CB）</td>
+
+            <td>範囲証明書＋出荷ごとの取引証明書</td>
+
+          </tr>
+
+          <tr>
+
+            <td>RCS 3.0</td>
+
+            <td>5%（RCS 100 は 95% 以上）</td>
+
+            <td>認証機関（CB）</td>
+
+            <td>同上、基準は低い</td>
+
+          </tr>
+
+          <tr>
+
+            <td>ISO 14021</td>
+
+            <td>基準なし、表現の規則</td>
+
+            <td>企業の自己宣言</td>
+
+            <td>社内の裏づけ資料（バイヤーは請求可）</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <h2>3. 取引証明書が固定する項目</h2>
+
+      <ul>
+
+        <li>出荷単位であり品番単位ではありません。TC は 1 枚の請求書と 1 つの重量に結びつき、当社のラベルは認証済みという一般論ではありません。</li>
+
+        <li>バイヤー名の一致が条件です。TC には自社または商社名が入ります。中間業者が名義なら、次の連鎖の書類を求めてください。</li>
+
+        <li>製品・重量・比率・管理方式が同時に記載されます。1 つ欠けると、その比率の算出根拠をたどれません。</li>
+
+        <li>有効期間と再発行の規則を先に確認します。範囲証明書は毎年更新、TC は出荷後の一定期間内に申請が原則で、後からの手当ては厄介です。</li>
+
+      </ul>
+
+      <h2>4. 実際の副資材への適用：織りラベル・下げ札・袋・リボン</h2>
+
+      <p>織りラベルの再生ルートは通常 50〜150 デニールの rPET 糸で、GRS または RCS の認証対象です。再生比率が 20% 未満なら RCS のみが使えます。下げ札の紙の表示は GRS ではなく、FSC Recycled または FSC Mix のサプライチェーン管理で、製紙会社の FSC 請求書証明が必要です。袋は再生 LDPE 30〜80% が一般的で、トレーサビリティ規格は EN 15343 です。再生ポリエステルのリボンやテープは風合いがバージンに近づいており、実際の差は染色ロットの安定性に出ます。</p>
+
+      <ul>
+
+        <li>中国：自己環境宣言は GB/T 24021、繊維製品の取扱表示は GB 5296.4 に従います。内販と輸出で同じ版の下げ札を使い回さないでください。</li>
+
+        <li>EU 市場：包装のリサイクル適性は PPWR（EU）2025/40 が根拠です。再生材比率とリサイクル適性は別の約束で、一文に両方を背負わせないでください。</li>
+
+        <li>坪量と寸法は同じ行に書きます。g/m² が腰の強さを、mm が穴と取付方法を決め、両方が消費者に届くまで保つかを左右します。</li>
+
+      </ul>
+
+      <h2>5. 指摘されやすい 3 つの書き方</h2>
+
+      <ul>
+
+        <li><strong>TC がないのに 100% 再生と書く。</strong>made with X% recycled content（post-consumer PET）という検証可能な表現に変え、バイヤー請求から 24 時間以内に TC を出すと約束します。</li>
+
+        <li><strong>再生とリサイクル可能の混同。</strong>再生材比率は原料の出所、PPWR は使用後に回収流へ戻せるかです。100% 再生紙の下げ札でもプラスチック留め具が付いていれば後者では不利になります。</li>
+
+        <li><strong>ペットボトル本数に換算する。</strong>想定重量を問われた時点で破綻します。質量比率を残し、物語は捨ててください。</li>
+
+      </ul>
+
+      <div class="callout">一文での自己点検です。この表示を下げ札から外したとき、手元の書類がそれを否定するなら、直すべきは下げ札ではなく書類です。否定しないなら、その表示はもちます。</div>
+
+      <h2>6. コスト・最小ロット・納期</h2>
+
+      <p>再生材のコストは単一の数字になりません。rPET 糸はバージンに対する割増があり、TC の申請には事務コストがかかり、再生紙の染色・抄紙ロット差は校正回数を増やします。本当の変数は数量です。認証糸はケース単位で販売されることが多く、3,000 枚に配賦する認証割増は 30,000 枚の数倍になります。</p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>項目</th>
+
+            <th>一般的な範囲</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>rPET 糸の割増</td>
+
+            <td>バージン比 +10〜30%</td>
+
+          </tr>
+
+          <tr>
+
+            <td>TC 事務コスト</td>
+
+            <td>出荷ごとの固定費で、貨物価値と無関係</td>
+
+          </tr>
+
+          <tr>
+
+            <td>最小ロット</td>
+
+            <td>品番ごとに 3,000〜5,000 枚（織りラベル）</td>
+
+          </tr>
+
+          <tr>
+
+            <td>納期の追加</td>
+
+            <td>認証糸の手配に +5〜10 営業日</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="garment-trims-certifications.html">副資材の認証一覧</a></li>
+        <li><a href="recycled-polyester-trims-guide.html">再生ポリエステル副資材</a></li>
+        <li><a href="eu-green-claims-apparel-labels.html">EU グリーンクレームと表示</a></li>
+        <li><a href="fsc-certified-hang-tags.html">FSC 認証の下げ札</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>バイヤーが実際に検証できる表示にしたい場合はご相談ください。副資材ごとに GRS・RCS・FSC のどれに当たるかと、保有すべき書類を整理します。</p>
+        <a class="cta-btn" href="../contact.html">適合書類リストを依頼</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
