@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>副資材工場のESGデータ対応：Higg FEM・EcoVadis・炭素｜カスタム製造</title>
+<meta name="description" content="ブランドのESG質問票は、工場データ・マネジメント体制・製品炭素足跡という3つを混ぜて聞いてきます。副資材工場の立場から、Higg FEM、EcoVadis、CSRD、ISO 14067の数字と単位を整理します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/trims-supplier-esg-data-request-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/trims-supplier-esg-data-request-guide.html">
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "輔料廠怎麼回品牌的 ESG 數據問卷", "item": "https://taigetag.com/blog/trims-supplier-esg-data-request-guide.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "輔料廠怎麼回品牌的 ESG 數據問卷",
+   "url": "https://taigetag.com/blog/trims-supplier-esg-data-request-guide.html",
+   "inLanguage": ["zh-Hant", "en", "fr", "es", "ja", "ko"],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/trims-supplier-esg-data-request-guide.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>認証と炭素</span></div>
+      <h1>副資材工場がブランドのESGデータ要求にどう答えるか</h1>
+      <p>泰閣包装 · 2026年11月25日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>毎年秋になると、ブランドのサステナビリティ部門から Excel かプラットフォームのリンクが届き、織りラベル・吊り札・包装袋の環境データを求められます。多くの副資材工場はそれを 1 枚のフォームとして埋め、30 行書いた後に「この数字はどう算出したのか」と返ってきます。問題は作業量ではありません。質問票は実は 3 つを同時に聞いています。工場の環境パフォーマンス、マネジメント体制の有無、そして特定ロットの炭素足跡です。単位も検証方法も違うため、まとめて答えるとどれにも答えていないことになります。東莞で受注生産の副資材を作る立場から、3 つを分け、各数字がどの証憑から出るかを整理します。</p>
+
+      <h2>1. 3 つの質問票、3 つの異なる問い</h2>
+
+      <p>Higg FEM が問うのは拠点です。エネルギー、水、排水、廃棄物、化学物質管理を項目ごとに採点し、承認された検証機関が確認します。スコアは年度に紐づきます。EcoVadis が問うのはマネジメント体制です。方針・記録・改善の証拠があるかをパーセンタイルのスコアカードにまとめます。CSRD の ESRS E1 が求めるのはバリューチェーンのデータです。ブランドが年次報告に入れる排出量で、サプライヤーまで追跡可能であり、限定的保証の対象になります。同じ工場でも 3 つの答えは全く別物になり得ます。FEM の高得点はスコアカードの良さを意味せず、スコアカードの良さは織りラベル 1 ロットの炭素足跡が算出できることを証明しません。</p>
+
+      <ul>
+        <li>Higg FEM＝拠点の年度データ。単位は kWh・m³・kg、第三者検証あり。</li>
+        <li>EcoVadis＝マネジメント体制のスコアカード。パーセンタイル方式で、方針と記録の有無が中心。</li>
+        <li>CSRD／ESRS E1＝バリューチェーン排出量。サプライヤーまで追跡でき、保証手続の対象。</li>
+      </ul>
+
+      <h2>2. 織りラベル 1 枚の背後にある数字</h2>
+
+      <p>バイヤーが欲しいのは「1,000 枚あたり」または「1 kg あたり」の数字で、工場が持っているのは月次の請求書です。両者を合わせるにはまず子メーターです。織機、染色仕上げ、印刷にそれぞれ電力計、水量計を最低 1 台、廃棄物は kg で計量します。子メーターがなければ按分になり、按分は検証で方法の説明を求められます。方法が曖昧な数字はブランドに捨てられるのが通常です。初回は 3 つを勧めます。g/m² と 1,000 枚重量を正確に測る（布は ASTM D3776、紙は ISO 536）、電力請求書と子メーターを突合する、再生含有率を GRS 取引証明書のロット番号に紐づける。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>データ項目</th>
+            <th>単位と算定基礎</th>
+            <th>根拠書類</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>電力</td>
+            <td>kWh／1,000 枚（織りラベル）、kWh／kg（印刷）</td>
+            <td>電力請求書と子メーター検針値の月次突合</td>
+          </tr>
+          <tr>
+            <td>基材の坪量</td>
+            <td>g/m²。布は ASTM D3776、紙は ISO 536</td>
+            <td>受入検査報告書とロットごとの保管試料</td>
+          </tr>
+          <tr>
+            <td>再生含有率</td>
+            <td>％。年単位ではなくロット単位</td>
+            <td>GRS／RCS の範囲証明書と取引証明書（TC）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. 拠点の数字と製品の数字は置き換えられない</h2>
+
+      <p>組織の炭素インベントリは ISO 14064-1、製品の炭素足跡は ISO 14067、素材平均値は Higg MSI などのデータベースに依ります。3 者は置き換えできません。MSI は業界平均であり、この工場・このロットの数字ではないため、製品炭素足跡の欄に使うと検証で差し戻されます。拠点排出量を生産量で割った「1 個あたり」は社内指標としては使えても、製品炭素足跡にはなりません。当社の運用は、MSI は初期試算と設計比較に限定し、正式回答には ISO 14067 報告書またはサプライヤーの実測データを添え、備考に境界（cradle-to-gate か cradle-to-grave）を明記します。</p>
+
+      <h2>4. 検証に耐える証拠の形</h2>
+
+      <p>検証員は立派な資料を読みません。見るのは 3 本の線です。証明書、ロット、台帳。再生含有率には GRS または RCS の範囲証明書（工場に資格があること）と、そのロットの取引証明書（実際に再生材を使ったこと）の両方が必要で、片方だけでは主張が崩れます。化学物質は REACH 附属書 XVII の制限物質リストに対する宣言、SVHC が 0.1% を超える場合は届出記録が必要です。エネルギーは子メーターと請求書の突合表、5% を超える差異には説明が要ります。これらの書類は通常すでに工場にあり、足りないのは「1 問い＝1 書類」の整理だけです。</p>
+
+      <h2>5. 回答に書いてはいけない言葉</h2>
+
+      <p>ESG の回答は対外的な表明として読まれ、サイトの文言と同じ基準で見られます。よくある 3 つの越線は、再生ポリエステルの使用を「サステナブル製品」と書くこと、工場の再エネ比率を「カーボンニュートラル製品」と書くこと、リサイクル設計を回収インフラも試験根拠もなく「100% リサイクル可能」と書くことです。景品表示法は優良誤認を、EU のグリーンクレーム規則は裏付けのない環境主張を、韓国の表示広告法は虚偽表示を扱います。法域は違っても論理は同じで、証拠が出せない文は書きません。</p>
+
+      <div class="callout">実務の合言葉は、ISO 14067・cradle-to-gate・紙と印刷を含み輸送を含まず、と注記できる数字だけが年次報告に入れられる、ということです。境界を書けない数字は「推計値」と明記します。</div>
+
+      <h2>6. 期間とコスト：初回にどれだけかかるか</h2>
+
+      <p>初回の Higg FEM は、子メーター設置から検証スコア取得まで通常 1 四半期以上かかります。データ収集 1 か月、社内突合 2 週間、検証機関の日程調整 4〜8 週間です。EcoVadis の初回は方針文書の整備が必要で 6〜10 週間。ISO 14067 の製品炭素足跡は、素材係数の出所があれば単一製品で 4〜6 週間、サプライヤーが出せなければ採取・試験で倍になります。コスト構造では検証料とコンサル料が固定費で、本当の変数は子メーターの有無です。なければ計器の設置から始まります。</p>
+
+      <h2>7. 数字を使える形にするために送るもの</h2>
+
+      <ul>
+        <li>買い手の質問票そのもの。結論欄だけでは分類を誤った時に全部やり直しになります。</li>
+        <li>基材の g/m²、1,000 枚重量、そしてプラスチック止め具などの付属品を含むかどうか。</li>
+        <li>保有する証明書の写し。GRS／RCS 範囲、FSC 監査チェーン、OEKO-TEX 報告書。</li>
+        <li>直近の電力請求書と生産量。按分の目安を出し、議論できる幅を先に提示します。</li>
+      </ul>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="trims-carbon-footprint-guide.html">副資材の炭素足跡の算定</a></li>
+        <li><a href="recycled-content-claims-trims-grs-rcs.html">再生含有率の表示：GRS と RCS</a></li>
+        <li><a href="eu-csddd-apparel-trims-suppliers.html">EU CSDDD と副資材サプライヤー</a></li>
+        <li><a href="index.html">副資材 FAQ の全記事</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>質問票・基材の坪量・保有証明書をお送りください。「1 問い＝1 書類」で整理したデータパックをお返しし、推計値しか入らない欄を明示します。</p>
+        <a class="cta-btn" href="../contact.html">お問い合わせ</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
