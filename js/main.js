@@ -19,7 +19,7 @@
     else if (_p.indexOf("/ko/") >= 0) DIR_LANG = "ko";
   } catch (e) {}
   /* 緩存擊穿版本號：每次部署升級此值，語言跳轉 URL 帶 &v= 強制繞過 GitHub Pages 緩存 */
-  var BUST_VERSION = "215";
+  var BUST_VERSION = "216";
   var urlLang = null;
   try {
     urlLang = new URLSearchParams(location.search).get("lang");
@@ -186,10 +186,10 @@
       es: "Nueva consulta del sitio web"
     },
     note: {
-      zh: "✓ 詢盤內容已複製，並打開郵箱草稿。也可添加微信 ",
-      en: "✓ Copied & email draft opened. Or send via WeChat: ",
-      fr: "✓ Copié et brouillon d'e-mail ouvert. Ou envoyez via WeChat : ",
-      es: "✓ Copiado y borrador de correo abierto. O envíe por WeChat: "
+      zh: "✓ 詢盤內容已複製，並打開郵箱草稿。也可以透過 WhatsApp 對話 →。",
+      en: "✓ Copied & email draft opened. You can also send it via WhatsApp: chat with us →.",
+      fr: "✓ Copié et brouillon d'e-mail ouvert. Vous pouvez aussi l'envoyer via WhatsApp : chat with us →.",
+      es: "✓ Copiado y borrador de correo abierto. También puede enviarlo por WhatsApp: chat with us →."
     }
   };
 
@@ -222,7 +222,6 @@
       var plain = lines.join("\n");
       var text = encodeURIComponent(plain);
 
-      var wechat = form.getAttribute("data-wechat") || "";
       var mail = form.getAttribute("data-mail") || "";
 
       function copyText(t) {
@@ -246,7 +245,7 @@
       var note = document.getElementById("formNote");
       if (note) {
         note.style.color = "#2e7d4f";
-        note.textContent = MSG.note[current] + (wechat || "13128118931") + ".";
+        note.textContent = MSG.note[current];
       }
     });
   }
