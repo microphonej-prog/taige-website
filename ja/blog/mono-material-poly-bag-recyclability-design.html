@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>モノマテリアル包装袋：衣料用のリサイクル設計と RecyClass の見方｜製造ガイド</title>
+<meta name="description" content="モノ PE の袋は、フィルム・顔料・接着剤がリサイクル前提で設計されている場合にだけ回収流に入ります。RecyClass の判断基準、カーボンブラックとバリア層の取捨、ISO 14021 に沿った表現を解説します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d99a2b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2316222e' font-family='Arial' font-weight='800'>T</text></svg>">
+<link rel="stylesheet" href="../../css/style.css?v=10">
+<link rel="canonical" href="https://taigetag.com/ja/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://taigetag.com/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="en" href="https://taigetag.com/en/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="ja" href="https://taigetag.com/ja/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="ko" href="https://taigetag.com/ko/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="fr" href="https://taigetag.com/fr/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="es" href="https://taigetag.com/es/blog/mono-material-poly-bag-recyclability-design.html">
+<link rel="alternate" hreflang="x-default" href="https://taigetag.com/blog/mono-material-poly-bag-recyclability-design.html">
+
+
+
+
+
+
+<style>
+/* 文章排版（跟随全站设计系统：墨蓝+琥珀金+纸白） */
+.article-body{padding:56px 0 72px}
+.article-body .post-head{margin-bottom:36px}
+.article-body .post-head .post-meta{font-size:13px;color:var(--text-muted);letter-spacing:.5px;margin-bottom:18px}
+.article-body h2{color:var(--ink);font-size:clamp(20px,2.4vw,26px);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--amber)}
+.article-body h3{color:var(--ink-2);font-size:17px;margin:24px 0 10px}
+.article-body p{font-size:15.5px;color:var(--text);margin-bottom:12px}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:18px}
+.article-body li{font-size:15px;color:var(--text);margin-bottom:8px;list-style:disc}
+.article-body ol li{list-style:decimal}
+.article-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--ink);color:#fff;font-weight:600}
+.article-body .callout{background:var(--amber-soft);border-left:4px solid var(--amber);padding:16px 18px;margin:22px 0;border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.article-body .cta-box{margin-top:36px;padding:28px;background:var(--ink);border-radius:var(--radius);text-align:center}
+.article-body .cta-box p{color:#c9d2db;margin-bottom:18px}
+.article-body .cta-btn{display:inline-block;padding:13px 32px;background:var(--amber);color:var(--ink);border-radius:999px;font-weight:600;font-size:15px;transition:.25s}
+.article-body .cta-btn:hover{background:#c78a1f;transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.35)}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://taigetag.com/#organization",
+   "@type": "Organization",
+   "name": "東莞市泰閣包装製品有限公司 (Dongguan Tage Packaging Products Co., Ltd.)",
+   "alternateName": "TAGE Packaging",
+   "url": "https://taigetag.com/",
+   "logo": "https://taigetag.com/images/hero-bg.jpg",
+   "email": "sales@taigetag.com",
+   "telephone": "+86-13128118931",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "虎門鎮連升路143號連升廣場2棟1042室",
+    "addressLocality": "東莞市",
+    "addressRegion": "廣東省",
+    "addressCountry": "CN"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://taigetag.com/"},
+    {"@type": "ListItem", "position": 2, "name": "輔料 FAQ", "item": "https://taigetag.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "單一材質膠袋：服裝包裝的可回收設計，從樹脂那一步就決定了", "item": "https://taigetag.com/blog/mono-material-poly-bag-recyclability-design.html"}
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "單一材質膠袋：服裝包裝的可回收設計，從樹脂那一步就決定了",
+   "url": "https://taigetag.com/blog/mono-material-poly-bag-recyclability-design.html",
+   "inLanguage": ["zh-Hant", "en", "fr", "es", "ja", "ko"],
+   "publisher": {"@id": "https://taigetag.com/#organization"},
+   "author": {"@id": "https://taigetag.com/#organization"},
+   "mainEntityOfPage": "https://taigetag.com/blog/mono-material-poly-bag-recyclability-design.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">
+        <strong>泰閣包装</strong>
+        <small>DONGGUAN TAGE PACKAGING</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">ホーム</a>
+      <a href="../products.html">製品紹介</a>
+      <a href="../about.html">会社概要</a>
+      <a href="index.html">副資材 FAQ</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-flag" data-lang="zh" title="繁體中文" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="5,1.8 5.76,3.95 8.04,4.01 6.24,5.4 6.88,7.59 5,6.3 3.12,7.59 3.76,5.4 1.96,4.01 4.24,3.95" fill="#FFDE00"/><polygon points="11.2,2 11.6,3.2 12.9,3.2 11.85,4 12.2,5.2 11.2,4.5 10.2,5.2 10.55,4 9.5,3.2 10.8,3.2" fill="#FFDE00"/><polygon points="13.2,5.4 13.55,6.5 14.7,6.55 13.8,7.3 14.1,8.4 13.2,7.75 12.3,8.4 12.6,7.3 11.7,6.55 12.85,6.5" fill="#FFDE00"/><polygon points="10.6,7.6 11,8.7 12.15,8.75 11.25,9.5 11.55,10.6 10.6,9.95 9.65,10.6 9.95,9.5 9.05,8.75 10.2,8.7" fill="#FFDE00"/><polygon points="7.6,8.4 7.95,9.5 9.1,9.55 8.2,10.3 8.5,11.4 7.6,10.75 6.7,11.4 7,10.3 6.1,9.55 7.25,9.5" fill="#FFDE00"/></svg></button>
+        <button class="lang-flag" data-lang="en" title="English" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2.5"/><path d="M15,0 V20 M0,10 H30" stroke="#FFFFFF" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="2.5"/></svg></button><button class="lang-flag active" data-lang="ja" title="日本語" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="5.6" fill="#BC002D"/><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button><button class="lang-flag" data-lang="ko" title="한국어" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><circle cx="15" cy="10" r="4" fill="#0047A0"/><path d="M11 10a4 4 0 0 1 8 0 2 2 0 0 1-4 0 2 2 0 0 0-4 0z" fill="#CD2E3A"/><g stroke="#111" stroke-width="1.1" stroke-linecap="round"><path d="M5.6 4.4 8.3 2.8"/><path d="M6.3 5.6 9 4"/><path d="M21 15.6 23.7 17.2"/><path d="M21.7 16.8 24.4 18.4"/><path d="M21 2.8 23.7 4.4"/><path d="M20.3 4 23 5.6"/><path d="M5.6 15.6 8.3 17.2"/><path d="M6.3 14.4 9 16"/></g><rect x="0.5" y="0.5" width="29" height="19" fill="none" stroke="rgba(0,0,0,.18)"/></svg></button>
+        <button class="lang-flag" data-lang="fr" title="Français" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#FFFFFF"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></button>
+        <button class="lang-flag" data-lang="es" title="Español" type="button"><svg viewBox="0 0 30 20" width="20" height="14" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero banner-products random-bg" data-bg="../../images/hero-bg-user1.jpg,../../images/hero-bg-user2.jpg,../../images/hero-bg-user3.jpg,../../images/hero-bg-user4.jpg,../../images/hero-bg-user5.jpg,../../images/hero-bg-user6.jpg,../../images/banner-products.jpg">
+    <div class="container">
+      <div class="crumb"><a href="../index.html">ホーム</a> / <a href="index.html">副資材 FAQ</a> / <span>循環と削減</span></div>
+      <h1>モノマテリアル包装袋：衣料包装のリサイクル性は樹脂の段階で決まる</h1>
+      <p>泰閣包装 · 2026年11月25日更新</p>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container">
+
+      <p>衣料用の包装袋が選別ラインで弾かれる理由は「プラスチックだから」ではありません。PET の窓、ナイロンのバリア層、カーボンブラック顔料、紙のヘッダーカード。3 つの材料が貼り合わされていることが原因で、どれか一つでも近赤外線選別機にかけられれば弾かれます。モノマテリアル包装とは「プラスチックを 1 種類だけ使う」ことではなく、フィルム・顔料・接着剤・印刷・付属品を同じ回収流に収めることです。東莞で衣料用包装袋と紙袋を製造する立場から、設計上の 4 つの判断、RecyClass と APR の基準の使い方、そして「リサイクル可能」という表示をグリーンウォッシュにしない書き方を整理します。</p>
+
+      <h2>1. リサイクル性は袋ではなく樹脂から始まる</h2>
+
+      <p>ポリ袋が PE フィルムの回収流に入れるかは 3 点で決まります。素材が単一か（LDPE・LLDPE が中心で、PET・PP・PA・PVC・金属蒸着層を含まない）、選別機が識別できるか、そして再生素材の品質と市況から回収業者が受け入れるか。前二者は樹脂と抜き型を決めた時点で固定され、量産後の修正は処方変更＝やり直しになります。参照すべきは販促資料ではなく、リサイクル設計ガイドラインです。RecyClass の Design for Recycling Guidelines、CEFLEX の軟包材設計ガイド、米国の APR Design Guide。論理は同じで採点基準が異なるため、「RecyClass でどのクラスか」と問われたら、言葉ではなく具体的な構造で答える必要があります。</p>
+
+      <h2>2. 設計上の 4 つの判断</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>設計項目</th>
+            <th>回収流に入る選択</th>
+            <th>妨げる選択</th>
+            <th>トレードオフ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>フィルム構成</td>
+            <td>単層または共押出 PE、30〜50 μm</td>
+            <td>PET・PA・PVC の複合、金属蒸着、ナイロン窓</td>
+            <td>バリア性とリサイクル性の交換。高い保護が要る品目は別途評価</td>
+          </tr>
+          <tr>
+            <td>顔料</td>
+            <td>本色・白、または赤外線で識別できる灰黒</td>
+            <td>カーボンブラック（近赤外線を吸収し選別機に映らない）</td>
+            <td>遮光性が落ちるため遮光マスターバッチで補う</td>
+          </tr>
+          <tr>
+            <td>接着剤と付属品</td>
+            <td>PE 適合ホットメルト、PE チャック、付属品なし</td>
+            <td>アクリル粘着剤、金属クリップ、紙ヘッダー</td>
+            <td>ヘッダーを打ち抜き折り返しに変えるか、確実に切り離せる設計にする</td>
+          </tr>
+          <tr>
+            <td>印刷とラベル</td>
+            <td>水性または低移行インクの直刷り、面積 50% 未満</td>
+            <td>全面ラミネート、金属箔、分離できない紙ラベル</td>
+            <td>直刷りはインク量と乾燥で生産速度が落ちる</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. カーボンブラック・厚さ・バリア層：見落とされやすい 3 点</h2>
+
+      <ul>
+        <li>カーボンブラックが最も多い致命点です。近赤外線選別では黒い袋が背景と同様に映り、回収業者が拾いません。赤外線で識別できる炭灰色や深緑に変えても、見た目の差は想像より小さいものです。</li>
+        <li>薄ければ環境に良いわけではありません。約 25 μm 未満では異物扱いされる工場があり、腰が落ちて破袋率も上がります。実務的には 30〜50 μm で、衣料の重量と輸送形態で選びます。</li>
+        <li>バリア層は比率と構成次第で、自己宣言はできません。少量の EVOH は一部の設計ガイドで許容されますが、上限と隣接層の構成はそのガイドに沿って評価し、加工会社の構成宣言を根拠にします。</li>
+        <li>表示も設計の一部です。フランスの Triman＋info-tri、韓国の分離排出表示、日本の容器包装の材質表示。位置を誤ると消費者は誤った分別をします。</li>
+      </ul>
+
+      <h2>4. 「リサイクル可能」という表現の書き方</h2>
+
+      <p>ISO 14021 は自己宣言型の環境主張を扱い、核心は限定条件です。「リサイクル可能」とだけ書いて、どこで可能かを書かなければ主張として不十分です。実用的な表現は「PE フィルムの回収がある地域でリサイクル可能」とし、該当する記号を添え、袋だけか、袋とヘッダーを合わせてかを明示します。回収率が大きく違うためです。再生含有率は別の主張で、PCR 比率はトレーサブルでなければならず、EN 15343 が再生プラスチックのトレーサビリティと適合性評価の一般的な根拠、または RecyClass の再生含有率認証を使います。GRS や RCS は、主張が包装ではなく繊維製品に付く場合の話です。</p>
+
+      <div class="callout">避けるべき三つの文。「100% 生分解性」— PE は該当しません。「エコな袋」— 定義がありません。「カーボンニュートラル包装」— ISO 14067 の算定とオフセット証明がない限り書けません。EU のグリーンクレーム規制の流れでは、まず根拠を求められる表現です。日本で同じ訴求を出す場合は景品表示法の優良誤認として扱われ得るため、表示義務のある材質表示と併せて文言を点検します。</div>
+
+      <h2>5. 市場ごとの現地要件</h2>
+
+      <ul>
+        <li>EU：PPWR（EU）2025/40 がリサイクル性と再生含有率の工程表を定め、軟包材の設計要件は年ごとに厳しくなります。化学物質は REACH（EC）1907/2006 のままです。</li>
+        <li>フランス：AGEC 法 n° 2020-105 の包装 EPR は CITEO が担い、Triman と info-tri は判読可能でなければなりません。Code de la consommation は誤認情報を禁じるため、30 cm × 40 cm と刷った寸法は実物と一致させます。</li>
+        <li>スペイン：Ley 7/2022 が非再使用プラスチック包装税を導入し、非再生プラスチック重量 1 kg あたり 0.45 EUR。Real Decreto 1055/2022 は包装と etiquetado の義務を定め、買い手は課税重量の内訳を求めることが多いです。</li>
+        <li>日本：プラスチック資源循環法が事業者に使用の合理化と排出抑制を求め、容器包装リサイクル法が材質表示義務を定めます。袋の寸法は cm、厚さは μm で示し、レディース上衣では 25〜35 cm が一般的なサイズです。</li>
+        <li>韓国：包装は 자원의 절약과 재활용촉진에 관한 법률 の EPR 品目で分離排出表示が必要です。環境主張は 표시광고법 の対象で、재생 함량 のような数字には追跡根拠が要ります。</li>
+        <li>中国：プラスチック汚染対策と双炭目標の下、生分解性袋は GB/T 38082 が適用されます。輸出案件では坪量と厚さを g/m² と mm で表し、0.45 mm と 45 μm の混同を避けます。</li>
+      </ul>
+
+      <h2>6. 見積依頼と一緒に送る 5 項目</h2>
+
+      <ul>
+        <li>衣料の種類と 1 点重量。厚さ 30〜50 μm と袋の形態が決まります。薄手のトップスとダウンで同じフィルムは使いません。</li>
+        <li>ヘッダーや窓が必要か。モノマテリアルが最も崩れるのはここで、打ち抜き折り返しや全面透明で足りるか先に確認します。</li>
+        <li>色と遮光の要否。遮光が必要なら赤外線識別可能な濃色マスターバッチを指定します。後からカーボンブラックで回収流から外れる事態を避けます。</li>
+        <li>対象市場と表示。Triman、分離排出、材質表示は位置が異なるため、版面は一度で確定させます。作り直しは版代が発生します。</li>
+        <li>再生含有率の要件と追跡方法。PCR 比率を求めるなら根拠（EN 15343 の追跡、RecyClass 認証、取引証明書 TC）を同時に指定し、根拠のない比率は袋に刷りません。</li>
+      </ul>
+
+      <h2>関連記事</h2>
+      <ul>
+        <li><a href="apparel-packaging-recyclability-guide.html">衣料包装のリサイクル性</a></li>
+        <li><a href="poly-bag-eco-options.html">ポリ袋の環境対応オプション</a></li>
+        <li><a href="recycled-content-claims-trims-grs-rcs.html">再生含有率の表示：GRS と RCS</a></li>
+        <li><a href="index.html">副資材 FAQ の全記事</a></li>
+      </ul>
+
+      <div class="cta-box">
+        <p>衣料の種類、1 点重量、対象市場、買い手が求める表示をお送りください。膜厚・顔料・接着剤・ヘッダーの 4 点について、準拠する設計ガイドと追跡書類を添えた構造提案をお返しします。</p>
+        <a class="cta-btn" href="../contact.html">お問い合わせ</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>泰閣包装</h4>
+        <p>中国東莞にある衣料副資材・包装・印刷の専門メーカーです。</p>
+      </div>
+      <div>
+        <h4>製品</h4>
+        <ul>
+          <li><a href="../products.html#hangtags">衣料用タグ</a></li>
+          <li><a href="../products.html#wovenlabels">織りラベル / メインラベル</a></li>
+          <li><a href="../products.html#carelabels">洗濯表示ラベル</a></li>
+          <li><a href="../products.html#bags">包装袋</a></li>
+          <li><a href="../products.html#paperbags">エコ紙袋</a></li>
+          <li><a href="../products.html#brochures">パンフレット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../about.html">会社概要</a></li>
+          <li><a href="../contact.html">お問い合わせ</a></li>
+          <li><a href="../contact.html">お見積り依頼</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <p class="cl"><span class="ico">📧</span><a href="mailto:sales@taigetag.com">sales@taigetag.com</a></p>
+        <p class="cl"><span class="ico">📱</span><a href="tel:+8613128118931">+86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">💬</span><span>微信 13128118931</span></p>
+        <p class="cl"><span class="ico">💚</span><a href="https://wa.me/8613128118931" target="_blank" rel="noopener">WhatsApp: +86 131 2811 8931</a></p>
+        <p class="cl"><span class="ico">📍</span><span>中国広東省東莞市虎門鎮</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 東莞市泰閣包装製品有限公司</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TAGE Assist 悬浮提问窗口 -->
+<button class="assist-fab" id="assistFab" type="button" aria-label="提問">💬<span class="assist-badge"></span></button>
+<div class="assist-panel" id="assistPanel">
+  <div class="assist-head">TAGE Assist <span class="assist-dot"></span><span class="st" id="assistStatus">在線</span><button class="assist-close" id="assistClose" type="button" aria-label="Close">✕</button></div>
+  <div class="assist-body" id="assistBody"></div>
+  <div class="assist-quick" id="assistQuick"></div>
+  <div class="assist-foot">
+    <input id="assistInput" type="text" autocomplete="off">
+    <button id="assistSend" type="button">發送</button>
+  </div>
+</div>
+
+<script src="../../js/main.js?v=66"></script>
+<script src="../../js/assist.js?v=51"></script>
+</body>
+</html>
