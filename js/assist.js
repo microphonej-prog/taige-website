@@ -44,8 +44,8 @@
     online: "在線", hello: "您好！我是泰閣智能客服 🐓 關於吊牌、織嘜、洗水標、包裝袋的任何問題都可以問我，也可以直接告訴我您的需求～",
     ph: "輸入您的問題…", send: "發送",
     quick: ["你們有哪些產品？", "最小起訂量是多少？", "可以打樣嗎？", "怎麼報價？"],
-    followupQuote: "💡 提示：把設計稿或數量發到 sales@taigetag.com，24 小時內給您精確報價；加微信 13128118931 溝通更快～",
-    fallback: "這個問題我需要確認一下 🤔 建議把具體需求發到 sales@taigetag.com 或加微信 13128118931，我們專業同事 24 小時內給您準確答覆。也可以點頁面底部「聯繫方式」直接留言。",
+    followupQuote: "💡 提示：把設計稿或數量發到 sales@taigetag.com，24 小時內給您精確報價；想更快可以直接用 WhatsApp 對話 →",
+    fallback: "這個問題我需要確認一下 🤔 建議把具體需求發到 sales@taigetag.com 或直接在 WhatsApp 與我們對話 →，專業同事 24 小時內給您準確答覆。也可以點頁面底部「聯繫方式」直接留言。",
     intents: [
       { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "在嗎", "在不在", "哈喽", "在吗"], reply: "您好！有什麼可以幫您？😊 可以問產品、起訂量、打樣、報價，也可以直接說您的需求。" },
       { id: "thanks", kws: ["謝謝", "感謝", "thank", "merci", "gracias", "3q", "thx", "谢谢", "感谢"], reply: "不客氣！隨時找我 😄 有樣品或報價需求，隨時發我。" },
@@ -78,7 +78,7 @@
       { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "personnalisé", "personalizado", "定制", "来样", "设计"], reply: "支持 OEM/ODM 和來樣定製！設計部可幫您優化稿件，顏色、材質、工藝靈活組合，從打樣到量產一條龍。您有自己的設計稿還是需要我們設計？" },
       { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "qualité", "calidad", "認證", "质量", "质检", "认证"], reply: "我們執行完整品控流程：原材料檢驗 → 印刷過程抽檢 → 成品全檢 → 出貨前複檢。公司持有營業執照及各類資質，可提供檢測報告 📋" },
       { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "entreprise", "empresa", "工厂", "介绍", "泰阁", "哪里"], reply: "東莞市泰閣包装製品有限公司（Dongguan Tage Packaging Products Co., Ltd.）位於廣東東莞虎門，專注服裝輔料 20 年：吊牌、織嘜、洗水標、包裝袋一站式生產，出口全球 40+ 國家 🇨🇳🌍" },
-      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "whatsapp", "contact", "téléphone", "wechat", "contacto", "联系", "电话", "邮箱"], reply: "隨時聯繫！📧 sales@taigetag.com ｜📱 電話/WhatsApp/微信：+86 131 2811 8931 ｜📍 廣東省東莞市虎門鎮。發需求一般 24 小時內回覆（工作時間更快）😊" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "whatsapp", "contact", "téléphone", "wechat", "contacto", "联系", "电话", "邮箱"], reply: "隨時聯繫！📧 sales@taigetag.com ｜💬 WhatsApp：立即對話 → ｜📍 廣東省東莞市虎門鎮。發需求一般 24 小時內回覆（工作時間更快）😊" },
       { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "commande", "pedido", "下单", "订购", "买", "怎么合作"], reply: "合作流程很簡單：① 發需求/設計稿 → ② 我們 24 小時內報價 → ③ 確認打樣 → ④ 樣品確認後量產 → ⑤ 驗貨出貨。您可以從任意一步開始！" },
       { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "常见问题", "问题"], reply: "常見問題速答：\n📦 起訂量：吊牌 2,000+、織嘜 1,000+、洗水標 300+ \n🧪 打樣：3–7 天寄樣\n💰 報價：24 小時內\n🚚 交期：10–25 天\n更多細節直接問我～" }
     ]
@@ -87,8 +87,8 @@
     online: "Online", hello: "Hi! I'm TAGE's smart assistant 🐓 Ask me anything about hang tags, woven labels, care labels or packaging bags — or just tell me your needs.",
     ph: "Type your message…", send: "Send",
     quick: ["What products do you make?", "What is the MOQ?", "Can I get samples?", "How do I get a quote?"],
-    followupQuote: "💡 Tip: email your artwork or quantities to sales@taigetag.com for an exact quote within 24h. WeChat: 13128118931 is even faster.",
-    fallback: "Let me check on that 🤔 Please email your specific requirements to sales@taigetag.com or add us on WeChat 13128118931 — our team replies within 24 hours. You can also use the Contact form at the bottom of the page.",
+    followupQuote: "💡 Tip: email your artwork or quantities to sales@taigetag.com for an exact quote within 24h. a WhatsApp chat is even faster — just tap “chat with us”.",
+    fallback: "Let me check on that 🤔 Please email your specific requirements to sales@taigetag.com or start a WhatsApp chat right from this page — our team replies within 24 hours. You can also use the Contact form at the bottom of the page.",
     intents: [
       { id: "hello", kws: ["hello", "hi", "hey", "你好", "在嗎"], reply: "Hello! How can I help? 😊 Ask about products, MOQ, sampling or quotes — or just describe your needs." },
       { id: "thanks", kws: ["thanks", "thank", "thx", "merci", "gracias"], reply: "You're welcome! 😄 Feel free to reach out anytime for samples or quotes." },
@@ -121,7 +121,7 @@
       { id: "oem", kws: ["oem", "odm", "custom", "logo", "design", "定製"], reply: "OEM/ODM and sample-based customization supported! Our design team helps optimize artwork — colors, materials, finishes all flexible, from sampling to mass production. Do you have artwork or need design help?" },
       { id: "quality", kws: ["quality", "qc", "certification", "質量"], reply: "Full QC process: raw material inspection → in-process checks → final inspection → pre-shipment review. Business license and certificates available; test reports on request 📋" },
       { id: "company", kws: ["company", "factory", "where", "about", "tage"], reply: "Dongguan Tage Packaging Products Co., Ltd. — Humen, Dongguan, Guangdong. 20 years in garment trims: hang tags, woven labels, care labels, bags — one-stop, exporting to 40+ countries 🇨🇳🌍" },
-      { id: "contact", kws: ["contact", "phone", "email", "wechat", "whatsapp"], reply: "Contact us anytime! 📧 sales@taigetag.com ｜ 📱 Phone/WhatsApp/WeChat: +86 131 2811 8931 ｜ 📍 Humen, Dongguan, Guangdong. Replies within 24h (faster during work hours) 😊" },
+      { id: "contact", kws: ["contact", "phone", "email", "wechat", "whatsapp"], reply: "Contact us anytime! 📧 sales@taigetag.com ｜ 💬 WhatsApp: chat with us → ｜ 📍 Humen, Dongguan, Guangdong. Replies within 24h (faster during work hours) 😊" },
       { id: "order", kws: ["order", "process", "how to buy", "下單"], reply: "Simple process: ① send requirements/artwork → ② quote within 24h → ③ sampling → ④ mass production after approval → ⑤ QC & shipping. Start from any step!" },
       { id: "faq", kws: ["faq", "help", "question"], reply: "Quick answers:\n📦 MOQ: hang tags 2,000+, woven 1,000+, care labels 300+\n🧪 Sampling: 3–7 days\n💰 Quote: within 24h\n🚚 Delivery: 10–25 days\nAsk me anything else!" }
     ]
@@ -130,8 +130,8 @@
     online: "En ligne", hello: "Bonjour ! Je suis l'assistant intelligent de TAGE 🐓 Posez-moi toutes vos questions sur les étiquettes, labels, sacs… ou décrivez simplement votre besoin.",
     ph: "Écrivez votre message…", send: "Envoyer",
     quick: ["Quels produits fabriquez-vous ?", "Quelle est la quantité minimale ?", "Puis-je obtenir des échantillons ?", "Comment obtenir un devis ?"],
-    followupQuote: "💡 Astuce : envoyez votre design ou vos quantités à sales@taigetag.com — devis précis sous 24 h. WeChat : 13128118931 encore plus rapide.",
-    fallback: "Je vérifie 🤔 Envoyez vos besoins précis à sales@taigetag.com ou ajoutez-nous sur WeChat 13128118931 — réponse sous 24 h. Vous pouvez aussi utiliser le formulaire de contact en bas de page.",
+    followupQuote: "💡 Astuce : envoyez votre design ou vos quantités à sales@taigetag.com — devis précis sous 24 h. le chat WhatsApp est encore plus rapide.",
+    fallback: "Je vérifie 🤔 Envoyez vos besoins précis à sales@taigetag.com ou discutez avec nous sur WhatsApp — réponse sous 24 h. Vous pouvez aussi utiliser le formulaire de contact en bas de page.",
     intents: [
       { id: "hello", kws: ["bonjour", "salut", "hello", "bonsoir"], reply: "Bonjour ! Comment puis-je vous aider ? 😊 Produits, quantités, échantillons, devis — ou décrivez votre besoin." },
       { id: "thanks", kws: ["merci", "thank"], reply: "Avec plaisir ! 😄 N'hésitez pas à revenir pour des échantillons ou devis." },
@@ -164,7 +164,7 @@
       { id: "oem", kws: ["oem", "odm", "personnalisé", "logo", "design"], reply: "OEM/ODM et fabrication sur échantillon ! Notre équipe design optimise vos visuels — couleurs, matériaux, finitions flexibles, du prototype à la série. Vous avez un design ou besoin d'aide ?" },
       { id: "quality", kws: ["qualité", "qc", "certification"], reply: "Contrôle qualité complet : inspection matières premières → contrôles en cours → inspection finale → revue avant expédition. Licence et certificats disponibles 📋" },
       { id: "company", kws: ["entreprise", "usine", "tage", "où"], reply: "Dongguan Tage Packaging Products Co., Ltd. — Humen, Dongguan, Guangdong. 20 ans d'expérience : étiquettes, labels, sacs — production intégrée, export vers 40+ pays 🇨🇳🌍" },
-      { id: "contact", kws: ["contact", "téléphone", "email", "wechat", "whatsapp"], reply: "Contactez-nous ! 📧 sales@taigetag.com ｜ 📱 Tél./WhatsApp/WeChat : +86 131 2811 8931 ｜ 📍 Humen, Dongguan, Guangdong. Réponse sous 24 h 😊" },
+      { id: "contact", kws: ["contact", "téléphone", "email", "wechat", "whatsapp"], reply: "Contactez-nous ! 📧 sales@taigetag.com ｜ 💬 WhatsApp : chat with us → ｜ 📍 Humen, Dongguan, Guangdong. Réponse sous 24 h 😊" },
       { id: "order", kws: ["commande", "processus", "acheter"], reply: "Processus simple : ① envoyez vos besoins → ② devis sous 24 h → ③ échantillonnage → ④ production après validation → ⑤ contrôle et expédition. Commencez à n'importe quelle étape !" },
       { id: "faq", kws: ["faq", "aide", "question"], reply: "Réponses rapides : 📦 Quantités : étiquettes 2 000+, tissés 1 000+, entretien 300+ ｜ 🧪 Échantillons : 3–7 jours ｜ 💰 Devis : sous 24 h ｜ 🚚 Délai : 10–25 jours. Autres questions ?" }
     ]
@@ -173,8 +173,8 @@
     online: "En línea", hello: "¡Hola! Soy el asistente inteligente de TAGE 🐓 Pregúntame sobre etiquetas, tejidas, bolsas… o cuéntame tu necesidad.",
     ph: "Escribe un mensaje…", send: "Enviar",
     quick: ["¿Qué productos fabricáis?", "¿Cuál es el pedido mínimo?", "¿Puedo obtener muestras?", "¿Cómo obtengo un presupuesto?"],
-    followupQuote: "💡 Consejo: envía tu diseño o cantidades a sales@taigetag.com — presupuesto exacto en 24 h. WeChat: 13128118931 aún más rápido.",
-    fallback: "Déjame comprobarlo 🤔 Envía tus requisitos a sales@taigetag.com o agréganos en WeChat 13128118931 — respondemos en 24 h. También puedes usar el formulario de contacto al final de la página.",
+    followupQuote: "💡 Consejo: envía tu diseño o cantidades a sales@taigetag.com — presupuesto exacto en 24 h. el chat de WhatsApp es aún más rápido.",
+    fallback: "Déjame comprobarlo 🤔 Envía tus requisitos a sales@taigetag.com o chatea con nosotros por WhatsApp — respondemos en 24 h. También puedes usar el formulario de contacto al final de la página.",
     intents: [
       { id: "hello", kws: ["hola", "buenos días", "hello", "hi"], reply: "¡Hola! ¿En qué puedo ayudarte? 😊 Productos, cantidades, muestras, presupuesto — o cuéntame tu necesidad." },
       { id: "thanks", kws: ["gracias", "thank"], reply: "¡De nada! 😄 Vuelve cuando quieras muestras o presupuestos." },
@@ -207,7 +207,7 @@
       { id: "oem", kws: ["oem", "odm", "personalizado", "logo", "diseño"], reply: "¡OEM/ODM y producción según muestra! Nuestro equipo de diseño optimiza tus artes — colores, materiales, acabados flexibles, del muestreo a la serie. ¿Tienes diseño o necesitas ayuda?" },
       { id: "quality", kws: ["calidad", "qc", "certificación"], reply: "Control de calidad completo: inspección de materias primas → controles en proceso → inspección final → revisión antes del envío. Licencia y certificados disponibles 📋" },
       { id: "company", kws: ["empresa", "fábrica", "tage", "dónde"], reply: "Dongguan Tage Packaging Products Co., Ltd. — Humen, Dongguan, Guangdong. 20 años en accesorios de vestir: etiquetas, tejidas, bolsas — producción integrada, exportación a 40+ países 🇨🇳🌍" },
-      { id: "contact", kws: ["contacto", "teléfono", "email", "wechat", "whatsapp"], reply: "¡Contáctanos! 📧 sales@taigetag.com ｜ 📱 Tel./WhatsApp/WeChat: +86 131 2811 8931 ｜ 📍 Humen, Dongguan, Guangdong. Respuesta en 24 h 😊" },
+      { id: "contact", kws: ["contacto", "teléfono", "email", "wechat", "whatsapp"], reply: "¡Contáctanos! 📧 sales@taigetag.com ｜ 💬 WhatsApp: chat with us → ｜ 📍 Humen, Dongguan, Guangdong. Respuesta en 24 h 😊" },
       { id: "order", kws: ["pedido", "proceso", "comprar"], reply: "Proceso simple: ① envía tus necesidades → ② presupuesto en 24 h → ③ muestreo → ④ producción tras aprobación → ⑤ control y envío. ¡Empieza en cualquier paso!" },
       { id: "faq", kws: ["faq", "ayuda", "pregunta"], reply: "Respuestas rápidas: 📦 Mínimos: etiquetas 2.000+, tejidas 1.000+, cuidado 300+ ｜ 🧪 Muestras: 3–7 días ｜ 💰 Presupuesto: 24 h ｜ 🚚 Plazo: 10–25 días. ¿Más preguntas?" }
     ]
@@ -218,8 +218,8 @@
     online: "オンライン", hello: "こんにちは！泰閣（TAGE）のスマートアシスタントです 🐓 タグ、織りラベル、洗濯表示ラベル、包裝袋について何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。",
     ph: "ご質問を入力してください…", send: "送信",
     quick: ["どのような製品がありますか？", "最小ロットはいくつですか？", "サンプル作成はできますか？", "お見積りはどうすればいいですか？"],
-    followupQuote: "💡 ヒント：デザインデータまたは數量を sales@taigetag.com までお送りいただければ、24時間以內に正確なお見積りをご提示いたします。WeChat 13128118931 でのご連絡がより速いです。",
-    fallback: "この件は確認が必要です 🤔 具體的なご要望を sales@taigetag.com までお送りいただくか、WeChat 13128118931 までご連絡ください。擔當者より 24時間以內に正確にご回答いたします。ページ下部の「お問い合わせ」からも直接ご連絡いただけます。",
+    followupQuote: "💡 ヒント：デザインデータまたは數量を sales@taigetag.com までお送りいただければ、24時間以內に正確なお見積りをご提示いたします。WhatsApp でのチャットがより速いです。",
+    fallback: "この件は確認が必要です 🤔 具體的なご要望を sales@taigetag.com までお送りいただくか、またはこのページから WhatsApp でチャットしてください。擔當者より 24時間以內に正確にご回答いたします。ページ下部の「お問い合わせ」からも直接ご連絡いただけます。",
     intents: [
       { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "hey", "在嗎", "在不在", "こんにちは", "こんばんは", "おはようございます", "はじめまして", "もしもし"], reply: "こんにちは！どのようなご用件でしょうか？😊 製品、最小ロット、サンプル作成、お見積りなど、何でもお尋ねください。ご要望をそのままお知らせいただいても構いません。" },
       { id: "thanks", kws: ["謝謝", "感謝", "thank", "thanks", "thx", "3q", "merci", "gracias", "ありがとう", "ありがとうございます", "どうも", "感謝"], reply: "どういたしまして！😄 サンプルやお見積りのご依頼は、いつでもお気軽にご連絡ください。" },
@@ -252,7 +252,7 @@
       { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "design", "personnalisé", "personalizado", "カスタマイズ", "特注", "オーダー", "デザイン", "ロゴ"], reply: "OEM／ODM およびサンプルベースのカスタマイズに対応しております。デザイン部がデータの最適化をお手伝いし、色、素材、加工を柔軟に組み合わせて、サンプル作成から量産まで一貫対応いたします。デザインデータはお持ちですか、それともデザインからご依頼ですか？" },
       { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "認證", "品質", "検品", "品質管理", "認証"], reply: "原材料検査 → 印刷工程の抜き取り検査 → 完成品の全數検査 → 出荷前の再検査という、完全な品質管理體制を実施しております。営業許可証および各種資格を保有しており、検査報告書のご提供も可能です 📋" },
       { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "會社", "工場", "會社概要", "所在", "どこ", "紹介"], reply: "東莞市泰閣包装製品有限公司（Dongguan Tage Packaging Products Co., Ltd.）は広東省東莞市虎門に位置し、衣料副資材一筋 20 年：タグ、織りラベル、洗濯表示ラベル、包裝袋をワンストップで生産し、世界 40+ の國と地域へ輸出しております 🇨🇳🌍" },
-      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "連絡", "電話", "メール", "お問い合わせ", "問い合わせ"], reply: "いつでもご連絡ください！📧 sales@taigetag.com ｜📱 電話／WhatsApp／WeChat：+86 131 2811 8931 ｜📍 中國広東省東莞市虎門鎮。ご要望には通常 24時間以內に返信いたします（営業時間內はより早く対応できます）😊" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "連絡", "電話", "メール", "お問い合わせ", "問い合わせ"], reply: "いつでもご連絡ください！📧 sales@taigetag.com ｜💬 WhatsApp：チャットする → ｜📍 中國広東省東莞市虎門鎮。ご要望には通常 24時間以內に返信いたします（営業時間內はより早く対応できます）😊" },
       { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "process", "how to buy", "commande", "pedido", "註文", "発注", "取引", "流れ", "手順"], reply: "お取引の流れは簡単です。① ご要望・デザインデータをお送りいただく → ② 24時間以內にお見積り → ③ サンプル作成 → ④ サンプル確認後に量産 → ⑤ 検品・出荷。どのステップからでも開始できます！" },
       { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "question", "よくある質問", "質問", "ヘルプ", "疑問"], reply: "よくあるご質問への回答です。\n📦 最小ロット：タグ 2,000+、織りラベル 1,000+、洗濯表示ラベル 300+ \n🧪 サンプル：3–7 日で発送\n💰 お見積り：24時間以內\n🚚 納期：10–25 日\nその他のご質問もお気軽にお尋ねください。" }
     ]
@@ -262,8 +262,8 @@
     online: "온라인", hello: "안녕하세요! TAGE(泰閣) 스마트 상담원입니다 🐓 행택, 직조 라벨, 세탁 표시 라벨, 포장백에 대해 무엇이든 물어보세요. 원하시는 내용을 그대로 말씀해 주셔도 됩니다.",
     ph: "질문을 입력해 주세요…", send: "보내기",
     quick: ["어떤 제품이 있나요?", "최소 주문량은 얼마인가요?", "샘플 제작이 가능한가요?", "견적은 어떻게 받나요?"],
-    followupQuote: "💡 안내: 디자인 파일이나 수량을 sales@taigetag.com 으로 보내주시면 24시간 이내에 정확한 견적을 드립니다. 위챗 13128118931 으로 연락하시면 더 빠릅니다.",
-    fallback: "이 부분은 확인이 필요합니다 🤔 구체적인 요구사항을 sales@taigetag.com 으로 보내주시거나 위챗 13128118931 으로 연락해 주세요. 담당자가 24시간 이내에 정확하게 답변드립니다. 페이지 하단의 문의하기 양식을 이용하셔도 됩니다.",
+    followupQuote: "💡 안내: 디자인 파일이나 수량을 sales@taigetag.com 으로 보내주시면 24시간 이내에 정확한 견적을 드립니다. WhatsApp 채팅을 이용하시면 더 빠릅니다.",
+    fallback: "이 부분은 확인이 필요합니다 🤔 구체적인 요구사항을 sales@taigetag.com 으로 보내주시거나 이 페이지에서 WhatsApp으로 채팅해 주세요. 담당자가 24시간 이내에 정확하게 답변드립니다. 페이지 하단의 문의하기 양식을 이용하셔도 됩니다.",
     intents: [
       { id: "hello", kws: ["你好", "您好", "嗨", "哈嘍", "hello", "hi", "hey", "在嗎", "在不在", "안녕하세요", "안녕", "반갑습니다", "여보세요"], reply: "안녕하세요! 무엇을 도와드릴까요? 😊 제품, 최소 주문량, 샘플 제작, 견적 등 무엇이든 물어보세요. 원하시는 내용을 그대로 말씀해 주셔도 됩니다." },
       { id: "thanks", kws: ["謝謝", "感謝", "thank", "thanks", "thx", "3q", "merci", "gracias", "감사", "고맙", "감사합니다"], reply: "천만에요! 😄 샘플이나 견적이 필요하시면 언제든지 연락 주세요." },
@@ -296,7 +296,7 @@
       { id: "oem", kws: ["定製", "oem", "odm", "來樣", "設計", "logo", "custom", "design", "personnalisé", "personalizado", "맞춤", "주문 제작", "커스텀", "디자인", "로고", "도안"], reply: "OEM/ODM 및 샘플 기반 맞춤 제작을 지원합니다. 디자인팀이 시안 최적화를 도와드리며 색상, 소재, 가공을 유연하게 조합하여 샘플 제작부터 양산까지 원스톱으로 대응합니다. 디자인 파일을 가지고 계신가요, 아니면 디자인도 필요하신가요?" },
       { id: "quality", kws: ["質量", "質檢", "品控", "合格", "quality", "qc", "certification", "qualité", "calidad", "認證", "품질", "검품", "품질 관리", "인증", "합격"], reply: "원자재 검사 → 인쇄 공정 샘플링 검사 → 완제품 전수 검사 → 출하 전 재검사로 이어지는 완전한 품질 관리 프로세스를 운영합니다. 사업자등록증과 각종 자격을 보유하고 있으며 시험 성적서도 제공해 드립니다 📋" },
       { id: "company", kws: ["公司", "工廠", "介紹", "泰閣", "tage", "哪裏", "地址", "company", "factory", "where", "about", "entreprise", "empresa", "회사", "공장", "소개", "어디", "주소", "회사 소개"], reply: "둥관 TAGE 패키징 유한공사(Dongguan Tage Packaging Products Co., Ltd.)는 광둥성 둥관시 후먼에 위치하며 의류 부자재 20년 전문 기업입니다. 행택, 직조 라벨, 세탁 표시 라벨, 포장백을 원스톱으로 생산하고 전 세계 40+ 개국에 수출합니다 🇨🇳🌍" },
-      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "연락", "전화", "이메일", "위챗", "문의", "연락처"], reply: "언제든 연락 주세요! 📧 sales@taigetag.com ｜📱 전화/WhatsApp/위챗: +86 131 2811 8931 ｜📍 중국 광둥성 둥관시 후먼진. 문의는 보통 24시간 이내에 답변드립니다(근무 시간에는 더 빠릅니다) 😊" },
+      { id: "contact", kws: ["聯繫", "電話", "微信", "郵箱", "email", "wechat", "whatsapp", "phone", "contact", "téléphone", "contacto", "연락", "전화", "이메일", "위챗", "문의", "연락처"], reply: "언제든 연락 주세요! 📧 sales@taigetag.com ｜💬 WhatsApp: 채팅하기 → ｜📍 중국 광둥성 둥관시 후먼진. 문의는 보통 24시간 이내에 답변드립니다(근무 시간에는 더 빠릅니다) 😊" },
       { id: "order", kws: ["下單", "訂購", "買", "怎麼合作", "流程", "order", "process", "how to buy", "commande", "pedido", "주문", "발주", "구매", "거래", "절차", "진행"], reply: "거래 절차는 간단합니다. ① 요구사항/디자인 파일 전송 → ② 24시간 이내 견적 → ③ 샘플 제작 → ④ 샘플 확인 후 양산 → ⑤ 검품 및 출하. 어느 단계에서든 시작하실 수 있습니다!" },
       { id: "faq", kws: ["常見問題", "faq", "問題", "help", "aide", "question", "자주 묻는 질문", "질문", "도움말", "문의 사항"], reply: "자주 묻는 질문 답변입니다.\n📦 최소 주문량: 행택 2,000+, 직조 라벨 1,000+, 세탁 표시 라벨 300+ \n🧪 샘플: 3–7일 발송\n💰 견적: 24시간 이내\n🚚 납기: 10–25일\n더 자세한 내용은 언제든 물어보세요." }
     ]
@@ -306,8 +306,8 @@
     online: "Online", hello: "Hallo! Ich bin der TAGE KI-Assistent 🐓 Fragen Sie mich alles zu Anhängern, Webetiketten, Pflegeetiketten und Verpackungsbeuteln — oder beschreiben Sie einfach Ihren Bedarf.",
     ph: "Ihre Frage eingeben…", send: "Senden",
     quick: ["Welche Produkte bieten Sie an?", "Wie hoch ist die Mindestbestellmenge?", "Sind Muster möglich?", "Wie erhalte ich ein Angebot?"],
-    followupQuote: "💡 Tipp: Senden Sie Druckdaten oder Stückzahl an sales@taigetag.com — präzises Angebot innerhalb von 24 Stunden; per WeChat 13128118931 geht es schneller.",
-    fallback: "Das muss ich kurz prüfen 🤔 Senden Sie Ihren konkreten Bedarf an sales@taigetag.com oder per WeChat 13128118931 — unsere Fachkollegen antworten innerhalb von 24 Stunden. Sie können auch unten auf «Kontakt» klicken und direkt schreiben.",
+    followupQuote: "💡 Tipp: Senden Sie Druckdaten oder Stückzahl an sales@taigetag.com — präzises Angebot innerhalb von 24 Stunden; im WhatsApp-Chat geht es schneller.",
+    fallback: "Das muss ich kurz prüfen 🤔 Senden Sie Ihren konkreten Bedarf an sales@taigetag.com oder chatten Sie direkt auf WhatsApp — unsere Fachkollegen antworten innerhalb von 24 Stunden. Sie können auch unten auf «Kontakt» klicken und direkt schreiben.",
     intents: [
       { id: "hello", kws: ["hallo", "hi", "guten tag", "olá", "ola", "bom dia", "hello"], reply: "Hallo! Wie kann ich helfen? 😊 Sie können nach Produkten, MOQ, Mustern oder Preisen fragen — oder direkt Ihren Bedarf schildern." },
       { id: "thanks", kws: ["danke", "vielen dank", "obrigado", "obrigada", "thanks"], reply: "Gern geschehen! Melden Sie sich jederzeit 😄 Bei Muster- oder Angebotswünschen einfach schreiben." },
@@ -326,7 +326,7 @@
       { id: "oem", kws: ["oem", "odm", "individuell", "personalizado", "custom"], reply: "OEM/ODM und Fertigung nach Muster sind möglich! Unsere Designabteilung optimiert Ihre Daten, Farbe, Material und Veredelung lassen sich flexibel kombinieren — von Muster bis Serie alles aus einer Hand. Haben Sie eigene Daten oder sollen wir gestalten?" },
       { id: "quality", kws: ["qualität", "prüfung", "qualidade", "inspeção", "quality"], reply: "Wir führen einen vollständigen Qualitätsprozess durch: Rohstoffprüfung → Zwischenprüfung im Druck → Endkontrolle → Nachprüfung vor Versand. Das Unternehmen verfügt über Gewerbeschein und Qualifikationen; Prüfberichte sind erhältlich 📋" },
       { id: "company", kws: ["unternehmen", "firma", "empresa", "companhia", "about"], reply: "Dongguan Tage Packaging Products Co., Ltd. sitzt in Humen, Dongguan, Guangdong, und ist seit 20 Jahren auf Bekleidungszutaten spezialisiert: Anhänger, Webetiketten, Pflegeetiketten und Verpackungsbeutel aus einer Hand — Export in über 40 Länder 🌍" },
-      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Jederzeit erreichbar! 📧 sales@taigetag.com | 📱 Telefon/WhatsApp/WeChat: +86 131 2811 8931 | 📍 Humen, Dongguan, Guangdong, China. Antwort meist innerhalb von 24 Stunden (während der Arbeitszeit schneller) 😊" },
+      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Jederzeit erreichbar! 📧 sales@taigetag.com | 💬 WhatsApp: Chatte mit uns → | 📍 Humen, Dongguan, Guangdong, China. Antwort meist innerhalb von 24 Stunden (während der Arbeitszeit schneller) 😊" },
       { id: "order", kws: ["bestellung", "ablauf", "pedido", "processo", "order"], reply: "Der Ablauf ist einfach: ① Bedarf/Druckdaten senden → ② Angebot innerhalb von 24 Stunden → ③ Musterung bestätigen → ④ Serie nach Musterfreigabe → ⑤ Prüfung und Versand. Sie können an jedem Schritt einsteigen!" },
       { id: "faq", kws: ["faq", "häufige fragen", "perguntas", "dúvidas", "faq"], reply: "Kurzantworten zu häufigen Fragen:\n📦 MOQ: Anhänger 2.000+, Webetiketten 1.000+, Pflegeetiketten 300+\n🧪 Muster: Versand in 3–7 Tagen\n💰 Angebot: innerhalb von 24 Stunden\n🚚 Lieferzeit: 10–25 Tage\nFragen Sie mich einfach nach Details." },
     ],
@@ -336,8 +336,8 @@
     online: "Online", hello: "Olá! Sou o assistente virtual da TAGE 🐓 Pergunte sobre etiquetas, etiquetas tecidas, etiquetas de cuidado e sacolas — ou descreva sua necessidade.",
     ph: "Digite sua pergunta…", send: "Enviar",
     quick: ["Quais produtos vocês oferecem?", "Qual é o pedido mínimo?", "Vocês fazem amostras?", "Como recebo um orçamento?"],
-    followupQuote: "💡 Dica: envie o arquivo ou a quantidade para sales@taigetag.com — orçamento preciso em 24 horas; pelo WeChat 13128118931 é mais rápido.",
-    fallback: "Preciso confirmar essa informação 🤔 Envie sua necessidade para sales@taigetag.com ou pelo WeChat 13128118931 — nossos especialistas respondem em 24 horas. Você também pode clicar em «Contato» no rodapé e escrever direto.",
+    followupQuote: "💡 Dica: envie o arquivo ou a quantidade para sales@taigetag.com — orçamento preciso em 24 horas; pelo chat do WhatsApp é mais rápido.",
+    fallback: "Preciso confirmar essa informação 🤔 Envie sua necessidade para sales@taigetag.com ou converse conosco pelo WhatsApp — nossos especialistas respondem em 24 horas. Você também pode clicar em «Contato» no rodapé e escrever direto.",
     intents: [
       { id: "hello", kws: ["hallo", "hi", "guten tag", "olá", "ola", "bom dia", "hello"], reply: "Olá! Como posso ajudar? 😊 Pode perguntar sobre produtos, pedido mínimo, amostras ou preços — ou falar direto da sua necessidade." },
       { id: "thanks", kws: ["danke", "vielen dank", "obrigado", "obrigada", "thanks"], reply: "De nada! Estou à disposição 😄 Para amostras ou orçamento, é só chamar." },
@@ -356,7 +356,7 @@
       { id: "oem", kws: ["oem", "odm", "individuell", "personalizado", "custom"], reply: "Fazemos OEM/ODM e produção conforme amostra! Nosso design otimiza o seu arquivo, com cor, material e acabamento combinados com flexibilidade — da amostra à produção em série. Você tem arquivo próprio ou quer que a gente crie?" },
       { id: "quality", kws: ["qualität", "prüfung", "qualidade", "inspeção", "quality"], reply: "Seguimos um processo completo de qualidade: inspeção da matéria-prima → inspeção no processo de impressão → inspeção final → revisão antes do envio. A empresa possui licença comercial e certificações; laudos de ensaio podem ser fornecidos 📋" },
       { id: "company", kws: ["unternehmen", "firma", "empresa", "companhia", "about"], reply: "A Dongguan Tage Packaging Products Co., Ltd. fica em Humen, Dongguan, Guangdong, e há 20 anos é especializada em aviamentos para vestuário: etiquetas, etiquetas tecidas, etiquetas de cuidado e sacolas em um só fornecedor — exportando para mais de 40 países 🌍" },
-      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Fale conosco! 📧 sales@taigetag.com | 📱 Telefone/WhatsApp/WeChat: +86 131 2811 8931 | 📍 Humen, Dongguan, Guangdong, China. Resposta em geral em 24 horas (mais rápido no horário comercial) 😊" },
+      { id: "contact", kws: ["kontakt", "telefon", "contato", "telefone", "contact"], reply: "Fale conosco! 📧 sales@taigetag.com | 💬 WhatsApp: Fale com a gente → | 📍 Humen, Dongguan, Guangdong, China. Resposta em geral em 24 horas (mais rápido no horário comercial) 😊" },
       { id: "order", kws: ["bestellung", "ablauf", "pedido", "processo", "order"], reply: "O processo é simples: ① envie a necessidade/arquivo → ② orçamento em 24 horas → ③ confirmar amostra → ④ produção após aprovar amostra → ⑤ inspeção e envio. Você pode começar em qualquer etapa!" },
       { id: "faq", kws: ["faq", "häufige fragen", "perguntas", "dúvidas", "faq"], reply: "Respostas rápidas às dúvidas frequentes:\n📦 Pedido mínimo: etiquetas 2.000+, tecidas 1.000+, cuidado 300+\n🧪 Amostras: envio em 3–7 dias\n💰 Orçamento: em 24 horas\n🚚 Prazo: 10–25 dias\nPergunte o que precisar." },
     ],
