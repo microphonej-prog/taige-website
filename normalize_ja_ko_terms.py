@@ -32,9 +32,9 @@ KO_RULES = [
 ]
 
 UNTAGGED = [
-    ('<span>微信 13128118931</span>',
-     '<span data-zh="微信 13128118931" data-en="WeChat 13128118931" data-ja="WeChat 13128118931" '
-     'data-ko="위챗 13128118931" data-fr="WeChat 13128118931" data-es="WeChat 13128118931">微信 13128118931</span>'),
+    ('<span>WhatsApp: chat with us →</span>',
+     '<span data-zh="WhatsApp: chat with us →" data-en="WhatsApp: chat with us →" data-ja="WhatsApp: chat with us →" '
+     'data-ko="WhatsApp: chat with us →" data-fr="WhatsApp: chat with us →" data-es="WhatsApp: chat with us →">WhatsApp: chat with us →</span>'),
     ('<span class="st" id="assistStatus">在线</span>',
      '<span class="st" id="assistStatus" data-zh="在线" data-en="Online" data-ja="オンライン" '
      'data-ko="온라인" data-fr="En ligne" data-es="En línea">在线</span>'),

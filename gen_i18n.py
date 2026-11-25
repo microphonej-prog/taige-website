@@ -232,7 +232,7 @@ def convert(lang, src_path, out_path, page_abs_url):
 
     # ---------- 10. de/pt：清掉最后一处中文（微信标签 / 客服浮窗） ----------
     if lang in ('de', 'pt'):
-        for a, b in (('微信 13128118931', 'WeChat 13128118931'),
+        for a, b in (('WhatsApp: chat with us →', 'WhatsApp: chat with us →'),
                      ('>在線<', '>Online<'),
                      ('>發送<', '>Send<'),
                      ('微信', 'WeChat')):
