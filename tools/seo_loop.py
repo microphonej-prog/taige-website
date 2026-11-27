@@ -92,9 +92,20 @@ def build_report(rows, site, start, end, min_imp_title, min_imp_content):
     for lst in (title_targets, content_targets, later):
         lst.sort(key=lambda x: -x["imp"] * (1 if x is title_targets else 0.5))
 
-    # 蚕食：同一查询词 ≥3 个页面都有展示
-    cannib = [(q, sorted(p)) for q, p in q_pages.items() if len(p) >= 3]
-    cannib.sort(key=lambda kv: -len(kv[1]))
+    # 蚕食：同一查询词被 ≥3 个**同一语种**的页面抢（不同语种各占一条是正常的，不算蚕食）
+    def lang_of(url):
+        m = __import__("re").match(r"https://[^/]+/([a-z]{2})/", url)
+        return m.group(1) if m else "zh"
+
+    cannib = []
+    for q, ps in q_pages.items():
+        by_lang = collections.defaultdict(list)
+        for u in ps:
+            by_lang[lang_of(u)].append(u)
+        for lg, group in by_lang.items():
+            if len(group) >= 3:
+                cannib.append((q, sorted(group), lg))
+    cannib.sort(key=lambda t: -len(t[1]))
 
     L = [f"# GSC 优化清单 · {site}",
          f"\n数据区间 **{start} → {end}**（GSC 延迟 2 天）｜共 {len(rows)} 条 page+query，{len(pages)} 个页面\n"]
@@ -115,13 +126,13 @@ def build_report(rows, site, start, end, min_imp_title, min_imp_content):
     block("B. 优先补内容（相关性/深度不够）", content_targets, "加直接回答段 + 长尾 FAQ")
     block("C. 暂不动（排太靠后，先攒权重）", later, "观察")
 
-    L.append(f"\n## D. 蚕食嫌疑（同一词 ≥3 页在抢，{len(cannib)} 组）\n")
+    L.append(f"\n## D. 蚕食嫌疑（同一语种 ≥3 页抢同一个词，{len(cannib)} 组）\n")
     if cannib:
-        L.append("| 查询词 | 竞争页面数 | 页面 |")
-        L.append("|---|---|---|")
-        for q, ps in cannib[:10]:
+        L.append("| 查询词 | 语种 | 页面数 | 页面 |")
+        L.append("|---|---|---|---|")
+        for q, ps, lg in cannib[:10]:
             shown = ", ".join(p.replace("https://" + site.split(":")[-1].lstrip("/"), "") for p in ps[:3])
-            L.append(f"| {q} | {len(ps)} | {shown} |")
+            L.append(f"| {q} | {lg} | {len(ps)} | {shown} |")
     else:
         L.append("_没有明显蚕食。_")
 
@@ -132,6 +143,53 @@ def build_report(rows, site, start, end, min_imp_title, min_imp_content):
     return "\n".join(L)
 
 
+def push_summary(md, path, target):
+    """把清单压缩成一条微信消息（零 token：直接调 hermes send）。"""
+    import re, subprocess
+
+    def section(letter):
+        m = re.search(rf"## {letter}\..*?\n(.*?)(?=\n## |\n---)", md, re.S)
+        if not m:
+            return []
+        rows = [l for l in m.group(1).splitlines() if l.startswith("| `")]
+        out = []
+        for r in rows[:3]:
+            cells = [c.strip() for c in r.strip("|").split("|")]
+            out.append(f"{cells[0].strip('`')} {cells[1]}展示/{cells[4]}")
+        return out
+
+    a, b = section("A"), section("B")
+    d = re.search(r"## D\..*?\n\n\|.*?\n\|[-|]+\n(.*?)(?=\n---)", md, re.S)
+    d_rows = [l for l in (d.group(1).splitlines() if d else []) if l.startswith("|")][:2]
+    lines = [f"【辅料站 SEO 周清单】{datetime.date.today():%m-%d}",
+             f"A 改标题 {len(a)} 页 / B 补内容 {len(b)} 页"]
+    if a:
+        lines.append("— A（排前页没点击）—"); lines += [f"· {x}" for x in a]
+    if b:
+        lines.append("— B（要在正文补）—"); lines += [f"· {x}" for x in b]
+    if d_rows:
+        lines.append("— 蚕食 —")
+        lines += ["· " + " | ".join(c.strip() for c in r.strip("|").split("|")[:3]) for r in d_rows]
+    lines.append(f"报告：{path.name}")
+    text = "\n".join(lines)[:1500]
+
+    targets = [target] if target else [
+        "weixin:o9cq807Jymt7hMssWUDsiCzq8gjQ@im.wechat",
+        "feishu:oc_5154253814a8de85860a5485e9c8a9e1",
+    ]
+    for t in targets:
+        try:
+            r = subprocess.run(["hermes", "send", "-t", t, "-f", "-"],
+                               input=text, capture_output=True, text=True, timeout=120)
+            if r.returncode == 0:
+                print(f"已推送 → {t}")
+                return
+            print(f"推送失败 {t}: {(r.stderr or r.stdout)[:160]}")
+        except Exception as e:                              # noqa: BLE001
+            print(f"推送异常 {t}: {e}")
+    print("所有渠道都失败，报告仍在 tools/reports/")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--site", default="sc-domain:taigetag.com")
@@ -140,6 +198,9 @@ def main():
     ap.add_argument("--min-imp-title", type=int, default=50)
     ap.add_argument("--min-imp-content", type=int, default=120)
     ap.add_argument("--oauth", action="store_true")
+    ap.add_argument("--push", action="store_true", help="把摘要推到微信（走 hermes send，不消耗模型 token）")
+    ap.add_argument("--target", default=None,
+                    help="推送目标；默认按 weixin → feishu 依次尝试，第一个成功即止")
     args = ap.parse_args()
 
     svc = svc_client(args.oauth)
@@ -151,6 +212,9 @@ def main():
     path.write_text(md, encoding="utf-8")
     print(md)
     print(f"\n报告已存：{path}")
+
+    if args.push:
+        push_summary(md, path, args.target)
 
 
 if __name__ == "__main__":
