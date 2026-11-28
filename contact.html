@@ -126,7 +126,7 @@
           <div class="ico">📍</div>
           <div>
             <h4 data-zh="地址 Address" data-de="Adresse" data-pt="Endereço" data-fr="Adresse" data-es="Dirección" data-en="Address" data-ja="住所" data-ko="주소">地址 Address</h4>
-            <p data-zh="中國廣東省東莞市虎門鎮客天下布輔料城2棟南門2通道C3-021號" data-de="Gebäude 2, Südtor, Gang 2, C3-021, Ketianxia Stoff- und Zutatenmarkt, Humen, Dongguan, Guangdong, China" data-pt="Edifício 2, Portão Sul, Corredor 2, C3-021, Mercado Ketianxia de Tecidos e Aviamentos, Humen, Dongguan, Guangdong, China" data-fr="Unit C3-021, Corridor 2, Porte Sud, Bâtiment 2, Marché d'accessoires Ketianxia, Humen, Dongguan, Guangdong, Chine" data-es="Unidad C3-021, Pasillo 2, Puerta Sur, Edificio 2, Mercado de accesorios Ketianxia, Humen, Dongguan, Guangdong, China" data-en="Unit C3-021, Corridor 2, South Gate, Building 2, Ketianxia Fabric Trims Market, Humen Town, Dongguan, Guangdong, China" data-ja="中国広東省東莞市虎門鎮客天下布輔料城2棟南門2通路C3-021号" data-ko="중국 광둥성 둥관시 후먼진 커톈샤 원단·부자재 시장 2동 남문 2통로 C3-021호">中國廣東省東莞市虎門鎮客天下布輔料城2棟南門2通道C3-021號</p>
+            <p data-zh="註冊地址（營業執照）：中國廣東省東莞市虎門鎮連升路143號連升廣場2棟1042室<br>展廳／接洽點：虎門鎮客天下布輔料城2棟南門2通道C3-021號" data-de="Eingetragene Adresse (Gewerbeschein): Raum 1042, Gebäude 2, Liansheng Plaza, Liansheng-Straße 143, Humen, Dongguan, Guangdong, China<br>Showroom &amp; Treffpunkt: Einheit C3-021, Gang 2, Südtor, Gebäude 2, Ketianxia-Markt, Humen" data-pt="Endereço registado (licença comercial): Sala 1042, Edifício 2, Liansheng Plaza, Rua Liansheng 143, Humen, Dongguan, Guangdong, China<br>Showroom e ponto de encontro: Unidade C3-021, Corredor 2, Portão Sul, Edifício 2, Mercado Ketianxia, Humen" data-fr="Adresse enregistrée (licence commerciale) : Bureau 1042, Bâtiment 2, Liansheng Plaza, 143 rue Liansheng, Humen, Dongguan, Guangdong, Chine<br>Showroom et point de rendez-vous : Unité C3-021, Couloir 2, Porte Sud, Bâtiment 2, Marché Ketianxia, Humen" data-es="Domicilio registrado (licencia comercial): Oficina 1042, Edificio 2, Liansheng Plaza, Calle Liansheng 143, Humen, Dongguan, Guangdong, China<br>Showroom y punto de encuentro: Unidad C3-021, Pasillo 2, Puerta Sur, Edificio 2, Mercado Ketianxia, Humen" data-en="Registered address (business licence): Room 1042, Building 2, Liansheng Plaza, No. 143 Liansheng Road, Humen, Dongguan, Guangdong, China<br>Showroom &amp; meeting point: Unit C3-021, Corridor 2, South Gate, Building 2, Ketianxia Fabric Trims Market, Humen" data-ja="登記住所（営業許可証）：中国広東省東莞市虎門鎮連升路143号 連升広場2棟1042室<br>ショールーム・打合せ：虎門鎮 客天下布輔料城2棟南門2通路C3-021号" data-ko="등록 주소(사업자등록증): 중국 광둥성 둥관시 후먼진 롄성로 143호 롄성플라자 2동 1042실<br>쇼룸·미팅 포인트: 후먼진 커톈샤 원단·부자재 시장 2동 남문 2통로 C3-021호">註冊地址（營業執照）：中國廣東省東莞市虎門鎮連升路143號連升廣場2棟1042室<br>展廳／接洽點：虎門鎮客天下布輔料城2棟南門2通道C3-021號</p>
             <p class="coords" data-zh="📍 座標：22.8162°N, 113.6684°E" data-de="📍 Koordinaten: 22,8162° N, 113,6684° O" data-pt="📍 Coordenadas: 22,8162° N, 113,6684° L" data-fr="📍 Coordonnées : 22.8162°N, 113.6684°E" data-es="📍 Coordenadas: 22.8162°N, 113.6684°E" data-en="📍 Coordinates: 22.8162°N, 113.6684°E" data-ja="📍 座標：22.8162°N, 113.6684°E" data-ko="📍 좌표: 22.8162°N, 113.6684°E">📍 座標：22.8162°N, 113.6684°E</p>
             <div class="map-wrap">
               <div id="map"></div>
@@ -259,14 +259,14 @@
     var _lang = (location.pathname.match(/\/(en|de|ja|ko|fr|es|pt)\/[^\/]*$/) || [])[1] || "zh";
     var _base = _lang === "zh" ? "" : "../";
     var _addr = {
-      zh: "客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
-      en: "Unit C3-021, Ketianxia Fabric Trims Market, Humen",
-      ja: "広東省東莞市虎門鎮 客天下布輔料城 2棟南門2通路 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
-      ko: "광둥성 둥관시 후먼진 커톈샤 부자재시장 2동 남문 2통로 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
-      fr: "Unité C3-021, marché de fournitures Ketianxia, Humen",
-      es: "Unidad C3-021, mercado de suministros Ketianxia, Humen",
-      de: "Einheit C3-021, Ketianxia Stoffmarkt, Humen, Dongguan",
-      pt: "Unidade C3-021, mercado Ketianxia, Humen, Dongguan"
+      zh: "展廳／接洽點：客天下布辅料城2栋南门2通道C3-021号<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
+      en: "Showroom: Unit C3-021, Ketianxia Fabric Trims Market, Humen",
+      ja: "ショールーム：広東省東莞市虎門鎮 客天下布輔料城 2棟南門2通路 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
+      ko: "쇼룸: 광둥성 둥관시 후먼진 커톈샤 부자재시장 2동 남문 2통로 C3-021<br>Unit C3-021, Ketianxia Fabric Trims Market, Humen",
+      fr: "Showroom : Unité C3-021, marché de fournitures Ketianxia, Humen",
+      es: "Showroom: Unidad C3-021, mercado de suministros Ketianxia, Humen",
+      de: "Showroom: Einheit C3-021, Ketianxia Stoffmarkt, Humen, Dongguan",
+      pt: "Showroom: Unidade C3-021, mercado Ketianxia, Humen, Dongguan"
     };
     var map = L.map("map", {
       center: [22.816245, 113.668423],
